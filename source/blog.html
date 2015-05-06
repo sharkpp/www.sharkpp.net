@@ -13,25 +13,30 @@ use:
 {% if year != this_year %}
   {% set month = '0' %}
   {% set year = this_year %}
+  <h3>{{ year }}年</h3>
 {% endif %}
-{% set this_month %}{{ post.date | date("F") }}{% endset %}
+{% set this_month %}{{ post.date | date("m") }}{% endset %}
 {% if month != this_month %}
   {% set month = this_month %}
-  <h3>{{ month }} {{ year }}</h3>
 {% endif %}
+{% set this_day %}{{ post.date | date("d") }}{% endset %}
   <div>
-    <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+    {{ month }}月{{ this_day }}日 <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
   </div>
 {% endfor %}
 
+<br />
 <div>
 {% if page.pagination.previous_page or page.pagination.next_page %}
     <nav class="article clearfix">
     {% if page.pagination.previous_page %}
-    <a class="previous" href="{{ site.url }}{{ page.pagination.previous_page.url }}" title="Previous Page"><span class="title">Previous Page</span></a>
+    <a class="previous" href="{{ site.url }}{{ page.pagination.previous_page.url }}" title="前のページ"><span class="title">前のページ</span></a>
+    {% endif %}
+    {% if page.pagination.previous_page and page.pagination.next_page %}
+      |
     {% endif %}
     {% if page.pagination.next_page %}
-    <a class="next" href="{{ site.url }}{{ page.pagination.next_page.url }}" title="Next Page"><span class="title">Next Page</span></a>
+    <a class="next" href="{{ site.url }}{{ page.pagination.next_page.url }}" title="次のページ"><span class="title">次のページ</span></a>
     {% endif %}
     </nav>
 {% endif %}
