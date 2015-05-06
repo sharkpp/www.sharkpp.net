@@ -50,11 +50,6 @@ function entities2text($text)
 			}, $text);
 }
 
-//require_once(dirname(__FILE__).'/HTML_To_Markdown.php');
-
-//require_once(dirname(__FILE__).'/Markdownify/Parser.php');
-//require_once(dirname(__FILE__).'/Markdownify/Converter.php');
-
 $base_path = 'html';
 $files = scandir_r($base_path);
 foreach ($files as $path) {
@@ -64,7 +59,22 @@ foreach ($files as $path) {
 	$dpath = preg_replace('!^[^/]+/(.+)\..+$!', 'markdown/\1.md', $path);
 	$html = file_get_contents($path);
 
-	if (!preg_match('|<div id="contents">(.+)<p class="info" style="margin-top: 1em">.+</div><!-- #contents end -->|ms', $html, $m))
+//	$keywords = array();
+//	if (preg_match('|<meta name="keywords" content="(.+?)" />|', $html, $m)) {
+//		$keywords = explode(',', $m[1]);
+//		foreach ($keywords as & $k)
+//			$k = trim($k);
+//	}
+
+	$tags = array();
+	if (preg_match('|<!-- tags: \[(.+?)\] -->|', $html, $m)) {
+		$tags = explode(',', $m[1]);
+		foreach ($tags as & $k)
+			$k = trim($k);
+	}
+
+	if (!preg_match('|<div id="contents">(.+)<p class="info" style="margin-top: 1em">.+' .
+	                 '</div><!-- #contents end -->|ms', $html, $m))
 	{
 		echo sprintf('skip %s', $path).PHP_EOL;
 		continue;
@@ -74,22 +84,29 @@ foreach ($files as $path) {
 	$html = preg_replace('|<div class="section">(.+?)</div>|ms', '\1', $html);
 	$html = preg_replace('|<div class="footnote">(.+?)</div>|ms', '\1', $html);
 
-$markdown = $html;
-//	$md = new HTML_To_Markdown($html);
-//	$markdown = $md->output();
-//	unset($md);
-
 	$html = text2entities($html);
 	$md = new Markdownify\Converter;
 	$markdown = $md->parseString($html.PHP_EOL);
 	unset($md);
 	$markdown = entities2text($markdown);
+	$markdown = trim($markdown);
 
-	for ($dir = dirname($dpath); '.' != $dir; $dir = dirname($dir))
-		@mkdir($dir);
+	$markdown = preg_replace('/^# (.+)/',
+					'---' . PHP_EOL .
+					'title: \1' . PHP_EOL .
+					(empty($tags) ? '' : 'tags: [' . implode(', ', $tags) . ']' . PHP_EOL) .
+					PHP_EOL .
+					'---', $markdown);
+/*
+---
+title: Symfony Live Hacking Day!
+tags: [sensio, symfony, symfony live]
+categories: [personal]
+
+---*/
+
+	@mkdir(dirname($dpath), 0777, true);
 	file_put_contents($dpath, $markdown);
 
 	echo sprintf('conv %s -> %s', $path, $dpath).PHP_EOL;
-
-//	break;
 }
