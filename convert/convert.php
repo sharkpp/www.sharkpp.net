@@ -81,6 +81,10 @@ foreach ($files as $path) {
 	}
 	$html = $m[1];
 
+	// fix bloken
+	$html = preg_replace('|<em>(-user\.jp.+?)</em>(-)|ms', '\1\2', $html);
+	$html = preg_replace('|href="http://www.sharkpp.net/blog/([0-9]{4})/([0-9]{2})/([0-9]{2})/(.+)\.html"|', 'href="/blog/\1/\2/\3/\4.html"', $html);
+
 	$html = preg_replace('|<div class="section">(.+?)</div>|ms', '\1', $html);
 	$html = preg_replace('|<div class="footnote">(.+?)</div>|ms', '\1', $html);
 
@@ -93,7 +97,7 @@ foreach ($files as $path) {
 
 	$markdown = preg_replace('/^# (.+)/',
 					'---' . PHP_EOL .
-					'title: \1' . PHP_EOL .
+					'title: "\1"' . PHP_EOL .
 					(empty($tags) ? '' : 'tags: [' . implode(', ', $tags) . ']' . PHP_EOL) .
 					PHP_EOL .
 					'---', $markdown);
