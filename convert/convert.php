@@ -73,6 +73,13 @@ foreach ($files as $path) {
 			$k = trim($k);
 	}
 
+	$categories = array();
+	$tmp = explode('/', $path);
+	array_shift($tmp);
+	if (1 < count($tmp)) {
+		$categories[] = $tmp[0];
+	}
+
 	if (!preg_match('|<div id="contents">(.+)<p class="info" style="margin-top: 1em">.+' .
 	                 '</div><!-- #contents end -->|ms', $html, $m))
 	{
@@ -97,8 +104,10 @@ foreach ($files as $path) {
 
 	$markdown = preg_replace('/^# (.+)/',
 					'---' . PHP_EOL .
+					(false !== strpos($dpath, 'markdown/blog/') ? '' : 'layout: default' . PHP_EOL) .
 					'title: "\1"' . PHP_EOL .
 					(empty($tags) ? '' : 'tags: [' . implode(', ', $tags) . ']' . PHP_EOL) .
+					(empty($categories) ? '' : 'categories: [' . implode(', ', $categories) . ']' . PHP_EOL) .
 					PHP_EOL .
 					'---', $markdown);
 /*

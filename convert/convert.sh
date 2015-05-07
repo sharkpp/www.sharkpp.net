@@ -48,3 +48,5 @@ find $(dirname $0)/markdown/blog -type d -empty -delete
 
 rm -f $(dirname $0)../source/_posts/*.md
 cp -p $(dirname $0)/markdown/blog/*.md $(dirname $0)/../source/_posts/
+
+cp -pf $(dirname $0)/markdown/about.md $(dirname $0)/../source/
