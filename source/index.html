@@ -9,6 +9,9 @@ use:
 ---
 {% for post in page.pagination.items %}
     <article>
+        <ol class="breadcrumb">
+            <li temscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb" class="active"><i class="fa fa-home fa-lg"></i> <span itemprop="title">HOME</span></li>
+        </ol>
         <header>
             <h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
         </header>

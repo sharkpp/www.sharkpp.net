@@ -5,6 +5,17 @@
 {% endblock %}
 
 {% block content_wrapper %}
+{% set this_year %}{{ post.date | date("Y") }}{% endset %}
+{% set this_month %}{{ post.date | date("m") }}{% endset %}
+{% set this_day %}{{ post.date | date("d") }}{% endset %}
+    <ol class="breadcrumb">
+        <li temscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="{{ site.url }}/"><i class="fa fa-home fa-lg"></i> <span itemprop="title">HOME</span></a></li>
+        <li temscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="{{ site.url }}/"><span itemprop="title">{{ this_year }}</span></a></li>
+        <li temscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="{{ site.url }}/"><span itemprop="title">{{ this_month }}</span></a></li>
+        <li temscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="{{ site.url }}/"><span itemprop="title">{{ this_day }}</span></a></li>
+        <li temscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb" class="active"><span itemprop="title">{{ page.title }}</span></li>
+    </ol>
+
     <article>
         <header>
             <h2>{{ page.title }} <small>post</small></h2>
@@ -14,7 +25,7 @@
         </div>
         {% if page.categories %}
             <p class="categories">
-            Categories:
+            カテゴリ:
             {% for category in page.categories %}
             <a href="{{ site.url }}/blog/categories/{{ category|url_encode(true) }}">{{ category }}</a>{% if not loop.last %}, {% endif %}
             {% endfor %}
@@ -22,7 +33,7 @@
         {% endif %}
         {% if page.tags %}
             <p class="tags">
-            Tags:
+            タグ:
             {% for tag in page.tags %}
             <a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
             {% endfor %}
@@ -33,10 +44,10 @@
             <nav class="article">
                 <ul>
                     {% if page.next_post %}
-                        <li>Next: <a class="next" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}"><span class="title">{{ page.next_post.title }}</span></a></li>
+                        <li>次: <a class="next" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}"><span class="title">{{ page.next_post.title }}</span></a></li>
                     {% endif %}
                     {% if page.previous_post %}
-                        <li>Previous: <a class="previous" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">{{ page.previous_post.title }}</span></a></li>
+                        <li>前: <a class="previous" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">{{ page.previous_post.title }}</span></a></li>
                     {% endif %}
                 </ul>
             </nav>
