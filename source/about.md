@@ -1,8 +1,56 @@
 ---
 layout: default
-title: About
+title: "このサイトについて"
 
 ---
-# About the Author or Blog
 
-Here is a little information about the author or the blog.
+## 始めに
+
+このサイトは、Shark++ Software の制作物を配布する目的で作られたました。 現在、Windows用のソフトウエア配布が主なコンテンツですがそのほか興味を持った物を色々おいてあります。 
+
+<span class="warning">このサイトに掲載されたソフト等を使用した事による損害については一切の責任を負いません。 また、このサイトに掲載されている画像・文章は一切の転載を禁止します。</span> 
+
+コンテンツ内容やURLは、予告なしに変更になる場合があります。 
+
+## 推奨表示環境
+
+最近のブラウザであれば私が意図したとおりに大体レンダリングできます。
+	  
+Netscape Navigator 4.xxやInternet Explorer 5.xx/4.xx などを使っている人は正常に表示できないかもしれません。
+	  
+もし使っているとしたらデザイン以前に危険ですのでどうかサポートの切れたブラウザを使ってインターネットをブラウジングしないでください。 
+
+Windows XP/Vista 上の以下のブラウザで、デザインを確認しています。 
+
+  * Firefox 2.0.0.16 / 3.0.1
+  * Internet Exproler 6.0 / 7.0
+  * Opera 8.54 / 9.51
+  * Safari 3.1
+
+## リンクについて
+
+バナーを使用する場合には、下の画像を**(サーバーの都合上)**ダウンロードしてお使いください。
+	  
+どのページにリンクしてもかまいませんが、必ずリンクするURLがアドレスバーに現れるようにリンクしてください。 <!-- http://d.hatena.ne.jp/HiromitsuTakagi/20040426#p2 -->
+
+<img src="image/banner.gif" width="128" height="48" alt="[Shark++ Software's Web Page Banner]" />
+	  
+[http://www.sharkpp.net/image/banner.gif][1]
+
+	  
+<span class="warning">なお、バナーサイズは、気まぐれで変わることがあります。</span> 
+
+また、このサイトへのリンクをされた方は、メールを戴ければ、相互リンクをさせていただきたいと思います。
+	  
+メール:[&#x77;eb&#x6D;&#x61;st&#x65;r&#x40;&#x73;&#x68;&#x61;rkpp.&#x6e;et][2]
+  
+
+
+ただし、以下の場合の相互リンクは諦めて下さい。 
+
+  * 特定の個人を誹謗(ひぼう)・中傷するなど、反社会的な行為をしているサイト
+  * 社会的に許されざる行為をしているサイト
+  * その他、管理人が不適切と感じた内容があるサイト
+
+ [1]: image/banner.gif
+ [2]: ma&#x69;l&#x74;o&#x3A;webmast&#x65;r&#x40;s&#x68;&#x61;rkp&#x70;.n&#x65;t

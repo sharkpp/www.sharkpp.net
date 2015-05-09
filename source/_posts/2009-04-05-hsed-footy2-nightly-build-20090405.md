@@ -1,0 +1,18 @@
+---
+title: "HSPスクリプトエディタ(Footy2版)のナイトリービルド 2009/04/05"
+tags: [hsp, hsed3, footy2]
+categories: [blog]
+
+---
+
+HSPスクリプトエディタ(Footy2版)のナイトリービルドです。
+
+取り敢えず使ってみたい人は解凍してHSPと同じフォルダに入れて起動するだけです。
+
+名前は変えてあるので問題は無いと思いますが無保証ってことでよろしくお願いします。
+
+[hsed3\_footy2\_20090405.zip][1]
+
+スタティックリンクにしたのでFooty2.dllは今回から必要なくなりました。
+
+ [1]: http://www.sharkpp.net/hsp/openhsp/hsed3_footy2_20090405.zip
