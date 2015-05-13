@@ -41,3 +41,6 @@ rm -f $(dirname $0)../source/_posts/*.md
 cp -p $(dirname $0)/markdown/blog/*.md $(dirname $0)/../source/_posts/
 
 cp -pf $(dirname $0)/markdown/about.md $(dirname $0)/../source/
+
+find $(dirname $0)/../source/images/ -maxdepth 1 -name \*.png -or -name \*.jpg -or -name \*.gif -delete
+cp -pf $(dirname $0)/markdown/images/* $(dirname $0)/../source/images/

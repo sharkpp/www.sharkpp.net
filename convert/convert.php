@@ -50,6 +50,8 @@ function entities2text($text)
 			}, $text);
 }
 
+$cp = array();
+
 $base_path = 'html';
 $files = scandir_r($base_path);
 foreach ($files as $path) {
@@ -117,12 +119,45 @@ foreach ($files as $path) {
 //	$html = preg_replace('!<dl class="page_history">!ms', '<dl class="dl-horizontal">', $html);
 
 	$html = text2entities($html);
-//	$md = new Markdownify\Converter(Markdownify\Converter::LINK_AFTER_CONTENT);
+//	$md = new Markdownify\Converter(Markdownify\Converter::LINK_AFTER_PARAGRAPH);
 	$md = new Markdownify\ConverterExtra(Markdownify\ConverterExtra::LINK_AFTER_PARAGRAPH);
 	$markdown = $md->parseString($html.PHP_EOL);
 	unset($md);
 
-	$markdown = preg_replace('/^# (.+)/',
+	// イメージ移動
+	$markdown = preg_replace_callback('!/(.+?\.(jpg|gif|png))!', function($m) use (& $cp, $curpath) {
+		//	if (preg_match('!^(.+?)/([0-9]{4})/([0-9]{2})/([0-9]{2})/[^/]+?$!', $curpath, $mm)) {
+		//		$dst = trim(str_replace('/', '_', preg_replace('!(public|image|img)/!', '', $mm[1])), '_');
+		//		$dst = sprintf('%s%s%s_%s_%s', $mm[2], $mm[3], $mm[4], $dst, basename($m[1]));
+		//	} else if (preg_match('!^(.+?)/[^/]+?$!', $curpath, $mm)) {
+		//		$dst = trim(str_replace('/', '_', preg_replace('!(public|image|img)/!', '', $mm[1])), '_');
+		//		$dst = sprintf('%s_%s', $dst, basename($m[1]));
+		//	} else {
+		//		$dst = basename($m[1]);
+		//	}
+		//	$dst = str_replace('__', '_', $dst);
+			$dst = sprintf('/%s/%s', 'images', basename($m[1]));
+			$cp[] = array('from' => 'html/'.$m[1], 'to' => 'markdown'.$dst);
+			return $dst;
+		}, $markdown);
+
+	// 定義済みリストをMarkdownに変換
+	$markdown = preg_replace_callback('!<dl.*?>(.+?)</dl>!ms', function($m) {
+			return
+				preg_replace('!\s*<dt.*?>\s*(.+?)\s*</dt>\s*<dd.*?>\s*(.+?)\s*</dd>\s*!ms', "$1\n: $2\n\n", $m[1]);
+		}, $markdown);
+
+	// タグのインデントをなくす
+	$markdown = preg_replace_callback('!^(<([a-z]+).*?>)(.+?)(</\2>)!ms', function($m) {
+			$a = '';
+			foreach (explode("\n", $m[3]) as $l)
+				if ('' != trim($l))
+					$a .= ltrim($l)."\n";
+			return $m[1].$a.$m[4];
+		}, $markdown);
+
+	// アノテーション追加
+	$markdown = preg_replace('/^# (.+?)$/ms',
 					'---' . PHP_EOL .
 					(false !== strpos($dpath, 'markdown/blog/') ? '' : 'layout: default' . PHP_EOL) .
 					'title: "$1"' . PHP_EOL .
@@ -130,19 +165,6 @@ foreach ($files as $path) {
 					(empty($categories) ? '' : 'categories: [' . implode(', ', $categories) . ']' . PHP_EOL) .
 					PHP_EOL .
 					'---', $markdown);
-
-	$markdown = preg_replace_callback('!<dl.*?>(.+?)</dl>!ms', function($m){
-			return
-				preg_replace('!\s*<dt.*?>\s*(.+?)\s*</dt>\s*<dd.*?>\s*(.+?)\s*</dd>\s*!ms', "$1\n: $2\n\n", $m[1]);
-		}, $markdown);
-
-	$markdown = preg_replace_callback('!^(<([a-z]+).*?>)(.+?)(</\2>)!ms', function($m){
-			$a = '';
-			foreach (explode("\n", $m[3]) as $l)
-				if ('' != trim($l))
-					$a .= ltrim($l)."\n";
-			return $m[1].$a.$m[4];
-		}, $markdown);
 
 	$markdown = entities2text($markdown);
 	$markdown = trim($markdown);
@@ -159,5 +181,10 @@ categories: [personal]
 	file_put_contents($dpath, $markdown);
 //	file_put_contents($dpath.'.html', $html);
 
-	echo sprintf('conv %s -> %s', $path, $dpath).PHP_EOL;
+//	echo sprintf('conv %s -> %s', $path, $dpath).PHP_EOL;
+}
+
+@ mkdir('markdown/images');
+foreach ($cp as $cp_once) {
+	@ copy($cp_once['from'], $cp_once['to']);
 }
