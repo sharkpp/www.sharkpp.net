@@ -57,7 +57,14 @@ foreach ($files as $path) {
 		continue;
 
 	$dpath = preg_replace('!^[^/]+/(.+)\..+$!', 'markdown/\1.md', $path);
+	$curpath = preg_replace('!^[^/]+/(.+)\..+$!', '\1.html', $path);
 	$html = file_get_contents($path);
+
+//	$html = explode("\n", $html);
+//	foreach ($html as & $line)
+//		$line = ltrim($line, "\t");
+//	$html = implode("\n", $html);
+//	unset($line);
 
 //	$keywords = array();
 //	if (preg_match('|<meta name="keywords" content="(.+?)" />|', $html, $m)) {
@@ -89,27 +96,57 @@ foreach ($files as $path) {
 	$html = $m[1];
 
 	// fix bloken
-	$html = preg_replace('|<em>(-user\.jp.+?)</em>(-)|ms', '\1\2', $html);
-	$html = preg_replace('|href="http://www.sharkpp.net/blog/([0-9]{4})/([0-9]{2})/([0-9]{2})/(.+)\.html"|', 'href="/blog/\1/\2/\3/\4.html"', $html);
+	$html = preg_replace('|<em>(-user\.jp.+?)</em>(-)|ms', '$1$2', $html);
+	$html = preg_replace('| slt="|ms', ' alt="', $html);
 
-	$html = preg_replace('|<div class="section">(.+?)</div>|ms', '\1', $html);
-	$html = preg_replace('|<div class="footnote">(.+?)</div>|ms', '\1', $html);
+	// fix link
+	$html = preg_replace('!href="http://www.sharkpp.net/blog/([0-9]{4})/([0-9]{2})/([0-9]{2})/(.+)\.html"!', 'href="/blog/$1/$2/$3/$4"', $html);
+	$html = preg_replace('!href="http://www.sharkpp.net/(.+)\.html"!', 'href="/$1"', $html);
+	$html = preg_replace('!href="http://www.sharkpp.net/(.+)"!', 'href="/$1"', $html);
+	$html = preg_replace('!src="http://www.sharkpp.net/(.+)"!', 'src="/$1"', $html);
+
+	// fix image
+	$html = preg_replace('!<a +href="([^/][^"]+)"[^>]+?title="(.+?)".*?><img src="([^/][^"]+)"[^>]+?alt="(.+?)".*?/></a>!',
+	                     '<a href="/'.dirname($curpath).'/$1"><img src="/'.dirname($curpath).'/$3" title="$4" /></a>', $html);
+	$html = preg_replace('!<a +href="/([^"]+)"[^>]+?title="(.+?)".*?><img src="/([^"]+)"[^>]+?alt="(.+?)".*?/></a>!',
+	                     '<a href="/$1"><img src="/$3" alt="$4" /></a>', $html);
+
+	$html = preg_replace('!<div class="section">(.+?)</div>!ms', '$1', $html);
+	$html = preg_replace('!<div class="footnote">(.+?)</div>!ms', '$1', $html);
+	$html = preg_replace('!<div>\s*<p>\s*(.+?)\s*</p>\s*</div>!ms', '<p>$1</p>', $html);
+//	$html = preg_replace('!<dl class="page_history">!ms', '<dl class="dl-horizontal">', $html);
 
 	$html = text2entities($html);
-	$md = new Markdownify\Converter;
+//	$md = new Markdownify\Converter(Markdownify\Converter::LINK_AFTER_CONTENT);
+	$md = new Markdownify\ConverterExtra(Markdownify\ConverterExtra::LINK_AFTER_PARAGRAPH);
 	$markdown = $md->parseString($html.PHP_EOL);
 	unset($md);
-	$markdown = entities2text($markdown);
-	$markdown = trim($markdown);
 
 	$markdown = preg_replace('/^# (.+)/',
 					'---' . PHP_EOL .
 					(false !== strpos($dpath, 'markdown/blog/') ? '' : 'layout: default' . PHP_EOL) .
-					'title: "\1"' . PHP_EOL .
+					'title: "$1"' . PHP_EOL .
 					(empty($tags) ? '' : 'tags: [' . implode(', ', $tags) . ']' . PHP_EOL) .
 					(empty($categories) ? '' : 'categories: [' . implode(', ', $categories) . ']' . PHP_EOL) .
 					PHP_EOL .
 					'---', $markdown);
+
+	$markdown = preg_replace_callback('!<dl.*?>(.+?)</dl>!ms', function($m){
+			return
+				preg_replace('!\s*<dt.*?>\s*(.+?)\s*</dt>\s*<dd.*?>\s*(.+?)\s*</dd>\s*!ms', "$1\n: $2\n\n", $m[1]);
+		}, $markdown);
+
+	$markdown = preg_replace_callback('!^(<([a-z]+).*?>)(.+?)(</\2>)!ms', function($m){
+			$a = '';
+			foreach (explode("\n", $m[3]) as $l)
+				if ('' != trim($l))
+					$a .= ltrim($l)."\n";
+			return $m[1].$a.$m[4];
+		}, $markdown);
+
+	$markdown = entities2text($markdown);
+	$markdown = trim($markdown);
+
 /*
 ---
 title: Symfony Live Hacking Day!
@@ -120,6 +157,7 @@ categories: [personal]
 
 	@mkdir(dirname($dpath), 0777, true);
 	file_put_contents($dpath, $markdown);
+//	file_put_contents($dpath.'.html', $html);
 
 	echo sprintf('conv %s -> %s', $path, $dpath).PHP_EOL;
 }

@@ -14,16 +14,7 @@ rm -rf $(dirname $0)/markdown/*
 
 php convert.php >/dev/null
 
-for I in $( find $(dirname $0)/markdown -name *\.md ) ;
-do
-	DIR_NAME=$(dirname $I)/$(basename $I .md)
-	if [ -e $DIR_NAME ] ;
-	then
-		echo $I >/dev/null
-	fi
-done
-
-for I in $( find $(dirname $0)/markdown/blog -name *\.md ) ;
+for I in $( find $(dirname $0)/markdown/blog -name \*\.md ) ;
 do
 	DIR_NAME=$(dirname $I)/$(basename $I .md)
 	if [ ! -e $DIR_NAME ] ;
@@ -36,7 +27,7 @@ do
 		fi
 	fi
 done
-for I in $( find $(dirname $0)/markdown/blog -name *\.md ) ;
+for I in $( find $(dirname $0)/markdown/blog -name \*\.md ) ;
 do
 	DIR_NAME=$(dirname $I)/$(basename $I .md)
 	if [ -e $DIR_NAME ] ;

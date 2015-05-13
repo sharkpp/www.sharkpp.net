@@ -1,3 +1,11 @@
+sculpin_pagination:
+    max_per_page: 20
+
 sculpin_content_types:
     posts:
-        permalink: blog/:year/:month/:day/:filename/
+        permalink: blog/:year/:month/:day/:filename.html
+    hsp:
+        type: path
+        path: _posts
+        permalink: blog2/:year/
+        layout: project
