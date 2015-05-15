@@ -125,7 +125,7 @@ foreach ($files as $path) {
 	unset($md);
 
 	// イメージ移動
-	$markdown = preg_replace_callback('!/(.+?\.(jpg|gif|png))!', function($m) use (& $cp, $curpath) {
+	$markdown = preg_replace_callback('!/(.+?\.(jpg|gif|png))!', function($m) use (& $cp, $dpath, $curpath) {
 		//	if (preg_match('!^(.+?)/([0-9]{4})/([0-9]{2})/([0-9]{2})/[^/]+?$!', $curpath, $mm)) {
 		//		$dst = trim(str_replace('/', '_', preg_replace('!(public|image|img)/!', '', $mm[1])), '_');
 		//		$dst = sprintf('%s%s%s_%s_%s', $mm[2], $mm[3], $mm[4], $dst, basename($m[1]));
@@ -136,8 +136,18 @@ foreach ($files as $path) {
 		//		$dst = basename($m[1]);
 		//	}
 		//	$dst = str_replace('__', '_', $dst);
-			$dst = sprintf('/%s/%s', 'images', basename($m[1]));
-			$cp[] = array('from' => 'html/'.$m[1], 'to' => 'markdown'.$dst);
+
+			$page_date = '';
+			if (preg_match('!^(.+?)/([0-9]{4})/([0-9]{2})/([0-9]{2})/[^/]+?$!', $curpath, $mm)) {
+				$page_date = $mm[2].'_'.$mm[3].$mm[4].'_';
+			}
+			if (preg_match('!^(.+?)/([0-9]{4})_?([0-9]{2})([0-9]{2})_([^/]+)$!', $m[1], $mm)) {
+				$dst = sprintf('/images/%s_%s%s_%s', $mm[2], $mm[3], $mm[4], $mm[5]);
+			} else {
+				$dst = sprintf('/images/%s%s', $page_date, basename($m[1]));
+			}
+			if (preg_match('!/blog/!', $dpath))
+				$cp[] = array('from' => 'html/'.$m[1], 'to' => 'markdown'.$dst);
 			return $dst;
 		}, $markdown);
 
@@ -186,5 +196,7 @@ categories: [personal]
 
 @ mkdir('markdown/images');
 foreach ($cp as $cp_once) {
+	if (!is_dir(dirname($cp_once['to'])))
+		@ mkdir(dirname($cp_once['to']));
 	@ copy($cp_once['from'], $cp_once['to']);
 }
