@@ -19,14 +19,14 @@ use:
         <div>
             {{ post.blocks.content|raw }}
         </div>
-        {% if post.meta.tags %}
-            <p class="tags">
-            タグ:
-            {% for tag in post.meta.tags %}
-            <a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
-            {% endfor %}
-            </p>
-        {% endif %}
+        <hr />
+        <div>
+            {% include "post_categories" %}
+            {% if post.meta.categories and post.meta.tags %}
+                &nbsp;/&nbsp;
+            {% endif %}
+            {% include "post_tags" %}
+        </div>
     </article>
 {% endfor %}
 <br />

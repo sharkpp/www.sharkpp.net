@@ -23,31 +23,24 @@
         <div>
             {{ page.blocks.content|raw }}
         </div>
-        {% if page.categories %}
-            <p class="categories">
-            カテゴリ:
-            {% for category in page.categories %}
-            <a href="{{ site.url }}/blog/categories/{{ category|url_encode(true) }}">{{ category }}</a>{% if not loop.last %}, {% endif %}
-            {% endfor %}
-            </p>
-        {% endif %}
-        {% if page.tags %}
-            <p class="tags">
-            タグ:
-            {% for tag in page.tags %}
-            <a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
-            {% endfor %}
-            </p>
-        {% endif %}
+        <hr />
+        <div>
+            {% include "post_categories" %}
+            {% if page.categories and page.tags %}
+                &nbsp;/&nbsp;
+            {% endif %}
+            {% include "post_tags" %}
+        </div>
 
         {% if page.previous_post or page.next_post %}
+            <hr />
             <nav class="article">
-                <ul>
+                <ul class="list-unstyled row">
                     {% if page.next_post %}
-                        <li>次: <a class="next" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}"><span class="title">{{ page.next_post.title }}</span></a></li>
+                        <li class="col-md-6 text-left"><a class="next" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}"><span class="title"><i class="fa fa-chevron-left"></i> {{ page.next_post.title }}</span></a></li>
                     {% endif %}
                     {% if page.previous_post %}
-                        <li>前: <a class="previous" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">{{ page.previous_post.title }}</span></a></li>
+                        <li class="col-md-6 text-right"><a class="previous" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">{{ page.previous_post.title }}</span> <i class="fa fa-chevron-right"></i> </a></li>
                     {% endif %}
                 </ul>
             </nav>

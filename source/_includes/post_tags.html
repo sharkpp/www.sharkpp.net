@@ -1,0 +1,9 @@
+        {% if page.tags or post.meta.tags %}
+            {% set tags = page.tags ? page.tags : post.meta.tags %}
+            <span class="tags">
+            <i class="fa fa-tag"></i> タグ:
+            {% for tag in tags %}
+            <a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+            {% endfor %}
+            </span>
+        {% endif %}
