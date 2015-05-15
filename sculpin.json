@@ -19,7 +19,8 @@
         "components/bootstrap": "~3.3.4",
         "components/font-awesome": "4.*",
         "components/jquery": "~1.9.1",
-        "components/highlightjs": "~7.3.0"
+        "components/highlightjs": "~7.3.0",
+        "jasny/twig-extensions": "@dev"
     },
     "config": {
         "component-dir": "source/components"

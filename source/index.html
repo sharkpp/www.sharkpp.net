@@ -17,7 +17,10 @@ use:
             <h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
         </header>
         <div>
-            {{ post.blocks.content|raw }}
+            {{ post.blocks.content | preg_replace('!^(.+?)(<h.*)?$!sm', '$1') | raw }}
+            {% if post.blocks.content | preg_replace('!^(.+?)(<h.*)?$!sm', '$1') != post.blocks.content %}
+                &hellip;&nbsp;<a href="{{ site.url }}{{ post.url }}">続きを見る</a>
+            {% endif %}
         </div>
         <hr />
         <div>
