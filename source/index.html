@@ -24,15 +24,7 @@ use:
         </div>
         <hr />
         <footer>
-            {% include "post_categories" %}
-            {% if post.meta.categories and post.meta.tags %}
-                &nbsp;/&nbsp;
-            {% endif %}
-            {% include "post_tags" %}
-            {% if post.meta.categories or post.meta.tags %}
-                &nbsp;/&nbsp;
-            {% endif %}
-            <i class="fa fa-thumb-tack"></i> <a href="{{ site.url }}{{ post.url }}">Permalink</a>
+            {% include "post_footer" %}
         </footer>
     </article>
 {% endfor %}

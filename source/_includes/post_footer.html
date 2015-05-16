@@ -1,0 +1,14 @@
+            {% set categories = page.categories ? page.categories : post.meta.categories %}
+            {% set tags = page.tags ? page.tags : post.meta.tags %}
+            {% set post_ = post ? post : page %}
+            <i class="fa fa-clock-o"></i> {{ post_.date | date("Y年m月d日") }}
+            &nbsp;/&nbsp;
+            <i class="fa fa-thumb-tack"></i> <a href="{{ site.url }}{{ post_.url }}">Permalink</a>
+            {% if categories or tags %}
+                &nbsp;/&nbsp;
+            {% endif %}
+            {% include "post_categories" %}
+            {% if categories and tags %}
+                &nbsp;/&nbsp;
+            {% endif %}
+            {% include "post_tags" %}
