@@ -24,13 +24,17 @@
             {{ page.blocks.content|raw }}
         </div>
         <hr />
-        <div>
+        <footer>
             {% include "post_categories" %}
             {% if page.categories and page.tags %}
                 &nbsp;/&nbsp;
             {% endif %}
             {% include "post_tags" %}
-        </div>
+            {% if page.categories or page.tags %}
+                &nbsp;/&nbsp;
+            {% endif %}
+            <i class="fa fa-thumb-tack"></i> <a href="{{ site.url }}{{ page.url }}">Permalink</a>
+        </footer>
 
         {% if page.previous_post or page.next_post %}
             <hr />
