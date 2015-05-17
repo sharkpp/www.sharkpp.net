@@ -1,4 +1,5 @@
 .sculpin/
+.vendor/
 app/cache/*
 app/config/sculpin_kernel_*.yml
 app/config/sculpin_site_*.yml
@@ -10,4 +11,3 @@ s3.conf
 convert/markdown/*
 convert/html/*
 convert/vendor/*
-convert/composer.phar

@@ -1,13 +1,8 @@
 #!/bin/bash
 
-if [ ! -e "$(dirname $0)/composer.phar" ];
-then
-	php -r "readfile('https://getcomposer.org/installer');" | php
-fi
-
 if [ ! -e "$(dirname $0)/vendor/pixel418/markdownify/src/Markdownify/Converter.php" ];
 then
-	php composer.phar install
+	php ../composer.phar install
 fi
 
 rm -rf $(dirname $0)/markdown/*

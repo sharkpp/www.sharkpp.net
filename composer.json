@@ -1,0 +1,13 @@
+{
+    "name": "sharkpp/www.sharkpp.net",
+    "license": "MIT License",
+    "authors": [
+        { "name": "sharkpp" }
+    ],
+    "require": {
+        "beelab/bowerphp": "1.0.*@dev"
+    },
+    "config": {
+        "vendor-dir": ".vendor"
+    }
+}

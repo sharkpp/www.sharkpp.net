@@ -1,0 +1,10 @@
+{
+    "name": "www.sharkpp.net",
+    "authors": [
+        { "name": "sharkpp" }
+    ],
+    "private": true,
+    "dependencies": {
+        "lightbox2": "2.7.*"
+    }
+}
