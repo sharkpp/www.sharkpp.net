@@ -1,0 +1,58 @@
+#!/bin/bash
+
+exec_usage () {
+  echo 'usage: site <command> [option]'
+  echo 'commands are:'
+  echo '  init     initialize site'
+  echo '  clean    cleanup site, remove ignore files'
+  echo '  generate generate site'
+  echo '  test     launch web server [ http://localhost:8000/ ] for test site'
+}
+
+exec_init () {
+  # install Sculpin
+  if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
+    php -r "readfile('https://download.sculpin.io/sculpin.phar');" > sculpin.phar
+  fi
+  php sculpin.phar self-update
+  php sculpin.phar install
+  # install Composer
+  if [ ! -e "$(dirname $0)/composer.phar" ] ; then
+    php -r "readfile('https://getcomposer.org/installer');" | php
+  fi
+  php composer.phar self-update
+  php composer.phar install
+  # install BowerPHP
+  .vendor/bin/bowerphp install
+}
+
+exec_clean () {
+  rm -rf .vendor .sculpin *.lock *.phar source/components/* app/cache/* app/logs/*
+}
+
+exec_generate () {
+  if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
+    exec_init
+  fi
+  rm -rf output_dev/*
+  php sculpin.phar generate --env=prod
+}
+
+exec_test () {
+  if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
+    exec_init
+  fi
+  rm -rf output_dev/*
+  php sculpin.phar generate --watch --server
+}
+
+case "$1" in
+  "init"     ) exec_init ;;
+  "i"        ) exec_init ;;
+  "clean"    ) exec_clean ;;
+  "generate" ) exec_generate ;;
+  "g"        ) exec_generate ;;
+  "test"     ) exec_test ;;
+  "t"        ) exec_test ;;
+  *         ) exec_usage ;;
+esac

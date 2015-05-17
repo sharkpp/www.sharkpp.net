@@ -11,3 +11,5 @@ s3.conf
 convert/markdown/*
 convert/html/*
 convert/vendor/*
+sculpin.phar
+composer.phar
