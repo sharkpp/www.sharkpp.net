@@ -34,15 +34,15 @@ Windows XP/Vista 上の以下のブラウザで、デザインを確認してい
 	  
 どのページにリンクしてもかまいませんが、必ずリンクするURLがアドレスバーに現れるようにリンクしてください。 <!-- http://d.hatena.ne.jp/HiromitsuTakagi/20040426#p2 -->
 
-<img src="image/images/banner.gif" width="128" height="48" alt="[Shark++ Software's Web Page Banner]" />
+![[Shark++ Software's Web Page Banner]][1]
 	  
-[http:/images/banner.gif][1]
+[http://www.sharkpp.net/images/banner.gif][1]
 
 	  
 <span class="warning">なお、バナーサイズは、気まぐれで変わることがあります。
 </span> 
 
- [1]: image/images/banner.gif
+ [1]: /images/banner.gif
 
 また、このサイトへのリンクをされた方は、メールを戴ければ、相互リンクをさせていただきたいと思います。
 	  

@@ -108,10 +108,13 @@ foreach ($files as $path) {
 	$html = preg_replace('!src="http://www.sharkpp.net/(.+)"!', 'src="/$1"', $html);
 
 	// fix image
-	$html = preg_replace('!<a +href="([^/][^"]+)"[^>]+?title="(.+?)".*?><img src="([^/][^"]+)"[^>]+?alt="(.+?)".*?/></a>!',
+	$html = preg_replace('!<a +href="([^/h][^"]+)"[^>]+?title="(.+?)".*?><img src="([^/h][^"]+)"[^>]+?alt="(.+?)".*?/></a>!',
 	                     '<a href="/'.dirname($curpath).'/$1"><img src="/'.dirname($curpath).'/$3" title="$4" /></a>', $html);
 	$html = preg_replace('!<a +href="/([^"]+)"[^>]+?title="(.+?)".*?><img src="/([^"]+)"[^>]+?alt="(.+?)".*?/></a>!',
 	                     '<a href="/$1"><img src="/$3" alt="$4" /></a>', $html);
+	$html = preg_replace('!<img src="([^"]+)"[^>]+?alt="(.+?)".*?/>!',
+	                     '<img src="$1" alt="$2" />', $html);
+	$html = preg_replace('!http://www.sharkpp.net/image!', 'http://www.sharkpp.net/images', $html);
 
 	$html = preg_replace('!<div class="section">(.+?)</div>!ms', '$1', $html);
 	$html = preg_replace('!<div class="footnote">(.+?)</div>!ms', '$1', $html);
@@ -125,18 +128,7 @@ foreach ($files as $path) {
 	unset($md);
 
 	// イメージ移動
-	$markdown = preg_replace_callback('!/(.+?\.(jpg|gif|png))!', function($m) use (& $cp, $dpath, $curpath) {
-		//	if (preg_match('!^(.+?)/([0-9]{4})/([0-9]{2})/([0-9]{2})/[^/]+?$!', $curpath, $mm)) {
-		//		$dst = trim(str_replace('/', '_', preg_replace('!(public|image|img)/!', '', $mm[1])), '_');
-		//		$dst = sprintf('%s%s%s_%s_%s', $mm[2], $mm[3], $mm[4], $dst, basename($m[1]));
-		//	} else if (preg_match('!^(.+?)/[^/]+?$!', $curpath, $mm)) {
-		//		$dst = trim(str_replace('/', '_', preg_replace('!(public|image|img)/!', '', $mm[1])), '_');
-		//		$dst = sprintf('%s_%s', $dst, basename($m[1]));
-		//	} else {
-		//		$dst = basename($m[1]);
-		//	}
-		//	$dst = str_replace('__', '_', $dst);
-
+	$markdown = preg_replace_callback('! /(.+?\.(jpg|gif|png))!', function($m) use (& $cp, $dpath, $curpath) {
 			$page_date = '';
 			if (preg_match('!^(.+?)/([0-9]{4})/([0-9]{2})/([0-9]{2})/[^/]+?$!', $curpath, $mm)) {
 				$page_date = $mm[2].'_'.$mm[3].$mm[4].'_';
@@ -148,7 +140,12 @@ foreach ($files as $path) {
 			}
 			if (preg_match('!/blog/!', $dpath))
 				$cp[] = array('from' => 'html/'.$m[1], 'to' => 'markdown'.$dst);
-			return $dst;
+			return ' '.$dst;
+		}, $markdown);
+	$markdown = preg_replace_callback('!([ "])(image/.+?\.(jpg|gif|png))!', function($m) use (& $cp, $dpath, $curpath) {
+			$dst = sprintf('/images/%s', basename($m[2]));
+			$cp[] = array('from' => 'html/'.$m[2], 'to' => 'markdown'.$dst);
+			return $m[1].$dst;
 		}, $markdown);
 
 	// 定義済みリストをMarkdownに変換

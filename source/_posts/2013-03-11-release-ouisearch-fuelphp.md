@@ -15,7 +15,7 @@ OUIを検索するFuelPHP用のパッケージを作ったよってことで、�
 
  [2]: https://github.com/sharkpp/fuel-ouisearch
  [3]: https://travis-ci.org/sharkpp/fuel-ouisearch
- [4]: https:/images/2013_0311_fuel-ouisearch.png?branch=master
+ [4]: https://travis-ci.org/sharkpp/fuel-ouisearch.png?branch=master
 
 まあ、誰得かは置いておいて、今回は、
 
