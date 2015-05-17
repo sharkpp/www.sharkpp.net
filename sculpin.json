@@ -23,6 +23,6 @@
         "jasny/twig-extensions": "@dev"
     },
     "config": {
-        "component-dir": "source/components"
+        "component-dir": "source/assets"
     }
 }

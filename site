@@ -27,7 +27,8 @@ exec_init () {
 }
 
 exec_clean () {
-  rm -rf .vendor .sculpin *.lock *.phar source/components/* app/cache/* app/logs/*
+  rm -rf .vendor .sculpin *.lock *.phar
+  rm -rf output_* source/assets app/cache app/logs
 }
 
 exec_generate () {
@@ -36,6 +37,7 @@ exec_generate () {
   fi
   rm -rf output_dev/*
   php sculpin.phar generate --env=prod
+  if [ $? -ne 0 ]; then echo "Could not generate the site"; exit 1; fi
 }
 
 exec_test () {
