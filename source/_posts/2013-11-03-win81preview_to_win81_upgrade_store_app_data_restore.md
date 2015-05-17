@@ -31,9 +31,13 @@ categories: [blog]
 
 [Windows 8.1情報 | サポート | VAIO | ソニー][1]
 
+ [1]: http://vcl.vaio.sony.co.jp/windows/8-1/update/
+
 > Windows 8.1 Preview版をインストールされている場合は、必ずWindows 8にリカバリーしてから、Windows 8.1へアップデート下さい。 Windows 8.1 Preview版からWindows 8.1へアップデートした場合、ソフトウェアが使用できないなどの不具合が生じる可能性があります。
 
 [[Windows 8.1] Windows 8.1 Previewから、Windows 8.1(正式版)に更新したい| Q&Aページ | サポート | VAIO | ソニー][2]
+
+ [2]: http://qa.support.sony.jp/solution/S1310180055899/
 
 てな情報がありました。
 
@@ -77,9 +81,15 @@ Windows 8.1 にアップグレードしてから、アプリはすでにイン�
 
 まず、ストアアプリがデータを読み書きしないようにタスクマネージャから終了させます。 普通に終了させてもバックグラウンドで動いているようなので念のためです。
 
-<a href="/public/images/2013_1103_launch_taskmgr_large.png" rel="lytebox[2013_1103_launch_taskmgr]" title="タスクマネージャ起動"><img src="/public/images/2013_1103_launch_taskmgr.png" alt="タスクマネージャ起動" /></a>
+[![タスクマネージャ起動][3]][4]
 
-<a href="/public/images/2013_1103_stop_store_app_large.png" rel="lytebox[2013_1103_stop_store_app]" title="該当アプリ停止"><img src="/public/images/2013_1103_stop_store_app.png" alt="該当アプリ停止" /></a>
+ [3]: /images/2013_1103_launch_taskmgr.png
+ [4]: /images/2013_1103_launch_taskmgr_large.png
+
+[![該当アプリ停止][5]][6]
+
+ [5]: /images/2013_1103_stop_store_app.png
+ [6]: /images/2013_1103_stop_store_app_large.png
 
 次に、以前のデータと今のデータを置き換えます。
 
@@ -98,15 +108,23 @@ Windows 8.1 にアップグレードしてから、アプリはすでにイン�
   * `{ユーザー名}` は、ログインしているユーザー名。
   * `{ストアアプリフォルダ}` は、ストアアプリの基準フォルダ(アプリのベンダー名やアプリ名などなどが元になっているようですね)
 
-<a href="/public/images/2013_1103_delete_current_app_data_large.png" rel="lytebox[2013_1103_delete_current_app_data]" title="現在のデータを削除"><img src="/public/images/2013_1103_delete_current_app_data.png" alt="現在のデータを削除" /></a>
+[![現在のデータを削除][7]][8]
 
-<a href="/public/images/2013_1103_restore_app_data_large.png" rel="lytebox[2013_1103_restore_app_data]" title="以前のデータをコピーして復旧"><img src="/public/images/2013_1103_restore_app_data.png" alt="以前のデータをコピーして復旧" /></a>
+ [7]: /images/2013_1103_delete_current_app_data.png
+ [8]: /images/2013_1103_delete_current_app_data_large.png
+
+[![以前のデータをコピーして復旧][9]][10]
+
+ [9]: /images/2013_1103_restore_app_data.png
+ [10]: /images/2013_1103_restore_app_data_large.png
 
 最後に、アプリを起動してデータを確認。
 
 この手順で復旧できるかどうかはアプリ次第ではあります。
 
-[Note Anytime][3] はうまくいきました。
+[Note Anytime][11] はうまくいきました。
+
+ [11]: http://apps.microsoft.com/windows/ja-JP/app/note-anytime/b143522d-3500-4858-9be5-2dec4dcb693e
 
 あと、ストアアプリがたくさんあると該当のアプリを探せなかったり面倒くさいので素直に Windows 8 へリカバリしてから Windwos 8.1 にアップデートした方が余計なこと考えなくて良くていいと思います。
 
@@ -115,7 +133,3 @@ Windows 8.1 にアップグレードしてから、アプリはすでにイン�
 とりあえず、なんにでも落とし穴があるようで、、、、ひどいよ Microsoft さんorz
 
 データが消えた時は焦ったけど、まあ何とかなってよかったよかった、、、、かな？
-
- [1]: http://vcl.vaio.sony.co.jp/windows/8-1/update/
- [2]: http://qa.support.sony.jp/solution/S1310180055899/
- [3]: http://apps.microsoft.com/windows/ja-JP/app/note-anytime/b143522d-3500-4858-9be5-2dec4dcb693e

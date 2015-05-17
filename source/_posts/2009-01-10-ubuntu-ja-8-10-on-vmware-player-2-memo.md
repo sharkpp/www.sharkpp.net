@@ -46,6 +46,8 @@ sound.pciSlotNumber = 18
   * インストールは
   * CDの中のVMwareTools-?.tar.gzを
 
+ [1]: http://www.vmware.com/jp/products/server/
+
 <pre>/var/tmp/に解凍
 cd vmware-tools-distrib
 sudu ./vmware-install.pl
@@ -55,13 +57,14 @@ sudu ./vmware-install.pl
 
 [Ubuntu日本語フォーラム / vmware toolのインストール方法:][2]
 
+ [2]: http://forums.ubuntulinux.jp/viewtopic.php?pid=1913
+
 [VMware PlayerにDebian lennyをインストールしたメモ - www tools][3]
+
+ [3]: http://d.hatena.ne.jp/giant_penguin/20081124/1227485111
 
 ### その他
 
 [時刻同期メモ][4]
 
- [1]: http://www.vmware.com/jp/products/server/
- [2]: http://forums.ubuntulinux.jp/viewtopic.php?pid=1913
- [3]: http://d.hatena.ne.jp/giant_penguin/20081124/1227485111
  [4]: http://d.hatena.ne.jp/prokion/20080312/1223800954

@@ -13,4 +13,4 @@ Lingerからお目当てのものを検索かけても出てこず1日ごとに�
 
 [rhaco2ってどうやって使うの？][1]
 
- [1]: http://www.sharkpp.net/php/rhaco/how-to-use-rhaco2.html
+ [1]: /php/rhaco/how-to-use-rhaco2

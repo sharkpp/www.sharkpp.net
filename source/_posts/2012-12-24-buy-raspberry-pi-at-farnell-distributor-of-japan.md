@@ -11,7 +11,12 @@ categories: [blog]
 
 で、なんか、いつの間にか[Farnellの日本代理店][1]でRaspberry Piを扱うようになっているのでためしに買ってみることにしました。
 
-<a href="/public/images/2012_1222_RaspberryPi+Case.jpg" rel="lytebox[x2012_1222]" title="新しいRaspberry Piとケース" ><img src="/public/images/2012_1222_RaspberryPi+Case_small.jpg" alt="新しいRaspberry Piとケース" /></a>
+ [1]: http://www.leocom.jp/
+
+[![新しいRaspberry Piとケース][2]][3]
+
+ [2]: /images/2012_1222_RaspberryPi+Case_small.jpg
+ [3]: /images/2012_1222_RaspberryPi+Case.jpg
 
 ### 注意！
 
@@ -27,13 +32,17 @@ categories: [blog]
 
 ### では本文です
 
-まず、注文した所、[有限会社レオコム][1]は[Farnell Export][2]を見ると、Farnellの正式な日本代理店で間違いないようです。
+まず、注文した所、[有限会社レオコム][1]は[Farnell Export][4]を見ると、Farnellの正式な日本代理店で間違いないようです。
+
+ [4]: http://export.farnell.com/jsp/home/exportHome.jsp
 
 近隣だと中国とか韓国には現地法人がある模様だけど日本にはないようです。
 
 で、どうも、12/1から在庫販売をし始めたようです。
 
-ページは[Raspberry Pi電子部品・半導体通販 - レオコム - R&D・MRO・修理・少量販売][3]になります。
+ページは[Raspberry Pi電子部品・半導体通販 - レオコム - R&D・MRO・修理・少量販売][5]になります。
+
+ [5]: http://www.leocom.jp/ja/RaspberryPi/
 
 とりあえず、ケースを買ってみようとしたのですが、5000円未満だと1000円の送料が付いてしまいケースよりも高くなるのでなんだか馬鹿らしくなってやめようかと思ったのですが、本体も買えるようなのでついでだからということでもう１セットを買って記事を書くことにしました。
 
@@ -47,8 +56,11 @@ categories: [blog]
 
   * 千石電商：\6300 (店頭価格、ケース単品は販売不可とのこと)
   * レオコム：\5408 (本体\4400、ケース\750、税) 
-  * [RSコンポーネンツ（個人購入）][4]：$49.49 なので \4179ぐらい (本体$35.00、ケース$6.47、送料$8.02)
-  * [ModMyPi][5]：34.98ユーロ なので 3891円ぐらい (本体とケースのセット 29.99ユーロ、送料(Air Mail)4.99ユーロ)
+  * [RSコンポーネンツ（個人購入）][6]：$49.49 なので \4179ぐらい (本体$35.00、ケース$6.47、送料$8.02)
+  * [ModMyPi][7]：34.98ユーロ なので 3891円ぐらい (本体とケースのセット 29.99ユーロ、送料(Air Mail)4.99ユーロ)
+
+ [6]: http://raspberrypi.rsdelivers.com/default.aspx
+ [7]: https://www.modmypi.com/shop/raspberry-pi/raspberry-pi-and-modmypi-case
 
 となっていました。
 
@@ -61,7 +73,9 @@ categories: [blog]
   * 千石電商：０日(ただし、店頭受け取り)
   * レオコム：１日?２日ぐらい？(多分在庫限り)
   * RSコンポーネンツ（個人購入）：10日ぐらい？以前はかなり掛かってたけど１週間以内に出荷とのことなのでこのぐらい？
-  * ModMyPi：10日ぐらい？[(MobileHackerz再起動日記: いつまでも届かないRaspberry Piは一手間かけると10日で新型が手に入る][6]より)
+  * ModMyPi：10日ぐらい？[(MobileHackerz再起動日記: いつまでも届かないRaspberry Piは一手間かけると10日で新型が手に入る][8]より)
+
+ [8]: http://blog.mobilehackerz.jp/2012/10/raspberry-pi10.html
 
 なので、千石電商＞レオコム＞ModMyPi≧RSコンポーネンツ ぐらいかな？
 
@@ -103,11 +117,7 @@ RSコンポーネンツやModMyPiで購入しても、1週間から２週間ぐ�
 
 さっさと機材そろえて何か作らなきゃってプレッシャーをひしひしorz
 
-<a href="/public/images/2012_1222_RaspberryPi+Case2.jpg" rel="lytebox[x2012_1222]" title="我が家のRaspberry Pi達"><img src="/public/images/2012_1222_RaspberryPi+Case2_small.jpg" alt="我が家のRaspberry Pi達" /></a>
+[![我が家のRaspberry Pi達][9]][10]
 
- [1]: http://www.leocom.jp/
- [2]: http://export.farnell.com/jsp/home/exportHome.jsp
- [3]: http://www.leocom.jp/ja/RaspberryPi/
- [4]: http://raspberrypi.rsdelivers.com/default.aspx
- [5]: https://www.modmypi.com/shop/raspberry-pi/raspberry-pi-and-modmypi-case
- [6]: http://blog.mobilehackerz.jp/2012/10/raspberry-pi10.html
+ [9]: /images/2012_1222_RaspberryPi+Case2_small.jpg
+ [10]: /images/2012_1222_RaspberryPi+Case2.jpg

@@ -10,6 +10,9 @@ categories: [blog]
   * [Boost.勉強会 #11 東京 - PARTAKE][1]
   * [Boost.勉強会 #11 東京 #boostjpの座席表 - セキココ][2]
 
+ [1]: http://partake.in/events/e75cde86-75c8-47ce-b647-2dbd0495b053#
+ [2]: http://sekico.co/zaseki/141
+
 ## C++ポケットリファレンスについて
 
 著者前へ→一人足りないwww
@@ -17,6 +20,13 @@ categories: [blog]
 C++11の日本語初のリファレンス。
 
 著者ズ→ [@nyaocat][3] [@andochin][4] [@hotwatermorning][5] [@wraith13][6] [@egtra][7] [@cpp_akira][8]
+
+ [3]: https://twitter.com/nyaocat
+ [4]: https://twitter.com/andochin
+ [5]: https://twitter.com/hotwatermorning
+ [6]: https://twitter.com/wraith13
+ [7]: https://twitter.com/egtra
+ [8]: https://twitter.com/cpp_akira
 
 コミュニティから本を出していきたい！
 
@@ -27,6 +37,8 @@ C++11の日本語初のリファレンス。
 
   * 発表者：[@cpp_akira][8]
   * スライド：[Boost Tour 1.53.0 merge][9]
+
+ [9]: http://www.slideshare.net/faithandbrave/boost-tour-1530-merge
 
 ### Atomic
 
@@ -55,6 +67,9 @@ InterlockedIncrimentなどの置き換え、mutexの代わりなど。
   * 発表者：[@sakisaka7][10]
   * スライド：[C++でDBにデータを保存して扱ってみよう :: Boost.勉強会 #11][11]
 
+ [10]: https://twitter.com/sakisaka7
+ [11]: http://beta.saki7.jp/slides/boost-study-11-cpp-database/
+
 リレーショナルデータベース使ってる人→６〜７割
 
 C++で使えるO/Rマッパーのはなし。
@@ -62,6 +77,8 @@ C++で使えるO/Rマッパーのはなし。
 JSONで大量のデータの管理はいくない！
 
 Wt(ウィッティー) [Wt::Dbo Tutorial][12]
+
+ [12]: http://www.webtoolkit.eu/wt/doc/tutorial/dbo/tutorial.html
 
 JSONと比べデータベースを使うと、データの整合性や検索、同期、そしてデータ構造の管理などもできる！
 
@@ -72,6 +89,10 @@ bind処理も実装してある。
   * [O/Rマッピング | TreeFrog Framework][13]
   * [ODB - C++ Object-Relational Mapping (ORM)][14]
   * [boost.RDB][15]
+
+ [13]: http://www.treefrogframework.org/ja/%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88/%E3%83%A2%E3%83%87%E3%83%AB/or%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0
+ [14]: http://www.codesynthesis.com/products/odb/
+ [15]: https://code.google.com/p/boost-rdb/
 
 会場からつ boost.python boost.Fusion などを絡め統一的なのができるのでは？
 
@@ -105,6 +126,8 @@ C++ポケットリファレンスをまだ購入していない人を有志で�
   * 発表者：[@hotwatermorning][5]
   * スライド：[The Instrumental C++.pdf][16]
 
+ [16]: https://www.dropbox.com/s/8t7nfmxh7yprjzv/The%20Instrumental%20C%2B%2B.pdf
+
 DTMer(D™を使っている人)向けの発表
 
 ※ただし、対象者は数人の模様
@@ -122,6 +145,8 @@ VSTプラグインを実装してみた話
 
   * [「サウンドプログラミング入門」青木直史][17] オススメ
   * VSTプラグインをがんばって実装してもホスト側が機能を実装していないこともあるので注意！
+
+ [17]: http://gihyo.jp/book/2013/978-4-7741-5522-7
 
 ## C++でぼくが忘れがちなこと
 
@@ -151,6 +176,8 @@ C言語との違い
 ## CilkPlus, TBB, OpenMP
 
   * 発表者：[@krustf][18]
+
+ [18]: https://twitter.com/krustf
 
 並列プログラミングの話
 
@@ -209,15 +236,21 @@ parallel\_for と parallel\_reduce があればだいたい事足りる。
 
   * [姫野ベンチマーク][19]
 
+ [19]: http://accc.riken.jp/2145.htm
+
 ### まとめ
 
   * CilkPlus や Intel TBB を使おう
   * C++11 が使える場合は Promise もいいかも
   * [構造化並列プログラミング][20] がおすすめ
 
+ [20]: http://www.amazon.co.jp/dp/4877833056
+
 ## Hello, C++ + JavaScript World!
 
   * 発表者：[@hecomi][21]
+
+ [21]: https://twitter.com/hecomi
 
 ### 世界観
 
@@ -227,6 +260,8 @@ parallel\_for と parallel\_reduce があればだいたい事足りる。
   * NaitiveClient
   * [Emscripten][22] (C++をJSに変換)
   * Android
+
+ [22]: https://github.com/kripken/emscripten
 
 ### Node.js
 
@@ -258,6 +293,8 @@ QtQuickでV8を使用
   * HellowWorldは12万行に!?
   * asm.js形式で吐き出すので OdinMonkey で動かすとロードは遅いけどヌルサク
 
+ [23]: http://www.unrealengine.com/html5/
+
 ## 未来のC++に向けて書いた論文という名のネタ帳
 
   * 発表者：[@Sigureya][24]
@@ -268,6 +305,8 @@ QtQuickでV8を使用
   * LISPの布教
   * 30分のところ、5分で終了
 
+ [24]: https://twitter.com/Sigureya
+
 ## コンテナのパフォーマンスについて
 
   * 発表者：[@hgodai][25]
@@ -277,6 +316,8 @@ QtQuickでV8を使用
   * Ivar jacobson と一緒に仕事をしたことが
   * 思考を硬直させない
   * 常識、慣例、しきたり、都市伝説に惑わされない、 **自分の目で確かめる**
+
+ [25]: https://twitter.com/hgodai
 
 ### std::vectorでいいの？
 
@@ -292,6 +333,8 @@ QtQuickでV8を使用
   * 検索は unorderd_map が早い、ソート済みvectorはそこそこ早い
 
 [ソフトウエア研究会in秋葉原][26]
+
+ [26]: http://ssa.techarts.co.jp/
 
 ## C++14の概要
 
@@ -341,6 +384,8 @@ QtQuickでV8を使用
   * ↑のRSS
   * std-proposalsのML
 
+ [27]: http://isocpp.org/
+
 ### まとめ
 
   * C++14には便利な機能が入るっぽい、ただし状況が変わるかも？
@@ -354,31 +399,3 @@ QtQuickでV8を使用
 あと、C++ポケットリファレンスを買って著者にサインをもらう流れが面白かったなと、、、ただ、自分もですが休憩時間を越えてサインに行列ができたのはちょっとまずかったと反省(自分は越える前に席には戻っていましたが、、)。
 
 個人的にはJavaScript関連はジャストミートで聞いていて楽しかったです。
-
- [1]: http://partake.in/events/e75cde86-75c8-47ce-b647-2dbd0495b053#
- [2]: http://sekico.co/zaseki/141
- [3]: https://twitter.com/nyaocat
- [4]: https://twitter.com/andochin
- [5]: https://twitter.com/hotwatermorning
- [6]: https://twitter.com/wraith13
- [7]: https://twitter.com/egtra
- [8]: https://twitter.com/cpp_akira
- [9]: http://www.slideshare.net/faithandbrave/boost-tour-1530-merge
- [10]: https://twitter.com/sakisaka7
- [11]: http://beta.saki7.jp/slides/boost-study-11-cpp-database/
- [12]: http://www.webtoolkit.eu/wt/doc/tutorial/dbo/tutorial.html
- [13]: http://www.treefrogframework.org/ja/%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88/%E3%83%A2%E3%83%87%E3%83%AB/or%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0
- [14]: http://www.codesynthesis.com/products/odb/
- [15]: https://code.google.com/p/boost-rdb/
- [16]: https://www.dropbox.com/s/8t7nfmxh7yprjzv/The%20Instrumental%20C%2B%2B.pdf
- [17]: http://gihyo.jp/book/2013/978-4-7741-5522-7
- [18]: https://twitter.com/krustf
- [19]: http://accc.riken.jp/2145.htm
- [20]: http://www.amazon.co.jp/dp/4877833056
- [21]: https://twitter.com/hecomi
- [22]: https://github.com/kripken/emscripten
- [23]: http://www.unrealengine.com/html5/
- [24]: https://twitter.com/Sigureya
- [25]: https://twitter.com/hgodai
- [26]: http://ssa.techarts.co.jp/
- [27]: http://isocpp.org/

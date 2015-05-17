@@ -13,6 +13,8 @@ categories: [blog]
 
 [HSPプログラムコンテスト2009][1]で入賞しました。
 
+ [1]: http://hsp.tv/contest2009/
+
 （有）テクノキット賞を頂きました。
 
 ネット審査員でコメントしていただいた方ごめんなさい。デバック途中で気が付いていましたがデバッグしている時間がありませんでしたorz
@@ -26,6 +28,9 @@ categories: [blog]
 
 [yabuinu][2]について、[HSP3用難読化＆独自スクランブル ツール ”yabuinu” を公開しました][3]で「HSP3の他バージョン用も簡単に実装できそうですが」と書いたのですが、HSP 3.2版はランタイムのソースが非公開なので当分は実装出来そうにありません。
 
+ [2]: /hsp/tool/yabuinu
+ [3]: /blog/2009/09/30/yabuinu-the-obfuscator-and-scrambler-for-hsp3-0-0-1-0-release
+
 大丈夫だろうと高をくくっていたら意外な落とし穴がありましたorz
 
 HSP3.1ではランタイムのソースを公開して、HSP3.2で非公開としている意図が分からず、おにたまさんに公開をお願いしようとも思いましたが、折角なので勉強を兼ねてEXEを直で弄る実装にしようかと思っています。
@@ -37,7 +42,13 @@ HSP3.1ではランタイムのソースを公開して、HSP3.2で非公開と�
 
 [rhaco2ってどうやって使うの？][4]について、Googleでrhaco2で検索するとなぜか現時点でトップに来てたりしますが、rhaco2は仕様がころころ変わっていたり、開発途中なためすでに内容が過去のものになっています。
 
+ [4]: /php/rhaco/how-to-use-rhaco2
+
 なので、最新の内容については、[rhaco.org][5]とか[rhaco2 Documents][6]とか[rhaco_ja][7]をご参照ください。
+
+ [5]: http://rhaco.org/
+ [6]: http://wikihub.org/wiki/rhaco2-doc
+ [7]: http://lingr.com/room/rhaco_ja
 
 Google経由で訪れていただいた方すいません。
 
@@ -50,11 +61,15 @@ Google経由で訪れていただいた方すいません。
 
 そのほか、「HSP3.2プログラミング入門」に[pcbnet2 (改変版)][8]が掲載されています。
 
+ [8]: /hsp/plugin/pcbnet2
+
 これは、何もしていないにも等しいので報告だけ。
 
 ### 1年を振り返り
 
 [Lhaplus x64 shell extension][9]が意外と好評だったようで、統計を取ったら思いのほかDLされていて嬉しい限りです。
+
+ [9]: /soft/tool/lhaplus-x64-shell-extension
 
 今年は、Safari 4祭りに首を突っ込んだり、PC-G850VSを購入したり、OpenHSPのナイトリービルドを始めたり、1ヶ月最低一回ブログ更新・なにか公開を始めたりなどなど色々ありました。
 
@@ -72,13 +87,3 @@ Google経由で訪れていただいた方すいません。
 以上、今年の総括でした。
 
 来年もよろしく！
-
- [1]: http://hsp.tv/contest2009/
- [2]: http://www.sharkpp.net/hsp/tool/yabuinu.html
- [3]: /blog/2009/09/30/yabuinu-the-obfuscator-and-scrambler-for-hsp3-0-0-1-0-release.html
- [4]: http://www.sharkpp.net/php/rhaco/how-to-use-rhaco2.html
- [5]: http://rhaco.org/
- [6]: http://wikihub.org/wiki/rhaco2-doc
- [7]: http://lingr.com/room/rhaco_ja
- [8]: http://www.sharkpp.net/hsp/plugin/pcbnet2.html
- [9]: http://www.sharkpp.net/soft/tool/lhaplus-x64-shell-extension.html

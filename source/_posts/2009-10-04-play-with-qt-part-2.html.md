@@ -55,6 +55,8 @@ qmake
   * それぞれ、「マルチスレッド (/MTd)」と「マルチスレッド デバッグ (/MDd)」から「マルチスレッド (/MT)」と「マルチスレッド デバッグ (/MD)」に変更
   * 参考記事ではReleaseとDebugで二回ビルドが必要とか書いてあるけどバッチビルドを使えば一回ですむ
 
+ [1]: http://d.kawataso.net/2008/03/vs2005qt4-1.html
+
 
 
   
@@ -64,6 +66,5 @@ qmake
 
   * アプリケーションアイコンはこの辺が参考になる→[アプリケーションアイコンの設定][2] 最新：[Setting the Application Icon][3]
 
- [1]: http://d.kawataso.net/2008/03/vs2005qt4-1.html
  [2]: http://www.kde.gr.jp/~ichi/qt/appicon.html
  [3]: http://qt.linux-life.net/4/doc/ja/appicon.html

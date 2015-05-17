@@ -7,6 +7,8 @@ categories: [blog]
 
 DLLなし圧縮・解凍ソフト [Lhaplus][1] の 64bit版Windows用シェル拡張をアップデートしました。
 
+ [1]: http://hoehoe.com/
+
 今回のアップデートは不具合修正のみです。
 
 フォルダツリーやナビゲーションウィンドウを表示した状態での右クリックで「圧縮」や「解凍」などのメニュー項目が表示されていなかった不具合を修正しました。
@@ -29,5 +31,4 @@ DLLなし圧縮・解凍ソフト [Lhaplus][1] の 64bit版Windows用シェル�
 
 ダウンロードは、[ツール][2]からどうぞ
 
- [1]: http://hoehoe.com/
- [2]: http://www.sharkpp.net/soft/tool.html
+ [2]: /soft/tool

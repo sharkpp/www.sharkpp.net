@@ -7,6 +7,8 @@ categories: [blog]
 
 [Surface RT][1]が日本上陸とのことなので購入してみました。
 
+ [1]: http://www.microsoft.com/surface/ja-jp
+
 キーボードとかは別のを使おうと思ってるので本体のみにしています。
 
 ※英語版などはAmazonで以前から買えていた模様です。
@@ -15,39 +17,68 @@ categories: [blog]
 
 まず、第一印象は箱デカイ！でした。 横幅はMac Book Airに迫ろうかという大きさです。
 
-<a href="/public/images/2013_0316_surfacert_box.jpg" rel="lytebox[x2013_0316]" title="外箱"><img src="/public/images/2013_0316_surfacert_box.png"  alt="外箱" /></a>
+[![外箱][2]][3]
+
+ [2]: /images/2013_0316_surfacert_box.png
+ [3]: /images/2013_0316_surfacert_box.jpg
 
 箱のデザインはなかなかかっこいい感じです。
 
-<a href="/public/images/2013_0316_surfacert_box2.jpg" rel="lytebox[x2013_0316]" title="内箱"><img src="/public/images/2013_0316_surfacert_box2.png"  alt="内箱" /></a>
+[![内箱][4]][5]
+
+ [4]: /images/2013_0316_surfacert_box2.png
+ [5]: /images/2013_0316_surfacert_box2.jpg
 
 外箱→内箱→内箱の蓋と順に開けていくとSurface RT本体と専用充電器が現れます。 箱の内側も単色で、なんだかMicrosoftじゃないみたいです。
 
-<a href="/public/images/2013_0316_surfacert_box3.jpg" rel="lytebox[x2013_0316]" title="内箱2"><img src="/public/images/2013_0316_surfacert_box3.png"  alt="内箱2" /></a>
+[![内箱2][6]][7]
+
+ [6]: /images/2013_0316_surfacert_box3.png
+ [7]: /images/2013_0316_surfacert_box3.jpg
 
 Surface RT本体です。 画面OFF状態の場合は結構周囲が反射します。 スマホのカメラを構えた状態もバッチし映りこんでいます。 画面ONになると気になりませんが、、、
 
-<a href="/public/images/2013_0316_surfacert_front.jpg" rel="lytebox[x2013_0316]" title="正面"><img src="/public/images/2013_0316_surfacert_front.png"  alt="正面" /></a>
+[![正面][8]][9]
+
+ [8]: /images/2013_0316_surfacert_front.png
+ [9]: /images/2013_0316_surfacert_front.jpg
 
 WiFiやアカウント情報などを登録し、セットアップを続けます。 最終的にはスタートメニューが表示するまで20分から30分ぐらいかかりました。
 
-<a href="/public/images/2013_0316_surfacert_please_wait.jpg" rel="lytebox[x2013_0316]" title="セットアップ中1"><img src="/public/images/2013_0316_surfacert_please_wait.png"  alt="セットアップ中1" /></a> <a href="/public/images/2013_0316_surfacert_please_wait2.jpg" rel="lytebox[x2013_0316]" title="セットアップ中2"><img src="/public/images/2013_0316_surfacert_please_wait2.png"  alt="セットアップ中2" /></a>
+[![セットアップ中1][10]][11] [![セットアップ中2][12]][13]
+
+ [10]: /images/2013_0316_surfacert_please_wait.png
+ [11]: /images/2013_0316_surfacert_please_wait.jpg
+ [12]: /images/2013_0316_surfacert_please_wait2.png
+ [13]: /images/2013_0316_surfacert_please_wait2.jpg
 
 スタートメニューです。 Windows 8 そのままです。
 
-<a href="/public/images/2013_0316_surfacert_start_menu.jpg" rel="lytebox[x2013_0316]" title="スタートメニュー"><img src="/public/images/2013_0316_surfacert_start_menu.png"  alt="スタートメニュー" /></a>
+[![スタートメニュー][14]][15]
+
+ [14]: /images/2013_0316_surfacert_start_menu.png
+ [15]: /images/2013_0316_surfacert_start_menu.jpg
 
 デスクトップですが、やっぱり、Windows 8 そのままです。
 
-<a href="/public/images/2013_0316_surfacert_desktop.jpg" rel="lytebox[x2013_0316]" title="デスクトップ"><img src="/public/images/2013_0316_surfacert_desktop.png"  alt="デスクトップ" /></a>
+[![デスクトップ][16]][17]
+
+ [16]: /images/2013_0316_surfacert_desktop.png
+ [17]: /images/2013_0316_surfacert_desktop.jpg
 
 標準インストールのOfficeです。
 
-<a href="/public/images/2013_0316_surfacert_office.jpg" rel="lytebox[x2013_0316]" title="Office"><img src="/public/images/2013_0316_surfacert_office.png"  alt="Office" /></a>
+[![Office][18]][19]
+
+ [18]: /images/2013_0316_surfacert_office.png
+ [19]: /images/2013_0316_surfacert_office.jpg
 
 非デスクトップ版のIEです。
 
-<a href="/public/images/2013_0316_surfacert_ie.jpg" rel="lytebox[x2013_0316]" title="IE"><img src="/public/images/2013_0316_surfacert_ie.png"  alt="IE" /></a>
+[![IE][20]][21]
+
+ [20]: /images/2013_0316_surfacert_ie.png
+ [21]: /images/2013_0316_surfacert_ie.jpg
 
 ## 少し触ってみた感想など
 
@@ -58,5 +89,3 @@ WiFiやアカウント情報などを登録し、セットアップを続けま�
   * 手で持つと少し重たいので片手で持ちながらって感じでは手が疲れて使えない
 
 とりあえず、特に何もないのでしばらくはサブディスプレーとして活躍しそうな感じです。
-
- [1]: http://www.microsoft.com/surface/ja-jp

@@ -15,9 +15,10 @@ categories: [blog]
 
 [落書き][1]
 
+ [1]: /gallery/graffiti
+
 あと、休眠状態だったpixivアカウントに投稿してます。
 
 つ[「sharkpp」のイラスト][2]
 
- [1]: http://www.sharkpp.net/gallery/graffiti.html
  [2]: http://www.pixiv.net/member.php?id=1547498

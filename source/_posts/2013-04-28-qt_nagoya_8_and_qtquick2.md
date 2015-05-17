@@ -9,18 +9,18 @@ categories: [blog]
 
 [名古屋Qt勉強会#8 4/27][1]
 
+ [1]: http://www.zusaar.com/event/607003
+
 今回は発表する人が無かったので全員での自己紹介の後はもくもく会になったので良い機会なのでhspideの続きではなく未体験ゾーンのQtQuick2で何か作ってみることにしました。
 
 ここからは少し雑談を挟みつつひたすらもくもくしていきます。
 
 雑談は、Twitterに流れている物だと、
 
-<blockquote class="twitter-tweet" lang="ja">
-  <p>
-    なんとなくスルー QT @<a href="https://twitter.com/mizmit1222">mizmit1222</a>: OSC名古屋はなんとなくスルーということで <a href="https://twitter.com/search/%23qtngy">#qtngy</a>
-  </p>&mdash; 理音伊織さん (@IoriAYANE) 
-  
-  <a href="https://twitter.com/IoriAYANE/status/327998905256136704">2013年4月27日</a>
+<blockquote class="twitter-tweet" lang="ja"><p>
+なんとなくスルー QT @<a href="https://twitter.com/mizmit1222">mizmit1222</a>: OSC名古屋はなんとなくスルーということで <a href="https://twitter.com/search/%23qtngy">#qtngy</a>
+</p>&mdash; 理音伊織さん (@IoriAYANE) 
+<a href="https://twitter.com/IoriAYANE/status/327998905256136704">2013年4月27日</a>
 </blockquote>
 
 とかそんな感じです。
@@ -45,6 +45,8 @@ QtCreatorでデザインボタンを押すとカーソルがくるくる回っ�
 
 ![image][2]
 
+ [2]: /images/2013_0427_qtquick2.png
+
 表示的な部分は少し微妙なところはありますが大体できた感じです。 ただ、この先が問題、、、
 
 作りたかった物はどうもQtの機能だけでは実現できないようでネイティブな機能、WindowsならAPIだとかLinuxならシステムコールだとかを呼び出さないと行けない代物。 なので、まあ、ここからが完全なる未体験ゾーンかなーと思います。 Macのシステムプログラミングなんてやったことねーよ(´・ω・｀)
@@ -52,6 +54,8 @@ QtCreatorでデザインボタンを押すとカーソルがくるくる回っ�
 ってことで、ぐぐってもよくわからないのでQtのソースなどを足がかりに進めていこうかなーと思います。
 
 つ [sharkpp/TaskMemGraph - GitHub][3]
+
+ [3]: https://github.com/sharkpp/TaskMemGraph
 
 以上、報告終わり
 
@@ -64,9 +68,6 @@ QtCreatorでデザインボタンを押すとカーソルがくるくる回っ�
   * [Online RGB Color Wheel][8]
   * [RGB色空間とHSV色空間の相互変換 Javascript版 - 今日も適当ダイアリー][9]
 
- [1]: http://www.zusaar.com/event/607003
- [2]: http://www.sharkpp.net/public/images/2013_0427_qtquick2.png
- [3]: https://github.com/sharkpp/TaskMemGraph
  [4]: http://blog.flugel.biz/2009/12/html5-canvas-arc_17.html
  [5]: http://www.html5.jp/canvas/how2.html
  [6]: http://relog.xii.jp/mt5r/2012/07/qmlqtcanvas.html

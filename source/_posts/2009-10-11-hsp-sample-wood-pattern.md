@@ -14,18 +14,21 @@ boxf
 sx = ginfo_winx
 sy = ginfo_winy
 repeat 256
-	hsvcolor 26,49,246+rnd(20)-10
-	y=rnd(sy)
-	y1=y+rnd(30)-15
-	y2=y+rnd(30)-15
-	repeat 1+rnd(3)
-		line 0,y1+cnt,sx,y2+cnt
-	loop
+hsvcolor 26,49,246+rnd(20)-10
+y=rnd(sy)
+y1=y+rnd(30)-15
+y2=y+rnd(30)-15
+repeat 1+rnd(3)
+line 0,y1+cnt,sx,y2+cnt
+loop
 loop
 </pre>
 
 こんなのが出来ます。
 
-<a href="http://www.sharkpp.net/public/images/2009_1011_wood_pattern.jpg" rel="lytebox#2009_1011_wood_pattern" title="2009_1011_wood_pattern.jpg" ><img src="http://www.sharkpp.net/public/images/2009_1011_wood_pattern.png" alt="2009_1011_wood_pattern.png" /></a>
+[![2009_1011_wood_pattern.png][1]][2]
+
+ [1]: /images/2009_1011_wood_pattern.png
+ [2]: /images/2009_1011_wood_pattern.jpg
 
 これだからプログラムはいいですね

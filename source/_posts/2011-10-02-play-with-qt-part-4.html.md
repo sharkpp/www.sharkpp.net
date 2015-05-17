@@ -15,11 +15,17 @@ QtのイテレーションにはJava風とSTL風の二種類があるらしい..
 
 [bool addDirectors(const Movie &theMovie) { QStringListIterator it(theMovie - Pastebin.com][1]
 
+ [1]: http://pastebin.com/3HZP6RUr
+
 [Qt 4.7: Container Classes][2]
+
+ [2]: http://doc.qt.nokia.com/latest/containers.html
 
 ### QXmlSimpleReaderの使い方
 
 [Qt 4.7: SAX Bookmarks Example][3]
+
+ [3]: http://doc.qt.nokia.com/stable/xml-saxbookmarks.html
 
 ### タブ付きドック
 
@@ -39,6 +45,8 @@ setFocusは無くてもよいようだ。
 
 [qt - Focusing on a tabified QDockWidget in PyQt - Stack Overflow][4]
 
+ [4]: http://stackoverflow.com/questions/1290882/focusing-on-a-tabified-qdockwidget-in-pyqt
+
 ### ツリービューのダブルクリックシグナルを受信
 
 検索して見つかったページと同じようにしても残念ながらうまくいかなかったので少しゴニョゴニョしています。
@@ -56,16 +64,12 @@ myTree-&gt;setEditTriggers(QAbstractItemView::NoEditTriggers);
 #### シグナル受信
 
 <pre>void foo::dblClickedOnMyTreeView(const QModelIndex & index) {
-    MyItem * myObj = (static_cast&lt;MyItem*&gt;(index.internalPointer()))-&gt;child(index.row(), index.column());
+MyItem * myObj = (static_cast&lt;MyItem*&gt;(index.internalPointer()))-&gt;child(index.row(), index.column());
 }
 </pre>
 
 [How to double click on a QTreeView - Qt Programming - QtForum.org][5]
 
-Qt関連のメモをもう少しまとめれたらいいんだけどなーorz
-
- [1]: http://pastebin.com/3HZP6RUr
- [2]: http://doc.qt.nokia.com/latest/containers.html
- [3]: http://doc.qt.nokia.com/stable/xml-saxbookmarks.html
- [4]: http://stackoverflow.com/questions/1290882/focusing-on-a-tabified-qdockwidget-in-pyqt
  [5]: http://www.qtforum.org/article/14999/how-to-double-click-on-a-qtreeview.html
+
+Qt関連のメモをもう少しまとめれたらいいんだけどなーorz

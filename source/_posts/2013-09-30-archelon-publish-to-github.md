@@ -12,9 +12,14 @@ categories: [blog]
   * [sharkpp/Archelon][1]
   * [sharkpp/ArchelonConnectorExample][2]
 
+ [1]: https://github.com/sharkpp/Archelon
+ [2]: https://github.com/sharkpp/ArchelonConnectorExample
+
 とりあえず、マスコット的な何かです。
 
 ![マスコット的な何か][3]
+
+ [3]: /images/2013_0929_archelon.gif
 
 Archelon は アカウントアグリゲーションサービスの一種です。 REST APIなどなどウェブAPIを用意していないウェブアプリケーションにAPIを追加するシステムです。
 
@@ -32,11 +37,17 @@ Archelon は アカウントアグリゲーションサービスの一種です�
 
 セットアップ画面も実装してあるのでデータベースの設定やマイグレーションなどはブラウザからできます。 これは、FUelPHP製のアプリでは珍しい部類なのではないかなと。
 
-<a href="/public/images/2013_0929_archelon_setup.jpg" rel="lytebox[2013_0929_archelon_publish_to_github]" title="Archelon インストール画面"><img src="/public/images/2013_0929_archelon_setup.png" alt="Archelon インストール画面" /></a>
+[![Archelon インストール画面][4]][5]
+
+ [4]: /images/2013_0929_archelon_setup.png
+ [5]: /images/2013_0929_archelon_setup.jpg
 
 インストールが成功するとこの画面になります。
 
-<a href="/public/images/2013_0929_archelon_welcom.jpg" rel="lytebox[2013_0929_archelon_publish_to_github]" title="Archelon Welcom画面"><img src="/public/images/2013_0929_archelon_welcom.png" alt="Archelon Welcom画面" /></a>
+[![Archelon Welcom画面][6]][7]
+
+ [6]: /images/2013_0929_archelon_welcom.png
+ [7]: /images/2013_0929_archelon_welcom.jpg
 
 Archelon 自体は、
 
@@ -48,11 +59,19 @@ Archelon 自体は、
 
 ダッシュボード上には登録されているアカウントの一覧が並びます。 そして、APIの使い方やAPI KEYの取得などができます。
 
-<a href="/public/images/2013_0929_archelon_dashboard.jpg" rel="lytebox[2013_0929_archelon_publish_to_github]" title="Archelon ダッシュボード画面"><img src="/public/images/2013_0929_archelon_dashboard.png" alt="Archelon ダッシュボード画面" /></a>
+[![Archelon ダッシュボード画面][8]][9]
+
+ [8]: /images/2013_0929_archelon_dashboard.png
+ [9]: /images/2013_0929_archelon_dashboard.jpg
 
 「REST API のドキュメントの表示」は、こんな感じに表示されます。
 
-<a href="/public/images/2013_0929_archelon_api_docs1.jpg" rel="lytebox[2013_0929_archelon_publish_to_github]" title="Archelon APIドキュメント画面1"><img src="/public/images/2013_0929_archelon_api_docs1.png" alt="Archelon APIドキュメント画面1" /></a> <a href="/public/images/2013_0929_archelon_api_docs2.jpg" rel="lytebox[2013_0929_archelon_publish_to_github]" title="Archelon APIドキュメント画面2"><img src="/public/images/2013_0929_archelon_api_docs2.png" alt="Archelon APIドキュメント画面2" /></a>
+[![Archelon APIドキュメント画面1][10]][11] [![Archelon APIドキュメント画面2][12]][13]
+
+ [10]: /images/2013_0929_archelon_api_docs1.png
+ [11]: /images/2013_0929_archelon_api_docs1.jpg
+ [12]: /images/2013_0929_archelon_api_docs2.png
+ [13]: /images/2013_0929_archelon_api_docs2.jpg
 
 そして「コネクタ」は、
 
@@ -63,7 +82,12 @@ Archelon 自体は、
 
 「REST APIの提供」は、JSONやXMLで返答することもできます。 ※これは実装しだいですが、FuelPHP の `Controller_Rest` で簡単に実装できます。
 
-<a href="/public/images/2013_0929_archelon_api_result_json.jpg" rel="lytebox[2013_0929_archelon_publish_to_github]" title="Archelon API結果JSON"><img src="/public/images/2013_0929_archelon_api_result_json.png" alt="Archelon API結果JSON" /></a> <a href="/public/images/2013_0929_archelon_api_result_xml.jpg"  rel="lytebox[2013_0929_archelon_publish_to_github]" title="Archelon API結果XML" ><img src="/public/images/2013_0929_archelon_api_result_xml.png"  alt="Archelon API結果XML" /></a>
+[![Archelon API結果JSON][14]][15] [![Archelon API結果XML][16]][17]
+
+ [14]: /images/2013_0929_archelon_api_result_json.png
+ [15]: /images/2013_0929_archelon_api_result_json.jpg
+ [16]: /images/2013_0929_archelon_api_result_xml.png
+ [17]: /images/2013_0929_archelon_api_result_xml.jpg
 
 まあ、こんな感じで、「コネクタ」なければ何もできない感じですので面白い使い方があればこそっと教えてほしいです。
 
@@ -72,7 +96,3 @@ Archelon 自体は、
 * * *
 
 10月01日：少し文章を変更しました。
-
- [1]: https://github.com/sharkpp/Archelon
- [2]: https://github.com/sharkpp/ArchelonConnectorExample
- [3]: /public/images/2013_0929_archelon.gif

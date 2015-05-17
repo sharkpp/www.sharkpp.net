@@ -13,12 +13,18 @@ categories: [blog]
 
 ## Boostライブラリ一周の旅 1.49.0?1.50.0 [@cpp_akira][1]
 
+ [1]: http://www.twitter.com/cpp_akira
+
 以前に紹介した内容以外も含めたスライドをslideshareで公開する
 
   * [Boost.Algorithm][2] → 文字列処理ライブラリに加えて all\_of,copy\_if,clamp(min+maxの範囲制限がいっぺんにできる)などなどが追加されている。
   * functional/overloadfunction → ？
   * [Boost.LocalFunction][3] → ローカル関数を定義
   * [Boost.Utility/IdentityType][4] → 関数マクロに渡す引数でカンマを付けれるようにする機能など
+
+ [2]: http://www.boost.org/doc/libs/1_50_0/doc/html/string_algo.html
+ [3]: http://www.boost.org/doc/libs/1_50_0/libs/local_function/doc/html/index.html
+ [4]: http://www.boost.org/doc/libs/1_50_0/libs/utility/identity_type/doc/html/index.html
 
 ## C++Now! 2012参加レポート [@cpp_akira][1]
 
@@ -38,9 +44,13 @@ C++11に追加されたラムダ式の紹介、スライドとしてうまくま
 
 [C++Now! 2012 - boostjp][5]
 
+ [5]: https://sites.google.com/site/boostjp/cppnow/2012#lambda
+
 #### Ustring
 
 [C++Now! 2012 - boostjp][6]
+
+ [6]: https://sites.google.com/site/boostjp/cppnow/2012#ustring
 
 ### ２日目
 
@@ -49,6 +59,8 @@ C++11に追加されたラムダ式の紹介、スライドとしてうまくま
 コンパイル時構文解析ライブラリ、文字列リテラルで構文解析、謎の技術
 
 [C++Now! 2012 - boostjp][7]
+
+ [7]: https://sites.google.com/site/boostjp/cppnow/2012#metaparse
 
 ### 3日目
 
@@ -60,11 +72,15 @@ Javaなどであるようなパッケージみたいな感じ、コンパイル�
 
 [C++Now! 2012 - boostjp][8]
 
+ [8]: https://sites.google.com/site/boostjp/cppnow/2012#modules
+
 #### conceptClang
 
 C++11に含まれなかったconceptをClang(クラン)で実験的に実装してみようという話
 
 [C++Now! 2012 - boostjp][9]
+
+ [9]: https://sites.google.com/site/boostjp/cppnow/2012#concept-clang
 
 ４日目
 
@@ -74,21 +90,31 @@ C++が今どこにいるのかというキーノート
 
 [C++Now! 2012 - boostjp][10]
 
+ [10]: https://sites.google.com/site/boostjp/cppnow/2012#now-what
+
 #### Using Boost.Coroutine to untangle a state machine
 
 Boost.Contextをベースとして使いBoost.Coroutineを書き直したという話
 
 [C++Now! 2012 - boostjp][11]
 
+ [11]: https://sites.google.com/site/boostjp/cppnow/2012#coroutine
+
 発表の資料はgithubで公開しているとのこと→ここ
 
 ## sexyhook 3の変更点 [@super_rti][12]
+
+ [12]: http://www.twitter.com/super_rti
 
 ### 自己紹介
 
 [なのは完売 とある関数の電脳戦][13] → アンチフック＆フックを仕掛けてきた対象を落とす
 
+ [13]: http://d.hatena.ne.jp/rti7743/20111220/1324389840
+
 [regexp for assemble for PHP][14] → 文字列のリストをもとにそれを受諾する正規表現を自動で作る仕組みをPHPで実装する試み
+
+ [14]: http://d.hatena.ne.jp/rti7743/20111113/1321149932
 
 ### 本題
 
@@ -120,6 +146,8 @@ sexyhook3はオペコードのバイト数を数えオペコードが壊れな�
 
 方法は、SAPI と [julius][15] (フリーの実装) を使ってみたとのこと。
 
+ [15]: julius.sourceforge.jp/
+
 ##### 文法認識とディクテーション
 
   * 文法認識、認識率は高いが過剰認識をしやすい
@@ -144,11 +172,15 @@ julius の voca と grammer は使いにくい。 なぜなら、メモリリー
 
 [inline namesapce][16]ってのがこのあたりでサラッと出てきた気がする。
 
+ [16]: http://d.hatena.ne.jp/faith_and_brave/20080602/1212397278
+
 ## 昼休み終了
 
 閉め切られていたので戻るのに難儀した。
 
 ## C++でエレガントな並列計算 [@ponkotuy][17]
+
+ [17]: http://www.twitter.com/ponkotuy
 
 ### Thrust
 
@@ -156,7 +188,11 @@ CUDA上で動くSTL
 
 [thrust - Code at the speed of light - Google Project Hosting][18]
 
+ [18]: https://code.google.com/p/thrust/
+
 ### [Boost.uBLAS][19]
+
+ [19]: http://www.boost.org/libs/numeric/
 
 会場から突っ込みが出ていたが、デフォルトの実装がひどいらしく処理のエンジンをかえてやらないといけない。 下に書いてあるEigenをバックエンジンとして使うこともできる模様。
 
@@ -164,13 +200,19 @@ CUDA上で動くSTL
 
 [Eigen][20]
 
+ [20]: http://eigen.tuxfamily.org/
+
 ### Boost.SIMD
 
 SIMD型＋周辺処理を行うライブラリ。 実装途中。
 
 [Boost.SIMDの元][21]
 
+ [21]: http://d.hatena.ne.jp/faith_and_brave/20110330/1301469339
+
 ## C++ Transactional Memory言語拡張の紹介 [@yohhoy][22]
+
+ [22]: http://www.twitter.com/yohhoy
 
 C++の次の規格に入れようとしている機能、とりあえずは、TRで入れられる模様。
 
@@ -180,9 +222,15 @@ C++の次の規格に入れようとしている機能、とりあえずは、TR
 
 [generalized attribute 構文][23]
 
+ [23]: http://www.codesynthesis.com/~boris/blog/2012/04/18/cxx11-generalized-attributes/
+
 gccに実験的に実装中。 ただし、ソフトウエアベースなのでパフォーマンスはすごく悪い、公式としても速度はとりあえず二の次。 [GCC 4.7にはTransactional Memoryの拡張が入る予定][24]
 
+ [24]: http://d.hatena.ne.jp/faith_and_brave/20111122/1321938184
+
 ## 万能数値型URR [@wraith13][25]
+
+ [25]: http://www.twitter.com/wraith13
 
 浮動小数点（IEEE754）とも固定小数点とも違う表現方法。
 
@@ -194,7 +242,11 @@ URRの特徴は、1もしくは-1付近で精度がものすごく良くなる�
 
 実際に実装してみたとのこと→[ここ][26]
 
+ [26]: http://tricklib.com/cxx/ex/urr/
+
 ## 家に帰るまでが遠足です． [@Cryolite][27]
+
+ [27]: http://www.twitter.com/Cryolite
 
 Boost.Build(bjam)の紹介。
 
@@ -211,6 +263,8 @@ Boost.Build使えば、複数のコンパイラオプション、複数のコン
 ### イベント処理ライブラリ
 
 [@egtra][28]さんがテーブルマスター。
+
+ [28]: http://www.twitter.com/egtra
 
 もともと、じゃんけんで自分がなる予定だったけど内容を考えたの自分だからやりましょうか？と助け舟が出てきたので好意に甘えちゃいましたorz
 
@@ -249,32 +303,3 @@ Boost.Build使えば、複数のコンパイラオプション、複数のコン
 知らないライブラリとか出てきて色々興味深かったです。
 
 あと、懇親会の中華料理店は中ギュウギュウだったのとなかなか注文とりにきてくれなかったのが辛かった。
-
- [1]: http://www.twitter.com/cpp_akira
- [2]: http://www.boost.org/doc/libs/1_50_0/doc/html/string_algo.html
- [3]: http://www.boost.org/doc/libs/1_50_0/libs/local_function/doc/html/index.html
- [4]: http://www.boost.org/doc/libs/1_50_0/libs/utility/identity_type/doc/html/index.html
- [5]: https://sites.google.com/site/boostjp/cppnow/2012#lambda
- [6]: https://sites.google.com/site/boostjp/cppnow/2012#ustring
- [7]: https://sites.google.com/site/boostjp/cppnow/2012#metaparse
- [8]: https://sites.google.com/site/boostjp/cppnow/2012#modules
- [9]: https://sites.google.com/site/boostjp/cppnow/2012#concept-clang
- [10]: https://sites.google.com/site/boostjp/cppnow/2012#now-what
- [11]: https://sites.google.com/site/boostjp/cppnow/2012#coroutine
- [12]: http://www.twitter.com/super_rti
- [13]: http://d.hatena.ne.jp/rti7743/20111220/1324389840
- [14]: http://d.hatena.ne.jp/rti7743/20111113/1321149932
- [15]: julius.sourceforge.jp/
- [16]: http://d.hatena.ne.jp/faith_and_brave/20080602/1212397278
- [17]: http://www.twitter.com/ponkotuy
- [18]: https://code.google.com/p/thrust/
- [19]: http://www.boost.org/libs/numeric/
- [20]: http://eigen.tuxfamily.org/
- [21]: http://d.hatena.ne.jp/faith_and_brave/20110330/1301469339
- [22]: http://www.twitter.com/yohhoy
- [23]: http://www.codesynthesis.com/~boris/blog/2012/04/18/cxx11-generalized-attributes/
- [24]: http://d.hatena.ne.jp/faith_and_brave/20111122/1321938184
- [25]: http://www.twitter.com/wraith13
- [26]: http://tricklib.com/cxx/ex/urr/
- [27]: http://www.twitter.com/Cryolite
- [28]: http://www.twitter.com/egtra

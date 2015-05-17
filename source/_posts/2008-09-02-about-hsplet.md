@@ -9,13 +9,13 @@ categories: [blog]
 
 [HSPLet あれこれ][1]
 
+ [1]: http://d.hatena.ne.jp/chaperatta/20080805/1217938231
+
 このコードを実行するとHSP 3.1とHSPLetで挙動が違う
 
 <pre>#runtime "hsplet3"
-
 a = 0, 1, 3, 4, 5, 6
 dim b, 6
-
 mes "length(a)=" + length(a)
 mes "length(b)=" + length(b)
 </pre>
@@ -35,5 +35,3 @@ length(b)=6
 どうもdimで初期化せずに代入すると最低16は配列の要素が確保されてしまうようで、foreachで変数を処理するとHSPではエラーが出ずにHSPLetでエラーが出てしまうことがある。
 
 HSPLetもメンテとかしてみたい気はするが取り敢えず他ごと優先でいきたいと思います。
-
- [1]: http://d.hatena.ne.jp/chaperatta/20080805/1217938231

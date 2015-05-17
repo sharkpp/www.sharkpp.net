@@ -7,14 +7,20 @@ categories: [blog]
 
 夜中に魔法陣を作り始めてしまった。
 
-<a href="/gallery/graffiti/magic_circle2_512x512.png"  rel="lytebox[a]" title="魔法陣2"><img src="/gallery/graffiti/magic_circle2_128x128.png"  alt="魔法陣2" /></a>
+[![魔法陣2][1]][2]
 
-<a href="/gallery/graffiti/magic_circle3_512x512.png"  rel="lytebox[a]" title="魔法陣3"><img src="/gallery/graffiti/magic_circle3_128x128.png"  alt="魔法陣3" /></a>
+ [1]: /images/2011_0417_magic_circle2_128x128.png
+ [2]: /images/2011_0417_magic_circle2_512x512.png
 
-魔法陣中のルーン文字は[Rune Font][1]を使用しています。
+[![魔法陣3][3]][4]
+
+ [3]: /images/2011_0417_magic_circle3_128x128.png
+ [4]: /images/2011_0417_magic_circle3_512x512.png
+
+魔法陣中のルーン文字は[Rune Font][5]を使用しています。
+
+ [5]: http://www.vector.co.jp/soft/data/writing/se210523.html
 
 細かい字はTungaフォントを使っています。
 
 画像は煮るなり焼くなりご自由に...
-
- [1]: http://www.vector.co.jp/soft/data/writing/se210523.html

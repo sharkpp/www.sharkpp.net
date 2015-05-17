@@ -9,26 +9,26 @@ categories: [blog]
 
 ][1] に行ってきました。
 
+ [1]: http://qt.digia.com/Jp/QtDD2014/
+
 要所要所でのメモで不正確な内容かもしれませんが聴いたセッションの内容をまとめました。
 
 人々のつぶやきは [Qt Developer Day Tokyo 2014 - Togetterまとめ][2] にまとめられています。
 
+ [2]: http://togetter.com/li/669676
+
 ## 開場・受付(9:00 - 10:00)
 
-<blockquote class="twitter-tweet" lang="ja">
-  <p>
-    受付待ち <a href="https://twitter.com/search?q=%23QtDDTokyo&src=hash">#QtDDTokyo</a> <a href="https://twitter.com/search?q=%23QtJP&src=hash">#QtJP</a> <a href="http://t.co/dSSjU4rrvc">http://t.co/dSSjU4rrvc</a>
-  </p>&mdash; 98式AVさめたすたす (@sharkpp) 
-  
-  <a href="https://twitter.com/sharkpp/statuses/468548131756724225">2014, 5月 20</a>
+<blockquote class="twitter-tweet" lang="ja"><p>
+受付待ち <a href="https://twitter.com/search?q=%23QtDDTokyo&src=hash">#QtDDTokyo</a> <a href="https://twitter.com/search?q=%23QtJP&src=hash">#QtJP</a> <a href="http://t.co/dSSjU4rrvc">http://t.co/dSSjU4rrvc</a>
+</p>&mdash; 98式AVさめたすたす (@sharkpp) 
+<a href="https://twitter.com/sharkpp/statuses/468548131756724225">2014, 5月 20</a>
 </blockquote>
 
-<blockquote class="twitter-tweet" lang="ja">
-  <p>
-    発見！ <a href="https://twitter.com/search?q=%23QtDDTokyo&src=hash">#QtDDTokyo</a> <a href="https://twitter.com/search?q=%23QtJP&src=hash">#QtJP</a> <a href="http://t.co/gpSJnoiybl">http://t.co/gpSJnoiybl</a>
-  </p>&mdash; 98式AVさめたすたす (@sharkpp) 
-  
-  <a href="https://twitter.com/sharkpp/statuses/468550069608656896">2014, 5月 20</a>
+<blockquote class="twitter-tweet" lang="ja"><p>
+発見！ <a href="https://twitter.com/search?q=%23QtDDTokyo&src=hash">#QtDDTokyo</a> <a href="https://twitter.com/search?q=%23QtJP&src=hash">#QtJP</a> <a href="http://t.co/gpSJnoiybl">http://t.co/gpSJnoiybl</a>
+</p>&mdash; 98式AVさめたすたす (@sharkpp) 
+<a href="https://twitter.com/sharkpp/statuses/468550069608656896">2014, 5月 20</a>
 </blockquote>
 
 Tシャツを貰いました。
@@ -60,6 +60,8 @@ Tommi Laitinen (インターナショナルプロダクツ上級副社長, Digia
   * 最新の OS やウェブシステムも対応
   * 95% のユーザーが満足しているが、満足度をもっと上げていきたい
 
+ [3]: http://qtcloudservices.com/
+
 ### Qt のあゆみ(10:30 - 11:15)
 
 我々の今とテクノロジーの向かう先
@@ -85,6 +87,9 @@ Lars Knoll (Qt CTO および Qt Project チーフメンテナ, Digia, Qt)
   * Qt 5.5 のリリースの目玉はまだ決まっていない
   * Qt 5.3 はデスクトップの強化もしてるので Qt 4 から Qt 5 へ移行しやすくなってるので、ぜひ移行して欲しい
 
+ [4]: https://twitter.com/task_jp/status/468566003832471553
+ [5]: http://qt-project.org/doc/qt-5/qquickwidget.html
+
 ### 休息(11:15 - 11:30)
 
 席に荷物を置いて休息する人もちらほら、、、
@@ -107,12 +112,10 @@ Tuukka Ahoniemi (テクニカルプロダクトマーケティングマネージ
 
 ### ランチタイム・展示(12:30 - 13:30)
 
-<blockquote class="twitter-tweet" lang="ja">
-  <p>
-    お弁当もぐもぐ♪ <a href="https://twitter.com/search?q=%23QtJP&src=hash">#QtJP</a> <a href="https://twitter.com/search?q=%23QtDDTokyo&src=hash">#QtDDTokyo</a> <a href="https://twitter.com/search?q=%23mogmog&src=hash">#mogmog</a> <a href="http://t.co/mB2Csd8WmF">http://t.co/mB2Csd8WmF</a>
-  </p>&mdash; 98式AVさめたすたす (@sharkpp) 
-  
-  <a href="https://twitter.com/sharkpp/statuses/468595870535933952">2014, 5月 20</a>
+<blockquote class="twitter-tweet" lang="ja"><p>
+お弁当もぐもぐ♪ <a href="https://twitter.com/search?q=%23QtJP&src=hash">#QtJP</a> <a href="https://twitter.com/search?q=%23QtDDTokyo&src=hash">#QtDDTokyo</a> <a href="https://twitter.com/search?q=%23mogmog&src=hash">#mogmog</a> <a href="http://t.co/mB2Csd8WmF">http://t.co/mB2Csd8WmF</a>
+</p>&mdash; 98式AVさめたすたす (@sharkpp) 
+<a href="https://twitter.com/sharkpp/statuses/468595870535933952">2014, 5月 20</a>
 </blockquote>
 
 ### LT(12:45 - 13:30)
@@ -122,6 +125,8 @@ Tuukka Ahoniemi (テクニカルプロダクトマーケティングマネージ
 #### Qtのよい(と思う)ところ
 
 [@IoriAYANE][6]
+
+ [6]: https://twitter.com/IoriAYANE
 
   * 簡単
   * 少ないコードで高機能
@@ -144,6 +149,9 @@ Tuukka Ahoniemi (テクニカルプロダクトマーケティングマネージ
 
 [Qt creatorでremote_debug][7] by [@sazus][8]
 
+ [7]: http://www.slideshare.net/sazuzas/qt-creatorremotedebug
+ [8]: https://twitter.com/sazus
+
   * Qt on せんべい あるよ！
   * Embeded Linux (non X Window System)
   * 組み込み環境のデバッグでQtCreator使ってますか？
@@ -152,6 +160,8 @@ Tuukka Ahoniemi (テクニカルプロダクトマーケティングマネージ
 #### Qtおやつ部活動報告
 
 [@hermit4][9]
+
+ [9]: https://twitter.com/hermit4
 
   * おやつを持ち込む人は部員
   * Qtのケーキやガム、チロルチョコも作った
@@ -164,6 +174,8 @@ Tuukka Ahoniemi (テクニカルプロダクトマーケティングマネージ
 
 [@moguriso][10]
 
+ [10]: https://twitter.com/moguriso
+
   * intel　MeeGo　捨てた！
   * NOKIA Meego/Qt 捨てた！
   * 日本Qtユーザー会発足
@@ -175,6 +187,8 @@ Tuukka Ahoniemi (テクニカルプロダクトマーケティングマネージ
 
 [杉田 研治][11] (プログラマ, 株式会社 SRA)
 
+ [11]: https://twitter.com/bluepicky
+
   * 商用版はグラフ、データビジュアライゼーション、[Qt Purchasing API][12](Android/iOS用ストア向け)など
   * デバッガは QString や QList などの中身を表示できる！
   * Qt用の拡張は、Qt CreatorのバージョンやWindowsの場合はデバッグやリリースなどにも気お付けないとうまく動かない
@@ -182,9 +196,13 @@ Tuukka Ahoniemi (テクニカルプロダクトマーケティングマネージ
   * OS X での emacs のキーバインドは 3.2 で取り込まれる予定
   * Qt Creator 3.1 の新機能としては Clang コードモデルなど
 
+ [12]: http://doc.qt.digia.com/QtPurchasing/
+
 ### QtQuick の紹介(15:00 - 16:00)
 
 [朝木卓見][13] (シニアコンサルタント, 株式会社 SRA)
+
+ [13]: https://twitter.com/takumiasaki
 
   * Qt Quick が出来た背景
   * もっと動きのある、タッチやジェチャー、アニメーションやエフェクトがあるUIを簡単に作りたい
@@ -245,17 +263,3 @@ Dr. Gabriel de Dietrich (シニアソフトウェアディベロッパー, Digia
 ただ、人によるのでしょうがスライドの文字が小さかったので後ろの席だと、場合によっては前の方でも内容が見えないことが有ったので座るなら前の方がいい感じでした。 いろいろな話が聞けて、自分的には満足な一日でした。
 
 あとは、開催日が平日でなければとかはなきにしもあらず、、、でしたが、休みを取ってまでして行ってよかった感じです。
-
- [1]: http://qt.digia.com/Jp/QtDD2014/
- [2]: http://togetter.com/li/669676
- [3]: http://qtcloudservices.com/
- [4]: https://twitter.com/task_jp/status/468566003832471553
- [5]: http://qt-project.org/doc/qt-5/qquickwidget.html
- [6]: https://twitter.com/IoriAYANE
- [7]: http://www.slideshare.net/sazuzas/qt-creatorremotedebug
- [8]: https://twitter.com/sazus
- [9]: https://twitter.com/hermit4
- [10]: https://twitter.com/moguriso
- [11]: https://twitter.com/bluepicky
- [12]: http://doc.qt.digia.com/QtPurchasing/
- [13]: https://twitter.com/takumiasaki

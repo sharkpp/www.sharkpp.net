@@ -53,6 +53,8 @@ categories: [blog]
 
 システムも、当初は、html 手書きでしたが、某所で見かけた][1] で構築するように変更しました、、、が、これは、情報が少なかったのとCMS自体の行進が止まってしまったので失敗だったかなと今では思ってます。
 
+ [1]: http://www.madebyfrog.com/
+
 掲示板も、当初は自作のを設置していましたが、CMS に変更するタイミングで設置しなくなってしまいました。
 
 扱っている物も、当初はポケコンが主で、リンクなどもポケコン関連の方々にリンクして頂いたりしていました。
@@ -65,13 +67,21 @@ categories: [blog]
 
 [QEmu Launcher][2] は雑誌に載ったりしました。
 
+ [2]: http://www.vector.co.jp/soft/win95/util/se340805.html
+
 2009年から「ＨＳＰプログラムコンテスト」に応募していましたが、一昨年と昨年は応募できず外野から眺めてる感じで寂しかったです(´・ω・｀)
 
 同じく、2009年には、[Twitter][3]のアカウントを登録していますがしばらくは休眠状態でした。
 
+ [3]: https://twitter.com/sharkpp
+
 2011年頃には [GitHub][4] を登録しましたが、やはりしばらくは休眠状態です。
 
+ [4]: https://github.com/sharkpp
+
 同じ年に [pixiv][5] にも登録して魔法陣を描いていたりしましたが、今は休止中です。
+
+ [5]: http://www.pixiv.net/member.php?id=1547498
 
 何事も「時間が取れない」を言い訳にして長続きしないです(´・ω・｀)
 
@@ -89,6 +99,15 @@ categories: [blog]
   6. C++ ([Visual Studio 2005 Express Edition][13] → Visual Studio 2008 Express Edition)
   7. Java
   8. C#
+
+ [6]: http://ja.wikipedia.org/wiki/N88-BASIC
+ [7]: http://ja.wikipedia.org/wiki/Turbo_C
+ [8]: http://www.lsi-j.co.jp/freesoft/index.html
+ [9]: http://www.cs.virginia.edu/~lcc-win32/
+ [10]: http://www.php.net/
+ [11]: http://www.onionsoft.net/hsp/hsp2dl.html
+ [12]: http://hsp.tv/
+ [13]: http://ja.wikipedia.org/wiki/Microsoft_Visual_Studio_Express
 
 みたいな感じで、ぼちぼちやってきました。
 
@@ -108,15 +127,13 @@ categories: [blog]
 
 みんなに使ってもらえたら良いなーと思いつつ作っているのでワクワクして待っていてください(>_<)
 
-<blockquote class="twitter-tweet" lang="ja">
-  </p> 
-  
-  <p>
-    とりあえず、１アクション目として宣伝 <a href="https://twitter.com/hsp_users_jp">@hsp_users_jp</a> <a href="http://t.co/4EIHu8vJ3A">http://t.co/4EIHu8vJ3A</a>
-  </p>
-  
-  <p>
-    &mdash; さめたすたすのゲーム (@sharkpp) <a href="https://twitter.com/sharkpp/statuses/435029417748729856">2014, 2月 16</a></blockquote>
+<blockquote class="twitter-tweet" lang="ja"></p> 
+<p>
+とりあえず、１アクション目として宣伝 <a href="https://twitter.com/hsp_users_jp">@hsp_users_jp</a> <a href="http://t.co/4EIHu8vJ3A">http://t.co/4EIHu8vJ3A</a>
+</p>
+<p>
+&mdash; さめたすたすのゲーム (@sharkpp) <a href="https://twitter.com/sharkpp/statuses/435029417748729856">2014, 2月 16</a>
+</blockquote>
   </p>
   
   <p>
@@ -130,17 +147,3 @@ categories: [blog]
   <p>
     これからもよろしくお願いいたします。
   </p>
-
- [1]: http://www.madebyfrog.com/
- [2]: http://www.vector.co.jp/soft/win95/util/se340805.html
- [3]: https://twitter.com/sharkpp
- [4]: https://github.com/sharkpp
- [5]: http://www.pixiv.net/member.php?id=1547498
- [6]: http://ja.wikipedia.org/wiki/N88-BASIC
- [7]: http://ja.wikipedia.org/wiki/Turbo_C
- [8]: http://www.lsi-j.co.jp/freesoft/index.html
- [9]: http://www.cs.virginia.edu/~lcc-win32/
- [10]: http://www.php.net/
- [11]: http://www.onionsoft.net/hsp/hsp2dl.html
- [12]: http://hsp.tv/
- [13]: http://ja.wikipedia.org/wiki/Microsoft_Visual_Studio_Express

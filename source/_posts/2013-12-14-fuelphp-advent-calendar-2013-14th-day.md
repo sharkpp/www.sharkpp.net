@@ -7,9 +7,16 @@ categories: [blog]
 
 [FuelPHP Advent Calendar 2013][1] 14日目。
 
+ [1]: http://atnd.org/events/45096
+
 [@sharkpp][2]です。
 
+ [2]: https://twitter.com/sharkpp
+
 昨日は [@soudai1025][3] さんの「[FuelPHP（TwitterBootstrap3）でJQueryのプラグインのdataTablesを使う][4]」でした
+
+ [3]: https://twitter.com/soudai1025
+ [4]: http://soudai1025.blogspot.com/2013/12/fuelphp-datatables.html
 
 2回目の FuelPHP Advent Calendar 2013 登場となります。
 
@@ -17,7 +24,11 @@ categories: [blog]
 
 さて、[Request_Curl][5] 使ってますか？
 
+ [5]: http://fuelphp.jp/docs/1.7/classes/request/curl.html
+
 えっ？ [Guzzle][6] のが便利だからそっち使ってるですって？
+
+ [6]: https://github.com/guzzle/guzzle
 
 まあ、そう言わずに Request_Curl は標準で含まれているので使ってみませんか？
 
@@ -136,18 +147,13 @@ https なサーバーに対してアクセスする場合に、どうにもエ�
 
 あ、気が付かれましたか。 名前の通りと言ったところではあるのですが、 `curl_*` のラッパーになっているため、 [PHP: curl_setopt - Manual][7] 辺りを見ながら `Request_Curl::set_option()` に引数を与えてあげれば色々な事が出来ます。
 
+ [7]: http://jp2.php.net/curl_setopt
+
 クラス内部で色々やっているのですべてのオプションが確実に指定できるとは限らないですがある程度は自由に出来るようです。
 
 と言うことで、 `Request_Curl` クラスの紹介でした。
 
 明日は [@Tukimikage][8] さんの「[続・Cloudn_PaaSでFuelPHPを動かしてみた][9]」です。お楽しみに！
 
- [1]: http://atnd.org/events/45096
- [2]: https://twitter.com/sharkpp
- [3]: https://twitter.com/soudai1025
- [4]: http://soudai1025.blogspot.com/2013/12/fuelphp-datatables.html
- [5]: http://fuelphp.jp/docs/1.7/classes/request/curl.html
- [6]: https://github.com/guzzle/guzzle
- [7]: http://jp2.php.net/curl_setopt
  [8]: https://twitter.com/Tukimikage
  [9]: http://think-sv.net/blog/?p=1290

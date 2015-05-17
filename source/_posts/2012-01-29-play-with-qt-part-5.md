@@ -9,11 +9,19 @@ categories: [blog]
 
 [QtをVisual C++ 2008 Express Editionで使えるようにしてみる: Qtで遊ぶ 其の１][1]
 
+ [1]: /blog/2009/10/04/play-with-qt-part-1
+
 [色々なメモ: Qtで遊ぶ 其の２][2]
+
+ [2]: /blog/2009/10/04/play-with-qt-part-2.html
 
 [色々なメモ: Qtで遊ぶ 其の３][3]
 
+ [3]: /blog/2011/07/31/play-with-qt-part-3.html
+
 [色々なメモ: Qtで遊ぶ 其の４][4]
+
+ [4]: /blog/2011/10/02/play-with-qt-part-4.html
 
 こつこつとQt使ってアプリ作ってます、、、
 
@@ -28,6 +36,8 @@ QtアプリからQtを使ったDLLを使うのは割かし簡単のようでサ�
 しかし、このスレッドが曲者でQtのスレッドを使おうとするとうまくいかないので結局ネイティブのスレッドを使うというなんとも不恰好な結果に、、、
 
 [hspdbg at master from sharkpp/hspide - GitHub][5]
+
+ [5]: https://github.com/sharkpp/hspide/tree/master/hspdbg
 
 ### QSyntaxHighlighterで正規表現を使っては駄目
 
@@ -49,6 +59,8 @@ QtアプリからQtを使ったDLLを使うのは割かし簡単のようでサ�
 
 [Qt-interest Archive - QTreeVie, QSortFilterProxyModel and double click signal][6]
 
+ [6]: http://lists.trolltech.com/qt-interest/2006-09/thread00423-0.html
+
 
 
 
@@ -58,10 +70,3 @@ QtアプリからQtを使ったDLLを使うのは割かし簡単のようでサ�
 とりあえず、こんなものかな、、、
 
 今回は余りメモを取っていなかったorz
-
- [1]: /blog/2009/10/04/play-with-qt-part-1.html
- [2]: /blog/2009/10/04/play-with-qt-part-2.html.html
- [3]: /blog/2011/07/31/play-with-qt-part-3.html.html
- [4]: /blog/2011/10/02/play-with-qt-part-4.html.html
- [5]: https://github.com/sharkpp/hspide/tree/master/hspdbg
- [6]: http://lists.trolltech.com/qt-interest/2006-09/thread00423-0.html

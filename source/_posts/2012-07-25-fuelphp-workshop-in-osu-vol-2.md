@@ -9,11 +9,17 @@ FuelPHP 勉強会 大須 vol.2 に参加してきました。 vol.1は平日だ�
 
 [ATEND][1]
 
+ [1]: http://atnd.org/events/30395
+
 とりあえず、余裕ぶっこきすぎてちょっとぎりぎりな感じでしたが、なんとかたどり着けました。
 
 やった内容としては、パーフェクトPHPという書籍に載っている[ミニブログサンプル][2]をFuelPHPで実装してみようという流でした。
 
+ [2]: https://github.com/kenjis/perfect-php-mini-blog
+
 最終的には、元と同じように[遷移テスト][3]が通るように仕様というところだったのですが、残念ながら時間内には完成しませんでした。
+
+ [3]: https://github.com/ounziw/selenium-for-miniblog
 
 ### 自身の問題点
 
@@ -22,6 +28,8 @@ FuelPHP 勉強会 大須 vol.2 に参加してきました。 vol.1は平日だ�
 最近、割とうっかりな事が自分でも気が付くようになってきて気を付けているつもりだったのですが、やっぱりうっかりしてましたorz
 
 あと、最終的にはやはり環境の問題で、[Auth::check()][4]がうまく動いてくれなくて難儀しました。
+
+ [4]: http://press.nekoget.com/fuelphp_doc/packages/auth/usage.html#/method_check
 
 ### 実装中に引っかかったところ
 
@@ -38,6 +46,8 @@ FuelPHP 勉強会 大須 vol.2 に参加してきました。 vol.1は平日だ�
   
     結局原因は環境の問題でゲストOSの時間が狂っていたため、ホストOSとの時間差がありすぎてCookieをセットする端から有効期限が切れてクリアされていたようでした。
 
+ [5]: http://press.nekoget.com/fuelphp_doc/packages/auth/simpleauth/login.html#/method_login
+
 ### まとめ
 
 今回はグループに分かれてそれぞれ実装したのですが、それぞれで、アプローチの仕方が違って面白かったのが印象に残っています。
@@ -45,9 +55,3 @@ FuelPHP 勉強会 大須 vol.2 に参加してきました。 vol.1は平日だ�
 また、自分含めコーディング以前の段階で時間とられていたのが残念だったなーという感じです。
 
 13時から17時ぐらいまで、ほぼ休みなしにコーディングしていたので疲れたのですが、それ以上に楽しかった、というのが今回の勉強会の感想です。
-
- [1]: http://atnd.org/events/30395
- [2]: https://github.com/kenjis/perfect-php-mini-blog
- [3]: https://github.com/ounziw/selenium-for-miniblog
- [4]: http://press.nekoget.com/fuelphp_doc/packages/auth/usage.html#/method_check
- [5]: http://press.nekoget.com/fuelphp_doc/packages/auth/simpleauth/login.html#/method_login

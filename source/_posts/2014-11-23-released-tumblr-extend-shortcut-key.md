@@ -7,11 +7,20 @@ categories: [blog]
 
 [Tumblr.][1]™のダッシュボードで使用できるショートカットキーを追加するスクリプトを作りました。
 
+ [1]: https://www.tumblr.com/
+
 レポジトリは [sharkpp-userscripts/tumblr-extend-shortcut-key][2] です。
+
+ [2]: https://github.com/sharkpp-userscripts/tumblr-extend-shortcut-key
 
 userscripts.org がいつの間にか死んでいたので [GreasyFork][3] を移転先にしてぼちぼちと再アップロードをしていきたいと思い、ユーザースクリプトの置き場を github に [sharkpp UserScripts][4] として作りました。
 
+ [3]: https://greasyfork.org/ja/users/5799-sharkpp
+ [4]: https://github.com/sharkpp-userscripts
+
 とりあえず、リハビリをかねて新しく作ったスクリプトは GreasyFork の [Tumblr. extend shortcut key][5] からインストールできます。
+
+ [5]: https://greasyfork.org/ja/scripts/6588-tumblr-extend-shortcut-key
 
 ## 機能の紹介
 
@@ -19,57 +28,12 @@ userscripts.org がいつの間にか死んでいたので [GreasyFork][3] を�
 
 ### ショートカットキーの一覧
 
-<table>
-  <tr>
-    <th>
-      ショートカットキー
-    </th>
-    
-    <th>
-      機能
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      <tt>alt + [数字キー]</tt>
-    </td>
-    
-    <td>
-      ブログを選択
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      <tt>alt + R</tt>
-    </td>
-    
-    <td>
-      今すぐ投稿(リブログ)
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      <tt>alt + E</tt>
-    </td>
-    
-    <td>
-      予約投稿に追加
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      <tt>alt + D</tt>
-    </td>
-    
-    <td>
-      下書きに追加
-    </td>
-  </tr>
-</table>
+| ショートカットキー | 機能                                                           |
+| ------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
+| <tt>alt + [数字キー]</tt>                        | ブログを選択                           |
+| <tt>alt + R</tt>                                                         | 今すぐ投稿(リブログ) |
+| <tt>alt + E</tt>                                                         | 予約投稿に追加                   |
+| <tt>alt + D</tt>                                                         | 下書きに追加                           |
 
 ### ブログの選択
 
@@ -79,6 +43,8 @@ userscripts.org がいつの間にか死んでいたので [GreasyFork][3] を�
 
 ![ブログの選択][6]
 
+ [6]: /images/2014_1123_blog-select.png
+
 ## 投稿指示
 
 投稿指示は、「今すぐ投稿」と「予約投稿に追加」と「下書きに追加」に、それぞれショートカットキーが新たに割り当てられています。
@@ -87,10 +53,4 @@ userscripts.org がいつの間にか死んでいたので [GreasyFork][3] を�
 
 ![リブログボタン][7]
 
- [1]: https://www.tumblr.com/
- [2]: https://github.com/sharkpp-userscripts/tumblr-extend-shortcut-key
- [3]: https://greasyfork.org/ja/users/5799-sharkpp
- [4]: https://github.com/sharkpp-userscripts
- [5]: https://greasyfork.org/ja/scripts/6588-tumblr-extend-shortcut-key
- [6]: /public/images/2014_1123_blog-select.png
- [7]: /public/images/2014_1123_reblog-button.png
+ [7]: /images/2014_1123_reblog-button.png

@@ -15,7 +15,11 @@ OSC名古屋で知ってから初めての勉強会でワクワクでした。
 
 ## Qt のアプリ開発と自動化 [@task_jp][1]
 
+ [1]: http://www.twitter.com/task_jp
+
 [資料][2]
+
+ [2]: https://t.co/w994veGf
 
 他の人からのパッチをもらったり送ったりが少ない 、、、が、それでいいのだろうか？
 
@@ -32,6 +36,12 @@ OSC名古屋で知ってから初めての勉強会でワクワクでした。
   * [transifex.com][7]  
     翻訳サポートサービス
 
+ [3]: http://code.google.com/p/jcthemesimulator/
+ [4]: https://gitorious.org/qumoplayer
+ [5]: http://code.google.com/p/gerrit/
+ [6]: https://git.wiki.kernel.org/index.php/Gitweb
+ [7]: https://www.transifex.com/
+
 Gerrit使ってパッチを送るのを簡単に出来るようにしてみた＆jenkinsとredmineを使ってみた↓
 
   * <http://cr.qtquick.me/>
@@ -39,7 +49,11 @@ Gerrit使ってパッチを送るのを簡単に出来るようにしてみた�
 
 ## Qt Quick2のCanvasを使ってみた [@IoriAYANE][8]
 
+ [8]: http://www.twitter.com/IoriAYANE
+
 [資料][9]
+
+ [9]: http://t.co/szfRkdBM
 
 Quick2の紹介
 
@@ -51,6 +65,9 @@ pngやiconは透過色も保存できる。
 
   * [Canvas][10]
   * [Context2D][11]
+
+ [10]: http://doc-snapshot.qt-project.org/5.0/qml-qtquick2-canvas.html
+ [11]: http://doc-snapshot.qt-project.org/5.0/qml-qtquick2-context2d.html
 
 http://relog.xii.jp/archives/2012/07/qmlqtcanvas.html
 
@@ -67,15 +84,3 @@ wiiremote や openNI 使えばWiiリモコンやKinektつかえるかも？
 VCとgccの違いでインクルードガードが無効になったりとか _countof が無かったりとか、いろいろ面倒だorz
 
 ちょっと時間が短かったのであまり進まなかった。
-
- [1]: http://www.twitter.com/task_jp
- [2]: https://t.co/w994veGf
- [3]: http://code.google.com/p/jcthemesimulator/
- [4]: https://gitorious.org/qumoplayer
- [5]: http://code.google.com/p/gerrit/
- [6]: https://git.wiki.kernel.org/index.php/Gitweb
- [7]: https://www.transifex.com/
- [8]: http://www.twitter.com/IoriAYANE
- [9]: http://t.co/szfRkdBM
- [10]: http://doc-snapshot.qt-project.org/5.0/qml-qtquick2-canvas.html
- [11]: http://doc-snapshot.qt-project.org/5.0/qml-qtquick2-context2d.html

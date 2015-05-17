@@ -11,32 +11,56 @@ Windows 7 RC1 が一般公開されたようなのでVMware Playerにインス�
 
 **インストール画面**
 
-<a href="http://www.sharkpp.net/public/images/2009_0507_win7rc1x86_install.png"          rel="lytebox#win7rc1x86" title="2009_0507_win7rc1x86_install.png"          ><img src="http://www.sharkpp.net/public/images/2009_0507_win7rc1x86_install_s.jpg"           alt="2009_0507_win7rc1x86_install.png" /></a>
+[![2009_0507_win7rc1x86_install.png][1]][2]
+
+ [1]: /images/2009_0507_win7rc1x86_install_s.jpg
+ [2]: /images/2009_0507_win7rc1x86_install.png
 
 **OS起動画面**
 
-<a href="http://www.sharkpp.net/public/images/2009_0507_win7rc1x86_os_loading.png"       rel="lytebox#win7rc1x86" title="2009_0507_win7rc1x86_os_loading.png"       ><img src="http://www.sharkpp.net/public/images/2009_0507_win7rc1x86_os_loading_s.jpg"        alt="2009_0507_win7rc1x86_os_loading.png" /></a>
+[![2009_0507_win7rc1x86_os_loading.png][3]][4]
+
+ [3]: /images/2009_0507_win7rc1x86_os_loading_s.jpg
+ [4]: /images/2009_0507_win7rc1x86_os_loading.png
 
 **ログイン画面**
 
-<a href="http://www.sharkpp.net/public/images/2009_0507_win7rc1x86_login.png"            rel="lytebox#win7rc1x86" title="2009_0507_win7rc1x86_login.png"            ><img src="http://www.sharkpp.net/public/images/2009_0507_win7rc1x86_login_s.jpg"             alt="2009_0507_win7rc1x86_login.png" /></a>
+[![2009_0507_win7rc1x86_login.png][5]][6]
+
+ [5]: /images/2009_0507_win7rc1x86_login_s.jpg
+ [6]: /images/2009_0507_win7rc1x86_login.png
 
 **インストール直後のデスクトップ**
 
-<a href="http://www.sharkpp.net/public/images/2009_0507_win7rc1x86_desktop.png"          rel="lytebox#win7rc1x86" title="2009_0507_win7rc1x86_desktop.png"          ><img src="http://www.sharkpp.net/public/images/2009_0507_win7rc1x86_desktop_s.jpg"           alt="2009_0507_win7rc1x86_desktop.png" /></a>
+[![2009_0507_win7rc1x86_desktop.png][7]][8]
+
+ [7]: /images/2009_0507_win7rc1x86_desktop_s.jpg
+ [8]: /images/2009_0507_win7rc1x86_desktop.png
 
 **ゲストPCのスペック**
 
-<a href="http://www.sharkpp.net/public/images/2009_0507_win7rc1x86_guest_spec.png"       rel="lytebox#win7rc1x86" title="2009_0507_win7rc1x86_guest_spec.png"       ><img src="http://www.sharkpp.net/public/images/2009_0507_win7rc1x86_guest_spec_s.jpg"        alt="2009_0507_win7rc1x86_guest_spec.png" /></a>
+[![2009_0507_win7rc1x86_guest_spec.png][9]][10]
+
+ [9]: /images/2009_0507_win7rc1x86_guest_spec_s.jpg
+ [10]: /images/2009_0507_win7rc1x86_guest_spec.png
 
 **このサイトをIE8で表示**
 
-<a href="http://www.sharkpp.net/public/images/2009_0507_win7rc1x86_ie8_with_my_site.png" rel="lytebox#win7rc1x86" title="2009_0507_win7rc1x86_ie8_with_my_site.png" ><img src="http://www.sharkpp.net/public/images/2009_0507_win7rc1x86_ie8_with_my_site_s.jpg"  alt="2009_0507_win7rc1x86_ie8_with_my_site.png" /></a>
+[![2009_0507_win7rc1x86_ie8_with_my_site.png][11]][12]
+
+ [11]: /images/2009_0507_win7rc1x86_ie8_with_my_site_s.jpg
+ [12]: /images/2009_0507_win7rc1x86_ie8_with_my_site.png
 
 **HSP3.1のデモを実行**
 
-<a href="http://www.sharkpp.net/public/images/2009_0507_win7rc1x86_hsp3demo.png"         rel="lytebox#win7rc1x86" title="2009_0507_win7rc1x86_hsp3demo.png"         ><img src="http://www.sharkpp.net/public/images/2009_0507_win7rc1x86_hsp3demo_s.jpg"          alt="2009_0507_win7rc1x86_hsp3demo.png" /></a>
+[![2009_0507_win7rc1x86_hsp3demo.png][13]][14]
+
+ [13]: /images/2009_0507_win7rc1x86_hsp3demo_s.jpg
+ [14]: /images/2009_0507_win7rc1x86_hsp3demo.png
 
 **ブルースクリーン**
 
-<a href="http://www.sharkpp.net/public/images/2009_0507_win7rc1x86_bluescreen.png"       rel="lytebox#win7rc1x86" title="2009_0507_win7rc1x86_bluescreen.png"       ><img src="http://www.sharkpp.net/public/images/2009_0507_win7rc1x86_bluescreen_s.jpg"        alt="2009_0507_win7rc1x86_bluescreen.png" /></a>
+[![2009_0507_win7rc1x86_bluescreen.png][15]][16]
+
+ [15]: /images/2009_0507_win7rc1x86_bluescreen_s.jpg
+ [16]: /images/2009_0507_win7rc1x86_bluescreen.png

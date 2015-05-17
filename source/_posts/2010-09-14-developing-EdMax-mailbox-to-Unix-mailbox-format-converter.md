@@ -15,6 +15,8 @@ categories: [blog]
 
 [はてなブックマーク - EdMaxからThunderbirdへの移行 - the long tail soup][1]
 
+ [1]: http://b.hatena.ne.jp/entry/d.hatena.ne.jp/pure_jam/20080622/1214150769
+
 ってことで自力で実装中...
 
 なかなか面白かったので自分でもやってみた
@@ -26,7 +28,11 @@ categories: [blog]
 
 [HSP3掲示板 コーディングについて教えてください][2]
 
+ [2]: http://hsp.tv/play/pforum.php?mode=all&num=34964
+
 [緩慢スクリプト移転先/コーディングについての質問][3]
+
+ [3]: http://hspdev-wiki.net/?%B4%CB%CB%FD%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8%B0%DC%C5%BE%C0%E8%2F%A5%B3%A1%BC%A5%C7%A5%A3%A5%F3%A5%B0%A4%CB%A4%C4%A4%A4%A4%C6%A4%CE%BC%C1%CC%E4
 
 
 
@@ -67,7 +73,3 @@ categories: [blog]
 
 
 基本的にはスタイルが決まっているけど常にって事ではないし、時がたつにつれ変わってきてはいるかなー
-
- [1]: http://b.hatena.ne.jp/entry/d.hatena.ne.jp/pure_jam/20080622/1214150769
- [2]: http://hsp.tv/play/pforum.php?mode=all&num=34964
- [3]: http://hspdev-wiki.net/?%B4%CB%CB%FD%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8%B0%DC%C5%BE%C0%E8%2F%A5%B3%A1%BC%A5%C7%A5%A3%A5%F3%A5%B0%A4%CB%A4%C4%A4%A4%A4%C6%A4%CE%BC%C1%CC%E4

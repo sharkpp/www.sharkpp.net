@@ -9,17 +9,27 @@ categories: [blog]
 
 ソースは [sharkpp/AnsiEscapeSequencesEmulator - GitHub][1] に公開してあります。
 
+ [1]: https://github.com/sharkpp/AnsiEscapeSequencesEmulator
+
 バイナリも出来ます→[ダウンロード][2]
+
+ [2]: /soft/tool/aese_20130310_r2402.zip
 
 まずは、百聞は一見にしかずです。
 
 ↓が、
 
-<a href="/public/images/2013_0310_aese_before.png" rel="lytebox[x2013_0310]" title="aese適用前"><img src="/public/images/2013_0310_aese_before_s.png"  alt="aese適用前" /></a>
+[![aese適用前][3]][4]
+
+ [3]: /images/2013_0310_aese_before_s.png
+ [4]: /images/2013_0310_aese_before.png
 
 ↓になります。
 
-<a href="/public/images/2013_0310_aese_after.png"  rel="lytebox[x2013_0310]" title="aese適用後"><img src="/public/images/2013_0310_aese_after_s.png" alt="aese適用後" /></a>
+[![aese適用後][5]][6]
+
+ [5]: /images/2013_0310_aese_after_s.png
+ [6]: /images/2013_0310_aese_after.png
 
 いやほんと、ぱっと思いついてさくっと作った割にはうまく動いてくれていい感じです。
 
@@ -43,6 +53,3 @@ aeseコマンドは Windows API でANSIエスケープシーケンスを再現�
     
 
 ^[ は CTRL + [ と入力します。コードは 0x1B です。
-
- [1]: https://github.com/sharkpp/AnsiEscapeSequencesEmulator
- [2]: http://www.sharkpp.net/soft/tool/aese_20130310_r2402.zip

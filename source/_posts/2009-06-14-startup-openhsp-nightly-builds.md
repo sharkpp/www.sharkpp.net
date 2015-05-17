@@ -17,4 +17,4 @@ categories: [blog]
 
 ダウンロードは[OpenHSP][1]からどうぞ
 
- [1]: http://www.sharkpp.net/hsp/openhsp.html
+ [1]: /hsp/openhsp

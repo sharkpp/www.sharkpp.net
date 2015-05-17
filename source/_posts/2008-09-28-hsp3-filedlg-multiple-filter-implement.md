@@ -7,15 +7,17 @@ categories: [blog]
 
 [ファイル保存ダイアログ][1]で話題に上がっているファイル選択ダイアログで複数ファイルフィルタを指定で出来るように修正してみました。
 
+ [1]: http://hsp.tv/play/pforum.php?mode=all&num=19768
+
 <pre>dialog "as",16,"ソーススクリプト"
-	dialog "txt;*.exe;*.dll", 16, "色々なファイル"
-	dialog "bmp|jpg;*.jpeg|png", 16, "ビットマップ|JPEG|PNG"
-	dialog ";a*.txt", 16, "テキストファイル"
-	dialog "bmp|jpg;*.jpegpng", 16, "ビットマップ|JPEG|PNG"
-	dialog "bmp|jpg;*.jpeg|png", 16, "ビットマップ|JPEGPNG"
-	dialog "bmp||jpg;*.jpeg|png", 16, "ビットマップ|aa|JPEG|PNG"
-	dialog "bmp|*|jpg;*.jpeg|png", 16, "ビットマップ|aa|JPEG|PNG"
-	dialog "bmp|*|jpg;*.jpeg|png", 16, "ビットマップ||JPEG|PNG"
+dialog "txt;*.exe;*.dll", 16, "色々なファイル"
+dialog "bmp|jpg;*.jpeg|png", 16, "ビットマップ|JPEG|PNG"
+dialog ";a*.txt", 16, "テキストファイル"
+dialog "bmp|jpg;*.jpegpng", 16, "ビットマップ|JPEG|PNG"
+dialog "bmp|jpg;*.jpeg|png", 16, "ビットマップ|JPEGPNG"
+dialog "bmp||jpg;*.jpeg|png", 16, "ビットマップ|aa|JPEG|PNG"
+dialog "bmp|*|jpg;*.jpeg|png", 16, "ビットマップ|aa|JPEG|PNG"
+dialog "bmp|*|jpg;*.jpeg|png", 16, "ビットマップ||JPEG|PNG"
 </pre>
 
 こんな感じで複数フィルタのファイルフィルタを指定します。
@@ -31,38 +33,33 @@ categories: [blog]
 --- filedlg.cpp	(revision 178)
 +++ filedlg.cpp	(working copy)
 @@ -7,12 +7,13 @@
- #include &lt;stdlib.h&gt;
- #include &lt;stdio.h&gt;
- #include &lt;string.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
 +#include "../hsp3debug.h"
- 
- static HWND hwbak;
- static OPENFILENAME ofn ;
- static char szFileName[_MAX_PATH] ;
- static char szTitleName[_MAX_FNAME + _MAX_EXT] ;
+static HWND hwbak;
+static OPENFILENAME ofn ;
+static char szFileName[_MAX_PATH] ;
+static char szTitleName[_MAX_FNAME + _MAX_EXT] ;
 -static char szFilter[128];
 +//static char szFilter[128];
- 
- 
- void PopFileInitialize (HWND hwnd)
+void PopFileInitialize (HWND hwnd)
 @@ -20,7 +21,7 @@
-      ofn.lStructSize       = sizeof (OPENFILENAME) ;
-      ofn.hwndOwner         = hwnd ;
-      ofn.hInstance         = NULL ;
+ofn.lStructSize       = sizeof (OPENFILENAME) ;
+ofn.hwndOwner         = hwnd ;
+ofn.hInstance         = NULL ;
 -     ofn.lpstrFilter       = szFilter ;
 +//   ofn.lpstrFilter       = szFilter ;
-      ofn.lpstrCustomFilter = NULL ;
-      ofn.nMaxCustFilter    = 0 ;
-      ofn.nFilterIndex      = 1 ;
+ofn.lpstrCustomFilter = NULL ;
+ofn.nMaxCustFilter    = 0 ;
+ofn.nFilterIndex      = 1 ;
 @@ -39,42 +40,178 @@
-      ofn.lpTemplateName    = NULL ;
-      }
- 
+ofn.lpTemplateName    = NULL ;
+}
 +// SJISの1バイト目か調べる
 +#define is_sjis1(c)	 ( ( (c) &gt;= 0x81 && (c) &lt;= 0x9F ) || ( (c) &gt;= 0xE0 && (c) &lt;= 0xFC ) )
- 
- void fd_ini( HWND hwnd, char *extname, char *extinfo )
- {
+void fd_ini( HWND hwnd, char *extname, char *extinfo )
+{
 -	int a,b;
 -/*
 -	rev 44
@@ -78,7 +75,6 @@ categories: [blog]
 +	// "txt;*.text"     "テキストファイル"              "*.txt;*.text\0テキストファイル(*.txt;*.text)\0\0"
 +	// "txt;*.text|log" "テキストファイル|ログファイル" "*.txt;*.text\0テキストファイル(*.txt;*.text)\0*.log\0ログファイル(*.log)\0\0"
 +	// ";a*.txt"        "テキストファイル"              "a*.txt\0テキストファイル(a*.txt)\0\0"
- 
 -	szFilter[0]=0;
 +	// Shark++
 +	// ※ MSも全角を推奨していたし(メニュー文字列だったけど)もう半角捨ててもいいよね...
@@ -110,15 +106,13 @@ categories: [blog]
 +	bool no_aster;
 +	int nFilterIndex;
 +
- 	szFileName[0]=0;
- 	szTitleName[0]=0;
+szFileName[0]=0;
+szTitleName[0]=0;
 -	strcpy( fext,extname );
- 
 -	if (fext[0]==0) strcpy( fext,"*" );
 -	sprintf( szFileName, "*.%s",fext );
 +	fext = extname;
 +	finf = extinfo;
- 
 -	if (fext[0]!=42) {
 -		if (extinfo[0]==0) sprintf( finf,"%sﾌｧｲﾙ",fext );
 -					  else strcpy( finf,extinfo );
@@ -206,9 +200,8 @@ categories: [blog]
 +			strcat(pszFilterPtr, "*.");
 +		strncat(pszFilterPtr, fext, (size_t)fext_len);
 +		strcat(pszFilterPtr,  DELIMITER);
- 	}
+}
 -	strcat( szFilter,"すべてのﾌｧｲﾙ (*.*)@*.*@@" );
- 
 -	b=(int)strlen(szFilter);
 -	for(a=0;a&lt;b;a++) {
 -		a1=szFilter[a];
@@ -241,11 +234,10 @@ categories: [blog]
 +			pszFilterPtr++;
 +		else if( *DELIMITER == *pszFilterPtr )
 +			*pszFilterPtr = '\0';
- 	}
+}
 +	
 +	PopFileInitialize(hwnd);
 +	ofn.lpstrFilter = pszFilter;
- 
 -	PopFileInitialize(hwnd);
 +#undef realloc_filter_buffer
 +
@@ -254,37 +246,31 @@ categories: [blog]
 +out_of_memory:
 +	free(pszFilter);
 +	throw HSPERR_OUT_OF_MEMORY;
- }
- 
- char *fd_getfname( void )
+}
+char *fd_getfname( void )
 @@ -84,17 +221,24 @@
- 
- BOOL fd_dialog( HWND hwnd, int mode, char *fext, char *finf )
- {
+BOOL fd_dialog( HWND hwnd, int mode, char *fext, char *finf )
+{
 +	BOOL bResult = FALSE;
- 	switch(mode) {
- 	case 0:
- 		fd_ini( hwnd, fext, finf );
- 		ofn.Flags = OFN_HIDEREADONLY | OFN_CREATEPROMPT ;
+switch(mode) {
+case 0:
+fd_ini( hwnd, fext, finf );
+ofn.Flags = OFN_HIDEREADONLY | OFN_CREATEPROMPT ;
 -		return GetOpenFileName (&ofn) ;
 +		bResult = GetOpenFileName (&ofn) ;
 +		free((void*)ofn.lpstrFilter);
 +		ofn.lpstrFilter = NULL;
 +		break;
- 	case 1:
- 		fd_ini( hwnd, fext, finf );
- 		ofn.Flags = OFN_OVERWRITEPROMPT | OFN_HIDEREADONLY;
+case 1:
+fd_ini( hwnd, fext, finf );
+ofn.Flags = OFN_OVERWRITEPROMPT | OFN_HIDEREADONLY;
 -		return GetSaveFileName (&ofn) ;
 +		bResult = GetSaveFileName (&ofn) ;
 +		free((void*)ofn.lpstrFilter);
 +		ofn.lpstrFilter = NULL;
 +		break;
- 	}
+}
 -	return 0;
 +	return bResult;
- }
- 
- 
+}
 </pre>
-
- [1]: http://hsp.tv/play/pforum.php?mode=all&num=19768

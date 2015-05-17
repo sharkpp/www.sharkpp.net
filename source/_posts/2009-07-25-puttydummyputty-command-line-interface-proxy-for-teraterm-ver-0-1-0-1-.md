@@ -14,4 +14,4 @@ UPXで圧縮もしたので実行ファイルのサイズも約半分に...API�
 
 ダウンロードは、[ツール][1]からどうぞ
 
- [1]: http://www.sharkpp.net/soft/tool.html
+ [1]: /soft/tool

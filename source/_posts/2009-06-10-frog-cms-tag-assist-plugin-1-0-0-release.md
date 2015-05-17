@@ -13,8 +13,10 @@ Frog CMSは入力の補助、特にすでにあるタグの一覧が出てこな
 
 改善したはいいけど一覧に出てくるリストに入力規則を間違って入力していたものを発見して凹む
 
-<img src="http://www.sharkpp.net/php/frog-cms/tag_assist_ss_20090610.png" slt="タグ入力補助プラグインスクリーンショット" />
+![タグ入力補助プラグインスクリーンショット][1]
 
-ダウンロードは[タグ入力補助プラグイン][1]からです。
+ [1]: /images/2009_0610_tag_assist_ss_20090610.png
 
- [1]: http://www.sharkpp.net/php/frog-cms/tag_assist.html
+ダウンロードは[タグ入力補助プラグイン][2]からです。
+
+ [2]: /php/frog-cms/tag_assist

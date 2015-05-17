@@ -9,13 +9,17 @@ categories: [blog]
 
 仕組みとしては、googleのページを自力で解析して表示しているだけなので、いつまで使えるかはgoogle次第な無責任モジュールです。
 
-<a href="/hsp/image/mod_get_location.png"  rel="lytebox[xlocation_hsp_ss]" title="現在位置取得モジュールSS"><img src="/hsp/image/mod_get_location.jpg" alt="現在位置取得モジュールSS" /></a>
+[![現在位置取得モジュールSS][1]][2]
 
-[モジュール本体][1]
+ [1]: /images/2011_0127_mod_get_location.jpg
+ [2]: /images/2011_0127_mod_get_location.png
 
-[サンプル][2]
+[モジュール本体][3]
+
+ [3]: /hsp/module/mod_get_location.as
+
+[サンプル][4]
+
+ [4]: /hsp/module/mod_get_location_sample.hsp
 
 実は作ったのは昨年末なのですが勢いでサンプルを作ったので公開してみました。
-
- [1]: /hsp/module/mod_get_location.as
- [2]: /hsp/module/mod_get_location_sample.hsp

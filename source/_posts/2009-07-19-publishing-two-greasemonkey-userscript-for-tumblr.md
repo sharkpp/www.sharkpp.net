@@ -9,15 +9,18 @@ Greasemonkeyユーザースクリプトを２つ公開しました。
 
 [tumblr popup editor][1]：tumblr.の記事編集をポップアップで行えるユーザースクリプトです。
 
+ [1]: http://userscripts.org/scripts/show/54011
+
 [tumblr easily modify publishing][2]:tumblr.のダッシュボードでの公開オプション(publish/private)を簡単に変更できるユーザースクリプトです。
+
+ [2]: http://userscripts.org/scripts/show/54020
 
 ついでに、Tumblr と userscripts.org のアカウントへのリンクも乗せちゃいます。
 
 [Tumblr][3]
 
+ [3]: http://sharkpp.tumblr.com/
+
 [userscripts.org][4]
 
- [1]: http://userscripts.org/scripts/show/54011
- [2]: http://userscripts.org/scripts/show/54020
- [3]: http://sharkpp.tumblr.com/
  [4]: http://userscripts.org/users/sharkpp

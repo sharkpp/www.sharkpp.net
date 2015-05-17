@@ -15,6 +15,8 @@ xreaなどの設定が結構時間がかかったのでメモ代わりに公開�
 
 #### [inter7.jp][1]
 
+ [1]: http://www.inter7.jp/
+
 プロトコル：POP
 
 サーバー名：pop.inter7.jp:995
@@ -26,6 +28,8 @@ xreaなどの設定が結構時間がかかったのでメモ代わりに公開�
 認証方式　：通常のパスワード認証
 
 #### [xrea+][2]
+
+ [2]: http://www.xrea.com/
 
 プロトコル：POP
 
@@ -56,6 +60,8 @@ xreaなどの設定が結構時間がかかったのでメモ代わりに公開�
 
 #### [Yahoo mail][3]
 
+ [3]: http://www.yahoo.co.jp/
+
 プロトコル：POP
 
 サーバー名：pop.mail.yahoo.co.jp:995
@@ -83,6 +89,8 @@ xreaなどの設定が結構時間がかかったのでメモ代わりに公開�
 
 #### [Microsoft Live Hotmail][4]
 
+ [4]: http://www.live.com/
+
 プロトコル：POP
 
 サーバー名：pop3.live.com:995
@@ -109,6 +117,8 @@ xreaなどの設定が結構時間がかかったのでメモ代わりに公開�
 認証方式　：通常のパスワード認証
 
 #### [GMail][5]
+
+ [5]: http://www.googlemail.com/
 
 プロトコル：IMAP
 
@@ -143,9 +153,3 @@ xreaなどの設定が結構時間がかかったのでメモ代わりに公開�
 こんな感じで、合計7アカウントを取り敢えず登録してあります。
 
 GMailやYahooやHotmailはメールアドレスなどを入力すると自動でサーバーを探してくれました。
-
- [1]: http://www.inter7.jp/
- [2]: http://www.xrea.com/
- [3]: http://www.yahoo.co.jp/
- [4]: http://www.live.com/
- [5]: http://www.googlemail.com/

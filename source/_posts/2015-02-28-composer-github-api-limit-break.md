@@ -26,6 +26,8 @@ github のレポジトリを参照している場合に composer で update 時�
         $ php composer.phar config -g github-oauth.github.com {発行したtoken}
         
 
+ [1]: https://github.com/settings/applications#personal-access-tokens
+
 で無事 API の制限を超えることが出来ます。
 
 ## 参考
@@ -33,6 +35,5 @@ github のレポジトリを参照している場合に composer で update 時�
   * [Authentication required, while manual file download succeeds ? Issue #2439 ? composer/composer][2]
   * [composer/troubleshooting.md at master ? composer/composer][3]
 
- [1]: https://github.com/settings/applications#personal-access-tokens
  [2]: https://github.com/composer/composer/issues/2439#issuecomment-33034375
  [3]: https://github.com/composer/composer/blob/master/doc/articles/troubleshooting.md#api-rate-limit-and-oauth-tokens

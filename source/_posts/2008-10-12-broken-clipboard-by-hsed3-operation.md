@@ -8,6 +8,8 @@ categories: [blog]
 
 [クリップボードの内容が破棄される][1]
 
+ [1]: http://hsp.tv/play/pforum.php?mode=all&num=20057
+
 > 既出でしたら、申し訳ございません。
 > 
 > ＨＳＰスクリプトエディタで、右クリック⇒かんたん入力
@@ -23,5 +25,3 @@ categories: [blog]
 > 私はそんなにかんたん入力を使わない方ですが、ginfo系のときは利用しますので
 > 
 > ちょっとだけ、不便を感じています。
-
- [1]: http://hsp.tv/play/pforum.php?mode=all&num=20057

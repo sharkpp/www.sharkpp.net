@@ -7,9 +7,13 @@ categories: [blog]
 
 前から興味を持っていた、[Qt][1]で遊び始めた。
 
+ [1]: http://qt.nokia.com/title-jp
+
 クロスプラットフォームでルック＆フィールがネイティブなフレームワークとしてwxWidgetsかQtか迷うところだけどとりあえずQtに手を出してみた。
 
 まず、Qtのオープンソース・Windows版はターゲットとしているコンパイラが[MinGW][2]みたいだけどVisual C++ 2008 Express Editionを使いたかったので検索。(<a href="#f1" name ="b1" title="http://www.off-soft.net/ja/develop/qt/qt1.html">*1</a>) (<a href="#f2" name ="b2" title="http://www.02.246.ne.jp/~torutk/cxx/qt/QtOnWindowsAndVisualStudio.html">*2</a>) 
+
+ [2]: http://www.mingw.org/
 
 でも、結局MinGWも入れないと後のビルド途中でエラーが出てしまったのでMinGWも入れました。
 
@@ -57,18 +61,14 @@ Which edition of Qt do you want to use ?
 Type 'c' if you want to use the Commercial Edition.
 Type 'o' if you want to use the Open Source Edition.
 o &lt;-- オープンソース版を使うので'o'を入力
- 
 This is the Qt for Windows Open Source Edition.
- 
 You are licensed to use this software under the terms of
 the GNU General Public License (GPL) version 3
 or the GNU Lesser General Public License (LGPL) version 2.1.
- 
 Type '3' to view the GNU General Public License version 3 (GPLv3).
 Type 'L' to view the Lesser GNU General Public License version 2.1 (LGPLv2.1).
 Type 'y' to accept this license offer.
 Type 'n' to decline this license offer.
- 
 Do you accept the terms of the license?
 y &lt;-- ライセンスを受諾したので'y'を入力
 --- この後Maikfileの作成などなどが自動で行われます。 ---
@@ -147,15 +147,17 @@ EXEのサイズ：約5MB
 
 ...むー結構でかいな
 
-<a href="#b1" name="f1">*1</a>: http://www.off-soft.net/ja/develop/qt/qt1.html
+<a href="#b1" name="f1">*1
+</a>: http://www.off-soft.net/ja/develop/qt/qt1.html
 
-<a href="#b2" name="f2">*2</a>: http://www.02.246.ne.jp/~torutk/cxx/qt/QtOnWindowsAndVisualStudio.html
+<a href="#b2" name="f2">*2
+</a>: http://www.02.246.ne.jp/~torutk/cxx/qt/QtOnWindowsAndVisualStudio.html
 
-<a href="#b3" name="f3">*3</a>: http://doc.trolltech.com/4.1/deployment-windows.html#building-qt-statically
+<a href="#b3" name="f3">*3
+</a>: http://doc.trolltech.com/4.1/deployment-windows.html#building-qt-statically
 
-<a href="#b4" name="f4">*4</a>: http://null.michikusa.jp/misc/qt.html
+<a href="#b4" name="f4">*4
+</a>: http://null.michikusa.jp/misc/qt.html
 
-<a href="#b5" name="f5">*5</a>: http://d.kawataso.net/2008/03/vs2005qt4-1.html
-
- [1]: http://qt.nokia.com/title-jp
- [2]: http://www.mingw.org/
+<a href="#b5" name="f5">*5
+</a>: http://d.kawataso.net/2008/03/vs2005qt4-1.html

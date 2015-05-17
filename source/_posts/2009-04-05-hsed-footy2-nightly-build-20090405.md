@@ -13,6 +13,6 @@ HSPスクリプトエディタ(Footy2版)のナイトリービルドです。
 
 [hsed3\_footy2\_20090405.zip][1]
 
-スタティックリンクにしたのでFooty2.dllは今回から必要なくなりました。
+ [1]: /hsp/openhsp/hsed3_footy2_20090405.zip
 
- [1]: http://www.sharkpp.net/hsp/openhsp/hsed3_footy2_20090405.zip
+スタティックリンクにしたのでFooty2.dllは今回から必要なくなりました。

@@ -9,7 +9,11 @@ categories: [blog]
 
 [FuelPHP 勉強会 大須 vol.3 に参加しました][1]で少し触れた FuelPHP + eXcale でデプロイ体験をもうすし踏み込んでまとめてみました。
 
+ [1]: /blog/2013/02/17/fuelphp-workshop-in-osu-vol-3
+
 内容的には [FuelPHP + eXcale][2] を参照した記事となります。
+
+ [2]: http://yamamoto.phpapps.jp/2012/12/13/6/
 
 なので、色々省かれているので先に目を通しておくことをお勧めします。
 
@@ -19,12 +23,12 @@ categories: [blog]
 
 [インストール方法 - インストール - FuelPHP ドキュメント][3] にルートからしか公開できない場合の設定方法が載っていました。
 
-<blockquote class="twitter-tweet" lang="ja">
-  <p>
-    @<a href="https://twitter.com/sharkpp">sharkpp</a> Assetのパスを変更する意義はないように思いますので、<a href="http://t.co/oQKk2vX9" title="http://ow.ly/hNx5G">ow.ly/hNx5G</a> の「もっと簡単な方法」の方がいいと思います <a href="https://twitter.com/search/%23fuelphposu">#fuelphposu</a>
-  </p>&mdash; kenjisさん (@kenji_s) 
-  
-  <a href="https://twitter.com/kenji_s/status/303321663796289537">2013年2月18日</a>
+ [3]: http://fuelphp.jp/docs/1.5/installation/instructions.html#/install_inside_root2
+
+<blockquote class="twitter-tweet" lang="ja"><p>
+@<a href="https://twitter.com/sharkpp">sharkpp</a> Assetのパスを変更する意義はないように思いますので、<a href="http://t.co/oQKk2vX9" title="http://ow.ly/hNx5G">ow.ly/hNx5G</a> の「もっと簡単な方法」の方がいいと思います <a href="https://twitter.com/search/%23fuelphposu">#fuelphposu</a>
+</p>&mdash; kenjisさん (@kenji_s) 
+<a href="https://twitter.com/kenji_s/status/303321663796289537">2013年2月18日</a>
 </blockquote>
 
 ## アカウント登録
@@ -60,8 +64,8 @@ FuelPHP本家からパッケージをダウンロードし、一旦展開しま�
 で、 fuelphp-1.5.2/fuel/app/config/config.php に、
 
 <pre>return array(
-   'default_timezone' =&gt; 'Asia/Tokyo'
-   );
+'default_timezone' =&gt; 'Asia/Tokyo'
+);
 </pre>
 
 のような感じで設定を追加します。
@@ -101,9 +105,9 @@ FuelPHP本家からパッケージをダウンロードし、一旦展開しま�
 上の設定とあわせると最終的には、
 
 <pre>return array(
-   'default_timezone' => 'Asia/Tokyo',
-   'base_url'  =>  '/',
-   );
+'default_timezone' => 'Asia/Tokyo',
+'base_url'  =>  '/',
+);
 </pre>
 
 のような内容になっているはずです。
@@ -112,16 +116,18 @@ FuelPHP本家からパッケージをダウンロードし、一旦展開しま�
 
 **2013年2月18日削除**
 
-<del>fuel/app/config/asset.php はインストール直後では存在しないので、下のような内容を追加します。</del>
+<del>fuel/app/config/asset.php はインストール直後では存在しないので、下のような内容を追加します。
+</del>
 
 <pre>return array(
-   'paths' => array('public/assets/'),
-   );
+'paths' => array('public/assets/'),
+);
 </pre>
 
 ### <del>public/index.php を index.php に移動して内容変更</del> public/* を / に移動し index.php の内容を変更
 
-<del>public/index.php をルートに移動し、 index.php とします。</del>
+<del>public/index.php をルートに移動し、 index.php とします。
+</del>
 
 public/* をルートに移動します。 publicフォルダは空っぽなので削除しましょう。 で、パスも合わせて変更。
 
@@ -161,7 +167,3 @@ APPPATH と PKGPATH と COREPATH です。
 eXcale は日本語で使えて遊べるかもってことで触ってみましたが、少し残念なところがあって、もうちょっと、、、って感じでした。
 
 SNSなどに書くとそれを拾い上げてくれる場合もあるようなので、みんながいっぱい書けばもっとよくなるかも？ってことで期待をしたいなーと思います。
-
- [1]: /blog/2013/02/17/fuelphp-workshop-in-osu-vol-3.html
- [2]: http://yamamoto.phpapps.jp/2012/12/13/6/
- [3]: http://fuelphp.jp/docs/1.5/installation/instructions.html#/install_inside_root2

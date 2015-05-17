@@ -8,6 +8,8 @@ categories: [blog]
 
 今年の正月([HAPPY NEW YEAR 2010][1])に掲げた目標
 
+ [1]: /blog/2010/01/01/happy-new-year-2010.html
+
 ...達成率0% orz
 
   * HSP関連のあるサイトの立ち上げ
@@ -28,5 +30,3 @@ categories: [blog]
 と、メールで来ているQEmu Launcherやpcbnet2の要望や不具合の対応もしたいなーと思います。
 
 思うに、時間が足りないんだな....そう思いたい
-
- [1]: /blog/2010/01/01/happy-new-year-2010.html

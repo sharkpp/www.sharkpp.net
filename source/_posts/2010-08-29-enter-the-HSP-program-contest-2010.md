@@ -9,18 +9,33 @@ categories: [blog]
 
 [作者ページ][1] [作品ページ][2]
 
-<a   href="/public/images/2010_0824_puzzle_ss_04.png" rel="lytebox[x2010_0829]" title="ジグソーパズル"><img src="/public/images/2010_0824_puzzle_ss_04.jpg" alt="ジグソーパズル" /></a>
+ [1]: http://hsp.tv/contest2010/entry.php?id=5&mode=author
+ [2]: http://hsp.tv/contest2010/entry.php?id=91
+
+[![ジグソーパズル][3]][4]
+
+ [3]: /images/2010_0824_puzzle_ss_04.jpg
+ [4]: /images/2010_0824_puzzle_ss_04.png
 
 今回もオブジェクトサイズを小さくするのに時間が掛かったです↓
 
 本当はjavascriptでのグラフで表示をしたかったけどうまくいかなかったorz
 
-<a   href="/public/images/2010_0829_puzzle_object_size.png" rel="lytebox[x2010_0829]" title="オブジェクトサイズグラフ"><img src="/public/images/2010_0829_puzzle_object_size.jpg" alt="オブジェクトサイズグラフ" /></a>
+[![オブジェクトサイズグラフ][5]][6]
+
+ [5]: /images/2010_0829_puzzle_object_size.jpg
+ [6]: /images/2010_0829_puzzle_object_size.png
 
 
 
   
-<a   href="/public/images/2010_0824_puzzle_ss_01.png" rel="lytebox[x2010_0829]" title="ジグソーパズルメニュー"><img src="/public/images/2010_0824_puzzle_ss_01.jpg" alt="ジグソーパズルメニュー" /></a> <a   href="/public/images/2010_0824_puzzle_ss_02.png" rel="lytebox[x2010_0829]" title="ジグソーパズルEASY"><img src="/public/images/2010_0824_puzzle_ss_02.jpg" alt="ジグソーパズルEASY" /></a> <a   href="/public/images/2010_0824_puzzle_ss_03.png" rel="lytebox[x2010_0829]" title="ジグソーパズルEASY"><img src="/public/images/2010_0824_puzzle_ss_03.jpg" alt="ジグソーパズルEASY" /></a> <a   href="/public/images/2010_0824_puzzle_ss_04.png" rel="lytebox[x2010_0829]" title="ジグソーパズルNORMAL"><img src="/public/images/2010_0824_puzzle_ss_04.jpg" alt="ジグソーパズルNORMAL" /></a> <a   href="/public/images/2010_0824_puzzle_ss_05.png" rel="lytebox[x2010_0829]" title="ジグソーパズルHARD"><img src="/public/images/2010_0824_puzzle_ss_05.jpg" alt="ジグソーパズルHARD" /></a>
+[![ジグソーパズルメニュー][7]][8] [![ジグソーパズルEASY][9]][10] [![ジグソーパズルEASY][11]][12] [![ジグソーパズルNORMAL][3]][4] [![ジグソーパズルHARD][13]][14]
 
- [1]: http://hsp.tv/contest2010/entry.php?id=5&mode=author
- [2]: http://hsp.tv/contest2010/entry.php?id=91
+ [7]: /images/2010_0824_puzzle_ss_01.jpg
+ [8]: /images/2010_0824_puzzle_ss_01.png
+ [9]: /images/2010_0824_puzzle_ss_02.jpg
+ [10]: /images/2010_0824_puzzle_ss_02.png
+ [11]: /images/2010_0824_puzzle_ss_03.jpg
+ [12]: /images/2010_0824_puzzle_ss_03.png
+ [13]: /images/2010_0824_puzzle_ss_05.jpg
+ [14]: /images/2010_0824_puzzle_ss_05.png

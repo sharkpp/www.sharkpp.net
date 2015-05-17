@@ -32,6 +32,9 @@ githubを今更ながら始めました。
   * [github][1]
   * [tips - svnメイン、でもgithubでも公開したい場合の最小手順][2]
 
+ [1]: http://blog.makotokw.com/memo/github/
+ [2]: http://blog.livedoor.jp/dankogai/archives/51194979.html
+
 辺りを見ながらセットアップしました。
 
 
@@ -54,6 +57,8 @@ githubを今更ながら始めました。
   2. ローカルのgitレポジトリのフォルダへ移動
   3. [svn2github.cmd][3] _http://svn.example.net/test_ _example-test_ を実行
 
+ [3]: https://github.com/sharkpp/win-batch-utils/blob/master/git/svn2github.cmd
+
 てな感じで簡単に出来るようにしました。
 
 
@@ -69,11 +74,16 @@ githubを今更ながら始めました。
 
 ![][4]
 
+ [4]: /images/2011_0918_svn-hook-sync-git.png
+
   1. TortoiseSVNの設定画面を開き、「フックスクリプト」の設定を選択
   2. 「追加」を選択
   3. 「Post-Commit フック」を選択
   4. ローカルの作業フォルダのパスを指定
   5. 「[error_report.cmd][5] [sync4git.cmd][6] ローカルのgitレポジトリのパス」をそれぞれフルパスで入力
+
+ [5]: https://github.com/sharkpp/win-batch-utils/blob/master/error_report.cmd
+ [6]: https://github.com/sharkpp/win-batch-utils/blob/master/git/sync4git.cmd
 
 
 
@@ -81,10 +91,3 @@ githubを今更ながら始めました。
 
 
 全部が全部公開しているわけではないけど、こんな感じでオープンな感じでやるのもいいかなーと最近思い始めてます。
-
- [1]: http://blog.makotokw.com/memo/github/
- [2]: http://blog.livedoor.jp/dankogai/archives/51194979.html
- [3]: https://github.com/sharkpp/win-batch-utils/blob/master/git/svn2github.cmd
- [4]: http://www.sharkpp.net/public/images/2011_0918_svn-hook-sync-git.png
- [5]: https://github.com/sharkpp/win-batch-utils/blob/master/error_report.cmd
- [6]: https://github.com/sharkpp/win-batch-utils/blob/master/git/sync4git.cmd

@@ -7,9 +7,13 @@ categories: [blog]
 
 [FuelPHP Advent Calendar 2013][1] 1日目の参加記事です。
 
+ [1]: http://atnd.org/events/45096
+
 初めましての方もご存知の方も、よろしくお願いします。
 
 [@sharkpp][2]です。
+
+ [2]: https://twitter.com/sharkpp
 
 さて、昨年の12月1日はアドベント(待降節)ではありませんでしたが、安心してください、今年は12月1日からアドベントは始まります。
 
@@ -33,6 +37,8 @@ categories: [blog]
 
 [PHP: 導入 - Manual][3]によると、
 
+ [3]: http://jp2.php.net/manual/ja/intro.phar.php
+
 > phar 拡張モジュールは、PHP アプリケーション全体をひとつの "phar" (PHP Archive) ファイルにまとめてしまい、配布やインストールを容易にするためのものです。
 
 となっています。
@@ -43,6 +49,11 @@ categories: [blog]
   * [goutte.phar][5] スクレイピングライブラリ
   * [guzzle.phar][6] HTTPクライアントライブラリ
   * [pyrus.phar][7] PEAR2
+
+ [4]: http://getcomposer.org/
+ [5]: https://github.com/fabpot/goutte
+ [6]: https://github.com/guzzle/guzzle
+ [7]: http://pear2.php.net/PEAR2_Pyrus
 
 などがあります。
 
@@ -57,9 +68,13 @@ categories: [blog]
 
 Pharクラスの中でも、今回は [Phar::webPhar][8] を使います。
 
+ [8]: http://jp2.php.net/manual/ja/phar.webphar.php
+
 まずは、FuelPHPを適当なフォルダに配置します。
 
 詳しい手順は[FuelPHP ドキュメント][9]に書かれているので参考にしてください。
+
+ [9]: http://fuelphp.jp/docs/1.7/
 
 ここでは、`~/fuelphp-1.7` に配置されるものとします。
 
@@ -225,6 +240,8 @@ Pharクラスの中でも、今回は [Phar::webPhar][8] を使います。
 
 一つ一つ編集するのが大変であれば [Gist][10] に差分をアップしたので
 
+ [10]: https://gist.github.com/sharkpp/7716098
+
     $ cd fuelphp-1.7
     $ wget -q https://gist.github.com/sharkpp/7716098/raw -O - | patch -u -p0
     
@@ -265,6 +282,8 @@ Pharクラスの中でも、今回は [Phar::webPhar][8] を使います。
 FuelPHP をインストールした fuelphp-1.7 ディレクトリの上にファイルを保存してください。
 
 こちらも [Gist][11] にアップしてあるので、
+
+ [11]: https://gist.github.com/sharkpp/7716423
 
     $ cd ~
     $ wget -q https://gist.github.com/sharkpp/7716423/raw/mkphar.php
@@ -315,6 +334,8 @@ FuelPHP をインストールした fuelphp-1.7 ディレクトリの上にフ�
 
 こちらも例によって [Gist][12] にアップしてあるので、
 
+ [12]: https://gist.github.com/sharkpp/7718075
+
     $ wget -q https://gist.github.com/sharkpp/7718075/raw/.htaccess
     
 
@@ -347,17 +368,5 @@ FuelPHP をインストールした fuelphp-1.7 ディレクトリの上にフ�
 
 明日は [@kenji_s][13] さんの「[FuelPHPの開発環境を20分で構築する（Vagrant編）][14]」です。お楽しみに！
 
- [1]: http://atnd.org/events/45096
- [2]: https://twitter.com/sharkpp
- [3]: http://jp2.php.net/manual/ja/intro.phar.php
- [4]: http://getcomposer.org/
- [5]: https://github.com/fabpot/goutte
- [6]: https://github.com/guzzle/guzzle
- [7]: http://pear2.php.net/PEAR2_Pyrus
- [8]: http://jp2.php.net/manual/ja/phar.webphar.php
- [9]: http://fuelphp.jp/docs/1.7/
- [10]: https://gist.github.com/sharkpp/7716098
- [11]: https://gist.github.com/sharkpp/7716423
- [12]: https://gist.github.com/sharkpp/7718075
  [13]: https://twitter.com/kenji_s
  [14]: http://blog.a-way-out.net/blog/2013/12/02/quick-mastering-fuelphp/

@@ -17,7 +17,8 @@ Mediawikiのデフォルトスタイルのサイドバーに開閉機能を付�
 
 ![][1]
 
+ [1]: /images/2010_0524_wide_style_mediawiki.png "スクリーンショット"
+
 [DOWNLOAD][2]
 
- [1]: /junk/greasemonkey/wide_style_mediawiki.png "スクリーンショット"
  [2]: http://userscripts.org/scripts/show/72660

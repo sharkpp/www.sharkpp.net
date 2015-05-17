@@ -17,6 +17,6 @@ categories: [blog]
   * Ti.App.Properties.setInt() と Ti.UI.Android.openPreferences() はあわせて使えない、設定画面では文字列のみが扱える。で使うとエラーになりやっぱりいきなり落ちる。
   * Androidでは、Ti.UI.Button などの上に 別のオブジェクトを重ねられない。
 
-などなど、とりあえずざっと覚えているのはこんな感じ。
-
  [1]: http://docs.appcelerator.com/titanium/2.1/index.html
+
+などなど、とりあえずざっと覚えているのはこんな感じ。

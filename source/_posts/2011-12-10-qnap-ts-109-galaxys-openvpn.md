@@ -17,6 +17,11 @@ NAS(QNAP TS-109II)をゴニョゴニョやりながらなんとかOpenVPN使っ�
   * [ViaPress inc. ? SC-02B OpenVPN for Android][3]
   * [beautiful-moon.net ? Blog Archive ? Xperia(Android)からOpenVPN接続][4]
 
+ [1]: http://blog.circlea4.net/?p=406
+ [2]: http://wiki.nas-portal.org/index.php/Install_OpenVPN_on_QNAP
+ [3]: http://photo.viasv.com/?p=3269
+ [4]: http://beautiful-moon.net/2011-03-05_android-xperia-openvpn/
+
 あたりを参考にした。
 
 いずれも自己責任でお願いします。
@@ -51,26 +56,56 @@ NAS(QNAP TS-109II)をゴニョゴニョやりながらなんとかOpenVPN使っ�
 
 Optware ipkg は、[QNAP TS-109? で Subversionを使う][5] で色々やったのでそちらを参考にしてください。
 
+ [5]: /blog/2011/12/05/using-subversion-with-qnap-ts109II
+
 #### OpenVPNをインストール
 
 <pre># ipkg install openvpn
 </pre>
 
-<pre># openvpn</pre>
+<pre># openvpn
+</pre>
 
 で動けばとりあえずOK
 
 #### ログディレクトリやtunモジュール用のディレクトリを生成
 
 <pre># cd /opt/etc/openvpn
-# mkdir log
-# cd log
-# touch openvpn.log
-# touch status.log
-# mkdir /opt/etc/openvpn/modules
+---
+title: "mkdir log"
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
+---
+title: "cd log"
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
+---
+title: "touch openvpn.log"
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
+---
+title: "touch status.log"
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
+---
+title: "mkdir /opt/etc/openvpn/modules"
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
 </pre>
 
 [Install the missing tun.ko module][6]から適切なtunモジュールをダウンロードし
+
+ [6]: http://wiki.nas-portal.org/index.php/Install_OpenVPN_on_QNAP#Install_the_missing_tun.ko_module
 
 <pre>/opt/etc/openvpn/modules
 </pre>
@@ -83,9 +118,13 @@ Optware ipkg は、[QNAP TS-109? で Subversionを使う][5] で色々やった�
 mkdir /dev/net;
 mknod /dev/net/tun c 10 200;
 (sleep 10; insmod /opt/etc/openvpn/modules/tun.ko)&
-
 easy.confの内容
-# exec openvpn
+---
+title: "exec openvpn"
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
 (sleep 10; /opt/sbin/openvpn /opt/etc/openvpn/easy.conf)&
 </pre>
 
@@ -94,52 +133,122 @@ easy.confの内容
 easy.confの内容
 
 <pre># OpenVPN server configuration QNAP NAS
-# basic settings
+---
+title: "basic settings"
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
 port 1194
 proto udp
 dev tun
 #
-# detect mtu if the connection is slow.
+---
+title: "detect mtu if the connection is slow."
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
 ; mtu-test
 #
-# define mtu, if necessary
+---
+title: "define mtu, if necessary"
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
 ; tun-mtu xyz
 #
-# define the ip-addresses of the underlying tunnel
+---
+title: "define the ip-addresses of the underlying tunnel"
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
 server 10.8.0.0 255.255.255.0
 #
-# Route
+---
+title: "Route"
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
 push "route 192.168.1.0 255.255.255.0"   #  &lt;--- LANのIPアドレスを指定
 #
-# certificates & keys
+---
+title: "certificates & keys"
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
 dh   /opt/etc/openvpn/keys/dh1024.pem
 ca   /opt/etc/openvpn/keys/ca.crt
 cert /opt/etc/openvpn/keys/server.crt
 key  /opt/etc/openvpn/keys/server.key
 #
-# data compression
+---
+title: "data compression"
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
 comp-lzo
 #
-# allow, that several clients with the same common name log on
+---
+title: "allow, that several clients with the same common name log on"
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
 ; duplicate-cn
 #
-# different clients can "see" each other through the tunnel.
+---
+title: "different clients can "see" each other through the tunnel."
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
 ; client-to-client
 #
-# Keepalive
+---
+title: "Keepalive"
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
 keepalive 15 120
 #
-# verbosity of status messages in the console. Activate for debugging (1-9 possible)
+---
+title: "verbosity of status messages in the console. Activate for debugging (1-9 possible)"
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
 ; verb 5
 #
-# Log files
+---
+title: "Log files"
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
 status /share/HDA_DATA/system/log/openvpn-status.log
 log-append /share/HDA_DATA/system/log/openvpn.log
 #
-# Run as daemon (activate, after everything is set up properly)
+---
+title: "Run as daemon (activate, after everything is set up properly)"
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
 ; daemon
 #
-# Management Interface. Access with "telnet localhost 7505"
+---
+title: "Management Interface. Access with "telnet localhost 7505""
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
 management localhost 7505
 </pre>
 
@@ -154,25 +263,54 @@ management localhost 7505
 
 [BusyBox][7]、[OpenVPN Installer][8]、[OpenVPN Settings][9]をインストール
 
+ [7]: https://market.android.com/details?id=stericson.busybox&hl=ja
+ [8]: https://market.android.com/details?id=de.schaeuffelhut.android.openvpn.installer&hl=ja
+ [9]: https://market.android.com/details?id=de.schaeuffelhut.android.openvpn&hl=ja
+
 あと、ターミナルソフト([ConnectBot][10]/[Android Terminal Emulator][11]など) or adbでも出来るかも？ も必要
+
+ [10]: https://market.android.com/details?id=org.connectbot
+ [11]: https://market.android.com/details?id=jackpal.androidterm
 
 OpenVPN関連のインストール先は、
 
-<pre>/system/xbin/</pre>
+<pre>/system/xbin/
+</pre>
 
 ifconfig/route関連のインストール先は、
 
-<pre>/system/xbin/bb/</pre>
+<pre>/system/xbin/bb/
+</pre>
 
 にしました。
 
 #### ifconfig/routeの配置
 
 <pre>su
-# mount -o remount,rw /dev/block/stl9 /system
-# mkdir /system/xbin/bb
-# ln -s /system/xbin/busybox /system/xbin/bb/ifconfig
-# ln -s /system/xbin/busybox /system/xbin/bb/route
+---
+title: "mount -o remount,rw /dev/block/stl9 /system"
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
+---
+title: "mkdir /system/xbin/bb"
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
+---
+title: "ln -s /system/xbin/busybox /system/xbin/bb/ifconfig"
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
+---
+title: "ln -s /system/xbin/busybox /system/xbin/bb/route"
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
 </pre>
 
 で一旦、GALAXY Sを再起動
@@ -183,6 +321,8 @@ ifconfig/route関連のインストール先は、
 
 ※[HOWTO tun.ko to run OpenVPN on Froyo xxJPK Galaxy S I9000 - xda-developers][12]からダウンロード
 
+ [12]: http://forum.xda-developers.com/showthread.php?t=793712
+
 OpenVPN Settingsを起動して、Advancedを開き、
 
   1. 「Load tun kernel module」にチェック
@@ -191,6 +331,8 @@ OpenVPN Settingsを起動して、Advancedを開き、
   4. 　「Path to tun module」→ /sdcard/openvpn/galaxys/tun.ko と指定
 
 [Key-generation][13]の手順で認証キーなどを作る
+
+ [13]: http://wiki.nas-portal.org/index.php/Install_OpenVPN_on_QNAP#Key-generation
 
 それぞれ、必要なファイルを指定したパス(/sdcard/openvpn/ca/)にアップ
 
@@ -210,21 +352,35 @@ dev tun
 tls-client
 remote vpn.example.net 1194  #  &lt;--- enter your dyndns-account here!
 pull
-# set mtu, if necessary
+---
+title: "set mtu, if necessary"
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
 tun-mtu 1500
 #
 resolv-retry infinite
 nobind
 persist-key
 persist-tun
-# certificates and keys
-# Note the double \\ in the path for a windows config
+---
+title: "certificates and keys"
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
+---
+title: "Note the double \\ in the path for a windows config"
+tags: [雑記, Android, QNAP, Galaxy S]
+categories: [blog]
+
+---
 ca   /sdcard/openvpn/ca/ca.crt
 cert /sdcard/openvpn/ca/key.crt
 key  /sdcard/openvpn/ca/key.key
 #
 comp-lzo
-
 #status /sdcard/openvpn/status.log
 #log-append /sdcard/openvpn/log.log
 </pre>
@@ -243,6 +399,8 @@ comp-lzo
 ### LAN内部のクライアントと通信する
 
 [OpenVPN Extras ? NAS Wiki][14]を参考
+
+ [14]: http://wiki.nas-portal.org/index.php/OpenVPN_Extras
 
 #### QNAP側(VPNサーバー)でipv4の転送を有効にする
 
@@ -308,18 +466,3 @@ Windowsファイヤーウォールの場合
 で、接続できると思います。
 
 出来なかったら、Wiresharkで確認するのがイイです。
-
- [1]: http://blog.circlea4.net/?p=406
- [2]: http://wiki.nas-portal.org/index.php/Install_OpenVPN_on_QNAP
- [3]: http://photo.viasv.com/?p=3269
- [4]: http://beautiful-moon.net/2011-03-05_android-xperia-openvpn/
- [5]: /blog/2011/12/05/using-subversion-with-qnap-ts109II.html
- [6]: http://wiki.nas-portal.org/index.php/Install_OpenVPN_on_QNAP#Install_the_missing_tun.ko_module
- [7]: https://market.android.com/details?id=stericson.busybox&hl=ja
- [8]: https://market.android.com/details?id=de.schaeuffelhut.android.openvpn.installer&hl=ja
- [9]: https://market.android.com/details?id=de.schaeuffelhut.android.openvpn&hl=ja
- [10]: https://market.android.com/details?id=org.connectbot
- [11]: https://market.android.com/details?id=jackpal.androidterm
- [12]: http://forum.xda-developers.com/showthread.php?t=793712
- [13]: http://wiki.nas-portal.org/index.php/Install_OpenVPN_on_QNAP#Key-generation
- [14]: http://wiki.nas-portal.org/index.php/OpenVPN_Extras

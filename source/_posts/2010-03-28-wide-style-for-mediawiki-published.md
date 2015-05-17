@@ -11,14 +11,16 @@ Mediawikiのデフォルトスタイルのサイドバーに開閉機能を付�
 
 ![][1]
 
+ [1]: /images/2010_0328_wide_style_mediawiki.png "スクリーンショット"
+
 [DOWNLOAD][2]
 
+ [2]: http://userscripts.org/scripts/show/72660
+
 あと、[これ][3]のtypo修正しました。
+
+ [3]: http://userscripts.org/scripts/show/65682
 
 指摘されるまで気が付かなかったorz
 
 恥ずかしい(〃∇〃)
-
- [1]: /junk/greasemonkey/wide_style_mediawiki.png "スクリーンショット"
- [2]: http://userscripts.org/scripts/show/72660
- [3]: http://userscripts.org/scripts/show/65682

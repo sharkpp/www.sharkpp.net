@@ -9,6 +9,8 @@ categories: [blog]
 
 母艦であるところの Mac から、VirtualBox で構築した VM や VPS に対して環境を構築したい。 が、最初は、 [Chef][1] で遊んでみることに。
 
+ [1]: http://www.getchef.com/
+
 ## 準備
 
 とりあえず、 VirtualBox で VM を立ち上げて確認してみる。
@@ -49,6 +51,8 @@ VM 側は、後で Mac 側からインストールするので特に何もイン
 確かに古いね。
 
 ってことで、新しいバージョンを[インストール][2]。
+
+ [2]: /blog/2014/04/15/ruby-1-9-3_install_for_mac_10_8
 
     $ ruby -v
     ruby 1.9.3p545 (2014-02-24 revision 45159) [x86_64-darwin12.5.0]
@@ -92,6 +96,8 @@ VM 側は、後で Mac 側からインストールするので特に何もイン
     
 
 「[Chef 11.12.2のknife configureが失敗する - Qiita][3]」によると、バグッてるので古いバージョンを使えってことのよう(´・ω・｀)
+
+ [3]: http://qiita.com/sakatuba@github/items/1548818b02735b2047ad
 
 とりあえず、エラー表示でググるのって大事だよねってことで。
 
@@ -150,6 +156,8 @@ SSH鍵を使う場合は
 
 「[Chef Soloの正しい始め方 | tsuchikazu blog][4]」に書いてあるように、
 
+ [4]: http://tsuchikazu.net/chef_solo_start/
+
     {"run_list":[
       "yum::epel", 
       "nginx"
@@ -181,6 +189,8 @@ SSH鍵を使う場合は
     
 
 として、「[サードパーティ製chefレシピ使ってたの忘れてた - わすれっぽいきみえ][5]」を参考に追加。
+
+ [5]: http://kimikimi714.hatenablog.com/entry/2014/01/13/%E3%82%B5%E3%83%BC%E3%83%89%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E8%A3%BDchef%E3%83%AC%E3%82%B7%E3%83%94%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%9F%E3%81%AE%E5%BF%98%E3%82%8C%E3%81%A6%E3%81%9F
 
     # add the EPEL repo
     yum_repository 'epel' do
@@ -231,11 +241,6 @@ SSH鍵を使う場合は
   * [Chef 11.12.2のknife configureが失敗する - Qiita][3]
   * [サードパーティ製chefレシピ使ってたの忘れてた - わすれっぽいきみえ][5]
 
- [1]: http://www.getchef.com/
- [2]: /blog/2014/04/15/ruby-1-9-3_install_for_mac_10_8.html
- [3]: http://qiita.com/sakatuba@github/items/1548818b02735b2047ad
- [4]: http://tsuchikazu.net/chef_solo_start/
- [5]: http://kimikimi714.hatenablog.com/entry/2014/01/13/%E3%82%B5%E3%83%BC%E3%83%89%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E8%A3%BDchef%E3%83%AC%E3%82%B7%E3%83%94%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%9F%E3%81%AE%E5%BF%98%E3%82%8C%E3%81%A6%E3%81%9F
  [6]: http://www.atmarkit.co.jp/ait/articles/1305/24/news003.html
  [7]: http://docs.opscode.com/install_workstation.html#run-the-omnibus-installer
  [8]: http://qiita.com/takeshi_ok_desu/items/936ee44b712c37d25a0e

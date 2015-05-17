@@ -15,6 +15,8 @@ php(5.2以降)+mb_stringが必要です。
 
 [backup2svn-dump_20091213.zip][1]
 
+ [1]: /files/backup2svn-dump_20091213.zip
+
 ダウンロード先は取り敢えずで、どこに置こうか考え中。
 
 とりあえず、
@@ -29,5 +31,3 @@ php(5.2以降)+mb_stringが必要です。
 @ファイル内のテキストをコミット時のコメントとして使用します。
 
 あと、branch/tag機能を付けたいなー
-
- [1]: http://www.sharkpp.net/files/backup2svn-dump_20091213.zip

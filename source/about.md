@@ -8,7 +8,8 @@ title: "このサイトについて"
 
 このサイトは、Shark++ Software の制作物を配布する目的で作られたました。 現在、Windows用のソフトウエア配布が主なコンテンツですがそのほか興味を持った物を色々おいてあります。 
 
-<span class="warning">このサイトに掲載されたソフト等を使用した事による損害については一切の責任を負いません。 また、このサイトに掲載されている画像・文章は一切の転載を禁止します。</span> 
+<span class="warning">このサイトに掲載されたソフト等を使用した事による損害については一切の責任を負いません。 また、このサイトに掲載されている画像・文章は一切の転載を禁止します。
+</span> 
 
 コンテンツ内容やURLは、予告なしに変更になる場合があります。 
 
@@ -33,12 +34,15 @@ Windows XP/Vista 上の以下のブラウザで、デザインを確認してい
 	  
 どのページにリンクしてもかまいませんが、必ずリンクするURLがアドレスバーに現れるようにリンクしてください。 <!-- http://d.hatena.ne.jp/HiromitsuTakagi/20040426#p2 -->
 
-<img src="image/banner.gif" width="128" height="48" alt="[Shark++ Software's Web Page Banner]" />
+<img src="image/images/banner.gif" width="128" height="48" alt="[Shark++ Software's Web Page Banner]" />
 	  
-[http://www.sharkpp.net/image/banner.gif][1]
+[http:/images/banner.gif][1]
 
 	  
-<span class="warning">なお、バナーサイズは、気まぐれで変わることがあります。</span> 
+<span class="warning">なお、バナーサイズは、気まぐれで変わることがあります。
+</span> 
+
+ [1]: image/images/banner.gif
 
 また、このサイトへのリンクをされた方は、メールを戴ければ、相互リンクをさせていただきたいと思います。
 	  
@@ -46,11 +50,10 @@ Windows XP/Vista 上の以下のブラウザで、デザインを確認してい
   
 
 
+ [2]: ma&#x69;l&#x74;o&#x3A;webmast&#x65;r&#x40;s&#x68;&#x61;rkp&#x70;.n&#x65;t
+
 ただし、以下の場合の相互リンクは諦めて下さい。 
 
   * 特定の個人を誹謗(ひぼう)・中傷するなど、反社会的な行為をしているサイト
   * 社会的に許されざる行為をしているサイト
   * その他、管理人が不適切と感じた内容があるサイト
-
- [1]: image/banner.gif
- [2]: ma&#x69;l&#x74;o&#x3A;webmast&#x65;r&#x40;s&#x68;&#x61;rkp&#x70;.n&#x65;t

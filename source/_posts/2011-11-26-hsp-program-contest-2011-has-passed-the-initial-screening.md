@@ -9,7 +9,12 @@ categories: [blog]
 
 [HSPプログラムコンテスト2011　一次審査結果][1]
 
+ [1]: http://hsp.tv/contest2011/cntst_result.html
+
 [作者ページ][2] [作品ページ][3]
+
+ [2]: http://hsp.tv/contest2011/entry.php?id=27&mode=author
+ [3]: http://hsp.tv/contest2011/entry.php?id=91
 
 自信があったほうが通過できなくて(´･ω･\`)ｼｮﾎﾞｰﾝ
 
@@ -23,9 +28,6 @@ categories: [blog]
 
 [HSPプログラムコンテスト統計][4] 更新しました。
 
-とりあえず、現状のみ更新。
+ [4]: /hsp/HSP-program-contest-summary
 
- [1]: http://hsp.tv/contest2011/cntst_result.html
- [2]: http://hsp.tv/contest2011/entry.php?id=27&mode=author
- [3]: http://hsp.tv/contest2011/entry.php?id=91
- [4]: http://www.sharkpp.net/hsp/HSP-program-contest-summary.html
+とりあえず、現状のみ更新。

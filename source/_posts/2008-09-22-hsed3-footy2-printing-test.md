@@ -11,7 +11,11 @@ HSPのスクリプトエディタの印刷機能の機能アップのための�
 
 [OpenHSP CHANGESET:174][1]
 
+ [1]: http://dev.onionsoft.net/trac/changeset/174
+
 [hsed3\_footy2\_20080922.zip][2]
+
+ [2]: /hsp/openhsp/hsed3_footy2_20080922.zip
 
 結構、エラーで落ちたり、行番号付いていなかったり、フォント指定できなかったり、折り返しが出来なかったり、と出来ない事だらけだったのでそんな印刷機能を直してみようと奮闘中。
 
@@ -27,6 +31,3 @@ HSPのスクリプトエディタの印刷機能の機能アップのための�
 ってぐらいを実装しようかともくろんでいます。
 
 ただ、色分け印刷はエディタ部分のFooty2に機能を追加した方が早いかもとか、段組はやる気あったらで、と最後の二つは実際にやるかは不明。
-
- [1]: http://dev.onionsoft.net/trac/changeset/174
- [2]: http://www.sharkpp.net/hsp/openhsp/hsed3_footy2_20080922.zip

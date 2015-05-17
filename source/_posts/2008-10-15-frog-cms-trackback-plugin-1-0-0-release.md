@@ -15,4 +15,4 @@ categories: [blog]
 
 ダウンロードは[トラックバックプラグイン][1]からです。
 
- [1]: http://www.sharkpp.net/php/frog-cms/trackback-plugin.html
+ [1]: /php/frog-cms/trackback-plugin

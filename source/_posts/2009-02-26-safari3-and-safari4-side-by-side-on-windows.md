@@ -9,6 +9,8 @@ categories: [blog]
 
 MacOS X ではSafariを共存させる方法として[Multi-Safari][1]見たいなものがあります。
 
+ [1]: http://michelf.com/projects/multi-safari/
+
 また、IEもIETesterなどがあるのですがWindowsのSafariには無いようです。
 
 でさくっと試してみたら多少おかしなところはありますが、ウェブページの見栄え確認ぐらいには使える方法を見つけたので書いてみます。
@@ -19,17 +21,24 @@ MacOS X ではSafariを共存させる方法として[Multi-Safari][1]見たい�
 
 User-Agent:**Mozilla/5.0 (Windows; U; Windows NT 5.2; ja-JP) AppleWebKit/525.28 (KHTML, like Gecko) Version/3.2.2 Safari/525.28.1**
 
-<a href="http://www.sharkpp.net/public/images/2009_0226_safari3_acid3.png" rel="lytebox" title="2009_0226_safari3_acid3"><img src="http://www.sharkpp.net/public/images/2009_0226_safari3_acid3_s.jpg" alt="2009_0226_safari3_acid3" /></a>
+[![2009_0226_safari3_acid3][2]][3]
+
+ [2]: /images/2009_0226_safari3_acid3_s.jpg
+ [3]: /images/2009_0226_safari3_acid3.png
 
 **Safari 4<sup>BATA</sup>**
 
 User-Agent:**Mozilla/5.0 (Windows; U; Windows NT 5.2; ja-JP) AppleWebKit/528.16 (KHTML, like Gecko) Version/4.0 Safari/528.16**
 
-<a href="http://www.sharkpp.net/public/images/2009_0226_safari4_acid3.png" rel="lytebox" title="2009_0226_safari4_acid3"><img src="http://www.sharkpp.net/public/images/2009_0226_safari4_acid3_s.jpg" alt="2009_0226_safari4_acid3" /></a>
+[![2009_0226_safari4_acid3][4]][5]
+
+ [4]: /images/2009_0226_safari4_acid3_s.jpg
+ [5]: /images/2009_0226_safari4_acid3.png
 
 #### そのまえに
 
-<span class="warning">Safari 3をメインとして使用している人は環境が壊れる可能性があるので今回の手段は使用しないほうが良い思います。At your own riskってことでよろしくです。</span>
+<span class="warning">Safari 3をメインとして使用している人は環境が壊れる可能性があるので今回の手段は使用しないほうが良い思います。At your own riskってことでよろしくです。
+</span>
 
 #### 準備
 
@@ -37,8 +46,11 @@ User-Agent:**Mozilla/5.0 (Windows; U; Windows NT 5.2; ja-JP) AppleWebKit/528.16 
 
 まず必要なものを準備
 
-  * Safari 4<sup>BATA</sup>のインストーラー([Download Safari][2])
-  * Safari 3のインストーラー([Safari 3.2.2 for Windows][3])
+  * Safari 4<sup>BATA</sup>のインストーラー([Download Safari][6])
+  * Safari 3のインストーラー([Safari 3.2.2 for Windows][7])
+
+ [6]: http://www.apple.com/safari/download/
+ [7]: http://support.apple.com/downloads/Safari_3_2_2_for_Windows
 
 をそれぞれ用意します。
 
@@ -66,7 +78,3 @@ User-Agent:**Mozilla/5.0 (Windows; U; Windows NT 5.2; ja-JP) AppleWebKit/528.16 
 #### ？？？
 
 しかし、安定版のダウンロードリンクがBETA版のダウンロードリンクよりも分かりにくいのは何か間違っている気がする...
-
- [1]: http://michelf.com/projects/multi-safari/
- [2]: http://www.apple.com/safari/download/
- [3]: http://support.apple.com/downloads/Safari_3_2_2_for_Windows

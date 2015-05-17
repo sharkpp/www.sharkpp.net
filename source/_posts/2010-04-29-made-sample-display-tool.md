@@ -7,22 +7,33 @@ categories: [blog]
 
 昔々に作ったサンプル表示スクリプトを公開してみる。
 
-<a href="/hsp/image/sample_SetSysColor.png"  rel="lytebox[a]" title="SysColorサンプル"><img src="/hsp/image/sample_SetSysColor.gif"  alt="SysColorサンプル" /></a>
+[![SysColorサンプル][1]][2]
 
-[DOWNLOAD][1]
-
-<a href="/hsp/image/sample_dirinfo.png"  rel="lytebox[a]" title="dirinfoサンプル"><img src="/hsp/image/sample_dirinfo.gif"  alt="dirinfoサンプル" /></a>
-
-[DOWNLOAD][2]
-
-<a href="/hsp/image/sample_Cursor.png"  rel="lytebox[a]" title="Cursorサンプル"><img src="/hsp/image/sample_Cursor.gif"  alt="Cursorサンプル" /></a>
+ [1]: /images/2010_0429_sample_SetSysColor.gif
+ [2]: /images/2010_0429_sample_SetSysColor.png
 
 [DOWNLOAD][3]
+
+ [3]: /hsp/source/sample_SetSysColor.hsp
+
+[![dirinfoサンプル][4]][5]
+
+ [4]: /images/2010_0429_sample_dirinfo.gif
+ [5]: /images/2010_0429_sample_dirinfo.png
+
+[DOWNLOAD][6]
+
+ [6]: /hsp/source/sample_dirinfo.hsp
+
+[![Cursorサンプル][7]][8]
+
+ [7]: /images/2010_0429_sample_Cursor.gif
+ [8]: /images/2010_0429_sample_Cursor.png
+
+[DOWNLOAD][9]
+
+ [9]: /hsp/source/sample_Cursor.hsp
 
 しかし、本来作っているものの製作状況が牛歩の歩みで困る。
 
 車輪の再開発もいい加減にしないとだめだなー
-
- [1]: /hsp/source/sample_SetSysColor.hsp
- [2]: /hsp/source/sample_dirinfo.hsp
- [3]: /hsp/source/sample_Cursor.hsp

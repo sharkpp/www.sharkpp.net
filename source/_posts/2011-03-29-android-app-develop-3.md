@@ -27,6 +27,9 @@ SharedPreferencesにバイナリを入れようとしちゃだめorz
   * [Android（開発）/ちょっとした設定の永続化 - 俺の基地][1]
   * [データ保存 - ソフトウェア技術ドキュメントを勝手に翻訳][2]
 
+ [1]: http://yakinikunotare.boo.jp/orebase/index.php?Android%A1%CA%B3%AB%C8%AF%A1%CB%2F%A4%C1%A4%E7%A4%C3%A4%C8%A4%B7%A4%BF%C0%DF%C4%EA%A4%CE%B1%CA%C2%B3%B2%BD
+ [2]: https://sites.google.com/a/techdoctranslator.com/jp/android/guide/data-storage
+
 
 
   
@@ -41,6 +44,11 @@ SharedPreferencesにバイナリを入れようとしちゃだめorz
   * [Android android.os.Parcelable / Parcel - adakoda][5]
   * [Parcelable | Android Developers][6]
 
+ [3]: http://y-anz-m.blogspot.com/2010/03/androidbundle.html
+ [4]: http://y-anz-m.blogspot.com/2010/03/androidparcelable.html
+ [5]: http://www.adakoda.com/adakoda/2009/01/android-androidosparcelable-parcel.html
+ [6]: http://developer.android.com/intl/ja/reference/android/os/Parcelable.html
+
 
 
   
@@ -49,6 +57,8 @@ SharedPreferencesにバイナリを入れようとしちゃだめorz
 ##### 低速なストレージからの入力はonRetainNoneConfigurationInstance()でキャッシュすると切り替えが早いよ！
 
   * [Androidで画面の向きを高速に変更 | textdrop][7]
+
+ [7]: http://www.textdrop.net/soft/android-faster-screen-orientation-change/
 
 
 
@@ -59,6 +69,8 @@ SharedPreferencesにバイナリを入れようとしちゃだめorz
 
   * [めざせアンドロイドマーケット: surfaceView でのフェード処理][8]
 
+ [8]: http://hajimori.blogspot.com/2011/02/surfaceview.html
+
 
 
   
@@ -67,6 +79,8 @@ SharedPreferencesにバイナリを入れようとしちゃだめorz
 ##### Activityを1つにして高速に画面遷移
 
   * [Y.A.M の 雑記帳: Android　複数画面 1 Activity で画面遷移][9]
+
+ [9]: http://y-anz-m.blogspot.com/2011/02/1-activity.html
 
 でもView指定しなおすと一瞬ブラックアウトになるのでActivityとViewが1つずつでその中で描画処理だけ分割みたいな感じでなんだかとんでもないことにナッテマス
 
@@ -81,6 +95,8 @@ SharedPreferencesにバイナリを入れようとしちゃだめorz
 
   * [JavaのString.split(”,”)は、split(”,”, -1)にしたほうがいい - $ cd ./.][10]
 
+ [10]: http://d.hatena.ne.jp/hackaddict/20070119
+
 
 
   
@@ -93,6 +109,9 @@ SharedPreferencesにバイナリを入れようとしちゃだめorz
   * [Javaリフレクションメモ(Hishidama’s Java Reflection Memo) - 引数ありコンストラクターを使ったインスタンス生成][11]
   * [Class.forName/newInstance - 文字列からインスタンスを生成 - Java入門][12]
 
+ [11]: http://www.ne.jp/asahi/hishidama/home/tech/java/reflection.html#h3_newInstanceA
+ [12]: http://www.syboos.jp/java/doc/create-object-instance-from-string.html
+
 
 
   
@@ -104,18 +123,6 @@ SharedPreferencesにバイナリを入れようとしちゃだめorz
   * [開発の基礎 | Android Developers][14]
   * [Avoiding memory leaks （超訳）][15]
 
- [1]: http://yakinikunotare.boo.jp/orebase/index.php?Android%A1%CA%B3%AB%C8%AF%A1%CB%2F%A4%C1%A4%E7%A4%C3%A4%C8%A4%B7%A4%BF%C0%DF%C4%EA%A4%CE%B1%CA%C2%B3%B2%BD
- [2]: https://sites.google.com/a/techdoctranslator.com/jp/android/guide/data-storage
- [3]: http://y-anz-m.blogspot.com/2010/03/androidbundle.html
- [4]: http://y-anz-m.blogspot.com/2010/03/androidparcelable.html
- [5]: http://www.adakoda.com/adakoda/2009/01/android-androidosparcelable-parcel.html
- [6]: http://developer.android.com/intl/ja/reference/android/os/Parcelable.html
- [7]: http://www.textdrop.net/soft/android-faster-screen-orientation-change/
- [8]: http://hajimori.blogspot.com/2011/02/surfaceview.html
- [9]: http://y-anz-m.blogspot.com/2011/02/1-activity.html
- [10]: http://d.hatena.ne.jp/hackaddict/20070119
- [11]: http://www.ne.jp/asahi/hishidama/home/tech/java/reflection.html#h3_newInstanceA
- [12]: http://www.syboos.jp/java/doc/create-object-instance-from-string.html
  [13]: http://source.android.com/source/code-style.html
  [14]: http://developer.android.com/intl/ja/guide/topics/fundamentals.html
  [15]: http://d.hatena.ne.jp/androidzaurus/20090121/

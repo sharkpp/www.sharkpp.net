@@ -9,6 +9,8 @@ categories: [blog]
 
 とりあえず、Visual StudioはExpress Editionで間に合っているので、[MSDN Operating Systems][1]に加入。
 
+ [1]: http://msdn.microsoft.com/ja-jp/subscriptions/dd179323.aspx
+
 Amazonでポチッたんだけど便利すぎだなー
 
 
@@ -43,5 +45,3 @@ XP/Vista/7で元は取れるからまあいいけど少しショック
 
 
 なぜかWindows 3.1もあったのでそのうち試してみようかなー
-
- [1]: http://msdn.microsoft.com/ja-jp/subscriptions/dd179323.aspx

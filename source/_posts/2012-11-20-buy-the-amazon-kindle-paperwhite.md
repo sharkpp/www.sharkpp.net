@@ -9,6 +9,15 @@ categories: [blog]
 
 以下からは開封の儀をお届けします。
 
-<a href="/public/images/20121119_kindle01_omote.jpg" rel="lytebox[x2010_0725]" title="kindle 外箱表"    ><img src="/public/images/20121119_kindle01_omote.png" alt="kindle 外箱表" /></a> <a href="/public/images/20121119_kindle02_ura.jpg"   rel="lytebox[x2010_0725]" title="kindle 外箱裏"    ><img src="/public/images/20121119_kindle02_ura.png"   alt="kindle 外箱裏" /></a> <a href="/public/images/20121119_kindle03_open.jpg"  rel="lytebox[x2010_0725]" title="kindle 外箱ご開帳"><img src="/public/images/20121119_kindle03_open.png"  alt="kindle 外箱ご開帳" /></a> <a href="/public/images/20121119_kindle04.jpg"       rel="lytebox[x2010_0725]" title="kindle"           ><img src="/public/images/20121119_kindle04.png"       alt="kindle" /></a>
+[![kindle 外箱表][1]][2] [![kindle 外箱裏][3]][4] [![kindle 外箱ご開帳][5]][6] [![kindle][7]][8]
+
+ [1]: /images/2012_1119_kindle01_omote.png
+ [2]: /images/2012_1119_kindle01_omote.jpg
+ [3]: /images/2012_1119_kindle02_ura.png
+ [4]: /images/2012_1119_kindle02_ura.jpg
+ [5]: /images/2012_1119_kindle03_open.png
+ [6]: /images/2012_1119_kindle03_open.jpg
+ [7]: /images/2012_1119_kindle04.png
+ [8]: /images/2012_1119_kindle04.jpg
 
 とりあえず、カバーとかも注文したしぼちぼち触っていこうかと思っているところ。
