@@ -1,6 +1,7 @@
 ---
 title: "rhaco2ってどうやって使うの？"
-tags: [rhaco rhaco2]
+date: 2009-02-01 17:56:00
+tags: [rhaco, rhaco2]
 categories: [blog]
 
 ---

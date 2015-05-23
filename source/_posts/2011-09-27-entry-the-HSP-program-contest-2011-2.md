@@ -1,6 +1,7 @@
 ---
 title: "HSPプログラムコンテスト2011へ応募(その２)"
-tags: [hsp, HSPプログラムコンテスト]
+date: 2011-09-27 00:38:00
+tags: [HSP, HSPプログラムコンテスト]
 categories: [blog]
 
 ---

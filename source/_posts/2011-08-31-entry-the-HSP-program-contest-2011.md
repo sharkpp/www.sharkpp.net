@@ -1,6 +1,7 @@
 ---
 title: "昨年に引き続き今年もHSPプログラムコンテスト2011へ応募しました"
-tags: [hsp, HSPプログラムコンテスト]
+date: 2011-08-31 23:27:00
+tags: [HSP, HSPプログラムコンテスト]
 categories: [blog]
 
 ---

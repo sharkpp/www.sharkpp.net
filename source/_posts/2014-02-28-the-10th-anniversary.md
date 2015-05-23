@@ -1,6 +1,7 @@
 ---
 title: "ほむぺ開設から10年が経ちました"
-tags: [hsp, 雑記]
+date: 2014-02-28 10:21:00
+tags: [HSP, 雑記]
 categories: [blog]
 
 ---

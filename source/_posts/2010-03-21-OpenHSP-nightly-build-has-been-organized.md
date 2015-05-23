@@ -1,6 +1,7 @@
 ---
 title: "OpenHSPナイトリービルドを適当に整理しました"
-tags: [develop, hsp, OpenHSP, 雑記]
+date: 2010-03-21 00:32:00
+tags: [Develop, HSP, OpenHSP, 雑記]
 categories: [blog]
 
 ---

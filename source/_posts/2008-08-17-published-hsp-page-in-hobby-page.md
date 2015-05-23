@@ -1,6 +1,7 @@
 ---
 title: "趣味のページにHSPを追加しました"
-tags: [site hsp]
+date: 2008-08-17 01:55:00
+tags: [Site Hsp]
 categories: [blog]
 
 ---

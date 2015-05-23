@@ -1,5 +1,6 @@
 ---
 title: "FuelPHP 勉強会 大須 vol.3 に参加しました"
+date: 2013-02-17 20:09:00
 tags: [php, FuelPHP, 勉強会]
 categories: [blog]
 

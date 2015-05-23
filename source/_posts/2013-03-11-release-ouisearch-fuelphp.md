@@ -1,6 +1,7 @@
 ---
 title: "OUIを検索するFuelPHP用のパッケージを作ったよ"
-tags: [php, develop, FuelPHP]
+date: 2013-03-11 01:57:00
+tags: [php, Develop, FuelPHP]
 categories: [blog]
 
 ---

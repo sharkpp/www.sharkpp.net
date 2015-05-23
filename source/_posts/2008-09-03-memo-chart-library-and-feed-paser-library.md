@@ -1,6 +1,7 @@
 ---
 title: "グラフ描画ライブラリとFeedパーサーライブラリ"
-tags: [php, memo, chart, feed]
+date: 2008-09-03 00:46:00
+tags: [php, Memo, Chart, Feed]
 categories: [blog]
 
 ---

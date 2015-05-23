@@ -1,5 +1,6 @@
 ---
 title: "Mac OS X 10.8 に Ruby 1.9.3 をインストールする方法"
+date: 2014-04-15 16:18:00
 tags: [雑記, Mac, 環境構築, Ruby]
 categories: [blog]
 

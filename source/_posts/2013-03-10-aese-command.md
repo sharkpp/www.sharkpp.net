@@ -1,6 +1,7 @@
 ---
 title: "ANSI Escape Sequences Emulator作ったよ"
-tags: [develop, C++]
+date: 2013-03-10 00:30:00
+tags: [Develop, C++]
 categories: [blog]
 
 ---

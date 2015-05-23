@@ -1,6 +1,7 @@
 ---
 title: "HSPプログラムコンテスト2011一次審査通過しました"
-tags: [hsp, HSPプログラムコンテスト, 雑記]
+date: 2011-11-26 00:53:00
+tags: [HSP, HSPプログラムコンテスト, 雑記]
 categories: [blog]
 
 ---

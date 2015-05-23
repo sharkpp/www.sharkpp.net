@@ -1,5 +1,6 @@
 ---
 title: "Safari 3とSafari 4をWindowsで共存させる方法"
+date: 2009-02-26 01:40:00
 tags: [Safari ブラウザ]
 categories: [blog]
 

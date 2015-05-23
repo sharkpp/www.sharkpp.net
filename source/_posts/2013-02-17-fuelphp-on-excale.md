@@ -1,5 +1,6 @@
 ---
 title: "eXcaleでFuelPHPをpublicサブディレクトリなしで動かしてみた(追記あり)"
+date: 2013-02-17 23:30:00
 tags: [php, FuelPHP]
 categories: [blog]
 

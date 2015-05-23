@@ -1,6 +1,7 @@
 ---
 title: "Frog CMSにトラックバックプラグインを実装中 #2"
-tags: [php, frog, trackback]
+date: 2008-09-03 00:39:00
+tags: [php, Frog CMS, Trackback]
 categories: [blog]
 
 ---

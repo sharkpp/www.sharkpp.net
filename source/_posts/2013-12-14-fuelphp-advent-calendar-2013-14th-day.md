@@ -1,5 +1,6 @@
 ---
 title: "Request_Curlにまつわるエトセトラ"
+date: 2013-12-14 22:26:00
 tags: [php, FuelPHP]
 categories: [blog]
 

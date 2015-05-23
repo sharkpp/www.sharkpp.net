@@ -1,6 +1,7 @@
 ---
 title: "トラックバックのテスト"
-tags: [php, frog, trackback]
+date: 2008-09-01 00:24:00
+tags: [php, Frog CMS, Trackback]
 categories: [blog]
 
 ---

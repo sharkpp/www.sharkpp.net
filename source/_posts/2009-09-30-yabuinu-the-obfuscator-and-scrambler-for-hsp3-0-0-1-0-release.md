@@ -1,6 +1,7 @@
 ---
 title: "HSP3用難読化＆独自スクランブル ツール ”yabuinu” を公開しました"
-tags: [develop, hsp, hsp3, リリース]
+date: 2009-09-30 00:14:00
+tags: [Develop, HSP, HSP3, リリース]
 categories: [blog]
 
 ---

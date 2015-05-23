@@ -1,6 +1,7 @@
 ---
 title: "update tumblr popup editor 0.2.0"
-tags: [greasemonkey, Tumblr]
+date: 2010-02-28 22:06:00
+tags: [Greasemonkey, Tumblr]
 categories: [blog]
 
 ---

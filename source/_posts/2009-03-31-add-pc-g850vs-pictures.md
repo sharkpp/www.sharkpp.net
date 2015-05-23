@@ -1,5 +1,6 @@
 ---
 title: "PC-G850VSの写真を追加"
+date: 2009-03-31 02:18:00
 categories: [blog]
 
 ---

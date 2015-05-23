@@ -1,6 +1,7 @@
 ---
 title: "Opscode Community に自作の Cookbook を登録してみた"
-tags: [chef, Cookbook]
+date: 2014-06-30 00:20:00
+tags: [Chef, Cookbook]
 categories: [blog]
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Frog CMSのトラックバックプラグインは取り敢えず完成"
-tags: [trackback, plugin, Frog CMS]
+date: 2008-09-07 23:17:00
+tags: [Trackback, Plugin, Frog CMS]
 categories: [blog]
 
 ---

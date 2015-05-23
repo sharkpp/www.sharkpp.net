@@ -1,5 +1,6 @@
 ---
 title: "HSPっぽいアイコン作ってみた"
+date: 2010-01-17 21:56:00
 categories: [blog]
 
 ---

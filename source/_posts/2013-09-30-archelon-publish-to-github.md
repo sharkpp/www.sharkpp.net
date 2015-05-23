@@ -1,5 +1,6 @@
 ---
 title: "Archelon をGitHubに公開しました"
+date: 2013-09-30 00:14:00
 tags: [php, FuelPHP]
 categories: [blog]
 

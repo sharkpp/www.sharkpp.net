@@ -1,6 +1,7 @@
 ---
 title: "EdMaxメールボックスtoUnixメールボックス形式コンバータ開発中..."
-tags: [develop, 雑記]
+date: 2010-09-14 06:59:00
+tags: [Develop, 雑記]
 categories: [blog]
 
 ---

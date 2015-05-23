@@ -1,5 +1,6 @@
 ---
 title: "SqaleでFuelPHPを動かしてみました"
+date: 2013-03-17 01:34:00
 tags: [php, FuelPHP]
 categories: [blog]
 

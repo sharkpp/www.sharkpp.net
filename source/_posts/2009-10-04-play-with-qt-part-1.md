@@ -1,5 +1,6 @@
 ---
 title: "QtをVisual C++ 2008 Express Editionで使えるようにしてみる: Qtで遊ぶ 其の１"
+date: 2009-10-04 16:52:00
 tags: [C++, Qt, Qtで遊ぶ]
 categories: [blog]
 

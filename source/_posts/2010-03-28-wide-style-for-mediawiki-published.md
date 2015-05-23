@@ -1,6 +1,7 @@
 ---
 title: "Wide style for mediawiki 公開"
-tags: [greasemonkey]
+date: 2010-03-28 16:48:00
+tags: [Greasemonkey]
 categories: [blog]
 
 ---

@@ -1,5 +1,6 @@
 ---
 title: "PuTTYdummy改めPuTTY command line interface proxy for TeraTerm ver.0.1.0.1 をリリースしました"
+date: 2009-07-25 16:47:00
 categories: [blog]
 
 ---

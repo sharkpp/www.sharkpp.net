@@ -1,6 +1,7 @@
 ---
 title: "Titanium Mobileのメモ(その１)"
-tags: [develop, Android, Titanium Mobile]
+date: 2012-09-30 23:05:00
+tags: [Develop, Android, Titanium Mobile]
 categories: [blog]
 
 ---

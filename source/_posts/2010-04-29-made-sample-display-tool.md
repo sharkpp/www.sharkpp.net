@@ -1,6 +1,7 @@
 ---
 title: "サンプル表示プログラムを作ってみました"
-tags: [develop, hsp]
+date: 2010-04-29 10:48:00
+tags: [Develop, HSP]
 categories: [blog]
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Boost.勉強会 #11 東京 に参加しました"
-tags: [C++, boost, 勉強会]
+date: 2013-06-01 22:47:00
+tags: [C++, Boost, 勉強会]
 categories: [blog]
 
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Frog CMS関連のツール類を作成中"
+date: 2009-05-03 10:16:00
 tags: [Frog CMS]
 categories: [blog]
 

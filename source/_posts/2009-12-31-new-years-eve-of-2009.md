@@ -1,6 +1,7 @@
 ---
 title: "大晦日@2009"
-tags: [雑記]
+date: 2009-12-31 01:13:00
+tags: [雑記, 大晦日]
 categories: [blog]
 
 ---

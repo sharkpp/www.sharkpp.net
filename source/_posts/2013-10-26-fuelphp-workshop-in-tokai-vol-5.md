@@ -1,5 +1,6 @@
 ---
 title: "FuelPHP 勉強会 東海 vol.5 に参加しました"
+date: 2013-10-26 20:52:00
 tags: [php, FuelPHP, 勉強会]
 categories: [blog]
 

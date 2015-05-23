@@ -1,5 +1,6 @@
 ---
 title: "Microsoft Visual C++ 2008 Express Edition で64ビット版のプログラムを作る方法"
+date: 2009-04-26 18:48:00
 tags: [VC++, x64]
 categories: [blog]
 

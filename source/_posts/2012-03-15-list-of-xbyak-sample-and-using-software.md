@@ -1,6 +1,7 @@
 ---
 title: "Xbyakのサンプルや使っているソフトなどのまとめ"
-tags: [develop, C++, Xbyak]
+date: 2012-03-15 23:31:00
+tags: [Develop, C++, Xbyak]
 categories: [blog]
 
 ---

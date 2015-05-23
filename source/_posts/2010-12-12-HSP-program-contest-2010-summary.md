@@ -1,6 +1,7 @@
 ---
 title: "HSPプログラムコンテスト2010まとめなどなど"
-tags: [hsp, HSPプログラムコンテスト]
+date: 2010-12-12 22:22:00
+tags: [HSP, HSPプログラムコンテスト]
 categories: [blog]
 
 ---

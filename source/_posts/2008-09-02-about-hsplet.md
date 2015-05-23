@@ -1,6 +1,7 @@
 ---
 title: "HSPLetについて"
-tags: [hsp, HSPLet]
+date: 2008-09-02 01:35:00
+tags: [HSP, HSPlet]
 categories: [blog]
 
 ---

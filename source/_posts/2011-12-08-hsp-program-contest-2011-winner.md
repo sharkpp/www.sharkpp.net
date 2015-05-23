@@ -1,6 +1,7 @@
 ---
 title: "HSPプログラムコンテスト2011入賞しました"
-tags: [hsp, HSPプログラムコンテスト, 雑記]
+date: 2011-12-08 23:00:00
+tags: [HSP, HSPプログラムコンテスト, 雑記]
 categories: [blog]
 
 ---

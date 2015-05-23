@@ -1,6 +1,7 @@
 ---
 title: "Tumblr. extend shortcut key 作りました"
-tags: [develop, JavaScript, UserScript]
+date: 2014-11-23 17:51:00
+tags: [Develop, Javascript, Userscript]
 categories: [blog]
 
 ---

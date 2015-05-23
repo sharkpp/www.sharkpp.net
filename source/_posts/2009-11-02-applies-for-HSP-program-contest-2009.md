@@ -1,6 +1,7 @@
 ---
 title: "HSPプログラムコンテスト2009へ応募しました"
-tags: [hsp, HSPプログラムコンテスト]
+date: 2009-11-02 00:56:00
+tags: [HSP, HSPプログラムコンテスト]
 categories: [blog]
 
 ---

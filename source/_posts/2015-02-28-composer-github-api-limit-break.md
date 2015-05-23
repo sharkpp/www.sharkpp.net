@@ -1,6 +1,7 @@
 ---
 title: "composer で github.com の API 制限を突破せよ"
-tags: [php, develop]
+date: 2015-02-28 23:38:00
+tags: [php, Develop]
 categories: [blog]
 
 ---

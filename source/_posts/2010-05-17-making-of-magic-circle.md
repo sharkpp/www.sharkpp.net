@@ -1,5 +1,6 @@
 ---
 title: "魔法陣を作ってみた"
+date: 2010-05-17 00:52:00
 tags: [雑記, 素材]
 categories: [blog]
 

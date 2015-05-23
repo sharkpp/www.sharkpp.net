@@ -50,6 +50,16 @@ function entities2text($text)
 			}, $text);
 }
 
+function ucwords_($string) 
+{ 
+	return
+		mb_convert_encoding(
+			ucwords(
+				mb_convert_encoding($string, 'UTF-7','UTF-8')
+			),
+			'UTF-8', 'UTF-7'); 
+} 
+
 $cp = array();
 
 $base_path = 'html';
@@ -59,15 +69,54 @@ foreach ($files as $path) {
 		continue;
 
 	$dpath = preg_replace('!^[^/]+/(.+)\..+$!', 'markdown/\1.md', $path);
+	$dpath = str_replace('.html.md', '.md', $dpath);
+	$dpath = dirname($dpath) .'/'. str_replace('_', '-', basename($dpath));
 	$curpath = preg_replace('!^[^/]+/(.+)\..+$!', '\1.html', $path);
 	$html = file_get_contents($path);
 
+	// タグ取得
 	$tags = array();
 	if (preg_match('|<!-- tags: \[(.+?)\] -->|', $html, $m)) {
-		$tags = explode(',', $m[1]);
+		$tags = explode(',', str_replace('rhaco rhaco2', 'Rhaco,Rhaco2', $m[1]));
 		foreach ($tags as & $k)
 			$k = trim($k);
 	}
+	foreach ($tags as & $k) {
+		$k = ucwords_(mb_strtolower($k, 'UTF-8'));
+		$k = preg_replace('/^php$/i', 'php', $k);
+		$k = preg_replace('/^fuelphp$/i', 'FuelPHP', $k);
+		$k = preg_replace('/^OpenHSP$/i', 'OpenHSP', $k);
+		$k = preg_replace('/^Hsp(.*)$/i', 'HSP$1', $k);
+		$k = preg_replace('/^Hot Soup Processor$/i', 'HSP', $k);
+		$k = preg_replace('/^qtquick$/i', 'QtQuick', $k);
+		$k = preg_replace('/^qml$/i', 'QML', $k);
+		$k = preg_replace('/vmware/i', 'WMware', $k);
+		$k = preg_replace('/^x64$/i', 'x64', $k);
+		$k = preg_replace('/^Vc\+\+$/i', 'VC++', $k);
+		$k = preg_replace('/^g\+\+$/i', 'g++', $k);
+		$k = preg_replace('/^Cc1plus$/i', 'cc1plus', $k);
+		$k = preg_replace('/^git$/i', 'git', $k);
+		$k = preg_replace('/Frog/i', 'Frog', $k);
+		$k = preg_replace('/^Frog$/i', 'Frog CMS', $k);
+		$k = preg_replace('/cms/i', 'CMS', $k);
+		$k = preg_replace('/^QNAP$/i', 'QNAP', $k);
+		$k = preg_replace('/^NAS$/i', 'NAS', $k);
+		$k = preg_replace('/^pcbsoft$/i', 'pcbsoft', $k);
+		$k = preg_replace('/^pcbnet(.*)$/i', 'pcbnet$1', $k);
+		$k = preg_replace('/^HSPsocka$/i', 'hspsockA', $k);
+		$k = preg_replace('/^github$/i', 'GitHub', $k);
+		$k = preg_replace('/^TeraTerm$/i', 'TeraTerm', $k);
+		$k = preg_replace('/^Winscp$/i', 'WinSCP', $k);
+		$k = preg_replace('/^Hsed3$/i', 'hsed3', $k);
+		$k = preg_replace('/^rhaco(.*)$/i', 'rhaco$1', $k);
+	}
+	if (false !== strpos($dpath, 'happy-new-year-'))
+		$tags[] = ucwords_(strtolower('HAPPY NEW YEAR'));
+	if (false !== strpos($dpath, 'new-years-eve'))
+		$tags[] = '大晦日';
+	if (array_search('Greasemonkey', $tags))
+		$tags[] = 'Userscript';
+	$tags = array_unique($tags);
 
 	$categories = array();
 	$tmp = explode('/', $path);
@@ -77,12 +126,19 @@ foreach ($files as $path) {
 	}
 
 	// 公開日付を取得
-/*	if (preg_match('!<p class="info".+?>([0-9]+)年([0-9]+)月([0-9]+)日!', $html, $m))
-	{
-		if (!preg_match('!/blog/!', $dpath)) {
-			$dpath = sprintf('markdown/blog/%s-%s-%s-%s', $m[1], $m[2], $m[3], basename($dpath));
+	$pub_date = '';
+	if (preg_match('!-- published: (.+?) --!', $html, $m)) {
+		$pub_date = $m[1].':00';
+		// URLと公開日が違ったら公開日にあわせる
+		$tmp = str_replace('-', '/', substr($pub_date, 0, 10));
+		if (preg_match('!(.+?/)([0-9]{4}/[0-9]{2}/[0-9]{2})(/.+)$!', $dpath, $m) &&
+			$tmp != $m[2]) {
+			$dpath = $m[1].$tmp.$m[3];
 		}
-	}*/
+//		if (!preg_match('!/blog/!', $dpath)) {
+//			$pub_date = sprintf('markdown/blog/%s-%s-%s-%s', $m[1], $m[2], $m[3], basename($dpath));
+//		}
+	}
 
 	// コンテンツの中身が取り出せるか？
 	if (!preg_match('|<div id="contents">(.+)<p class="info" style="margin-top: 1em">.+' .
@@ -164,6 +220,7 @@ foreach ($files as $path) {
 					'---' . PHP_EOL .
 					(false !== strpos($dpath, 'markdown/blog/') ? '' : 'layout: default' . PHP_EOL) .
 					'title: "$1"' . PHP_EOL .
+					(empty($pub_date) ? '' : 'date: '.$pub_date . PHP_EOL) .
 					(empty($tags) ? '' : 'tags: [' . implode(', ', $tags) . ']' . PHP_EOL) .
 					(empty($categories) ? '' : 'categories: [' . implode(', ', $categories) . ']' . PHP_EOL) .
 					PHP_EOL .

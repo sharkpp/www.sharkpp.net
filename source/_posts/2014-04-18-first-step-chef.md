@@ -1,6 +1,7 @@
 ---
 title: "はじめてのChef"
-tags: [chef]
+date: 2014-04-18 23:15:00
+tags: [Chef]
 categories: [blog]
 
 ---

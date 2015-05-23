@@ -1,5 +1,6 @@
 ---
 title: "色々なメモ: Qtで遊ぶ 其の２"
+date: 2009-10-04 17:24:00
 tags: [C++, Qt, Qtで遊ぶ]
 categories: [blog]
 

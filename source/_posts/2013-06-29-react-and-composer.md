@@ -1,5 +1,6 @@
 ---
 title: "React楽しい＆composerは怖くない"
+date: 2013-06-29 20:28:00
 tags: [php]
 categories: [blog]
 

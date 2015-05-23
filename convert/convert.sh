@@ -40,11 +40,11 @@ cp -pf $(dirname $0)/markdown/about.md $(dirname $0)/../source/
 find $(dirname $0)/../source/images -maxdepth 1 -name \*.png -delete -or -name \*.jpg -delete -or -name \*.gif -delete
 cp -pf $(dirname $0)/markdown/images/* $(dirname $0)/../source/images/
 
-rm -rf $(dirname $0)/../source/graffiti/*
+find $(dirname $0)/../source/graffiti -type f -maxdepth 1 -delete
 mkdir -p $(dirname $0)/../source/graffiti
 for I in $(find $(dirname $0)/html/gallery/scenery -name \*.jpg -and -not -name \*s.jpg) ; do cp -pf $I $(dirname $0)/../source/graffiti/scenery_$(basename $I) ; done
 for I in $(find $(dirname $0)/html/gallery/graffiti -type f -not -name \*128.png) ; do cp -pf $I $(dirname $0)/../source/graffiti/$(basename $I); done
 mkdir -p $(dirname $0)/../source/graffiti/t
-#for I in $(ls $(dirname $0)/../source/graffiti/*.*) ; do convert -resize 320x -colors 65 -quality 100 -verbose $I $(dirname $I)/t/$(basename $(basename $I .jpg) .png).png ; done
-for I in $(ls ./../source/graffiti/{*.png,*.jpg}) ; do convert -resize 200x $I $(dirname $I)/t/$(basename $(basename $(basename $(basename $I .jpg) _512x512.png) _1024x1024.png) .png).png ; done
+#↓毎回内容が変わるっポイ
+#for I in $(ls ./../source/graffiti/{*.png,*.jpg}) ; do convert -resize 200x $I $(dirname $I)/t/$(basename $(basename $(basename $(basename $I .jpg) _512x512.png) _1024x1024.png) .png).png ; done
 

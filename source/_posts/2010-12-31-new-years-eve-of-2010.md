@@ -1,5 +1,7 @@
 ---
 title: "大晦日@2010"
+date: 2010-12-31 02:40:00
+tags: [大晦日]
 categories: [blog]
 
 ---

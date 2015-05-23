@@ -1,5 +1,6 @@
 ---
 title: "FuelPHPをphar化してポータブルに！"
+date: 2013-12-01 14:57:00
 tags: [php, FuelPHP, Advent Calendar]
 categories: [blog]
 

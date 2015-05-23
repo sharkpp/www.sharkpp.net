@@ -1,6 +1,7 @@
 ---
 title: "初めてのForkとFuelPHP 1.6 翻訳ウィーク参加"
-tags: [php, github, FuelPHP, 翻訳]
+date: 2013-06-01 00:24:00
+tags: [php, GitHub, FuelPHP, 翻訳]
 categories: [blog]
 
 ---
