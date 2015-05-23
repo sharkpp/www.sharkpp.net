@@ -44,24 +44,66 @@ article.full-contents {
     }
 }
 
+/*********************************************
+ * ギャラーリーページ用
+ *********************************************/
+
 .tiles-wrap {
     position: relative;
     margin: 10px 0;
     padding: 0;
     list-style-type: none;
-    display: none;
 }
+
 .tiles-wrap .thumbnail {
-    width: 170px;
     float: left;
     display: block;
 }
+
 .tiles-wrap .thumbnail .caption {
     padding-top: 0;
     padding-bottom: 0;
 }
+
 .tiles-wrap .caption h3,
 .tiles-wrap .caption p {
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+
+.contenthover {
+    padding: 5px;
+    display: none;
+}
+
+.contenthover,
+.contenthover h3,
+.contenthover a {
+    color:#fff;
+}
+
+.contenthover h3,
+.contenthover p {
+    margin:0 0 10px 0;
+    line-height:1.4em;
+    padding:0;
+}
+
+.contenthover .ch_normal {
+    width: 100%;
+}
+
+.toolbar {
+}
+
+.toolbar .btn {
+    background: #000;
+    border-color: #666;
+    color: #999;
+}
+
+.toolbar .btn:hover {
+    border-color: #fff;
+    color: #fff;
 }

@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="512"
+   height="512"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.0 r9654"
+   sodipodi:docname="magic_circle3.svg"
+   inkscape:export-filename="magic_circle3_512x512.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <title
+     id="title3185">Magic circle no.3</title>
+  <defs
+     id="defs4">
+    <filter
+       inkscape:collect="always"
+       id="filter5978"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="15.936235"
+         id="feGaussianBlur5980" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter5982"
+       x="-0.20422779"
+       width="1.4084556"
+       y="-0.20422779"
+       height="1.4084556"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="15.936235"
+         id="feGaussianBlur5984" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter5986"
+       x="-0.25553286"
+       width="1.5110657"
+       y="-0.25553286"
+       height="1.5110657"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="15.936235"
+         id="feGaussianBlur5988" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter5990"
+       x="-0.17016058"
+       width="1.3403212"
+       y="-0.17016058"
+       height="1.3403212"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="15.936235"
+         id="feGaussianBlur5992" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter5994"
+       x="-0.26571226"
+       width="1.5314245"
+       y="-0.26571226"
+       height="1.5314245"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="15.936235"
+         id="feGaussianBlur5996" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter5998"
+       x="-0.59047163"
+       width="2.1809433"
+       y="-0.59047163"
+       height="2.1809433"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="15.936235"
+         id="feGaussianBlur6000" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter6002"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="15.936235"
+         id="feGaussianBlur6004" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter6006"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="15.936235"
+         id="feGaussianBlur6008" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter6010"
+       x="-1274898.8"
+       width="2549798.5"
+       y="-0.40049407"
+       height="1.8009881"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="15.936235"
+         id="feGaussianBlur6012" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter6014"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="15.936235"
+         id="feGaussianBlur6016" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter6018"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="15.180016"
+         id="feGaussianBlur6020" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter6022"
+       x="-0.40626916"
+       width="1.8125383"
+       y="-0.20358102"
+       height="1.407162"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="15.936235"
+         id="feGaussianBlur6024" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter6026"
+       x="-0.5070951"
+       width="2.0141902"
+       y="-0.25541183"
+       height="1.5108237"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="15.936235"
+         id="feGaussianBlur6028" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter6034"
+       x="-0.49288812"
+       width="1.9857762"
+       y="-0.22293948"
+       height="1.4458789"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="29.015187"
+         id="feGaussianBlur6036" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter6042"
+       x="-0.55537283"
+       width="2.1107457"
+       y="-0.31178516"
+       height="1.6235703"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="38.600297"
+         id="feGaussianBlur6044" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter6046"
+       x="-0.48674318"
+       width="1.9734863"
+       y="-0.34914783"
+       height="1.6982957"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="46.713677"
+         id="feGaussianBlur6048" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter6050"
+       x="-0.34914783"
+       width="1.6982957"
+       y="-0.48674318"
+       height="1.9734863"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="46.713677"
+         id="feGaussianBlur6052" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter6054"
+       x="-0.30598143"
+       width="1.6119629"
+       y="-0.40381283"
+       height="1.8076257"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="38.754693"
+         id="feGaussianBlur6056" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter6058"
+       x="-0.41105461"
+       width="1.8221092"
+       y="-0.31146875"
+       height="1.6229374"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="39.449699"
+         id="feGaussianBlur6060" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter6062"
+       x="-0.21513264"
+       width="1.4302653"
+       y="-0.23931912"
+       height="1.4786382"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="14.038227"
+         id="feGaussianBlur6064" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter6066"
+       x="-0.44170755"
+       width="1.8834151"
+       y="-0.36347973"
+       height="1.7269595"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="12.452705"
+         id="feGaussianBlur6068" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.45410156"
+     inkscape:cx="-42.543013"
+     inkscape:cy="567.43112"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer2"
+     showgrid="false"
+     inkscape:window-width="1600"
+     inkscape:window-height="1144"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Magic circle no.3</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>sharkpp</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>sharkpp</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:identifier>http://www.sharkpp.net/gallery/graffiti/magic_circle3.svg</dc:identifier>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/3.0/" />
+        <dc:date>2011-04-16</dc:date>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by/3.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="back"
+     style="display:inline">
+    <rect
+       style="color:#000000;fill:#000000;fill-opacity:1;stroke:none;stroke-width:5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect5344"
+       width="512"
+       height="512"
+       x="0"
+       y="2.6700864e-014" />
+  </g>
+  <g
+     style="display:inline"
+     transform="translate(0,-540.36218)"
+     id="g5346"
+     inkscape:groupmode="layer"
+     inkscape:label="magic circle glow"
+     sodipodi:insensitive="true">
+    <path
+       inkscape:connector-curvature="0"
+       id="path5348"
+       d="m -885.90564,-521.74567 281.42511,0 0,281.42511 -281.42511,0 z"
+       style="color:#000000;fill:none;stroke:#31abff;stroke-width:5;stroke-miterlimit:4;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter5978);enable-background:accumulate"
+       transform="matrix(-0.70710678,-0.70710678,0.70710678,-0.70710678,0,0)" />
+    <rect
+       transform="scale(-1,-1)"
+       y="-890.3092"
+       x="-362.03723"
+       height="187.276"
+       width="187.276"
+       id="rect5350"
+       style="color:#000000;fill:none;stroke:#31abff;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter5982);enable-background:accumulate" />
+    <rect
+       transform="scale(-1,-1)"
+       y="-870.95526"
+       x="-283.99954"
+       height="149.67532"
+       width="149.67532"
+       id="rect5352"
+       style="color:#000000;fill:none;stroke:#31abff;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter5986);enable-background:accumulate" />
+    <rect
+       transform="matrix(-0.70710678,0.70710678,-0.70710678,-0.70710678,0,0)"
+       y="-818.49377"
+       x="308.16943"
+       height="158.93626"
+       width="158.93626"
+       id="rect5354"
+       style="color:#000000;fill:none;stroke:#31abff;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter5990);enable-background:accumulate" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path5356"
+       d="m 335.57227,-790.30804 101.78186,0 0,101.78186 -101.78186,0 z"
+       style="color:#000000;fill:none;stroke:#31abff;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter5994);enable-background:accumulate"
+       transform="matrix(-0.70710678,0.70710678,-0.70710678,-0.70710678,0,0)" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path5358"
+       d="m 363.758,-762.12231 45.80184,0 0,45.80184 -45.80184,0 z"
+       style="color:#000000;fill:none;stroke:#31abff;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter5998);enable-background:accumulate"
+       transform="matrix(-0.70710678,0.70710678,-0.70710678,-0.70710678,0,0)" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path5360"
+       d="m 216.91251,796.11764 -39.30703,0"
+       style="fill:none;stroke:#31abff;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter6002)" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path5362"
+       d="m 257.6036,994.03686 0,-92.73138"
+       style="fill:none;stroke:#31abff;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter6006)" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path5364"
+       d="m 258.15723,693.28265 -3e-5,-95.49945"
+       style="fill:none;stroke:#31abff;stroke-width:5.00000048;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter6010)" />
+    <rect
+       transform="matrix(-0.70710678,-0.70710678,0.70710678,-0.70710678,0,0)"
+       y="-547.58258"
+       x="-911.74255"
+       height="333.09897"
+       width="333.09897"
+       id="rect5366"
+       style="color:#000000;fill:none;stroke:#31abff;stroke-width:4.99999952;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter6014);enable-background:accumulate" />
+    <text
+       transform="matrix(1.0498167,0,0,1.0498167,-12.801001,-39.617638)"
+       sodipodi:linespacing="125%"
+       id="text5368"
+       style="font-size:15.24075603px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#31abff;fill-opacity:1;stroke:none;filter:url(#filter6018);font-family:Rune;-inkscape-font-specification:Rune"
+       xml:space="preserve"><textPath
+         id="textPath5370"
+         xlink:href="#rect2985">Du must verstehn!Aus Eins mach Zehn,Und Zwei las gehn,Und Drei mach gleich,So bist du reich.Verlier die Vier!Aus Funf und Sechs, So sagt die Hex, Mach Sieben und Acht, So ist's vollbracht: Und Neun ist Eins, Und Zehn ist keins. Das ist das Hexen-Einmaleins!</textPath></text>
+    <path
+       transform="translate(0,540.36218)"
+       inkscape:connector-curvature="0"
+       id="path5372"
+       d="m 362.52903,162.4086 93.72903,93.72903 -94.14193,94.14194 z"
+       style="fill:none;stroke:#31abff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter6022)" />
+    <path
+       transform="translate(0,540.36218)"
+       inkscape:connector-curvature="0"
+       id="path5374"
+       d="m 134.60645,181.12688 0,149.74624 -75.423654,-75.42366 z"
+       style="fill:none;stroke:#31abff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter6026)" />
+    <flowRoot
+       transform="matrix(0,-0.54923771,0.54923771,0,376.78794,864.65809)"
+       style="font-size:18.20705223px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#31abff;fill-opacity:1;stroke:none;filter:url(#filter6034);font-family:Tunga;-inkscape-font-specification:Tunga"
+       id="flowRoot5384"
+       xml:space="preserve"><flowRegion
+         id="flowRegion5386"><rect
+           style="font-size:18.20705223px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#31abff;fill-opacity:1;font-family:Tunga;-inkscape-font-specification:Tunga"
+           y="-15.875741"
+           x="-31.92169"
+           height="231.98463"
+           width="360.95255"
+           id="rect5388" /></flowRegion><flowPara
+         id="flowPara5390">  Du must verstehn!Aus Eins mach Zehn,</flowPara><flowPara
+         id="flowPara5392">     Und Zwei las gehn,Und Drei mach</flowPara><flowPara
+         id="flowPara5394">        gleich,So  bist  du  reich.</flowPara><flowPara
+         id="flowPara5396">            Verlier die Vier Aus</flowPara><flowPara
+         id="flowPara5398">                Funf und  Sechs,</flowPara><flowPara
+         id="flowPara5400">                   So sagt die</flowPara><flowPara
+         id="flowPara5402">                     Hex, Mach</flowPara><flowPara
+         id="flowPara5404">                        Sieb</flowPara></flowRoot>    <flowRoot
+       transform="matrix(0,0.41285265,-0.41285265,0,121.5918,744.35366)"
+       style="font-size:24.22171593px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#31abff;fill-opacity:1;stroke:none;filter:url(#filter6042);font-family:Tunga;-inkscape-font-specification:Tunga"
+       id="flowRoot5414"
+       xml:space="preserve"><flowRegion
+         id="flowRegion5416"><rect
+           style="font-size:24.22171593px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#31abff;fill-opacity:1;font-family:Tunga;-inkscape-font-specification:Tunga"
+           y="-15.875741"
+           x="-31.92169"
+           height="231.98463"
+           width="360.95255"
+           id="rect5418" /></flowRegion><flowPara
+         id="flowPara5420">  Du must verstehn!Aus Eins</flowPara><flowPara
+         id="flowPara5422">     Zehn, Und Zwei las gehn,</flowPara><flowPara
+         id="flowPara5424">        Drei mach gleichS</flowPara><flowPara
+         id="flowPara5426">           Verlier die V</flowPara><flowPara
+         id="flowPara5428">               Funf und </flowPara><flowPara
+         id="flowPara5430">                  So s</flowPara><flowPara
+         id="flowPara5432">                    H</flowPara></flowRoot>    <flowRoot
+       transform="matrix(0.24122742,-0.24122742,0.24122742,0.24122742,290.60299,882.70785)"
+       style="font-size:24.22171593px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#31abff;fill-opacity:1;stroke:none;filter:url(#filter6046);font-family:Tunga;-inkscape-font-specification:Tunga"
+       id="flowRoot5434"
+       xml:space="preserve"><flowRegion
+         id="flowRegion5436"><rect
+           style="font-size:24.22171593px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#31abff;fill-opacity:1;font-family:Tunga;-inkscape-font-specification:Tunga"
+           y="-15.875741"
+           x="-31.92169"
+           height="231.98463"
+           width="360.95255"
+           id="rect5438" /></flowRegion><flowPara
+         id="flowPara5440">  Du must verstehn!Aus Eins</flowPara><flowPara
+         id="flowPara5442">     Zehn, Und Zwei las gehn,</flowPara><flowPara
+         id="flowPara5444">        Drei mach gleichS</flowPara><flowPara
+         id="flowPara5446">           Verlier die V</flowPara><flowPara
+         id="flowPara5448">               Funf und </flowPara><flowPara
+         id="flowPara5450">                  So s</flowPara><flowPara
+         id="flowPara5452">                    H</flowPara></flowRoot>    <flowRoot
+       transform="matrix(-0.24122742,-0.24122742,0.24122742,-0.24122742,353.4308,774.45431)"
+       style="font-size:24.22171593px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#31abff;fill-opacity:1;stroke:none;filter:url(#filter6050);font-family:Tunga;-inkscape-font-specification:Tunga"
+       id="flowRoot5454"
+       xml:space="preserve"><flowRegion
+         id="flowRegion5456"><rect
+           style="font-size:24.22171593px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#31abff;fill-opacity:1;font-family:Tunga;-inkscape-font-specification:Tunga"
+           y="-15.875741"
+           x="-31.92169"
+           height="231.98463"
+           width="360.95255"
+           id="rect5458" /></flowRegion><flowPara
+         id="flowPara5460">  Du must verstehn!Aus Eins</flowPara><flowPara
+         id="flowPara5462">     Zehn, Und Zwei las gehn,</flowPara><flowPara
+         id="flowPara5464">        Drei mach gleichS</flowPara><flowPara
+         id="flowPara5466">           Verlier die V</flowPara><flowPara
+         id="flowPara5468">               Funf und </flowPara><flowPara
+         id="flowPara5470">                  So s</flowPara><flowPara
+         id="flowPara5472">                    H</flowPara></flowRoot>    <flowRoot
+       transform="matrix(0.29076787,0.29076787,-0.29076787,0.29076787,265.14152,621.68463)"
+       style="font-size:24.22171593px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#31abff;fill-opacity:1;stroke:none;filter:url(#filter6054);font-family:Tunga;-inkscape-font-specification:Tunga"
+       id="flowRoot5474"
+       xml:space="preserve"><flowRegion
+         id="flowRegion5476"><rect
+           style="font-size:24.22171593px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#31abff;fill-opacity:1;font-family:Tunga;-inkscape-font-specification:Tunga"
+           y="-15.875741"
+           x="-31.92169"
+           height="231.98463"
+           width="360.95255"
+           id="rect5478" /></flowRegion><flowPara
+         id="flowPara5480">  Du must verstehn!Aus Eins</flowPara><flowPara
+         id="flowPara5482">     Zehn, Und Zwei las gehn,</flowPara><flowPara
+         id="flowPara5484">        Drei mach gleichS</flowPara><flowPara
+         id="flowPara5486">           Verlier die V</flowPara><flowPara
+         id="flowPara5488">               Funf und </flowPara><flowPara
+         id="flowPara5490">                  So s</flowPara></flowRoot>    <flowRoot
+       transform="matrix(-0.28564526,0.28564526,-0.28564526,-0.28564526,338.59423,896.70688)"
+       style="font-size:24.22171593px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#31abff;fill-opacity:1;stroke:none;filter:url(#filter6058);font-family:Tunga;-inkscape-font-specification:Tunga"
+       id="flowRoot5492"
+       xml:space="preserve"><flowRegion
+         id="flowRegion5494"><rect
+           style="font-size:24.22171593px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#31abff;fill-opacity:1;font-family:Tunga;-inkscape-font-specification:Tunga"
+           y="-15.875741"
+           x="-31.92169"
+           height="231.98463"
+           width="360.95255"
+           id="rect5496" /></flowRegion><flowPara
+         id="flowPara5498">  Du must verstehn!Aus Eins</flowPara><flowPara
+         id="flowPara5500">     Zehn, Und Zwei las gehn,</flowPara><flowPara
+         id="flowPara5502">        Drei mach gleichS</flowPara><flowPara
+         id="flowPara5504">           Verlier die V</flowPara><flowPara
+         id="flowPara5506">               Funf und </flowPara><flowPara
+         id="flowPara5508">                  So s</flowPara></flowRoot>    <text
+       transform="matrix(1.1352028,0,0,1.1352028,-33.994162,-107.69777)"
+       sodipodi:linespacing="125%"
+       id="text5510"
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#31abff;fill-opacity:1;stroke:none;filter:url(#filter6062);font-family:Rune;-inkscape-font-specification:Rune"
+       xml:space="preserve"><textPath
+         id="textPath5512"
+         xlink:href="#rect3763-6">Dumu         stxv     erstx       hnAuxa</textPath></text>
+    <text
+       transform="matrix(1.2797408,0,0,1.2797408,-69.001774,-222.23624)"
+       sodipodi:linespacing="125%"
+       id="text5514"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#31abff;fill-opacity:1;stroke:none;filter:url(#filter6066);font-family:Rune inverse;-inkscape-font-specification:Rune inverse"
+       xml:space="preserve"><textPath
+         id="textPath5516"
+         xlink:href="#rect3763-6-1">   chSobi  stdur  </textPath></text>
+  </g>
+  <g
+     inkscape:label="magic circle"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-540.36218)"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <path
+       transform="matrix(-0.70710678,-0.70710678,0.70710678,-0.70710678,0,0)"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:5;stroke-miterlimit:4;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m -885.90564,-521.74567 281.42511,0 0,281.42511 -281.42511,0 z"
+       id="rect2985"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3759"
+       width="187.276"
+       height="187.276"
+       x="-362.03723"
+       y="-890.3092"
+       transform="scale(-1,-1)" />
+    <rect
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3761"
+       width="149.67532"
+       height="149.67532"
+       x="-283.99954"
+       y="-870.95526"
+       transform="scale(-1,-1)" />
+    <rect
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3763"
+       width="158.93626"
+       height="158.93626"
+       x="308.16943"
+       y="-818.49377"
+       transform="matrix(-0.70710678,0.70710678,-0.70710678,-0.70710678,0,0)" />
+    <path
+       transform="matrix(-0.70710678,0.70710678,-0.70710678,-0.70710678,0,0)"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 335.57227,-790.30804 101.78186,0 0,101.78186 -101.78186,0 z"
+       id="rect3763-6"
+       inkscape:connector-curvature="0" />
+    <path
+       transform="matrix(-0.70710678,0.70710678,-0.70710678,-0.70710678,0,0)"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 363.758,-762.12231 45.80184,0 0,45.80184 -45.80184,0 z"
+       id="rect3763-6-1"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 216.91251,796.11764 -39.30703,0"
+       id="path3830"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 257.6036,994.03686 0,-92.73138"
+       id="path3832"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:5.00000048;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 258.15723,693.28265 -3e-5,-95.49945"
+       id="path3832-8"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:4.99999952;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect2985-8"
+       width="333.09897"
+       height="333.09897"
+       x="-911.74255"
+       y="-547.58258"
+       transform="matrix(-0.70710678,-0.70710678,0.70710678,-0.70710678,0,0)" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.24075603px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Rune;-inkscape-font-specification:Rune"
+       id="text3956"
+       sodipodi:linespacing="125%"
+       transform="matrix(1.0498167,0,0,1.0498167,-12.801001,-39.617638)"><textPath
+         xlink:href="#rect2985"
+         id="textPath4034">Du must verstehn!Aus Eins mach Zehn,Und Zwei las gehn,Und Drei mach gleich,So bist du reich.Verlier die Vier!Aus Funf und Sechs, So sagt die Hex, Mach Sieben und Acht, So ist's vollbracht: Und Neun ist Eins, Und Zehn ist keins. Das ist das Hexen-Einmaleins!</textPath></text>
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 362.52903,162.4086 93.72903,93.72903 -94.14193,94.14194 z"
+       id="path4074"
+       inkscape:connector-curvature="0"
+       transform="translate(0,540.36218)" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 134.60645,181.12688 0,149.74624 -75.423654,-75.42366 z"
+       id="path4076"
+       inkscape:connector-curvature="0"
+       transform="translate(0,540.36218)" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4268"
+       style="font-size:18.20705223px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Tunga;-inkscape-font-specification:Tunga"
+       transform="matrix(0,-0.54923771,0.54923771,0,376.78794,864.65809)"><flowRegion
+         id="flowRegion4270"><rect
+           id="rect4272"
+           width="360.95255"
+           height="231.98463"
+           x="-31.92169"
+           y="-15.875741"
+           style="font-size:18.20705223px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Tunga;-inkscape-font-specification:Tunga" /></flowRegion><flowPara
+         id="flowPara4653">  Du must verstehn!Aus Eins mach Zehn,</flowPara><flowPara
+         id="flowPara4655">     Und Zwei las gehn,Und Drei mach</flowPara><flowPara
+         id="flowPara4657">        gleich,So  bist  du  reich.</flowPara><flowPara
+         id="flowPara4659">            Verlier die Vier Aus</flowPara><flowPara
+         id="flowPara4661">                Funf und  Sechs,</flowPara><flowPara
+         id="flowPara4663">                   So sagt die</flowPara><flowPara
+         id="flowPara4665">                     Hex, Mach</flowPara><flowPara
+         id="flowPara4667">                        Sieb</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4268-39"
+       style="font-size:24.22171593px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Tunga;-inkscape-font-specification:Tunga"
+       transform="matrix(0,0.41285265,-0.41285265,0,121.5918,744.35366)"><flowRegion
+         id="flowRegion4270-9"><rect
+           id="rect4272-5"
+           width="360.95255"
+           height="231.98463"
+           x="-31.92169"
+           y="-15.875741"
+           style="font-size:24.22171593px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Tunga;-inkscape-font-specification:Tunga" /></flowRegion><flowPara
+         id="flowPara5019">  Du must verstehn!Aus Eins</flowPara><flowPara
+         id="flowPara5021">     Zehn, Und Zwei las gehn,</flowPara><flowPara
+         id="flowPara5023">        Drei mach gleichS</flowPara><flowPara
+         id="flowPara5025">           Verlier die V</flowPara><flowPara
+         id="flowPara5027">               Funf und </flowPara><flowPara
+         id="flowPara5029">                  So s</flowPara><flowPara
+         id="flowPara5031">                    H</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4268-39-9"
+       style="font-size:24.22171593px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Tunga;-inkscape-font-specification:Tunga"
+       transform="matrix(0.24122742,-0.24122742,0.24122742,0.24122742,290.60299,882.70785)"><flowRegion
+         id="flowRegion4270-9-2"><rect
+           id="rect4272-5-3"
+           width="360.95255"
+           height="231.98463"
+           x="-31.92169"
+           y="-15.875741"
+           style="font-size:24.22171593px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Tunga;-inkscape-font-specification:Tunga" /></flowRegion><flowPara
+         id="flowPara5019-7">  Du must verstehn!Aus Eins</flowPara><flowPara
+         id="flowPara5021-3">     Zehn, Und Zwei las gehn,</flowPara><flowPara
+         id="flowPara5023-1">        Drei mach gleichS</flowPara><flowPara
+         id="flowPara5025-5">           Verlier die V</flowPara><flowPara
+         id="flowPara5027-7">               Funf und </flowPara><flowPara
+         id="flowPara5029-8">                  So s</flowPara><flowPara
+         id="flowPara5031-5">                    H</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4268-39-9-4"
+       style="font-size:24.22171593px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Tunga;-inkscape-font-specification:Tunga"
+       transform="matrix(-0.24122742,-0.24122742,0.24122742,-0.24122742,353.4308,774.45431)"><flowRegion
+         id="flowRegion4270-9-2-1"><rect
+           id="rect4272-5-3-1"
+           width="360.95255"
+           height="231.98463"
+           x="-31.92169"
+           y="-15.875741"
+           style="font-size:24.22171593px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Tunga;-inkscape-font-specification:Tunga" /></flowRegion><flowPara
+         id="flowPara5019-7-5">  Du must verstehn!Aus Eins</flowPara><flowPara
+         id="flowPara5021-3-9">     Zehn, Und Zwei las gehn,</flowPara><flowPara
+         id="flowPara5023-1-5">        Drei mach gleichS</flowPara><flowPara
+         id="flowPara5025-5-1">           Verlier die V</flowPara><flowPara
+         id="flowPara5027-7-0">               Funf und </flowPara><flowPara
+         id="flowPara5029-8-6">                  So s</flowPara><flowPara
+         id="flowPara5031-5-4">                    H</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4268-39-5"
+       style="font-size:24.22171593px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Tunga;-inkscape-font-specification:Tunga"
+       transform="matrix(0.29076787,0.29076787,-0.29076787,0.29076787,265.14152,621.68463)"><flowRegion
+         id="flowRegion4270-9-3"><rect
+           id="rect4272-5-0"
+           width="360.95255"
+           height="231.98463"
+           x="-31.92169"
+           y="-15.875741"
+           style="font-size:24.22171593px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Tunga;-inkscape-font-specification:Tunga" /></flowRegion><flowPara
+         id="flowPara5245">  Du must verstehn!Aus Eins</flowPara><flowPara
+         id="flowPara5247">     Zehn, Und Zwei las gehn,</flowPara><flowPara
+         id="flowPara5249">        Drei mach gleichS</flowPara><flowPara
+         id="flowPara5251">           Verlier die V</flowPara><flowPara
+         id="flowPara5253">               Funf und </flowPara><flowPara
+         id="flowPara5255">                  So s</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4268-39-5-6"
+       style="font-size:24.22171593px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Tunga;-inkscape-font-specification:Tunga"
+       transform="matrix(-0.28564526,0.28564526,-0.28564526,-0.28564526,338.59423,896.70688)"><flowRegion
+         id="flowRegion4270-9-3-5"><rect
+           id="rect4272-5-0-2"
+           width="360.95255"
+           height="231.98463"
+           x="-31.92169"
+           y="-15.875741"
+           style="font-size:24.22171593px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Tunga;-inkscape-font-specification:Tunga" /></flowRegion><flowPara
+         id="flowPara5233">  Du must verstehn!Aus Eins</flowPara><flowPara
+         id="flowPara5235">     Zehn, Und Zwei las gehn,</flowPara><flowPara
+         id="flowPara5237">        Drei mach gleichS</flowPara><flowPara
+         id="flowPara5239">           Verlier die V</flowPara><flowPara
+         id="flowPara5241">               Funf und </flowPara><flowPara
+         id="flowPara5243">                  So s</flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Rune;-inkscape-font-specification:Rune"
+       id="text5258"
+       sodipodi:linespacing="125%"
+       transform="matrix(1.1352028,0,0,1.1352028,-33.994162,-107.69777)"><textPath
+         xlink:href="#rect3763-6"
+         id="textPath5284">Dumu         stxv     erstx       hnAuxa</textPath></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Rune inverse;-inkscape-font-specification:Rune inverse"
+       id="text5309"
+       sodipodi:linespacing="125%"
+       transform="matrix(1.2797408,0,0,1.2797408,-69.001774,-222.23624)"><textPath
+         xlink:href="#rect3763-6-1"
+         id="textPath5331">   chSobi  stdur  </textPath></text>
+  </g>
+</svg>
