@@ -27,8 +27,17 @@ use:
 <br />
 {% if page.pagination.previous_page or page.pagination.next_page %}
     <nav>
-        {% if page.pagination.previous_page %}<a href="{{ site.url }}{{ page.pagination.previous_page.url }}">新しい投稿</a>{% endif %}
-        {% if page.pagination.previous_page and page.pagination.next_page %} | {% endif %}
-        {% if page.pagination.next_page %}<a href="{{ site.url }}{{ page.pagination.next_page.url }}">古い投稿</a>{% endif %}<br />
+        <ul class="list-unstyled row">
+            {% if page.pagination.previous_page %}
+                <li class="col-md-6 text-left"><a class="next" href="{{ site.url }}{{ page.pagination.previous_page.url }}" title="{{ page.next_post.title }}"><span class="title"><i class="fa fa-chevron-left"></i> 新しい投稿</span></a></li>
+            {% else %}
+                <li class="col-md-6 text-muted"> <i class="fa fa-chevron-left"></i> 新しい投稿</li>
+            {% endif %}
+            {% if page.pagination.next_page %}
+                <li class="col-md-6 text-right"><a class="previous" href="{{ site.url }}{{ page.pagination.next_page.url }}" title="{{ page.previous_post.title }}"><span class="title">古い投稿</span> <i class="fa fa-chevron-right"></i></a></li>
+            {% else %}
+                <li class="col-md-6 text-muted"> <i class="fa fa-chevron-right"></i> 古い投稿</li>
+            {% endif %}
+        </ul>
     </nav>
 {% endif %}

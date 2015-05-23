@@ -26,12 +26,12 @@
                     {% if page.next_post %}
                         <li class="col-md-6 text-left"><a class="next" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}"><span class="title"><i class="fa fa-chevron-left"></i> {{ page.next_post.title }}</span></a></li>
                     {% else %}
-                        <li class="col-md-6"> <i class="fa fa-chevron-left text-mute"></i></li>
+                        <li class="col-md-6 text-muted"> <i class="fa fa-chevron-left"></i></li>
                     {% endif %}
                     {% if page.previous_post %}
-                        <li class="col-md-6 text-right"><a class="previous" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">{{ page.previous_post.title }}</span> <i class="fa fa-chevron-right"></i> </a></li>
+                        <li class="col-md-6 text-right"><a class="previous" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">{{ page.previous_post.title }}</span> <i class="fa fa-chevron-right"></i></a></li>
                     {% else %}
-                        <li class="col-md-6"> <i class="fa fa-chevron-right text-mute"></i></li>
+                        <li class="col-md-6 text-muted"> <i class="fa fa-chevron-right"></i></li>
                     {% endif %}
                 </ul>
             </nav>
