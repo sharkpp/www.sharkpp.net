@@ -28,7 +28,8 @@ exec_init () {
 
 exec_clean () {
   rm -rf .vendor .sculpin *.lock *.phar
-  rm -rf output_* source/assets app/cache app/logs
+  rm -rf output_* app/cache app/logs
+  find source/assets -maxdepth 1 -mindepth 1 -not -name js -and -not -name css -exec rm -rf {} \;
 }
 
 exec_generate () {

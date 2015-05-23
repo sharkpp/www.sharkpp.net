@@ -39,3 +39,6 @@ cp -pf $(dirname $0)/markdown/about.md $(dirname $0)/../source/
 
 find $(dirname $0)/../source/images -maxdepth 1 -name \*.png -delete -or -name \*.jpg -delete -or -name \*.gif -delete
 cp -pf $(dirname $0)/markdown/images/* $(dirname $0)/../source/images/
+
+mkdir -p $(dirname $0)/../source/graffiti
+for I in $(find $(dirname $0)/html/gallery/scenery -name \*.jpg) ; do cp -pf $I $(dirname $0)/../source/graffiti/scenery_$(basename $I) ; done

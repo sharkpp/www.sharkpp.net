@@ -1,10 +1,14 @@
 {
     "name": "www.sharkpp.net",
     "authors": [
-        { "name": "sharkpp" }
+        {
+            "name": "sharkpp"
+        }
     ],
     "private": true,
     "dependencies": {
-        "lightbox2": "2.7.*"
+        "lightbox2": "2.7.*",
+        "imagesloaded": "~3.1.8",
+        "wookmark-jquery": "https://github.com/germanysbestkeptsecret/Wookmark-jQuery#~2.0.0"
     }
 }

@@ -62,19 +62,6 @@ foreach ($files as $path) {
 	$curpath = preg_replace('!^[^/]+/(.+)\..+$!', '\1.html', $path);
 	$html = file_get_contents($path);
 
-//	$html = explode("\n", $html);
-//	foreach ($html as & $line)
-//		$line = ltrim($line, "\t");
-//	$html = implode("\n", $html);
-//	unset($line);
-
-//	$keywords = array();
-//	if (preg_match('|<meta name="keywords" content="(.+?)" />|', $html, $m)) {
-//		$keywords = explode(',', $m[1]);
-//		foreach ($keywords as & $k)
-//			$k = trim($k);
-//	}
-
 	$tags = array();
 	if (preg_match('|<!-- tags: \[(.+?)\] -->|', $html, $m)) {
 		$tags = explode(',', $m[1]);
@@ -89,6 +76,15 @@ foreach ($files as $path) {
 		$categories[] = $tmp[0];
 	}
 
+	// 公開日付を取得
+/*	if (preg_match('!<p class="info".+?>([0-9]+)年([0-9]+)月([0-9]+)日!', $html, $m))
+	{
+		if (!preg_match('!/blog/!', $dpath)) {
+			$dpath = sprintf('markdown/blog/%s-%s-%s-%s', $m[1], $m[2], $m[3], basename($dpath));
+		}
+	}*/
+
+	// コンテンツの中身が取り出せるか？
 	if (!preg_match('|<div id="contents">(.+)<p class="info" style="margin-top: 1em">.+' .
 	                 '</div><!-- #contents end -->|ms', $html, $m))
 	{

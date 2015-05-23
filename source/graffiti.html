@@ -1,0 +1,116 @@
+---
+layout: default
+title: テスト
+date: 2015-09-29 20:05
+category: ["graffiti"]
+graffities:
+  -
+    caption: World No.21
+    description: 同じ視点で太陽の位置を変えてみました
+    image: scenery_w21_301.jpg
+    thumbnail: scenery_w21_301s.jpg
+  -
+    caption: World No.21
+    description: 同じ視点で太陽の位置を変えてみました
+    image: scenery_w21_300.jpg
+    thumbnail: scenery_w21_300s.jpg
+  -
+    caption: World No.20
+    description: |-
+                 上からの視点で山肌を 春山 → 冬山 → 岩山 と変化させて見ました
+                 なんだか人の顔に見えなくも無い...
+    image: scenery_w20_302.jpg
+    thumbnail: scenery_w20_302s.jpg
+  -
+    caption: World No.20
+    description: |-
+                 上からの視点で山肌を 春山 → 冬山 → 岩山 と変化させて見ました
+                 なんだか人の顔に見えなくも無い...
+    image: scenery_w20_301.jpg
+    thumbnail: scenery_w20_301s.jpg
+  -
+    caption: World No.20
+    description: |-
+                 上からの視点で山肌を 春山 → 冬山 → 岩山 と変化させて見ました
+                 なんだか人の顔に見えなくも無い...
+    image: scenery_w20_300.jpg
+    thumbnail: scenery_w20_300s.jpg
+  -
+    caption: World No.19
+    description: まったくのお遊びで Terragen の文字を地形にしてみました
+    image: scenery_w19_300.jpg
+    thumbnail: scenery_w19_300s.jpg
+  -
+    caption: World No.18
+    description: 山脈をイメージして作りました
+    image: scenery_w18_300.jpg
+    thumbnail: scenery_w18_300s.jpg
+  -
+    caption: World No.17
+    description: 湖がある山をイメージして作りました
+    image: scenery_w17_300.jpg
+    thumbnail: scenery_w17_300s.jpg
+  -
+    caption: World No.16
+    description: 湖がある山をイメージして作りました
+    image: scenery_w16_300.jpg
+    thumbnail: scenery_w16_300s.jpg
+  -
+    caption: World No.15
+    description: |-
+                 水脈？がある山をイメージして作りました
+                 左下付近は作り物っぽい
+    image: scenery_w15_302.jpg
+    thumbnail: scenery_w15_302s.jpg
+  -
+    caption: World No.14
+    description: 冬山の昼間をイメージして作りました
+    image: scenery_w14_300.jpg
+    thumbnail: scenery_w14_300s.jpg
+  -
+    caption: World No.13
+    description: 曇りの山をイメージして作りました
+    image: scenery_w13_300.jpg
+    thumbnail: scenery_w13_300s.jpg
+  -
+    caption: World No.10
+    description: 同じ地形の別の角度から見た風景です
+    image: scenery_w10_301.jpg
+    thumbnail: scenery_w10_301s.jpg
+  -
+    caption: World No.10
+    description: 同じ地形の別の角度から見た風景です
+    image: scenery_w10_300.jpg
+    thumbnail: scenery_w10_300s.jpg
+
+---
+
+{% block content_wrapper %}
+<div>
+    <div id="xxxx" class="tiles-wrap animated">
+{% for graffiti in page.graffities %}
+        <div class="thumbnail text-center" style="width: 170px;">
+          <a href="{{ site.url }}/graffiti/{{ graffiti.image }}" data-lightbox="xxx"><img src="{{ site.url }}/graffiti/{{ graffiti.thumbnail }}" alt="{{ graffiti.caption }}"></a>
+          <div class="caption">
+            <h3>{{ graffiti.caption }}</h3>
+            <p>{{ graffiti.description }}</p>
+          </div>
+        </div>
+{% endfor %}
+      </div>
+</div>
+{% endblock %}
+
+{% block scripts_after %}
+
+        <script src="{{ site.url }}/assets/imagesloaded/imagesloaded.pkgd.min.js"></script>
+
+        <script src="{{ site.url }}/assets/Wookmark-jQuery/wookmark.min.js"></script>
+        <script type="text/javascript">console.log('*a');
+                imagesLoaded('#xxxx', function() {console.log('*c');
+                    $('#xxxx').wookmark();
+                });
+        </script>
+
+        <script src="{{ site.url }}/assets/js/jquery.contenthover.min.js"></script>
+{% endblock %}
