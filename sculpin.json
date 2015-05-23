@@ -22,6 +22,11 @@
         "components/highlightjs": "~7.3.0",
         "jasny/twig-extensions": "@dev"
     },
+    "autoload": {
+        "psr-0": {
+            "Sharkpp": "app/src"
+        }
+    },
     "config": {
         "component-dir": "source/assets"
     }

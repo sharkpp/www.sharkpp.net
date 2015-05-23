@@ -7,3 +7,7 @@ services:
         class: Jasny\Twig\PcreExtension
         tags:
             - { name: twig.extension }
+#    sharkpp.extension.debug2:
+#        class: Sharkpp\Twig\Extensions\Debug2
+#        tags:
+#            - { name: twig.extension }
