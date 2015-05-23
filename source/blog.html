@@ -1,16 +1,11 @@
 ---
 layout: default
-title: Posts Archive
+title: アーカイブ
 generator: pagination
 use:
     - posts
 
 ---
-<ol class="breadcrumb">
-  <li temscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="{{ site.url }}/"><i class="fa fa-home fa-lg"></i> <span itemprop="title">HOME</span></a></li>
-  <li temscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb" class="active"><i class="fa fa-archive fa-lg"></i> <span itemprop="title">アーカイブ</span></li>
-</ol>
-
 {% set year = '0' %}
 <h2>アーカイブ</h2>
 {% for post in page.pagination.items %}

@@ -5,16 +5,7 @@
 {% endblock %}
 
 {% block content_wrapper %}
-{% set this_year %}{{ post.date | date("Y") }}{% endset %}
-{% set this_month %}{{ post.date | date("m") }}{% endset %}
-{% set this_day %}{{ post.date | date("d") }}{% endset %}
-    <ol class="breadcrumb">
-        <li temscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="{{ site.url }}/"><i class="fa fa-home fa-lg"></i> <span itemprop="title">HOME</span></a></li>
-        <li temscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="{{ site.url }}/"><span itemprop="title">{{ this_year }}</span></a></li>
-        <li temscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="{{ site.url }}/"><span itemprop="title">{{ this_month }}</span></a></li>
-        <li temscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="{{ site.url }}/"><span itemprop="title">{{ this_day }}</span></a></li>
-        <li temscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb" class="active"><span itemprop="title">{{ page.title }}</span></li>
-    </ol>
+    {% include "breadcrumb" %}
 
     <article>
         <header>
@@ -34,9 +25,13 @@
                 <ul class="list-unstyled row">
                     {% if page.next_post %}
                         <li class="col-md-6 text-left"><a class="next" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}"><span class="title"><i class="fa fa-chevron-left"></i> {{ page.next_post.title }}</span></a></li>
+                    {% else %}
+                        <li class="col-md-6"> <i class="fa fa-chevron-left text-mute"></i></li>
                     {% endif %}
                     {% if page.previous_post %}
                         <li class="col-md-6 text-right"><a class="previous" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">{{ page.previous_post.title }}</span> <i class="fa fa-chevron-right"></i> </a></li>
+                    {% else %}
+                        <li class="col-md-6"> <i class="fa fa-chevron-right text-mute"></i></li>
                     {% endif %}
                 </ul>
             </nav>

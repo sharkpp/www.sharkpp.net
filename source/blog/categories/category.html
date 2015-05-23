@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Category Archive
+title: カテゴリ
 generator: [posts_category_index, pagination]
 pagination:
     provider: page.category_posts
@@ -14,13 +14,6 @@ pagination:
 {% block title %}{{ page.title }} "{{ page.category }}"{% endblock %}
 {% block content %}
 {% set year = '0' %}
-
-<ol class="breadcrumb">
-  <li temscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="{{ site.url }}/"><i class="fa fa-home fa-lg"></i> <span itemprop="title">HOME</span></a></li>
-  <li temscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="{{ site.url }}/blog/categories/"><i class="fa fa-folder-open fa-lg"></i> <span itemprop="title">カテゴリ</span></a></li>
-  <li temscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb" class="active"><span itemprop="title">"{{ page.category }}"</span></li>
-</ol>
-
 <h2>"{{ page.category }}"</h2>
 {% for post in page.pagination.items %}
 {% set this_year %}{{ post.date | date("Y") }}{% endset %}

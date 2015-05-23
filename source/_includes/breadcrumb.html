@@ -1,0 +1,55 @@
+{% set breadcrumbs = [] %}
+{% set breadcrumbs = breadcrumbs|merge([{ url: site.url ~ "/", caption: 'HOME' }]) %}
+{% if page.categories or post.meta.categories %}
+    {% set categories = page.categories ? page.categories : post.meta.categories %}
+    {% if "blog" in categories %}
+        {% set this_year  %}{{ post.date | date("Y") }}{% endset %}
+        {% set this_month %}{{ post.date | date("m") }}{% endset %}
+        {% set this_day   %}{{ post.date | date("d") }}{% endset %}
+
+        {% set breadcrumbs = breadcrumbs|merge([{ caption: this_year  }]) %}
+        {% set breadcrumbs = breadcrumbs|merge([{ caption: this_month }]) %}
+        {% set breadcrumbs = breadcrumbs|merge([{ caption: this_day   }]) %}
+    {% else %}
+        {% for category in categories %}
+            {% if "" == category %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% elseif "/blog/tags/" in page.url %}
+    {% set breadcrumbs = breadcrumbs|merge([{ url: site.url ~ "/blog/tags", caption: "タグ" }]) %}
+{% elseif "/blog/categories/" in page.url %}
+    {% set breadcrumbs = breadcrumbs|merge([{ url: site.url ~ "/blog/categories", caption: "カテゴリ" }]) %}
+{% endif %}
+{% if "/" != page.url %}
+    {% set breadcrumbs = breadcrumbs|merge([{ url: site.url ~ "/" ~ page.url,
+                                              caption: "/blog/tags/"       in page.url ? '"' ~ page.tag ~ '"':
+                                                       "/blog/categories/" in page.url ? '"' ~ page.category ~ '"' :
+                                                                                         page.title }]) %}
+{% endif %}
+
+    <ol class="breadcrumb">
+{% for breadcrumb in breadcrumbs %}
+        <li temscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"
+{% if loop.last %}
+            class="active"
+{% else %}
+           ><a itemprop="url" href="{{ breadcrumb.url }}"
+{% endif %}
+{% set breadcrumb_icon = "" %}
+{% if site.url ~ "/"                == breadcrumb.url %}{% set breadcrumb_icon = "home" %}{% endif %}
+{% if site.url ~ "/blog"            == breadcrumb.url %}{% set breadcrumb_icon = "archive" %}{% endif %}
+{% if site.url ~ "/blog/tags"       == breadcrumb.url %}{% set breadcrumb_icon = "tags" %}{% endif %}
+{% if site.url ~ "/blog/categories" == breadcrumb.url %}{% set breadcrumb_icon = "folder-open" %}{% endif %}
+{% if breadcrumb_icon %}
+           ><i class="fa fa-{{ breadcrumb_icon }} fa-lg"></i
+          >&nbsp;<span itemprop="title">{{ breadcrumb.caption }}</span
+{% else %}
+           ><span itemprop="title">{{ breadcrumb.caption }}</span
+{% endif %}
+{% if not loop.last %}
+           ></a
+{% endif %}
+       ></li>
+{% endfor %}
+    </ol>

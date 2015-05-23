@@ -63,10 +63,10 @@
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav pull-right">
                         <li><a href="{{ site.url }}/blog"><i class="fa fa-archive"></i> アーカイブ</a></li>
                         <li><a href="{{ site.url }}/blog/categories"><i class="fa fa-folder-open"></i> カテゴリ</a></li>
-                        <li><a href="{{ site.url }}/blog/tags"><i class="fa fa-tag"></i> タグ</a></li>
+                        <li><a href="{{ site.url }}/blog/tags"><i class="fa fa-tags"></i> タグ</a></li>
                         <li><a href="{{ site.url }}/about">About</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
@@ -74,7 +74,7 @@
         </nav>
 
         <div class="mainContent container">
-            {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
+            {% block content_wrapper %}{% block breadcrumb %}{% include "breadcrumb" %}{% endblock %}{% block content %}{% endblock %}{% endblock %}
         </div>
 
         <footer class="footer">
