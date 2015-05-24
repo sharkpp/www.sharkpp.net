@@ -7,6 +7,7 @@ exec_usage () {
   echo '  clean    cleanup site, remove ignore files'
   echo '  generate generate site'
   echo '  test     launch web server [ http://localhost:8000/ ] for test site'
+  echo '  spider   check broken link'
 }
 
 exec_init () {
@@ -49,6 +50,29 @@ exec_test () {
   php sculpin.phar generate --watch --server
 }
 
+exec_spider () {
+  # wget install check
+  wget --help > /dev/null
+  if [ $? -eq 127 ] ; then
+    echo wget command not installed
+    exit
+  fi
+  if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
+    exec_init
+  fi
+  RUNNING=$(ps ax|grep "php sculpin.phar[ ]"|wc -l|sed -e "s/ //g")
+  if [ 0 -eq $RUNNING ] ; then
+    # launch server and waiting for generate
+    while read f; do
+      if [ "" != "$(echo "$f" | grep "server is running at")" ] ; then break ; fi
+    done < <(php sculpin.phar generate --watch --server &)
+  fi
+  wget --spider --recursive --no-directories --no-verbose http://localhost:8000
+  if [ 0 -eq $RUNNING ] ; then
+    killall php
+  fi
+}
+
 case "$1" in
   "init"     ) exec_init ;;
   "i"        ) exec_init ;;
@@ -57,5 +81,6 @@ case "$1" in
   "g"        ) exec_generate ;;
   "test"     ) exec_test ;;
   "t"        ) exec_test ;;
-  *         ) exec_usage ;;
+  "spider"   ) exec_spider ;;
+  *          ) exec_usage ;;
 esac
