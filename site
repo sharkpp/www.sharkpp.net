@@ -68,7 +68,7 @@ exec_spider () {
       if [ "" != "$(echo "$f" | grep "server is running at")" ] ; then break ; fi
     done < <(php sculpin.phar generate --watch --server &)
   fi
-  wget --spider --recursive --no-directories --no-verbose http://localhost:8000
+  wget --spider --no-directories --recursive --page-requisites --level=0 --no-verbose http://localhost:8000
   if [ 0 -eq $RUNNING ] ; then
     killall php
   fi
