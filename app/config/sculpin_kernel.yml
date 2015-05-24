@@ -3,9 +3,4 @@ sculpin_pagination:
 
 sculpin_content_types:
     posts:
-        permalink: blog/:year/:month/:day/:filename/
-    hsp:
-        type: path
-        path: _posts
-        permalink: blog2/:year/
-        layout: project
+        permalink: blog/:year/:month/:day/:filename.html

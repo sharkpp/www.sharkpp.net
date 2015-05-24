@@ -10,7 +10,7 @@ categories: [blog]
 
 [Ubuntu-ja-8.10をVMware Player 2で動かすときのメモ][1]の続編みたいな感じ。
 
- [1]: /blog/2009/01/10/ubuntu-ja-8-10-on-vmware-player-2-memo
+ [1]: /blog/2009/01/10/ubuntu-ja-8-10-on-vmware-player-2-memo.html
 
 まだ、一部未解決な問題が残っていてまともに使えていない。
 

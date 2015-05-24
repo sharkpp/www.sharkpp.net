@@ -30,7 +30,7 @@ categories: [blog]
 [yabuinu][2]について、[HSP3用難読化＆独自スクランブル ツール ”yabuinu” を公開しました][3]で「HSP3の他バージョン用も簡単に実装できそうですが」と書いたのですが、HSP 3.2版はランタイムのソースが非公開なので当分は実装出来そうにありません。
 
  [2]: /hsp/tool/yabuinu
- [3]: /blog/2009/09/30/yabuinu-the-obfuscator-and-scrambler-for-hsp3-0-0-1-0-release
+ [3]: /blog/2009/09/30/yabuinu-the-obfuscator-and-scrambler-for-hsp3-0-0-1-0-release.html
 
 大丈夫だろうと高をくくっていたら意外な落とし穴がありましたorz
 

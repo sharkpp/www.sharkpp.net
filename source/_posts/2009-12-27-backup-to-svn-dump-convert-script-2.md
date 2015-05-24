@@ -8,7 +8,7 @@ categories: [blog]
 
 [フォルダまるごとのバックアップからSubversionのリポジトリを作るツールを作ってみた。][1]の続き。
 
- [1]: /blog/2009/12/13/backup-to-svn-dump-convert-script
+ [1]: /blog/2009/12/13/backup-to-svn-dump-convert-script.html
 
 trunkフォルダの自動生成とチープコピー機能をつけた。
 

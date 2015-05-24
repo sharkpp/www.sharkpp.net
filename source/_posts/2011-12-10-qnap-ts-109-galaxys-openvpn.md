@@ -57,7 +57,7 @@ NAS(QNAP TS-109II)をゴニョゴニョやりながらなんとかOpenVPN使っ�
 
 Optware ipkg は、[QNAP TS-109? で Subversionを使う][5] で色々やったのでそちらを参考にしてください。
 
- [5]: /blog/2011/12/05/using-subversion-with-qnap-ts109II
+ [5]: /blog/2011/12/05/using-subversion-with-qnap-ts109II.html
 
 #### OpenVPNをインストール
 

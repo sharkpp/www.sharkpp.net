@@ -32,7 +32,7 @@ categories: [blog]
 
 あっ後、[Ubuntu-ja-10.04をVMware Player 3で動かすときのメモ][4]にコメントをくれた方。
 
- [4]: /blog/2010/05/30/ubuntu-ja-10-04-on-vmware-player-3-memo
+ [4]: /blog/2010/05/30/ubuntu-ja-10-04-on-vmware-player-3-memo.html
 
 コメントありがとうございます。
 

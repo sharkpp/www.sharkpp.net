@@ -10,7 +10,7 @@ categories: [blog]
 
 [FuelPHP 勉強会 大須 vol.3 に参加しました][1]で少し触れた FuelPHP + eXcale でデプロイ体験をもうすし踏み込んでまとめてみました。
 
- [1]: /blog/2013/02/17/fuelphp-workshop-in-osu-vol-3
+ [1]: /blog/2013/02/17/fuelphp-workshop-in-osu-vol-3.html
 
 内容的には [FuelPHP + eXcale][2] を参照した記事となります。
 

@@ -10,19 +10,19 @@ categories: [blog]
 
 [QtをVisual C++ 2008 Express Editionで使えるようにしてみる: Qtで遊ぶ 其の１][1]
 
- [1]: /blog/2009/10/04/play-with-qt-part-1
+ [1]: /blog/2009/10/04/play-with-qt-part-1.html
 
 [色々なメモ: Qtで遊ぶ 其の２][2]
 
- [2]: /blog/2009/10/04/play-with-qt-part-2
+ [2]: /blog/2009/10/04/play-with-qt-part-2.html
 
 [色々なメモ: Qtで遊ぶ 其の３][3]
 
- [3]: /blog/2011/07/31/play-with-qt-part-3
+ [3]: /blog/2011/07/31/play-with-qt-part-3.html
 
 [色々なメモ: Qtで遊ぶ 其の４][4]
 
- [4]: /blog/2011/10/30/play-with-qt-part-4
+ [4]: /blog/2011/10/30/play-with-qt-part-4.html
 
 こつこつとQt使ってアプリ作ってます、、、
 
