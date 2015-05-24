@@ -17,7 +17,7 @@ Lhaplus標準のシェル拡張では32bi版Windows用しか対応しておら�
 
 [DOWNLOAD][2]
 
- [2]: /soft/x64/LplsShlx64-v1.0.1.0.zip "LplsShlx64-v1.0.1.0.zip"
+ [2]: /files/LplsShlx64-v1.0.1.0.zip "LplsShlx64-v1.0.1.0.zip"
 
 ### インストール
 

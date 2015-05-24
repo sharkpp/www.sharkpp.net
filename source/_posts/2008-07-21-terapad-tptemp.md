@@ -115,7 +115,7 @@ TeraPad が必要です。
 
 ## プログラム
 
-[DOWNLOAD][1]{.extlink}
+[DOWNLOAD][1]
   
 
 

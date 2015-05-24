@@ -8,7 +8,7 @@ categories: [php, rhaco]
 
 
   
-参考:[rhacoアプリ開発日誌 - 逆引きrhaco53: rhacoのテンプレートで使用するタグまとめ][1]{.extlink}
+参考:[rhacoアプリ開発日誌 - 逆引きrhaco53: rhacoのテンプレートで使用するタグまとめ][1]
 
   
 ※整形中orz 

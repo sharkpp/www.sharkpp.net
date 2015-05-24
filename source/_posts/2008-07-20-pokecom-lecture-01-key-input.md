@@ -159,7 +159,7 @@ H レジスタは、呼び出し時に 0 になっているので結果的に L 
 
 プログラム [inkey.h][2] 
 
- [2]: /pokecom/lecture/../program/inkey.h
+ [2]: /files/inkey.h
 
 　名前を inkey.h に変え、
   
@@ -622,7 +622,7 @@ l
 D
 </th>
 <td>
-<img src="../../image/ent.gif" alt="ENTER" />
+<i class="fa fa-reply fa-flip-vertical"></i>
 </td>
 <td>
 ←

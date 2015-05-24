@@ -16,7 +16,7 @@ categories: [ソフト, ツール]
 
 [DOWNLOAD][3]
 
- [3]: /soft/tool/PuTTYdummy-v0.1.0.1.zip "PuTTYdummy-v0.1.0.1.zip"
+ [3]: /files/PuTTYdummy-v0.1.0.1.zip "PuTTYdummy-v0.1.0.1.zip"
 
 ### インストール
 

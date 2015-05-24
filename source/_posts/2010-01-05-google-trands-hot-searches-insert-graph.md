@@ -9,7 +9,7 @@ Google トレンドのHot Searchesキーワード一覧画面にグラフを追�
 
 ![][1]
 
- [1]: /images/2010_0105_google_trands_insert_graph.png "スクリーンショット"
+ [1]: /images/2010_0105_google_trends_insert_graph.png "スクリーンショット"
 
 [DOWNLOAD][2]
 

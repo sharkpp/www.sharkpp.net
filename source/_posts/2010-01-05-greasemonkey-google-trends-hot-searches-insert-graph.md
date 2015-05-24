@@ -10,7 +10,7 @@ categories: [がらくた, greasemonkey]
 
 ![][1]
 
- [1]: /images/google_trends_insert_graph.png "スクリーンショット"
+ [1]: /images/2010_0105_google_trends_insert_graph.png "スクリーンショット"
 
 [DOWNLOAD][2]
 

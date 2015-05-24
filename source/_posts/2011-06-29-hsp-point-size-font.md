@@ -12,10 +12,6 @@ HSP標準のfont命令はピクセル指定のようなので、ポイント指�
 
 MITライセンスとしておきます。
 
-![point指定font命令モジュールSS][1]
+![][1]モジュール本体＆サンプル</a>
 
- [1]: /images/pt_font.png
-
-[モジュール本体＆サンプル][2]
-
- [2]: /hsp/module/pt_font.as
+ [1]: /files/pt_font.as

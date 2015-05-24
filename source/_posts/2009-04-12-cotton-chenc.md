@@ -5,7 +5,7 @@ categories: [ソフト, cotton]
 
 ---
 
-<div><a href="/soft/cotton/chenc001.zip">DOWNLOAD</a> 2009/04/12
+<div><a href="/files/chenc001.zip">DOWNLOAD</a> 2009/04/12
 </div>
 
 Cotton/Cotton++にIRCチャンネルごとの文字コード指定の機能を追加するプラグインです。 

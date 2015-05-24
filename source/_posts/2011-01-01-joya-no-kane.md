@@ -7,17 +7,9 @@ categories: [ソフト, ツール]
 
 ### ソフトの説明
 
-![画面][1]
+![][1]DOWNLOAD</a>
 
- [1]: /images/joya_no_kane.jpg
-
-このソフトは除夜の鐘をPCでつくためのソフトです。
-
-### ダウンロード
-
-[DOWNLOAD][2]
-
- [2]: /soft/tool/bells100.zip "bells100.zip"
+ [1]: /files/bells100.zip "bells100.zip"
 
 ### インストール
 

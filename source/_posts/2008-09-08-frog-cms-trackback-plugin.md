@@ -8,7 +8,7 @@ categories: [php, Frog CMS]
 
 [DOWNLOAD][1] 
 
- [1]: /php/frog-cms/trackback_1.1.0_20090531.zip
+ [1]: /files/trackback_1.1.0_20090531.zip
 
 Frog CMSにトラックバックの受信と送信の機能を追加するプラグインです。
   

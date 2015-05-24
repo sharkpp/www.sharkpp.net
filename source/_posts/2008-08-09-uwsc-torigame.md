@@ -5,7 +5,7 @@ categories: [がらくた, uwsc]
 
 ---
 
-とりゲーム([オレンチペーヂ。][1]{.extlink})でZキーの連打を自動で行うスクリプトです。 
+とりゲーム([オレンチペーヂ。][1])でZキーの連打を自動で行うスクリプトです。 
 
  [1]: http://hp.vector.co.jp/authors/VA019067/
 
@@ -20,4 +20,4 @@ categories: [がらくた, uwsc]
 ためしにキー連打機能を試してみただけです。 
 
 2004/04/25
-: <a href="/junk/uwsc/torigame.uws">DOWNLOAD</a>
+: <a href="/files/torigame.uws">DOWNLOAD</a>

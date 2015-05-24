@@ -8,7 +8,7 @@ categories: [php, Frog CMS]
 
 [DOWNLOAD][1] 
 
- [1]: /php/frog-cms/ja-message_20080817.zip
+ [1]: /files/ja-message_20080817.zip
 
 Frog CMSの言語ファイルの翻訳されていない部分などを追加した言語ファイルです。
 	  

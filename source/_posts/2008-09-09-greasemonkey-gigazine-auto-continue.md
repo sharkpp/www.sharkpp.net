@@ -10,4 +10,4 @@ GIGAZINEの「続きを読む」を自動でそのリンク先に移動するユ
 	  
 [DOWNLOAD][1] 
 
- [1]: /junk/greasemonkey/gigazine_auto_continue.user.js
+ [1]: /files/gigazine_auto_continue.user.js

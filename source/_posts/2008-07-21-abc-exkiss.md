@@ -5,7 +5,7 @@ categories: [ソフト, A to B Converter]
 
 ---
 
-<div><a href="/soft/abc/exks001c.lzh">DOWNLOAD</a> 2004/02/24
+<div><a href="/files/exks001c.lzh">DOWNLOAD</a> 2004/02/24
 </div>
 
 <div><p>

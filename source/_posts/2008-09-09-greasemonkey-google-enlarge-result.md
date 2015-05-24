@@ -10,4 +10,4 @@ Googleの検索結果の横幅を広げるユーザースクリプトです。
 	  
 [DOWNLOAD][1] 
 
- [1]: /junk/greasemonkey/google_enlarge_result.user.js
+ [1]: /files/google_enlarge_result.user.js

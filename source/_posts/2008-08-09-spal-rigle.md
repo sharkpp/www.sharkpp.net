@@ -7,9 +7,9 @@ categories: [がらくた, SpoilerAL]
 
 PHAME 氏作の「TransForm ? ライグルの野望」のトスのステータスを書き換えます。
 	  
-ソフト入手先:[グラビティー・スペース][1]{.extlink} 
+ソフト入手先:[グラビティー・スペース][1] 
 
  [1]: http://hp.vector.co.jp/authors/VA012182/
 
 2004/02/24
-: <a href="/junk/spal/rigle.lzh">DOWNLOAD</a>
+: <a href="/files/rigle.lzh">DOWNLOAD</a>

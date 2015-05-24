@@ -7,9 +7,9 @@ categories: [がらくた, パッチ]
 
 Thrasher 氏作の「CpCache」を日本語化します。
 	  
-ソフト入手先:[ホームページ][1]{.extlink} 
+ソフト入手先:[ホームページ][1] 
 
  [1]: http://www3.airnet.ne.jp/~vzr04461/ "Thrasher's Personal Laboratory."
 
 2004/02/24
-: For Ver.1.83 <a href="/junk/patch/jp_cpcache183_r1.lzh">DOWNLOAD</a>
+: For Ver.1.83 <a href="/files/jp_cpcache183_r1.lzh">DOWNLOAD</a>

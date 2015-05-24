@@ -8,7 +8,7 @@ categories: [php, Frog CMS]
 
 [DOWNLOAD][1] 
 
- [1]: /php/frog-cms/impexp_20080817.zip
+ [1]: /files/impexp_20080817.zip
 
 Frog CMSのデータベース内容のインポート・エクスポートを行うプラグインです。
 	  

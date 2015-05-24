@@ -22,7 +22,7 @@ categories: [ポケコン, ポケコンリンク]
 </tr>
 <tr>
 <td>
-<a href="http://moenae.net/wiki/">moenae Wiki</a> <img src="//image/arc.gif" alt="[Internet Archive]" /> <a href="http://wayback.archive.org/web/*/jekyll.hp.infoseek.co.jp/">WONDER WITCH LINK SITE!!</a>
+<a href="http://moenae.net/wiki/">moenae Wiki</a> <img src="/images/arc.gif" alt="[Internet Archive]" /> <a href="http://wayback.archive.org/web/*/jekyll.hp.infoseek.co.jp/">WONDER WITCH LINK SITE!!</a>
 </td>
 <td>
 JEKYLL
@@ -62,7 +62,7 @@ UP-C
 </tr>
 <tr>
 <td>
-<a href="http://pocket.free.fr/">the pocket computer museum</a><img src="//image/flag_fr.gif" alt="French Page" /images/flag_eng.gif" alt="English Page" />
+<a href="http://pocket.free.fr/">the pocket computer museum</a><img src="/images/flag_fr.gif" alt="French Page" /><img src="/images/flag_eng.gif" alt="English Page" />
 </td>
 <td>
 The Pocket Museum

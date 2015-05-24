@@ -43,7 +43,7 @@ Windows 95/98/Me, Windows XP でも動作するはず
   
 
 
- [1]: /soft/tool/sclp001d.lzh "sclp001d.lzh"
+ [1]: /files/sclp001d.lzh "sclp001d.lzh"
 
 ## 履歴
 

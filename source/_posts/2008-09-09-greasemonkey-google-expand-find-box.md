@@ -10,4 +10,4 @@ Googleの検索窓を横方向に広げるユーザースクリプトです。
 	  
 [DOWNLOAD][1] 
 
- [1]: /junk/greasemonkey/google_expand_find_box.user.js
+ [1]: /files/google_expand_find_box.user.js

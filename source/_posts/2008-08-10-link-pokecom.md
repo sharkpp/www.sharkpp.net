@@ -10,7 +10,7 @@ COSMO PATROL <img src="/images/sougo.gif" alt="相互リンク" />
 </h3>
 <div>
 <a href="http://orange.kakiko.com/cosmopatrol/"
-><img class="banner" src="/link/cospat.gif" alt="COSMO PATROL" width="171" height="52"
+><img class="banner" src="/images/link-cospat.gif" alt="COSMO PATROL" width="171" height="52"
 /><span title="管理人">咳めぐ さん</span
 ></a>
 </div>
@@ -40,7 +40,7 @@ COSMO PATROL <img src="/images/sougo.gif" alt="相互リンク" />
 </h3>
 <div>
 <a href="http://www.nextftp.com/toshi_home/"
-><img class="banner" src="/link/pokebasho.gif" alt="ポケコンの場所" width="201" height="42"
+><img class="banner" src="/images/link-pokebasho.gif" alt="ポケコンの場所" width="201" height="42"
 /><span title="管理人">Toshiyuki Hirooka さん</span
 ></a>
 </div>
@@ -55,7 +55,7 @@ Toshi's HP <img src="/images/sougo.gif" alt="相互リンク" />
 </h3>
 <div>
 <a href="http://www.r66.7-dj.com/~toshi1/"
-><img class="banner" src="/link/toshi.jpg" alt="Toshi's HP" width="200" height="60"
+><img class="banner" src="/images/link-toshi.jpg" alt="Toshi's HP" width="200" height="60"
 /><span title="管理人">Toshi さん</span
 ></a>
 </div>
@@ -70,7 +70,7 @@ Toshi's HP <img src="/images/sougo.gif" alt="相互リンク" />
 </h3>
 <div>
 <a href="http://yamayasu.org/"
-><img class="banner" src="/link/yamayasunet.png" alt="やまやすネット" width="150" height="50"
+><img class="banner" src="/images/link-yamayasunet.png" alt="やまやすネット" width="150" height="50"
 /><span title="管理人">やまやす さん</span
 ></a>
 </div>
@@ -85,7 +85,7 @@ Toshi's HP <img src="/images/sougo.gif" alt="相互リンク" />
 </h3>
 <div>
 <a href="http://www.k2.dion.ne.jp/~nagai/"
-><img class="banner" src="/link/nobanner_pokecom.gif" alt="ぽけ ガーデン" width="144" height="48"
+><img class="banner" src="/images/link-nobanner_pokecom.gif" alt="ぽけ ガーデン" width="144" height="48"
 /><span title="管理人">ながい さん</span
 ></a>
 </div>
@@ -100,7 +100,7 @@ Toshi's HP <img src="/images/sougo.gif" alt="相互リンク" />
 </h3>
 <div>
 <a href="http://www.geocities.jp/sin_a_mouse/"
-><img class="banner" src="/link/nobanner_pokecom.gif" alt="アップローダー的サイト" width="144" height="48"
+><img class="banner" src="/images/link-nobanner_pokecom.gif" alt="アップローダー的サイト" width="144" height="48"
 /><span title="管理人">FM446 さん</span
 ></a>
 </div>
@@ -115,7 +115,7 @@ Toshi's HP <img src="/images/sougo.gif" alt="相互リンク" />
 </h3>
 <div>
 <a href="http://ha9.seikyou.ne.jp/home/akihi/"
-><img class="banner" src="/link/akihi.gif" alt="秋日和" width="144" height="48"
+><img class="banner" src="/images/link-akihi.gif" alt="秋日和" width="144" height="48"
 /><span title="管理人">あきひ さん</span
 ></a>
 </div>
@@ -145,7 +145,7 @@ Toshi's HP <img src="/images/sougo.gif" alt="相互リンク" />
 </h3>
 <div>
 <a href="http://www.teu.ac.jp/ohshe/~yagshi/pocketcom/"
-><img class="banner" src="/link/nobanner_pokecom.gif" alt="こばやしひろゆき卿之うゑぶぺゐぢ" width="144" height="48"
+><img class="banner" src="/images/link-nobanner_pokecom.gif" alt="こばやしひろゆき卿之うゑぶぺゐぢ" width="144" height="48"
 /><span title="管理人">こばやしひろゆき さん</span
 ></a>
 </div>

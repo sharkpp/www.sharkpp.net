@@ -8,4 +8,4 @@ categories: [がらくた, greasemonkey]
 
 [DOWNLOAD][1] 
 
- [1]: /junk/greasemonkey/vector_download_info_skip.user.js
+ [1]: /files/vector_download_info_skip.user.js

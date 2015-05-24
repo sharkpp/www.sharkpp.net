@@ -5,7 +5,7 @@ categories: [ソフト, Susie]
 
 ---
 
-<div><a href="/soft/susie/ifcl003a.lzh">DOWNLOAD</a> 2004/02/24
+<div><a href="/files/ifcl003a.lzh">DOWNLOAD</a> 2004/02/24
 </div>
 
 <div><p>

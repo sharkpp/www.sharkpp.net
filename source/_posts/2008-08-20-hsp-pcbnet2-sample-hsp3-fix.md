@@ -14,7 +14,7 @@ pcbnet2に付属のサンプルはHSP2の書式で書かれているのでこれ
 
 [DOWNLOAD][1] 
 
- [1]: /hsp/plugin/pcbnet2_sample_hsp3_fix_20080821.zip
+ [1]: /files/pcbnet2_sample_hsp3_fix_20080821.zip
 
 ## 履歴
 

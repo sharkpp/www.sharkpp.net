@@ -7,9 +7,9 @@ categories: [がらくた, パッチ]
 
 RED 氏作の「VFIC」のフォントの大きさを変え見やすくする改造パッチです。
 	  
-ソフト入手先:[Vector][1]{.extlink} 
+ソフト入手先:[Vector][1] 
 
  [1]: http://www.vector.co.jp/soft/win95/util/se151106.html
 
 2004/02/24
-: For Ver.0.73 <a href="/junk/patch/fix_vfic073_r1.lzh">DOWNLOAD</a>
+: For Ver.0.73 <a href="/files/fix_vfic073_r1.lzh">DOWNLOAD</a>

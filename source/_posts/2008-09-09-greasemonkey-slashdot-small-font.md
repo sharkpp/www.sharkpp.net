@@ -10,4 +10,4 @@ slashdot.jpのフォントサイズを縮小するユーザースクリプトで
 	  
 [DOWNLOAD][1] 
 
- [1]: /junk/greasemonkey/slashdot_small_font.user.js
+ [1]: /files/slashdot_small_font.user.js

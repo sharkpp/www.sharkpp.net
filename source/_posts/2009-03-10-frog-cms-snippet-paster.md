@@ -6,14 +6,9 @@ categories: [php, Frog CMS]
 
 ---
 
+![][1]DOWNLOAD</a> 
 
-![tag_assistスクリーンショット][1] 
-
- [1]: /images/snippet_paster_ss_20090610.png
-
-[DOWNLOAD][2] 
-
- [2]: /php/frog-cms/snippet_paster_1.0.0_20090310.zip
+ [1]: /files/snippet_paster_1.0.0_20090310.zip
 
 スニペット貼り付け機能をページ編集に追加します。 
 

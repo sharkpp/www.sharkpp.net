@@ -10,7 +10,7 @@ tumblr.のダッシュボードでの公開オプション(publish/private)を�
 
 ![][1]
 
- [1]: /images/tumblr_easily_modify_publishing.png "スクリーンショット"
+ [1]: /images/2009_0719_tumblr_easily_modify_publishing.png "スクリーンショット"
 
 [DOWNLOAD][2]
 

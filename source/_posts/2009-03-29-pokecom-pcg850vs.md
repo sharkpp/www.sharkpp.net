@@ -101,13 +101,13 @@ DC6V
 液晶<br />コントラスト<br />(DARK→LIGHT)
 </th>
 <td align="center">
-<a href="/pokecom/image/850s_lcd.jpg"><img src="/pokecom/image/850s_lcds.jpg" title="PC-G850Sの液晶画面" /></a>
+<a href="/images/2009_0329_850s_lcd.jpg"><img src="/images/2009_0329_850s_lcds.jpg" title="PC-G850Sの液晶画面" /></a>
 </td>
 <td align="center">
-<a href="/pokecom/image/850v_lcd.jpg"><img src="/pokecom/image/850v_lcds.jpg" title="PC-G850Vの液晶画面" /></a>
+<a href="/images/2009_0329_850v_lcd.jpg"><img src="/images/2009_0329_850v_lcds.jpg" title="PC-G850Vの液晶画面" /></a>
 </td>
 <td align="center">
-<a href="/pokecom/image/850vs_lcd.jpg"><img src="/pokecom/image/850vs_lcds.jpg" title="PC-G850VSの液晶画面" /></a>
+<a href="/images/2009_0329_850vs_lcd.jpg"><img src="/images/2009_0329_850vs_lcds.jpg" title="PC-G850VSの液晶画面" /></a>
 </td>
 </tr>
 <tr>
@@ -115,13 +115,13 @@ DC6V
 梱包箱
 </th>
 <td align="center">
-<a href="/pokecom/image/850s_box.jpg"><img src="/pokecom/image/850s_boxs.jpg" title="PC-G850Sの梱包箱" /></a>
+<a href="/images/2009_0329_850s_box.jpg"><img src="/images/2009_0329_850s_boxs.jpg" title="PC-G850Sの梱包箱" /></a>
 </td>
 <td align="center">
-<a href="/pokecom/image/850v_box.jpg"><img src="/pokecom/image/850v_boxs.jpg" title="PC-G850Vの梱包箱" /></a>
+<a href="/images/2009_0329_850v_box.jpg"><img src="/images/2009_0329_850v_boxs.jpg" title="PC-G850Vの梱包箱" /></a>
 </td>
 <td align="center">
-<a href="/pokecom/image/850vs_box.jpg"><img src="/pokecom/image/850vs_boxs.jpg" title="PC-G850VSの梱包箱" /></a>
+<a href="/images/2009_0329_850vs_box.jpg"><img src="/images/2009_0329_850vs_boxs.jpg" title="PC-G850VSの梱包箱" /></a>
 </td>
 </tr>
 </table>

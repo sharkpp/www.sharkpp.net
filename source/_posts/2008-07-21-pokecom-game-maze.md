@@ -8,90 +8,37 @@ categories: [ポケコン, ポケコン用ゲーム]
 
 ## 画面
 
-
-![動作画面][1] 
-
- [1]: /images/maze.gif
-
-## ルール・ゲームの説明
-
-[Toshi's HP][2](Toshiさん)の迷路自動作成ルーチンを用いた迷路ゲームです
-  
-
-
- [2]: http://www.r66.7-dj.com/~toshi1/
-
-まず、プログラムを実行すると、Hit any key! と表示されるのでスペースキーなどを押してください
-	  
-すると迷路を作成しますので作成が終るまで待っていてください
-  
-
-
-**地図**
-	  
-左上にある矢印は現在の地図上での進行方向を示しています。
-	  
-地図上に最初から存在している白抜きの点はKEYがある場所です
-	  
-まず最初にここを目指してください
-	  
-KEYを取ると次に地図のふちのどこかに出口が現れますので<!-- 底 -->そこに到達したらゲームクリアです 
-
-## 操作説明
-
-↑キーで上
-	  
-↓キーで下
-	  
-←キーで左
-	  
-→キーで右にそれぞれ進みます
-	  
-スペースキーで地図を表示します
-  
-
-
-## 動作環境
-
-![C言語][3]プログラム
-	  
-PC-G850Sで動作確認済み 
-
- [3]: ../image/c.gif
-
-## プログラム
-
-[DOWNLOAD][4] : maze.txt
+![][1]DOWNLOAD</a> : maze.txt
 	  
 ※さらに以下のファイルが必要です
   
 
 
- [4]: /pokecom/game/maze.txt "maze.txt"
+ [1]: /files/maze.txt "maze.txt"
 
-[DOWNLOAD][5] : inkey.h
+[DOWNLOAD][2] : inkey.h
 	  
-[DOWNLOAD][6] : rand.h
+[DOWNLOAD][3] : rand.h
 	  
 ※ポケコンでは拡張子を .h として保存してください。
   
 
 
- [5]: /pokecom/game/../program/inkey.h "inkey.h"
- [6]: /pokecom/game/../program/rand.h "rand.h"
+ [2]: /files/inkey.h "inkey.h"
+ [3]: /files/rand.h "rand.h"
 
-[DOWNLOAD][7] : Winows版デモ
+[DOWNLOAD][4] : Winows版デモ
 	  
 <span>※同梱の Readme.txt をよく読んでください
 </span> 
 
- [7]: /pokecom/game/maze.zip "maze.zip(Winows版デモ)"
+ [4]: /files/maze.zip "maze.zip(Winows版デモ)"
 
-[DOWNLOAD][8] : ポケコン風ダンプリスト
+[DOWNLOAD][5] : ポケコン風ダンプリスト
   
 
 
- [8]: maze_.txt "maze_.txt"
+ [5]: maze_.txt "maze_.txt"
 
 ## 履歴
 

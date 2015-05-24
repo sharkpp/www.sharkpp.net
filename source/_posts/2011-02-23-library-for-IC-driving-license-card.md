@@ -15,4 +15,4 @@ categories: [ブログ]
 
 [ダウンロード][1]
 
- [1]: /soft/tool/icdl_20110223.zip "libicdl"
+ [1]: /files/icdl_20110223.zip "libicdl"

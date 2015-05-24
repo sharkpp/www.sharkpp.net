@@ -105,7 +105,7 @@ FX-890P,Z-1,Z-1GR
 </tr>
 <tr>
 <td>
-<a href="http://www.itkp.uni-bonn.de/~wichmann/">Andreas Wichmann's Webpages</a><img src="//image/flag_eng.gif" alt="English Page" /><br /><a href="http://www.itkp.uni-bonn.de/~wichmann/pb1000.html">The Casio PB-1000 Homepage</a>
+<a href="http://www.itkp.uni-bonn.de/~wichmann/">Andreas Wichmann's Webpages</a><img src="/images/flag_eng.gif" alt="English Page" /><br /><a href="http://www.itkp.uni-bonn.de/~wichmann/pb1000.html">The Casio PB-1000 Homepage</a>
 </td>
 <td>
 Andreas Wichmann
@@ -187,7 +187,7 @@ PB-100
 </tr>
 <tr>
 <td>
-<a href="http://www.pisi.com.pl/piotr433/">Vintage programmable calculators</a><img src="//image/flag_eng.gif" alt="English Page" />
+<a href="http://www.pisi.com.pl/piotr433/">Vintage programmable calculators</a><img src="/images/flag_eng.gif" alt="English Page" />
 </td>
 <td>
 Piotr Piatek

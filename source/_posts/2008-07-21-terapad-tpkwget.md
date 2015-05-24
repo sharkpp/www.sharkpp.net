@@ -102,7 +102,7 @@ TeraPad が必要です。
   
 
 
- [1]: /soft/tptool/tpkwg000.lzh "tpkwg000.lzh"
+ [1]: /files/tpkwg000.lzh "tpkwg000.lzh"
 
 ## 履歴
 

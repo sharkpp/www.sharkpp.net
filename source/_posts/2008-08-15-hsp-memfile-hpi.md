@@ -41,7 +41,7 @@ Windows XP/Vista(2000は未検証)
 
 [DOWNLOAD][1] 
 
- [1]: /hsp/plugin/memfile001.zip
+ [1]: /files/memfile001.zip
 
 ## 履歴
 

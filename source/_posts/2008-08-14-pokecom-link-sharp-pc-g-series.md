@@ -104,7 +104,7 @@ PC-G850
 </tr>
 <tr>
 <td>
-<img src="//image/arc.gif" alt="[Internet Archive]" /> <a href="http://web.archive.org/web/*/to-rinuke.hp.infoseek.co.jp/850/index.html">工房雅</a>
+<img src="/images/arc.gif" alt="[Internet Archive]" /> <a href="http://web.archive.org/web/*/to-rinuke.hp.infoseek.co.jp/850/index.html">工房雅</a>
 </td>
 <td>
 工房雅
@@ -118,7 +118,7 @@ PC-G850
 </tr>
 <tr>
 <td>
-<img src="//image/arc.gif" alt="[Internet Archive]" /> <a href="http://wayback.archive.org/web/*/zefiro.ath.cx/">ZefiroAthCx</a>
+<img src="/images/arc.gif" alt="[Internet Archive]" /> <a href="http://wayback.archive.org/web/*/zefiro.ath.cx/">ZefiroAthCx</a>
 </td>
 <td>
 Zefiro
@@ -159,7 +159,7 @@ PC-G850系
 </tr>
 <tr>
 <td>
-<img src="//image/arc.gif" alt="[Internet Archive]" /> <a href="http://wayback.archive.org/web/*/www.r66.7-dj.com/~toshi1/">Toshi's HP</a><!-- http://www.infoaomori.ne.jp/~toshi1/index2.html -->
+<img src="/images/arc.gif" alt="[Internet Archive]" /> <a href="http://wayback.archive.org/web/*/www.r66.7-dj.com/~toshi1/">Toshi's HP</a><!-- http://www.infoaomori.ne.jp/~toshi1/index2.html -->
 </td>
 <td>
 Toshi
@@ -200,7 +200,7 @@ PC-G850S
 </tr>
 <tr>
 <td>
-<img src="//image/arc.gif" alt="[Internet Archive]" /> <a href="http://wayback.archive.org/web/*/one.usj.to/g850v/">ポケコンなページ</a>
+<img src="/images/arc.gif" alt="[Internet Archive]" /> <a href="http://wayback.archive.org/web/*/one.usj.to/g850v/">ポケコンなページ</a>
 </td>
 <td>
 kato
@@ -325,7 +325,7 @@ PC-G850
 </tr>
 <tr>
 <td>
-<img src="//image/arc.gif" alt="[Internet Archive]" /> <a href="http://web.archive.org/web/*/ww6.tiki.ne.jp/~finn/omake/teasino/Index1.htm">teasino lightweight-assemble ME</a>
+<img src="/images/arc.gif" alt="[Internet Archive]" /> <a href="http://web.archive.org/web/*/ww6.tiki.ne.jp/~finn/omake/teasino/Index1.htm">teasino lightweight-assemble ME</a>
 </td>
 <td>
 teasino
@@ -339,7 +339,7 @@ PC-E500系,PC-G800系
 </tr>
 <tr>
 <td>
-<img src="//image/arc.gif" alt="[Internet Archive]" /> <a href="http://web.archive.org/web/*/www4.ocn.ne.jp/~jiro-net/">Manislla Workshop 2000</a>
+<img src="/images/arc.gif" alt="[Internet Archive]" /> <a href="http://web.archive.org/web/*/www4.ocn.ne.jp/~jiro-net/">Manislla Workshop 2000</a>
 </td>
 <td>
 Jiro
@@ -353,7 +353,7 @@ C言語・閉鎖
 </tr>
 <tr>
 <td>
-<img src="//image/arc.gif" alt="[Internet Archive]" /> <a href="http://web.archive.org/web/*/www.medianetjapan.com/2/17/internet_computer/syouta/">ポケ部屋</a>
+<img src="/images/arc.gif" alt="[Internet Archive]" /> <a href="http://web.archive.org/web/*/www.medianetjapan.com/2/17/internet_computer/syouta/">ポケ部屋</a>
 </td>
 <td>
 笹原翔太
@@ -367,7 +367,7 @@ PC-G850系？
 </tr>
 <tr>
 <td>
-<a href="http://freett.com/hazy/">未完成な張りぼて</a><br /images/arc.gif" alt="[Internet Archive]" /> <a href="http://web.archive.org/web/*hh_/freett.com/hazy/">未完成な張りぼて</a>
+<a href="http://freett.com/hazy/">未完成な張りぼて</a><br /><img src="/images/arc.gif" alt="[Internet Archive]" /> <a href="http://web.archive.org/web/*hh_/freett.com/hazy/">未完成な張りぼて</a>
 </td>
 <td>
 朧
@@ -381,7 +381,7 @@ PC-G850
 </tr>
 <tr>
 <td>
-<img src="//image/arc.gif" alt="[Internet Archive]" /images/arc.gif" alt="[Internet Archive]" /> <a href="http://web.archive.org/web/*/homepage3.nifty.com/kisinkaisdo/pokecom/pokecomtop.html">Pocket computer Hacking Site</a>
+<img src="/images/arc.gif" alt="[Internet Archive]" /> <a href="http://web.archive.org/web/*/homepage3.nifty.com/kisinkaisdo/">Sdoと愉快な仲間たち</a><br /><img src="/images/arc.gif" alt="[Internet Archive]" /> <a href="http://web.archive.org/web/*/homepage3.nifty.com/kisinkaisdo/pokecom/pokecomtop.html">Pocket computer Hacking Site</a>
 </td>
 <td>
 Sdo
@@ -395,7 +395,7 @@ PC-G850
 </tr>
 <tr>
 <td>
-<img src="//image/arc.gif" alt="[Internet Archive]" /images/arc.gif" alt="[Internet Archive]" /> <a href="http://wayback.archive.org/web/*/www.geocities.jp/gw_robot/">GOLDEN WORKS(新)</a>
+<img src="/images/arc.gif" alt="[Internet Archive]" /> <a href="http://wayback.archive.org/web/*/www7.ocn.ne.jp/~golden00/">GOLDEN WORKS(旧)</a><br /><img src="/images/arc.gif" alt="[Internet Archive]" /> <a href="http://wayback.archive.org/web/*/www.geocities.jp/gw_robot/">GOLDEN WORKS(新)</a>
 </td>
 <td>
 GOLDEN
@@ -409,7 +409,7 @@ PC-G850S,G850V
 </tr>
 <tr>
 <td>
-<img src="//image/arc.gif" alt="[Internet Archive]" /> <a href="http://web.archive.org/web/*/tailcat.hp.infoseek.co.jp/soft/">PocketComputer</a>
+<img src="/images/arc.gif" alt="[Internet Archive]" /> <a href="http://web.archive.org/web/*/tailcat.hp.infoseek.co.jp/soft/">PocketComputer</a>
 </td>
 <td>
 TailCat

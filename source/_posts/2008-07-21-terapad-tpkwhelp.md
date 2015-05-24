@@ -104,7 +104,7 @@ TeraPad が必要です。
   
 
 
- [1]: /soft/tptool/tpkwh002.lzh "tpkwh002.lzh"
+ [1]: /files/tpkwh002.lzh "tpkwh002.lzh"
 
 ## 履歴
 

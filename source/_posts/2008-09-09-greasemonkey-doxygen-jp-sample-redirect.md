@@ -10,4 +10,4 @@ doxygen.jpのマニュアルからリンクされているサンプルはリン�
 	  
 [DOWNLOAD][1] 
 
- [1]: /junk/greasemonkey/doxygen_jp_sample_redirect.user.js
+ [1]: /files/doxygen_jp_sample_redirect.user.js

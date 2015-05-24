@@ -10,4 +10,4 @@ HSPコンテスト2008のロゴを置換するユーザースクリプトです�
 	  
 [DOWNLOAD][1] 
 
- [1]: /junk/greasemonkey/hspcontest_2008_logo_change.user.js
+ [1]: /files/hspcontest_2008_logo_change.user.js

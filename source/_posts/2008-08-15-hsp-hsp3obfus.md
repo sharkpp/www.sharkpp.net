@@ -45,7 +45,7 @@ Windows 2000以降
 
 [DOWNLOAD][1] 
 
- [1]: /hsp/tool/hsp3obfus101.zip
+ [1]: /files/hsp3obfus101.zip
 
 ## 履歴
 

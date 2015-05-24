@@ -10,4 +10,4 @@ HSP3掲示板にコメントとして書かれているIPアドレスを画面�
 	  
 [DOWNLOAD][1] 
 
- [1]: /junk/greasemonkey/hsp3bbs_ip_display.user.js
+ [1]: /files/hsp3bbs_ip_display.user.js

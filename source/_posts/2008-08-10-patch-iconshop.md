@@ -12,4 +12,4 @@ Lion Tech 氏作の「IconShop」を日本語化します。
  [1]: http://users.pandora.be/liontech/ "LionTech"
 
 2004/02/24
-: For Ver.1.13 <a href="/junk/patch/jp_ishop113_r1.lzh">DOWNLOAD</a>
+: For Ver.1.13 <a href="/files/jp_ishop113_r1.lzh">DOWNLOAD</a>

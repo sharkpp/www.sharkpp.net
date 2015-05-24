@@ -11,4 +11,4 @@ categories: [がらくた, サクラエディタ]
 	  
 [DOWNLOAD][1] 
 
- [1]: /junk/sakura-editor/sakura-editor-php-keyword-20090308.zip
+ [1]: /files/sakura-editor-php-keyword-20090308.zip

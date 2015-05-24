@@ -5,7 +5,7 @@ categories: [がらくた, uwsc]
 
 ---
 
-Dot Painter ALFAR([ELF's Software][1]{.extlink})で画像の切り出し操作を自動で行うスクリプトです。 
+Dot Painter ALFAR([ELF's Software][1])で画像の切り出し操作を自動で行うスクリプトです。 
 
  [1]: http://www.interq.or.jp/www1/helohelo/elf/
 
@@ -18,4 +18,4 @@ Dot Painter ALFAR([ELF's Software][1]{.extlink})で画像の切り出し操作�
   * 保存先などは適当に変えてください
 
 2004/04/25
-: <a href="/junk/uwsc/alcut.uws">DOWNLOAD</a>
+: <a href="/files/alcut.uws">DOWNLOAD</a>

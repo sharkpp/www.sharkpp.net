@@ -65,7 +65,7 @@ $redirect = array();
 $redirect["pokecom/pclink.html"] = 'blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3%E3%83%AA%E3%83%B3%E3%82%AF';
 $redirect["junk/sakura-editor.html"] = 'blog/categories/%E3%82%B5%E3%82%AF%E3%83%A9%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF';
 $redirect["pokecom/lecture.html"] = 'blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3%E8%AC%9B%E5%BA%A7';
-$redirect["gallery/icon.html"] = 'graffiti.html';
+$redirect["gallery/icon.html"] = 'graffiti';
 $redirect["junk/spal.html"] = 'blog/categories/SpoilerAL';
 $redirect["hsp/plugin.html"] = 'blog/categories/HSP%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3';
 $redirect["pokecom/program.html"] = 'blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3%E7%94%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0';
@@ -78,14 +78,14 @@ $redirect["junk/greasemonkey.html"] = 'blog/categories/greasemonkey';
 $redirect["soft/game.html"] = 'blog/categories/%E3%82%BD%E3%83%95%E3%83%88';
 $redirect["hsp/module.html"] = 'blog/categories/HSP%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB';
 $redirect["pokecom/game.html"] = 'blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3%E7%94%A8%E3%82%B2%E3%83%BC%E3%83%A0';
-$redirect["gallery.html"] = 'graffiti.html';
-$redirect["gallery/graffiti.html"] = 'graffiti.html';
+$redirect["gallery.html"] = 'graffiti';
+$redirect["gallery/graffiti.html"] = 'graffiti';
 $redirect["php/frog-cms.html"] = 'blog/categories/Frog%20CMS';
 $redirect["hsp.html"] = 'blog/categories/HSP';
 $redirect["hsp/tool.html"] = 'blog/categories/HSP%E7%94%A8%E3%83%84%E3%83%BC%E3%83%AB';
 $redirect["php/rhaco.html"] = 'blog/categories/rhaco';
 $redirect["soft/tool.html"] = 'blog/categories/%E3%83%84%E3%83%BC%E3%83%AB';
-$redirect["gallery/scenery.html"] = 'graffiti.html';
+$redirect["gallery/scenery.html"] = 'graffiti';
 $redirect["php/library.html"] = 'blog/categories/php';
 $redirect["hsp/openhsp.html"] = 'blog/categories/HSP';
 $redirect["hobby.html"] = 'blog/categories';
@@ -262,6 +262,7 @@ foreach ($files as $path) {
 	$html = preg_replace('| slt="|ms', ' alt="', $html);
 
 	// fix link
+	$html = preg_replace('!(http://www.sharkpp.net/)/!', '$1', $html);
 	$html = preg_replace('!href="http://www.sharkpp.net/blog/([0-9]{4})/([0-9]{2})/([0-9]{2})/(.+?)\.html"!', 'href="/blog/$1/$2/$3/$4.html"', $html);
 	$html = preg_replace('!href="/blog/([0-9]{4})/([0-9]{2})/([0-9]{2})/(.+?)\.html"!', 'href="/blog/$1/$2/$3/$4.html"', $html);
 	$html = preg_replace('!href="(/blog/.+?\.html)\.html"!', 'href="$1"', $html);
@@ -272,19 +273,27 @@ foreach ($files as $path) {
 	$html = preg_replace('!src="http://www.sharkpp.net/(.+?)"!', 'src="/$1"', $html);
 	$html = preg_replace('!"(julius\.sourceforge\.jp/)"!', '"http://$1"', $html);
 	$html = preg_replace('!"\[http!', '"http', $html);
+	$html = preg_replace('!pokecom/program/../lecture!', 'pokecom/lecture', $html);
+	$html = preg_replace('!hsp/plugin/../pcbsoft!', 'hsp/pcbsoft', $html);
 
 	$html = preg_replace('!href="/blog/2011/10/02/(.+?)"!', 'href="/blog/2011/10/30/$1"', $html);
-	$html = preg_replace('!href="/blog/2010/01/01/(.+?)"!', 'href="/blog/2011/01/01/$1"', $html);
+	$html = preg_replace('!href="/blog/2010/01/01/(.+?2011.+?)"!', 'href="/blog/2011/01/01/$1"', $html);
 	$html = preg_replace('!href="/blog/2012/01/01/(.+?)"!', 'href="/blog/2012/01/05/$1"', $html);
+
+	$html = preg_replace('!"/.+?/([^/]+?\.(zip|lzh|txt|h|c|hsp|as|js|reg|uws))"!ms', '"/files/$1"', $html);
+	
+	$html = str_replace('google_trands_insert_graph.png', 'google_trends_insert_graph.png', $html);
 
 	// fix image
 	$html = preg_replace('!<a +href="([^/h][^"]+)"[^>]+?title="(.+?)".*?><img src="([^/h][^"]+)"[^>]+?alt="(.+?)".*?/></a>!',
 	                     '<a href="/'.dirname($curpath).'/$1"><img src="/'.dirname($curpath).'/$3" title="$4" /></a>', $html);
 	$html = preg_replace('!<a +href="/([^"]+)"[^>]+?title="(.+?)".*?><img src="/([^"]+)"[^>]+?alt="(.+?)".*?/></a>!',
 	                     '<a href="/$1"><img src="/$3" alt="$4" /></a>', $html);
-	$html = preg_replace('!<img src="([^"]+)"[^>]+?alt="(.+?)".*?/>!',
+	$html = preg_replace('!<img src="([^"]+?)".+?alt="(.+?)".*?/>!',
 	                     '<img src="$1" alt="$2" />', $html);
 	$html = preg_replace('!http://www.sharkpp.net/image!', 'http://www.sharkpp.net/images', $html);
+	$html = preg_replace('!"(\.\./image|image)/c\.gif"!', '"/pokecom/image/c.gif"', $html);
+	$html = preg_replace('!"(image/(banner|sougo)\.gif)"!', '"/$1"', $html);
 
 	$html = preg_replace('!<div class="section">(.+?)</div>!ms', '$1', $html);
 	$html = preg_replace('!<div class="footnote">(.+?)</div>!ms', '$1', $html);
@@ -298,38 +307,60 @@ foreach ($files as $path) {
 	unset($md);
 
 	// イメージ移動
-	$markdown = preg_replace_callback('! /(.+?\.(jpg|gif|png))!', function($m) use (& $cp, $dpath, $curpath) {
+//	$markdown = preg_replace_callback('!([ "])([^/].+?\.(jpg|gif|png))!', function($m) use (& $cp, $dpath, $curpath) {
+//			if (preg_match('!^http!', $m[2]))
+//				return $m[0];
+//			$dst = dirname($curpath).'/'.$m[2];
+//			return $m[1].$dst;
+//		}, $markdown);
+	$markdown = preg_replace_callback('!([ "])/([^"[]+?\.(jpg|gif|png))!ms', function($m) use (& $cp, $dpath, $curpath) {
 			$page_date = '';
 			if (preg_match('!^(.+?)/([0-9]{4})/([0-9]{2})/([0-9]{2})/[^/]+?$!', $curpath, $mm)) {
 				$page_date = $mm[2].'_'.$mm[3].$mm[4].'_';
+			} else if (preg_match('!^(.+?)/([0-9]{4})-([0-9]{2})-([0-9]{2})-.+?$!', $dpath, $mm)) {
+				$page_date = $mm[2].'_'.$mm[3].$mm[4].'_';
 			}
-			if (preg_match('!^(.+?)/([0-9]{4})_?([0-9]{2})([0-9]{2})_([^/]+)$!', $m[1], $mm)) {
+			if (preg_match('!^(.+?)/([0-9]{4})_?([0-9]{2})([0-9]{2})_([^/]+)$!', $m[2], $mm)) {
 				$dst = sprintf('/images/%s_%s%s_%s', $mm[2], $mm[3], $mm[4], $mm[5]);
+			} else if (preg_match('!link/!', $m[2])) {
+				$dst = sprintf('/images/link-%s', basename($m[2]));
+			} else if (preg_match('!pokecom/image/c.gif!', $m[2])) {
+				$dst = sprintf('/images/pokecom-%s', basename($m[2]));
+			} else if (preg_match('!^image/!', $m[2])) {
+				$dst = sprintf('/images/%s', basename($m[2]));
 			} else {
-				$dst = sprintf('/images/%s%s', $page_date, basename($m[1]));
+				$dst = sprintf('/images/%s%s', $page_date, basename($m[2]));
 			}
-			if (preg_match('!/blog/!', $dpath))
-				$cp[] = array('from' => 'html/'.$m[1], 'to' => 'markdown'.$dst);
-			return ' '.$dst;
-		}, $markdown);
-	$markdown = preg_replace_callback('!([ "])(image/.+?\.(jpg|gif|png))!', function($m) use (& $cp, $dpath, $curpath) {
-			$dst = sprintf('/images/%s', basename($m[2]));
-			$cp[] = array('from' => 'html/'.$m[2], 'to' => 'markdown'.$dst);
+			if (preg_match('!/(blog|_statics)/!', $dpath))
+				$cp[] = array('from' => 'html/'.$m[2], 'to' => 'markdown'.$dst);
 			return $m[1].$dst;
 		}, $markdown);
-
-	// 定義済みリストをMarkdownに変換
-	$markdown = preg_replace_callback('!<dl.*?>(.+?)</dl>!ms', function($m) {
-			return
-				preg_replace('!\s*<dt.*?>\s*(.+?)\s*</dt>\s*<dd.*?>\s*(.+?)\s*</dd>\s*!ms', "$1\n: $2\n\n", $m[1]);
-		}, $markdown);
+//	$markdown = preg_replace_callback('!([ "])(/?image/.+?\.(jpg|gif|png))!', function($m) use (& $cp, $dpath, $curpath) {
+//			$dst = sprintf('/images/%s', basename($m[2]));
+//			$cp[] = array('from' => 'html/'.$m[2], 'to' => 'markdown'.$dst);
+//			return $m[1].$dst;
+//		}, $markdown);
+//	$markdown = preg_replace_callback('!([ "])(/pokecom/image/.+?\.(jpg|gif|png))!', function($m) use (& $cp, $dpath, $curpath) {
+//			$dst = sprintf('/images/pokecom_%s', basename($m[2]));
+//			$cp[] = array('from' => 'html/'.$m[2], 'to' => 'markdown'.$dst);
+//			return $m[1].$dst;
+//		}, $markdown);
+//	$markdown = preg_replace_callback('!([ "])(/link/.+?\.(jpg|gif|png))!', function($m) use (& $cp, $dpath, $curpath) {
+//			$dst = sprintf('/images/link_%s', basename($m[2]));
+//			$cp[] = array('from' => 'html/'.$m[2], 'to' => 'markdown'.$dst);
+//			return $m[1].$dst;
+//		}, $markdown);
 
 	// fix broken
 	$markdown = preg_replace('!(<iframe.+?)/>!ms', '$1></iframe>', $markdown);
+	$markdown = preg_replace('!\{.extlink\}!ms', '', $markdown);
+	$markdown = preg_replace('!<img src=".+?ent.gif" alt="ENTER" />!', '<i class="fa fa-reply fa-flip-vertical"></i>', $markdown);
 
 	// fix link
 	foreach ($path_replace as $from => $to)
-		$markdown = str_replace($from, $to, $markdown);
+		$markdown = str_replace('/'.$from, '/'.$to, $markdown);
+//	$markdown = preg_replace('! /.+?/([^/]+?\.(zip|lzh|txt|h|c|hsp|as|js|reg))$!ms', ' /files/$1', $markdown);
+//	$markdown = preg_replace('! /.+?/([^/]+?\.(zip|lzh|txt|hsp|as|js|reg)) !ms', ' /files/$1 ', $markdown);
 
 	// タグのインデントをなくす
 	$markdown = preg_replace_callback('!^(<([a-z]+).*?>)(.+?)(</\2>)!ms', function($m) {
@@ -338,6 +369,12 @@ foreach ($files as $path) {
 				if ('' != trim($l))
 					$a .= ltrim($l)."\n";
 			return $m[1].$a.$m[4];
+		}, $markdown);
+
+	// 定義済みリストをMarkdownに変換
+	$markdown = preg_replace_callback('!<dl.*?>(.+?)</dl>!ms', function($m) {
+			return
+				preg_replace('!\s*<dt.*?>\s*(.+?)\s*</dt>\s*<dd.*?>\s*(.+?)\s*</dd>\s*!ms', "$1\n: $2\n\n", $m[1]);
 		}, $markdown);
 
 	// アノテーション追加
@@ -364,11 +401,11 @@ foreach ($files as $path) {
 
 	@mkdir(dirname($dpath), 0777, true);
 	file_put_contents($dpath, $markdown);
-//	file_put_contents($dpath.'.html', $html);
+//	if(preg_match('!pokecom-link-sharp-other!', $dpath)) file_put_contents($dpath.'.html', $html);
 
 //	echo sprintf('conv %s -> %s', $path, $dpath).PHP_EOL;
 }
-
+//print_r($cp);
 @ mkdir('markdown/images');
 foreach ($cp as $cp_once) {
 	if (!is_dir(dirname($cp_once['to'])))
