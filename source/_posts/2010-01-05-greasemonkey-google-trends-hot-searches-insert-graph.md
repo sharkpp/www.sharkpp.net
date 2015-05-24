@@ -1,6 +1,7 @@
 ---
 title: "Google Trends Hot Searches insert Graph"
 date: 2010-01-05 01:16:00
+tags: [Greasemonkey, Userscript]
 categories: [がらくた, greasemonkey]
 
 ---

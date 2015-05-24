@@ -25,4 +25,4 @@ categories: [ブログ]
 
 Frog CMS関連のページから[トラックバックプラグイン][1]をダウンロードできます。
 
- [1]: /php/frog-cms/trackback-plugin
+ [1]: /blog/2008/09/08/frog-cms-trackback-plugin.html

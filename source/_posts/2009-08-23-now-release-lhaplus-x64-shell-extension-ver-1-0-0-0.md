@@ -16,4 +16,4 @@ DLLなし圧縮・解凍ソフト [Lhaplus][1] の 64bit版Windows用シェル�
 
 ダウンロードは、[ツール][2]からどうぞ
 
- [2]: /soft/tool
+ [2]: /blog/categories/%E3%83%84%E3%83%BC%E3%83%AB

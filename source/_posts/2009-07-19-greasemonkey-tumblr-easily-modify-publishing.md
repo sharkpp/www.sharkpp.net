@@ -1,6 +1,7 @@
 ---
 title: "tumblr easily modify publishing"
 date: 2009-07-19 23:31:00
+tags: [Greasemonkey, Userscript]
 categories: [がらくた, greasemonkey]
 
 ---

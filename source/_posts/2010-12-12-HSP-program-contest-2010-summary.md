@@ -16,4 +16,4 @@ categories: [ブログ]
 
 [HSPプログラムコンテスト統計][2]からどうぞ
 
- [2]: /hsp/HSP-program-contest-summary.html "HSPプログラムコンテスト統計"
+ [2]: /blog/2010/12/12/HSP-program-contest-summary.html "HSPプログラムコンテスト統計"

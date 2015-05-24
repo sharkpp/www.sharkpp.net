@@ -16,7 +16,7 @@ categories: [ブログ]
 
 [落書き][1]
 
- [1]: /gallery/graffiti
+ [1]: /graffiti.html
 
 あと、休眠状態だったpixivアカウントに投稿してます。
 

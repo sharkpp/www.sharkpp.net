@@ -729,5 +729,5 @@ o
 
 
 
-<div class="siblings_navigation">前 | C言語講座 第一回 キー入力 | <a href="/pokecom/lecture/02_file_size_compact" title="C言語講座 第二回 ファイルサイズの縮小" >次</a>
+<div class="siblings_navigation">前 | C言語講座 第一回 キー入力 | <a href="/blog/2008/07/20/pokecom-lecture-02-file-size-compact.html" title="C言語講座 第二回 ファイルサイズの縮小" >次</a>
 </div>

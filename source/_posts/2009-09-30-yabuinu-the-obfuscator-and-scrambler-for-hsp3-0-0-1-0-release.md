@@ -16,4 +16,4 @@ HSP3の他バージョン用も簡単に実装できそうですが、とりあ�
 
 [”yabuinu” 難読化＆独自スクランブル ツール for HSP 3.x][1]
 
- [1]: http:/hsp/tool/yabuinu.html "”yabuinu” 難読化＆独自スクランブル ツール for HSP 3.x"
+ [1]: http:/blog/2009/09/30/hsp-yabuinu.html "”yabuinu” 難読化＆独自スクランブル ツール for HSP 3.x"

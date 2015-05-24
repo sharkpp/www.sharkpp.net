@@ -61,6 +61,51 @@ function ucwords_($string)
 } 
 
 $cp = array();
+$redirect = array();
+$redirect["pokecom/pclink.html"] = 'blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3%E3%83%AA%E3%83%B3%E3%82%AF';
+$redirect["junk/sakura-editor.html"] = 'blog/categories/%E3%82%B5%E3%82%AF%E3%83%A9%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF';
+$redirect["pokecom/lecture.html"] = 'blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3%E8%AC%9B%E5%BA%A7';
+$redirect["gallery/icon.html"] = 'graffiti.html';
+$redirect["junk/spal.html"] = 'blog/categories/SpoilerAL';
+$redirect["hsp/plugin.html"] = 'blog/categories/HSP%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3';
+$redirect["pokecom/program.html"] = 'blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3%E7%94%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0';
+$redirect["pokecom.html"] = 'blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3';
+$redirect["php.html"] = 'blog/categories/php';
+$redirect["junk/uwsc.html"] = 'blog/categories/uwsc';
+$redirect["junk.html"] = 'blog/categories/%E3%81%8C%E3%82%89%E3%81%8F%E3%81%9F';
+$redirect["junk/patch.html"] = 'blog/categories/%E3%83%91%E3%83%83%E3%83%81';
+$redirect["junk/greasemonkey.html"] = 'blog/categories/greasemonkey';
+$redirect["soft/game.html"] = 'blog/categories/%E3%82%BD%E3%83%95%E3%83%88';
+$redirect["hsp/module.html"] = 'blog/categories/HSP%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB';
+$redirect["pokecom/game.html"] = 'blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3%E7%94%A8%E3%82%B2%E3%83%BC%E3%83%A0';
+$redirect["gallery.html"] = 'graffiti.html';
+$redirect["gallery/graffiti.html"] = 'graffiti.html';
+$redirect["php/frog-cms.html"] = 'blog/categories/Frog%20CMS';
+$redirect["hsp.html"] = 'blog/categories/HSP';
+$redirect["hsp/tool.html"] = 'blog/categories/HSP%E7%94%A8%E3%83%84%E3%83%BC%E3%83%AB';
+$redirect["php/rhaco.html"] = 'blog/categories/rhaco';
+$redirect["soft/tool.html"] = 'blog/categories/%E3%83%84%E3%83%BC%E3%83%AB';
+$redirect["gallery/scenery.html"] = 'graffiti.html';
+$redirect["php/library.html"] = 'blog/categories/php';
+$redirect["hsp/openhsp.html"] = 'blog/categories/HSP';
+$redirect["hobby.html"] = 'blog/categories';
+$redirect["history.html"] = 'blog';
+$redirect["history/2004.html"] = 'blog';
+$redirect["history/2005.html"] = 'blog';
+$redirect["history/2006.html"] = 'blog';
+$redirect["history/2007.html"] = 'blog';
+$redirect["history/2008.html"] = 'blog';
+$redirect["history/2009.html"] = 'blog';
+$redirect["history/2010.html"] = 'blog';
+$redirect["history/2011.html"] = 'blog';
+
+$path_replace = array();
+$tmp = @ file_get_contents('last_htaccess.txt');
+$tmp = str_replace("\r", "\n", str_replace("\r\n", "\n", $tmp));
+foreach (explode("\n", $tmp) as $line) {
+	if (preg_match('!Redirect permanent /([^\s]+)\s+http://[^/]+/(.+)!', $line, $m))
+		$path_replace[$m[1]] = $m[2];
+}
 
 $base_path = 'html';
 $files = scandir_r($base_path);
@@ -68,7 +113,10 @@ foreach ($files as $path) {
 	if (!preg_match('!\.html$!', $path))
 		continue;
 	if (preg_match('!index\.html!', $path) ||
-		preg_match('!/history/.+$!', $path))
+		preg_match('!/history/.+$!', $path) ||
+		preg_match('!/hobby\.html+$!', $path))
+		continue;
+	if (is_dir(str_replace('.html', '', $path))) // ディレクトリ名と同じファイル名の場合は無視する
 		continue;
 
 	$dpath = preg_replace('!^[^/]+/(.+)\..+$!', 'markdown/\1.md', $path);
@@ -80,7 +128,15 @@ foreach ($files as $path) {
 	$dpath = str_replace('openhsp/nightly','openhsp-nightly', $dpath);
 	$dpath = str_replace('hsp/tool','hsp/hsptool', $dpath);
 	$dpath = str_replace('php/library','php', $dpath);
+	$dpath = preg_replace('!pokecom/([^/]+)/([^/]+)!','pokecom/$1/pokecom-$1-$2', $dpath);
 	$dpath = preg_replace('!pokecom/([^/]+)!','pokecom/pokecom-$1', $dpath);
+	$dpath = preg_replace('!pokecom-pclink!','pokecom-link', $dpath);
+	$dpath = preg_replace('!junk/([^/]+)/([^/]+)$!','junk/$1/$1-$2', $dpath);
+	$dpath = preg_replace('!php/([^/]+)/([^/]+)$!','php/$1/$1-$2', $dpath);
+	$dpath = preg_replace('!/link/([^/]+)!','/link/link-$1', $dpath);
+	$dpath = preg_replace('!soft/(susie|abc|cotton)/!','soft/$1/$1-', $dpath);
+	$dpath = preg_replace('!soft/(tptool)/!','soft/$1/terapad-', $dpath);
+	$dpath = preg_replace('!hsp/([^/]+)/([^/]+)$!','hsp/$1/hsp-$2', $dpath);
 
 	$tags = array();
 	$categories = array();
@@ -110,6 +166,7 @@ foreach ($files as $path) {
 		if ('hsptool' == $k) { $k = 'HSP用ツール'; $tags[] = 'HSP'; }
 		if ('module' == $k) { $k = 'HSPモジュール'; $tags[] = 'HSP'; }
 		if ('pokecom-pclink' == $k) { $k = 'ポケコンリンク'; $tags[] = 'ポケコン'; }
+		if ('pokecom-link' == $k) { $k = 'ポケコンリンク'; $tags[] = 'ポケコン'; }
 		if ('pokecom-program' == $k) { $k = 'ポケコン用プログラム'; $tags[] = 'ポケコン'; }
 		if ('pokecom-game' == $k) { $k = 'ポケコン用ゲーム'; $tags[] = 'ポケコン'; }
 		if ('pokecom-lecture' == $k) { $k = 'ポケコン講座'; $tags[] = 'ポケコン'; }
@@ -118,6 +175,7 @@ foreach ($files as $path) {
 		if ('abc' == $k) { $k = 'A to B Converter'; }
 		if ('susie' == $k) { $k = 'Susie'; }
 		if ('rhaco' == $k) { $tags[] = 'rhaco'; }
+		if ('greasemonkey' == $k) { $k = 'greasemonkey'; $tags[] = 'greasemonkey'; $tags[] = 'userscript'; }
 	}
 
 	// タグ取得
@@ -153,6 +211,7 @@ foreach ($files as $path) {
 		$k = preg_replace('/^HSPsocka$/i', 'hspsockA', $k);
 		$k = preg_replace('/^github$/i', 'GitHub', $k);
 		$k = preg_replace('/^TeraTerm$/i', 'TeraTerm', $k);
+		$k = preg_replace('/^Terapad$/i', 'TeraPad', $k);
 		$k = preg_replace('/^Winscp$/i', 'WinSCP', $k);
 		$k = preg_replace('/^Hsed3$/i', 'hsed3', $k);
 		$k = preg_replace('/^rhaco(.*)$/i', 'rhaco$1', $k);
@@ -176,8 +235,7 @@ foreach ($files as $path) {
 			$dpath = $m[1].$tmp.$m[3];
 		}
 		// 固定ページも日付を付ける
-		if (!preg_match('!/blog/!', $dpath) && // ブログ記事以外
-			!is_dir(str_replace('.html', '', $path))) // ディレクトリ名と同じファイル名の場合は無視する
+		if (!preg_match('!/blog/!', $dpath)) // ブログ記事以外
 		{
 			$dpath = sprintf('markdown/_statics/%s-%s', substr($pub_date, 0, 10), basename($dpath));
 		}
@@ -209,11 +267,12 @@ foreach ($files as $path) {
 	$html = preg_replace('!href="(/blog/.+?\.html)\.html"!', 'href="$1"', $html);
 	$html = preg_replace_callback('!href="/blog/([0-9]{4})/([0-9]{2})/([0-9]{2})/(.+?)"!',
                 function($m) { return 'href="/blog/'.$m[1].'/'.$m[2].'/'.$m[3].'/'.str_replace('_', '-', $m[4]).'"'; }, $html);
-	$html = preg_replace('!href="http://www.sharkpp.net/(.+?)\.html"!', 'href="/$1"', $html);
+//	$html = preg_replace('!href="http://www.sharkpp.net/(.+?)\.html"!', 'href="/$1"', $html);
 	$html = preg_replace('!href="http://www.sharkpp.net/(.+?)"!', 'href="/$1"', $html);
 	$html = preg_replace('!src="http://www.sharkpp.net/(.+?)"!', 'src="/$1"', $html);
 	$html = preg_replace('!"(julius\.sourceforge\.jp/)"!', '"http://$1"', $html);
 	$html = preg_replace('!"\[http!', '"http', $html);
+
 	$html = preg_replace('!href="/blog/2011/10/02/(.+?)"!', 'href="/blog/2011/10/30/$1"', $html);
 	$html = preg_replace('!href="/blog/2010/01/01/(.+?)"!', 'href="/blog/2011/01/01/$1"', $html);
 	$html = preg_replace('!href="/blog/2012/01/01/(.+?)"!', 'href="/blog/2012/01/05/$1"', $html);
@@ -268,6 +327,10 @@ foreach ($files as $path) {
 	// fix broken
 	$markdown = preg_replace('!(<iframe.+?)/>!ms', '$1></iframe>', $markdown);
 
+	// fix link
+	foreach ($path_replace as $from => $to)
+		$markdown = str_replace($from, $to, $markdown);
+
 	// タグのインデントをなくす
 	$markdown = preg_replace_callback('!^(<([a-z]+).*?>)(.+?)(</\2>)!ms', function($m) {
 			$a = '';
@@ -292,13 +355,12 @@ foreach ($files as $path) {
 	$markdown = entities2text($markdown);
 	$markdown = trim($markdown);
 
-/*
----
-title: Symfony Live Hacking Day!
-tags: [sensio, symfony, symfony live]
-categories: [personal]
-
----*/
+	$from = str_replace('html/', '', $path);
+	$to   = preg_replace('!^markdown/(.+)\.md$!', '$1.html', $dpath);
+	$to   = preg_replace('!_statics/([0-9]{4})-([0-9]{2})-([0-9]{2})-!', 'blog/$1/$2/$3/', $to);
+	if ($from != $to &&
+		false === array_search($from, array('about.html')))
+		$redirect[$from] = $to;
 
 	@mkdir(dirname($dpath), 0777, true);
 	file_put_contents($dpath, $markdown);
@@ -313,3 +375,14 @@ foreach ($cp as $cp_once) {
 		@ mkdir(dirname($cp_once['to']));
 	@ copy($cp_once['from'], $cp_once['to']);
 }
+
+// .htaccess
+$tmp = '';
+$fmtlen = 0;
+foreach ($redirect as $from => $to)
+	$fmtlen = max(strlen($from), $fmtlen);
+$fmtlen = min(50, $fmtlen);
+foreach ($redirect as $from => $to)
+	$tmp .= sprintf('Redirect permanent /%-'.$fmtlen.'s http://www.sharkpp.net/%s'.PHP_EOL, $from, $to);
+file_put_contents('markdown/.htaccess', $tmp);
+file_put_contents('last_htaccess.txt', $tmp);

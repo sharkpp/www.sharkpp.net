@@ -29,6 +29,6 @@ categories: [ブログ]
 
 [HSPプログラムコンテスト統計][4] 更新しました。
 
- [4]: /hsp/HSP-program-contest-summary
+ [4]: /blog/2010/12/12/HSP-program-contest-summary.html
 
 とりあえず、現状のみ更新。

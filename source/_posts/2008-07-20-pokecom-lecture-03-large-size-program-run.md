@@ -56,5 +56,5 @@ categories: [ポケコン, ポケコン講座]
 2005/02/06
 : 構成変更
 <div class="siblings_navigation">
-<a href="/pokecom/lecture/01_key_input" title="C言語講座 第一回 キー入力" >前</a> | C言語講座 第三回 巨大なプログラムの実行 | 次
+<a href="/blog/2008/07/20/pokecom-lecture-01-key-input.html" title="C言語講座 第一回 キー入力" >前</a> | C言語講座 第三回 巨大なプログラムの実行 | 次
 </div>

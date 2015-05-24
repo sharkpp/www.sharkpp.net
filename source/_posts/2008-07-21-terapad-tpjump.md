@@ -1,7 +1,7 @@
 ---
 title: "TeraPad Jump Tool"
 date: 2008-07-21 00:08:00
-tags: [Terapad]
+tags: [TeraPad]
 categories: [ソフト, TeraPad]
 
 ---

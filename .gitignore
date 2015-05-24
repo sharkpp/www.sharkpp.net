@@ -13,3 +13,5 @@ convert/html/*
 convert/vendor/*
 sculpin.phar
 composer.phar
+
+convert/last_htaccess.txt

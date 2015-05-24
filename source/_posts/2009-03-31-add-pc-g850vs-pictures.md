@@ -10,7 +10,7 @@ categories: [ブログ]
 
 [PC-G850S/PC-G850V/PC-G850VS 性能比較][1]
 
- [1]: /pokecom/pcg850vs.html "PC-G850S/PC-G850V/PC-G850VS 性能比較"
+ [1]: /blog/2009/03/29/pokecom-pcg850vs.html "PC-G850S/PC-G850V/PC-G850VS 性能比較"
 
 梱包箱の写真も過去の2機種含め追加しました。
 

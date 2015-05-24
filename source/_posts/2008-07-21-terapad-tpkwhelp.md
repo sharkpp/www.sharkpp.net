@@ -1,16 +1,14 @@
 ---
-title: "TeraPad KeyWord Get Tool"
-date: 2008-07-21 00:10:00
-tags: [Terapad]
+title: "TeraPad KeyWord Help Tool"
+date: 2008-07-21 00:09:00
+tags: [TeraPad]
 categories: [ソフト, TeraPad]
 
 ---
 
-## 詳細
-
 ## ソフトの説明
 
-ソフトにキーワードを渡し起動するツールです。
+TeraPad でキー 一発でキーワードヘルプを呼び出し表示するソフトです
 	  
 このソフト単体では役に立ちませんのであしからず。 
 
@@ -31,7 +29,7 @@ TpJumpをTeraPadへ登録する時のツール設定項目です。
 実行ファイル
 </th>
 <td>
-C:\TeraPad\tool\TpkwGet.exe<br /><br /> ※実行ファイルのパスは解凍したフォルダを指定してください。<br /> 例. C:\Program Files\TeraPad\tool\TpkwGet に解凍したとすると<br /> 　<span style="text-decoration: underline">C:\TeraPad\tool</span>\TpkwGet.exe<br /> 　この部分↑に解凍したフォルダを指定します。<br /> 　C:\Program Files\TeraPad\tool\TpkwGet\TpkwGet.exe<br />
+C:\TeraPad\tool\TpkwHelp.exe<br /><br /> ※実行ファイルのパスは解凍したフォルダを指定してください。<br /> 例. C:\Program Files\TeraPad\tool\TpkwHelp に解凍したとすると<br /> 　<span style="text-decoration: underline">C:\TeraPad\tool</span>\TpkwHelp.exe<br /> 　この部分↑に解凍したフォルダを指定します。<br /> 　C:\Program Files\TeraPad\tool\TpkwHelp\TpkwHelp.exe<br />
 </td>
 </tr>
 <tr>
@@ -67,13 +65,17 @@ C:\TeraPad\tool\TpkwGet.exe<br /><br /> ※実行ファイルのパスは解凍�
 
 **コマンドラインパラメータ** 
 
-<pre>●辞書を引く
-　&gt;c:\jisho\dic.exe /keyWord=%s&lt;こんな感じ
-●実行ファイル（実行パラメータにキーワードを添付します）
-　HSP Help Manager(helpman.exe) など
-　&gt;c:\hsp255\hsphelp\helpman.exe %s&lt;こんな感じ
-※もちろん、ほんとにあるフォルダ、ファイルを指定しなければ意味はありません。
-※ファイル名に空白がある場合(c:\program files など)は'"'で囲ってください。
+<pre>※キーワードが有効なのは今のところ、以下のファイルです。
+　●WinHelpファイル
+　　Win32APIヘルプ(win32.hlp) など
+　　&gt;C:\lcc32\bin\win32.hlp&lt;こんな感じ
+　●実行ファイル（実行パラメータにキーワードを添付します）
+　　HSP Help Manager(helpman.exe) など
+　　&gt;C:\hsp255\hsphelp\helpman.exe&lt;こんな感じ
+　●'*'付きファイル（'*'の所がキーワードに換えられます）
+　　キーワード別に分かれたHTMLファイル(*.html) など
+　　&gt;C:\win32api\*.htm&lt;こんな感じ
+　※もちろん、ほんとにあるフォルダ、ファイルを指定しなければ意味はありません。
 </pre>
 
 ## 動作環境
@@ -102,9 +104,9 @@ TeraPad が必要です。
   
 
 
- [1]: /soft/tptool/tpkwg000.lzh "tpkwg000.lzh"
+ [1]: /soft/tptool/tpkwh002.lzh "tpkwh002.lzh"
 
 ## 履歴
 
 2004/02/24
-: [Ver.0.00]<br />初公開
+: [Ver.0.02]<br />公開

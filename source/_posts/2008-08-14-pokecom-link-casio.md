@@ -91,7 +91,7 @@ Z1
 </tr>
 <tr>
 <td>
-<a href="http://www3.cnet.ne.jp/yokomizu/">YokoMuMu's Contents</a><br /><a href="http://web.archive.org/web/20081012090326/www3.cnet.ne.jp/yokomizu/pokecom.html">ポケコンMIDIシーケンサの製作</a>
+<a href="http://www3.cnet.ne.jp/yokomizu/">YokoMuMu's Contents</a><br /><a href="http://web.archive.org/web/20081012090326/www3.cnet.ne.jp/yokomizu/blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3">ポケコンMIDIシーケンサの製作</a>
 </td>
 <td>
 YokoMuMu

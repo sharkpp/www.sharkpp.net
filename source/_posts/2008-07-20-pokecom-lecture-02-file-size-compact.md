@@ -130,5 +130,5 @@ gxy(9,2);putchar(33);gxy(2,2);putchar(83);
 
 
 
-<div class="siblings_navigation"><a href="/pokecom/lecture/01_key_input" title="C言語講座 第一回 キー入力" >前</a> | C言語講座 第二回 ファイルサイズの縮小 | <a href="/pokecom/lecture/03_large_size_program_run" title="C言語講座 第三回 巨大なプログラムの実行" >次</a>
+<div class="siblings_navigation"><a href="/blog/2008/07/20/pokecom-lecture-01-key-input.html" title="C言語講座 第一回 キー入力" >前</a> | C言語講座 第二回 ファイルサイズの縮小 | <a href="/blog/2008/07/20/pokecom-lecture-03-large-size-program-run.html" title="C言語講座 第三回 巨大なプログラムの実行" >次</a>
 </div>

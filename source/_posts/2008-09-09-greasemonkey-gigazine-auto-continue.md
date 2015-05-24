@@ -1,6 +1,7 @@
 ---
 title: "GIGAZINEの続きを読むを自動で移動"
 date: 2008-09-09 00:57:00
+tags: [Greasemonkey, Userscript]
 categories: [がらくた, greasemonkey]
 
 ---

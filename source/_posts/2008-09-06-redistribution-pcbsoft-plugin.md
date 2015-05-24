@@ -12,7 +12,7 @@ PCB Software(高橋 周平)さんが店じまいをしてしまい、ドメイ�
 
 ファイルのダウンロードは[再配布ページ][1]と[プラグイン][2]のページからどうぞ。
 
- [1]: /hsp/pcbsoft
- [2]: /hsp/plugin/pcbnet2
+ [1]: /blog/2008/09/06/pcbsoft.html
+ [2]: /blog/2008/09/06/hsp-pcbnet2.html
 
 ### 2008年10月11日一部修正

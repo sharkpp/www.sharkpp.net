@@ -16,4 +16,4 @@ categories: [ブログ]
 
 ダウンロードは[トラックバックプラグイン][1]からです。
 
- [1]: /php/frog-cms/trackback-plugin
+ [1]: /blog/2008/09/08/frog-cms-trackback-plugin.html

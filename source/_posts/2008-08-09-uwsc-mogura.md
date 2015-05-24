@@ -9,7 +9,7 @@ categories: [がらくた, uwsc]
   
 
 
- [1]: /soft/game.html#mogura
+ [1]: /blog/categories/%E3%82%BD%E3%83%95%E3%83%88#mogura
 
   * 自動的にモグラ叩きは起動しませんので起動してからスクリプトを実行する必要があります。
   * mogura.uws と mogura.bmp は、同じフォルダにある必要があります。

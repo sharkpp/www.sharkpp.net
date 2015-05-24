@@ -1,6 +1,7 @@
 ---
 title: "HSPコンテスト2008のロゴ置換"
 date: 2008-09-09 00:57:00
+tags: [Greasemonkey, Userscript]
 categories: [がらくた, greasemonkey]
 
 ---

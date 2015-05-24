@@ -48,7 +48,7 @@ HSP関連のあるサイトの立ち上げは、他の人が作ってるから�
   * HSPプログラムコンテストに応募([その1][5],[その2][6])→[予選突破][7]→[入賞][8]したよ
   * 一度挫折したけど、またQt使い始めたよ
 
- [2]: /soft/tool/joya_no_kane
+ [2]: /blog/2011/01/01/joya-no-kane.html
  [3]: http://www.pixiv.net/member.php?id=1547498
  [4]: https://github.com/sharkpp
  [5]: /blog/2011/08/31/entry-the-HSP-program-contest-2011.html

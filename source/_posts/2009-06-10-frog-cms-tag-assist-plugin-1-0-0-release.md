@@ -20,4 +20,4 @@ Frog CMSは入力の補助、特にすでにあるタグの一覧が出てこな
 
 ダウンロードは[タグ入力補助プラグイン][2]からです。
 
- [2]: /php/frog-cms/tag_assist
+ [2]: /blog/2009/06/10/frog-cms-tag-assist.html

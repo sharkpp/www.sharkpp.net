@@ -9,7 +9,7 @@ pcbnet2 付属サンプルはHSP2の書式で書かれているのでHSP3では�
 
 [ダウンロードページ][1]
 
- [1]: /hsp/plugin/pcbnet2_sample_hsp3_fix
+ [1]: /blog/2008/08/20/hsp-pcbnet2-sample-hsp3-fix.html
 
 まあそんなに修正とはいえあまり変更点は無かったけどnetipv6命令が廃止したのにサンプルには書いてあったりして少し悩みはした。
 

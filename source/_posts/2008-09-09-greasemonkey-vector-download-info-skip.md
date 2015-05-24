@@ -1,6 +1,7 @@
 ---
 title: "Vectorダウンロード画面をスキップ"
 date: 2008-09-09 00:56:00
+tags: [Greasemonkey, Userscript]
 categories: [がらくた, greasemonkey]
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: "tumblr popup editor"
 date: 2009-07-19 16:47:00
+tags: [Greasemonkey, Userscript]
 categories: [がらくた, greasemonkey]
 
 ---

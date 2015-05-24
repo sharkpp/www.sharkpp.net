@@ -18,5 +18,5 @@ categories: [ポケコン, ポケコン用プログラム]
 戻り値：アスキー文字
 </dd>
 返される文字については
-<a href="/pokecom/program/../lecture/01_key_input">ポケコンＣ言語講座 第一回 キー入力</a>の表を参照してください。
+<a href="/pokecom/program/../lecture/01_key_input.html">ポケコンＣ言語講座 第一回 キー入力</a>の表を参照してください。
 </div>

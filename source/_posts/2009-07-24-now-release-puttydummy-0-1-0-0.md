@@ -21,4 +21,4 @@ PuTTYdummyと名づけた小さいアプリを公開しました。
 
 ダウンロードは、[ツール][3]からどうぞ
 
- [3]: /soft/tool
+ [3]: /blog/categories/%E3%83%84%E3%83%BC%E3%83%AB

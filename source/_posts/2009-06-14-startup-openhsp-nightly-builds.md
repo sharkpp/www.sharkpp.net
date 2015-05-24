@@ -18,4 +18,4 @@ categories: [ブログ]
 
 ダウンロードは[OpenHSP][1]からどうぞ
 
- [1]: /hsp/openhsp
+ [1]: /hsp/openblog/categories/HSP
