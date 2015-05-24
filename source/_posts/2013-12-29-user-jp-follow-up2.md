@@ -2,7 +2,7 @@
 title: "*-users.jp(?ユーザのためのハブサイト)のその後を追跡調査(2013-12-29版)"
 date: 2013-12-29 14:46:00
 tags: [雑記]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

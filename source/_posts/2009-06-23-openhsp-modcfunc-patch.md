@@ -2,7 +2,7 @@
 title: "OpenHSP #modcfuncパッチ"
 date: 2009-06-23 01:04:00
 tags: [HSP, OpenHSP]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

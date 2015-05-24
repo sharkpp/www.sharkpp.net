@@ -2,7 +2,7 @@
 title: "大晦日@2011"
 date: 2011-12-31 10:08:00
 tags: [大晦日]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

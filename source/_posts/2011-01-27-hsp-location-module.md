@@ -2,7 +2,7 @@
 title: "HSP用現在位置取得モジュール公開"
 date: 2011-01-27 01:23:00
 tags: [Develop, HSP]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

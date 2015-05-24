@@ -2,7 +2,7 @@
 title: "OpenHSPのナイトリービルドを始めました"
 date: 2009-06-14 23:42:00
 tags: [Develop, HSP, HSP3, OpenHSP]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

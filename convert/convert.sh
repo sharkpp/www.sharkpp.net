@@ -1,15 +1,40 @@
 #!/bin/bash
 
-if [ ! -e "$(dirname $0)/vendor/pixel418/markdownify/src/Markdownify/Converter.php" ];
+cp_statics () {
+# $1 : target name
+# $2 : permalink
+  TARGETNAME=$(ls markdown/_statics/*-${1}.*|head -n 1)
+  PERMALINK=$2\\/index.html
+  DESTPATH=../source/_statics/$(echo ${2}|sed -e "s/\//-/g").md
+
+  if [ "" == "$TARGETNAME" ] ; then
+    exit
+  fi
+
+  cat ${TARGETNAME} \
+    | sed -e "s/^date: /permalink: ${PERMALINK}$(printf '\\\012d')ate: /g" \
+    > $DESTPATH
+  rm -f ../source/_posts/$(basename ${TARGETNAME})
+}
+
+remove_layout_option () {
+# $1 file name
+  cat $1 \
+    | grep -vE '^layout: .*' \
+    > $1~
+  mv $1~ $1
+}
+
+if [ ! -e "vendor/pixel418/markdownify/src/Markdownify/Converter.php" ];
 then
 	php ../composer.phar install
 fi
 
-rm -rf $(dirname $0)/markdown/*
+rm -rf markdown/*
 
 php convert.php >/dev/null
 
-for I in $( find $(dirname $0)/markdown/blog -name \*\.md ) ;
+for I in $( find markdown/blog -name \*\.md ) ;
 do
 	DIR_NAME=$(dirname $I)/$(basename $I .md)
 	if [ ! -e $DIR_NAME ] ;
@@ -22,7 +47,7 @@ do
 		fi
 	fi
 done
-for I in $( find $(dirname $0)/markdown/blog -name \*\.md ) ;
+for I in $( find markdown/blog -name \*\.md ) ;
 do
 	DIR_NAME=$(dirname $I)/$(basename $I .md)
 	if [ -e $DIR_NAME ] ;
@@ -30,21 +55,25 @@ do
 		rm -f $I >/dev/null 2>&1
 	fi
 done
-find $(dirname $0)/markdown/blog -type d -empty -delete
+find markdown/blog -type d -empty -delete
 
-rm -f $(dirname $0)../source/_posts/*.md
-cp -p $(dirname $0)/markdown/blog/*.md $(dirname $0)/../source/_posts/
+rm -f ../source/_posts/*.md
+cp -p markdown/blog/*.md ../source/_posts/
+cp -p markdown/_statics/*.md ../source/_posts/
 
-cp -pf $(dirname $0)/markdown/about.md $(dirname $0)/../source/_statics/
+cp_statics about about
 
-find $(dirname $0)/../source/images -maxdepth 1 -name \*.png -delete -or -name \*.jpg -delete -or -name \*.gif -delete
-cp -pf $(dirname $0)/markdown/images/* $(dirname $0)/../source/images/
+rm -f ../source/_posts/1970-01-01-*
+for I in $(find ../source/_posts/ -type f) ; do remove_layout_option $I ; done
 
-find $(dirname $0)/../source/graffiti -type f -maxdepth 1 -delete
-mkdir -p $(dirname $0)/../source/graffiti
-for I in $(find $(dirname $0)/html/gallery/scenery -name \*.jpg -and -not -name \*s.jpg) ; do cp -pf $I $(dirname $0)/../source/graffiti/scenery_$(basename $I) ; done
-for I in $(find $(dirname $0)/html/gallery/graffiti -type f -not -name \*128.png) ; do cp -pf $I $(dirname $0)/../source/graffiti/$(basename $I); done
-mkdir -p $(dirname $0)/../source/graffiti/t
+find ../source/images -maxdepth 1 -name \*.png -delete -or -name \*.jpg -delete -or -name \*.gif -delete
+cp -pf markdown/images/* ../source/images/
+
+find ../source/graffiti -type f -maxdepth 1 -delete
+mkdir -p ../source/graffiti
+for I in $(find html/gallery/scenery -name \*.jpg -and -not -name \*s.jpg) ; do cp -pf $I ../source/graffiti/scenery_$(basename $I) ; done
+for I in $(find html/gallery/graffiti -type f -not -name \*128.png) ; do cp -pf $I ../source/graffiti/$(basename $I); done
+mkdir -p ../source/graffiti/t
 #↓毎回内容が変わるっポイ
 #for I in $(ls ./../source/graffiti/{*.png,*.jpg}) ; do convert -resize 200x $I $(dirname $I)/t/$(basename $(basename $(basename $(basename $I .jpg) _512x512.png) _1024x1024.png) .png).png ; done
 

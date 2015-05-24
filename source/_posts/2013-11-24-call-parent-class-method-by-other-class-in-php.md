@@ -2,7 +2,7 @@
 title: "phpでオブジェクトの継承元のメソッドを別のクラスから呼び出す方法"
 date: 2013-11-24 13:40:00
 tags: [php, Develop]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

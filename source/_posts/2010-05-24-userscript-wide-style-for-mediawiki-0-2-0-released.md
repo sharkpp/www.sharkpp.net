@@ -1,7 +1,7 @@
 ---
 title: "UserScript Wide style for mediawiki 0.2.0 公開"
 date: 2010-05-24 06:53:00
-categories: [blog]
+categories: [ブログ]
 
 ---
 

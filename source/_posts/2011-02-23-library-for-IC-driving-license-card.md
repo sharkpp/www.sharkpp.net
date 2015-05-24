@@ -1,7 +1,7 @@
 ---
 title: "ICカード免許証読み取りライブラリ公開"
 date: 2011-02-23 00:04:00
-categories: [blog]
+categories: [ブログ]
 
 ---
 

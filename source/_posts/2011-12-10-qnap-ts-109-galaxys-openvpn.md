@@ -2,7 +2,7 @@
 title: "QNAP TS-109? と GALAXY S(SC-02B) をOpenVPNで繋ぐ"
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 
@@ -76,35 +76,35 @@ Optware ipkg は、[QNAP TS-109? で Subversionを使う][5] で色々やった�
 title: "mkdir log"
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 ---
 title: "cd log"
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 ---
 title: "touch openvpn.log"
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 ---
 title: "touch status.log"
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 ---
 title: "mkdir /opt/etc/openvpn/modules"
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 </pre>
@@ -129,7 +129,7 @@ easy.confの内容
 title: "exec openvpn"
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 (sleep 10; /opt/sbin/openvpn /opt/etc/openvpn/easy.conf)&
@@ -144,7 +144,7 @@ easy.confの内容
 title: "basic settings"
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 port 1194
@@ -155,7 +155,7 @@ dev tun
 title: "detect mtu if the connection is slow."
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 ; mtu-test
@@ -164,7 +164,7 @@ categories: [blog]
 title: "define mtu, if necessary"
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 ; tun-mtu xyz
@@ -173,7 +173,7 @@ categories: [blog]
 title: "define the ip-addresses of the underlying tunnel"
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 server 10.8.0.0 255.255.255.0
@@ -182,7 +182,7 @@ server 10.8.0.0 255.255.255.0
 title: "Route"
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 push "route 192.168.1.0 255.255.255.0"   #  &lt;--- LANのIPアドレスを指定
@@ -191,7 +191,7 @@ push "route 192.168.1.0 255.255.255.0"   #  &lt;--- LANのIPアドレスを指�
 title: "certificates & keys"
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 dh   /opt/etc/openvpn/keys/dh1024.pem
@@ -203,7 +203,7 @@ key  /opt/etc/openvpn/keys/server.key
 title: "data compression"
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 comp-lzo
@@ -212,7 +212,7 @@ comp-lzo
 title: "allow, that several clients with the same common name log on"
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 ; duplicate-cn
@@ -221,7 +221,7 @@ categories: [blog]
 title: "different clients can "see" each other through the tunnel."
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 ; client-to-client
@@ -230,7 +230,7 @@ categories: [blog]
 title: "Keepalive"
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 keepalive 15 120
@@ -239,7 +239,7 @@ keepalive 15 120
 title: "verbosity of status messages in the console. Activate for debugging (1-9 possible)"
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 ; verb 5
@@ -248,7 +248,7 @@ categories: [blog]
 title: "Log files"
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 status /share/HDA_DATA/system/log/openvpn-status.log
@@ -258,7 +258,7 @@ log-append /share/HDA_DATA/system/log/openvpn.log
 title: "Run as daemon (activate, after everything is set up properly)"
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 ; daemon
@@ -267,7 +267,7 @@ categories: [blog]
 title: "Management Interface. Access with "telnet localhost 7505""
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 management localhost 7505
@@ -312,28 +312,28 @@ ifconfig/route関連のインストール先は、
 title: "mount -o remount,rw /dev/block/stl9 /system"
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 ---
 title: "mkdir /system/xbin/bb"
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 ---
 title: "ln -s /system/xbin/busybox /system/xbin/bb/ifconfig"
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 ---
 title: "ln -s /system/xbin/busybox /system/xbin/bb/route"
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 </pre>
@@ -381,7 +381,7 @@ pull
 title: "set mtu, if necessary"
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 tun-mtu 1500
@@ -394,14 +394,14 @@ persist-tun
 title: "certificates and keys"
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 ---
 title: "Note the double \\ in the path for a windows config"
 date: 2011-12-10 16:15:00
 tags: [雑記, Android, QNAP, Galaxy S]
-categories: [blog]
+categories: [ブログ]
 
 ---
 ca   /sdcard/openvpn/ca/ca.crt

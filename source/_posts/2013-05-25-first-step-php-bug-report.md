@@ -2,7 +2,7 @@
 title: "初めてのPHPバグ報告"
 date: 2013-05-25 13:58:00
 tags: [php]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

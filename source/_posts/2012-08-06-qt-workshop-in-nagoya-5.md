@@ -2,7 +2,7 @@
 title: "Qt 勉強会 名古屋 #5 に参加しました"
 date: 2012-08-06 00:34:00
 tags: [C++, Qt]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

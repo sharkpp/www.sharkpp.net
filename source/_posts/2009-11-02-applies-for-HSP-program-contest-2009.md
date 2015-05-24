@@ -2,7 +2,7 @@
 title: "HSPプログラムコンテスト2009へ応募しました"
 date: 2009-11-02 00:56:00
 tags: [HSP, HSPプログラムコンテスト]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

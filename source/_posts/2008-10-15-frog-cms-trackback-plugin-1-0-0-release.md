@@ -2,7 +2,7 @@
 title: "Frog CMS用トラックバックプラグインの1.0.0をリリース"
 date: 2008-10-15 00:35:00
 tags: [Trackback, Plugin, Frog CMS]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

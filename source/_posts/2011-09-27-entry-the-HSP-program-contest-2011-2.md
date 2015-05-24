@@ -2,7 +2,7 @@
 title: "HSPプログラムコンテスト2011へ応募(その２)"
 date: 2011-09-27 00:38:00
 tags: [HSP, HSPプログラムコンテスト]
-categories: [blog]
+categories: [ブログ]
 
 ---
 
@@ -31,4 +31,4 @@ HSPTVブラウザで遊べるのでどうぞ。
 
  [4]: /images/2011_0927_mistake_thumb.png
 
-<iframe width="420" height="315" src="http://www.youtube.com/embed/RnqoMVlHBxU" frameborder="0" allowfullscreen="allowfullscreen" />
+<iframe width="420" height="315" src="http://www.youtube.com/embed/RnqoMVlHBxU" frameborder="0" allowfullscreen="allowfullscreen" ></iframe>

@@ -2,7 +2,7 @@
 title: "githubを使い始めました"
 date: 2011-09-18 12:16:00
 tags: [Develop, Subversion, git, GitHub]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

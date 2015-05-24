@@ -2,7 +2,7 @@
 title: "インストール: boostで遊ぶ 其の１"
 date: 2009-08-23 13:48:00
 tags: [C++, Boost, Asio, Boostで遊ぶ]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

@@ -2,7 +2,7 @@
 title: "Windows 7 RC1 が公開"
 date: 2009-05-07 01:47:00
 tags: [Windows 7]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

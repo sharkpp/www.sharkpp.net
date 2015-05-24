@@ -2,7 +2,7 @@
 title: "MacBook Air を買いました"
 date: 2012-07-13 03:00:00
 tags: [雑記]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

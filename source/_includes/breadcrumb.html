@@ -12,8 +12,7 @@
         {% set breadcrumbs = breadcrumbs|merge([{ caption: this_day   }]) %}
     {% else %}
         {% for category in categories %}
-            {% if "" == category %}
-            {% endif %}
+            {% set breadcrumbs = breadcrumbs|merge([{ url: site.url ~ "/blog/categories/" ~ category, caption: category }]) %}
         {% endfor %}
     {% endif %}
 {% elseif "/blog/tags/" in page.url %}

@@ -2,7 +2,7 @@
 title: "Qt DEVELOPER DAY 2014 Tokyo に行ってきました"
 date: 2014-05-20 22:19:00
 tags: [Qt, 雑記, 勉強会]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

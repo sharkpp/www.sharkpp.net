@@ -2,7 +2,7 @@
 title: "昨年に引き続き今年もHSPプログラムコンテスト2010へ応募しました"
 date: 2010-08-29 13:25:00
 tags: [HSP, HSPプログラムコンテスト]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

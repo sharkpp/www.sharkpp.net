@@ -2,7 +2,7 @@
 title: "コメントプラグインのテスト"
 date: 2008-09-15 07:51:00
 tags: [php, Frog CMS, Comment]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

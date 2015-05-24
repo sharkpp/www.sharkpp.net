@@ -2,7 +2,7 @@
 title: "木目パターンの生成: HSPで遊ぶ 其の１"
 date: 2009-10-11 22:48:00
 tags: [HSP, HSPで遊ぶ]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

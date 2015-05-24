@@ -2,7 +2,7 @@
 title: "バックアップファイルからSVNのダンプファイルへの変換スクリプト"
 date: 2009-12-13 23:58:00
 tags: [php, Subversion]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

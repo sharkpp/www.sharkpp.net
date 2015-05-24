@@ -2,7 +2,7 @@
 title: "Boost.勉強会 #10 東京 に参加しました"
 date: 2012-07-30 00:49:00
 tags: [C++, Boost]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "HSP3用デコンパイラを公開しました(注意：エイプリルフール)"
 date: 2010-04-01 00:13:00
-categories: [blog]
+categories: [ブログ]
 
 ---
 

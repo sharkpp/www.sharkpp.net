@@ -2,7 +2,7 @@
 title: "HSPスクリプトエディタ(Footy2版)のナイトリービルド 2009/04/05"
 date: 2009-04-05 23:13:00
 tags: [HSP, hsed3, Footy2]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

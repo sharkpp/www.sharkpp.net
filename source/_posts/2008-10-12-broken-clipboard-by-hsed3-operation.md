@@ -1,7 +1,7 @@
 ---
 title: "HSP3スクリプトエディタでの操作でクリップボードの内容が破棄される"
 date: 2008-10-12 19:57:00
-categories: [blog]
+categories: [ブログ]
 
 ---
 

@@ -2,7 +2,7 @@
 title: "PCB Software製プラグインの再配布"
 date: 2008-09-06 02:01:00
 tags: [HSP, pcbnet2, pcbnet, Plugin, pcbsoft, hspsockA]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

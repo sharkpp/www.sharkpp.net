@@ -2,7 +2,7 @@
 title: "Androidアプリの開発(その1)"
 date: 2010-11-10 02:05:00
 tags: [Develop, Android]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

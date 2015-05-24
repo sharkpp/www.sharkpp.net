@@ -2,7 +2,7 @@
 title: "Ubuntu-ja-8.10をVMware Player 2で動かすときのメモ"
 date: 2009-01-10 17:20:00
 tags: [Ubuntu, WMware-player, g++, cc1plus]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

@@ -2,7 +2,7 @@
 title: "tumblr.用Greasemonkeyユーザースクリプトを2つ公開"
 date: 2009-07-19 23:41:00
 tags: [Greasemonkey, Tumblr]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

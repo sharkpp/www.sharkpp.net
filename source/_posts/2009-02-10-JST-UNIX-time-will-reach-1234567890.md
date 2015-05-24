@@ -1,7 +1,7 @@
 ---
 title: "日本時間で UNIX time が”1234567890”になるまでのカウントダウン なんとなく貼ってみる。 "
 date: 2009-02-10 23:10:00
-categories: [blog]
+categories: [ブログ]
 
 ---
 

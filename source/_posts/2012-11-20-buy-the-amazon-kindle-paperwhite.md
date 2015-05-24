@@ -2,7 +2,7 @@
 title: "Amazon kindle paperwhite 買ってしまった"
 date: 2012-11-20 00:54:00
 tags: [雑記]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

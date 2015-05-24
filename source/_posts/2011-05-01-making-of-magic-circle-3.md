@@ -2,7 +2,7 @@
 title: "魔法陣を作ってみた(その3)"
 date: 2011-05-01 00:27:00
 tags: [雑記, 素材]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

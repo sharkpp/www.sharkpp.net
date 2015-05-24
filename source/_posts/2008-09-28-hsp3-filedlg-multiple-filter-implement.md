@@ -2,7 +2,7 @@
 title: "HSP3のファイル選択ダイアログで複数ファイルフィルタを指定で出来るように修正"
 date: 2008-09-28 15:29:00
 tags: [HSP, HSP3, Dialog, Filedialog]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

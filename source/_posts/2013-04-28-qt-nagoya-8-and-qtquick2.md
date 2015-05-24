@@ -2,7 +2,7 @@
 title: "名古屋Qt勉強会#8に行ってきたよ＆QtQuick2でアプリ作ってみたよ"
 date: 2013-04-28 00:07:00
 tags: [Qt, 雑記, 勉強会, QML]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

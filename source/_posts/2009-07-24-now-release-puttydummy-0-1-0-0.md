@@ -2,7 +2,7 @@
 title: "PuTTYdummy ver.0.1.0.0 をリリースしました"
 date: 2009-07-24 01:21:00
 tags: [Develop, WinSCP, TeraTerm]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

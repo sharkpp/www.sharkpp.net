@@ -1,7 +1,7 @@
 ---
 title: "何とか更新完了"
 date: 2008-08-11 01:39:00
-categories: [blog]
+categories: [ブログ]
 
 ---
 

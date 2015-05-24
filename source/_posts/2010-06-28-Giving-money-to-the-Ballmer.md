@@ -2,7 +2,7 @@
 title: "げいつ（いや今はばるまーか）にお布施をしてみた"
 date: 2010-06-28 01:00:00
 tags: [Develop, 雑記]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

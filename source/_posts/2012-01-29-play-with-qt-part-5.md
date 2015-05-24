@@ -2,7 +2,7 @@
 title: "色々なメモ: Qtで遊ぶ 其の５"
 date: 2012-01-29 18:25:00
 tags: [Develop, C++, Qt, Qtで遊ぶ]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

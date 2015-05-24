@@ -2,7 +2,7 @@
 title: "セキュアな電子メールの設定"
 date: 2010-12-12 20:39:00
 tags: [雑記]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

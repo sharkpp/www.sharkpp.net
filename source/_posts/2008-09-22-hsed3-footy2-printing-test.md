@@ -2,7 +2,7 @@
 title: "HSED3(Footy2版)の印刷機能のテスト"
 date: 2008-09-22 01:36:00
 tags: [HSP, hsed3, Footy2]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

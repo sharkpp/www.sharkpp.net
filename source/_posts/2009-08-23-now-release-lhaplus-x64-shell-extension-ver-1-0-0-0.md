@@ -2,7 +2,7 @@
 title: "Lhaplus x64 shell extension ver.1.0.0.0をリリースしました"
 date: 2009-08-23 16:44:00
 tags: [x64, Lhaplus, シェル拡張, リリース]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

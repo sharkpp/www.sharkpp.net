@@ -2,7 +2,7 @@
 title: "FuelPHP 勉強会 大須 vol.2 に参加しました"
 date: 2012-07-25 00:06:00
 tags: [php, FuelPHP, 勉強会]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

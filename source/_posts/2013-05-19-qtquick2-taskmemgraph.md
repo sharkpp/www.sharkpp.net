@@ -2,7 +2,7 @@
 title: "続・QtQuick2でアプリ作ってみたよ"
 date: 2013-05-19 18:48:00
 tags: [C++, Qt, Qtで遊ぶ, QtQuick]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

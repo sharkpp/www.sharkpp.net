@@ -2,7 +2,7 @@
 title: "Frog CMSにトラックバックプラグインを実装中"
 date: 2008-08-25 01:28:00
 tags: [php, Frog CMS, Trckback, Develop]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

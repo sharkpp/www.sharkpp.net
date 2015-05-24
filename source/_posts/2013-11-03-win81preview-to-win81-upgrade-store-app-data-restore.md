@@ -2,7 +2,7 @@
 title: "Windows 8.1 Preview から Windows 8.1 正式版への更新で消えたストアアプリのデータを復旧する方法"
 date: 2013-11-03 17:39:00
 tags: [雑記, Windows, Tips]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

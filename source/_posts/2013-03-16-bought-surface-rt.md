@@ -2,7 +2,7 @@
 title: "Surface RT 購入したよ！"
 date: 2013-03-16 01:40:00
 tags: [雑記]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

@@ -2,7 +2,7 @@
 title: "ジグソーパズルを作ってました"
 date: 2010-07-25 23:42:00
 tags: [HSP, HSPプログラムコンテスト, ゲーム]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

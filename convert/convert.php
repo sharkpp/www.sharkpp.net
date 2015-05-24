@@ -65,7 +65,10 @@ $cp = array();
 $base_path = 'html';
 $files = scandir_r($base_path);
 foreach ($files as $path) {
-	if (!preg_match('/\.html$/', $path))
+	if (!preg_match('!\.html$!', $path))
+		continue;
+	if (preg_match('!index\.html!', $path) ||
+		preg_match('!/history/.+$!', $path))
 		continue;
 
 	$dpath = preg_replace('!^[^/]+/(.+)\..+$!', 'markdown/\1.md', $path);
@@ -74,10 +77,54 @@ foreach ($files as $path) {
 	$curpath = preg_replace('!^[^/]+/(.+)\..+$!', '\1.html', $path);
 	$html = file_get_contents($path);
 
-	// タグ取得
+	$dpath = str_replace('openhsp/nightly','openhsp-nightly', $dpath);
+	$dpath = str_replace('hsp/tool','hsp/hsptool', $dpath);
+	$dpath = str_replace('php/library','php', $dpath);
+	$dpath = preg_replace('!pokecom/([^/]+)!','pokecom/pokecom-$1', $dpath);
+
 	$tags = array();
+	$categories = array();
+
+	// カテゴリ取得
+	$tmp = explode('/', dirname($dpath));
+	array_shift($tmp);
+	if (1 < count($tmp) && 'blog' == $tmp[0]) {
+		$categories[] = $tmp[0];
+	} else {
+		$categories = $tmp;
+	}
+	foreach ($categories as & $k) {
+		if ('blog'    == $k) { $k = 'ブログ'; }
+		if ('history' == $k) { $k = '更新履歴'; }
+		if ('hsp'     == $k) { $k = 'HSP'; $tags[] = 'HSP'; }
+		if ('tool'    == $k) { $k = 'ツール'; }
+		if ('soft'    == $k) { $k = 'ソフト'; }
+		if ('junk'    == $k) { $k = 'がらくた'; }
+		if ('php'     == $k) { $k = 'php'; $tags[] = 'php'; }
+		if ('pokecom' == $k) { $k = 'ポケコン'; $tags[] = 'ポケコン'; }
+		if ('link'    == $k) { $k = 'リンク'; }
+		if ('tptool'  == $k) { $k = 'TeraPad'; $tags[] = 'TeraPad'; }
+		if ('sakura-editor' == $k) { $k = 'サクラエディタ'; }
+		if ('frog-cms' == $k) { $k = 'Frog CMS'; $tags[] = 'Frog CMS'; }
+		if ('plugin' == $k) { $k = 'HSPプラグイン'; $tags[] = 'HSP'; }
+		if ('hsptool' == $k) { $k = 'HSP用ツール'; $tags[] = 'HSP'; }
+		if ('module' == $k) { $k = 'HSPモジュール'; $tags[] = 'HSP'; }
+		if ('pokecom-pclink' == $k) { $k = 'ポケコンリンク'; $tags[] = 'ポケコン'; }
+		if ('pokecom-program' == $k) { $k = 'ポケコン用プログラム'; $tags[] = 'ポケコン'; }
+		if ('pokecom-game' == $k) { $k = 'ポケコン用ゲーム'; $tags[] = 'ポケコン'; }
+		if ('pokecom-lecture' == $k) { $k = 'ポケコン講座'; $tags[] = 'ポケコン'; }
+		if ('spal' == $k) { $k = 'SpoilerAL'; }
+		if ('patch' == $k) { $k = 'パッチ'; }
+		if ('abc' == $k) { $k = 'A to B Converter'; }
+		if ('susie' == $k) { $k = 'Susie'; }
+		if ('rhaco' == $k) { $tags[] = 'rhaco'; }
+	}
+
+	// タグ取得
+	if (preg_match('!advent-calendar-!', $dpath)) { $tags[] = 'Advent Calendar'; }
+	if (preg_match('!pc-g850!', $dpath)) { $tags[] = 'ポケコン'; }
 	if (preg_match('|<!-- tags: \[(.+?)\] -->|', $html, $m)) {
-		$tags = explode(',', str_replace('rhaco rhaco2', 'Rhaco,Rhaco2', $m[1]));
+		$tags = array_merge($tags, explode(',', str_replace('rhaco rhaco2', 'Rhaco,Rhaco2', $m[1])));
 		foreach ($tags as & $k)
 			$k = trim($k);
 	}
@@ -118,13 +165,6 @@ foreach ($files as $path) {
 		$tags[] = 'Userscript';
 	$tags = array_unique($tags);
 
-	$categories = array();
-	$tmp = explode('/', $path);
-	array_shift($tmp);
-	if (1 < count($tmp)) {
-		$categories[] = $tmp[0];
-	}
-
 	// 公開日付を取得
 	$pub_date = '';
 	if (preg_match('!-- published: (.+?) --!', $html, $m)) {
@@ -135,9 +175,12 @@ foreach ($files as $path) {
 			$tmp != $m[2]) {
 			$dpath = $m[1].$tmp.$m[3];
 		}
-//		if (!preg_match('!/blog/!', $dpath)) {
-//			$pub_date = sprintf('markdown/blog/%s-%s-%s-%s', $m[1], $m[2], $m[3], basename($dpath));
-//		}
+		// 固定ページも日付を付ける
+		if (!preg_match('!/blog/!', $dpath) && // ブログ記事以外
+			!is_dir(str_replace('.html', '', $path))) // ディレクトリ名と同じファイル名の場合は無視する
+		{
+			$dpath = sprintf('markdown/_statics/%s-%s', substr($pub_date, 0, 10), basename($dpath));
+		}
 	}
 	
 	$permalink = '';
@@ -157,6 +200,7 @@ foreach ($files as $path) {
 
 	// fix bloken
 	$html = preg_replace('|<em>(-user\.jp.+?)</em>(-)|ms', '$1$2', $html);
+	$html = preg_replace('| slt="|ms', ' alt="', $html);
 	$html = preg_replace('| slt="|ms', ' alt="', $html);
 
 	// fix link
@@ -221,6 +265,9 @@ foreach ($files as $path) {
 				preg_replace('!\s*<dt.*?>\s*(.+?)\s*</dt>\s*<dd.*?>\s*(.+?)\s*</dd>\s*!ms', "$1\n: $2\n\n", $m[1]);
 		}, $markdown);
 
+	// fix broken
+	$markdown = preg_replace('!(<iframe.+?)/>!ms', '$1></iframe>', $markdown);
+
 	// タグのインデントをなくす
 	$markdown = preg_replace_callback('!^(<([a-z]+).*?>)(.+?)(</\2>)!ms', function($m) {
 			$a = '';
@@ -235,7 +282,7 @@ foreach ($files as $path) {
 					'---' . PHP_EOL .
 					(false !== strpos($dpath, 'markdown/blog/') ? '' : 'layout: default' . PHP_EOL) .
 					'title: "$1"' . PHP_EOL .
-					(empty($permalink) ? '' : 'permalink: '.$permalink . PHP_EOL) .
+//					(empty($permalink) ? '' : 'permalink: '.$permalink . PHP_EOL) .
 					(empty($pub_date) ? '' : 'date: '.$pub_date . PHP_EOL) .
 					(empty($tags) ? '' : 'tags: [' . implode(', ', $tags) . ']' . PHP_EOL) .
 					(empty($categories) ? '' : 'categories: [' . implode(', ', $categories) . ']' . PHP_EOL) .

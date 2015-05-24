@@ -2,7 +2,7 @@
 title: "Frog CMS用タグ入力補助プラグインの1.0.0をリリース"
 date: 2009-06-10 00:28:00
 tags: [php, Plugin, Frog CMS]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

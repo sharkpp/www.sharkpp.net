@@ -2,7 +2,7 @@
 title: "FuelPHP 日本語言語パッケージ 作ってみたよ"
 date: 2013-04-27 00:36:00
 tags: [php, Develop, FuelPHP]
-categories: [blog]
+categories: [ブログ]
 
 ---
 

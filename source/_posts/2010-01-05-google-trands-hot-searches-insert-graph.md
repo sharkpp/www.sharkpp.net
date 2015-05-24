@@ -1,7 +1,7 @@
 ---
 title: "Google Trands Hot Searches insert Graph公開"
 date: 2010-01-05 01:24:00
-categories: [blog]
+categories: [ブログ]
 
 ---
 
