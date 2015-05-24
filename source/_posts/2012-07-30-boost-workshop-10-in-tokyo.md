@@ -147,7 +147,7 @@ sexyhook3はオペコードのバイト数を数えオペコードが壊れな�
 
 方法は、SAPI と [julius][15] (フリーの実装) を使ってみたとのこと。
 
- [15]: julius.sourceforge.jp/
+ [15]: http://julius.sourceforge.jp/
 
 ##### 文法認識とディクテーション
 

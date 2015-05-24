@@ -14,7 +14,7 @@ categories: [blog]
 
 [色々なメモ: Qtで遊ぶ 其の２][2]
 
- [2]: /blog/2009/10/04/play-with-qt-part-2.html
+ [2]: /blog/2009/10/04/play-with-qt-part-2
 
 少しずつQtのソース見つつ調べつつでやってきたメモ的な何か
 

@@ -10,7 +10,7 @@ categories: [blog]
 
 今年の正月([HAPPY NEW YEAR 2011][1])に掲げた目標
 
- [1]: /blog/2010/01/01/happy-new-year-2011.html
+ [1]: /blog/2011/01/01/happy-new-year-2011
 
 ...達成率0% orz
 
@@ -51,10 +51,10 @@ HSP関連のあるサイトの立ち上げは、他の人が作ってるから�
  [2]: /soft/tool/joya_no_kane
  [3]: http://www.pixiv.net/member.php?id=1547498
  [4]: https://github.com/sharkpp
- [5]: /blog/2011/08/31/entry-the-HSP-program-contest-2011.html
- [6]: /blog/2011/09/27/entry-the-HSP-program-contest-2011-2.html
+ [5]: /blog/2011/08/31/entry-the-HSP-program-contest-2011
+ [6]: /blog/2011/09/27/entry-the-HSP-program-contest-2011-2
  [7]: /blog/2011/11/26/hsp-program-contest-2011-has-passed-the-initial-screening
- [8]: http://www.sharkpp.net/blog/2011/12/08/hsp-program-contest-2011-winner
+ [8]: /blog/2011/12/08/hsp-program-contest-2011-winner
 
 ってぐらいかな？
 

@@ -40,7 +40,7 @@ categories: [blog]
 
   * [AviUtlプラグイン＠零 / アンシャープマスク][10]
 
- [10]: [http://typezero.ddo.jp/auf/
+ [10]: http://typezero.ddo.jp/auf/
 
 ## その他<del>(SSE5対応追加？)</del>
 

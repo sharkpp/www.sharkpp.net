@@ -154,10 +154,18 @@ foreach ($files as $path) {
 	$html = preg_replace('| slt="|ms', ' alt="', $html);
 
 	// fix link
-	$html = preg_replace('!href="http://www.sharkpp.net/blog/([0-9]{4})/([0-9]{2})/([0-9]{2})/(.+)\.html"!', 'href="/blog/$1/$2/$3/$4"', $html);
-	$html = preg_replace('!href="http://www.sharkpp.net/(.+)\.html"!', 'href="/$1"', $html);
-	$html = preg_replace('!href="http://www.sharkpp.net/(.+)"!', 'href="/$1"', $html);
-	$html = preg_replace('!src="http://www.sharkpp.net/(.+)"!', 'src="/$1"', $html);
+	$html = preg_replace('!href="http://www.sharkpp.net/blog/([0-9]{4})/([0-9]{2})/([0-9]{2})/(.+?)\.html"!', 'href="/blog/$1/$2/$3/$4"', $html);
+	$html = preg_replace('!href="/blog/([0-9]{4})/([0-9]{2})/([0-9]{2})/(.+?)\.html"!', 'href="/blog/$1/$2/$3/$4"', $html);
+	$html = preg_replace_callback('!href="/blog/([0-9]{4})/([0-9]{2})/([0-9]{2})/(.+?)"!',
+                function($m) { return 'href="/blog/'.$m[1].'/'.$m[2].'/'.$m[3].'/'.str_replace('_', '-', $m[4]).'"'; }, $html);
+	$html = preg_replace('!href="http://www.sharkpp.net/(.+?)\.html"!', 'href="/$1"', $html);
+	$html = preg_replace('!href="http://www.sharkpp.net/(.+?)"!', 'href="/$1"', $html);
+	$html = preg_replace('!src="http://www.sharkpp.net/(.+?)"!', 'src="/$1"', $html);
+	$html = preg_replace('!"(julius\.sourceforge\.jp/)"!', '"http://$1"', $html);
+	$html = preg_replace('!"\[http!', '"http', $html);
+	$html = preg_replace('!href="/blog/2011/10/02/(.+?)"!', 'href="/blog/2011/10/30/$1"', $html);
+	$html = preg_replace('!href="/blog/2010/01/01/(.+?)"!', 'href="/blog/2011/01/01/$1"', $html);
+	$html = preg_replace('!href="/blog/2012/01/01/(.+?)"!', 'href="/blog/2012/01/05/$1"', $html);
 
 	// fix image
 	$html = preg_replace('!<a +href="([^/h][^"]+)"[^>]+?title="(.+?)".*?><img src="([^/h][^"]+)"[^>]+?alt="(.+?)".*?/></a>!',
