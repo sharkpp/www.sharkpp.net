@@ -139,6 +139,12 @@ foreach ($files as $path) {
 //			$pub_date = sprintf('markdown/blog/%s-%s-%s-%s', $m[1], $m[2], $m[3], basename($dpath));
 //		}
 	}
+	
+	$permalink = '';
+	if (!preg_match('!(.+?/)blog/([0-9]{4}/[0-9]{2}/[0-9]{2})(/.+)$!', $dpath) &&
+		preg_match('!^(.+?/)(.+)\.md$!', $dpath, $m)) {
+		$permalink = $m[2] . '/index.html';
+	}
 
 	// コンテンツの中身が取り出せるか？
 	if (!preg_match('|<div id="contents">(.+)<p class="info" style="margin-top: 1em">.+' .
@@ -229,6 +235,7 @@ foreach ($files as $path) {
 					'---' . PHP_EOL .
 					(false !== strpos($dpath, 'markdown/blog/') ? '' : 'layout: default' . PHP_EOL) .
 					'title: "$1"' . PHP_EOL .
+					(empty($permalink) ? '' : 'permalink: '.$permalink . PHP_EOL) .
 					(empty($pub_date) ? '' : 'date: '.$pub_date . PHP_EOL) .
 					(empty($tags) ? '' : 'tags: [' . implode(', ', $tags) . ']' . PHP_EOL) .
 					(empty($categories) ? '' : 'categories: [' . implode(', ', $categories) . ']' . PHP_EOL) .

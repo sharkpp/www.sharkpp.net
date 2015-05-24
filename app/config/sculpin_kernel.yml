@@ -4,3 +4,12 @@ sculpin_pagination:
 sculpin_content_types:
     posts:
         permalink: blog/:year/:month/:day/:filename.html
+    statics:
+        type: path
+        path: _statics
+        singular_name: static
+        layout: default
+        enabled: true
+        taxonomies:
+            - tags
+            - categories

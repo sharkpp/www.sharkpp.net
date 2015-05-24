@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "このサイトについて"
+permalink: about/index.html
 date: 2008-08-03 17:29:00
 
 ---

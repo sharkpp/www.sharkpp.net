@@ -1,0 +1,38 @@
+---
+layout: default
+title: サイトマップ
+use:
+    - "posts"
+    - "statics"
+
+---
+<h2>サイトマップ</h2>
+
+{#
+[<ul class="list-unstyled">
+{% for keys in page|keys %}
+<li>{{ keys }}</li>
+{% endfor %}
+</ul>]
+<pre>{{ print_r() }}</pre>
+<pre>{{ print_r(site) }}</pre>
+<pre>{{ print_r(page) }}</pre>
+<pre>{{ print_r(formatter) }}</pre>
+<pre>{{ print_r(converters) }}</pre>
+<pre>{{ print_r(data) }}</pre>
+#}
+
+{% set pages = [] %}
+{% set pages = pages | merge([{ url: 'blog/categories', title: 'カテゴリ' }]) %}
+{% set pages = pages | merge([{ url: 'blog/tags', title: 'タグ' }]) %}
+{% for post in data.statics %}{% set pages = pages | merge([post]) %}{% endfor %}
+{% for post in data.posts %}{% set pages = pages | merge([post]) %}{% endfor %}
+
+<div>
+<ul class="fa-ul">
+    <li><i class="fa-li fa fa-arrow-circle-right"></i><a href="{{ site.url }}/blog">ブログ</a></li>
+{% for i,post in pages if not(post.url|preg_match('!blog/[0-9]+/[0-9]+/[0-9]+/.+!')) %}
+    <li><i class="fa-li fa fa-arrow-circle-right"></i><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
+</div>
