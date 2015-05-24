@@ -3,11 +3,18 @@ layout: default
 title: カテゴリ
 use:
     - posts_categories
+    - statics_categories
 ---
 <h2>カテゴリ</h2>
 
+{% set categories = {} %}
+{% for k,v in data.statics_categories %}{% set categories = categories | merge({(k):v}) %}{% endfor %}
+{% for k,v in data.posts_categories   %}{% set categories = categories | merge({(k):v}) %}{% endfor %}
+
 <div>
-{% for category,posts in data.posts_categories %}
-<a href="{{ site.url }}/blog/categories/{{ category|url_encode(true) }}">{{ category }}</a>
+{% for category,posts in categories %}
+<a href="{{ site.url }}/blog/categories/{{ category|url_encode(true) }}"
+   class="btn btn-default {{ 50 < posts|length ? 'btn-lg' : 20 < posts|length ? '' : 5 < posts|length ? 'btn-sm' : 'btn-xs' }}"
+   style="margin-bottom: 5px">{{ category }} <span class="badge">{{ posts|length }}</span></a>
 {% endfor %}
 </div>

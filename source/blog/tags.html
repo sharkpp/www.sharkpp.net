@@ -3,11 +3,18 @@ layout: default
 title: タグ
 use:
     - posts_tags
+    - statics_tags
 ---
 <h2>タグ</h2>
 
+{% set tags = {} %}
+{% for k,v in data.statics_tags %}{% set tags = tags | merge({(k):v}) %}{% endfor %}
+{% for k,v in data.posts_tags   %}{% set tags = tags | merge({(k):v}) %}{% endfor %}
+
 <div>
-{% for tag,posts in data.posts_tags %}
-<a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>
+{% for tag,posts in tags %}
+<a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}"
+   class="btn btn-default {{ 50 < posts|length ? 'btn-lg' : 20 < posts|length ? '' : 5 < posts|length ? 'btn-sm' : 'btn-xs' }}"
+   style="margin-bottom: 5px">{{ tag }} <span class="badge">{{ posts|length }}</span></a>
 {% endfor %}
 </div>
