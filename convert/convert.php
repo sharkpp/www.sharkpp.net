@@ -292,13 +292,15 @@ foreach ($files as $path) {
 	$html = preg_replace('!<img src="([^"]+?)".+?alt="(.+?)".*?/>!',
 	                     '<img src="$1" alt="$2" />', $html);
 	$html = preg_replace('!http://www.sharkpp.net/image!', 'http://www.sharkpp.net/images', $html);
-	$html = preg_replace('!"(\.\./image|image)/c\.gif"!', '"/pokecom/image/c.gif"', $html);
+	$html = preg_replace('!"(\.\./image|image)/(c|basic)\.gif"!', '"/pokecom/image/$2.gif"', $html);
 	$html = preg_replace('!"(image/(banner|sougo)\.gif)"!', '"/$1"', $html);
 
 	$html = preg_replace('!<div class="section">(.+?)</div>!ms', '$1', $html);
 	$html = preg_replace('!<div class="footnote">(.+?)</div>!ms', '$1', $html);
 	$html = preg_replace('!<div>\s*<p>\s*(.+?)\s*</p>\s*</div>!ms', '<p>$1</p>', $html);
 //	$html = preg_replace('!<dl class="page_history">!ms', '<dl class="dl-horizontal">', $html);
+
+	$html = preg_replace('!<img src="[^"]+?/ent\.gif".+?alt="[^"]+?" />!', 'xxxx-fa-reply-fa-flip-vertical-xxxx', $html);
 
 	$html = text2entities($html);
 //	$md = new Markdownify\Converter(Markdownify\Converter::LINK_AFTER_PARAGRAPH);
@@ -333,7 +335,6 @@ foreach ($files as $path) {
 	// fix broken
 	$markdown = preg_replace('!(<iframe.+?)/>!ms', '$1></iframe>', $markdown);
 	$markdown = preg_replace('!\{.extlink\}!ms', '', $markdown);
-	$markdown = preg_replace('!<img src=".+?ent.gif" alt="[^"]+?" />!', '<span class="fa fa-reply fa-flip-vertical" title="RETURN"></span>', $markdown);
 
 	// fix link
 	foreach ($path_replace as $from => $to)
@@ -349,6 +350,9 @@ foreach ($files as $path) {
 					$a .= ltrim($l)."\n";
 			return $m[1].$a.$m[4];
 		}, $markdown);
+
+	$markdown = str_replace('xxxx-fa-reply-fa-flip-vertical-xxxx',
+	                        '<span class="fa fa-reply fa-flip-vertical" title="RETURN"></span>', $markdown);
 
 	// 定義済みリストをMarkdownに変換
 	$markdown = preg_replace_callback('!<dl.*?>(.+?)</dl>!ms', function($m) {

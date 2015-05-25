@@ -66,7 +66,7 @@ GAME OVER・CLEAR 時スペースでメニューへ戻る
 	  
 PC-G850Sで動作確認済み 
 
- [4]: ../image/basic.gif
+ [4]: /images/pokecom-basic.gif
 
 ## プログラム
 

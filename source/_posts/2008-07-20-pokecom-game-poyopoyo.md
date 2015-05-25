@@ -40,11 +40,9 @@ END：    ゲーム終了
 	  
 ６キーで落下
 	  
-![RETURN][2]キーで決定
+<span class="fa fa-reply fa-flip-vertical" title="RETURN"></span>キーで決定
   
 
-
- [2]: ../../image/ent.gif
 
 GAME OVER・CLEAR 時スペースでメニューへ戻る
   
@@ -52,45 +50,45 @@ GAME OVER・CLEAR 時スペースでメニューへ戻る
 
 ## 動作環境
 
-![C言語][3]プログラム
+![C言語][2]プログラム
 	  
 PC-G850Sで動作確認済み 
 
- [3]: /images/pokecom-c.gif
+ [2]: /images/pokecom-c.gif
 
 ## プログラム
 
-[DOWNLOAD][4] : poyopoyo.txt
+[DOWNLOAD][3] : poyopoyo.txt
 	  
 ※さらに以下のファイルが必要です
   
 
 
- [4]: /files/poyopoyo.txt "poyopoyo.txt"
+ [3]: /files/poyopoyo.txt "poyopoyo.txt"
 
-[DOWNLOAD][5] : inkey.h
+[DOWNLOAD][4] : inkey.h
 	  
-[DOWNLOAD][6] : rand.h
+[DOWNLOAD][5] : rand.h
 	  
 ※ポケコンでは拡張子を .h として保存してください。
   
 
 
- [5]: /files/inkey.h "inkey.h"
- [6]: /files/rand.h "rand.h"
+ [4]: /files/inkey.h "inkey.h"
+ [5]: /files/rand.h "rand.h"
 
-[DOWNLOAD][7] : Winows版デモ
+[DOWNLOAD][6] : Winows版デモ
 	  
 <span>※同梱の Readme.txt をよく読んでください
 </span> 
 
- [7]: /files/poyopoyo.zip "poyopoyo.zip(Winows版デモ)"
+ [6]: /files/poyopoyo.zip "poyopoyo.zip(Winows版デモ)"
 
-[DOWNLOAD][8] : ポケコン風ダンプリスト
+[DOWNLOAD][7] : ポケコン風ダンプリスト
   
 
 
- [8]: /files/poyopoyo_.txt "poyopoyo_.txt"
+ [7]: /files/poyopoyo_.txt "poyopoyo_.txt"
 
 ## 履歴
 

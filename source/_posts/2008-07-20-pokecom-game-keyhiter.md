@@ -31,7 +31,7 @@ categories: [ポケコン, ポケコン用ゲーム]
 	  
 PC-G850Sで動作確認済み 
 
- [2]: ../image/basic.gif
+ [2]: /images/pokecom-basic.gif
 
 ## プログラム
 
