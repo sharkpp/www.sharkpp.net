@@ -622,7 +622,7 @@ l
 D
 </th>
 <td>
-<i class="fa fa-reply fa-flip-vertical"></i>
+<span class="fa fa-reply fa-flip-vertical" title="RETURN"></span>
 </td>
 <td>
 ←

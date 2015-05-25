@@ -6,9 +6,14 @@ categories: [php, Frog CMS]
 
 ---
 
-![][1]DOWNLOAD</a> 
 
- [1]: /files/tag_assist_1.0.0_20090610.zip
+![tag_assistスクリーンショット][1] 
+
+ [1]: /images/2009_0610_tag_assist_ss_20090610.png
+
+[DOWNLOAD][2] 
+
+ [2]: /files/tag_assist_1.0.0_20090610.zip
 
 タグの入力補助機能を編集画面に追加します。 
 

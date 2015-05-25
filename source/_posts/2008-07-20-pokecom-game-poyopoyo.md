@@ -8,37 +8,89 @@ categories: [ポケコン, ポケコン用ゲーム]
 
 ## 画面
 
-![][1]DOWNLOAD</a> : poyopoyo.txt
+
+![動作画面][1] 
+
+ [1]: /images/2008_0720_poyopoyo.gif
+
+## ルール・ゲームの説明
+
+某有名ゲームみたいなゲームです
+	  
+落ちてくるブロックを回転させ、同じ英字同士を４つ以上つなげ消してください
+	  
+２つ以上繋がると大文字が小文字に変化しますが、繋げる英字は大小を区別しません
+	  
+たまに、お邪魔ブロックが落ちてきますが、他のブロックを消す時、お邪魔ブロックが周囲にあればいっしょに消えていきます 
+
+**メニュー** 
+
+<pre>START：  ゲーム開始
+CONFIG： お邪魔ブロックのON/OFF
+END：    ゲーム終了
+</pre>
+
+## 操作説明
+
+８キーで上
+	  
+２キーで下
+	  
+５キーで回転
+	  
+６キーで落下
+	  
+![RETURN][2]キーで決定
+  
+
+
+ [2]: ../../image/ent.gif
+
+GAME OVER・CLEAR 時スペースでメニューへ戻る
+  
+
+
+## 動作環境
+
+![C言語][3]プログラム
+	  
+PC-G850Sで動作確認済み 
+
+ [3]: /images/pokecom-c.gif
+
+## プログラム
+
+[DOWNLOAD][4] : poyopoyo.txt
 	  
 ※さらに以下のファイルが必要です
   
 
 
- [1]: /files/poyopoyo.txt "poyopoyo.txt"
+ [4]: /files/poyopoyo.txt "poyopoyo.txt"
 
-[DOWNLOAD][2] : inkey.h
+[DOWNLOAD][5] : inkey.h
 	  
-[DOWNLOAD][3] : rand.h
+[DOWNLOAD][6] : rand.h
 	  
 ※ポケコンでは拡張子を .h として保存してください。
   
 
 
- [2]: /files/inkey.h "inkey.h"
- [3]: /files/rand.h "rand.h"
+ [5]: /files/inkey.h "inkey.h"
+ [6]: /files/rand.h "rand.h"
 
-[DOWNLOAD][4] : Winows版デモ
+[DOWNLOAD][7] : Winows版デモ
 	  
 <span>※同梱の Readme.txt をよく読んでください
 </span> 
 
- [4]: /files/poyopoyo.zip "poyopoyo.zip(Winows版デモ)"
+ [7]: /files/poyopoyo.zip "poyopoyo.zip(Winows版デモ)"
 
-[DOWNLOAD][5] : ポケコン風ダンプリスト
+[DOWNLOAD][8] : ポケコン風ダンプリスト
   
 
 
- [5]: /files/poyopoyo_.txt "poyopoyo_.txt"
+ [8]: /files/poyopoyo_.txt "poyopoyo_.txt"
 
 ## 履歴
 
