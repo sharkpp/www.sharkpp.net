@@ -57,9 +57,10 @@ do
 done
 find markdown/blog -type d -empty -delete
 
-rm -f ../source/_posts/*.md
+find ../source/_posts -not -name 2015-\* -or -name 2015-0[1234]\* -exec rm -f {} \;
 cp -p markdown/blog/*.md ../source/_posts/
 cp -p markdown/_statics/*.md ../source/_posts/
+#for I in markdown/blog/*.md markdown/_statics/*.md ; do iconv -f UTF8-MAC -t UTF-8 -c $I > ../source/_posts/$(basename $I) ; done
 
 cp_statics about about
 
