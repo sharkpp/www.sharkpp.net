@@ -1,6 +1,6 @@
 ---
 title: "Qt JAPAN SUMMIT 2015 に行ってきた"
-date: 2015-05-27 20:58
+date: 2015-05-28 00:15
 tags: [Qt, 雑記, 勉強会]
 categories: [ブログ]
 
@@ -9,6 +9,8 @@ categories: [ブログ]
 去年の [Qt DEVELOPER DAY 2014 Tokyo](/blog/2014/05/20/qt-developer-day-2014-tokyo.html) に続き 2015-05-26 に行われた [Qt JAPAN SUMMIT 2015](https://www.qt.io/qtjapansummit2015/) に行ってきました。
 
 メモった内容が予想以上の量になってしまったので、面倒な人は読み飛ばして<a href="{{ page.url }}#%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a>を読むといいのです。
+
+2015-05-28 誤記修正＆スライド追記
 
 ## 開場・受付(9:00 - 10:08)
 
@@ -232,7 +234,7 @@ Nils Christian Roscher-Nielsen – The Qt Company
 
 ### ペッパー
 
-ALDEBARAN 川田 卓志
+川田 卓志 - ALDEBARAN
 
 * ペッパーの開発ツール、コレグラフを作るのに Qt を使ったよ
 * Windows / Linux / Mac で同じ UI を作ることが出来た
@@ -253,7 +255,9 @@ ALDEBARAN 川田 卓志
 
 ### Mac OS X 用ファイルコピーソフト「RapidCopy」の開発
 
-レスパスビジョン 津田 健吾
+澤津 健吾 - [レスパスビジョン株式会社](http://www.lespace.co.jp/)
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/CZ022q7n3TKTTz" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/KengoSawa2/20150526-rapidcopy-lt-onn-qt-japan-summit-2015" title="20150526 RapidCopy LT on Qt Japan Summit 2015" target="_blank">20150526 RapidCopy LT on Qt Japan Summit 2015</a> </strong> from <strong><a href="//www.slideshare.net/KengoSawa2" target="_blank">L&#x27;espaceVision</a></strong> </div>
 
 * Mac で TB 単位のファイル操作に標準の Finder が耐えられない
 * Windows のファイルコピーソフト FastCopy をベースとして Mac に移植
