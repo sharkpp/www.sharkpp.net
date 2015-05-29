@@ -19,7 +19,7 @@ function get_my_ini($key, $def = '') {
 }
 
 $log_file   = get_my_ini('log_file', null);
-$secret_key = get_my_ini('secret_key', null);≈
+$secret_key = get_my_ini('secret_key', null);
 
 if (isset($_GET['key']) &&
     $_GET['key'] === $secret_key &&
@@ -31,14 +31,24 @@ if (isset($_GET['key']) &&
 
     $payload = @ json_decode($_POST['payload'], true);
     if ($payload['ref'] === 'refs/heads/master') {
+        $retval = 0;
         exec('cd '.$repos_path.' ;'.
-             $git_cmd.' pull origin master ;'.
-             './site generate '.$output_path);
-        if ($log_file)
+                 $git_cmd.' pull origin master 2>&1 ;'.
+                 'echo $? ;'.
+                 'if [ ! $? ] ; then ./site generate '.$output_path.' >/dev/null 2>&1 ; fi',
+                 $result, $retval);
+        $status = empty($result) ? 0 : intval(array_pop($result));
+        if ($log_file) {
             file_put_contents($log_file, 
                               date("[Y-m-d H:i:s]")." ".$_SERVER['REMOTE_ADDR'].
                               " git pulled: ".$payload['head_commit']['message']."\n",
                               FILE_APPEND|LOCK_EX);
+            if ($status)
+                foreach ($result as $line)
+                    file_put_contents($log_file, 
+                                      date("[Y-m-d H:i:s]")." git log \"".$line."\"\n",
+                                      FILE_APPEND|LOCK_EX);
+        }
     }
 } else {
     if ($log_file)
