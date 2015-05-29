@@ -1,13 +1,15 @@
 <?php
 
+date_default_timezone_set('Asia/Tokyo');
+
 function get_my_ini($key, $def = '') {
-    static $ini_cache_ = array();
-    if (!isset($ini_cache_)) {
+    static $ini_cache_ = null;
+    if (null === $ini_cache_) {
         $ini_cache_ = array();
-        for (explode("\n", str_replace("\r", "\n",
-             str_replace("\r\n", "\n", @file_get_contents(dirname(__FILE__).'../webhook.conf'))))
+        foreach (explode("\n", str_replace("\r", "\n",
+             str_replace("\r\n", "\n", @file_get_contents(dirname(__FILE__).'/../webhook.conf'))))
              as $line) {
-             if (preg_matcgh('^\s*([^=]+?)\s*=\s*(.+?)\s*$', $line, $m))
+             if (preg_match('|^\s*([^=]+?)\s*=\s*(.+?)\s*$|', $line, $m))
                  $ini_cache_[$m[1]] = $m[2];
         }
     }
@@ -16,8 +18,8 @@ function get_my_ini($key, $def = '') {
     return $def;
 }
 
-$log_file   = get_my_ini('log_file', dirname(__FILE__).'/../webhook.log');
-$secret_key = get_my_ini('secret_key', null);
+$log_file   = get_my_ini('log_file', null);
+$secret_key = get_my_ini('secret_key', null);≈
 
 if (isset($_GET['key']) &&
     $_GET['key'] === $secret_key &&
@@ -29,11 +31,18 @@ if (isset($_GET['key']) &&
 
     $payload = @ json_decode($_POST['payload'], true);
     if ($payload['ref'] === 'refs/heads/master') {
-        exec('cd '.$repos_path);
-        exec($git_cmd.' pull origin master');
-        exec('./site generate '.$output_path);
-        file_put_contents($log_file, date("[Y-m-d H:i:s]")." ".$_SERVER['REMOTE_ADDR']." git pulled: ".$payload['head_commit']['message']."\n", FILE_APPEND|LOCK_EX);
+        exec('cd '.$repos_path.' ;'.
+             $git_cmd.' pull origin master ;'.
+             './site generate '.$output_path);
+        if ($log_file)
+            file_put_contents($log_file, 
+                              date("[Y-m-d H:i:s]")." ".$_SERVER['REMOTE_ADDR'].
+                              " git pulled: ".$payload['head_commit']['message']."\n",
+                              FILE_APPEND|LOCK_EX);
     }
 } else {
-    file_put_contents($log_file, date("[Y-m-d H:i:s]")." invalid access: ".$_SERVER['REMOTE_ADDR']."\n", FILE_APPEND|LOCK_EX);
+    if ($log_file)
+        file_put_contents($log_file,
+                          date("[Y-m-d H:i:s]")." invalid access: ".$_SERVER['REMOTE_ADDR']."\n",
+                          FILE_APPEND|LOCK_EX);
 }

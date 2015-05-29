@@ -28,7 +28,7 @@ exec_init () {
   .vendor/bin/bowerphp install
   # create default webhook conf
   if [ ! -e "$(dirname $0)/webhook.conf" ] ; then
-    echo "log_file="> $(dirname $0)/webhook.conf
+    echo "log_file=$(dirname $0)/webhook.log"> $(dirname $0)/webhook.conf
     echo "secret_key=$(cat /dev/urandom | head -n 64 | shasum -a 512 -b | sed -e "s/[\* -]//g")">> $(dirname $0)/webhook.conf
     echo "git_cmd=$(whereis git)">> $(dirname $0)/webhook.conf
     echo "repos_path=$(dirname $0)">> $(dirname $0)/webhook.conf
