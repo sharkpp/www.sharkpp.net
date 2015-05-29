@@ -3,11 +3,12 @@
 exec_usage () {
   echo 'usage: site <command> [option]'
   echo 'commands are:'
-  echo '  init     initialize site'
-  echo '  clean    cleanup site, remove ignore files'
-  echo '  generate generate site'
-  echo '  test     launch web server [ http://localhost:8000/ ] for test site'
-  echo '  spider   check broken link'
+  echo '  init                initialize site'
+  echo '  clean               cleanup site, remove ignore files'
+  echo '  generate [OUT_PATH] generate site'
+  echo '  test                launch web server [ http://localhost:8000/ ] for test site'
+  echo '  spider              check broken link'
+  echo '  diary [STUB]        create new empty page'
 }
 
 exec_init () {
@@ -25,6 +26,14 @@ exec_init () {
   php composer.phar install
   # install BowerPHP
   .vendor/bin/bowerphp install
+  # create default webhook conf
+  if [ ! -e "$(dirname $0)/webhook.conf" ] ; then
+    echo "log_file="> $(dirname $0)/webhook.conf
+    echo "secret_key=$(cat /dev/urandom | head -n 64 | shasum -a 512 -b | sed -e "s/[\* -]//g")">> $(dirname $0)/webhook.conf
+    echo "git_cmd=$(whereis git)">> $(dirname $0)/webhook.conf
+    echo "repos_path=$(dirname $0)">> $(dirname $0)/webhook.conf
+    echo "output_path=$(dirname $0)/public">> $(dirname $0)/webhook.conf
+  fi
 }
 
 exec_clean () {
@@ -37,9 +46,15 @@ exec_generate () {
   if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
     exec_init
   fi
-  rm -rf output_dev/*
-  php sculpin.phar generate --env=prod
+  rm -rf output_prod/* > /dev/null 2>&1
+  php sculpin.phar generate --env=prod > /dev/null
   if [ $? -ne 0 ]; then echo "Could not generate the site"; exit 1; fi
+  OUT_PATH=$1
+  if [ "" != "$OUT_PATH" -a "" != "$(basename $OUT_PATH)" ] ; then
+    rm -rf ${OUT_PATH}~ > /dev/null 2>&1
+    mv $OUT_PATH ${OUT_PATH}~
+    mv output_prod $OUT_PATH
+  fi
 }
 
 exec_test () {
@@ -74,14 +89,30 @@ exec_spider () {
   fi
 }
 
+exec_diary () {
+  NEW_PAGE=source/_posts/$(date +%Y-%m-%d)-$1.md
+
+  echo "---"                             > $NEW_PAGE
+  echo "title: \"$1\""                   >>$NEW_PAGE
+  echo "date: $(date +'%Y-%m-%d %H:%M')" >>$NEW_PAGE
+  echo "tags: [雑記]"                     >>$NEW_PAGE
+  echo "categories: [ブログ]"             >>$NEW_PAGE
+  echo ""                                >>$NEW_PAGE
+  echo "---"                             >>$NEW_PAGE
+
+  echo create new blog page is $NEW_PAGE
+}
+
 case "$1" in
   "init"     ) exec_init ;;
   "i"        ) exec_init ;;
   "clean"    ) exec_clean ;;
-  "generate" ) exec_generate ;;
-  "g"        ) exec_generate ;;
+  "generate" ) exec_generate $2;;
+  "g"        ) exec_generate $2;;
   "test"     ) exec_test ;;
   "t"        ) exec_test ;;
   "spider"   ) exec_spider ;;
+  "diary"    ) exec_diary $2;;
+  "d"        ) exec_diary $2;;
   *          ) exec_usage ;;
 esac
