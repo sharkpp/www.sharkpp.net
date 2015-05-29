@@ -20,6 +20,7 @@ function get_my_ini($key, $def = '') {
 
 $log_file   = get_my_ini('log_file', null);
 $secret_key = get_my_ini('secret_key', null);
+//$_POST['payload']='{"ref":"refs/heads/master","head_commit":{"message":"xxx"}}';
 
 if (isset($_GET['key']) &&
     $_GET['key'] === $secret_key &&
@@ -34,9 +35,10 @@ if (isset($_GET['key']) &&
         $retval = 0;
         exec('cd '.$repos_path.' ;'.
                  $git_cmd.' pull origin master 2>&1 ;'.
-                 'echo $? ;'.
-                 'if [ ! $? ] ; then ./site generate '.$output_path.' >/dev/null 2>&1 ; fi',
-                 $result, $retval);
+                 'GIT_RESULT=$? ;'.
+                 'if [ 0 -eq $GIT_RESULT ] ; then ./site generate '.$output_path.' >/dev/null 2>&1 ; fi ;'.
+                 'echo $GIT_RESULT',
+                 $result, $retval);//var_dump($result);
         $status = empty($result) ? 0 : intval(array_pop($result));
         if ($log_file) {
             file_put_contents($log_file, 
