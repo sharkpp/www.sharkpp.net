@@ -1,5 +1,14 @@
 #!/bin/bash
 
+check_php () {
+  for I in php56cli php56 php55cli php55 php54cli php54 php53cli php53 php5cli php5 php
+  do
+    if   [ "cli" == "$($I -v 2>&1 | grep cli)" ] ; then
+      alias php=$I
+    fi
+  done
+}
+
 exec_usage () {
   echo 'usage: site <command> [option]'
   echo 'commands are:'
@@ -12,6 +21,7 @@ exec_usage () {
 }
 
 exec_init () {
+  check_php
   # install Sculpin
   if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
     curl --insecure -L -O https://download.sculpin.io/sculpin.phar
@@ -45,7 +55,10 @@ exec_clean () {
 exec_generate () {
   if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
     exec_init
+  else
+    check_php
   fi
+  #
   rm -rf output_prod/* > /dev/null 2>&1
   php sculpin.phar generate --env=prod > /dev/null
   if [ $? -ne 0 ]; then echo "Could not generate the site"; exit 1; fi
@@ -60,12 +73,20 @@ exec_generate () {
 exec_test () {
   if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
     exec_init
+  else
+    check_php
   fi
+  #
   rm -rf output_dev/*
   php sculpin.phar generate --watch --server
 }
 
 exec_spider () {
+  if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
+    exec_init
+  else
+    check_php
+  fi
   # wget install check
   wget --help > /dev/null
   if [ $? -eq 127 ] ; then
