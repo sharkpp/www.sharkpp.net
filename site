@@ -14,13 +14,13 @@ exec_usage () {
 exec_init () {
   # install Sculpin
   if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
-    php -r "readfile('https://download.sculpin.io/sculpin.phar');" > sculpin.phar
+    curl --insecure -L -O https://download.sculpin.io/sculpin.phar
   fi
   php sculpin.phar self-update
   php sculpin.phar install
   # install Composer
   if [ ! -e "$(dirname $0)/composer.phar" ] ; then
-    php -r "readfile('https://getcomposer.org/installer');" | php
+    curl --insecure -L https://getcomposer.org/installer | php
   fi
   php composer.phar self-update
   php composer.phar install
