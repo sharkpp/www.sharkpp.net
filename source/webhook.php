@@ -42,28 +42,13 @@ if (!empty($payload) &&
     isset($payload['ref']) &&
     'refs/heads/master' == $payload['ref'] )
 {
-    $git_cmd     = get_my_ini('git_cmd', 'git');
-    $repos_path  = get_my_ini('repos_path', dirname(__FILE__).'/..');
-    $output_path = get_my_ini('output_path', dirname(__FILE__));
-
-    $retval = 0;
-    exec('cd '.$repos_path.' ;'.
-             $git_cmd.' pull origin master 2>&1 ;'.
-             'GIT_RESULT=$? ;'.
-             'if [ 0 -eq $GIT_RESULT ] ; then ./site generate '.$output_path.' >/dev/null 2>&1 ; fi ;'.
-             'echo $GIT_RESULT',
-             $result, $retval);//var_dump($result);
-    $status = empty($result) ? 0 : intval(array_pop($result));
+    $notify_path = get_my_ini('notify_path', dirname(__FILE__).'notify');
+    file_put_contents($notify_path, $_SERVER['REQUEST_TIME']);
     if ($log_file) {
         file_put_contents($log_file, 
                           date("[Y-m-d H:i:s]")." ".$_SERVER['REMOTE_ADDR'].
                           " git pulled: ".$payload['head_commit']['message']."\n",
                           FILE_APPEND|LOCK_EX);
-        if ($status)
-            foreach ($result as $line)
-                file_put_contents($log_file, 
-                                  date("[Y-m-d H:i:s]")." git log \"".$line."\"\n",
-                                  FILE_APPEND|LOCK_EX);
     }
 } else {
     if ($log_file)

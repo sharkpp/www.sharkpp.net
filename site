@@ -20,18 +20,33 @@ check_libxml () {
   fi
 }
 
+# get config value
+get_ini () {
+  # $1 : config file
+  # $2 : key
+  # $3 : default value
+  local RESULT
+  RESULT=$(cat "$1" | grep "$2" | sed -e 's/^[^=]*=\s*\(.*\)/\1/g')
+  if [ "" == "$RESULT" ] ; then
+    RESULT=$3
+  fi
+  echo $RESULT
+}
+
 exec_usage () {
   echo 'usage: site <command> [option]'
   echo 'commands are:'
-  echo '  init                initialize site'
-  echo '  clean               cleanup site, remove ignore files'
-  echo '  generate [OUT_PATH] generate site'
-  echo '  test                launch web server [ http://localhost:8000/ ] for test site'
-  echo '  spider              check broken link'
-  echo '  diary [STUB]        create new empty page'
+  echo '  init                   initialize site'
+  echo '  clean                  cleanup site, remove ignore files'
+  echo '  generate [OUT_PATH]    generate site'
+  echo '  production [CONF_PATH] production site, set webhook.conf path'
+  echo '  test                   launch web server [ http://localhost:8000/ ] for test site'
+  echo '  spider                 check broken link'
+  echo '  diary [STUB]           create new empty page'
 }
 
-exec_init () {
+core_init () {
+  #
   check_php
   # install Sculpin
   if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
@@ -50,12 +65,22 @@ exec_init () {
   $PHP .vendor/bin/bowerphp install
   # create default webhook conf
   if [ ! -e "$(dirname $0)/webhook.conf" ] ; then
-    echo "log_file=$(dirname $0)/webhook.log"> $(dirname $0)/webhook.conf
-    echo "secret_key=$(cat /dev/urandom | head -n 64 | shasum -a 512 -b | sed -e "s/[\* -]//g")">> $(dirname $0)/webhook.conf
-    echo "git_cmd=$(whereis git)">> $(dirname $0)/webhook.conf
-    echo "repos_path=$(dirname $0)">> $(dirname $0)/webhook.conf
-    echo "output_path=$(dirname $0)/public">> $(dirname $0)/webhook.conf
+    pushd $(dirname $0) >/dev/null 2>&1
+    echo "log_file=$(pwd)/webhook.log"> $(pwd)/webhook.conf
+    echo "secret_key=$(cat /dev/urandom | head -n 64 | shasum -a 512 -b | sed -e "s/[\* -]//g")">> $(pwd)/webhook.conf
+    echo "git_cmd=$(whereis git)">> $(pwd)/webhook.conf
+    echo "repos_path=$(pwd)">> $(pwd)/webhook.conf
+    echo "output_path=$(pwd)/public">> $(pwd)/webhook.conf
+    echo "notify_path=$(pwd)/webhook.notify">> $(pwd)/webhook.conf
+    popd >/dev/null 2>&1
   fi
+}
+
+exec_init () {
+  exec 9< $0
+  perl -mFcntl=:flock -e "open(LOCK,'<&=9');exit(!flock(LOCK,LOCK_EX|LOCK_NB))" || exit 0
+  #
+  core_init
 }
 
 exec_clean () {
@@ -64,14 +89,7 @@ exec_clean () {
   find source/assets -maxdepth 1 -mindepth 1 -not -name js -and -not -name css -exec rm -rf {} \;
 }
 
-exec_generate () {
-  if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
-    exec_init
-  else
-    check_php
-    check_libxml
-  fi
-  #
+core_generate () {
   rm -rf output_prod/* > /dev/null 2>&1
   $PHP sculpin.phar generate --env=prod > /dev/null
   if [ $? -ne 0 ]; then echo "Could not generate the site"; exit 1; fi
@@ -91,9 +109,54 @@ exec_generate () {
   fi
 }
 
+exec_generate () {
+  exec 9< $0
+  perl -mFcntl=:flock -e "open(LOCK,'<&=9');exit(!flock(LOCK,LOCK_EX|LOCK_NB))" || exit 0
+  #
+  if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
+    core_init
+  else
+    check_php
+    check_libxml
+  fi
+  #
+  core_generate $1
+}
+
+exec_production () {
+  exec 9< $0
+  perl -mFcntl=:flock -e "open(LOCK,'<&=9');exit(!flock(LOCK,LOCK_EX|LOCK_NB))" || exit 0
+  # check update
+  if [ ! -e "$1" ] ; then
+    echo config \"$1\" not found
+    exit 1
+  fi
+  cd $(dirname $0)
+  NOTIFY=$(get_ini $1 notify_path notify)
+  if [ ! -e "$NOTIFY" ] ; then
+    echo not updated
+    exit 0
+  fi
+  rm -f $NOTIFY
+  # repository update
+  GIT=$(get_ini $1 git_cmd git)
+  $GIT pull origin master
+  if [ 0 -ne $? ] ; then
+    exit 1
+  fi
+  # generate site
+  if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
+    core_init
+  else
+    check_php
+    check_libxml
+  fi
+  core_generate $(get_ini $1 output_path public)
+}
+
 exec_test () {
   if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
-    exec_init
+    core_init
   else
     check_php
     check_libxml
@@ -105,7 +168,7 @@ exec_test () {
 
 exec_spider () {
   if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
-    exec_init
+    core_init
   else
     check_php
     check_libxml
@@ -148,15 +211,16 @@ exec_diary () {
 }
 
 case "$1" in
-  "init"     ) exec_init ;;
-  "i"        ) exec_init ;;
-  "clean"    ) exec_clean ;;
-  "generate" ) exec_generate $2;;
-  "g"        ) exec_generate $2;;
-  "test"     ) exec_test ;;
-  "t"        ) exec_test ;;
-  "spider"   ) exec_spider ;;
-  "diary"    ) exec_diary $2;;
-  "d"        ) exec_diary $2;;
-  *          ) exec_usage ;;
+  "init"       ) exec_init ;;
+  "i"          ) exec_init ;;
+  "clean"      ) exec_clean ;;
+  "generate"   ) exec_generate $2;;
+  "g"          ) exec_generate $2;;
+  "production" ) exec_production $2;;
+  "test"       ) exec_test ;;
+  "t"          ) exec_test ;;
+  "spider"     ) exec_spider ;;
+  "diary"      ) exec_diary $2;;
+  "d"          ) exec_diary $2;;
+  *            ) exec_usage ;;
 esac
