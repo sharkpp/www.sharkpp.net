@@ -1,7 +1,12 @@
+---
+permalink: .htaccess
+---
+# blogs/(tags|categories)/[0-9]+ 
 <FilesMatch "^[0-9]+$">
     DefaultType text/html
 </FilesMatch>
 
+# redirect for old site url to new site url
 Redirect permanent /pokecom/pclink.html                                http://www.sharkpp.net/blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3%E3%83%AA%E3%83%B3%E3%82%AF
 Redirect permanent /junk/sakura-editor.html                            http://www.sharkpp.net/blog/categories/%E3%82%B5%E3%82%AF%E3%83%A9%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF
 Redirect permanent /pokecom/lecture.html                               http://www.sharkpp.net/blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3%E8%AC%9B%E5%BA%A7
