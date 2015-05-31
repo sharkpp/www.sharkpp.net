@@ -2,6 +2,16 @@
 
 date_default_timezone_set('Asia/Tokyo');
 
+function at($var, $key, $def = '') {
+	$v = $var;
+	foreach (explode('.', $key) as $k) {
+		if (!isset($v[$k]))
+			return $def;
+		$v = $v[$k];
+	}
+	return $v;
+}
+
 function get_my_ini($key, $def = '') {
     static $ini_cache_ = null;
     if (null === $ini_cache_) {
@@ -13,21 +23,22 @@ function get_my_ini($key, $def = '') {
                  $ini_cache_[$m[1]] = $m[2];
         }
     }
-    if (isset($ini_cache_[$key]))
-        return $ini_cache_[$key];
-    return $def;
+    return at($ini_cache_, $key, $def);
+}
+
+$post_data = '';
+if ($stream = fopen('php://input', 'r')) {
+    $post_data = stream_get_contents($stream, 512*1024); // max 512KB
+    fclose($stream);
 }
 
 $log_file   = get_my_ini('log_file', null);
 $secret_key = get_my_ini('secret_key', null);
-//$_POST['payload']='{"ref":"refs/heads/master","head_commit":{"message":"xxx"}}';
-$payload = isset($_POST['payload'])
-               ? @ json_decode($_POST['payload'], true)
-               : array();
+list($hmac_algo, $hmac_value) = explode('=', at($_SERVER, 'HTTP_X_HUB_SIGNATURE', 'sha1=*'), 2);
+$payload = @ json_decode($post_data, true);
 
 if (!empty($payload) &&
-    isset($payload['config']['secret']) &&
-    $secret_key === $payload['config']['secret'] &&
+    hash_hmac($hmac_algo, $post_data, $secret_key) === $hmac_value &&
     isset($payload['ref']) &&
     'refs/heads/master' == $payload['ref'] )
 {
