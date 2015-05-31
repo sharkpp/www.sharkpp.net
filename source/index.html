@@ -10,7 +10,7 @@ use:
 {% for post in page.pagination.items %}
     <article class="full-contents">
         <header>
-            <h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
+            <h2><a href="{{ site.url }}{{ post.url }}">{% if post.draft %}<i class="fa fa-pencil-square-o"></i> {% endif %}{{ post.title }}</a></h2>
         </header>
         <div>
             {{ post.blocks.content | preg_replace('!^(.+?)(<h.*)?$!sm', '$1') | raw }}
