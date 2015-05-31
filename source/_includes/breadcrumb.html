@@ -12,16 +12,16 @@
         {% set breadcrumbs = breadcrumbs|merge([{ caption: this_day   }]) %}
     {% else %}
         {% for category in categories %}
-            {% set breadcrumbs = breadcrumbs|merge([{ url: site.url ~ "/blog/categories/" ~ category, caption: category }]) %}
+            {% set breadcrumbs = breadcrumbs|merge([{ url: (site.url ~ "/blog/categories/" ~ category) | replace({'//':'/'}), caption: category }]) %}
         {% endfor %}
     {% endif %}
 {% elseif "/blog/tags/" in page.url %}
-    {% set breadcrumbs = breadcrumbs|merge([{ url: site.url ~ "/blog/tags", caption: "タグ" }]) %}
+    {% set breadcrumbs = breadcrumbs|merge([{ url: (site.url ~ "/blog/tags") | replace({'//':'/'}), caption: "タグ" }]) %}
 {% elseif "/blog/categories/" in page.url %}
-    {% set breadcrumbs = breadcrumbs|merge([{ url: site.url ~ "/blog/categories", caption: "カテゴリ" }]) %}
+    {% set breadcrumbs = breadcrumbs|merge([{ url: (site.url ~ "/blog/categories") | replace({'//':'/'}), caption: "カテゴリ" }]) %}
 {% endif %}
 {% if "/" != page.url %}
-    {% set breadcrumbs = breadcrumbs|merge([{ url: site.url ~ "/" ~ page.url,
+    {% set breadcrumbs = breadcrumbs|merge([{ url: (site.url ~ "/" ~ page.url) | replace({'//':'/'}),
                                               caption: "/blog/tags/"       in page.url ? '"' ~ page.tag ~ '"':
                                                        "/blog/categories/" in page.url ? '"' ~ page.category ~ '"' :
                                                                                          page.title }]) %}
