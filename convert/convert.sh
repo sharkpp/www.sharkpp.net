@@ -57,6 +57,7 @@ do
 done
 find markdown/blog -type d -empty -delete
 
+cp -p markdown/htaccess.twig ../source/
 find ../source/_posts -not -name 2015-\* -or -name 2015-0[1234]\* -exec rm -f {} \;
 cp -p markdown/blog/*.md ../source/_posts/
 cp -p markdown/_statics/*.md ../source/_posts/

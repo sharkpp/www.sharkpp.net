@@ -397,12 +397,23 @@ foreach ($cp as $cp_once) {
 }
 
 // .htaccess
-$tmp = '';
+$tmp = <<<EOD
+---
+permalink: .htaccess
+---
+# blogs/(tags|categories)/[0-9]+ 
+<FilesMatch "^[0-9]+$">
+    DefaultType text/html
+</FilesMatch>
+
+# redirect for old site url to new site url
+
+EOD;
 $fmtlen = 0;
 foreach ($redirect as $from => $to)
 	$fmtlen = max(strlen($from), $fmtlen);
 $fmtlen = min(50, $fmtlen);
 foreach ($redirect as $from => $to)
 	$tmp .= sprintf('Redirect permanent /%-'.$fmtlen.'s http://www.sharkpp.net/%s'.PHP_EOL, $from, $to);
-file_put_contents('markdown/.htaccess', $tmp);
+file_put_contents('markdown/htaccess.twig', $tmp);
 file_put_contents('last_htaccess.txt', $tmp);
