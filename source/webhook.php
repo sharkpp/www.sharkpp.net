@@ -42,7 +42,7 @@ if (!empty($payload) &&
     isset($payload['ref']) &&
     'refs/heads/master' == $payload['ref'] )
 {
-    $notify_path = get_my_ini('notify_path', dirname(__FILE__).'notify');
+    $notify_path = get_my_ini('notify_path', dirname(__FILE__).'/notify');
     file_put_contents($notify_path, $_SERVER['REQUEST_TIME']);
     if ($log_file) {
         file_put_contents($log_file, 
