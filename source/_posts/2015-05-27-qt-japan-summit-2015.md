@@ -1,7 +1,7 @@
 ---
 title: "Qt JAPAN SUMMIT 2015 に行ってきた"
 date: 2015-05-27 20:58
-update: 2015-05-28 00:15
+update: 2015-05-31 15:50
 tags: [Qt, 雑記, 勉強会]
 categories: [ブログ]
 
@@ -11,7 +11,8 @@ categories: [ブログ]
 
 メモった内容が予想以上の量になってしまったので、面倒な人は読み飛ばして<a href="{{ page.url }}#%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a>を読むといいのです。
 
-2015-05-28 誤記修正＆スライド追記
+* 2015-05-28 誤記修正＆スライド追記
+* 2015-05-31 スライド追記
 
 ## 開場・受付(9:00 - 10:08)
 
@@ -57,6 +58,9 @@ Lars Knoll - The Qt Company
 MacBook がクラッシュしちゃった！ Oh no!
 
 この間に、 Qt が 20 周年を記念しユーザー会よりケーキが送られた。
+
+<blockquote class="twitter-tweet" lang="ja"><p lang="en" dir="ltr">What a great cake! Celebrating 20 years of Qt at the Japan Summit <a href="https://twitter.com/hashtag/qtjp?src=hash">#qtjp</a> <a href="http://t.co/dJkpLVWyTU">pic.twitter.com/dJkpLVWyTU</a></p>&mdash; Lars Knoll (@LarsKnoll) <a href="https://twitter.com/LarsKnoll/status/603049082009956353">2015, 5月 26</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 * The Qt Company の代表かつチーフメンテナ
 * 20 周年を祝い先週、オフィスでもお祝いした。
@@ -220,10 +224,10 @@ Nils Christian Roscher-Nielsen – The Qt Company
 
 ### お昼
 
-お昼もぐもぐ♪
+お昼もぐもぐ♪ Qt 20周年のケーキも切り分けられて配られていました。
 
-<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">Qt 20周年ケーキ配布ミッションコンプリート！ <a href="https://twitter.com/hashtag/qtjp?src=hash">#qtjp</a> <a href="https://twitter.com/hashtag/qtjs?src=hash">#qtjs</a> <a href="https://t.co/bspMM02jNA">https://t.co/bspMM02jNA</a></p>&mdash; さめたすたす -Mr SHARKPP- (@sharkpp) <a href="https://twitter.com/sharkpp/status/603044106068176896">2015, 5月 26</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:300px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://instagram.com/p/3IWku5Pb1M/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_top">Qt 20周年ケーキ配布ミッションコンプリート！ #qtjp #qtjs</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">@sharkppが投稿した写真 - <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-05-26T03:44:53+00:00">2015 5月 25 8:44午後 PDT</time></p></div></blockquote>
+<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
 
 ### ライトニングトーク大会 (12:30 から 13:30)
 
@@ -350,6 +354,8 @@ Q. QtWidget と Qt Quick と同じようなことが出来るものがあるが�
 
 [鈴木 佑](https://twitter.com/task_jp) – 日本Qtユーザー会
 
+<script async class="speakerdeck-embed" data-id="0344db39536341099c2c1248f8ff75ac" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
 Q_PROPERTY に MEMBER が追加
 
 * Q_PROPERTY は C++ ではあまり必要ではない
@@ -454,6 +460,8 @@ Q. QtWdget もサポートを続けるのか？
 ### qmake 入門 (18:10 - 18:45)
 
 [石田 伸吾](https://twitter.com/hermit4) – 日本Qtユーザー会
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/fczhDZ1ekppu1y" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/ShingoIshida/qmake" title="qmake入門" target="_blank">qmake入門</a> </strong> from <strong><a href="//www.slideshare.net/ShingoIshida" target="_blank">hermit4 Ishida</a></strong> </div>
 
 * qmake はクロスプラットフォーム用のツールで makefile やソリューションファイルなどを作れる
 * 変数、if など 制御構文、コメントも使える
