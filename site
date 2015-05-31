@@ -138,19 +138,22 @@ exec_production () {
     exit 0
   fi
   rm -f $NOTIFY
-  # repository update
-  GIT=$(get_ini $1 git_cmd git)
-  $GIT pull origin master
-  if [ 0 -ne $? ] ; then
-    exit 1
-  fi
-  # generate site
+  # init
   if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
     core_init
   else
     check_php
     check_libxml
   fi
+  # repository update
+  GIT=$(get_ini $1 git_cmd git)
+  $GIT pull origin master
+  if [ 0 -ne $? ] ; then
+    exit 1
+  fi
+  # update assets
+  $PHP .vendor/bin/bowerphp install
+  # generate site
   core_generate $(get_ini $1 output_path public)
 }
 

@@ -1,0 +1,20 @@
+{% extends "post" %}
+
+{% block head_styles %}
+        <link href="{{ site.url }}/css/mermaid.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block scripts_after %}
+        <script type="text/javascript">
+            $('code.mermaid')
+                .removeClass('brainfuck')
+                .each(function(){
+                    $(this).parent()
+                        .replaceWith(
+                            '<div class="mermaid" style="white-space: pre; margin: 0 0 10px; background-color: #fefefe; border: 1px solid #ccc; border-radius: 4px;">' +
+                              $(this).text() +
+                            '</div>');
+                });
+        </script>
+        <script src="{{ site.url }}/assets/mermaid/dist/mermaid.full.min.js"></script>
+{% endblock %}
