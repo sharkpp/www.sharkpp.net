@@ -1,12 +1,23 @@
 #!/bin/bash
 
+# check cli php
 check_php () {
-  for I in php56cli php56 php55cli php55 php54cli php54 php53cli php53 php5cli php5 php
+  PHP=php
+  for I in php php55cli php55 php54cli php54 php53cli php53 php5cli php5
   do
-    if   [ "cli" == "$($I -v 2>&1 | grep cli)" ] ; then
-      alias php=$I
+    if [ "" != "$($I -v 2>/dev/null | grep cli)" ] ; then
+      PHP=$I
+      break
     fi
   done
+}
+
+# check libxml version
+check_libxml () {
+  $PHP sculpin.phar >/dev/null 2>&1
+  if [ 0 -ne $? ] ; then
+    export LD_PRELOAD=~/usr/libxml/lib/libxml2.so
+  fi
 }
 
 exec_usage () {
@@ -26,16 +37,17 @@ exec_init () {
   if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
     curl --insecure -L -O https://download.sculpin.io/sculpin.phar
   fi
-  php sculpin.phar self-update
-  php sculpin.phar install
+  check_libxml
+  $PHP sculpin.phar self-update
+  $PHP sculpin.phar install
   # install Composer
   if [ ! -e "$(dirname $0)/composer.phar" ] ; then
-    curl --insecure -L https://getcomposer.org/installer | php
+    curl --insecure -L https://getcomposer.org/installer | $PHP
   fi
-  php composer.phar self-update
-  php composer.phar install
+  $PHP composer.phar self-update
+  $PHP composer.phar install
   # install BowerPHP
-  .vendor/bin/bowerphp install
+  $PHP .vendor/bin/bowerphp install
   # create default webhook conf
   if [ ! -e "$(dirname $0)/webhook.conf" ] ; then
     echo "log_file=$(dirname $0)/webhook.log"> $(dirname $0)/webhook.conf
@@ -57,16 +69,19 @@ exec_generate () {
     exec_init
   else
     check_php
+    check_libxml
   fi
   #
   rm -rf output_prod/* > /dev/null 2>&1
-  php sculpin.phar generate --env=prod > /dev/null
+  $PHP sculpin.phar generate --env=prod > /dev/null
   if [ $? -ne 0 ]; then echo "Could not generate the site"; exit 1; fi
   OUT_PATH=$1
-  if [ "" != "$OUT_PATH" -a "" != "$(basename $OUT_PATH)" ] ; then
-    rm -rf ${OUT_PATH}~ > /dev/null 2>&1
-    mv $OUT_PATH ${OUT_PATH}~
-    mv output_prod $OUT_PATH
+  if [ "" != "$OUT_PATH" ] ; then
+    if [ "" != "$(basename $OUT_PATH)" ] ; then
+      rm -rf ${OUT_PATH}~ > /dev/null 2>&1
+      mv $OUT_PATH ${OUT_PATH}~
+      mv output_prod $OUT_PATH
+    fi
   fi
 }
 
@@ -75,10 +90,11 @@ exec_test () {
     exec_init
   else
     check_php
+    check_libxml
   fi
   #
   rm -rf output_dev/*
-  php sculpin.phar generate --watch --server
+  $PHP sculpin.phar generate --watch --server
 }
 
 exec_spider () {
@@ -86,6 +102,7 @@ exec_spider () {
     exec_init
   else
     check_php
+    check_libxml
   fi
   # wget install check
   wget --help > /dev/null
@@ -96,17 +113,17 @@ exec_spider () {
   if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
     exec_init
   fi
-  RUNNING=$(ps ax|grep "php sculpin.phar[ ]"|wc -l|sed -e "s/ //g")
+  RUNNING=$(ps ax|grep "$PHP sculpin.phar[ ]"|wc -l|sed -e "s/ //g")
   if [ 0 -eq $RUNNING ] ; then
     rm -rf output_dev/*
     # launch server and waiting for generate
     while read f; do
       if [ "" != "$(echo "$f" | grep "server is running at")" ] ; then break ; fi
-    done < <(php sculpin.phar generate --watch --server &)
+    done < <($PHP sculpin.phar generate --watch --server &)
   fi
   wget --spider --no-directories --recursive --page-requisites --level=0 --no-verbose http://localhost:8000
   if [ 0 -eq $RUNNING ] ; then
-    killall php
+    killall $PHP
   fi
 }
 
