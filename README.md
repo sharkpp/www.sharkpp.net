@@ -33,3 +33,7 @@ Launch built-in server and broken link check for all internal links.
 Create new blog page to `source/_posts/2015-05-30-[STUB].md`
 
     ./site diary [STUB]
+
+## License
+
+...
