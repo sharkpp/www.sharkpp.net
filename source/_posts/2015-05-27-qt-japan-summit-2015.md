@@ -1,6 +1,7 @@
 ---
 title: "Qt JAPAN SUMMIT 2015 に行ってきた"
-date: 2015-05-28 00:15
+date: 2015-05-27 20:58
+update: 2015-05-28 00:15
 tags: [Qt, 雑記, 勉強会]
 categories: [ブログ]
 
