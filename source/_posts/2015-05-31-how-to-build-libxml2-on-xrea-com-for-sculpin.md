@@ -290,7 +290,7 @@ Checking lzma
 ちなみに `--without-python` オプションを指定しないと、システムディレクトリにインストール使用としてエラーが出てしまいます。
 インストール先のディレクトリを指定してもいいけど、まあ要らないので省いています。
 
-# Sculpin の動作確認
+## Sculpin の動作確認
 
 ```bash
 # LD_PRELOAD=~/usr/libxml/lib/libxml2.so php55cli sculpin.phar
