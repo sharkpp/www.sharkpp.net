@@ -23,14 +23,15 @@ use:
 #}
 
 {% set pages = [] %}
-{% set pages = pages | merge([{ url: 'blog/categories', title: 'カテゴリ' }]) %}
-{% set pages = pages | merge([{ url: 'blog/tags', title: 'タグ' }]) %}
+{% set pages = pages | merge([{ url: '/', title: 'Home' }]) %}
+{% set pages = pages | merge([{ url: '/blog', title: 'ブログ' }]) %}
+{% set pages = pages | merge([{ url: '/blog/categories', title: 'カテゴリ' }]) %}
+{% set pages = pages | merge([{ url: '/blog/tags', title: 'タグ' }]) %}
 {% for post in data.statics %}{% set pages = pages | merge([post]) %}{% endfor %}
 {% for post in data.posts %}{% set pages = pages | merge([post]) %}{% endfor %}
 
 <div>
 <ul class="fa-ul">
-    <li><i class="fa-li fa fa-arrow-circle-right"></i><a href="{{ site.url }}/blog">ブログ</a></li>
 {% for i,post in pages if not(post.url|preg_match('!blog/[0-9]+/[0-9]+/[0-9]+/.+!')) %}
     <li><i class="fa-li fa fa-arrow-circle-right"></i><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
