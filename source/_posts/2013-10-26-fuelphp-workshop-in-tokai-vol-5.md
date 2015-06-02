@@ -77,7 +77,7 @@ memo:
   * 個人的に OrmAuth とか使ってみて人に話せる内容を増やしたい( [@ts_asano][5] さんに聞かれたけど余使っていなかったので詳しくはなせなかった)。
   * [NestedSets][8] とかも使ってみたい＆ドキュメントも未翻訳なので翻訳してみたい。
 
- [8]: http:ß//fuelphp.com/docs/packages/orm/model/nestedset.html
+ [8]: http://fuelphp.com/docs/packages/orm/model/nestedset.html
 
 ## 懇親会という名の飲み会
 
