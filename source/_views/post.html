@@ -88,6 +88,11 @@
 {% for toc_item in toc_items %}
 {%   set toc_level = toc_item | preg_replace('!<h(.).*?>.+?</.+?>!', '$1') %}
 {%   set toc_title = toc_item | preg_replace('!<.+?>(.+?)</.+?>!', '$1')   %}
+{%     if 1 + toc_level < 0 + toc_prev_level %}
+{% for toc_level_ in (2+toc_level)..(0+toc_prev_level) %}
+            </li></ul></li>
+{% endfor %}
+{%   endif %}
 {%   if not(loop.first) %}
 {%     if toc_level < toc_prev_level %}</li></ul></li>{% elseif toc_prev_level < toc_level %}<ul class="fa-ul">{% else %}</li>{% endif %}
 {%   endif %}
