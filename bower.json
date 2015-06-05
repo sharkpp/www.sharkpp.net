@@ -10,6 +10,7 @@
         "lightbox2": "2.7.*",
         "imagesloaded": "~3.1.8",
         "wookmark-jquery": "https:\/\/github.com\/germanysbestkeptsecret\/Wookmark-jQuery#~2.0.0",
-        "mermaid": "*"
+        "mermaid": "*",
+        "jquery-smooth-scroll": "*"
     }
 }
