@@ -6,9 +6,7 @@ categories: [ブログ]
 
 ---
 
-[# Qt DEVELOPER DAY 2014 Tokyo に行ってきました
-
-][1] に行ってきました。
+[Qt DEVELOPER DAY 2014 Tokyo に行ってきました][1] に行ってきました。
 
  [1]: http://qt.digia.com/Jp/QtDD2014/
 
@@ -20,17 +18,11 @@ categories: [ブログ]
 
 ## 開場・受付(9:00 - 10:00)
 
-<blockquote class="twitter-tweet" lang="ja"><p>
-受付待ち <a href="https://twitter.com/search?q=%23QtDDTokyo&src=hash">#QtDDTokyo</a> <a href="https://twitter.com/search?q=%23QtJP&src=hash">#QtJP</a> <a href="http://t.co/dSSjU4rrvc">http://t.co/dSSjU4rrvc</a>
-</p>&mdash; 98式AVさめたすたす (@sharkpp) 
-<a href="https://twitter.com/sharkpp/statuses/468548131756724225">2014, 5月 20</a>
-</blockquote>
+<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">受付待ち <a href="https://twitter.com/hashtag/QtDDTokyo?src=hash">#QtDDTokyo</a> <a href="https://twitter.com/hashtag/QtJP?src=hash">#QtJP</a> <a href="http://t.co/dSSjU4rrvc">http://t.co/dSSjU4rrvc</a></p>&mdash; さめたすたす-22号 (@sharkpp) <a href="https://twitter.com/sharkpp/status/468548131756724225">2014, 5月 20</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<blockquote class="twitter-tweet" lang="ja"><p>
-発見！ <a href="https://twitter.com/search?q=%23QtDDTokyo&src=hash">#QtDDTokyo</a> <a href="https://twitter.com/search?q=%23QtJP&src=hash">#QtJP</a> <a href="http://t.co/gpSJnoiybl">http://t.co/gpSJnoiybl</a>
-</p>&mdash; 98式AVさめたすたす (@sharkpp) 
-<a href="https://twitter.com/sharkpp/statuses/468550069608656896">2014, 5月 20</a>
-</blockquote>
+<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">発見！ <a href="https://twitter.com/hashtag/QtDDTokyo?src=hash">#QtDDTokyo</a> <a href="https://twitter.com/hashtag/QtJP?src=hash">#QtJP</a> <a href="http://t.co/gpSJnoiybl">http://t.co/gpSJnoiybl</a></p>&mdash; さめたすたす-22号 (@sharkpp) <a href="https://twitter.com/sharkpp/status/468550069608656896">2014, 5月 20</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Tシャツを貰いました。
 
@@ -111,7 +103,7 @@ Tuukka Ahoniemi (テクニカルプロダクトマーケティングマネージ
   * Qt Cloud Services でセンサーをネットワーク経由で使うことが出来る
   * デザインの変更にも Qt Quick を使っていたから即対応が出来た
 
-### ランチタイム・展示(12:30 - 13:30)
+## ランチタイム・展示(12:30 - 13:30)
 
 <blockquote class="twitter-tweet" lang="ja"><p>
 お弁当もぐもぐ♪ <a href="https://twitter.com/search?q=%23QtJP&src=hash">#QtJP</a> <a href="https://twitter.com/search?q=%23QtDDTokyo&src=hash">#QtDDTokyo</a> <a href="https://twitter.com/search?q=%23mogmog&src=hash">#mogmog</a> <a href="http://t.co/mB2Csd8WmF">http://t.co/mB2Csd8WmF</a>
@@ -119,11 +111,11 @@ Tuukka Ahoniemi (テクニカルプロダクトマーケティングマネージ
 <a href="https://twitter.com/sharkpp/statuses/468595870535933952">2014, 5月 20</a>
 </blockquote>
 
-### LT(12:45 - 13:30)
+## LT(12:45 - 13:30)
 
 弁当を食べながらLTを聴く
 
-#### Qtのよい(と思う)ところ
+### Qtのよい(と思う)ところ
 
 [@IoriAYANE][6]
 
@@ -134,7 +126,7 @@ Tuukka Ahoniemi (テクニカルプロダクトマーケティングマネージ
   * QtWidget と Qt Quick
   * マルチプラットフォーム
 
-#### タイトル不明
+### タイトル不明
 
 柴田充也
 
@@ -146,7 +138,7 @@ Tuukka Ahoniemi (テクニカルプロダクトマーケティングマネージ
   * Nexus 4 /Nexus 7 2013 / Nexus 10 をサポート
   * ARMhf / i386 エミュレータが有る
 
-#### Qt creatorでremote_debug
+### Qt creatorでremote_debug
 
 [Qt creatorでremote_debug][7] by [@sazus][8]
 
@@ -158,7 +150,7 @@ Tuukka Ahoniemi (テクニカルプロダクトマーケティングマネージ
   * 組み込み環境のデバッグでQtCreator使ってますか？
   * Qt Creator で デプロイやリモートでバッグが出来る！
 
-#### Qtおやつ部活動報告
+### Qtおやつ部活動報告
 
 [@hermit4][9]
 
@@ -171,7 +163,7 @@ Tuukka Ahoniemi (テクニカルプロダクトマーケティングマネージ
   * 勉強会はどなたでも参加可能！
   * アドレスは <http://qt-users.jp/>
 
-#### Qt Developer Day 2014 〜 前回からの２年半 〜
+### Qt Developer Day 2014 〜 前回からの２年半 〜
 
 [@moguriso][10]
 
@@ -253,11 +245,11 @@ Dr. Gabriel de Dietrich (シニアソフトウェアディベロッパー, Digia
   * 一億行をテーブルビューに入れた場合もデータの再利用をしたりで出来るだけパフォーマンスが出るようになっている
   * QtQuickWidget を使って表示するのではなく今はまだ QtQuick をUiで使うほうがいいと思う
 
-### 懇親会
+## 懇親会
 
 日本Qtユーザー会の皆様で乾杯＆もぐもぐ
 
-### まとめ
+## まとめ
 
 はじめてな感じの日本でやる海外企業の展示会に潜入した結果ですが、同時通訳を聴けたり質問(自分はしていないですが)も通訳してもらったりと聞き取れなくて (´・ω・｀) な状態にはならなかったので良かったです。
 
