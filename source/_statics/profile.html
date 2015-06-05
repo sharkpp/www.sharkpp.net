@@ -1,0 +1,114 @@
+---
+layout: default
+title: プロフィール
+permalink: profile/
+date: 2015-05-01 00:00
+accounts:
+  -
+    caption: "Twitter"
+    url: https://twitter.com/sharkpp
+    icon: fa-twitter
+  -
+    caption: "twilog"
+    url: http://twilog.org/sharkpp
+    icon: fa-twitter
+  -
+    caption: "codepad"
+    url: http://codepad.org/users/sharkpp
+    icon: fa-code
+  -
+    caption: "GreasyFork"
+    url: https://greasyfork.org/ja/users/5799-sharkpp
+    icon: fa-circle
+  -
+    caption: "Bitly."
+    url: https://bitly.com/u/sharkpp
+    icon: fa-link
+  -
+    caption: "pixiv"
+    url: http://pixiv.me/sharkpp
+    icon: fa-paint-brush
+  -
+    caption: "TINAMI"
+    url: http://www.tinami.com/profile/128967
+    icon: fa-star-o
+  -
+    caption: "DeviantArt"
+    url: http://sharkpp.deviantart.com/
+    icon: fa-deviantart
+  -
+    caption: "Tumblr"
+    url: http://sharkpp.tumblr.com/
+    icon: fa-tumblr
+  -
+    caption: "Pastebin.com"
+    url: http://pastebin.com/u/sharkpp
+    icon: "fa-file-text-o fa-rotate-180"
+  -
+    caption: "GitHub"
+    url: https://github.com/sharkpp
+    icon: fa-github
+  -
+    caption: "Gravatar"
+    url: http://ja.gravatar.com/sharkpp
+    icon: fa-circle
+  -
+    caption: "jsdo.it"
+    url: http://jsdo.it/sharkpp
+    icon:  fa-code
+  -
+    caption: "youtube"
+    url: http://www.youtube.com/user/sharkpp1
+    icon:  fa-youtube
+  -
+    caption: "Chef Supermarket"
+    url: https://supermarket.chef.io/users/sharkpp
+    icon:  fa-cutlery
+  -
+    caption: "slideshare"
+    url: http://www.slideshare.net/sharkpp
+    icon:  fa-slideshare
+  -
+    caption: "codetter"
+    url: http://codetter.com/?tag=sharkpp
+    icon:  fa-code
+  -
+    caption: "Instagram"
+    url: https://instagram.com/sharkpp/
+    icon:  fa-instagram
+  -
+    caption: "about.me"
+    url: http://about.me/sharkpp
+    icon:  fa-square
+  -
+    caption: "Travis CI"
+    url: https://travis-ci.org/profile/sharkpp
+    icon:  fa-square
+  -
+    caption: "Codetag"
+    url: http://codetag.me/sharkpp/
+    icon:  fa-star
+  -
+    caption: "coderwall.com"
+    url: https://coderwall.com/sharkpp
+    icon:  fa-square
+  -
+    caption: "Uptimer"
+    url: https://uptimer.at/http://www.sharkpp.net/
+    icon:  fa-square
+  -
+    caption: "HSP部屋(β)"
+    url: http://hsproom.me/user/view/?u=7
+    icon:  fa-file-o
+  -
+    caption: "はてな"
+    url: http://profile.hatena.ne.jp/sharkpp/
+    icon:  fa-circle
+
+---
+
+{% for account in page.accounts %}
+<a href="{{ account.url }}" class="btn btn-default btn-lg" role="button" style="margin-bottom: 5px">
+    <i class="fa {{ account.icon }} fa-lg"></i> {{ account.caption }}
+</a>
+{% endfor %}
