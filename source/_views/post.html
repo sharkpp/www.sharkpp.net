@@ -4,6 +4,94 @@
     <meta name="robots" content="index, follow">
 {% endblock %}
 
+{# xxxx
+
+{% block head_styles %}
+        <link rel="stylesheet" href="{{ site.url }}/assets/jquery.tocify.js/src/stylesheets/jquery.tocify.css" />
+{% endblock %}
+
+{% block scripts_after %}
+        <script src="{{ site.url }}/assets/jquery-ui/ui/minified/jquery-ui.min.js"></script>
+        <script src="{{ site.url }}/assets/jquery.tocify.js/src/javascripts/jquery.tocify.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#toc').tocify({ selectors: "h2, h3, h4", showAndHide: false,  extendPage: false, showAndHideOnScroll:false });
+            });
+        </script>
+{% endblock %}
+
+#}
+
+{# xxxxx
+
+{% block scripts_after %}
+        <script src="{{ site.url }}/assets/jquery-goup/jquery.goup.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $.goup();
+            });
+        </script>
+{% endblock %}
+
+#}
+
+{% block scripts_after %}
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.5/jquery.smooth-scroll.min.js"></script>
+        <script type="text/javascript">
+            $('#toc a')
+                .each(function(){
+               //     var href_old = $(this).attr('href').slice(1);
+               //     var href_new = href_old;//href_old.replace('.', '-');
+               //     $('[id="' + href_old + '"]')
+               //         .html('<a id="' + href_new + '">' + $('[id="' + href_old + '"]').text() + '</a>')
+               //         .removeAttr('id');
+               //     $(this)
+               //         .attr('href', '#'+href_new)
+               //       //  .smoothScroll({ $('[id="' + href_new + '"]') })
+               //         ;
+                    var id = $(this).attr('href').slice(1);
+                    $(this)
+                        .smoothScroll({
+                            scrollTarget: $('[id="' + id + '"]'),
+                            offset: -50,
+                            beforeScroll: function(){ history.pushState({}, id, "#" + id); }
+                        });
+                })
+               // .smoothScroll()
+                ;
+            $('#go-top')
+                .on('click', function() {
+                    $.smoothScroll({
+                        scrollElement: $('body'),
+                        scrollTarget: '',
+                        beforeScroll: function(){ history.pushState({}, "", location.href.replace(location.hash, '')); },
+                        afterScroll: function(){ $('body').css('position', ''); }
+                    });
+                    return false;
+                });
+            $(window).scroll(function () {
+                var scroll   = $(this).scrollTop();
+                var visibled = $('#go-top').css('display') == 'block';
+                var next_state = $('#go-top').attr('data-next-state');
+console.log('>a='+((100 <= scroll && (!visibled || 'hidden' == next_state))?'v':((scroll < 100 && (visibled || 'visible' == next_state))?'h':'-'))+',v='+(visibled?1:0)+',s='+('visible'==next_state?'v':('hidden'==next_state?'h':'-'))+',y='+scroll);
+
+                if (100 <= scroll && (!visibled || 'hidden' == next_state))
+                    $('#go-top').stop(true, true).attr('data-next-state', 'visible').fadeIn('slow', function(){ $(this).removeAttr('data-next-state');
+var scroll   = $(this).scrollTop();var visibled = $('#go-top').css('display') == 'block';var next_state = $('#go-top').attr('data-next-state');console.log('*a='+((100 <= scroll && (!visibled || 'hidden' == next_state))?'v':((scroll < 100 && (visibled || 'visible' == next_state))?'h':'-'))+
+           ',v='+(visibled?1:0)+',s='+('visible'==next_state?'v':('hidden'==next_state?'h':'-'))+',y='+scroll);
+                    });
+                else if (scroll < 100 && (visibled || 'visible' == next_state))
+                    $('#go-top').stop(true, true).attr('data-next-state', 'hidden').fadeOut('slow', function(){ $(this).removeAttr('data-next-state');
+var scroll   = $(this).scrollTop();var visibled = $('#go-top').css('display') == 'block';var next_state = $('#go-top').attr('data-next-state');console.log('+a='+((100 <= scroll && (!visibled || 'hidden' == next_state))?'v':((scroll < 100 && (visibled || 'visible' == next_state))?'h':'-'))+
+           ',v='+(visibled?1:0)+',s='+('visible'==next_state?'v':('hidden'==next_state?'h':'-'))+',y='+scroll);
+                    });
+
+scroll   = $(this).scrollTop();visibled = $('#go-top').css('display') == 'block';next_state = $('#go-top').attr('data-next-state');console.log('<a='+((100 <= scroll && (!visibled || 'hidden' == next_state))?'v':((scroll < 100 && (visibled || 'visible' == next_state))?'h':'-'))+',v='+(visibled?1:0)+',s='+('visible'==next_state?'v':('hidden'==next_state?'h':'-'))+',y='+scroll);
+            });
+            $(window).scroll();
+        </script>
+{% endblock %}
+
 {% block content_wrapper %}
     {% include "breadcrumb" %}
 
@@ -11,6 +99,48 @@
         <header>
             <h1>{% if page.draft %}<i class="fa fa-pencil-square-o"></i> {% endif %}{{ page.title }} <small>post</small></h1>
         </header>
+
+{# <div id="toc" class="pull-right" style="position: relative;"></div> #}
+
+{% set toc_items = [ '<h1>' ~ page.title ~ '</h1>' ] %}
+{% set toc_items = [  ] %}
+{% for toc_item in page.blocks.content | preg_get_all('!(<(h[0-9]).+?>.+?</.+?>)!') %}{% set toc_items = toc_items | merge( [ '' ~ toc_item ] ) %}{% endfor %}
+{% if toc_items | length > 1 %}
+<div id="toc" class="panel panel-default pull-right" style="margin-left: 10px; margin-bottom: 10px;">
+    <div class="panel-heading text-center">目次</div>
+        <div class="panel-body" style="padding: 10px;">
+            <ul class="fa-ul">
+{% set toc_prev_level = '2' %}
+{% for toc_item in toc_items %}
+{%   set toc_level = toc_item | preg_replace('!<h(.).*?>.+?</.+?>!', '$1') %}
+{%   set toc_title = toc_item | preg_replace('!<.+?>(.+?)</.+?>!', '$1')   %}
+{%   if not(loop.first) %}
+{%     if toc_level < toc_prev_level %}</li></ul></li>{% elseif toc_prev_level < toc_level %}<ul class="fa-ul">{% else %}</li>{% endif %}
+{%   endif %}
+            <li><i class="fa-li fa fa-paperclip"></i><a href="#{{ toc_title | replace({' ':'-'}) | lower | url_encode }}">{{ toc_title }}</a>
+{%   set toc_prev_level = toc_level %}
+{% endfor %}
+{% for toc_level in 2..9 %}
+{%   if toc_level < toc_prev_level %}
+            </li></ul></li>
+{%   endif %}
+{% endfor %}
+        </ul>
+    </div>
+</div>
+{% endif %}
+
+<div id="go-top"
+     style="
+        display: none;
+        width: 40px;
+        height: 40px;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 999;
+"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div>
+
         <div>
             {{ page.blocks.content|raw }}
         </div>

@@ -1,10 +1,12 @@
 {% extends "post" %}
 
 {% block head_styles %}
+        {{ parent() }}
         <link href="{{ site.url }}/css/mermaid.css" rel="stylesheet" type="text/css" />
 {% endblock %}
 
 {% block scripts_after %}
+        {{ parent() }}
         <script type="text/javascript">
             $('code.mermaid')
                 .removeClass('brainfuck')
