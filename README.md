@@ -36,4 +36,8 @@ Create new blog page to `source/_posts/2015-05-30-[STUB].md`
 
 ## License
 
-.
+&copy; 2004-2015 sharkpp
+
+[クリエイティブ・コモンズ 表示 4.0 国際 ライセンス](http://creativecommons.org/licenses/by/4.0/) の下に提供されています。
+
+さらに、コードスニペットは [MIT ライセンス](http://opensource.org/licenses/MIT) の下にライセンスされています。
