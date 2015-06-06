@@ -169,7 +169,7 @@ Tuukka Ahoniemi (テクニカルプロダクトマーケティングマネージ
 
  [10]: https://twitter.com/moguriso
 
-  * intel　MeeGo　捨てた！
+  * intel MeeGo 捨てた！
   * NOKIA Meego/Qt 捨てた！
   * 日本Qtユーザー会発足
   * 関東、名古屋、大阪で勉強会が開催
@@ -206,7 +206,7 @@ Tuukka Ahoniemi (テクニカルプロダクトマーケティングマネージ
   * アニメーションには NumberAnimation など複数種類がある
   * Easing (補完関数？) には線形やバウンスなどがある
   * モデルビューはリストモデル、グリッドビュー、パスビュー(任意の曲線上に並べる)など
-  * パーティクルも表示できるがいろいろな種類のパーティクルのデモはブースで(もしくは[サンプルアプリ(https://play.google.com/store/apps/details?id=com.digia.Qt5Intro&hl=ja))
+  * パーティクルも表示できるがいろいろな種類のパーティクルのデモはブースで(もしくは[サンプルアプリ](https://play.google.com/store/apps/details?id=com.digia.Qt5Intro&hl=ja))
   * シェーダーは OpenGL が使える、使用頻度の高そうなものは予め定義してあるので QtGraphicalEffect を import をすれば使える
   * ファイル単位で独自の QML を部品として再利用できる
   * Loaderを使った動的なオブジェクトの生成もできる

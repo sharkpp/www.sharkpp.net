@@ -28,31 +28,7 @@ categories: [ブログ]
 
 その後、一年ぐらい経ってから、ドメインを取得して今に至ります。
 
-システムも、当初は、html 手書きでしたが、某所で見かけた [# ほむぺ開設から10年が経ちました
-
-早い物でこのほむぺを開設から１０年が経ってしまいました。
-
-まったくもって、時が経つのは早い物です(´・ω・｀)
-
-また、10年も無事で過ごせこのほむぺも続けていけたら良いなと思います。
-
-この後は、覚えてることをメモ書き程度に書き綴っていきますので、興味ない方は読み飛ばしてしまってかまいません。
-
-## 開設
-
-更新履歴(最近は反映をさぼってますが)を見ると記録は2004年2月24日から始まってます。
-
-それまでは、たまにダイヤルアップ(ライブドアです！)で繋いでましたが、基本的にはオフラインで作ってました。
-
-ほむぺ公開時には、それまで溜め込んできた物をまとめてアップしたので、ココンテンツとしては、一部以外工事中ってことは無かった(たしか)と思います。
-
-## ほむぺの変遷
-
-開設当時は、Yahoo!ジオシティーズ にホムペを持つところから始め、CGIというかPHPを使いたかったので、今は亡き AAA!CAFE を別館として借りていました。
-
-その後、一年ぐらい経ってから、ドメインを取得して今に至ります。
-
-システムも、当初は、html 手書きでしたが、某所で見かけた][1] で構築するように変更しました、、、が、これは、情報が少なかったのとCMS自体の行進が止まってしまったので失敗だったかなと今では思ってます。
+システムも、当初は、html 手書きでしたが、某所で見かけた [Frog CMS][1] で構築するように変更しました、、、が、これは、情報が少なかったのとCMS自体の行進が止まってしまったので失敗だったかなと今では思ってます。
 
  [1]: http://www.madebyfrog.com/
 
@@ -128,23 +104,11 @@ categories: [ブログ]
 
 みんなに使ってもらえたら良いなーと思いつつ作っているのでワクワクして待っていてください(>_<)
 
-<blockquote class="twitter-tweet" lang="ja"></p> 
-<p>
-とりあえず、１アクション目として宣伝 <a href="https://twitter.com/hsp_users_jp">@hsp_users_jp</a> <a href="http://t.co/4EIHu8vJ3A">http://t.co/4EIHu8vJ3A</a>
-</p>
-<p>
-&mdash; さめたすたすのゲーム (@sharkpp) <a href="https://twitter.com/sharkpp/statuses/435029417748729856">2014, 2月 16</a>
-</blockquote>
-  </p>
-  
-  <p>
-    最新情報は <a href="https://twitter.com/hsp_users_jp">@hsp_users_jp</a> で流しますのでよろしくです！
-  </p>
-  
-  <p>
-    ではでは、また、これからの10年も良き10年でありますように！
-  </p>
-  
-  <p>
-    これからもよろしくお願いいたします。
-  </p>
+<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">とりあえず、１アクション目として宣伝 <a href="https://twitter.com/hsp_users_jp">@hsp_users_jp</a> <a href="http://t.co/4EIHu8vJ3A">http://t.co/4EIHu8vJ3A</a></p>&mdash; さめたすたすのゲーム (@sharkpp) <a href="https://twitter.com/sharkpp/statuses/435029417748729856">2014, 2月 16</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+最新情報は <a href="https://twitter.com/hsp_users_jp">@hsp_users_jp</a> で流しますのでよろしくです！
+
+ではでは、また、これからの10年も良き10年でありますように！
+
+これからもよろしくお願いいたします。
