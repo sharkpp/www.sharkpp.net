@@ -95,7 +95,7 @@ exec_init () {
 exec_clean () {
   rm -rf .vendor .sculpin *.lock *.phar
   rm -rf output_* app/cache app/logs
-  find source/assets -maxdepth 1 -mindepth 1 -not -name js -and -not -name css -exec rm -rf {} \;
+  find source/assets -maxdepth 1 -mindepth 1 -not -name js -and -not -name css -and -not -name fonts -exec rm -rf {} \;
 }
 
 core_generate () {
