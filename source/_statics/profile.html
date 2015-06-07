@@ -112,10 +112,12 @@ accounts:
 ---
 
 {% block head_styles %}
+{{ parent() }}
         <link href="{{ site.url }}/assets/css/extrabrands.min.css" rel="stylesheet" type="text/css" />
 {% endblock %}
 
 {% block content_wrapper %}
+{{ parent() }}
 {% for account in page.accounts %}
 <a href="{{ account.url }}" class="btn btn-default btn-lg" role="button" style="margin-bottom: 5px">
     <span class="{{ account.icon }} fa-lg"></span> {{ account.caption }}

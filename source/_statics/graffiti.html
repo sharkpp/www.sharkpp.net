@@ -197,6 +197,8 @@ graffities:
 ---
 
 {% block content_wrapper %}
+{{ parent() }}
+
 <div>
     <div id="graffiti-content" class="tiles-wrap animated">
 {% for graffiti in page.graffities %}
@@ -246,6 +248,7 @@ graffities:
 {% endblock %}
 
 {% block scripts_after %}
+{{ parent() }}
 
         <script src="{{ site.url }}/assets/imagesloaded/imagesloaded.pkgd.min.js"></script>
         <script src="{{ site.url }}/assets/Wookmark-jQuery/wookmark.min.js"></script>
