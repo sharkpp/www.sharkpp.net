@@ -6,6 +6,13 @@ date: 2015-05-01 00:00
 category: ["graffiti"]
 graffities:
   -
+    caption: favicon
+    description: 謎生物
+    image: "../images/noname/1024x1024.png"
+    thumbnail: "../images/noname/196x196.png"
+    download: ["../images/noname/favicon.svg"]
+    link: ["/blog/2015/06/07/revelation-new-mascot-and-update-favicon.html"]
+  -
     caption: 魔法陣16
     image: magic_circle16_1024x1024.png
     thumbnail: t/magic_circle16.png
@@ -219,8 +226,8 @@ graffities:
                 ></a
                 ><a href="{{ site.url }}/graffiti/{{ graffiti.download[0] }}"
                     class="btn btn-sm btn-default"
-                    title="{{ graffiti.download[0] }} をダウンロード"
-                    download="{{ graffiti.download[0] }}"
+                    title="{{ graffiti.download[0] | preg_get('!([^/]+)$!') }} をダウンロード"
+                    download="{{ graffiti.download[0] | preg_get('!([^/]+)$!') }}"
                     ><i class="fa fa-save fa-2x"></i
 {% endif %}
 {% if graffiti.link %}
@@ -228,8 +235,13 @@ graffities:
                 ></a
                 ><a href="{{ link }}"
                     class="btn btn-sm btn-default"
+{%   if link | preg_match('!^/!') %}
+                    title="もっと詳しく"
+                    ><i class="fa fa-plus-circle fa-2x"></i
+{%   else %}
                     title="{{ link | preg_replace('!^http://(.+?)/.*$!sm', '$1') }} へ移動"
                     ><i class="fa fa-external-link fa-2x"></i
+{%   endif %}
 {% endfor %}
 {% endif %}
                 ></a
