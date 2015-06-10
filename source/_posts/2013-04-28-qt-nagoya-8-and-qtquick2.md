@@ -18,11 +18,8 @@ categories: [ブログ]
 
 雑談は、Twitterに流れている物だと、
 
-<blockquote class="twitter-tweet" lang="ja"><p>
-なんとなくスルー QT @<a href="https://twitter.com/mizmit1222">mizmit1222</a>: OSC名古屋はなんとなくスルーということで <a href="https://twitter.com/search/%23qtngy">#qtngy</a>
-</p>&mdash; 理音伊織さん (@IoriAYANE) 
-<a href="https://twitter.com/IoriAYANE/status/327998905256136704">2013年4月27日</a>
-</blockquote>
+<blockquote class="twitter-tweet" lang="ja"><p>なんとなくスルー QT @<a href="https://twitter.com/mizmit1222">mizmit1222</a>: OSC名古屋はなんとなくスルーということで <a href="https://twitter.com/search/%23qtngy">#qtngy</a></p>&mdash; 理音伊織さん (@IoriAYANE) <a href="https://twitter.com/IoriAYANE/status/327998905256136704">2013年4月27日</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 とかそんな感じです。
 

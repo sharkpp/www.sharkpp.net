@@ -10,11 +10,8 @@ phpで実装上どうしてもタイトルのような事をしないといけ�
 
 ## 前提
 
-<blockquote class="twitter-tweet" lang="ja"><p>
-ふーむ？ クラスBはクラスAから派生しててクラスBはクラスCを持っているとして、クラスBメソッド→クラスCメソッド→クラスBのインスタンスでクラスAメソッドを呼ぶってPHPだとできないよねーきっと <a href="https://twitter.com/search?q=%23php&src=hash">#php</a>
-</p>&mdash; サカサマのさめたすたす (@sharkpp) 
-<a href="https://twitter.com/sharkpp/statuses/403886288173932544">2013, 11月 22</a>
-</blockquote>
+<blockquote class="twitter-tweet" lang="ja"><p>ふーむ？ クラスBはクラスAから派生しててクラスBはクラスCを持っているとして、クラスBメソッド→クラスCメソッド→クラスBのインスタンスでクラスAメソッドを呼ぶってPHPだとできないよねーきっと <a href="https://twitter.com/search?q=%23php&src=hash">#php</a></p>&mdash; サカサマのさめたすたす (@sharkpp) <a href="https://twitter.com/sharkpp/statuses/403886288173932544">2013, 11月 22</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 順に挙げると、
 
@@ -62,11 +59,8 @@ phpで実装上どうしてもタイトルのような事をしないといけ�
 
 ## 解決
 
-<blockquote class="twitter-tweet" lang="ja"><p>
-ふむふむ、call_user_func 使えば あるオブジェクトの親クラスを呼び出すことができるのか <a href="https://t.co/JSy3AsWVqT">https://t.co/JSy3AsWVqT</a> <a href="https://twitter.com/search?q=%23php&src=hash">#php</a>
-</p>&mdash; サカサマのさめたすたす (@sharkpp) 
-<a href="https://twitter.com/sharkpp/statuses/403901924862218240">2013, 11月 22</a>
-</blockquote>
+<blockquote class="twitter-tweet" lang="ja"><p>ふむふむ、call_user_func 使えば あるオブジェクトの親クラスを呼び出すことができるのか <a href="https://t.co/JSy3AsWVqT">https://t.co/JSy3AsWVqT</a> <a href="https://twitter.com/search?q=%23php&src=hash">#php</a></p>&mdash; サカサマのさめたすたす (@sharkpp) <a href="https://twitter.com/sharkpp/statuses/403901924862218240">2013, 11月 22</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 該当部分だけ抜き出すと、
 

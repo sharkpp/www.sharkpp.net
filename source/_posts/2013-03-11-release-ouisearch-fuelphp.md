@@ -68,11 +68,8 @@ OUIを検索するFuelPHP用のパッケージを作ったよってことで、�
 
  [9]: http://fuelphp.com/docs/general/classes.html
 
-<blockquote class="twitter-tweet" data-conversation="none" lang="ja"><p>
-@<a href="https://twitter.com/sharkpp">sharkpp</a> 必要としているタイミングはクラスのロード時ですか？であるなら、_init()が呼ばれます。<a href="http://t.co/PSGMSXIzTH" title="http://fuelphp.com/docs/general/classes.html#/init_method">fuelphp.com/docs/general/c…</a>
-</p>&mdash; Shintaro Ikezakiさん (@hackoh) 
-<a href="https://twitter.com/hackoh/status/310210084334612480">2013年3月9日</a>
-</blockquote>
+<blockquote class="twitter-tweet" data-conversation="none" lang="ja"><p>@<a href="https://twitter.com/sharkpp">sharkpp</a> 必要としているタイミングはクラスのロード時ですか？であるなら、_init()が呼ばれます。<a href="http://t.co/PSGMSXIzTH" title="http://fuelphp.com/docs/general/classes.html#/init_method">fuelphp.com/docs/general/c…</a></p>&mdash; Shintaro Ikezakiさん (@hackoh) <a href="https://twitter.com/hackoh/status/310210084334612480">2013年3月9日</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## プラグインでマイグレーションを実装
 
@@ -118,11 +115,8 @@ OUIを検索するFuelPHP用のパッケージを作ったよってことで、�
 
 ### なんだかんだで出来た
 
-<blockquote class="twitter-tweet" lang="ja"><p>
-@<a href="https://twitter.com/sharkpp">sharkpp</a> パッケージテスト用のFuelPHPプロジェクトをGitHubに用意。パッケージはサブモジュールで管理。とかは比較的簡単かもしれませんね。そのパッケージプロジェクトへのpushではtravis ciが走らない。1プロジェクトで複数パッケージを管理。になりますけど。
-</p>&mdash; mamorさん (@madmamor) 
-<a href="https://twitter.com/madmamor/status/310629656120397824">2013年3月10日</a>
-</blockquote>
+<blockquote class="twitter-tweet" lang="ja"><p>@<a href="https://twitter.com/sharkpp">sharkpp</a> パッケージテスト用のFuelPHPプロジェクトをGitHubに用意。パッケージはサブモジュールで管理。とかは比較的簡単かもしれませんね。そのパッケージプロジェクトへのpushではtravis ciが走らない。1プロジェクトで複数パッケージを管理。になりますけど。</p>&mdash; mamorさん (@madmamor) <a href="https://twitter.com/madmamor/status/310629656120397824">2013年3月10日</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 という、アイデアを頂きつつ、やっぱり単体でテストできるのがかっこいいので頑張りました。
 

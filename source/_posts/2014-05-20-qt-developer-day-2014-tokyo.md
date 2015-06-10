@@ -105,11 +105,8 @@ Tuukka Ahoniemi (テクニカルプロダクトマーケティングマネージ
 
 ## ランチタイム・展示(12:30 - 13:30)
 
-<blockquote class="twitter-tweet" lang="ja"><p>
-お弁当もぐもぐ♪ <a href="https://twitter.com/search?q=%23QtJP&src=hash">#QtJP</a> <a href="https://twitter.com/search?q=%23QtDDTokyo&src=hash">#QtDDTokyo</a> <a href="https://twitter.com/search?q=%23mogmog&src=hash">#mogmog</a> <a href="http://t.co/mB2Csd8WmF">http://t.co/mB2Csd8WmF</a>
-</p>&mdash; 98式AVさめたすたす (@sharkpp) 
-<a href="https://twitter.com/sharkpp/statuses/468595870535933952">2014, 5月 20</a>
-</blockquote>
+<blockquote class="twitter-tweet" lang="ja"><p>お弁当もぐもぐ♪ <a href="https://twitter.com/search?q=%23QtJP&src=hash">#QtJP</a> <a href="https://twitter.com/search?q=%23QtDDTokyo&src=hash">#QtDDTokyo</a> <a href="https://twitter.com/search?q=%23mogmog&src=hash">#mogmog</a> <a href="http://t.co/mB2Csd8WmF">http://t.co/mB2Csd8WmF</a></p>&mdash; 98式AVさめたすたす (@sharkpp) <a href="https://twitter.com/sharkpp/statuses/468595870535933952">2014, 5月 20</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## LT(12:45 - 13:30)
 

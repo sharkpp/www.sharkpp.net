@@ -44,11 +44,8 @@ FuelPHP 1.6 が公開されたのを記念？してまた [FuelPHP 1.6 翻訳ウ
 
 デフォルトが改行コードを変更するようになってるなんてヒドイorz
 
-<blockquote class="twitter-tweet" lang="ja"><p>
-初めてのPR <a href="https://t.co/glnaIRBvE2" title="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/280">github.com/NEKOGET/FuelPH…</a> <a href="http://t.co/HFy9inhvgx" title="http://atnd.org/events/39849">atnd.org/events/39849</a> <a href="https://twitter.com/search/%23fueldocsja">#fueldocsja</a>
-</p>&mdash; さめたすたす?(^o^)／さん (@sharkpp) 
-<a href="https://twitter.com/sharkpp/status/339041311573286913">2013年5月27日</a>
-</blockquote>
+<blockquote class="twitter-tweet" lang="ja"><p>初めてのPR <a href="https://t.co/glnaIRBvE2" title="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/280">github.com/NEKOGET/FuelPH…</a> <a href="http://t.co/HFy9inhvgx" title="http://atnd.org/events/39849">atnd.org/events/39849</a> <a href="https://twitter.com/search/%23fueldocsja">#fueldocsja</a></p>&mdash; さめたすたす?(^o^)／さん (@sharkpp) <a href="https://twitter.com/sharkpp/status/339041311573286913">2013年5月27日</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 で、いろいろ翻訳して Pull Request をしてみてさあマージされたと思って、、、あれ？更新を取り込むにはどうしたら？と思ったので試行錯誤をしてフォーク元から変更を取り込みました。
 
