@@ -1,7 +1,7 @@
 ---
 title: "QNAP TS-109? で Subversionを使う"
 date: 2011-12-05 00:23:00
-tags: [Subversion, QNAP, NAS, Apache]
+tags: [Subversion, QNAP, NAS, Linux, Apache]
 categories: [ブログ]
 
 ---

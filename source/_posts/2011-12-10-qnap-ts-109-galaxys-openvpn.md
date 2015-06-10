@@ -1,7 +1,7 @@
 ---
 title: "QNAP TS-109? と GALAXY S(SC-02B) をOpenVPNで繋ぐ"
 date: 2011-12-10 16:15:00
-tags: [雑記, Android, QNAP, Galaxy S]
+tags: [Android, QNAP, Galaxy S, Linux]
 categories: [ブログ]
 
 ---

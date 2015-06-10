@@ -1,7 +1,7 @@
 ---
 title: "QNAP TS-109II への syslog-ng の導入メモ"
 date: 2013-01-27 13:27:00
-tags: [雑記]
+tags: [QNAP, Linux]
 categories: [ブログ]
 
 ---
