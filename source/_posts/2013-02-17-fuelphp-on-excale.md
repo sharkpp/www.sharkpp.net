@@ -1,10 +1,18 @@
 ---
 title: "eXcaleでFuelPHPをpublicサブディレクトリなしで動かしてみた(追記あり)"
 date: 2013-02-17 23:30:00
-tags: [php, FuelPHP]
+tags: [php, FuelPHP, PaaS]
 categories: [ブログ]
 
 ---
+
+<div class="alert alert-danger alert-dismissible" role="alert">
+<div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
+<dl style="margin-bottom: 0; margin-left: 35px;">
+<dt>2015-06-10 追記</dt>
+<dd>eXcale(エクスケール) は 2014年11月28日 にサービスの提供が終了しました。そのため下記内容は過去の参考としてのみ残してあります。</dd>
+</dl>
+</div>
 
 ## 始めに
 
@@ -26,11 +34,8 @@ categories: [ブログ]
 
  [3]: http://fuelphp.jp/docs/1.5/installation/instructions.html#/install_inside_root2
 
-<blockquote class="twitter-tweet" lang="ja"><p>
-@<a href="https://twitter.com/sharkpp">sharkpp</a> Assetのパスを変更する意義はないように思いますので、<a href="http://t.co/oQKk2vX9" title="http://ow.ly/hNx5G">ow.ly/hNx5G</a> の「もっと簡単な方法」の方がいいと思います <a href="https://twitter.com/search/%23fuelphposu">#fuelphposu</a>
-</p>&mdash; kenjisさん (@kenji_s) 
-<a href="https://twitter.com/kenji_s/status/303321663796289537">2013年2月18日</a>
-</blockquote>
+<blockquote class="twitter-tweet" lang="ja"><p>@<a href="https://twitter.com/sharkpp">sharkpp</a> Assetのパスを変更する意義はないように思いますので、<a href="http://t.co/oQKk2vX9" title="http://ow.ly/hNx5G">ow.ly/hNx5G</a> の「もっと簡単な方法」の方がいいと思います <a href="https://twitter.com/search/%23fuelphposu">#fuelphposu</a></p>&mdash; kenjisさん (@kenji_s) <a href="https://twitter.com/kenji_s/status/303321663796289537">2013年2月18日</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## アカウント登録
 
@@ -64,10 +69,11 @@ FuelPHP本家からパッケージをダウンロードし、一旦展開しま�
 
 で、 fuelphp-1.5.2/fuel/app/config/config.php に、
 
-<pre>return array(
+```php
+return array(
 'default_timezone' =&gt; 'Asia/Tokyo'
 );
-</pre>
+```
 
 のような感じで設定を追加します。
 
@@ -105,11 +111,12 @@ FuelPHP本家からパッケージをダウンロードし、一旦展開しま�
 
 上の設定とあわせると最終的には、
 
-<pre>return array(
+```php
+return array(
 'default_timezone' => 'Asia/Tokyo',
 'base_url'  =>  '/',
 );
-</pre>
+```
 
 のような内容になっているはずです。
 
@@ -117,30 +124,31 @@ FuelPHP本家からパッケージをダウンロードし、一旦展開しま�
 
 **2013年2月18日削除**
 
-<del>fuel/app/config/asset.php はインストール直後では存在しないので、下のような内容を追加します。
-</del>
+<del>fuel/app/config/asset.php はインストール直後では存在しないので、下のような内容を追加します。</del>
 
-<pre>return array(
+```php
+return array(
 'paths' => array('public/assets/'),
 );
-</pre>
+```
 
 ### <del>public/index.php を index.php に移動して内容変更</del> public/* を / に移動し index.php の内容を変更
 
-<del>public/index.php をルートに移動し、 index.php とします。
-</del>
+<del>public/index.php をルートに移動し、 index.php とします。</del>
 
 public/* をルートに移動します。 publicフォルダは空っぽなので削除しましょう。 で、パスも合わせて変更。
 
 APPPATH と PKGPATH と COREPATH です。
 
-<pre>define('APPPATH', realpath(__DIR__.'/../fuel/app/').DIRECTORY_SEPARATOR);
-</pre>
+```php
+define('APPPATH', realpath(__DIR__.'/../fuel/app/').DIRECTORY_SEPARATOR);
+```
 
 を
 
-<pre>define('APPPATH', realpath(__DIR__.'/fuel/app/').DIRECTORY_SEPARATOR);
-</pre>
+```php
+define('APPPATH', realpath(__DIR__.'/fuel/app/').DIRECTORY_SEPARATOR);
+```
 
 のような感じです。
 
@@ -152,8 +160,8 @@ APPPATH と PKGPATH と COREPATH です。
 
 で、うまくアクセスできるようになりました。
 
-  * <http://sharkpp.excale.net/>
-  * <http://sharkpp.excale.net/index.php/welcome>
+* <del>http://sharkpp.excale.net/</del>
+* <del>http://sharkpp.excale.net/index.php/welcome</del>
 
 ただ、mod_rewrite相当の機能が使えないとの話なので /welcom.php などとアクセスしても 404 エラーとなってしまいます。
 
