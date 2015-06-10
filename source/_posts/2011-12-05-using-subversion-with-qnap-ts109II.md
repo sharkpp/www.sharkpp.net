@@ -1,12 +1,12 @@
 ---
-title: "QNAP TS-109? で Subversionを使う"
+title: "QNAP TS-109II で Subversionを使う"
 date: 2011-12-05 00:23:00
 tags: [Subversion, QNAP, NAS, Linux, Apache]
 categories: [ブログ]
 
 ---
 
-久しぶりに、NAS(QNAP TS-109?)の環境を作り直したのでメモ。
+久しぶりに、NAS(QNAP TS-109II)の環境を作り直したのでメモ。
 
 元々はsubversionを入れたいがためにdebianを入れていたけど、どうもそんな小難しいことをしなくてもSubversionを動かせるって情報を見つけたので今の環境を破棄してまで試してみる。
 

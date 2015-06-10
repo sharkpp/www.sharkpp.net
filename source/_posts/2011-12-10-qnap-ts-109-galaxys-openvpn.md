@@ -1,5 +1,5 @@
 ---
-title: "QNAP TS-109? と GALAXY S(SC-02B) をOpenVPNで繋ぐ"
+title: "QNAP TS-109II と GALAXY S(SC-02B) をOpenVPNで繋ぐ"
 date: 2011-12-10 16:15:00
 tags: [Android, QNAP, Galaxy S, Linux]
 categories: [ブログ]
@@ -36,7 +36,7 @@ NAS(QNAP TS-109II)をゴニョゴニョやりながらなんとかOpenVPN使っ�
 
 最終的に
 
-  * QNAP TS-109?側の設定
+  * QNAP TS-109II側の設定
   * GALAXY S(SC-02B)側の設定
   * LAN内部のクライアントと通信する
 
@@ -53,9 +53,9 @@ NAS(QNAP TS-109II)をゴニョゴニョやりながらなんとかOpenVPN使っ�
   
 
 
-### QNAP TS-109?側の設定
+### QNAP TS-109II側の設定
 
-Optware ipkg は、[QNAP TS-109? で Subversionを使う][5] で色々やったのでそちらを参考にしてください。
+Optware ipkg は、[QNAP TS-109II で Subversionを使う][5] で色々やったのでそちらを参考にしてください。
 
  [5]: /blog/2011/12/05/using-subversion-with-qnap-ts109II.html
 
