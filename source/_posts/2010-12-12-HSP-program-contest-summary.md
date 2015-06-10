@@ -1,8 +1,8 @@
 ---
 title: "HSPプログラムコンテスト統計"
 date: 2010-12-12 22:22:00
-tags: [HSP]
-categories: [HSP]
+tags: [HSP, まとめ]
+categories: [まとめ, HSP]
 
 ---
 

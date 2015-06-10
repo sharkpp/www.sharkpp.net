@@ -1,8 +1,8 @@
 ---
 title: "oAuth 認証を提供しているサービスをまとめてみました"
 date: 2014-03-30 23:35:00
-tags: [php, Develop]
-categories: [ブログ]
+tags: [まとめ, php, Develop, oAuth, ウェブサービス]
+categories: [まとめ, ウェブサービス]
 
 ---
 

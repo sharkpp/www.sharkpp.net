@@ -1,8 +1,8 @@
 ---
 title: "PasteBin/Snippet系サービスまとめ"
 date: 2015-06-06 07:51
-tags: [雑記,まとめ,pastebin,snippet]
-categories: [まとめ]
+tags: [まとめ, pastebin, snippet, ウェブサービス]
+categories: [まとめ, ウェブサービス]
 
 ---
 
