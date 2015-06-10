@@ -2,7 +2,7 @@
 {% set breadcrumbs = breadcrumbs|merge([{ url: site.url ~ "/", caption: 'HOME' }]) %}
 {% if page.categories or post.meta.categories %}
     {% set categories = page.categories ? page.categories : post.meta.categories %}
-    {% if "blog" in categories %}
+    {% if "ブログ" in categories %}
         {% set this_year  %}{{ post.date | date("Y") }}{% endset %}
         {% set this_month %}{{ post.date | date("m") }}{% endset %}
         {% set this_day   %}{{ post.date | date("d") }}{% endset %}
