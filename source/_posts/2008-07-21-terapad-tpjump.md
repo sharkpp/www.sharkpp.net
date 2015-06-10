@@ -43,7 +43,7 @@ cacpp.fpi
 C
 </td>
 <td>
-関数<br />ラベル<br />Switch() ? case :<br />
+関数<br />ラベル<br />Switch() ～ case :<br />
 </td>
 </tr>
 <tr>
@@ -54,7 +54,7 @@ C
 C++
 </td>
 <td>
-関数(スコープ解決演算子は未対応)<br />ラベル<br />Switch() ? case :<br />
+関数(スコープ解決演算子は未対応)<br />ラベル<br />Switch() ～ case :<br />
 </td>
 </tr>
 <tr>

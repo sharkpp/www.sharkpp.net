@@ -40,7 +40,7 @@ hoge[2] = 'c'&lt;br&gt;
 ループ
 構文
 &lt;rt:for&gt;
-?
+～
 &lt;/rt:for&gt;
 パラメータ
 counter	ループ内で現在のカウンタ値を割り当てる変数名を指定、i、など、省略値はcounter
@@ -60,9 +60,9 @@ i = 4&lt;br&gt;
 条件分岐
 構文
 &lt;rt:if&gt;
-?
+～
 &lt;rt:else /&gt;
-?
+～
 &lt;/rt:if&gt;
 パラメータ
 param	条件の判断に使用する変数を指定、{$hoge}、など、省略値はfalse
@@ -83,9 +83,9 @@ hoge is 'a'&lt;br&gt;
 条件分岐(否定)
 構文
 &lt;rt:ifnot&gt;
-?
+～
 &lt;rt:else /&gt;
-?
+～
 &lt;/rt:ifnot&gt;
 サンプル
 ソース
@@ -103,7 +103,7 @@ hoge is 'a'&lt;br&gt;
 存在確認
 構文
 &lt;rt:has&gt;
-?
+～
 &lt;/rt:has&gt;
 パラメータ
 param	条件の判断に使用する変数を指定、{$hoge}、など、省略値はparam
@@ -116,11 +116,11 @@ hoge is not empty&lt;br&gt;
 実行結果
 hoge is not empty&lt;br&gt;
 説明
-paramにarray(),null,""を指定すると&lt;rt:has&gt; ? &lt;/rt:has&gt;は実行されない
+paramにarray(),null,""を指定すると&lt;rt:has&gt; ～ &lt;/rt:has&gt;は実行されない
 存在確認(否定)
 構文
 &lt;rt:hasnot&gt;
-?
+～
 &lt;/rt:hasnot&gt;
 パラメータ
 param	条件の判断に使用する変数を指定、{$hoge}、など、省略値はparam
@@ -133,7 +133,7 @@ hoge is empty&lt;br&gt;
 実行結果
 hoge is empty&lt;br&gt;
 説明
-paramにarray(),null,""を指定すると&lt;rt:hasnot&gt; ? &lt;/rt:hasnot&gt;が実行される
+paramにarray(),null,""を指定すると&lt;rt:hasnot&gt; ～ &lt;/rt:hasnot&gt;が実行される
 差込
 構文
 &lt;rt:include /&gt;
@@ -167,14 +167,14 @@ href
 ブロック
 構文
 &lt;rt:block&gt;
-?
+～
 &lt;/rt:block&gt;
 パラメータ
 name	ブロック名を指定します、省略値はname
 サンプル
 ソース
 &lt;rt:block name="hoge" /&gt;
-?
+～
 &lt;/rt:block&gt;
 説明
 &lt;rt:extends /&gt;で指定したテンプレート内に存在する同じ名前のブロックを置き換えます
@@ -207,7 +207,7 @@ ExceptionTrigger::raise()で疑似Exceptionが発行されている場合はそ�
 コメント
 構文
 &lt;rt:comment&gt;
-?
+～
 &lt;/rt:comment&gt;
 パラメータ
 なし

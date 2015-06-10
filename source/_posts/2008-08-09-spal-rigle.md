@@ -5,7 +5,7 @@ categories: [がらくた, SpoilerAL]
 
 ---
 
-PHAME 氏作の「TransForm ? ライグルの野望」のトスのステータスを書き換えます。
+PHAME 氏作の「TransForm ～ ライグルの野望」のトスのステータスを書き換えます。
 	  
 ソフト入手先:[グラビティー・スペース][1] 
 

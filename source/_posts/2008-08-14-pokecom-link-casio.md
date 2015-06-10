@@ -160,7 +160,7 @@ PB-100
 </tr>
 <tr>
 <td>
-<a href="http://homepage3.nifty.com/tshibuki/">夢影の鏡?ポケットコンピューティング</a><!-- http://tshibuki.hp.infoseek.co.jp/ -->
+<a href="http://homepage3.nifty.com/tshibuki/">夢影の鏡～ポケットコンピューティング</a><!-- http://tshibuki.hp.infoseek.co.jp/ -->
 </td>
 <td>
 滝本飛沫

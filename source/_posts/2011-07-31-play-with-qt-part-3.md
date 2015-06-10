@@ -29,7 +29,7 @@ QProgressBarでマーキー(marquee、メモリが左右に動くなどして進
 その他、ウィジェットをカスタマイズする時などに参考になりそうなメモ
 
   * [Qt開発時のメモ][4]
-  * [Using QStatusBar : QStatusBar???Qt???C][5]
+  * [Using QStatusBar : QStatusBar « Qt « C][5]
 
  [4]: http://uilabo.web.fc2.com/Qt/QtDevMemo.html
  [5]: http://www.java2s.com/Code/Cpp/Qt/UsingQStatusBar.htm
@@ -58,7 +58,7 @@ Qtでスマートポインタ使う場合は、`QSharedPointer`や`QScopedPointe
 
   * [c++ - Smart pointers in Qt - Stack Overflow][7]
   * [@sharkpp 独自クラスのコンストラクタの初期化リストで...][8]
-  * [QObject?Life?Cycle][9] ※PDF
+  * [QObject Life-Cycle][9] ※PDF
 
  [7]: http://stackoverflow.com/questions/1481616/smart-pointers-in-qt
  [8]: https://twitter.com/#!/rofi/status/94670745967403008
