@@ -71,6 +71,13 @@
             });
             $(window).scroll();
         </script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('table:not([class])')
+                    .addClass('table table-bordered table-hover table-condensed table-striped')
+                    .wrap("<div style='width:100%;overflow-x:scroll;'></div>");
+            });
+        </script>
 {% endblock %}
 
 {% block content_wrapper %}
