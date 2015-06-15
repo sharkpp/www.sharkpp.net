@@ -1,14 +1,40 @@
-            {% set categories = page.categories ? page.categories : post.meta.categories %}
-            {% set tags = page.tags ? page.tags : post.meta.tags %}
-            {% set post_ = post ? post : page %}
-            <i class="fa fa-calendar"></i> {{ post_.date | date("Y年m月d日") }}
-            &nbsp;/&nbsp;
-            <i class="fa fa-thumb-tack"></i> <a href="{{ site.url }}{{ post_.url }}">Permalink</a>
-            {% if categories or tags %}
-                &nbsp;/&nbsp;
-            {% endif %}
-            {% include "post_categories" %}
-            {% if categories and tags %}
-                &nbsp;/&nbsp;
-            {% endif %}
-            {% include "post_tags" %}
+<div style="line-height: 25px; height: 25px;">
+    <span style="display: inline-block; vertical-align: top;">
+{% set categories = page.categories ? page.categories : post.meta.categories %}
+{% set tags = page.tags ? page.tags : post.meta.tags %}
+{% set post_ = post ? post : page %}
+        <i class="fa fa-calendar"></i> {{ post_.date | date("Y年m月d日") }}
+        &nbsp;/&nbsp;
+        <i class="fa fa-thumb-tack"></i> <a href="{{ site.url }}{{ post_.url }}">Permalink</a>
+{% if not(share_button) %}
+{%   if categories or tags %}
+        &nbsp;/&nbsp;
+{%   endif %}
+{% else %}
+        &nbsp;/&nbsp;
+    </span>
+    <a href="http://b.hatena.ne.jp/entry/{{ ('http://www.sharkpp.net' ~ page.url) | e('url') }}"
+       class="hatena-bookmark-button"
+       data-hatena-bookmark-title="{{ page.title }} &mdash; {{ site.title }}"
+       data-hatena-bookmark-layout="simple-balloon"
+       title="このエントリーをはてなブックマークに追加"
+      ><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png"
+            alt="このエントリーをはてなブックマークに追加"
+            width="20" height="20" style="border: none;" /></a
+      >
+    <a href="https://twitter.com/share" class="twitter-share-button"
+       data-url="{{ ('http://www.sharkpp.net' ~ page.url) }}" data-via="sharkpp">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+{%   if categories or tags %}
+</div><div style="line-height: 25px; height: 25px;">
+{%   endif %}
+{% endif %}
+{% include "post_categories" %}
+{% if categories and tags %}
+&nbsp;/&nbsp;
+{% endif %}
+{% include "post_tags" %}
+{% if not(share_button) and (categories or tags) %}
+    </span>
+{% endif %}
+</div>

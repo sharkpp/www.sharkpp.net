@@ -78,6 +78,8 @@
                     .wrap("<div style='width:100%;overflow-x:scroll;'></div>");
             });
         </script>
+
+        <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
 {% endblock %}
 
 {% block content_wrapper %}
@@ -129,7 +131,7 @@
             {{ page.blocks.content|raw }}
         </div>
         <hr />
-        <footer>
+        <footer>{% set share_button = 1 %}
             {% include "post_footer" %}
         </footer>
 
