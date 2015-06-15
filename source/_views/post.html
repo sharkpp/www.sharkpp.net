@@ -130,13 +130,13 @@
         <div>
             {{ page.blocks.content|raw }}
         </div>
-        <hr />
+        <hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" />
         <footer>{% set share_button = 1 %}
             {% include "post_footer" %}
         </footer>
 
         {% if page.previous_post or page.next_post %}
-            <hr />
+            <hr style="border-top: none; border-bottom: 1px dashed #aaa; margin: 10px 0;" />
             <nav class="article">
                 <ul class="list-unstyled row">
                     {% if page.next_post %}
