@@ -71,15 +71,33 @@
             });
             $(window).scroll();
         </script>
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $('table:not([class])')
-                    .addClass('table table-bordered table-hover table-condensed table-striped')
-                    .wrap("<div style='width:100%;overflow-x:scroll;'></div>");
-            });
-        </script>
 
         <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+
+{% if page.js.sheetrock %}
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.0.0/dist/sheetrock.min.js"></script>
+        <script>$('body').sheetrock || document.write('<script src="{{ site.url }}/assets/jquery-sheetrock/dist/sheetrock.min.js"><\/script>')</script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('table[data-sheetrock]')
+                    .each(function(){
+                        $(this)
+                            .sheetrock({
+                                url: $(this).attr('data-sheetrock'),
+                                callback: function(x, options, response){
+                                $('td:contains("http")', $('table[data-sheetrock="'+options.user.url+'"]'))
+                                    .each(function(){
+                                        var t = $(this).html().match(/\[(.+)\]\((.+)\)/);
+                                        $(this).html('<a href="'+t[2]+'">'+t[1]+'</a>');
+                                    });
+                                }
+                            })
+                            .wrap("<div style='width:100%;overflow-x:scroll;'></div>");
+                    });
+            });
+        </script>
+{% endif %}
+
 {% endblock %}
 
 {% block content_wrapper %}
@@ -89,8 +107,6 @@
         <header>
             <h1>{% if page.draft %}<i class="fa fa-pencil-square-o"></i> {% endif %}{{ page.title }} <small>post</small></h1>
         </header>
-
-{# <div id="toc" class="pull-right" style="position: relative;"></div> #}
 
 {% set toc_items = [ '<h1>' ~ page.title ~ '</h1>' ] %}
 {% set toc_items = [  ] %}

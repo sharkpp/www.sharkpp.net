@@ -3,6 +3,7 @@ title: "PasteBin/Snippet系サービスまとめ"
 date: 2015-06-06 07:51
 tags: [まとめ, pastebin, snippet, ウェブサービス]
 categories: [まとめ, ウェブサービス]
+js: { sheetrock: true }
 
 ---
 
@@ -14,4 +15,5 @@ categories: [まとめ, ウェブサービス]
 
 ## ぺたっと
 
-<iframe src="https://docs.google.com/spreadsheets/d/1TNov1uXtnPERVAFiUvkzvJ5BfZfghO2A_h2rwgY9qNg/pubhtml?widget=false&amp;headers=false" style="width:100%; height:500px; border: 1px solid #ccc;"></iframe>
+<table class="table table-bordered table-hover table-condensed table-striped" data-sheetrock="https://docs.google.com/spreadsheets/d/1TNov1uXtnPERVAFiUvkzvJ5BfZfghO2A_h2rwgY9qNg/edit#gid=0"></table>
+

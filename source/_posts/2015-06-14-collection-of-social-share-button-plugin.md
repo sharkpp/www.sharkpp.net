@@ -3,6 +3,7 @@ title: "SNSの共有ボタンを設置できる jQuery (他も含む) プラグ�
 date: 2015-06-14 16:00
 tags: [まとめ, Javascript, jQuery, SNS, Twitter, Facebook]
 categories: [まとめ, Javascript]
+js: { sheetrock: true }
 
 ---
 
@@ -24,30 +25,7 @@ Hatena Bookmark とかほとんどサポートされていませんでした。
 
 ちなみに、 `btn` はボタンの設置が出来る、 `cnt` はカウンターの表示あり、です。
 
-| Plugins | Depends | Design | Mail | Facebook<br/>share | Facebooklike | Twitter | Pinterest | Google+<br/>share | Google+1 | LinkedIn<br/>share | LinkedIn<br/>recommend | Hatena<br/>bookmark | mixi<br/>like | mixi<br/>check | GREE<br/>like | LINE<br/>send | Evernote | Digg | StumbleUpon | Pocket | Delicious | GitHub | Tumblr | reddit | blogger | friendfeed | Myspace | Dribbble | Scoutzie | Hacker News<br/>share | Sumally | Fancy | & more |
-|---------|---------|--------|------|--------------------|--------------|---------|-----------|-------------------|----------|--------------------|------------------------|---------------------|---------------|----------------|---------------|---------------|----------|------|-------------|--------|-----------|--------|--------|--------|---------|------------|---------|----------|----------|-----------------------|---------|-------|--------|
-| [jQuery.socialbutton](http://itra.jp/jquery_socialbutton_plugin/) | jQuery | native |  | btn,cnt | btn | btn,cnt | btn |  | btn |  |  | btn,cnt | btn,cnt | btn | btn |  | btn |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| [Sharrre](http://sharrre.com/) | jQuery | native,custom,graph |  | btn,cnt | btn,cnt | btn,cnt | btn | btn,cnt |  | btn,cnt |  |  |  |  |  |  |  | btn,cnt | btn,cnt |  | btn,cnt |  |  |  |  |  |  |  |  |  |  |  |  |
-| [RRSSB](http://kurtnoble.com/labs/rrssb/) | jQuery | custom | btn | btn |  | btn | btn | btn |  | btn |  |  |  |  |  |  |  |  |  |  |  | btn |  |  |  |  |  |  |  |  |  |  |  |
-| [Flati Social Share Plugin](http://www.voidtricks.com/flati-social-share-plugin-jquery/) | jQuery | custom |  | btn |  | btn | btn | btn |  | btn |  |  |  |  |  |  |  | btn | btn |  |  |  | btn | btn |  |  |  |  |  |  |  |  |  |
-| [#50C1AL Share](http://tolgaergin.com/files/social/) | jQuery | popup |  | btn |  | btn | btn | btn |  | btn |  |  |  |  |  |  |  | btn | btn |  | btn |  | btn | btn | btn | btn | btn | btn | btn |  |  |  |  |
-| [Minishare](http://rawgit.com/dwhewitson/minishare/master/demo.html) | jQuery | native |  | btn |  | btn |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| [HIDESHARE](http://arnonate.github.io/hideshare/) | jQuery | popup |  | btn |  | btn | btn | btn |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| [floatShare](http://egrappler.com/jquery-floating-social-share-plugin-floatshare/) | jQuery | native,custom |  | btn,cnt |  | btn,cnt |  | btn,cnt |  | btn,cnt |  |  |  |  |  |  |  | btn,cnt | btn,cnt |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| [jsSocials](http://js-socials.com/) | jQuery | native,custom | btn | btn,cnt |  | btn,cnt | btn,cnt | btn,cnt |  | btn,cnt |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| [socialShare.js](https://github.com/ritz078/socialShare.js) | jQuery | custom |  | btn,cnt |  | btn,cnt | btn,cnt | btn,cnt |  | btn,cnt |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| [jQuery-Awesome-Sosmed-Share-Button](https://github.com/bachors/jQuery-Awesome-Sosmed-Share-Button) | jQuery,fontawesome | custom |  | btn,cnt |  | btn,cnt |  | btn,cnt |  | btn,cnt |  |  |  |  |  |  |  |  | btn,cnt |  |  |  |  | btn,cnt |  |  |  |  |  |  |  |  |  |
-| [Social Likes](http://sapegin.github.io/social-likes/) | jQuery | native,custom |  | btn,cnt |  | btn,cnt | btn | btn,cnt |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| [SocialCount](https://github.com/filamentgroup/SocialCount/) | jQuery | custom |  |  | btn,cnt | btn,cnt | btn |  | btn,cnt |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| [jquery.kyco.easyshare](https://github.com/kyco/jquery.kyco.easyshare) | jQuery,php | custom |  | btn,cnt |  | btn,cnt |  |  | btn,cnt |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| [jQuery.socialthings](https://github.com/Takazudo/jQuery.socialthings) | jQuery | native |  | btn,cnt | btn,cnt | btn,cnt |  |  | btn,cnt |  |  | btn,cnt |  | btn |  | btn |  |  |  | btn,cnt |  |  |  |  |  |  |  |  |  |  | btn |  |  |
-| [SocialShare.js](https://github.com/AyumuKasuga/SocialShare) | jQuery | custom |  | btn,cnt |  | btn,cnt | btn,cnt | btn |  | btn,cnt |  | btn |  | btn |  |  | btn | btn | btn | btn | btn |  | btn | btn | btn | btn | btn |  |  | btn |  |  | btn |
-| [jQuery Social Sharing Buttons](https://github.com/cshold/social-sharing-buttons) | jQuery | custom |  | btn,cnt |  | btn,cnt | btn |  | btn |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | btn |  |
-| [jQuery Social Buttons](https://github.com/michaek/jquery-socialButtons) | jQuery | custom |  | btn,cnt |  | btn,cnt | btn,cnt |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| [jquery.sitekit/social-buttons](https://github.com/cyokodog/jquery.sitekit/tree/gh-pages/social-buttons) | jQuery | native |  |  | btn,cnt | btn,cnt |  |  | btn,cnt |  |  | btn,cnt |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| [share-button](http://sharebutton.co/) | none | popup | btn | btn |  | btn | btn | btn |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| [Slingpic](http://slingpic.com/) | none | popup | btn,cnt | btn,cnt |  | btn,cnt | btn,cnt |  |  | btn |  |  |  |  |  |  |  | btn |  |  | btn |  | btn | btn |  | btn | btn |  |  |  |  |  |  |
-| [Socialite](http://socialitejs.com/) | none | native |  |  | btn,cnt | btn,cnt | btn | btn | btn,cnt | btn,cnt | btn |  |  |  |  |  |  |  |  |  |  | btn |  |  |  |  |  |  |  | btn |  |  |  |
+<table class="table table-bordered table-hover table-condensed table-striped" data-sheetrock="https://docs.google.com/spreadsheets/d/1_tXrnlwV5Vbql-5yEgcPZ3q7PcIlV6DxHD4BJLExUgc/edit#gid=0"></table>
 
 ## 参考
 
