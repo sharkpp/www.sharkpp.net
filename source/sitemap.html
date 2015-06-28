@@ -4,23 +4,10 @@ title: サイトマップ
 use:
     - "posts"
     - "statics"
+permalink: sitemap.html
 
 ---
 <h2>サイトマップ</h2>
-
-{#
-[<ul class="list-unstyled">
-{% for keys in page|keys %}
-<li>{{ keys }}</li>
-{% endfor %}
-</ul>]
-<pre>{{ print_r() }}</pre>
-<pre>{{ print_r(site) }}</pre>
-<pre>{{ print_r(page) }}</pre>
-<pre>{{ print_r(formatter) }}</pre>
-<pre>{{ print_r(converters) }}</pre>
-<pre>{{ print_r(data) }}</pre>
-#}
 
 {% set pages = [] %}
 {% set pages = pages | merge([{ url: '/', title: 'Home' }]) %}
