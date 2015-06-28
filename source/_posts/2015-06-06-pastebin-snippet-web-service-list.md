@@ -1,9 +1,9 @@
 ---
+js: { sheetrock: true }
 title: "PasteBin/Snippet系サービスまとめ"
 date: 2015-06-06 07:51
 tags: [まとめ, pastebin, snippet, ウェブサービス]
 categories: [まとめ, ウェブサービス]
-js: { sheetrock: true }
 
 ---
 

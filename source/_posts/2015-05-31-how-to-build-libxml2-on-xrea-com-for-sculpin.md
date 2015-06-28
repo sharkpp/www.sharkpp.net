@@ -1,5 +1,6 @@
 ---
-layout: post-diagram
+layout: post
+js: { mermaid: true }
 title: "Sculpin を実行するために xrea.com 上で libxml2 を構築する方法"
 date: 2015-05-31 21:30
 tags: [php, xrea.com, libxml, Linux, configure]

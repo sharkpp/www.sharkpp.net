@@ -1,9 +1,9 @@
 ---
+js: { sheetrock: true }
 title: "SNSの共有ボタンを設置できる jQuery (他も含む) プラグインをまとめてみた"
 date: 2015-06-14 16:00
 tags: [まとめ, Javascript, jQuery, SNS, Twitter, Facebook]
 categories: [まとめ, Javascript]
-js: { sheetrock: true }
 
 ---
 
