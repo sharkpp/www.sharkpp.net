@@ -22,6 +22,12 @@
             font-size: 36px;
             line-height: 40px;
         }
+        #toc {
+            margin-left: 10px;
+            margin-bottom: 10px;
+            max-width: 350px;
+            word-wrap: break-word;
+        }
         </style>
 {% include "post_js_mermaid_css" %}
 {% endblock %}
@@ -101,7 +107,7 @@
 {% set toc_items = [  ] %}
 {% for toc_item in page.blocks.content | preg_get_all('!(<(h[0-9]).+?>.+?</.+?>)!') %}{% set toc_items = toc_items | merge( [ '' ~ toc_item ] ) %}{% endfor %}
 {% if toc_items | length > 1 %}
-<div id="toc" class="panel panel-default pull-right" style="margin-left: 10px; margin-bottom: 10px;">
+<div id="toc" class="panel panel-default pull-right">
     <div class="panel-heading text-center">目次</div>
         <div class="panel-body" style="padding: 10px;">
             <ul class="fa-ul">
