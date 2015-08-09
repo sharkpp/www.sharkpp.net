@@ -1,0 +1,24 @@
+---
+layout: default
+title: 年月日インデックス
+generator: [calendarian]
+
+---
+
+<h2>
+{% if page.calendarian.year %}{{ page.calendarian.year }} 年 {% endif %}
+{% if page.calendarian.month %}{{ page.calendarian.month }} 月 {% endif %}
+{% if page.calendarian.day %}{{ page.calendarian.day }} 日{% endif %}
+</h2>
+
+{% for post in page.calendarian.items %}
+{% set this_year %}{{ post.date | date("Y") }}{% endset %}
+{% set this_month %}{{ post.date | date("m") }}{% endset %}
+{% set this_day %}{{ post.date | date("d") }}{% endset %}
+  <div>
+{% if not page.calendarian.month %}{{ this_month }} 月 {% endif %}
+{% if not page.calendarian.day %}{{ this_day }} 日 {% endif %}
+    <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+  </div>
+{% endfor %}
+

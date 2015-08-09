@@ -1,16 +1,22 @@
 {% set breadcrumbs = [] %}
 {% set breadcrumbs = breadcrumbs|merge([{ url: site.url ~ "/", caption: 'HOME' }]) %}
-{% if page.categories or post.meta.categories %}
+{% if page.categories or post.meta.categories or (page.url matches '!/blog(/[0-9]+){1,3}$!') %}
     {% set categories = page.categories ? page.categories : post.meta.categories %}
     {% set this_date = page.categories ? page.date : post.date %}
-    {% if "ブログ" in categories %}
-        {% set this_year  %}{{ this_date | date("Y") }}{% endset %}
-        {% set this_month %}{{ this_date | date("m") }}{% endset %}
-        {% set this_day   %}{{ this_date | date("d") }}{% endset %}
+    {% if ("ブログ" in categories) or (page.url matches '!/blog(/[0-9]+){1,3}$!') %}
+        {% if "ブログ" in categories %}
+            {% set this_year  %}{{ this_date | date("Y") }}{% endset %}
+            {% set this_month %}{{ this_date | date("m") }}{% endset %}
+            {% set this_day   %}{{ this_date | date("d") }}{% endset %}
+        {% else %}
+            {% set this_year  %}{{ page.url | split('/') | slice(2, 1) | join('') }}{% endset %}
+            {% set this_month %}{{ page.url | split('/') | slice(3, 1) | join('') }}{% endset %}
+            {% set this_day   %}{{ page.url | split('/') | slice(4, 1) | join('') }}{% endset %}
+        {% endif %}
 
-        {% set breadcrumbs = breadcrumbs|merge([{ caption: this_year  }]) %}
-        {% set breadcrumbs = breadcrumbs|merge([{ caption: this_month }]) %}
-        {% set breadcrumbs = breadcrumbs|merge([{ caption: this_day   }]) %}
+        {% if this_year  %}{% set breadcrumbs = breadcrumbs|merge([{ caption: this_year,  url: (site.url ~ "/blog/#{this_year}/")                           | replace({'//':'/'}) }]) %}{% endif %}
+        {% if this_month %}{% set breadcrumbs = breadcrumbs|merge([{ caption: this_month, url: (site.url ~ "/blog/#{this_year}/#{this_month}/")             | replace({'//':'/'}) }]) %}{% endif %}
+        {% if this_day   %}{% set breadcrumbs = breadcrumbs|merge([{ caption: this_day,   url: (site.url ~ "/blog/#{this_year}/#{this_month}/#{this_day}/") | replace({'//':'/'}) }]) %}{% endif %}
     {% else %}
         {% for category in categories %}
             {% set breadcrumbs = breadcrumbs|merge([{ url: (site.url ~ "/blog/categories/" ~ category) | replace({'//':'/'}), caption: category }]) %}
@@ -21,7 +27,7 @@
 {% elseif "/blog/categories/" in page.url %}
     {% set breadcrumbs = breadcrumbs|merge([{ url: (site.url ~ "/blog/categories") | replace({'//':'/'}), caption: "カテゴリ" }]) %}
 {% endif %}
-{% if "/" != page.url %}
+{% if "/" != page.url and not (page.url matches '!/blog(/[0-9]+){1,3}$!') %}
     {% set breadcrumbs = breadcrumbs|merge([{ url: (site.url ~ "/" ~ page.url) | replace({'//':'/'}),
                                               caption: "/blog/tags/"       in page.url ? '"' ~ page.tag ~ '"':
                                                        "/blog/categories/" in page.url ? '"' ~ page.category ~ '"' :
