@@ -13,9 +13,9 @@ permalink: .htaccess
   RewriteRule ^profile.html  http://about.me/sharkpp [L,R]
   RewriteRule ^log/(.*)$  - [R=404,L]
 
-  RewriteRule ^blog/([0-9]+)/([0-9]+)/([0-9]+).html$ /hoge/$1/$2/$3/ [R=302,L]
-  RewriteRule ^blog/([0-9]+)/([0-9]+).html$          /hoge/$1/$2/    [R=302,L]
-  RewriteRule ^blog/([0-9]+).html$                   /hoge/$1/       [R=302,L]
+  RewriteRule ^blog/([0-9]+)/([0-9]+)/([0-9]+).html$ /blog/$1/$2/$3/ [R=302,L]
+  RewriteRule ^blog/([0-9]+)/([0-9]+).html$          /blog/$1/$2/    [R=302,L]
+  RewriteRule ^blog/([0-9]+).html$                   /blog/$1/       [R=302,L]
 </IfModule>
 
 # redirect for old site url to new site url
