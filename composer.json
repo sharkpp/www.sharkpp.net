@@ -2,7 +2,10 @@
     "name": "sharkpp/www.sharkpp.net",
     "license": "MIT License",
     "authors": [
-        { "name": "sharkpp" }
+        {
+            "name": "sharkpp",
+            "homepage": "http://www.sharkpp.net/"
+        }
     ],
     "require": {
         "beelab/bowerphp": "1.0.*@dev"

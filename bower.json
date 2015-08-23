@@ -1,8 +1,9 @@
 {
-    "name": "www.sharkpp.net",
+    "name": "sharkpp/www.sharkpp.net",
     "authors": [
         {
-            "name": "sharkpp"
+            "name": "sharkpp",
+            "homepage": "http://www.sharkpp.net/"
         }
     ],
     "private": true,
