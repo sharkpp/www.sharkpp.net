@@ -12,6 +12,7 @@
             {% set this_year  %}{{ page.url | split('/') | slice(2, 1) | join('') }}{% endset %}
             {% set this_month %}{{ page.url | split('/') | slice(3, 1) | join('') }}{% endset %}
             {% set this_day   %}{{ page.url | split('/') | slice(4, 1) | join('') }}{% endset %}
+            {% set breadcrumbs = breadcrumbs|merge([{ caption: 'アーカイブ', url: site.url ~ "/blog" }]) %}
         {% endif %}
 
         {% if this_year  %}{% set breadcrumbs = breadcrumbs|merge([{ caption: this_year,  url: (site.url ~ "/blog/#{this_year}/")                           | replace({'//':'/'}) }]) %}{% endif %}
@@ -19,16 +20,16 @@
         {% if this_day   %}{% set breadcrumbs = breadcrumbs|merge([{ caption: this_day,   url: (site.url ~ "/blog/#{this_year}/#{this_month}/#{this_day}/") | replace({'//':'/'}) }]) %}{% endif %}
     {% else %}
         {% for category in categories %}
-            {% set breadcrumbs = breadcrumbs|merge([{ url: (site.url ~ "/blog/categories/" ~ category) | replace({'//':'/'}), caption: category }]) %}
+            {% set breadcrumbs = breadcrumbs|merge([{ url: site.url ~ "/blog/categories/" ~ category, caption: category }]) %}
         {% endfor %}
     {% endif %}
 {% elseif "/blog/tags/" in page.url %}
-    {% set breadcrumbs = breadcrumbs|merge([{ url: (site.url ~ "/blog/tags") | replace({'//':'/'}), caption: "タグ" }]) %}
+    {% set breadcrumbs = breadcrumbs|merge([{ url: site.url ~ "/blog/tags", caption: "タグ" }]) %}
 {% elseif "/blog/categories/" in page.url %}
-    {% set breadcrumbs = breadcrumbs|merge([{ url: (site.url ~ "/blog/categories") | replace({'//':'/'}), caption: "カテゴリ" }]) %}
+    {% set breadcrumbs = breadcrumbs|merge([{ url: site.url ~ "/blog/categories", caption: "カテゴリ" }]) %}
 {% endif %}
 {% if "/" != page.url and not (page.url matches '!/blog(/[0-9]+){1,3}$!') %}
-    {% set breadcrumbs = breadcrumbs|merge([{ url: (site.url ~ "/" ~ page.url) | replace({'//':'/'}),
+    {% set breadcrumbs = breadcrumbs|merge([{ url: site.url ~ "/" ~ page.url,
                                               caption: "/blog/tags/"       in page.url ? '"' ~ page.tag ~ '"':
                                                        "/blog/categories/" in page.url ? '"' ~ page.category ~ '"' :
                                                                                          page.title }]) %}
@@ -36,17 +37,18 @@
 
     <ol class="breadcrumb">
 {% for breadcrumb in breadcrumbs %}
+{% set breadcrumb_url = breadcrumb.url | replace({'//':'/'}) %}
         <li temscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"
 {% if loop.last %}
             class="active"
 {% else %}
-           ><a itemprop="url" href="{{ breadcrumb.url }}"
+           ><a itemprop="url" href="{{ breadcrumb_url }}"
 {% endif %}
 {% set breadcrumb_icon = "" %}
-{% if site.url ~ "/"                == breadcrumb.url %}{% set breadcrumb_icon = "home" %}{% endif %}
-{% if site.url ~ "/blog"            == breadcrumb.url %}{% set breadcrumb_icon = "archive" %}{% endif %}
-{% if site.url ~ "/blog/tags"       == breadcrumb.url %}{% set breadcrumb_icon = "tags" %}{% endif %}
-{% if site.url ~ "/blog/categories" == breadcrumb.url %}{% set breadcrumb_icon = "folder-open" %}{% endif %}
+{% if site.url ~ "/"                == breadcrumb_url %}{% set breadcrumb_icon = "home" %}{% endif %}
+{% if site.url ~ "/blog"            == breadcrumb_url %}{% set breadcrumb_icon = "archive" %}{% endif %}
+{% if site.url ~ "/blog/tags"       == breadcrumb_url %}{% set breadcrumb_icon = "tags" %}{% endif %}
+{% if site.url ~ "/blog/categories" == breadcrumb_url %}{% set breadcrumb_icon = "folder-open" %}{% endif %}
 {% if breadcrumb_icon %}
            ><i class="fa fa-{{ breadcrumb_icon }} fa-lg"></i
           >&nbsp;<span itemprop="title">{{ breadcrumb.caption }}</span

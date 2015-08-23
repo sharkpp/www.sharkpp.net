@@ -20,7 +20,7 @@ pagination:
 {% if year != this_year %}
   {% set month = '0' %}
   {% set year = this_year %}
-  <h3>{{ year }}年</h3>
+  <h3><a href="{{ site.url }}/blog/{{ year }}/">{{ year }}年</a></h3>
 {% endif %}
 {% set this_month %}{{ post.date | date("m") }}{% endset %}
 {% if month != this_month %}
