@@ -51,7 +51,7 @@ exec_usage () {
   echo '  production [CONF_PATH] production site, set webhook.conf path'
   echo '  test                   launch web server [ http://localhost:8000/ ] for test site'
   echo '  spider                 check broken link'
-  echo '  diary [STUB]           create new empty page'
+  echo '  new [STUB]             create new empty page'
 }
 
 core_init () {
@@ -208,7 +208,7 @@ exec_spider () {
   fi
 }
 
-exec_diary () {
+exec_new () {
   NEW_PAGE=source/_posts/$(date +%Y-%m-%d)-$1.md
 
   echo "---"                             > $NEW_PAGE
@@ -232,7 +232,7 @@ case "$1" in
   "test"       ) exec_test ;;
   "t"          ) exec_test ;;
   "spider"     ) exec_spider ;;
-  "diary"      ) exec_diary $2;;
-  "d"          ) exec_diary $2;;
+  "new"        ) exec_new $2;;
+  "n"          ) exec_new $2;;
   *            ) exec_usage ;;
 esac
