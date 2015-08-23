@@ -12,4 +12,5 @@ output_*/
 .vendor/
 *.lock
 *.phar
+*.log
 webhook.conf
