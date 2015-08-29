@@ -1,7 +1,7 @@
 ---
 title: "テンプレート構文メモ tag/TemplateParserの構文に関してのメモ"
 date: 2009-01-10 18:37:00
-tags: [php, rhaco]
+tags: [php, rhaco, メモ]
 categories: [php, rhaco]
 
 ---

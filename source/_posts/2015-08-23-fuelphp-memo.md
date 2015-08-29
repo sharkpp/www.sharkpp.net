@@ -1,7 +1,7 @@
 ---
 title: "FuelPHPのメモ"
 date: 2015-08-23 18:00
-tags: [雑記, FuelPHP, php]
+tags: [雑記, FuelPHP, php, メモ]
 categories: [ブログ]
 
 ---

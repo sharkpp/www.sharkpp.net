@@ -1,7 +1,7 @@
 ---
 title: "Ubuntu-ja-10.04をVMware Player 3で動かすときのメモ"
 date: 2010-05-30 18:41:00
-tags: [Ubuntu, WMware-player]
+tags: [Ubuntu, WMware-player, メモ]
 categories: [ブログ]
 
 ---
