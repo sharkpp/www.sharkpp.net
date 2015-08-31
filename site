@@ -71,7 +71,7 @@ core_init () {
   $PHP composer.phar self-update
   $PHP composer.phar install
   # install BowerPHP
-  $PHP .vendor/bin/bowerphp install
+  $PHP .vendor/beelab/bowerphp/bin/bowerphp install
   # create default webhook conf
   if [ ! -e "$(dirname $0)/webhook.conf" ] ; then
     pushd $(dirname $0) >/dev/null 2>&1
@@ -161,7 +161,7 @@ exec_production () {
     exit 1
   fi
   # update assets
-  $PHP .vendor/bin/bowerphp install
+  $PHP .vendor/beelab/bowerphp/bin/bowerphp install
   # generate site
   core_generate $(get_ini $1 output_path public)
 }
@@ -222,6 +222,20 @@ exec_new () {
   echo create new blog page is $NEW_PAGE
 }
 
+exec_update () {
+  # init
+  if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
+    core_init
+  else
+    check_php
+    check_libxml
+  fi
+  # update
+  $PHP sculpin.phar self-update
+  $PHP sculpin.phar update
+  $PHP .vendor/beelab/bowerphp/bin/bowerphp update
+}
+
 case "$1" in
   "init"       ) exec_init ;;
   "i"          ) exec_init ;;
@@ -234,5 +248,7 @@ case "$1" in
   "spider"     ) exec_spider ;;
   "new"        ) exec_new $2;;
   "n"          ) exec_new $2;;
+  "update"     ) exec_update ;;
+  "u"          ) exec_update ;;
   *            ) exec_usage ;;
 esac
