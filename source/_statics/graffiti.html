@@ -278,12 +278,7 @@ graffities:
                 $('.thumbnail > .contenthover a[data-lightbox]').remove();
                 $('#graffiti-content').wookmark();
                 $('.ch_wrapper .contenthover > p').on('click', function(e){
-                    console.log( $(this).parent().find('a[data-lightbox]').attr('href'));
-                //e.preventDefault();
-                //e.stopPropagation();
-                $(this).parent().find('a[data-lightbox]').trigger('click');
-                //setTimeout(function(){ $(this_).find('a[data-lightbox]').click(); },1);
-                //        return false;
+                  $(this).parent().find('a[data-lightbox]').trigger('click');
                 });
 
                 //$('[data-toggle="tooltip"]').tooltip();
