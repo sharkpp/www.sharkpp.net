@@ -259,6 +259,11 @@ graffities:
 </div>
 {% endblock %}
 
+{% block head_styles %}
+{{ parent() }}
+    <link href="{{ site.url }}/css/wookmark.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
 {% block scripts_after %}
 {{ parent() }}
 
