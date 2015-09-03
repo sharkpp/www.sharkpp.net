@@ -91,7 +91,7 @@ OUIを検索するFuelPHP用のパッケージを作ったよってことで、�
 
 などとやるのが正解。
 
-## [Travis CI][5]使ってみたよ
+## Travis CI 使ってみたよ
 
 簡単、CIサービス [Travis CI][5] を使ってみました。
 
@@ -107,7 +107,7 @@ OUIを検索するFuelPHP用のパッケージを作ったよってことで、�
  [12]: https://github.com/codenitive/laravel-oneauth/blob/master/.travis.yml
  [13]: https://github.com/fuelphp/fuelphp/blob/develop/.travis.yml
 
-### ドキュメントに嘘付かれた(´･ω･\`)
+### ドキュメントに嘘付かれた(´･ω･`)
 
 [Build Lifecycle][14]は間違っているっぽいです。 before_install の後で clone したディレクトリに移動するって書いてありますが、cloneした直後に移動していました。 途中で仕様が変わったんでしょうか？
 
