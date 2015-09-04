@@ -157,23 +157,22 @@ products:
 {% endif %}
   </div>
   <div class="panel-body">
-    <p>{{ product.description }}</p>
-    <div class="pull-left">
+    <p style="padding-bottom: 5px; border-bottom: 1px dashed #999;">{{ product.description }}</p>
+    <ul class="fa-ul" style="margin-left: 2em; margin-bottom: -5px;">
 {% if product.tags %}
-      <i class="fa fa-tag fa-lg"></i> 
-{% endif %}
+      <li><i class="fa-li fa fa-tag"></i>
 {% for tag in product.tags %}
-      <a href="{{ site.url }}/blog/tags/{{ tag }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+        <a href="{{ site.url }}/blog/tags/{{ tag }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
 {% endfor %}
-    </div>
-    <div class="pull-right">
+      </li>
+{% endif %}
 {% if product.source %}
-      <a href="{{ product.source }}"><i class="fa fa-github fa-lg"></i></a>
+      <li><i class="fa-li fa fa-github"></i> <a href="{{ product.source }}">ソースコード</a></li>
 {%   endif %}
 {% if product.download %}
-      <a href="{{ product.download }}"><i class="fa fa-download fa-lg"></i></a>
+      <li><i class="fa-li fa fa-download"></i> <a href="{{ product.download }}">ダウンロード</a></li>
 {% endif %}
-    </div>
+    </ul>
   </div>
 </div>
 {% endfor %}
@@ -216,8 +215,7 @@ products:
                     activeFilters.push($(this).data('filter'));
                   });
                 }
-console.log(activeFilters);
-                var x = wookmark.filter(activeFilters, 'or');
+                wookmark.filter(activeFilters, 'or');
               }
               
                $('#tags').on('click.wookmark-filter', 'button', onClickFilter);
