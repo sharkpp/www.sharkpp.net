@@ -26,5 +26,7 @@
 
 .tiles-wrap > div.wookmark-inactive {
   visibility: hidden;
+  height: 0;
+  top: 0 !important;
   opacity: 0;
 }
