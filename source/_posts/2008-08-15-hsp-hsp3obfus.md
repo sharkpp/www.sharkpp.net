@@ -1,7 +1,7 @@
 ---
 title: "hsp3obfus - HSP3オブジェクト難読化ツール"
 date: 2008-08-15 01:16:00
-tags: [HSP]
+tags: [HSP, HSP用ツール]
 categories: [HSP, HSP用ツール]
 
 ---

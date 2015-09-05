@@ -1,7 +1,7 @@
 ---
 title: "memfile.hpi"
 date: 2008-08-15 01:03:00
-tags: [HSP]
+tags: [HSP, HSPプラグイン]
 categories: [HSP, HSPプラグイン]
 
 ---

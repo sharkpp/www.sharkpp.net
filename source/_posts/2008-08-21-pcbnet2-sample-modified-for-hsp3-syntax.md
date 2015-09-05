@@ -1,6 +1,7 @@
 ---
 title: "pcbnet2 付属サンプルをHSP3に対応させてみた"
 date: 2008-08-21 00:15:00
+tags: [HSP, HSPプラグイン]
 categories: [ブログ]
 
 ---

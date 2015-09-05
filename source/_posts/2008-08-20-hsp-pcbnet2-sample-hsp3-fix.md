@@ -1,7 +1,7 @@
 ---
 title: "pcbnet2 付属サンプルのHSP3対応修正"
 date: 2008-08-20 23:54:00
-tags: [HSP]
+tags: [HSP, HSPプラグイン]
 categories: [HSP, HSPプラグイン]
 
 ---
