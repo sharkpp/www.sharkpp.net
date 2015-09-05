@@ -1,6 +1,7 @@
 ---
 title: "PHP用強調キーワード・キーワードヘルプファイル"
 date: 2009-03-08 15:20:00
+update: 2015-09-05 12:00
 tags: [サクラエディタ, php]
 categories: [がらくた, サクラエディタ]
 
@@ -8,8 +9,10 @@ categories: [がらくた, サクラエディタ]
 
 サクラエディタ用のPHP用強調キーワード・キーワードヘルプファイルです。
 
-最新版は [http://svn.coderepos.org/share/platform/sakura-editor/keyword/php/](http://svn.coderepos.org/share/platform/sakura-editor/keyword/php/) にあります。
+最新版は [GitHub](https://github.com/sharkpp/sakura-editor-keyword-php) にあります。
+
+2015-09-05 12:00 レポジトリを svn.coderepos.org から github.com に変更したのを反映
 
 [DOWNLOAD][1]
 
- [1]: /files/sakura-editor-php-keyword-20090308.zip
+ [1]: https://github.com/sharkpp/sakura-editor-keyword-php/archive/master.zip
