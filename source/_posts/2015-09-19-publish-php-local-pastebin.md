@@ -1,7 +1,7 @@
 ---
 title: "PHP local pastebin を公開"
 date: 2015-09-20 00:00
-tags: [PHP]
+tags: [php]
 categories: [ブログ]
 
 ---
