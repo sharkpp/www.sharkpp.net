@@ -7,6 +7,24 @@ pagination:
 use:
     - posts
 ---
+
+<div class="row">
+    <div class="col-md-4">
+        <a type="button" class="btn btn-default btn-lg btn-block"
+           href="{{ site.url }}/blog/"><i class="fa fa-archive fa-4x"></i><br />アーカイブ</a>
+    </div>
+    <div class="col-md-4 text-center">
+        <a type="button" class="btn btn-default btn-lg btn-block"
+           href="{{ site.url }}/product/"><i class="fa fa-download fa-4x"></i><br />作ったもの</a>
+    </div>
+    <div class="col-md-4">
+        <a type="button" class="btn btn-default btn-lg btn-block"
+           href="{{ site.url }}/graffiti/"><i class="fa fa-paint-brush fa-4x"></i><br />落書き</a>
+    </div>
+</div>
+
+<hr style="border-bottom: 1px dashed #aaa; border-top: none;" />
+
 {% for post in page.pagination.items %}
     <article class="full-contents">
         <header>
