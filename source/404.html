@@ -4,9 +4,32 @@ permalink: none
 title: Page not found
 ---
 
+{% block content_wrapper %}
+{{ parent() }}
+
+<div class="text-center">
+  <img src="/images/noname/196x196t.png"
+       data-toggle="popover" data-placement="left"
+       data-trigger="none"
+       title="" data-content="OMG!!">
+</div>
+
 <h2 class="text-center"><ruby>
-    <rb>Page not found</rb>
-    <rp>(</rp><rt>ページが見つかりません</rt><rp>)</rp>
+  <rb>PAGE NOT FOUND</rb>
+  <rp>(</rp><rt>ページが見つかりません</rt><rp>)</rp>
 </ruby></h2>
 
-<div class="text-center"><i class="fa fa-cog fa-spin fa-5x"></i></div>
+{% endblock %}
+
+{% block scripts_after %}
+{{ parent() }}
+
+<script type="text/javascript">
+  (function(){
+    $('[data-toggle="popover"]')
+      .popover()
+      .popover('show');
+  })();
+</script>
+
+{% endblock %}
