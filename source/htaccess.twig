@@ -1,11 +1,15 @@
 ---
 permalink: .htaccess
 ---
+# use custom 404 page
+ErrorDocument 404 /404.html
+
 # blog/(tags|categories)/[0-9]+
 <FilesMatch "^[0-9]+$">
     DefaultType text/html
 </FilesMatch>
 
+# redirect with mod_rewrite
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
