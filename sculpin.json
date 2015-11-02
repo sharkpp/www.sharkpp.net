@@ -14,7 +14,8 @@
         "components/jquery": "~1.9.1",
         "components/highlightjs": "~7.3.0",
         "jasny/twig-extensions": "@dev",
-        "sharkpp/sculpin-calendarian-bundle": "dev-master"
+        "sharkpp/sculpin-calendarian-bundle": "dev-master",
+        "beryllium/icelus": "*"
     },
     "autoload": {
         "psr-0": {

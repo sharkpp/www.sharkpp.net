@@ -5,7 +5,8 @@ class SculpinKernel extends \Sculpin\Bundle\SculpinBundle\HttpKernel\AbstractKer
     protected function getAdditionalSculpinBundles()
     {
         return array(
-           'Sharkpp\Sculpin\Bundle\CalendarianBundle\SculpinCalendarianBundle'
+           'Sharkpp\Sculpin\Bundle\CalendarianBundle\SculpinCalendarianBundle',
+           'Beryllium\Icelus\IcelusBundle',
         );
     }
 }
