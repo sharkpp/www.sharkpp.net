@@ -6,13 +6,8 @@ categories: [ブログ]
 
 ---
 
-<div class="alert alert-danger alert-dismissible" role="alert">
-<div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
-<dl style="margin-bottom: 0; margin-left: 35px;">
-<dt>2015-06-10 追記</dt>
-<dd>eXcale(エクスケール) は 2014年11月28日 にサービスの提供が終了しました。そのため下記内容は過去の参考としてのみ残してあります。</dd>
-</dl>
-</div>
+{% import 'post_alert.html' as m %}
+{{ m.alert('2015-06-10 追記', 'eXcale(エクスケール) は 2014年11月28日 にサービスの提供が終了しました。そのため下記内容は過去の参考としてのみ残してあります。') }}
 
 ## 始めに
 

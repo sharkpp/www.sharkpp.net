@@ -1,0 +1,15 @@
+{#
+使い方：
+  {% import 'post_alert.html' as m %}
+  {{ m.alert('XXXX-XX-XX 追記', 'hogehoge. <a href="example.net">fuga</a>') }}
+みたいな感じ
+#}
+{% macro alert(caption, message) %}
+<div class="alert alert-danger alert-dismissible" role="alert">
+  <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
+  <dl style="margin-bottom: 0; margin-left: 35px;">
+    <dt>{{ caption }}</dt>
+    <dd>{{ message | raw }}</dd>
+  </dl>
+</div>
+{% endmacro %}

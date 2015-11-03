@@ -7,14 +7,9 @@ categories: [ブログ]
 
 ---
 
-<div class="alert alert-danger alert-dismissible" role="alert">
-<div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
-<dl style="margin-bottom: 0; margin-left: 35px;">
-<dt>2015-06-02 追記</dt>
-<dd>Lhaplus Version 1.70 以降のバージョンで公式に 64bit な Windows でのコンテキストメニュー表示がサポートされました。
-    非公式なこのシェル拡張をアンインストールし Lhaplus をアップデートすることをお勧めします。</dd>
-</dl>
-</div>
+{% import 'post_alert.html' as m %}
+{{ m.alert('2015-06-02 追記', 'Lhaplus Version 1.70 以降のバージョンで公式に 64bit な Windows でのコンテキストメニュー表示がサポートされました。
+    非公式なこのシェル拡張をアンインストールし Lhaplus をアップデートすることをお勧めします。') }}
 
 DLLなし圧縮・解凍ソフト [Lhaplus][1] の 64bit版Windows用シェル拡張をアップデートしました。
 
