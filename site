@@ -162,7 +162,7 @@ exec_production () {
   fi
   # update assets
   $PHP sculpin.phar install
-  $PHP composer.phar install
+  #$PHP composer.phar install
   $PHP .vendor/beelab/bowerphp/bin/bowerphp install
   # generate site
   core_generate $(get_ini $1 output_path public)
