@@ -1,10 +1,14 @@
 ---
-title: "初めてのForkとFuelPHP 1.6 翻訳ウィーク参加"
+title: "初めてのForkとFuelPHP 1.6 翻訳ウィーク参加(追記あり)"
 date: 2013-06-01 00:24:00
 tags: [php, GitHub, git, FuelPHP, 翻訳]
 categories: [ブログ]
 
 ---
+
+{% import 'post_alert.html' as m %}
+{{ m.alert('2015-11-03 追記', '不適切な内容が書かれているため参考程度に止めてください。
+<a href="/blog/2015/11/03/git-memo-for-fuel-docs-trans.html">FuelPHP ドキュメント翻訳のための git メモ</a> で新たにメモされた内容をご覧ください。') }}
 
 FuelPHP 1.6 が公開されたのを記念？してまた [FuelPHP 1.6 翻訳ウィーク : ATND][1] が行なわれるとのことなので参加してみました。
 
