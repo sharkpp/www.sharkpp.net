@@ -123,7 +123,7 @@
 {%   if not(loop.first) %}
 {%     if toc_level < toc_prev_level %}</li></ul></li>{% elseif toc_prev_level < toc_level %}<ul class="fa-ul">{% else %}</li>{% endif %}
 {%   endif %}
-            <li><i class="fa-li fa fa-paperclip"></i><a href="#{{ toc_title | replace({' ':'-','(':'',')':'','&amp;':'&'}) | lower | url_encode }}">{{ toc_title | replace({'&amp;':'&'}) }}</a>
+            <li><i class="fa-li fa fa-paperclip"></i><a href="#{{ toc_title | striptags | replace({' ':'-','(':'',')':'','&amp;':'&'}) | lower | url_encode }}">{{ toc_title | striptags | replace({'&amp;':'&'}) }}</a>
 {%   set toc_prev_level = toc_level %}
 {% endfor %}
 {% for toc_level in 2..9 %}
