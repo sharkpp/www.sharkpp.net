@@ -533,6 +533,30 @@ Markdown から HTML への変換処理メソッドやオブザーバー、バ�
 <?php echo Form::close(); ?>
 ```
 
+## Wiki の使い方
+
+基本的な動作として、ページがない場合は新規作成画面に移動します。
+
+そのため、初期状態でトップページにアクセスするとトップページの作成画面に移動します。
+
+書式は [PHP Markdown](https://michelf.ca/projects/php-markdown/) のドキュメントが参考になります。
+
+加えて、リンクのテキストを
+
+```markdown
+[](テスト)
+```
+
+のような感じに省略した場合、
+
+```markdown
+[テスト](テスト)
+```
+
+の形式に直されます。
+
+また、このような形で各ページに対してリンクを貼ることができます。
+
 ## まとめ
 
 駆け足でしたが、 Temporal Model を使って簡単に Markdown で編集できる Wiki を作ることができました。
@@ -557,6 +581,7 @@ Markdown から HTML への変換処理メソッドやオブザーバー、バ�
 * [Manual:データベースのレイアウト - MediaWiki](https://www.mediawiki.org/wiki/Manual:Database_layout/ja)
 * [What's Temporal model FuelPHP東京勉強会03](http://www.slideshare.net/takyam1213/temporal-model-takyam)
 * [Help:以前の版にページを戻す方法 - Wikipedia](https://ja.wikipedia.org/wiki/Help:%E4%BB%A5%E5%89%8D%E3%81%AE%E7%89%88%E3%81%AB%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E6%88%BB%E3%81%99%E6%96%B9%E6%B3%95)
+* [PHP Markdown](https://michelf.ca/projects/php-markdown/)
 
 <hr>
 
