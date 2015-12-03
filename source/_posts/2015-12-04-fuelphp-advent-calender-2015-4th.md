@@ -1,5 +1,5 @@
 ---
-title: "Markdown Wiki を通して Model_Temporal の使い方を覚えよう"
+title: "Markdown Wiki を通して Temporal Model の使い方を覚えよう"
 date: 2015-12-04 02:00:00
 tags: [Advent Calendar, php, FuelPHP]
 categories: [ブログ]
@@ -8,9 +8,9 @@ categories: [ブログ]
 
 こんにちは、こんばんは、[FuelPHP Advent Calendar 2015](http://qiita.com/advent-calendar/2015/fuelphp) の 4 日目を担当する [@sharkpp](https://twitter.com/sharkpp) です。
 
-今回は Model_Temporal を使って Markdown で記述できる簡易 Wiki を作ってみることにします。
+今回は Temporal Model を使って Markdown で記述できる簡易 Wiki を作ってみることにします。
 
-題して「Markdown Wiki を通して Model_Temporal の使い方を覚えよう」です。
+題して「Markdown Wiki を通して Temporal Model の使い方を覚えよう」です。
 
 完成品は [md-micro-wiki @ github.com](https://github.com/sharkpp/md-micro-wiki) にコミットし [Vagrant](https://www.vagrantup.com/) を使って簡単に試せるようにしてあります。
 
