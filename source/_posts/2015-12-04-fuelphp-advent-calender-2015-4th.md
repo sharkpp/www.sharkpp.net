@@ -278,6 +278,38 @@ Markdown から HTML への変換処理メソッドやオブザーバー、バ�
  			<p class="pull-right">Page rendered in {exec_time}s using {mem_usage}mb of memory.</p>
 ```
 
+### ページ表示用のコントローラメソッドとビュー実装
+
+実装すると作成 or 編集したページが表示できるようになります。
+
+`fuel/app/classes/controller/page.php`
+
+```diff
+-	public function action_view()
++	public function action_view($name = '', $timestamp = null)
+ 	{
+-		$data["subnav"] = array('view'=> 'active' );
+-		$this->template->title = 'Page &raquo; View';
+-		$this->template->content = View::forge('pa/view', $data);
++		if ( ! $page = Model_Page::get_by_title($name, $timestamp) ) {
++			if ( $timestamp) {
++				throw new HttpNotFoundException;
++			}
++			Response::redirect($name . '/edit');
++		}
++
++		$this->template->title = (empty($name) ? '(top)' : $name);
++		$this->template->name = $name;
++		$this->template->content = View::forge('page/view')
++		                            ->set_safe('page', $page);
+ 	}
+```
+
+`fuel/app/views/page/view.php`
+
+```php
+<?php echo $page->body_html; ?></p>
+```
 
 ### ページ編集用のコントローラメソッドとビュー実装
 
@@ -368,39 +400,6 @@ Markdown から HTML への変換処理メソッドやオブザーバー、バ�
 		</div>
 	</fieldset>
 <?php echo Form::close(); ?>
-```
-
-### ページ表示用のコントローラメソッドとビュー実装
-
-実装すると作成 or 編集したページが表示できるようになります。
-
-`fuel/app/classes/controller/page.php`
-
-```diff
--	public function action_view()
-+	public function action_view($name = '', $timestamp = null)
- 	{
--		$data["subnav"] = array('view'=> 'active' );
--		$this->template->title = 'Page &raquo; View';
--		$this->template->content = View::forge('pa/view', $data);
-+		if ( ! $page = Model_Page::get_by_title($name, $timestamp) ) {
-+			if ( $timestamp) {
-+				throw new HttpNotFoundException;
-+			}
-+			Response::redirect($name . '/edit');
-+		}
-+
-+		$this->template->title = (empty($name) ? '(top)' : $name);
-+		$this->template->name = $name;
-+		$this->template->content = View::forge('page/view')
-+		                            ->set_safe('page', $page);
- 	}
-```
-
-`fuel/app/views/page/view.php`
-
-```php
-<?php echo $page->body_html; ?></p>
 ```
 
 ### ページ一覧表示用のコントローラメソッドとビュー実装
