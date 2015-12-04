@@ -16,7 +16,7 @@ categories: [ブログ]
 
 ## はじめに
 
-Markdwon で記述できる簡単な Wiki の作成を通して [Temporal Model](http://fuelphp.com/docs/packages/orm/model/temporal.html) (日本語約は [Temporal Model @ fuelphp.jp](http://fuelphp.jp/docs/1.8/packages/orm/model/temporal.html) を参照) の使い方を説明してみようと思います。
+Markdwon で記述できる簡単な Wiki の作成を通して [Temporal Model](http://fuelphp.com/docs/packages/orm/model/temporal.html) (日本語訳は [Temporal Model @ fuelphp.jp](http://fuelphp.jp/docs/1.8/packages/orm/model/temporal.html) を参照) の使い方を説明してみようと思います。
 
 作るものの要件として
 
@@ -44,7 +44,7 @@ Markdwon で記述できる簡単な Wiki の作成を通して [Temporal Model]
 
 ## FuelPHP のインストール
 
-[Instruction](http://fuelphp.com/docs/installation/instructions.html) (日本語約は [インストール方法 @ fuelphp.jp](http://fuelphp.jp/docs/1.8/installation/instructions.html) を参照) を確認しながら、 Composer を使い、サクッとインストールします。
+[Instruction](http://fuelphp.com/docs/installation/instructions.html) (日本語訳は [インストール方法 @ fuelphp.jp](http://fuelphp.jp/docs/1.8/installation/instructions.html) を参照) を確認しながら、 Composer を使い、サクッとインストールします。
 
 この時、PHP のタイムゾーンを設定しておかないとエラーが発生してインストール処理が中断するので注意です。
 
@@ -68,7 +68,7 @@ $ touch fuel/app/classes/presenter/.gitkeep
 
 ### モデルやコントローラなどのスケルトンを追加
 
-[Introduction - Orm Package](http://fuelphp.com/docs/packages/orm/intro.html) (日本語約は [はじめに - Orm パッケージ @ fuelphp.jp](http://fuelphp.jp/docs/1.8/packages/orm/intro.html) を参照) を参考にORM パッケージを有効化します。
+[Introduction - Orm Package](http://fuelphp.com/docs/packages/orm/intro.html) (日本語訳は [はじめに - Orm パッケージ @ fuelphp.jp](http://fuelphp.jp/docs/1.8/packages/orm/intro.html) を参照) を参考にORM パッケージを有効化します。
 
 `fuel/app/config/config.php`
 
@@ -112,7 +112,7 @@ $ php oil g controller page list view revision edit delete
 $ php oil g model page title:string body:text body_html:text brief:string --temporal
 ```
 
-[Generate - Oil Package](http://fuelphp.com/docs/packages/oil/generate.html#/model_temporal) (日本語約は [Generate - Oil パッケージ @ fuelphp.jp](http://fuelphp.jp/docs/1.8/packages/oil/generate.html#/model_temporal) を参照) の注意に書かれているように、マイグレーションコードを修正し主キーを設定します。
+[Generate - Oil Package](http://fuelphp.com/docs/packages/oil/generate.html#/model_temporal) (日本語訳は [Generate - Oil パッケージ @ fuelphp.jp](http://fuelphp.jp/docs/1.8/packages/oil/generate.html#/model_temporal) を参照) の注意に書かれているように、マイグレーションコードを修正し主キーを設定します。
 
 `fuel/app/migrations/001_create_pages.php`
 

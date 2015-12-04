@@ -8,7 +8,7 @@ categories: [ブログ]
 
 こんにちは、こんばんは、昨日に引き続き [FuelPHP Advent Calendar 2015](http://qiita.com/advent-calendar/2015/fuelphp) の 5 日目を担当する [@sharkpp](https://twitter.com/sharkpp) です。
 
-今回は、一番最後に追加された [NestedSets Model](http://fuelphp.com/docs/packages/orm/model/nestedset.html) (日本語約は [NestedSets Model @ fuelphp.jp](http://fuelphp.jp/docs/1.8/packages/orm/model/nestedset.html) を参照) を使って [Disqus](https://disqus.com/) や [Facebook Comments](https://developers.facebook.com/docs/plugins/comments) のようなものを貼り付けられる FuelPHP パッケージを作ってみた話をしようかと思います。
+今回は、一番最後に追加された [NestedSets Model](http://fuelphp.com/docs/packages/orm/model/nestedset.html) (日本語訳は [NestedSets Model @ fuelphp.jp](http://fuelphp.jp/docs/1.8/packages/orm/model/nestedset.html) を参照) を使って [Disqus](https://disqus.com/) や [Facebook Comments](https://developers.facebook.com/docs/plugins/comments) のようなものを貼り付けられる FuelPHP パッケージを作ってみた話をしようかと思います。
 
 実際のパッケージは [sharkpp/fuel-commentbox](https://github.com/sharkpp/fuel-commentbox) からダウンロードできます。
 
@@ -18,7 +18,7 @@ categories: [ブログ]
 
 ## NestedSets Model の使い方
 
-使い方を、、、と言いつつ、実際は公式ドキュメントの [NestedSets Model](http://fuelphp.com/docs/packages/orm/model/nestedset.html) (日本語約は [NestedSets Model @ fuelphp.jp](http://fuelphp.jp/docs/1.8/packages/orm/model/nestedset.html) を参照) を参照すれば簡単に使えてしまうぐらいに整っていると思います。
+使い方を、、、と言いつつ、実際は公式ドキュメントの [NestedSets Model](http://fuelphp.com/docs/packages/orm/model/nestedset.html) (日本語訳は [NestedSets Model @ fuelphp.jp](http://fuelphp.jp/docs/1.8/packages/orm/model/nestedset.html) を参照) を参照すれば簡単に使えてしまうぐらいに整っていると思います。
 
 基本的な機能は `\Orm\Model_Nestedset` からの派生としてモデルクラスを作れば特に考えることもなく用意されたものを使うことができます。
 
