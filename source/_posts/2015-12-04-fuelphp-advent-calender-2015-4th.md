@@ -573,7 +573,7 @@ Markdown から HTML への変換処理メソッドやオブザーバー、バ�
 
 以上、[@sharkpp](https://twitter.com/sharkpp) がお送りいたしました。
 
-文章は [クリエイティブ・コモンズ 表示 4.0 国際](https://creativecommons.org/licenses/by/4.0/legalcode.ja) ライセンス、コードスニペットは [MIT ライセンス](http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license) の下に提供されています。
+この文章は [クリエイティブ・コモンズ 表示 4.0 国際](https://creativecommons.org/licenses/by/4.0/legalcode.ja) ライセンス、コードスニペットは [MIT ライセンス](http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license) の下に提供されています。
 
 ## 参考
 

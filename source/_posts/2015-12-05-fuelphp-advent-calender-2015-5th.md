@@ -157,6 +157,9 @@ $ php oil g model post title:varchar[50] body:text user_id:int --nestedset
 
 以上、[@sharkpp](https://twitter.com/sharkpp) がお送りいたしました。
 
+
+この文章は [クリエイティブ・コモンズ 表示 4.0 国際](https://creativecommons.org/licenses/by/4.0/legalcode.ja) ライセンス、コードスニペットは [MIT ライセンス](http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license) の下に提供されています。
+
 ## おまけ
 
 コメントに張り付くアイコンの表示としては [Gravatar](http://ja.gravatar.com/) が有名ですが、探してみるとマイナー気味ですがおもしろそーなサービスが他にもあったのでこのパッケージでは選んで使えるようにしてあります。
