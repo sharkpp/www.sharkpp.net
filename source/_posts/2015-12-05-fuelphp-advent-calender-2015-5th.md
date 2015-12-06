@@ -196,4 +196,4 @@ $ php oil g model post title:varchar[50] body:text user_id:int --nestedset
 この投稿は **[FuelPHP Advent Calendar 2015](http://qiita.com/advent-calendar/2015/fuelphp)** の **5日目**の記事です。
 
 * 4日目の記事: [Markdown Wiki を通して Model_Temporal の使い方を覚えよう](http://www.sharkpp.net/blog/2015/12/04/fuelphp-advent-calender-2015-4th.html)
-* 6日目の記事: [????]()
+* 6日目の記事: [DBUnit拡張を使ったFuelPHPのテストを考える](http://qiita.com/wata/items/22bf3ad75a854aa8f119)
