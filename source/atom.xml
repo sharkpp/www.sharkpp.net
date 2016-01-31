@@ -5,10 +5,10 @@ permalink: atom.xml
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[{{ site.title }}]]></title>
-    <link href="{{ site.url }}/atom.xml" rel="self"/>
-    <link href="{{ site.url }}/"/>
+    <link href="http://www.sharkpp.net/atom.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
     <updated>{{ site.calculated_date | date('c') }}</updated>
-    <id>{{ site.url }}/</id>
+    <id>http://www.sharkpp.net/</id>
     {% if site.author or site.email %}
         <author>
             {% if site.author %}<name><![CDATA[{{ site.author }}]]></name>{% endif %}
@@ -19,10 +19,10 @@ permalink: atom.xml
     {% for post in data.posts|slice(0, 10) %}
         <entry>
             <title type="html"><![CDATA[{{ post.title }}]]></title>
-            <link href="{{ site.url }}{{ post.url }}"/>
+            <link href="http://www.sharkpp.net{{ post.url }}"/>
             <updated>{{ post.date|date('c') }}</updated>
-            <id>{{ site.url }}{{ post.url }}</id>
-            <content type="html"><![CDATA[{{ post.blocks.content|raw }}]]></content>
+            <id>http://www.sharkpp.net{{ post.url }}</id>
+            <content type="html"><![CDATA[{{ post.blocks.content|preg_replace('!<iframe.*?src="(.+?)".*?>.?</iframe>!sm', '<a href="$1">$1</a>')|raw }}]]></content>
         </entry>
     {% endfor %}
 </feed>
