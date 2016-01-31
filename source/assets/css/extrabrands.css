@@ -1,79 +1,93 @@
 @font-face {
-	font-family: 'extrabrands';
-	src:url('../fonts/extrabrands.eot?ajp2hz');
-	src:url('../fonts/extrabrands.eot?#iefixajp2hz') format('embedded-opentype'),
-		url('../fonts/extrabrands.ttf?ajp2hz') format('truetype'),
-		url('../fonts/extrabrands.woff?ajp2hz') format('woff'),
-		url('../fonts/extrabrands.svg?ajp2hz#extrabrands') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'extrabrands';
+    src:    url('../fonts/extrabrands.eot?6chw43');
+    src:    url('../fonts/extrabrands.eot?6chw43#iefix') format('embedded-opentype'),
+        url('../fonts/extrabrands.ttf?6chw43') format('truetype'),
+        url('../fonts/extrabrands.woff?6chw43') format('woff'),
+        url('../fonts/extrabrands.svg?6chw43#extrabrands') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-	font-family: 'extrabrands';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'extrabrands' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
 
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-hsproom2:before {
+    content: "\e902";
+}
+.icon-hsproom:before {
+    content: "\e903";
+}
+.icon-ifttt:before {
+    content: "\e900";
+}
+.icon-userstyles:before {
+    content: "\e901";
+}
 .icon-chef:before {
-	content: "\e600";
+    content: "\e600";
 }
 .icon-hatena-profile:before {
-	content: "\e601";
+    content: "\e601";
 }
 .icon-hatena-square:before {
-	content: "\e602";
+    content: "\e602";
 }
 .icon-hatena:before {
-	content: "\e603";
+    content: "\e603";
 }
 .icon-vector-face:before {
-	content: "\e604";
+    content: "\e604";
 }
 .icon-vector:before {
-	content: "\e605";
+    content: "\e605";
 }
 .icon-tinami-square:before {
-	content: "\e606";
+    content: "\e606";
 }
 .icon-tinami:before {
-	content: "\e607";
+    content: "\e607";
 }
 .icon-bitly-square:before {
-	content: "\e608";
+    content: "\e608";
 }
 .icon-bitly:before {
-	content: "\e609";
+    content: "\e609";
 }
 .icon-travis-ci-square:before {
-	content: "\e60a";
+    content: "\e60a";
 }
 .icon-travis-ci-offical:before {
-	content: "\e60b";
+    content: "\e60b";
 }
 .icon-pixiv-square-alt:before {
-	content: "\e60c";
+    content: "\e60c";
 }
 .icon-pixiv-square:before {
-	content: "\e60d";
+    content: "\e60d";
 }
 .icon-pixiv:before {
-	content: "\e60e";
+    content: "\e60e";
 }
 .icon-greasyfork-alt:before {
-	content: "\e60f";
+    content: "\e60f";
 }
 .icon-greasyfork:before {
-	content: "\e610";
+    content: "\e610";
 }
 .icon-gravatar:before {
-	content: "\e611";
+    content: "\e611";
 }
+
