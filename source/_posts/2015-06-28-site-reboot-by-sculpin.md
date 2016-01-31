@@ -65,7 +65,7 @@ $ php sculpin.phar generate --watch --server
 | .posts           | `use: ["posts"]`                           |
 | .subtitle        | `app/config/sculpin_site.yml` で指定した値   |
 | .url             | サイトのURL。引数 `--url` で指定した値。        |
-| .auther          | `app/config/sculpin_site.yml` で指定した値   |
+| .author          | `app/config/sculpin_site.yml` で指定した値   |
 | .env             | 引数 `--env` で指定した値。`dev` など          |
 | .calculated_date | ページの生成日時                             |
 

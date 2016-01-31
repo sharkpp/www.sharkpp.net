@@ -3,7 +3,7 @@
 # in a template to get the contents of the `title` key.
 title: さめたすたすのお家
 subtitle: 日々の日記やソフトウェアなど
-auther: sharkpp
+author: sharkpp
 
 # Insert your disqus shortname
 #disqus:
