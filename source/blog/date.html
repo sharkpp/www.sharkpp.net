@@ -2,6 +2,8 @@
 layout: default
 title: 年月日インデックス
 generator: [calendarian]
+use:
+    - "posts"
 
 ---
 
@@ -10,6 +12,8 @@ generator: [calendarian]
 {% if page.calendarian.month %}{{ page.calendarian.month }} 月 {% endif %}
 {% if page.calendarian.day %}{{ page.calendarian.day }} 日{% endif %}
 </h2>
+
+{% include "archive_histories.html" %}
 
 {% for post in page.calendarian.items %}
 {% set this_year %}{{ post.date | date("Y") }}{% endset %}
