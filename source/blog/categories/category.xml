@@ -5,10 +5,10 @@ generator: [posts_category_index]
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[{{ site.title }}]]></title>
-    <link href="{{ site.url }}{{ page.url }}" rel="self"/>
-    <link href="{{ site.url }}/"/>
+    <link href="http://www.sharkpp.net/blog/categories/{{ page.category|url_encode(true) }}.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
     <updated>{{ site.calculated_date | date('c') }}</updated>
-    <id>{{ site.url }}/</id>
+    <id>http://www.sharkpp.net/</id>
     {% if site.author or site.email %}
         <author>
             {% if site.author %}<name><![CDATA[{{ site.author }}]]></name>{% endif %}
@@ -19,9 +19,9 @@ generator: [posts_category_index]
     {% for post in page.category_posts|slice(0, 10) %}
         <entry>
             <title type="html"><![CDATA[{{ post.title }}]]></title>
-            <link href="{{ site.url }}{{ post.url }}"/>
+            <link href="http://www.sharkpp.net{{ post.url }}"/>
             <updated>{{ post.date|date('c') }}</updated>
-            <id>{{ site.url }}{{ post.url }}</id>
+            <id>http://www.sharkpp.net{{ post.url }}</id>
             <content type="html"><![CDATA[{{ post.blocks.content|raw }}]]></content>
         </entry>
     {% endfor %}
