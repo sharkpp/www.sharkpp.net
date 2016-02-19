@@ -38,7 +38,7 @@
     <ol class="breadcrumb">
 {% for breadcrumb in breadcrumbs %}
 {% set breadcrumb_url = breadcrumb.url | replace({'//':'/'}) %}
-        <li temscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"
+        <li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"
 {% if loop.last %}
             class="active"
 {% else %}

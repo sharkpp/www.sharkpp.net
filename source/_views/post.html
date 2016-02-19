@@ -98,9 +98,9 @@
 {% block content_wrapper %}
     {% include "breadcrumb" %}
 
-    <article>
+    <article itemscope="itemscope" itemtype="http://schema.org/Article">
         <header>
-            <h1>{% if page.draft %}<i class="fa fa-pencil-square-o"></i> {% endif %}{{ page.title }} <small>post</small></h1>
+            <h1>{% if page.draft %}<i class="fa fa-pencil-square-o"></i> {% endif %}<span itemprop="name">{{ page.title }}</span> <small>post</small></h1>
         </header>
 
 {% set toc_items = [ '<h1>' ~ page.title ~ '</h1>' ] %}
@@ -138,8 +138,8 @@
 
 <div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div>
 
-        <div>
-            {{ page.blocks.content|raw }}
+        <div itemprop="articleBody">
+            {{ page.blocks.content|preg_replace('!<((h[0-9]).+?)>(.+?)</(.+?)>!', '<$1 itemprop="articleSection">$2</$3>')|raw }}
         </div>
         <hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" />
         <footer>{% set share_button = 1 %}

@@ -3,11 +3,12 @@
 {% set categories = page.categories ? page.categories : post.meta.categories %}
 {% set tags = page.tags ? page.tags : post.meta.tags %}
 {% set post_ = post ? post : page %}
-        <i class="fa fa-calendar"></i> {{ post_.date | date("Y年m月d日") }}
+        <i class="fa fa-calendar"></i>
+        <span itemprop="datePublished" content="{{ post_.date | date("Y-m-d") }}">{{ post_.date | date("Y年m月d日") }}</span>
         &nbsp;/&nbsp;
         <i class="fa fa-history"></i> <a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/{{ post_.url | preg_replace('!^/.+?/(.+?)/(.+?)/(.+?)/(.+)\.html$!', '$1-$2-$3-$4.md') }}">変更履歴</a>
         &nbsp;/&nbsp;
-        <i class="fa fa-thumb-tack"></i> <a href="{{ site.url }}{{ post_.url }}">Permalink</a>
+        <i class="fa fa-thumb-tack"></i> <a itemprop="url" href="{{ site.url }}{{ post_.url }}">Permalink</a>
 {% if not(share_button) %}
 {%   if categories or tags %}
         &nbsp;/&nbsp;
