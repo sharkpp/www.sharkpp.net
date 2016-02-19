@@ -139,7 +139,7 @@
 <div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div>
 
         <div itemprop="articleBody">
-            {{ page.blocks.content|preg_replace('!<((h[0-9]).+?)>(.+?)</(.+?)>!', '<$1 itemprop="articleSection">$2</$3>')|raw }}
+            {{ page.blocks.content|preg_replace('!<((h[0-9]).+?)>(.+?)</(.+?)>!', '<$1 itemprop="articleSection">$3</$4>')|raw }}
         </div>
         <hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" />
         <footer>{% set share_button = 1 %}
