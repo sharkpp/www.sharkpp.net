@@ -20,6 +20,7 @@ ErrorDocument 404 /404.html
   RewriteRule ^blog/([0-9]+)/([0-9]+)/([0-9]+).html$ /blog/$1/$2/$3/ [R=302,L]
   RewriteRule ^blog/([0-9]+)/([0-9]+).html$          /blog/$1/$2/    [R=302,L]
   RewriteRule ^blog/([0-9]+).html$                   /blog/$1/       [R=302,L]
+  RewriteRule ^(.+).htm$                             /$1.html        [R=302,L]
 </IfModule>
 
 # redirect for old site url to new site url
@@ -167,10 +168,14 @@ Redirect permanent /soft/cotton.html                                   http://ww
 Redirect permanent /soft/tptool.html                                   http://www.sharkpp.net/blog/categories/TeraPad
 
 # 404 fix
-Redirect permanent /soft/x64/LplsShlx64-v1.0.1.0.zip                   http://www.sharkpp.net/blog/blog/2009/08/23/lhaplus-x64-shell-extension.html
-Redirect permanent /files/LplsShlx64-v1.0.0.1.zip                      http://www.sharkpp.net/blog/blog/2009/08/23/lhaplus-x64-shell-extension.html
+Redirect permanent /soft/x64/LplsShlx64-v1.0.1.0.zip                   http://www.sharkpp.net/blog/2009/08/23/lhaplus-x64-shell-extension.html
+Redirect permanent /files/LplsShlx64-v1.0.0.1.zip                      http://www.sharkpp.net/blog/2009/08/23/lhaplus-x64-shell-extension.html
 Redirect permanent /gallery/graffiti/magic_circle15_1024x1024.png      http://www.sharkpp.net/graffiti/
 Redirect permanent /gallery/graffiti/magic_circle16_1024x1024.png      http://www.sharkpp.net/graffiti/
 Redirect permanent /gallery/graffiti/magic_circle4.svg                 http://www.sharkpp.net/graffiti/
 Redirect permanent /pokecom/pclink/index.html                          http://www.sharkpp.net/blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3%E3%83%AA%E3%83%B3%E3%82%AF/
+Redirect permanent /pokecom/pclink/                                    http://www.sharkpp.net/blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3%E3%83%AA%E3%83%B3%E3%82%AF/
 Redirect permanent /pokecom/index.html                                 http://www.sharkpp.net/blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3/
+Redirect permanent /pokecom/                                           http://www.sharkpp.net/blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3/
+Redirect permanent /blog/2013/03/16/surface-rt-preview.html            http://www.sharkpp.net/blog/2013/03/16/bought-surface-rt.html
+Redirect permanent /blog/about-hsplet.html                             http://www.sharkpp.net/blog/2008/09/02/about-hsplet.html
