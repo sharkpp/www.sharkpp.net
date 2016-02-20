@@ -9,7 +9,11 @@
 {% endfor %}
 {% set ym_posts = ym_posts|merge({ ("%04d-%02d"|format(page.calendarian.year, page.calendarian.month)): -1 }) %}
 {% for y in range((max_posts|slice(0,4)), min_posts|slice(0,4)) %}
-<a href="{{ site.url }}/blog/{{ y }}/">{{ y }}</a> :
+<a href="{{ site.url }}/blog/{{ y }}/"
+{%   if y == page.calendarian.year %}
+   class="bg-primary"
+{%   endif %}
+  >{{ y }}</a> :
 {%   set print_separater = false %}
 {%   for m in 1..12 %}
 {%     set ym = "%04d-%02d"|format(y, m) %}
