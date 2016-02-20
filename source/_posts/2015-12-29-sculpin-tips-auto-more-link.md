@@ -1,7 +1,7 @@
 ---
 title: "Sculpin で自動的に「続きを見る」リンクを作る方法"
 date: 2015-12-29 23:00
-tags: [Sculpin, php, tips]
+tags: [Sculpin, Twig, php, Tips, Snippet]
 categories: [Sculpin]
 
 ---
