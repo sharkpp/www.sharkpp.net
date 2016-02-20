@@ -35,14 +35,17 @@
                                                                                          page.title }]) %}
 {% endif %}
 
-    <ol class="breadcrumb">
+    <ol class="breadcrumb" itemscope="itemscope"
+                           itemtype="http://schema.org/BreadcrumbList">
 {% for breadcrumb in breadcrumbs %}
 {% set breadcrumb_url = breadcrumb.url | replace({'//':'/'}) %}
-        <li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"
+        <li
 {% if loop.last %}
-            class="active"
+            class="active"><span 
 {% else %}
-           ><a itemprop="url" href="{{ breadcrumb_url }}"
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="{{ breadcrumb_url }}"
 {% endif %}
 {% set breadcrumb_icon = "" %}
 {% if site.url ~ "/"                == breadcrumb_url %}{% set breadcrumb_icon = "home" %}{% endif %}
@@ -51,12 +54,13 @@
 {% if site.url ~ "/blog/categories" == breadcrumb_url %}{% set breadcrumb_icon = "folder-open" %}{% endif %}
 {% if breadcrumb_icon %}
            ><i class="fa fa-{{ breadcrumb_icon }} fa-lg"></i
-          >&nbsp;<span itemprop="title">{{ breadcrumb.caption }}</span
+     >&nbsp;<span itemprop="name">{{ breadcrumb.caption }}</span
 {% else %}
-           ><span itemprop="title">{{ breadcrumb.caption }}</span
+           ><span>{{ breadcrumb.caption }}</span
 {% endif %}
 {% if not loop.last %}
-           ></a
+           ><meta itemprop="position" content="{{ loop.index }}"
+          /></a
 {% endif %}
        ></li>
 {% endfor %}

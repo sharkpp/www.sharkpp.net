@@ -8,7 +8,7 @@
         &nbsp;/&nbsp;
         <i class="fa fa-history"></i> <a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/{{ post_.url | preg_replace('!^/.+?/(.+?)/(.+?)/(.+?)/(.+)\.html$!', '$1-$2-$3-$4.md') }}">変更履歴</a>
         &nbsp;/&nbsp;
-        <i class="fa fa-thumb-tack"></i> <a itemprop="url" href="{{ site.url }}{{ post_.url }}">Permalink</a>
+        <i class="fa fa-thumb-tack"></i> <a href="{{ site.url }}{{ post_.url }}">Permalink</a>
 {% if not(share_button) %}
 {%   if categories or tags %}
         &nbsp;/&nbsp;
@@ -16,6 +16,11 @@
 {% else %}
         &nbsp;/&nbsp;
     </span>
+    <meta itemprop="url" content="http://www.sharkpp.net{{ post_.url }}" />
+    <span itemprop="author" itemscope itemtype="https://schema.org/Person"
+          style="display: none;"
+       ><span itemprop="name">{{ site.author }}</span
+   ></span>
     <a href="http://b.hatena.ne.jp/entry/{{ ('http://www.sharkpp.net' ~ page.url) | e('url') }}"
        class="hatena-bookmark-button"
        data-hatena-bookmark-title="{{ page.title }} &mdash; {{ site.title }}"
