@@ -9,44 +9,45 @@
     </div>
     <div id="collapseArchiveCalender" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingArchiveCalender">
       <div class="panel-body">
-{% set y_posts = {} %}
+{% set min_posts = '' %}
+{% set max_posts = '' %}
 {% set ym_posts = {} %}
-{% set page_year  = page.url|preg_replace('!.*blog/([0-9]+).*!', '$1') %}
-{% set page_month = page.url|preg_replace('!.*blog/[0-9]+/([0-9]+).*!', '$1') %}
 {% for post in data.posts %}
-{%   set  y_posts =  y_posts|merge({ (' ' ~ (post.date | date("Y"))): post.date }) %}
-{%   set ym_posts = ym_posts|merge({ (post.date | date("Y-m")): post.date }) %}
+{%   set post_ym = post.date|date("Y-m") %}
+{%   if min_posts is empty or post_ym < min_posts %}{% set min_posts = post_ym %}{% endif %}
+{%   if max_posts is empty or max_posts < post_ym %}{% set max_posts = post_ym %}{% endif %}
+{%   set ym_posts = ym_posts|merge({ (post_ym): 1 }) %}
 {% endfor %}
-{% set now_year  = "now"|date("Y") %}
-{% set now_month = "now"|date("m") %}
-{% for i, y_post_date in y_posts %}
-{%   set this_year = y_post_date|date("Y") %}
-<a href="{{ site.url }}/blog/{{ this_year }}/">{{ this_year }}</a>
-{%   for k in 1..12 %}
-{%     set this_month = "%02d"|format(k) %}
-{%     set put_month = false %}
-{%     for j, ym_post_date in ym_posts %}
-{%       set year  = ym_post_date|date("Y") %}
-{%       set month = ym_post_date|date("m") %}
-{%       if year == this_year %}
-{%         if month == this_month %}
-{%           if year == page_year and month == page_month %}
- | <a class="bg-primary" href="{{ site.url }}/blog/{{ year }}/{{ month }}/">{{ "%02d"|format(this_month) }}</a>
-{%           else %}
- | <a href="{{ site.url }}/blog/{{ year }}/{{ month }}/">{{ "%02d"|format(this_month) }}</a>
-{%           endif %}
-{%           set put_month = true %}
-{%         endif %}
+{% set ym_posts = ym_posts|merge({ ("%04d-%02d"|format(page.calendarian.year, page.calendarian.month)): -1 }) %}
+{% for y in range((max_posts|slice(0,4)), min_posts|slice(0,4)) %}
+<a href="{{ site.url }}/blog/{{ y }}/">{{ y }}</a> :
+{%   set print_separater = false %}
+{%   for m in 1..12 %}
+{%     set ym = "%04d-%02d"|format(y, m) %}
+{%     if m < 2 %}{% elseif print_separater and ym <= max_posts %}
+|
+{%     else %}
+<span class="invisible">|</span>
+{%     endif %}
+{%     if min_posts <= ym and ym <= max_posts %}
+{%       if not ym_posts[ym] is empty %}
+<a href="{{ site.url }}/blog/{{ y }}/{{ "%02d"|format(m) }}/"
+{%         if ym_posts[ym] < 0 %}
+   class="bg-primary"
+{% endif %}
+  >{{ "%02d"|format(m) }}</a>
+{%         set print_separater = true %}
+{%       else %}
+<del class="text-muted">{{ "%02d"|format(m) }}</del>
 {%       endif %}
-{%     endfor %}
-{%     if (not put_month) and (this_year < now_year or (this_year == now_year and this_month < now_month)) %}
- | <del class="text-muted">{{ this_month }}</del>
+{%     else %}
+{%       set print_separater = false %}
+<span class="invisible">{{ "%02d"|format(m) }}</span>
 {%     endif %}
 {%   endfor %}
-<br/>
+<br />
 {% endfor %}
       </div>
     </div>
   </div>
 </div>
-
