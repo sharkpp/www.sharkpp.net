@@ -9,9 +9,16 @@ use:
 
 ---
 {% set year = '0' %}
-<h2>アーカイブ</h2>
 
+<div class="dropdown">
+  <h2 id="blog-calendar" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    アーカイブ
+    <small title="年/月カレンダーを表示"><i class="fa fa-calendar"></i> <i class="fa fa-angle-double-down"></i></small>
+  </h2>
+  <div class="dropdown-menu" aria-labelledby="blog-calendar" style="padding: 1em">
 {% include "archive_histories.html" %}
+  </div>
+</div>
 
 {% for post in page.pagination.items %}
 {% set this_year %}{{ post.date | date("Y") }}{% endset %}
