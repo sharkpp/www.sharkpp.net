@@ -1,7 +1,7 @@
 ---
 title: "github.com へ SVNのレポジトリを取り込んで公開する方法"
 date: 2014-10-19 13:48:00
-tags: [Develop, git, GitHub]
+tags: [Develop, git, GitHub, Subversion]
 categories: [ブログ]
 
 ---
