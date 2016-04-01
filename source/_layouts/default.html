@@ -11,9 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {% block head_meta %}
 {% endblock %}
-        <!-- <link href="{{ site.url }}/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" /> -->
-        <link href="{{ site.url }}/assets/386/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="{{ site.url }}/assets/386/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+        <link href="{{ site.url }}/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="{{ site.url }}/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <link href="{{ site.url }}/assets/lightbox2/css/lightbox.css" rel="stylesheet" type="text/css" />
         <link href="{{ site.url }}/css/style.min.css" rel="stylesheet" type="text/css" />
@@ -47,7 +45,6 @@
         <style>
         /** quick fix because bootstrap <pre> has a background-color. */
         pre code { background-color: inherit; }
-        body { visibility: hidden }
         </style>
         {% block head_styles %}
         {% endblock %}
@@ -126,9 +123,8 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="{{ site.url }}/assets/jquery/jquery.min.js"><\/script>')</script>
 
-        <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.js"></script>
-        <script>$('body').modal || document.write('<script src="{{ site.url }}/assets/bootstrap/js/bootstrap.min.js"><\/script>')</script> -->
-        <script src="{{ site.url }}/assets/386/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.js"></script>
+        <script>$('body').modal || document.write('<script src="{{ site.url }}/assets/bootstrap/js/bootstrap.min.js"><\/script>')</script>
         {% block scripts %}
         {% endblock %}
 
