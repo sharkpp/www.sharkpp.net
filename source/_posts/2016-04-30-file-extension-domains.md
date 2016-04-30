@@ -1,7 +1,7 @@
 ---
 js: { sheetrock: true }
 title: "ファイル拡張子のようなドメインをまとめてみた"
-date: 2016-04-30 14:29
+date: 2016-04-30 17:45
 tags: [まとめ, ドメイン名]
 categories: [まとめ]
 
