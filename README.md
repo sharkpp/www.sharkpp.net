@@ -1,4 +1,4 @@
-# www.sharkpp.net powered by Sculpin
+# www.sharkpp.net powered by Sculpin [![Build Status](https://travis-ci.org/sharkpp/www.sharkpp.net.svg?branch=master)](https://travis-ci.org/sharkpp/www.sharkpp.net)
 
 www.sharkpp.net for a Sculpin based web site.
 

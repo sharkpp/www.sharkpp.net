@@ -49,6 +49,7 @@ exec_usage () {
   echo '  clean                  cleanup site, remove ignore files'
   echo '  generate [OUT_PATH]    generate site'
   echo '  production [CONF_PATH] production site, set webhook.conf path'
+  echo '  production2            production site for GitHub Pages with Travis CI'
   echo '  test                   launch web server [ http://localhost:8000/ ] for test site'
   echo '  spider                 check broken link'
   echo '  new [STUB]             create new empty page'
@@ -168,6 +169,42 @@ exec_production () {
   core_generate $(get_ini $1 output_path public)
 }
 
+exec_production2 () {
+  if [ "" == "$GH_TOKEN" ] ; then
+    exit 0
+  fi
+  # set git config
+  git config --global user.email "touroku@sharkpp.net"
+  git config --global user.name  "sharkpp"
+  # clone output repository
+  DEPLOY_REPOS="https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git"
+  DEPLOY_BRANCH=gh-pages
+  git clone --quiet -b $DEPLOY_BRANCH $DEPLOY_REPOS output_prod
+  if ! -e [ "output_prod" ] ; then
+    git init output_prod
+    pushd output_prod
+    git remote add origin $DEPLOY_REPOS
+    git checkout --orphan $DEPLOY_BRANCH
+    popd
+  else
+    pushd output_prod
+    git pull
+    popd
+    rm -rf output_prod/*
+  fi
+  # production generate
+  php sculpin.phar install
+  php sculpin.phar generate --env=prod
+  # deploy
+  DEPLOY_MSG=$(git log --pretty=format:"Deploy from https://github.com/${TRAVIS_REPO_SLUG}/commit/%H : %s" -1)
+  pushd output_prod
+  git add . -A
+  echo $DEPLOY_MSG | git commit -F -
+  git push --quiet origin $DEPLOY_BRANCH
+  popd
+  # tweet
+}
+
 exec_test () {
   if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
     core_init
@@ -245,6 +282,7 @@ case "$1" in
   "generate"   ) exec_generate $2;;
   "g"          ) exec_generate $2;;
   "production" ) exec_production $2;;
+  "production2") exec_production2;;
   "test"       ) exec_test ;;
   "t"          ) exec_test ;;
   "spider"     ) exec_spider ;;
