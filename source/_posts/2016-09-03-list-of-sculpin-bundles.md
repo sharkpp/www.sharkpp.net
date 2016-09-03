@@ -1,6 +1,6 @@
 ---
 title: "Sculpin の Bundle をまとめてみた"
-date: 2016-09-03 13:10
+date: 2016-09-03 13:20
 tags: [ Sculpin, まとめ, php ]
 categories: [ まとめ ]
 
@@ -174,6 +174,20 @@ Bundle と言って良いのかわからないですが、設定すると HTML �
 Sculpin 用のテーマをここでは列挙しています。
 
 [sculpin-theme-composer-plugin](https://packagist.org/packages/sculpin/sculpin-theme-composer-plugin) を利用すれば、 `composer.json` でテーマを管理できるようになる、ようです。
+
+なお、 Sculpin のテーマ機能自体は [Themes - Sculpin](https://sculpin.io/documentation/themes/) に
+
+> WARNING
+> Theme support for Sculpin is still highly experimental. It has been stable in its current form since early 2014 but be aware that the theme API may change drastically sometime later this year.
+
+訳すと
+
+> 警告
+> Sculpin のためのテーマのサポートはまだ非常に実験的なものです。これは初期の2014年以来現在の形で安定していますが、テーマ API は今年後半(※)にいつか大幅に変更される可能性があることに注意してください。
+
+訳注：2015年後半のこと つ [Warn people about changes to themes.](https://github.com/sculpin/sculpin.io/commit/23f4d2f778c8ca9ef4070dac0041420bedb58ee9#diff-4a6302f145e637d38195213cf4295609)
+
+と書かれているので、利用できなくなっている可能性があります。
 
 ### Slate is theme for GitHub Pages or your Sculpin site.
 
