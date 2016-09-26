@@ -187,9 +187,9 @@ julius の voca と grammer は使いにくい。 なぜなら、メモリリー
 
 CUDA上で動くSTL
 
-[thrust - Code at the speed of light - Google Project Hosting][18]
+[Thrust - Parallel Algorithms Library][18]
 
- [18]: https://code.google.com/p/thrust/
+ [18]: https://thrust.github.io/
 
 ### [Boost.uBLAS][19]
 

@@ -30,11 +30,11 @@ categories: [まとめ]
 
 ## PCSX2
 
-  * [pcsx2 - PCSX2 - a Playstation 2 Emulator - Google Project Hosting][8]
-  * [Modified emulator Pcsx2 (emulator ps2) - Google Project Hosting][9]
+  * [PCSX2 - Playstation 2 Emulator][8]
+  * [ValDanX - modified emulator Pcsx2][9]
 
- [8]: http://code.google.com/p/pcsx2/
- [9]: http://code.google.com/p/valdanx/
+ [8]: http://pcsx2.net/
+ [9]: https://sourceforge.net/projects/valdanx/
 
 ## AviUtlプラグイン
 

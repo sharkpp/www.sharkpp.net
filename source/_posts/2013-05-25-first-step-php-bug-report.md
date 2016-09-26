@@ -25,7 +25,7 @@ categories: [ブログ]
 
 コメントでは、パッチ当てるか [php-wfio - Unicode filename support for PHP 5.4 on Windows - Google Project Hosting][5] 使ってみてって書かれてたのでphp-wfioを試してみました。
 
- [5]: https://code.google.com/p/php-wfio/
+ [5]: https://github.com/kenjiuno/php-wfio
 
 が、、、うまく動かないのでソースとか [fopen or such with UTF-8 filepath - PHP under Windows][6] とか見てみるとis_dir()実装してないから動くわけないじゃん、、、
 

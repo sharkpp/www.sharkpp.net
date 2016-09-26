@@ -39,7 +39,7 @@ OSC名古屋で知ってから初めての勉強会でワクワクでした。
 
  [3]: http://code.google.com/p/jcthemesimulator/
  [4]: https://gitorious.org/qumoplayer
- [5]: http://code.google.com/p/gerrit/
+ [5]: https://www.gerritcodereview.com/
  [6]: https://git.wiki.kernel.org/index.php/Gitweb
  [7]: https://www.transifex.com/
 
