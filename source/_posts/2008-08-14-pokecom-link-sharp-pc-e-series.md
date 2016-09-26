@@ -18,7 +18,7 @@ categories: [ポケコン, ポケコンリンク]
 | [Little Limit][9] | #Shin.Y | PC-E500系 | フォント |
 | [nmasuのページ][10] | nmasu | PC-E500 | |
 | [PC-E500 emulator][11]<!-- http://members.tripod.com/~matsumo/e500j/ --> | matsumo | PC-E500 | Emu |
-| [TORO's Library][12] | TORO | PC-E500 | 制作 |
+| [TORO's Library][12] {% http://toro.d.dooo.jp/ %} | TORO | PC-E500 | 制作 |
 | ![[Internet Archive]][13][NO!HDD][14] | A-WAT | PC-E650 | 閉鎖 |
 | [天つ風][15] | うえのまさひろ | PC-E500 | 改造・休止・閉鎖 |
 | [Pocket Game Library][16]<!-- <img src="/images/arc.gif" alt="[Internet Archive]" /> <a href="http://web.archive.org/web/*/www.ii-park.net/~choikyun/">ポケコンライブラリ</a> --> | 崔 均 | PC-E500 | |
@@ -27,7 +27,7 @@ categories: [ポケコン, ポケコンリンク]
 | ![[Internet Archive]][13][ｘ６８ｋとポケコンの微妙な関係！][20] | mini-x68030 | PC-E500系 | 改造・廃止？ |
 | [Gardener's Garden][6] | 植木屋 | PC-E500系 | |
 | [旧旧ポケコンプログラムライブラリ][21] | 小笠原博之 | | |
-| [hataのホームページ][22] | hata | PC-E500系 | 改造 |
+| [hataのホームページ][22] {% http://homepage2.nifty.com/hata-k/poc_page.htm %} | hata | PC-E500系 | 改造 |
 | [Yuuichi Akagawa's ポケコンアーカイブ][23] | hata | PC-E500系 | |
 | [PB-Prog][24] | T.Matsu | PC-E500 | 資料 |
 
@@ -42,7 +42,7 @@ categories: [ポケコン, ポケコンリンク]
  [9]: http://www.geocities.co.jp/SiliconValley-Oakland/7410/
  [10]: http://www005.upp.so-net.ne.jp/nmasu/
  [11]: http://matsumo.tripod.com/e500j/
- [12]: http://homepage1.nifty.com/toro/
+ [12]: http://toro.d.dooo.jp/
  [13]: /images/arc.gif
  [14]: http://web.archive.org/web/*/www.interq.or.jp/red/wat/
  [15]: http://earthgale.ram.ne.jp/
@@ -52,6 +52,6 @@ categories: [ポケコン, ポケコンリンク]
  [19]: http://web.archive.org/web/*/homepage1.nifty.com/mizobata/
  [20]: http://web.archive.org/web/*/retropc.net/tamotsu/
  [21]: http://hp.vector.co.jp/authors/VA004474/zaurus/pocklib.html
- [22]: http://homepage2.nifty.com/hata-k/poc_page.htm
+ [22]: http://hata-k.o.oo7.jp/poc_page.htm
  [23]: http://www.st.rim.or.jp/~yakagawa/
  [24]: http://pb-prog.sakura.ne.jp/

@@ -50,7 +50,7 @@ FX-890P
 </tr>
 <tr>
 <td>
-<a href="http://homepage2.nifty.com/stear/">STEAR homepage</a>
+<a href="http://stear.c.ooco.jp/">STEAR homepage</a> <!-- http://homepage2.nifty.com/stear/ -->
 </td>
 <td>
 STEAR
@@ -64,7 +64,7 @@ FX-890P,Z-1
 </tr>
 <tr>
 <td>
-<a href="http://homepage3.nifty.com/lsigame/">Jun Amano's Homepage</a>
+<a href="http://www.lsigame.com/">Jun Amano's Homepage</a> <!-- http://homepage3.nifty.com/lsigame/ -->
 </td>
 <td>
 Jun Amano
@@ -160,7 +160,7 @@ PB-100
 </tr>
 <tr>
 <td>
-<a href="http://homepage3.nifty.com/tshibuki/">夢影の鏡～ポケットコンピューティング</a><!-- http://tshibuki.hp.infoseek.co.jp/ -->
+<a href="http://yumekage.la.coocan.jp/">夢影の鏡～ポケットコンピューティング</a><!-- http://tshibuki.hp.infoseek.co.jp/ → http://homepage3.nifty.com/tshibuki/ -->
 </td>
 <td>
 滝本飛沫

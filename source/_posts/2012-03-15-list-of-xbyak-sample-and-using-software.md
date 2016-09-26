@@ -8,7 +8,7 @@ categories: [まとめ]
 
 ふと思いついてC++のテンプレートを使ったJITライブラリの[Xbyak][1]のサンプルや使っているソフトなどを列挙してみた。
 
- [1]: http://homepage1.nifty.com/herumi/soft/xbyak.html
+ [1]: http://herumi.in.coocan.jp/soft/xbyak.html
 
 思いのほか少なかったのでびっくり。 ただ、有名どころのPCSX2が使っていたのは驚いた。
 
