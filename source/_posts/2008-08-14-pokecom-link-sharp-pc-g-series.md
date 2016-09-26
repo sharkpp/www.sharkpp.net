@@ -22,10 +22,10 @@ categories: [ポケコン, ポケコンリンク]
 </tr>
 <tr>
 <td>
-<a href="http://orange.kakiko.com/cosmopatrol/">COSMO PATROL</a><!-- http://usagi.tadaima.com/cosmopatrol/ -->
+<a href="http://cosmopatrol.web.fc2.com/">COSMO PATROL</a>
 </td>
 <td>
-咳めぐ
+<a href="https://twitter.com/cosmopatrol">咳めぐ</a>
 </td>
 <td>
 PC-E200,PC-G800系
@@ -35,7 +35,7 @@ PC-E200,PC-G800系
 </tr>
 <tr>
 <td>
-<a href="http://homepage2.nifty.com/boo-system/">Boo System</a><!-- http://www7.ocn.ne.jp/~golden00/ -->
+Boo System<!-- http://www7.ocn.ne.jp/~golden00/ → http://homepage2.nifty.com/boo-system/ -->
 </td>
 <td>
 Boo
@@ -44,12 +44,12 @@ Boo
 PC-E200系,PC-G800系
 </td>
 <td>
-制作
+<del>制作</del> 閉鎖？
 </td>
 </tr>
 <tr>
 <td>
-<a href="http://www1.plala.or.jp/kurikou/">くりこうのホームページ</a>
+<a href="http://kurikou.sakura.ne.jp/">くりこうのホームページ</a>
 </td>
 <td>
 くりこう
@@ -63,7 +63,7 @@ PC-E500系,PC-G850,G850S
 </tr>
 <tr>
 <td>
-<a href="http://www6.plala.or.jp/aijawa/">Aijawa的 トホホでノホホンな毎日。</a>
+<img src="/images/arc.gif" alt="[Internet Archive]" /> <a href="http://web.archive.org/web/20100312103405/http://www6.plala.or.jp/aijawa/">Aijawa的 トホホでノホホンな毎日。</a> <!-- http://www16.tok2.com/home/aijawa/ http://www.infoaomori.ne.jp/~eijino1/ -->
 </td>
 <td>
 Aijawa
