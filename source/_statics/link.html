@@ -3,6 +3,7 @@ layout: default
 title: リンク
 permalink: link.html
 date: 2015-08-30 00:00
+update: 2016-09-26 23:40
 links:
   -
     category: "Hot Soup Processor"
@@ -11,20 +12,27 @@ links:
         caption: "HSPTV!"
         owner: "ONION software"
         url: "http://hsp.tv/"
+        twitter: "onionsoftware"
         cross: false
         banner: 
         comments: "Hot Soup Processor を公開しているサイトです。"
       -
         caption: "それとなくHSP"
-        owner: "begriff さん"
-        url: "http://begriff-00.blogspot.jp/2011/04/blog-post.html"
+        owner: "takazin さん"
+#       owner: "begriff さん"
+        url: "http://tktk.22web.org/"
+#       url: "http://begriff.zxq.net/"
+#       url: "http://begriff-00.blogspot.jp/"
+        twitter: "takazin_hsp"
+#       twitter: "begriff_hsp"
         cross: true
         banner: 
         comments: "HSP界隈でアクティブに活動されています。"
       -
         caption: "ORZ Laboratory"
         owner: "Kain さん"
-        url: "http://begriff-00.blogspot.jp/2011/04/blog-post.html"
+        url: "http://wikiwiki.jp/orzlabo/"
+        twitter: "orzlabo"
         cross: true
         banner: 
         comments: "Easy3Dを使用してネットワーク対戦対応の３Ｄロボットゲームを作られています。"
@@ -34,15 +42,20 @@ links:
       -
         caption: "COSMO PATROL"
         owner: "咳めぐ さん"
-        url: "http://www.geocities.jp/neocosmo2000/"
-        cross: true
+        url: "http://cosmopatrol.web.fc2.com/"
+#       url: "http://www.geocities.jp/neocosmo2000/"
+        twitter: "cosmopatrol"
+        cross: false
+#       cross: true
         banner: 
         comments: "ポケコンだけで、20000Hit 30000Hit しまったすごいページです(移転してカウンタは0になりましたが)。<br/>PC-E200,PC-G800 系のマシン語、BASICのゲームを扱っています。<br/>電卓以外の使い道、ここにあります。"
       -
         caption: "くりこうのホームページ"
         owner: "くりこう さん"
-        url: "http://www1.plala.or.jp/kurikou/"
-        cross: true
+        url: "http://kurikou.sakura.ne.jp/"
+#       url: "http://www1.plala.or.jp/kurikou/"
+        cross: false
+#       cross: true
         banner: 
         comments: '鉄道 と ポケコン と ステレオ写真 のページです。<br/>ポケコンの<span style="color: red">禁断</span>の情報もいっぱいです。'
       -
@@ -59,13 +72,6 @@ links:
 #        cross: true
 #        banner: 
 #        comments: "ポケコン、VB、BitCharG のページです。<br/>タイピングや１行プログラムがあります。"
-      -
-        caption: "やまやすネット"
-        owner: "やまやす さん"
-        url: "http://yamayasu.org/"
-        cross: true
-        banner: 
-        comments: "残念ながらポケコン用のゲームなどは無くなってしまいましたがポケコン関連のツールを扱っています。"
       -
         caption: "やまやすネット"
         owner: "やまやす さん"
@@ -144,7 +150,7 @@ links:
 </div>
 
 {% for link in category.links %}
-<h3>{{ link.caption }} <small>{{ link.owner }}</small></h3>
+<h3>{{ link.caption }} <small>{{ link.owner }}</small>{% if link.twitter %} <a href="https://twitter.com/{{ link.twitter }}"><i class="fa fa-twitter" aria-hidden="true"></i></a>{% endif %}</h3>
 
 <blockquote>
     <p>{{ link.comments|raw }}</p>
