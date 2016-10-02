@@ -1,0 +1,216 @@
+{% extends "default" %}
+
+{% block head_meta %}
+        <meta name="robots" content="index, follow">
+        <meta name="keywords" content="{% for tag in page.tags %}{{ tag }}{% if not loop.last %},{% endif %}{% endfor %}">
+{% endblock %}
+
+{% block head_styles %}
+        <style>
+        #go-top {
+            display: none;
+            bottom: 40px;
+            right: 30px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #fff;
+            position: fixed;
+            z-index: 999;
+        }
+        #go-top > i {
+            font-size: 36px;
+            line-height: 40px;
+        }
+        #toc {
+            margin-left: 10px;
+            margin-bottom: 10px;
+            max-width: 350px;
+            word-wrap: break-word;
+        }
+        </style>
+{% endblock %}
+
+{% block scripts_after %}
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.5/jquery.smooth-scroll.min.js"></script>
+        <script>$.smoothScroll || document.write('<script src="{{ site.url }}/assets/jquery-smooth-scroll/jquery.smooth-scroll.min.js"><\/script>')</script>
+        <script type="text/javascript">
+            $('#toc a')
+                .each(function(){
+                    var id = $(this).attr('href').slice(1);
+                    $(this)
+                        .smoothScroll({
+                            scrollTarget: $('[id="' + id + '"]'),
+                            offset: -50,
+                            beforeScroll: function(){ /*history.pushState({}, id, "#" + id);*/ }
+                        });
+                })
+                ;
+            $('#go-top')
+                .on('click', function() {
+                    $.smoothScroll({
+                        scrollElement: $('body'),
+                        scrollTarget: '',
+                        beforeScroll: function(){ /*history.pushState({}, "", location.href.replace(location.hash, ''));*/ },
+                        afterScroll: function(){ $('body').css('position', ''); }
+                    });
+                    return false;
+                });
+            $(window).scroll(function () {
+                var scroll   = $(this).scrollTop();
+                var visibled = $('#go-top').css('display') == 'block';
+                var next_state = $('#go-top').attr('data-next-state');
+                if (100 <= scroll && (!visibled || 'hidden' == next_state))
+                    $('#go-top')
+                        .stop(true, true)
+                        .attr('data-next-state', 'visible')
+                        .fadeIn('slow', function(){
+                            $(this).removeAttr('data-next-state');
+                        });
+                else if (scroll < 100 && (visibled || 'visible' == next_state))
+                    $('#go-top')
+                        .stop(true, true)
+                        .attr('data-next-state', 'hidden')
+                        .fadeOut('slow', function(){
+                            $(this).removeAttr('data-next-state');
+                        });
+            });
+            $(window).scroll();
+        </script>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                // apply table to bootstrap css
+                $('table:not([class])')
+                    .addClass('table table-bordered table-hover table-condensed table-striped')
+                    .wrap("<div style='width:100%;overflow-x:auto;'></div>");
+             });
+        </script>
+
+        <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+
+{% endblock %}
+
+{% block content_wrapper %}
+    {% include "breadcrumb" %}
+
+    <article itemscope="itemscope" itemtype="http://schema.org/Article">
+        <meta itemscope="itemscope" itemprop="mainEntityOfPage"
+              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net{{ page.url }}"/>
+        <header>
+            <h1>{% if page.draft %}<i class="fa fa-pencil-square-o"></i> {% endif %}<span itemprop="headline">{{ page.title }}</span></h1>
+        </header>
+
+<div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div>
+
+        <div itemprop="articleBody">
+
+<table>
+  <tr>
+    <th>タイトル</th>
+    <th>管理人</th>
+    <th>言語</th>
+    <th>ポケコンの種類</th>
+    <th>備考</th>
+  </tr>
+{% for link in page.links %}
+  <tr style="{% if link.closed %}background-color: #ddd;{% endif %}">
+
+    <td><ul class="fa-ul" style="margin: 0;">
+{% if link.url|preg_match('/archive\.org/') %}
+            <i class="fa fa-university" aria-hidden="true"></i>
+{% else %}
+            <i class="fa fa-external-link" aria-hidden="true"></i>
+{% endif %}
+            <a href="{{ link.url }}">{{ link.title|e }}</a>
+{% if link.sub_link %}
+            <ul class="fa-ul">
+{% for sub in link.sub_link %}
+{% if sub.url|preg_match('/archive\.org/') %}
+                <li><i class="fa fa-university" aria-hidden="true"></i>
+{% else %}
+                <li><i class="fa fa-external-link" aria-hidden="true"></i>
+{% endif %}
+                <a href="{{ sub.url }}">{{ sub.title|e }}</a></li>
+{% endfor %}
+            </ul>
+{% endif %}
+        </ul>
+    </td>
+{#
+
+{% if not link.sub_link %}
+    <td>
+{% if link.url|preg_match('/archive\.org/') %}
+    <i class="fa fa-university" aria-hidden="true"></i> <a href="{{ link.url }}">{{ link.title|e }}</a>
+{% else %}
+    <i class="fa fa-external-link" aria-hidden="true"></i> <a href="{{ link.url }}">{{ link.title|e }}</a>
+{% endif %}
+    </td>
+{% else %}
+    <td><ul class="list-unstyled" style="margin-bottom: 0;">
+{% if link.url|preg_match('/archive\.org/') %}
+            <li><i class="fa fa-university" aria-hidden="true"></i> <a href="{{ link.url }}">{{ link.title|e }}</a>
+{% else %}
+            <li><i class="fa fa-external-link" aria-hidden="true"></i> <a href="{{ link.url }}">{{ link.title|e }}</a>
+{% endif %}
+                <ul class="list-unstyled" style="padding-left: 1em;">
+{% for sub in link.sub_link %}
+{% if link.url|preg_match('/archive\.org/') %}
+                    <li><i class="fa fa-university" aria-hidden="true"></i> <a href="{{ sub.url }}">{{ sub.title|e }}</a></li>
+{% else %}
+                    <li><i class="fa fa-external-link" aria-hidden="true"></i> <a href="{{ sub.url }}">{{ sub.title|e }}</a></li>
+{% endif %}
+{% endfor %}
+                </ul>
+            </li>
+        </ul>
+    </td>
+{% endif %}
+#}
+    <td>{{ link.author }}</td>
+{% set flags = { 'us': { 'img': '/images/flags/us.png', 'alt': 'English Page' },
+                 'fr': { 'img': '/images/flags/fr.png', 'alt': 'French Page' },
+                 '':   { 'img': '/images/flags/jp.png', 'alt': 'Japanese Page' } } %}
+{% if link.lang is iterable %}
+    <td class="text-center">
+{% for lang in link.lang %}
+        <img src="{{ flags[lang]['img'] }}" alt="{{ flags[lang]['alt'] }}" />
+{% endfor %}
+    </td>
+{% else %}
+    <td class="text-center"><img src="{{ flags[link.lang]['img'] }}" alt="{{ flags[link.lang]['alt'] }}" /></td>
+{% endif %}
+    <td>{{ link.platform }}</td>
+    <td>{{ link.note }}</td>
+  </tr>
+{% endfor %}
+</table>
+
+        </div>
+        <hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" />
+        <footer>{% set share_button = 1 %}
+            {% include "post_footer" %}
+        </footer>
+
+        {% if page.previous_post or page.next_post %}
+            <hr style="border-top: none; border-bottom: 1px dashed #aaa; margin: 10px 0;" />
+            <nav class="article">
+                <ul class="list-unstyled row">
+                    {% if page.next_post %}
+                        <li class="col-md-6 text-left"><a class="next" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}"><span class="title"><i class="fa fa-chevron-left"></i> {{ page.next_post.title }}</span></a></li>
+                    {% else %}
+                        <li class="col-md-6 text-muted"> <i class="fa fa-chevron-left"></i></li>
+                    {% endif %}
+                    {% if page.previous_post %}
+                        <li class="col-md-6 text-right"><a class="previous" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">{{ page.previous_post.title }}</span> <i class="fa fa-chevron-right"></i></a></li>
+                    {% else %}
+                        <li class="col-md-6 text-muted"> <i class="fa fa-chevron-right"></i></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        {% endif %}
+    </article>
+
+{% endblock %}
