@@ -2,8 +2,17 @@
 layout: default
 title: 作ったもの
 permalink: product/index.html
-date: 2016-08-02 00:00
+date: 2016-10-21 01:20
 products:
+  -
+    name: "Auto close tweet completed window"
+    img: /images/2016_1021_actcw_logo.png
+    source: https://github.com/sharkpp-userscripts/auto-close-tweet-completed-window
+    install: https://greasyfork.org/scripts/24172-auto-close-tweet-completed-window/code/Auto%20close%20tweet%20completed%20window.user.js
+    detail: https://greasyfork.org/ja/scripts/24172-auto-close-tweet-completed-window
+    description: |-
+      ツイート or リツイート 完了時に表示されるウインドウを自動で閉じることが出来るスクリプト
+    tags: [ Twitter, UserScript, JavaScript ]
   -
     name: "File Drop Buffer"
     img: /images/2016_0731_FileDropBuffer_droping.png
@@ -42,7 +51,7 @@ products:
   -
     name: "calculation of selection length"
     source: https://github.com/sharkpp-userscripts/calculation-of-selection-length
-    download: https://greasyfork.org/ja/scripts/9647-calculation-of-selection-length
+    install: https://greasyfork.org/scripts/9647-calculation-of-selection-length/code/calculation%20of%20selection%20length.user.js
     detail: https://greasyfork.org/ja/scripts/9647-calculation-of-selection-length
     description: |-
       選択した文字列の長さを調べ画面に表示することが出来るスクリプト
@@ -51,7 +60,7 @@ products:
     name: "Tumblr. megaeditor extention"
     img: https://raw.githubusercontent.com/sharkpp-userscripts/tumblr-megaeditor-extention/master/img/append_select_all.png
     source: https://github.com/sharkpp-userscripts/tumblr-megaeditor-extention
-    download: https://greasyfork.org/ja/scripts/6878-tumblr-megaeditor-extention
+    install: https://greasyfork.org/scripts/6878-tumblr-megaeditor-extention/code/Tumblr%20megaeditor%20extention.user.js
     detail: https://greasyfork.org/ja/scripts/6878-tumblr-megaeditor-extention
     description: |-
       Tumblr.™ の複数投稿編集ツールへ機能の追加を行うスクリプト
@@ -60,7 +69,7 @@ products:
     name: "Tumblr. quiet your post"
     img: https://raw.githubusercontent.com/sharkpp-userscripts/tumblr-quiet-your-post/master/img/mine_post_after.png
     source: https://github.com/sharkpp-userscripts/tumblr-quiet-your-post
-    download: https://greasyfork.org/ja/scripts/6721-tumblr-quiet-your-post
+    install: https://greasyfork.org/scripts/6721-tumblr-quiet-your-post/code/Tumblr%20quiet%20your%20post.user.js
     detail: https://greasyfork.org/ja/scripts/6721-tumblr-quiet-your-post
     description: |-
       Tumblr.™ のダッシュボードで自分に関係するポストを小さくするスクリプト
@@ -68,7 +77,7 @@ products:
   -
     name: "Tumblr. blog icon to bottom"
     source: https://github.com/sharkpp-userscripts/tumblr-blog-icon-to-bottom
-    download: https://greasyfork.org/ja/scripts/8583-tumblr-blog-icon-to-bottom
+    install: https://greasyfork.org/scripts/8583-tumblr-blog-icon-to-bottom/code/Tumblr%20blog%20icon%20to%20bottom.user.js
     detail: https://greasyfork.org/ja/scripts/8583-tumblr-blog-icon-to-bottom
     description: |-
       Tumblr.™ の投稿フォームのブログアイコンの位置を下部に変えるユーザースクリプト
@@ -77,7 +86,7 @@ products:
     name: "Tumblr. extend shortcut key"
     img: /images/2014_1123_reblog-button.png
     source: https://github.com/sharkpp-userscripts/tumblr-extend-shortcut-key
-    download: https://greasyfork.org/ja/scripts/6588-tumblr-extend-shortcut-key
+    install: https://greasyfork.org/scripts/6588-tumblr-extend-shortcut-key/code/Tumblr%20extend%20shortcut%20key.user.js
     detail: /blog/2014/11/23/released-tumblr-extend-shortcut-key.html
     description: |-
       Tumblr.™ のダッシュボードで使用できるショートカットキーを追加するスクリプト
@@ -392,6 +401,9 @@ products:
 {%   endif %}
 {% if product.download %}
       <li><i class="fa-li fa fa-download"></i> <a href="{{ product.download }}">ダウンロード</a></li>
+{% endif %}
+{% if product.install %}
+      <li><i class="fa-li fa fa-bolt"></i> <a href="{{ product.install }}">インストール</a></li>
 {% endif %}
     </ul>
   </div>
