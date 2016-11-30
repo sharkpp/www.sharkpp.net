@@ -1,5 +1,5 @@
 ---
-title: "macOS と Wine 作る HSP 3 の開発環境"
+title: "macOS と Wine で作る HSP 3 の開発環境"
 date: 2016-12-01 01:00:00
 tags: [Advent Calendar, HSP, OS X, macOS, Wine]
 categories: [ブログ]
@@ -12,7 +12,7 @@ categories: [ブログ]
 
 この記事は、macOS 上で、どうしても HSP 3 のアプリを開発したい、iOS アプリのデプロイ時だけではなく HSPDish での開発時も macOS で行いたい、そういった人が、HSP 3 の開発環境を手に入れるまでの手順です。
 
-題して「macOS と Wine 作る HSP 3 の開発環境」です。
+題して「macOS と Wine で作る HSP 3 の開発環境」です。
 
 ## できるようになること
 
