@@ -253,6 +253,8 @@ hgimg4 を利用する場合は、もう少し手間がかかります。
 
 ここまで読んでいただきありがとうございます。
 
+次は [@mjhd_devlion](https://twitter.com/mjhd_devlion) さんの [Linux・MacでVimでHSP開発](http://qiita.com/mjhd-devlion/items/375ea9894294919380fd) です。
+
 ## やり残したこと
 
 残念ながら、今回は諸事情でできなかったことがあります。
@@ -281,6 +283,6 @@ hgimg4 を利用する場合は、もう少し手間がかかります。
 
 この投稿は **[Hot Soup Processor Advent Calendar 2016](http://qiita.com/advent-calendar/2016/hsp)** の **1日目**の記事です。
 
-* 2日目の記事: Coming Soon!
+* 2日目の記事: [Linux・MacでVimでHSP開発](http://qiita.com/mjhd-devlion/items/375ea9894294919380fd)
 
 <hr />
