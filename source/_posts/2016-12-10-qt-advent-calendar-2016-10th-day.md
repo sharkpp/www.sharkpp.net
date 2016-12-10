@@ -52,6 +52,7 @@ CocoaButton -- QPushButton を派生
 
 [Using Objective-C Code in Qt Applications](http://doc.qt.io/qt-5/ios-support.html#using-objective-c-code-in-qt-applications) に書かれているように `OBJECTIVE_SOURCES` に `.mm` ファイルを追加しますが、「クラスの定義」でソースファイル名の拡張子を `.mm` に変更した場合は自動で設定してくれるようです。
 
+[<img src="{{ thumbnail('/images/2016_1210_qtcreator_newclass.png', 384, 384) }}" alt="Qt Creator">](/images/2016_1210_qtcreator_newclass.png) 
 
 また、 `NSButton` などを利用するので .pro に AppKit をリンクするように `LIBS` に追加します。
 
@@ -133,6 +134,7 @@ connect(ui->buttonCocoa, SIGNAL(clicked()), this, SLOT(onCocoaButtonClick()));
 
 このような形でシグナルを受け取ることができます。
 
+[<img src="{{ thumbnail('/images/2016_1210_sample_ss.png', 384, 384) }}" alt="Qt Creator">](/images/2016_1210_sample_ss.png) 
 
 実際に動かすとこんな感じです。
 
@@ -160,6 +162,6 @@ connect(ui->buttonCocoa, SIGNAL(clicked()), this, SLOT(onCocoaButtonClick()));
 この投稿は **[Qt Advent Calendar 2016](http://qiita.com/advent-calendar/2016/qt)** の **10日目**の記事です。
 
 * ９日目の記事: [スレッドの同期について学ぼう(その１）](http://qiita.com/hermit4/items/6282640a7fe4dbcdec43)
-* 11日目の記事: 
+* 11日目の記事: []()
 
 <hr />
