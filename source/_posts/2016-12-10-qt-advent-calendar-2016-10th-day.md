@@ -154,7 +154,7 @@ connect(ui->buttonCocoa, SIGNAL(clicked()), this, SLOT(onCocoaButtonClick()));
 
 それでは、また。
 
-明日は [@nekomatu](https://twitter.com/nekomatu) さんによる「[Buildrootで自作のQtアプリを組み込む](http://nekomatu.blogspot.jp/2016/12/qt-applicatoin-on-buildroot.html)」です。
+明日は [@nekomatu](https://twitter.com/nekomatu) さんによる「[BuildrootとQtCreatorを使ってQtアプリを開発する方法](http://nekomatu.blogspot.jp/2016/12/develop-qtapp-with-qtcreator-on-buildroot.html)」です。
 お楽しみに。
 
 <hr />
@@ -162,6 +162,6 @@ connect(ui->buttonCocoa, SIGNAL(clicked()), this, SLOT(onCocoaButtonClick()));
 この投稿は **[Qt Advent Calendar 2016](http://qiita.com/advent-calendar/2016/qt)** の **10日目**の記事です。
 
 * ９日目の記事: [スレッドの同期について学ぼう(その１）](http://qiita.com/hermit4/items/6282640a7fe4dbcdec43)
-* 11日目の記事: [Buildrootで自作のQtアプリを組み込む](http://nekomatu.blogspot.jp/2016/12/qt-applicatoin-on-buildroot.html)
+* 11日目の記事: [BuildrootとQtCreatorを使ってQtアプリを開発する方法](http://nekomatu.blogspot.jp/2016/12/develop-qtapp-with-qtcreator-on-buildroot.html)
 
 <hr />
