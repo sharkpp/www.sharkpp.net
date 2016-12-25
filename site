@@ -12,7 +12,7 @@ fi
 # check cli php
 check_php () {
   PHP=php
-  for I in php php55cli php55 php54cli php54 php53cli php53 php5cli php5
+  for I in php56cli php55cli php54cli php53cli php5cli php70cli php71cli php7cli php55 php54 php53 php5 php71 php70 php7 php 
   do
     if [ "" != "$($I -v 2>/dev/null | grep cli)" ] ; then
       PHP=$I
