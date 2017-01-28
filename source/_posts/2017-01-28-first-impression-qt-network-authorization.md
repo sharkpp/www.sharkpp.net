@@ -36,7 +36,7 @@ QT += network networkauth
 と追加しましょう。
 
 あとは、 Twitter なり Tumblr なりなんなりへ、アプリケーションを登録して OAuth Consumer Key と Secret Key を取得しておきましょう。
-この時、コールバックウURLを書く必要がある場合は、適当なアドレスを書いておけば問題ありません。
+この時、コールバックURLを書く必要がある場合は、適当なアドレスを書いておけば問題ありません。
 
 ## 流れ
 
@@ -61,6 +61,17 @@ OAuth 1.x なら QOAuth1 クラスを基底クラスにして処理を実装し�
 いずれも `QAbstractOAuth` クラスの public メンバメソッドです。
 
 ここに変なのを指定すると `QOAuthOobReplyHandler::networkReplyFinished: Protocol "" is unknown` と言われたりします。
+
+### Consumer Key と Secret Key の指定
+
+OAuth Consumer Key と Secret Key を指定します。
+これ自体の扱いはいろいろ厄介なのですが、とりあえずそれは置いておきます。
+
+`QOAuth1.setClientCredentials()` に `QPair<QString, QString>` で指定します。
+
+`QPair<QString, QString>().first` は Consumer Key で
+
+`QPair<QString, QString>().second` は Secret Key です。
 
 ### 認証要求
 
