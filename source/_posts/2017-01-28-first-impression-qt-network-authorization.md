@@ -1,6 +1,7 @@
 ---
 title: "はじめての Qt Network Authorization"
 date: 2017-01-28 16:50
+update: 2017-03-25 22:30
 tags: [Qt, OAuth, C++, cpp, 勉強会]
 categories: [ブログ]
 
@@ -9,6 +10,8 @@ categories: [ブログ]
 先日、ちょうど「[設定を統合した「Qt 5.8」が登場 | OSDN Magazine](https://mag.osdn.jp/17/01/25/161000)」の記事が目に入り、ふんふんと読んでいたところで、Qt Lite も気になりましたが、それよりも OAuth 2 と OAuth 2 に対応した [Qt Network Authorization](https://doc.qt.io/qt-5/qtnetworkauth-index.html) が技術プレビューで追加、と書かれていたので軽く試して見ました。
 
 と言うことで、新しくなってから２回目の参加になる [Qt 勉強会 @ Nagoya No4(17.01)](https://qt-users.connpass.com/event/48608/) は、Qt Network Authorization を触って見ることにしました。
+
+※ [Qt 勉強会 @ Nagoya No4(17.01) - Togetterまとめ](https://togetter.com/li/1092291) で当日のつぶやきがまとめられています。
 
 結論を先に言うと、 **Qt Network Authorization** は簡単に OAuth 認証をアプリケーションへ組み込めるようです。
 

@@ -1,12 +1,15 @@
 ---
 title: "Qt Network Authorization を使った Dropbox API　の利用"
 date: 2017-02-28 01:45
+update: 2017-03-25 22:30
 tags: [Qt, Dropbox, OAuth, C++, cpp, 勉強会]
 categories: [ブログ]
 
 ---
 
 さて、今月も参加した [Qt 勉強会 @ Nagoya No5(17.02)](https://qt-users.connpass.com/event/50191/) のまとめ。
+
+※ [Qt 勉強会 @ Nagoya No5(17.02) - Togetterまとめ](https://togetter.com/li/1092293) で当日のつぶやきがまとめられています。
 
 今回も、前回に引き続き、[Qt Network Authorization](https://doc.qt.io/qt-5/qtnetworkauth-index.html) を色々さわって見ることにしました。
 
