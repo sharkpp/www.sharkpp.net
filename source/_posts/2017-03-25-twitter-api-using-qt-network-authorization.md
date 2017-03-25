@@ -1,7 +1,7 @@
 ---
 title: "Qt Network Authorization を使った Twitter API の利用"
 date: 2017-03-25 22:59
-update: 2017-03-25 23:2
+update: 2017-03-25 23:44
 tags: [Qt, Twitter, OAuth, C++, cpp, 勉強会]
 categories: [ブログ]
 
@@ -105,8 +105,9 @@ connect(this, &QOAuth1::granted, this, &Twitter::authenticated);
   `setModifyParametersFunction` で今の Stage とライブラリのソースをにらめっこで原因を見つけた。
 * 呟く内容が別の変数を参照していたために空っぽで `Missing required parameter: status.` と返答が返ってくる。
   うん、たしかに設定されてなかったね。
-* `connect()` でラムダ式を使うとなぜか `qobject_cast<QNetworkReply*>(sender())` が `nullptr`。
-  横着せずに 別メソッドを作って設定すると大丈夫だった。何で？
+* <del>`connect()` でラムダ式を使うとなぜか `qobject_cast<QNetworkReply*>(sender())` が `nullptr`。</del>
+  <del>横着せずに 別メソッドを作って設定すると大丈夫だった。何で？</del>
+  後で試したら大丈夫だった。
 
 と、こんな感じ。
 
