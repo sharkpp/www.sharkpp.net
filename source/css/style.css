@@ -24,6 +24,10 @@ article.full-contents {
     border-bottom: 1px dashed #aaa;
 }
 
+article img {
+    max-width: 100%;
+}
+
 .footer {
     position: absolute;
     bottom: 0;
