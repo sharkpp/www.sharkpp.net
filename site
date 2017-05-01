@@ -174,13 +174,13 @@ exec_production2 () {
     exit 0
   fi
   # set git config
-  git config --global user.email "touroku@sharkpp.net"
-  git config --global user.name  "sharkpp"
+  git config --global user.email "${GIT_EMAIL}"
+  git config --global user.name  "${GIT_USERNAME}"
   # clone output repository
   DEPLOY_REPOS="https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git"
   DEPLOY_BRANCH=gh-pages
   git clone --quiet -b $DEPLOY_BRANCH $DEPLOY_REPOS output_prod
-  if ! -e [ "output_prod" ] ; then
+  if [ ! -e"output_prod" ] ; then
     git init output_prod
     pushd output_prod
     git remote add origin $DEPLOY_REPOS
