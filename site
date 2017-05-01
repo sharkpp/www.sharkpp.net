@@ -173,6 +173,10 @@ exec_production2 () {
   if [ "" == "$GH_TOKEN" ] ; then
     exit 0
   fi
+  PHP=php
+  if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
+    core_init
+  fi
   # set git config
   git config --global user.email "${GIT_EMAIL}"
   git config --global user.name  "${GIT_USERNAME}"
@@ -193,7 +197,6 @@ exec_production2 () {
     rm -rf output_prod/*
   fi
   # production generate
-  php sculpin.phar install
   php sculpin.phar generate --env=prod
   # deploy
   DEPLOY_MSG=$(git log --pretty=format:"Deploy from https://github.com/${TRAVIS_REPO_SLUG}/commit/%H : %s" -1)
