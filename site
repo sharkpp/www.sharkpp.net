@@ -180,7 +180,7 @@ exec_production2 () {
   DEPLOY_REPOS="https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git"
   DEPLOY_BRANCH=gh-pages
   git clone --quiet -b $DEPLOY_BRANCH $DEPLOY_REPOS output_prod
-  if [ ! -e"output_prod" ] ; then
+  if [ ! -e "output_prod" ] ; then
     git init output_prod
     pushd output_prod
     git remote add origin $DEPLOY_REPOS
