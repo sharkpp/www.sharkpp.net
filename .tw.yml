@@ -1,0 +1,10 @@
+---
+version: 1.0.11
+consumer_key: TW_CONSUMER_KEY
+consumer_secret: TW_CONSUMER_SECRET
+default_user: TW_USER_NAME
+users:
+  TW_USER_NAME:
+    access_token: TW_USER_ACCESS_TOKEN
+    access_secret: TW_USER_ACCESS_SECRET
+    id: TW_USER_ID
