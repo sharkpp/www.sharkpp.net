@@ -6,8 +6,8 @@ branches:
   only:
     - master
 script:
-  - gem install tw
-  - '[ "$TRAVIS_PULL_REQUEST" == "false" ] && bash ./site production2'
+  - rbenv local 2.4 ; gem install tw
+  - '[ "$TRAVIS_PULL_REQUEST" == "false" ] && bash ./site deploy'
 cache:
   directories:
     - .sculpin
