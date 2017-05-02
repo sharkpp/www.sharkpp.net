@@ -66,11 +66,12 @@ core_init () {
   $PHP composer.phar self-update
   $PHP composer.phar install
   # install Sculpin
-  SCULPIN=$PHP $(dirname $0)/vendor/bin/sculpin
-  if [ ! -e "$(dirname $0)/vendor/bin/sculpin" ] ; then
-    $PHP composer.phar install sculpin embedded-composer
-  fi
-  $SCULPIN install
+  SCULPIN=$PHP $(dirname $0)/sculpin.phar
+# if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
+#   $PHP composer.phar install sculpin embedded-composer
+# fi
+  $PHP sculpin.phar self-update
+  $PHP sculpin.phar install
   # install BowerPHP
   $PHP .vendor/beelab/bowerphp/bin/bowerphp install
   # create default webhook conf
@@ -101,7 +102,7 @@ exec_clean () {
 
 core_generate () {
   rm -rf output_prod/* > /dev/null 2>&1
-  $SCULPIN generate --env=prod > /dev/null
+  $PHP sculpin.phar generate --env=prod > /dev/null
   if [ $? -ne 0 ]; then echo "Could not generate the site"; exit 1; fi
   OUT_PATH=$1
   if [ "" != "$OUT_PATH" ] ; then
@@ -123,7 +124,7 @@ exec_generate () {
   exec 9< $0
   perl -mFcntl=:flock -e "open(LOCK,'<&=9');exit(!flock(LOCK,LOCK_EX|LOCK_NB))" || exit 0
   #
-  if [ ! -e "$(dirname $0)/vendor/bin/sculpin" ] ; then
+  if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
     core_init
   else
     check_php
@@ -149,7 +150,7 @@ exec_production () {
   fi
   rm -f $NOTIFY
   # init
-  if [ ! -e "$(dirname $0)/vendor/bin/sculpin" ] ; then
+  if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
     core_init
   else
     check_php
@@ -162,7 +163,7 @@ exec_production () {
     exit 1
   fi
   # update assets
-  $SCULPIN install
+  $PHP sculpin.phar install
   #$PHP composer.phar install
   $PHP .vendor/beelab/bowerphp/bin/bowerphp install
   # generate site
@@ -174,7 +175,7 @@ exec_deploy () {
     exit 0
   fi
   PHP=php
-  if [ ! -e "$(dirname $0)/vendor/bin/sculpin" ] ; then
+  if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
     core_init
   fi
   # set git config
@@ -197,7 +198,7 @@ exec_deploy () {
     rm -rf output_prod/*
   fi
   # production generate
-  $SCULPIN generate --env=prod
+  $PHP sculpin.phar generate --env=prod
   # deploy
   DEPLOY_MSG=$(git log --pretty=format:"Deploy from https://github.com/${TRAVIS_REPO_SLUG}/commit/%H : %s" -1)
   pushd output_prod
@@ -209,7 +210,7 @@ exec_deploy () {
 }
 
 exec_test () {
-  if [ ! -e "$(dirname $0)/vendor/bin/sculpin" ] ; then
+  if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
     core_init
   else
     check_php
@@ -217,11 +218,11 @@ exec_test () {
   fi
   #
   rm -rf output_dev/*
-  $SCULPIN generate --watch --server
+  $PHP sculpin.phar generate --watch --server
 }
 
 exec_spider () {
-  if [ ! -e "$(dirname $0)/vendor/bin/sculpin" ] ; then
+  if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
     core_init
   else
     check_php
@@ -233,7 +234,7 @@ exec_spider () {
     echo wget command not installed
     exit
   fi
-  if [ ! -e "$(dirname $0)/vendor/bin/sculpin" ] ; then
+  if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
     exec_init
   fi
   RUNNING=$(ps ax|grep "bin/sculpin[ ]"|wc -l|sed -e "s/ //g")
@@ -242,7 +243,7 @@ exec_spider () {
     # launch server and waiting for generate
     while read f; do
       if [ "" != "$(echo "$f" | grep "server is running at")" ] ; then break ; fi
-    done < <($SCULPIN generate --watch --server &)
+    done < <($PHP sculpin.phar generate --watch --server &)
   fi
   wget --spider --no-directories --recursive --page-requisites --level=0 --no-verbose http://localhost:8000
   if [ 0 -eq $RUNNING ] ; then
@@ -266,15 +267,15 @@ exec_new () {
 
 exec_update () {
   # init
-  if [ ! -e "$(dirname $0)/vendor/bin/sculpin" ] ; then
+  if [ ! -e "$(dirname $0)/sculpin.phar" ] ; then
     core_init
   else
     check_php
     check_libxml
   fi
   # update
-#  $SCULPIN self-update
-#  $SCULPIN update
+#  $PHP sculpin.phar self-update
+#  $PHP sculpin.phar update
   $PHP .vendor/beelab/bowerphp/bin/bowerphp update
 }
 
