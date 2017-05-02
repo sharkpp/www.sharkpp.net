@@ -19,15 +19,16 @@ github のレポジトリを参照している場合に composer で update 時�
 
 ## 手順
 
-  1. [Authorized applications][1] にアクセス
-  2. Personal access tokens の "Generate new token" を押下
-  3. "Token description" を入力し "Generate token" を押下すると token が表示される
-  4. composer に教える
+  1. [Personal access tokens][1] にアクセス
+  2. "Generate new token" を押下
+  3. "Token description" を入力
+  4. "Select scopes" の "repo" をチェックし "Generate token" を押下すると token が表示される
+  5. composer に教える
     
         $ php composer.phar config -g github-oauth.github.com {発行したtoken}
         
 
- [1]: https://github.com/settings/applications#personal-access-tokens
+ [1]: https://github.com/settings/tokens
 
 で無事 API の制限を超えることが出来ます。
 
