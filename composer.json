@@ -1,5 +1,6 @@
 {
     "name": "sharkpp/www.sharkpp.net",
+    "description": "generator source of http://www.sharkpp.net/",
     "license": "MIT License",
     "authors": [
         {
@@ -8,9 +9,24 @@
         }
     ],
     "require": {
-        "beelab/bowerphp": "1.0.*@dev"
+        "beelab/bowerphp": "1.0.*@dev",
+        "beryllium/icelus": "*",
+        "components/bootstrap": "~3.3.4",
+        "components/font-awesome": "4.*",
+        "components/highlightjs": "~7.3.0",
+        "components/jquery": "~1.9.1",
+        "dflydev/embedded-composer": "@dev",
+        "jasny/twig-extensions": "@dev",
+        "sculpin/sculpin": "^2.1@dev",
+        "sharkpp/sculpin-calendarian-bundle": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Sharkpp": "app/src"
+        }
     },
     "config": {
-        "vendor-dir": ".vendor"
+        "vendor-dir": ".vendor",
+        "component-dir": "source/assets"
     }
 }
