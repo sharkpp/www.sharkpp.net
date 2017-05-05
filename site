@@ -223,7 +223,6 @@ echo -------------------- ; ls -la . ; echo --------------------
   fi
   # production generate
   _sculpin generate --env=prod
-return 0
   # deploy
   DEPLOY_MSG=$(git log --pretty=format:"Deploy from https://github.com/${TRAVIS_REPO_SLUG}/commit/%H : %s" -1)
   pushd output_prod
