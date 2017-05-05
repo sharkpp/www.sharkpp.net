@@ -32,12 +32,14 @@ check_libxml () {
 
 # exec composer
 _composer () {
-  local COMPOSER_PATH=$(dirname $0)/composer.phar
+  local COMPOSER_PATH=
+  test -e "$(dirname $0)/composer.phar" && COMPOSER_PATH=$PHP\ $(dirname $0)/composer.phar
+  composer >/dev/null 2>&1 && COMPOSER_PATH=composer
   case "$1" in
-    "exist"       ) test -e "$COMPOSER_PATH" ;;
+    "exist"       ) test "" = "$COMPOSER_PATH" ;;
     "self-install") curl --insecure -L https://getcomposer.org/installer | $PHP ;;
     "self-update" ) ;;
-    *             ) $PHP "$COMPOSER_PATH" $* ;;
+    *             ) $COMPOSER_PATH $* ;;
   esac
 }
 
@@ -192,7 +194,6 @@ exec_deploy () {
   if [ "" == "$GH_TOKEN" ] ; then
     exit 0
   fi
-echo -------------------- ; ls -la . ; echo --------------------
   PHP=php
   #check_php
   #check_libxml
@@ -310,3 +311,4 @@ case "$1" in
   "u"          ) exec_update ;;
   *            ) exec_usage ;;
 esac
+echo @@@=$?

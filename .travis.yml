@@ -10,5 +10,4 @@ script:
   - '[ "$TRAVIS_PULL_REQUEST" == "false" ] && bash ./site deploy'
 cache:
   directories:
-    - .sculpin
-    - ~/.rvm
+    - .vendor
