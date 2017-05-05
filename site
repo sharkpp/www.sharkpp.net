@@ -231,6 +231,7 @@ echo -------------------- ; ls -la . ; echo --------------------
   git push --quiet origin $DEPLOY_BRANCH
   popd
   # tweet
+  return 0
 }
 
 exec_test () {
