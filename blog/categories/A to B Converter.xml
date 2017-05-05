@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/categories/A%20to%20B%20Converter.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:32+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[KiSS CEL Export Library]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/21/abc-exkiss.html"/>
+            <updated>2008-07-21T00:14:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/21/abc-exkiss.html</id>
+            <content type="html"><![CDATA[<div><a href="/files/exks001c.lzh">DOWNLOAD</a> 2004/02/24
+</div>
+
+<div><p>
+A to B Converter で KISSの CELファイルの出力機能を追加するプラグインです。
+</p>
+<ul>
+<li>
+標準CELファイル(16色、256色)を出力できます
+</li>
+<li>
+KiSS パレットを出力できます(256×1×24bitColor の画像から)
+</li>
+</ul>
+</div>
+]]></content>
+        </entry>
+    </feed>

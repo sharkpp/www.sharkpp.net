@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/OpenHSP.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:50+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[OpenHSPナイトリービルドを適当に整理しました]]></title>
+            <link href="http://www.sharkpp.net/blog/2010/03/21/OpenHSP-nightly-build-has-been-organized.html"/>
+            <updated>2010-03-21T00:32:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2010/03/21/OpenHSP-nightly-build-has-been-organized.html</id>
+            <content type="html"><![CDATA[<p>最近リビジョンアップする間隔が短くてzipファイルがたまってきたのでOpenHSPナイトリービルドを適当に整理しました。</p>
+
+<p>ローカルには全て保存してあるので、ほしい方がいればうｐりますが、いないですよね多分...</p>
+
+<p>良いネットストレージがあればいいのですが...</p>
+
+<p>今年こそはエイプリルフールに乗っかりたいな...ぼそ</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[OpenHSP #modcfuncパッチ]]></title>
+            <link href="http://www.sharkpp.net/blog/2009/06/23/openhsp-modcfunc-patch.html"/>
+            <updated>2009-06-23T01:04:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2009/06/23/openhsp-modcfunc-patch.html</id>
+            <content type="html"><![CDATA[<p>OpenHSP用の#modcfuncパッチを作ってみた。</p>
+
+<p>コンパイルは出来たのでそんなには間違っていないと思うが未保障。</p>
+
+<p>はて、fujidigさんのコンパイルの実装で変更前と結果が同じかチェックするコンパイラテスタ？はどこへ行ったのだろう？</p>
+
+<p>パッチ</p>
+
+<pre>Index: hspcmp/hspcmd.cpp
+===================================================================
+--- hspcmp/hspcmd.cpp   (リビジョン 323)
++++ hspcmp/hspcmd.cpp   (作業コピー)
+@@ -322,6 +322,7 @@
+"$000 0 #ifndef",
+"$000 0 #include",
+"$000 0 #modfunc",
++   "$000 0 #modcfunc",
+"$000 0 #modinit",
+"$000 0 #modterm",
+"$000 0 #module",
+Index: hspcmp/token.cpp
+===================================================================
+--- hspcmp/token.cpp    (リビジョン 323)
++++ hspcmp/token.cpp    (作業コピー)
+@@ -2177,6 +2177,8 @@
+ppresult_t CToken::PP_Defcfunc( int mode )
+{
+//      #defcfunc解析
++   //          mode : 0 = 通常cfunc
++   //                 1 = modcfunc
+//
+int i,id;
+char *word;
+@@ -3014,6 +3016,10 @@
+res = PP_Deffunc(1);
+return res;
+}
++   if (tstrcmp(word,"modcfunc")) {     // module function (2)
++       res = PP_Defcfunc(1);
++       return res;
++   }
+if (tstrcmp(word,"modinit")) {      // module function (3)
+res = PP_Deffunc(2);
+return res;
+</pre>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[OpenHSPのナイトリービルドを始めました]]></title>
+            <link href="http://www.sharkpp.net/blog/2009/06/14/startup-openhsp-nightly-builds.html"/>
+            <updated>2009-06-14T23:42:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2009/06/14/startup-openhsp-nightly-builds.html</id>
+            <content type="html"><![CDATA[<p>まあタイトルの通りなんだけど、OpenHSPのナイトリービルドを始めました。</p>
+
+<p>毎日0時ごろにリビジョンをチェックして上がっていたら自動でビルドしてzipで固めてこのサイトにアップロードって感じのバッチファイルを組んでタスクで動かすようにしました。</p>
+
+<p>自動でビルドしているだけなんでバグがあってもお構いなしでアップします。</p>
+
+<p>ただビルドエラーがあったりビルドに使用しているPCが止まっていると更新されません。</p>
+
+<p>サーバーの容量にも限りがあるので適当に消しますが、過去のパッケージはローカルに残っているので再アップすることは出来ると思います。</p>
+
+<p>ダウンロードは<a href="/blog/categories/HSP">OpenHSP</a>からどうぞ</p>
+]]></content>
+        </entry>
+    </feed>

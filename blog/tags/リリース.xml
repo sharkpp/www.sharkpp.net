@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:49+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[File Drop Buffer をリリースしました]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/07/31/file-drop-buffer-release.html"/>
+            <updated>2016-07-31T23:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/07/31/file-drop-buffer-release.html</id>
+            <content type="html"><![CDATA[<p>Qt を利用し、<a href="https://github.com/sharkpp/FileDropBuffer">FileDropBuffer</a> というソフトを作ってみました。</p>
+
+<p>ダウンロードは <a href="https://github.com/sharkpp/FileDropBuffer/releases">GitHub リリースページ</a> からどうぞ。</p>
+
+<p>基本機能自体は Qt に実装済みのものを利用したので、プロトタイプはできるのが早かったですが、アイコンつけたり背景を設定したりに時間がかかりました。</p>
+
+<h2 id="%E3%81%93%E3%82%8C%E3%81%AF%E3%81%AA%E3%81%AB%EF%BC%9F">これはなに？</h2>
+
+<p>通常は、ファイルのドラッグ ＆ ドロップは、一度しかできないですが、このソフトに溜め込むことで、複数の操作が一度にできるようになります。</p>
+
+<p>例えば、</p>
+
+<ul>
+<li>ファイルをドロップして形式を変換するコンバータがあるとして、別々のフォルダにあるファイルを一度に変換できる。</li>
+<li>複数のフォルダのファイルを一度に別のフォルダにコピーや移動できる。</li>
+</ul>
+
+<p>など、です。</p>
+
+<h2 id="%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89">ダウンロード</h2>
+
+<table>
+<thead>
+<tr>
+  <th>OS</th>
+  <th>リンク</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Windows</td>
+  <td><a href="https://github.com/sharkpp/FileDropBuffer/releases/download/v0.1.0/FileDropBuffer-win-0.1.0.zip">FileDropBuffer-win-0.1.0.zip</a> ※ GitHub</td>
+</tr>
+<tr>
+  <td>OS X (macOS)</td>
+  <td><a href="https://github.com/sharkpp/FileDropBuffer/releases/download/v0.1.0/FileDropBuffer-mac-0.1.0.dmg">FileDropBuffer-mac-0.1.0.dmg</a> ※ GitHub</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール</h2>
+
+<p>ファイルを解凍するだけで実行できます。</p>
+
+<p>解凍した中にできている <code>File Drop Buffer</code> というアプリケーションを実行してください。</p>
+
+<h2 id="%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">アンインストール</h2>
+
+<p>レジストリや設定ファイルなどは利用していないので、フォルダごと削除するだけです。</p>
+
+<h2 id="%E4%BD%BF%E3%81%84%E6%96%B9">使い方</h2>
+
+<p>まず、ファイルをこのソフトの <code>Drop file here</code> と書かれている部分にドロップします。</p>
+
+<p><img src="/images/2016_0731_FileDropBuffer_droping.png" alt="ファイルのドロップ" /></p>
+
+<p>何回かファイルをドロップし終えたら、アプリケーションの中央に表示されているファイルアイコンをドラッグし、目標とするアプリケーションへドロップします。</p>
+
+<p><img src="/images/2016_0731_FileDropBuffer_draging.png" alt="ファイルのドラッグ" /></p>
+
+<p>その他の機能は</p>
+
+<ul>
+<li>右下のゴミ箱ボタンは、保持しているファイルの一覧をクリア</li>
+<li>その隣のボタンは、アプリケーションの最前面解除＆設定</li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[HSP ユーザーのためのハブサイトを立上げました]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/04/01/hub-site-launched-for-hsp-users.html"/>
+            <updated>2016-04-01T00:35:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/04/01/hub-site-launched-for-hsp-users.html</id>
+            <content type="html"><![CDATA[<p>以前、某氏が公開していたドメインが、更新されず、スパムドメインになっていたのがいつの間にか手放されていたのを取得し、熟成させること 2 年ぐらい。</p>
+
+<p>ようやく、重い腰を上げサイトを公開しました。</p>
+
+<p><small>実際に公開されてから、この記事が書かれるまで一月以上経っていることは、内緒だよ！</small></p>
+
+<p><a href="/images/2016_0401_hsp_users_jp.png"><img src="/_thumbs/bf408036a14636515e7d7e7d3f7339c2-256x256.png" alt="hsp-users.jp"></a></p>
+
+<p><a href="http://hsp-users.jp/">hsp-users.jp - 日本のHSPユーザのためのハブサイト</a></p>
+
+<p>でアクセスできます。</p>
+
+<p>関連として、</p>
+
+<p>公式 Twitter : <a href="https://twitter.com/hsp_users_jp">@hsp_users_jp</a></p>
+
+<p>要望や不具合など : <a href="https://github.com/hsp-users-jp/hsp-users.jp/issues">Issues · hsp-users-jp/hsp-users.jp</a> ※要GitHubアカウント</p>
+
+<p>なども立ち上げました。</p>
+
+<p>何かしらの意見や要望があればどしどしお願いします。</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Lhaplus x64 shell extension ver.1.0.1.0をリリースしました]]></title>
+            <link href="http://www.sharkpp.net/blog/2009/11/25/now-release-lhaplus-x64-shell-extension-ver-1-0-1-0.html"/>
+            <updated>2009-11-25T01:58:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2009/11/25/now-release-lhaplus-x64-shell-extension-ver-1-0-1-0.html</id>
+            <content type="html"><![CDATA[<p><div class="alert alert-danger alert-dismissible" role="alert">
+  <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
+  <dl style="margin-bottom: 0; margin-left: 35px;">
+    <dt>2015-06-02 追記</dt>
+    <dd>Lhaplus Version 1.70 以降のバージョンで公式に 64bit な Windows でのコンテキストメニュー表示がサポートされました。
+    非公式なこのシェル拡張をアンインストールし Lhaplus をアップデートすることをお勧めします。</dd>
+  </dl>
+</div>
+</p>
+
+<p>DLLなし圧縮・解凍ソフト <a href="http://hoehoe.com/">Lhaplus</a> の 64bit版Windows用シェル拡張をアップデートしました。</p>
+
+<p>今回のアップデートは不具合修正のみです。</p>
+
+<p>フォルダツリーやナビゲーションウィンドウを表示した状態での右クリックで「圧縮」や「解凍」などのメニュー項目が表示されていなかった不具合を修正しました。</p>
+
+<p>普段、フォルダツリーなんか表示していないのでまったく気が付かなかったです...とほほ</p>
+
+<p>アップデートは、アンインストール→PC再起動(ログオフでもか？試してないです)→インストールの手順で行ってください。</p>
+
+<p>再起動を行わないとexplorer.exeがdllをロックしたままでファイルの上書きが出来ないのでインストールに失敗してしまいます。</p>
+
+<p>ダウンロードは、<a href="/blog/categories/%E3%83%84%E3%83%BC%E3%83%AB">ツール</a>からどうぞ</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[HSP3用難読化＆独自スクランブル ツール ”yabuinu” を公開しました]]></title>
+            <link href="http://www.sharkpp.net/blog/2009/09/30/yabuinu-the-obfuscator-and-scrambler-for-hsp3-0-0-1-0-release.html"/>
+            <updated>2009-09-30T00:14:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2009/09/30/yabuinu-the-obfuscator-and-scrambler-for-hsp3-0-0-1-0-release.html</id>
+            <content type="html"><![CDATA[<p>オブジェクト難読化＆独自スクランブルツールを公開しました。</p>
+
+<p>hsp3obfusの後続バージョンになります。</p>
+
+<p>HSP3の他バージョン用も簡単に実装できそうですが、とりあえず、HSP3.1用を実装してみました。</p>
+
+<p>ダウンロードは詳細ページからどうぞ。</p>
+
+<p><a href="http:/blog/2009/09/30/hsp-yabuinu.html" title="”yabuinu” 難読化＆独自スクランブル ツール for HSP 3.x">”yabuinu” 難読化＆独自スクランブル ツール for HSP 3.x</a></p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Lhaplus x64 shell extension ver.1.0.0.0をリリースしました]]></title>
+            <link href="http://www.sharkpp.net/blog/2009/08/23/now-release-lhaplus-x64-shell-extension-ver-1-0-0-0.html"/>
+            <updated>2009-08-23T16:44:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2009/08/23/now-release-lhaplus-x64-shell-extension-ver-1-0-0-0.html</id>
+            <content type="html"><![CDATA[<p><div class="alert alert-danger alert-dismissible" role="alert">
+  <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
+  <dl style="margin-bottom: 0; margin-left: 35px;">
+    <dt>2015-06-02 追記</dt>
+    <dd>Lhaplus Version 1.70 以降のバージョンで公式に 64bit な Windows でのコンテキストメニュー表示がサポートされました。
+    非公式なこのシェル拡張をアンインストールし Lhaplus をアップデートすることをお勧めします。</dd>
+  </dl>
+</div>
+</p>
+
+<p>DLLなし圧縮・解凍ソフト <a href="http://hoehoe.com/">Lhaplus</a> の 64bit版Windows用シェル拡張を公開しました。</p>
+
+<p>いつまでたってもだれも(作者さんさえも！)x64対応のLhaplusのシェル拡張を公開する気配が無いので勉強を兼ねて作ってみました。</p>
+
+<p>いきなりバージョンが1.0.0.0から始まっていますが特に深い意味はありません。</p>
+
+<p>ダウンロードは、<a href="/blog/categories/%E3%83%84%E3%83%BC%E3%83%AB">ツール</a>からどうぞ</p>
+]]></content>
+        </entry>
+    </feed>

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>React楽しい＆composerは怖くない &mdash; さめたすたすのお家</title>
+        <meta charset="utf-8">
+        <meta name="theme-color" content="#6877AA">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="index, follow">
+        <meta name="keywords" content="php">
+        <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/lightbox2/css/lightbox.css" rel="stylesheet" type="text/css" />
+        <link href="/css/style.min.css" rel="stylesheet" type="text/css" />
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <link rel="apple-touch-startup-image" href="/images/noname/2048x2048.png">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="shortcut icon" sizes="76x76" href="/images/noname/76x76.png">
+        <link rel="shortcut icon" sizes="120x120" href="/images/noname/120x120.png">
+        <link rel="shortcut icon" sizes="128x128" href="/images/noname/128x128.png">
+        <link rel="shortcut icon" sizes="152x152" href="/images/noname/152x152.png">
+        <link rel="shortcut icon" sizes="196x196" href="/images/noname/196x196.png">
+        <link rel="shortcut icon" sizes="512x512" href="/images/noname/512x512.png">
+        <link rel="shortcut icon" sizes="1024x1024" href="/images/noname/1024x1024.png">
+        <link rel="shortcut icon" sizes="2048x2048" href="/images/noname/2048x2048.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/noname/76x76.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/noname/120x120.png">
+        <link rel="apple-touch-icon" sizes="128x128" href="/images/noname/128x128.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/noname/152x152.png">
+        <link rel="apple-touch-icon" sizes="196x196" href="/images/noname/196x196.png">
+        <link rel="apple-touch-icon" sizes="512x512" href="/images/noname/512x512.png">
+        <link rel="apple-touch-icon" sizes="1024x1024" href="/images/noname/1024x1024.png">
+        <link rel="apple-touch-icon" sizes="2048x2048" href="/images/noname/2048x2048.png">
+
+        <link rel="stylesheet" href="/assets/highlightjs/styles/github.css" />
+        <link rel="alternate" type="application/atom+xml" href="/atom.xml" title="さめたすたすのお家 activity feed" />
+        <style>
+        /** quick fix because bootstrap <pre> has a background-color. */
+        pre code { background-color: inherit; }
+        </style>
+                <style>
+        #go-top {
+            display: none;
+            bottom: 40px;
+            right: 30px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #fff;
+            position: fixed;
+            z-index: 999;
+        }
+        #go-top > i {
+            font-size: 36px;
+            line-height: 40px;
+        }
+        #toc {
+            margin-left: 10px;
+            margin-bottom: 10px;
+            max-width: 350px;
+            word-wrap: break-word;
+        }
+        </style>
+                    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">さめたすたすのお家</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav pull-right">
+                        <li><a href="/blog/"><i class="fa fa-archive"></i> アーカイブ</a></li>
+                        <li><a href="/blog/categories"><i class="fa fa-folder-open"></i> カテゴリ</a></li>
+                        <li><a href="/blog/tags"><i class="fa fa-tags"></i> タグ</a></li>
+                        <li><a href="/product/"><i class="fa fa-download"></i> 作ったもの</a></li>
+                        <li><a href="/graffiti/"><i class="fa fa-paint-brush"></i> 落書き</a></li>
+                        <li><a href="/link.html"><i class="fa fa-link"></i> リンク</a></li>
+                        <li><a href="/about">About</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <div class="mainContent container">
+                                                                                
+                                
+    <ol class="breadcrumb" itemscope="itemscope"
+                           itemtype="http://schema.org/BreadcrumbList">
+        <li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/"
+           ><i class="fa fa-home fa-lg"></i
+     >&nbsp;<span itemprop="name">HOME</span
+           ><meta itemprop="position" content="1"
+          /></a
+       ></li>
+        <li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/blog/2013/"
+           ><span>2013</span
+           ><meta itemprop="position" content="2"
+          /></a
+       ></li>
+        <li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/blog/2013/06/"
+           ><span>06</span
+           ><meta itemprop="position" content="3"
+          /></a
+       ></li>
+        <li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/blog/2013/06/29/"
+           ><span>29</span
+           ><meta itemprop="position" content="4"
+          /></a
+       ></li>
+        <li
+            class="active"><span 
+           ><span>React楽しい＆composerは怖くない</span
+       ></li>
+    </ol>
+
+    <article itemscope="itemscope" itemtype="http://schema.org/Article">
+        <meta itemscope="itemscope" itemprop="mainEntityOfPage"
+              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net/blog/2013/06/29/react-and-composer.html"/>
+        <header>
+            <h1><span itemprop="headline">React楽しい＆composerは怖くない</span> <small>post</small></h1>
+        </header>
+
+<div id="toc" class="panel panel-default pull-right">
+    <div class="panel-heading text-center">目次</div>
+        <div class="panel-body" style="padding: 10px;">
+            <ul class="fa-ul">
+            <li><i class="fa-li fa fa-paperclip"></i><a href="#reqct%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">Reqctのインストール</a>
+</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E8%A6%8B%E3%81%AA%E3%81%8C%E3%82%89%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B">サンプル見ながら使ってみる</a>
+</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E6%B3%A8%E6%84%8F%E7%82%B9">注意点</a>
+</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a>
+        </ul>
+    </div>
+</div>
+
+<div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div>
+
+        <div itemprop="articleBody">
+            <p>phpのイベントドリブンでノンブロッキングなライブラリであるところの <a href="http://reactphp.org/">React</a> を使って見ました。</p>
+
+<p>とりあえずメモ的な何かになっています。 インストールから順に、ググってもやり方が見つからなかった非同期にデータを受信しつつURLごとに分けてバッファに詰めていく方法なんぞを書いていきたいと思います。</p>
+
+<p>最近のバージョンのPHPを使いこなしているPHPerの人たちには当たり前の機能を使っているので見つからないのが不思議なんだけど、、、きっと検索の仕方が悪かったんだろうな。</p>
+
+<h2 id="reqct%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" itemprop="articleSection">Reqctのインストール</h2>
+
+<p>githubのページ(<a href="https://github.com/reactphp/react#install">reactphp/react - GitHub</a>)に書いてある通りに、</p>
+
+<pre><code>{
+    "require": {
+        "react/react": "0.3.*"
+    }
+}
+</code></pre>
+
+<p>こんな感じに composer.json に記述して</p>
+
+<pre><code># php composer.phar update
+</code></pre>
+
+<p>を実行するだけです。 すると、</p>
+
+<pre><code># php composer.phar update
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+  - Installing react/promise (v1.0.4)
+    Loading from cache
+
+  - Installing guzzle/parser (v3.7.0)
+    Downloading: 100%
+
+  - Installing evenement/evenement (v1.0.0)
+    Loading from cache
+
+  - Installing react/react (v0.3.2)
+    Downloading: 100%
+
+react/react suggests installing ext-libevent (*)
+react/react suggests installing ext-libev (*)
+Writing lock file
+Generating autoload files
+</code></pre>
+
+<p>って感じでカレントディレクトリにvenderディレクトリができて必要なファイルがダウンロードされます。</p>
+
+<p>composer 便利だね(>_&lt;)</p>
+
+<h2 id="%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E8%A6%8B%E3%81%AA%E3%81%8C%E3%82%89%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B" itemprop="articleSection">サンプル見ながら使ってみる</h2>
+
+<p>で、いきなりソースなんだけれど</p>
+
+<pre><code>&lt;?php
+
+include_once __DIR__.'/vendor/autoload.php';
+
+$urls = array();
+$urls[] = 'http://www.google.co.jp/';
+$urls[] = 'http://example.iana.org/';
+
+$r = array();
+
+$loop       = React\EventLoop\Factory::create();
+$dnsResolverFactory = new React\Dns\Resolver\Factory();
+$dns        = $dnsResolverFactory-&gt;createCached('8.8.8.8', $loop);
+$factory    = new React\HttpClient\Factory();
+$httpclient = $factory-&gt;create($loop, $dns);
+
+// 出力ヘッダを用意
+$headers = array(
+            'User-Agent' =&gt; 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)'
+            );
+
+do {
+    foreach (is_array($urls) ? $urls : array($urls) as $url)
+    {
+        $r[$url] = array('url'      =&gt; $url,
+                         'data'     =&gt; '',
+                         'complete' =&gt; false,
+                         'error'    =&gt; false);
+        $rr      = &amp;$r[$url];
+        $request = $httpclient-&gt;request('GET', $url, $headers);
+        // データを要求(ここでは登録だけ)
+        $request-&gt;on('response', function (React\HttpClient\Response $response) use (&amp;$rr) {
+            $response-&gt;on('data', function ($data) use (&amp;$rr) {
+                $rr['data'] .= $data;
+            });
+            $response-&gt;on('end', function ($error, $response) use (&amp;$rr) {
+                $header = $response-&gt;getHeaders();
+var_dump($header);
+                if (!isset($header['Content-Length']) ||
+                    strlen($rr['data']) == $header['Content-Length'])
+                {
+                    $rr['complete'] = true;
+                }
+            });
+            $response-&gt;on('error', function ($error, $response) use (&amp;$rr) {
+                $rr['complete'] = true;
+                $rr['error']    = true;
+            });
+        });
+        $request-&gt;end();
+    }
+    // 通信開始
+    $loop-&gt;run();
+    // 受信完了していない対象をリトライする
+    $urls = array();
+    foreach ($r as $r_)
+    {
+        if (!$r_['complete'] &amp;&amp; !$r_['error'])
+        {
+            $urls[] = $r_['url'];
+        }
+    }
+} while (!empty($urls));
+
+$r = array_values($r);
+
+var_dump($r);
+</code></pre>
+
+<p>って感じで <a href="http://www.google.co.jp/">Google Japan</a> と <a href="http://example.iana.org/">Example.net</a> からページを取得して、バッファに入っていることを確認しているだけです。</p>
+
+<pre><code>#php test.php
+array(2) {
+  [0] =&gt;
+  array(5) {
+    'url' =&gt;
+    string(24) "http://www.google.co.jp/"
+    'data' =&gt;
+    string(67371) "&lt;!doctype html&gt;&lt;html itemscope="itemscope" itemtype="http://schema.org/WebPage"&gt;&lt;head&gt;&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;&lt;meta content="text/html; charset=UTF-8" http-equiv="content-type"&gt;&lt;meta content="世界中のあらゆる情報を検索するためのツールを提供しています。さまざまな検索機能を活用して、お探しの情報を見つけてください。" name="description"&gt;&lt;meta content="noodp" name="robots"&gt;&lt;meta itemprop="image" content="/images/google_favi"...
+    'complete' =&gt;
+    bool(true)
+    'error' =&gt;
+    bool(true)
+  }
+  [1] =&gt;
+  array(5) {
+    'url' =&gt;
+    string(24) "http://example.iana.org/"
+    'data' =&gt;
+    string(1270) "&lt;!doctype html&gt;\n&lt;html&gt;\n&lt;head&gt;\n    &lt;title&gt;Example Domain&lt;/title&gt;\n\n    &lt;meta charset="utf-8" /&gt;\n    &lt;meta http-equiv="Content-type" content="text/html; charset=utf-8" /&gt;\n    &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;\n    &lt;style type="text/css"&gt;\n    body {\n        background-color: #f0f0f2;\n        margin: 0;\n        padding: 0;\n        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;\n        \n    }\n    div {\n        width: 600px;\n        m"...
+    'complete' =&gt;
+    bool(true)
+    'error' =&gt;
+    bool(true)
+  }
+}
+</code></pre>
+
+<p>実行すると、上のような感じで受信が完了後にデータがバッファに収納されています。</p>
+
+<p>ここでの肝は、phpのクロージャを使って取得対象のアドレスごとに受信用のバッファを確保し、それを受け渡しています。</p>
+
+<p>Reactの機能でアクセス中のURLを取得したりできないか頑張ってみましたけどうまくいかず、ソースを眺めていたら見たことない構文を見つけたのです。 で、マニュアルで調べると <a href="http://www.php.net/manual/ja/functions.anonymous.php">PHP: 無名関数 - Manual</a> にスコープの外の変数を参照する方法が書かれていたので試してみたらうまくいったってのが事の真相。</p>
+
+<p>PHP 5.3 から使える構文のようでしたが完全にスルーしてましたorz</p>
+
+<h2 id="%E6%B3%A8%E6%84%8F%E7%82%B9" itemprop="articleSection">注意点</h2>
+
+<p>なんか、ダウンロードが途中で失敗する場合や全部のリクエストを処理してくれないことがあるみたい。 たぶん、受信タイムアウトっぽい。</p>
+
+<p>全部処理できないのは完了したのを覚えておいてリトライをすればいいし、途中で中断するのは Content-Length があれば比較すればOKみたい。</p>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81" itemprop="articleSection">まとめ</h2>
+
+<ul>
+<li><a href="http://www.php.net/manual/ja/functions.anonymous.php">PHP: 無名関数 - Manual</a> を使うと React で受信中に受信中のURLやデータをバッファに詰めたりできるよ</li>
+<li>受信タイムアウトはまれに起きる場合があるので注意！</li>
+<li>composer 怖くない、 composer 友達</li>
+<li>React 楽しい！</li>
+</ul>
+
+        </div>
+        <hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" />
+        <footer>            <div style="line-height: 25px; height: 25px;">
+    <span style="display: inline-block; vertical-align: top;">
+        <i class="fa fa-calendar"></i>
+        <span itemprop="datePublished" content="2013-06-29">2013年06月29日</span>
+        &nbsp;/&nbsp;
+        <i class="fa fa-history"></i> <a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2013-06-29-react-and-composer.md">変更履歴</a>
+        &nbsp;/&nbsp;
+        <i class="fa fa-thumb-tack"></i> <a href="/blog/2013/06/29/react-and-composer.html">Permalink</a>
+        &nbsp;/&nbsp;
+    </span>
+    <meta itemprop="url" content="http://www.sharkpp.net/blog/2013/06/29/react-and-composer.html" />
+    <span itemprop="author" itemscope itemtype="https://schema.org/Person"
+          style="display: none;"
+       ><span itemprop="name">sharkpp</span
+   ></span>
+    <a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2013%2F06%2F29%2Freact-and-composer.html"
+       class="hatena-bookmark-button"
+       data-hatena-bookmark-title="React楽しい＆composerは怖くない &mdash; さめたすたすのお家"
+       data-hatena-bookmark-layout="simple-balloon"
+       title="このエントリーをはてなブックマークに追加"
+      ><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png"
+            alt="このエントリーをはてなブックマークに追加"
+            width="20" height="20" style="border: none;" /></a
+      >
+    <a href="https://twitter.com/share" class="twitter-share-button"
+       data-url="http://www.sharkpp.net/blog/2013/06/29/react-and-composer.html" data-via="sharkpp">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</div><div style="line-height: 25px; height: 25px;">
+                                <span class="categories">
+            <i class="fa fa-folder-open"></i> カテゴリ:
+                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a>                        </span>
+        &nbsp;/&nbsp;
+                                <span class="tags">
+            <i class="fa fa-tag"></i> タグ:
+                        <a href="/blog/tags/php">php</a>                        </span>
+        </div>
+        </footer>
+
+                    <hr style="border-top: none; border-bottom: 1px dashed #aaa; margin: 10px 0;" />
+            <nav class="article">
+                <ul class="list-unstyled row">
+                                            <li class="col-md-6 text-left"><a class="next" href="/blog/2013/07/13/qt-nagoya-9.html" title="名古屋Qt勉強会#9に参加しました"><span class="title"><i class="fa fa-chevron-left"></i> 名古屋Qt勉強会#9に参加しました</span></a></li>
+                                                                <li class="col-md-6 text-right"><a class="previous" href="/blog/2013/06/01/boost-11-in-tokyo.html" title="Boost.勉強会 #11 東京 に参加しました"><span class="title">Boost.勉強会 #11 東京 に参加しました</span> <i class="fa fa-chevron-right"></i></a></li>
+                                    </ul>
+            </nav>
+            </article>
+
+
+
+        </div>
+
+        <footer class="footer">
+            <dev class="overflow">
+                <div class="container text-center">
+                    <ul class="list-unstyled list-inline">
+                        <li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li>
+                        <li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li>
+                        <li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li>
+                        <li><i class="fa-li fa fa-ellipsis-h"></i> <a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li>
+                        <li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /blog/2013/06/29/react-and-composer.html"
+                                  rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li>
+                    </ul>
+                </div>
+                <div class="container text-center">
+                    <ul class="list-unstyled list-inline">
+                        <li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li>
+                        <li class="text-muted">&copy; 2004-2017 sharkpp</li>
+                    </ul>
+                </div>
+                <div class="container text-center text-muted">
+                    <ruby>
+                        <rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                            >Creative Commons Attribution 4.0 International License</a>.</rb>
+                        <rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                  >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp>
+                    </ruby>
+                </div>
+                <div class="container text-center text-muted">
+                    <ruby>
+                        <rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
+                                                                            >The MIT License</a>.</rb>
+                        <rp>(</rp><rt>さらに、コードスニペットは <a rel="nofollow" href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license"
+                                                               >MIT ライセンス</a> の下にライセンスされています。</rt><rp>)</rp>
+                    </ruby>
+                </div>
+            </div>
+        </footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>')</script>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.js"></script>
+        <script>$('body').modal || document.write('<script src="/assets/bootstrap/js/bootstrap.min.js"><\/script>')</script>
+                
+        
+        <script src="/assets/highlightjs/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        <script type="text/javascript">
+            $('a img').each(function(){
+                var rel = ($(this).attr('src').match(/images\u002f([0-9_]{4}_[0-9_]{4})/i) ||
+                           ['','lightbox'])[1];
+                $(this).parent()
+                    .attr('data-lightbox', rel)
+                    .attr('data-title', $(this).attr('alt'))
+                    ;
+            });
+        </script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+        <script>$(document).ready(function(){ window.lightbox || $.getScript("/assets/lightbox2/js/lightbox.min.js"); });</script>
+
+                <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.5/jquery.smooth-scroll.min.js"></script>
+        <script>$.smoothScroll || document.write('<script src="/assets/jquery-smooth-scroll/jquery.smooth-scroll.min.js"><\/script>')</script>
+        <script type="text/javascript">
+            $('#toc a')
+                .each(function(){
+                    var id = $(this).attr('href').slice(1);
+                    $(this)
+                        .smoothScroll({
+                            scrollTarget: $('[id="' + id + '"]'),
+                            offset: -50,
+                            beforeScroll: function(){ /*history.pushState({}, id, "#" + id);*/ }
+                        });
+                })
+                ;
+            $('#go-top')
+                .on('click', function() {
+                    $.smoothScroll({
+                        scrollElement: $('body'),
+                        scrollTarget: '',
+                        beforeScroll: function(){ /*history.pushState({}, "", location.href.replace(location.hash, ''));*/ },
+                        afterScroll: function(){ $('body').css('position', ''); }
+                    });
+                    return false;
+                });
+            $(window).scroll(function () {
+                var scroll   = $(this).scrollTop();
+                var visibled = $('#go-top').css('display') == 'block';
+                var next_state = $('#go-top').attr('data-next-state');
+                if (100 <= scroll && (!visibled || 'hidden' == next_state))
+                    $('#go-top')
+                        .stop(true, true)
+                        .attr('data-next-state', 'visible')
+                        .fadeIn('slow', function(){
+                            $(this).removeAttr('data-next-state');
+                        });
+                else if (scroll < 100 && (visibled || 'visible' == next_state))
+                    $('#go-top')
+                        .stop(true, true)
+                        .attr('data-next-state', 'hidden')
+                        .fadeOut('slow', function(){
+                            $(this).removeAttr('data-next-state');
+                        });
+            });
+            $(window).scroll();
+        </script>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                // apply table to bootstrap css
+                $('table:not([class])')
+                    .addClass('table table-bordered table-hover table-condensed table-striped')
+                    .wrap("<div style='width:100%;overflow-x:auto;'></div>");
+             });
+        </script>
+
+        <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+
+
+    </body>
+</html>

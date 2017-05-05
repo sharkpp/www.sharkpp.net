@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/Thunderbird.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:50+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[セキュアな電子メールの設定(追記あり)]]></title>
+            <link href="http://www.sharkpp.net/blog/2010/12/12/secure-email-settings.html"/>
+            <updated>2010-12-12T20:39:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2010/12/12/secure-email-settings.html</id>
+            <content type="html"><![CDATA[<p></p>
+<div class="alert alert-danger alert-dismissible" role="alert">
+  <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
+  <dl style="margin-bottom: 0; margin-left: 35px;">
+    <dt>2015-11-07 追記</dt>
+    <dd>inter7.jp は 2014年12月20日 12時00分 にサービスの提供を終了しました。そのため下記の該当内容は過去の参考としてのみ残してあります。</dd>
+  </dl>
+</div>
+
+<p>他ごと始めちゃったので EdMax のメールボックスから Thunderbird のメールボックスへの変換は中断してますorz</p>
+
+<p>過去のメールは取り敢えず捨て置いて Thunderbird へ移行しちゃいました。</p>
+
+<p>で、折角 POP over SSL などなど安全な接続が使えるので設定してしまおうと言うことで、既存のメールを全て Thunderbird で管理するようにしました。</p>
+
+<p>xrea などの設定が結構時間がかかったのでメモ代わりに公開します。</p>
+
+<h2 id="inter7.jp">inter7.jp</h2>
+
+<table>
+<thead>
+<tr>
+  <th>inter7.jp</th>
+  <th>http://www.inter7.jp/</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>プロトコル</td>
+  <td>POP3</td>
+</tr>
+<tr>
+  <td>サーバー名</td>
+  <td>pop.inter7.jp:995</td>
+</tr>
+<tr>
+  <td>ユーザー名</td>
+  <td><em>アカウント名</em></td>
+</tr>
+<tr>
+  <td>接続の保護</td>
+  <td>SSL/TLS</td>
+</tr>
+<tr>
+  <td>認証方式</td>
+  <td>通常のパスワード認証</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="xrea%2B">xrea+</h2>
+
+<table>
+<thead>
+<tr>
+  <th>xrea+</th>
+  <th>http://www.xrea.com/</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>プロトコル</td>
+  <td>POP3</td>
+</tr>
+<tr>
+  <td>サーバー名</td>
+  <td><em>サーバー名</em>.value-domain.com:995<br/>※<em>サーバー名</em> は、例えば、<em>s152.xrea.com</em> なら <em>s152-xrea-com</em> で <em>s152-xrea-com.value-domain.com</em> なかんじ</td>
+</tr>
+<tr>
+  <td>ユーザー名</td>
+  <td><em>メールアドレス(hoge@example.netのような感じ)</em></td>
+</tr>
+<tr>
+  <td>接続の保護</td>
+  <td>SSL/TLS</td>
+</tr>
+<tr>
+  <td>認証方式</td>
+  <td>通常のパスワード認証</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+  <th>xrea+</th>
+  <th>http://www.xrea.com/</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>プロトコル</td>
+  <td>SMTP</td>
+</tr>
+<tr>
+  <td>サーバー名</td>
+  <td><em>サーバー名</em>.value-domain.com:465</td>
+</tr>
+<tr>
+  <td>ユーザー名</td>
+  <td><em>メールアドレス(hoge@example.netのような感じ)</em></td>
+</tr>
+<tr>
+  <td>接続の保護</td>
+  <td>SSL/TLS</td>
+</tr>
+<tr>
+  <td>認証方式</td>
+  <td>通常のパスワード認証</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="yahoo%21%E3%83%A1%E3%83%BC%E3%83%AB">Yahoo!メール</h2>
+
+<table>
+<thead>
+<tr>
+  <th>Yahoo!メール</th>
+  <th>http://www.yahoo.co.jp/</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>プロトコル</td>
+  <td>POP3</td>
+</tr>
+<tr>
+  <td>サーバー名</td>
+  <td>pop.mail.yahoo.co.jp:995</td>
+</tr>
+<tr>
+  <td>ユーザー名</td>
+  <td><em>アカウント名</em></td>
+</tr>
+<tr>
+  <td>接続の保護</td>
+  <td>SSL/TLS</td>
+</tr>
+<tr>
+  <td>認証方式</td>
+  <td>通常のパスワード認証</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+  <th>Yahoo!メール</th>
+  <th>http://www.yahoo.co.jp/</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>プロトコル</td>
+  <td>SMTP</td>
+</tr>
+<tr>
+  <td>サーバー名</td>
+  <td>smtp.mail.yahoo.co.jp:465</td>
+</tr>
+<tr>
+  <td>ユーザー名</td>
+  <td><em>アカウント名</em></td>
+</tr>
+<tr>
+  <td>接続の保護</td>
+  <td>SSL/TLS</td>
+</tr>
+<tr>
+  <td>認証方式</td>
+  <td>通常のパスワード認証</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="microsoft-live-hotmail">Microsoft Live Hotmail</h2>
+
+<table>
+<thead>
+<tr>
+  <th>Microsoft Live Hotmail</th>
+  <th>http://www.live.com/</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>プロトコル</td>
+  <td>POP3</td>
+</tr>
+<tr>
+  <td>サーバー名</td>
+  <td>pop3.live.com:995</td>
+</tr>
+<tr>
+  <td>ユーザー名</td>
+  <td><em>アカウント名(Windows Live ID)</em></td>
+</tr>
+<tr>
+  <td>接続の保護</td>
+  <td>SSL/TLS</td>
+</tr>
+<tr>
+  <td>認証方式</td>
+  <td>通常のパスワード認証</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+  <th>Microsoft Live Hotmail</th>
+  <th>http://www.live.com/</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>プロトコル</td>
+  <td>SMTP</td>
+</tr>
+<tr>
+  <td>サーバー名</td>
+  <td>smtp.live.com:587</td>
+</tr>
+<tr>
+  <td>ユーザー名</td>
+  <td><em>アカウント名(Windows Live ID)</em></td>
+</tr>
+<tr>
+  <td>接続の保護</td>
+  <td>STARTTLS</td>
+</tr>
+<tr>
+  <td>認証方式</td>
+  <td>通常のパスワード認証</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="gmail">GMail</h2>
+
+<table>
+<thead>
+<tr>
+  <th>Microsoft Live Hotmail</th>
+  <th>https://mail.google.com/</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>プロトコル</td>
+  <td>IMAP</td>
+</tr>
+<tr>
+  <td>サーバー名</td>
+  <td>imap.gmail.com:993</td>
+</tr>
+<tr>
+  <td>ユーザー名</td>
+  <td><em>アカウント名</em></td>
+</tr>
+<tr>
+  <td>接続の保護</td>
+  <td>SSL/TLS</td>
+</tr>
+<tr>
+  <td>認証方式</td>
+  <td>通常のパスワード認証</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+  <th>Microsoft Live Hotmail</th>
+  <th>https://mail.google.com/</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>プロトコル</td>
+  <td>SMTP</td>
+</tr>
+<tr>
+  <td>サーバー名</td>
+  <td>smtp.gmail.com:465</td>
+</tr>
+<tr>
+  <td>ユーザー名</td>
+  <td><em>アカウント名</em></td>
+</tr>
+<tr>
+  <td>接続の保護</td>
+  <td>SSL/TLS</td>
+</tr>
+<tr>
+  <td>認証方式</td>
+  <td>通常のパスワード認証</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<p>こんな感じで、合計7アカウントを取り敢えず登録してあります。</p>
+
+<p>GMail や Yahoo や Hotmail はメールアドレスなどを入力すると自動でサーバーを探してくれました。</p>
+]]></content>
+        </entry>
+    </feed>

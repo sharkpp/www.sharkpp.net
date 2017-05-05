@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/rhaco2.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:50+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[rhaco2ってどうやって使うの？]]></title>
+            <link href="http://www.sharkpp.net/blog/2009/02/01/how-to-use-rhaco2.html"/>
+            <updated>2009-02-01T17:56:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2009/02/01/how-to-use-rhaco2.html</id>
+            <content type="html"><![CDATA[<p>Rhaco2を少し触りだしたのでまず、初期設定関連のメモを書いてみた</p>
+
+<p>Lingerからお目当てのものを検索かけても出てこず1日ごとに戻りながら探していって時間を食ってしまった</p>
+
+<p>ってことでメモのリンク</p>
+
+<p><a href="/blog/2009/02/01/rhaco-how-to-use-rhaco2.html">rhaco2ってどうやって使うの？</a></p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[rhaco2ってどうやって使うの？]]></title>
+            <link href="http://www.sharkpp.net/blog/2009/02/01/rhaco-how-to-use-rhaco2.html"/>
+            <updated>2009-02-01T17:45:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2009/02/01/rhaco-how-to-use-rhaco2.html</id>
+            <content type="html"><![CDATA[<p>2009年12月31日 追記</p>
+
+<p>以下の内容は、2009年02月01日の時点でのリポジトリ最新版で確認した記述です。</p>
+
+<p>rhaco2は仕様がころころ変わっていたり、開発途中なためすでに内容が過去のものになっています。</p>
+
+<p>なので、最新の内容については、<a href="http://rhaco.org/">rhaco.org</a>とか<a href="http://wikihub.org/wiki/rhaco2-doc">rhaco2 Documents</a>とか<a href="http://lingr.com/room/rhaco_ja">rhaco_ja</a>をご参照ください。</p>
+
+<p>Google経由で訪れていただいた方すいません。</p>
+
+<p>最新を追いきれていません。</p>
+
+<hr />
+
+<p><a href="http://www.lingr.com/room/rhaco-ja/archives/2009/01/25#msg-58317531">rhaco2どうやってつかうの@Linger::rhaco-ja</a> より</p>
+
+<p>現時点でのRhaco2はSetupが存在しないので設定などを手動で定義してあげる必要があります</p>
+
+<p>でまず、Subversionがインストール済みだとして、</p>
+
+<p>適当なディレクトリで</p>
+
+<pre>svn co http://rhaco.svn.sourceforge.net/svnroot/rhaco/trunk rhaco2
+</pre>
+
+<p>を実行</p>
+
+<p>&#95;&#95;settings&#95;&#95;.php と名前を付けてファイルに</p>
+
+<pre>&lt;?php
+require_once("/var/www/html/rhaco2/Rhaco.php");
+Rhaco::init(__FILE__,null,"http://localhost");
+</pre>
+
+<p>などと記述</p>
+
+<p>"/var/www/html/rhaco2/Rhaco.php" の部分はRhaco.phpの絶対パスを指定します</p>
+
+<p>相対パスでも今のところは良いみたい</p>
+
+<p>使用するときは、例えば index.php と名前を付けたファイルに</p>
+
+<pre>&lt;?php
+include_once("./__settings__.php");
+</pre>
+
+<p>と記述すればOK</p>
+
+<p>テンプレートを使いたいときは、</p>
+
+<p>templateディレクトリを作り、そのパスを&#95;&#95;settings&#95;&#95;.phpに相対パスで指定</p>
+
+<p>たとえば、&#95;&#95;settings&#95;&#95;.phpに</p>
+
+<pre>Rhaco::def("core.Template@path",Rhaco::path("template"));
+</pre>
+
+<p>と追記</p>
+
+<p>※rev.4039で区切り文字が"::"から"@"に変更されているので要注意！</p>
+
+<p>templateディレクトリにfoo.htmlを作り、index.phpに</p>
+
+<pre>Rhaco::import("core.Template");
+$template = new Template();
+print($template-&gt;read("foo.html"));
+</pre>
+
+<p>と追記すればfoo.htmlの内容が表示されます</p>
+
+<p>あとはソース読んでねって事みたい</p>
+]]></content>
+        </entry>
+    </feed>

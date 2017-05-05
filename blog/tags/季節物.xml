@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/%E5%AD%A3%E7%AF%80%E7%89%A9.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:49+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[除夜の鐘をブログパーツにしてみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/12/31/joya-no-kane-for-blog-parts.html"/>
+            <updated>2015-12-31T12:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/12/31/joya-no-kane-for-blog-parts.html</id>
+            <content type="html"><![CDATA[<p>この季節の風物詩、「除夜の鐘」がブログパーツになって帰ってきた！</p>
+
+<p>ってな感じの更新を行ったのでその紹介。</p>
+
+<p>HSPDish.js そのままでブログパーツにしたので、この程度なら書き直したほうが早いかも、、、と思わなくもない。</p>
+
+<h2 id="%E7%B0%A1%E5%8D%98%E3%81%AA%E7%B4%B9%E4%BB%8B">簡単な紹介</h2>
+
+<p>除夜の鐘をつくだけのプログラムです。</p>
+
+<p>表示されている鐘をクリックします。</p>
+
+<p>すると、煩悩が「ゴ～ン」という音とともに消えて行くことでしょう。</p>
+
+<h2 id="%E4%BD%BF%E3%81%84%E6%96%B9">使い方</h2>
+
+<p>すぐに表示させる場合は、このような感じ。</p>
+
+<pre><code class="html">&lt;iframe src="https://cdn.rawgit.com/sharkpp/joya_no_kane/v1.0.1/widget.html"
+　　　　　width="128" height="128" frameborder="0" scrolling="no"&gt;&lt;/iframe&gt;
+</code></pre>
+
+<iframe src="https://cdn.rawgit.com/sharkpp/joya_no_kane/v1.0.1/widget.html"
+        width="128" height="128" frameborder="0" scrolling="no"></iframe>
+
+<p><i class="fa fa-external-link-square"></i> <a href="https://rawgit.com/">RawGit</a> を利用しています。</p>
+
+<p><i class="fa fa-exclamation-triangle"></i> ランタイムやリソースを含めたサイズの合計が 1MB 程度あるので注意が必要です。</p>
+
+<h2 id="%E3%81%9D%E3%81%AE%E4%BB%96%E3%83%AA%E3%83%B3%E3%82%AF">その他リンク</h2>
+
+<ul class="fa-ul">
+<li><i class="fa-li fa fa-external-link-square"></i><a href="https://github.com/sharkpp/joya_no_kane">ソースコード</a></li>
+<li><i class="fa-li fa fa-external-link-square"></i><a href="http://sharkpp.github.io/joya_no_kane/">GitHubページ</a></li>
+<li><i class="fa-li fa fa-external-link-square"></i><a href="http://hsproom.me/program/view/?p=146">HSP部屋(β)</a></li>
+<li><i class="fa-li fa fa-download"></i><a href="/files/bells100.zip">Windows版ダウンロード</a></li>
+<li><i class="fa-li fa fa-download"></i><a href="https://github.com/sharkpp/joya_no_kane/zipball/master">HTML/ブログパーツ版ダウンロード</a></li>
+</ul>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://testcording.com/?p=1259">TEST CORDING » GithubからJavaScriptを読み込み時は専用のドメインから！</a></li>
+<li><a href="http://hsproom.me/help/#ブログパーツ">ヘルプ - HSP部屋(β)</a></li>
+<li><a href="http://www.onionsoft.net/hsp/v34/doclib/hsp3dish_js.htm">HSP3Dish WebGL/JavaScript版(hsp3dish.js)プログラミングガイド</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[除夜の鐘]]></title>
+            <link href="http://www.sharkpp.net/blog/2011/01/01/joya-no-kane.html"/>
+            <updated>2011-01-01T02:32:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2011/01/01/joya-no-kane.html</id>
+            <content type="html"><![CDATA[<h3 id="%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E">ソフトの説明</h3>
+
+<p><img src="/images/2011_0101_joya_no_kane.jpg" alt="画面" /></p>
+
+<p>このソフトは除夜の鐘をPCでつくためのソフトです。</p>
+
+<h3 id="%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89">ダウンロード</h3>
+
+<p><a href="/files/bells100.zip" title="bells100.zip">DOWNLOAD</a></p>
+
+<h3 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール</h3>
+
+<ul>
+<li>フォルダに解凍して、実行するだけです。</li>
+</ul>
+
+<h3 id="%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">アンインストール</h3>
+
+<ul>
+<li>解凍して出来たファイルを削除するだけです。</li>
+<li>レジストリは一切使用しておりません。</li>
+</ul>
+
+<h3 id="%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D%E7%92%B0%E5%A2%83">動作確認環境</h3>
+
+<p>PC　: 自作PC</p>
+
+<p>OS　: Windows XP Professional x64 Edition Version 5.20.3790 SP2</p>
+
+<p>以上の環境で動作を確認しました。</p>
+
+<h3 id="%E6%9B%B4%E6%96%B0%E5%B1%A5%E6%AD%B4">更新履歴</h3>
+
+<ul>
+<li>1.0.0.0 2011-01-01　初版</li>
+</ul>
+]]></content>
+        </entry>
+    </feed>

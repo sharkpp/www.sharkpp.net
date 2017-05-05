@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sculpin を実行するために xrea.com 上で libxml2 を構築する方法 &mdash; さめたすたすのお家</title>
+        <meta charset="utf-8">
+        <meta name="theme-color" content="#6877AA">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="index, follow">
+        <meta name="keywords" content="php,xrea.com,libxml,Linux,configure,Sculpin">
+        <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/lightbox2/css/lightbox.css" rel="stylesheet" type="text/css" />
+        <link href="/css/style.min.css" rel="stylesheet" type="text/css" />
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <link rel="apple-touch-startup-image" href="/images/noname/2048x2048.png">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="shortcut icon" sizes="76x76" href="/images/noname/76x76.png">
+        <link rel="shortcut icon" sizes="120x120" href="/images/noname/120x120.png">
+        <link rel="shortcut icon" sizes="128x128" href="/images/noname/128x128.png">
+        <link rel="shortcut icon" sizes="152x152" href="/images/noname/152x152.png">
+        <link rel="shortcut icon" sizes="196x196" href="/images/noname/196x196.png">
+        <link rel="shortcut icon" sizes="512x512" href="/images/noname/512x512.png">
+        <link rel="shortcut icon" sizes="1024x1024" href="/images/noname/1024x1024.png">
+        <link rel="shortcut icon" sizes="2048x2048" href="/images/noname/2048x2048.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/noname/76x76.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/noname/120x120.png">
+        <link rel="apple-touch-icon" sizes="128x128" href="/images/noname/128x128.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/noname/152x152.png">
+        <link rel="apple-touch-icon" sizes="196x196" href="/images/noname/196x196.png">
+        <link rel="apple-touch-icon" sizes="512x512" href="/images/noname/512x512.png">
+        <link rel="apple-touch-icon" sizes="1024x1024" href="/images/noname/1024x1024.png">
+        <link rel="apple-touch-icon" sizes="2048x2048" href="/images/noname/2048x2048.png">
+
+        <link rel="stylesheet" href="/assets/highlightjs/styles/github.css" />
+        <link rel="alternate" type="application/atom+xml" href="/atom.xml" title="さめたすたすのお家 activity feed" />
+        <style>
+        /** quick fix because bootstrap <pre> has a background-color. */
+        pre code { background-color: inherit; }
+        </style>
+                <style>
+        #go-top {
+            display: none;
+            bottom: 40px;
+            right: 30px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #fff;
+            position: fixed;
+            z-index: 999;
+        }
+        #go-top > i {
+            font-size: 36px;
+            line-height: 40px;
+        }
+        #toc {
+            margin-left: 10px;
+            margin-bottom: 10px;
+            max-width: 350px;
+            word-wrap: break-word;
+        }
+        </style>
+
+<link href="/css/mermaid.min.css" rel="stylesheet" type="text/css" />
+
+                    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">さめたすたすのお家</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav pull-right">
+                        <li><a href="/blog/"><i class="fa fa-archive"></i> アーカイブ</a></li>
+                        <li><a href="/blog/categories"><i class="fa fa-folder-open"></i> カテゴリ</a></li>
+                        <li><a href="/blog/tags"><i class="fa fa-tags"></i> タグ</a></li>
+                        <li><a href="/product/"><i class="fa fa-download"></i> 作ったもの</a></li>
+                        <li><a href="/graffiti/"><i class="fa fa-paint-brush"></i> 落書き</a></li>
+                        <li><a href="/link.html"><i class="fa fa-link"></i> リンク</a></li>
+                        <li><a href="/about">About</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <div class="mainContent container">
+                                                                                
+                                
+    <ol class="breadcrumb" itemscope="itemscope"
+                           itemtype="http://schema.org/BreadcrumbList">
+        <li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/"
+           ><i class="fa fa-home fa-lg"></i
+     >&nbsp;<span itemprop="name">HOME</span
+           ><meta itemprop="position" content="1"
+          /></a
+       ></li>
+        <li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/blog/2015/"
+           ><span>2015</span
+           ><meta itemprop="position" content="2"
+          /></a
+       ></li>
+        <li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/blog/2015/05/"
+           ><span>05</span
+           ><meta itemprop="position" content="3"
+          /></a
+       ></li>
+        <li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/blog/2015/05/31/"
+           ><span>31</span
+           ><meta itemprop="position" content="4"
+          /></a
+       ></li>
+        <li
+            class="active"><span 
+           ><span>Sculpin を実行するために xrea.com 上で libxml2 を構築する方法</span
+       ></li>
+    </ol>
+
+    <article itemscope="itemscope" itemtype="http://schema.org/Article">
+        <meta itemscope="itemscope" itemprop="mainEntityOfPage"
+              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net/blog/2015/05/31/how-to-build-libxml2-on-xrea-com-for-sculpin.html"/>
+        <header>
+            <h1><span itemprop="headline">Sculpin を実行するために xrea.com 上で libxml2 を構築する方法</span> <small>post</small></h1>
+        </header>
+
+<div id="toc" class="panel panel-default pull-right">
+    <div class="panel-heading text-center">目次</div>
+        <div class="panel-body" style="padding: 10px;">
+            <ul class="fa-ul">
+            <li><i class="fa-li fa fa-paperclip"></i><a href="#libxml-%E3%82%92%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%EF%BC%86%E3%83%93%E3%83%AB%E3%83%89%E2%86%92%E5%A4%B1%E6%95%97">libxml をダウンロード＆ビルド→失敗</a>
+</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#automake-%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89%E2%86%92%E5%A4%B1%E6%95%97">automake のビルド→失敗</a>
+</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#autoconf-2.65-%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89%E2%86%92%E5%A4%B1%E6%95%97">Autoconf 2.65 のビルド→失敗</a>
+</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#m4-1.4.17-%E3%82%92%E3%83%93%E3%83%AB%E3%83%89%EF%BC%86%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E2%86%92%E6%88%90%E5%8A%9F">m4 1.4.17 をビルド＆インストール→成功</a>
+</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#autoconf-2.65-%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89%EF%BC%86%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E2%86%92%E6%88%90%E5%8A%9F">Autoconf 2.65 のビルド＆インストール→成功</a>
+</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#automake-1.15-%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89%EF%BC%86%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E2%86%92%E6%88%90%E5%8A%9F">Automake 1.15 のビルド＆インストール→成功</a>
+</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#libxml-%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89%E2%86%92%E5%A4%B1%E6%95%97">libxml のビルド→失敗</a>
+</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#libtool-2.4.6-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%EF%BC%86%E3%83%93%E3%83%AB%E3%83%89%E2%86%92%E6%88%90%E5%8A%9F">LibTool 2.4.6 のインストール＆ビルド→成功</a>
+</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#3-%E5%BA%A6%E7%9B%AE%E3%81%AE%E6%AD%A3%E7%9B%B4%E3%81%AA-libxml-%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89%EF%BC%86%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E2%86%92%E6%88%90%E5%8A%9F">3 度目の正直な libxml のビルド＆インストール→成功</a>
+</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#sculpin-%E3%81%AE%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D">Sculpin の動作確認</a>
+</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a>
+</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%8F%82%E8%80%83">参考</a>
+        </ul>
+    </div>
+</div>
+
+<div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div>
+
+        <div itemprop="articleBody">
+            <p>Sculpin を xrea.com で動かそうとしたら、</p>
+
+<pre><code class="bash"># php55cli sculpin.phar self-update
+
+  [Symfony\Component\DependencyInjection\Exception\InvalidArgumentException]
+  Unable to parse file "phar:///virtual/XXXXXX/sculpin.phar/src/Sculpin/Bundle/
+  StandaloneBundle/DependencyInjection/../Resources/config/services.xml".
+
+  [InvalidArgumentException]
+  [ERROR 3070] complex type 'container': The content model is not determinist.
+   (in file:////tmp/sf2aedR4G - line 20, column 0)
+</code></pre>
+
+<p>って言われた。</p>
+
+<p>で、調べてみると <code>libxml</code> のバージョンによる問題っぽい感じ。</p>
+
+<pre><code class="bash"># ls -l /usr/lib/libxml*
+lrwxrwxrwx  1 root root      17 2006-07-24 11:38 /usr/lib/libxml2.so.2 -&gt; libxml2.so.2.6.20
+-rwxr-xr-x  1 root root 1223256 2005-09-10 01:31 /usr/lib/libxml2.so.2.6.20
+</code></pre>
+
+<p>なので <code>libxml</code> をビルドしてみることにした。</p>
+
+<p>s152.xrea.com サーバーで作業したので他のサーバーだとスペックが違うかもですが失敗も含め作業をメモしています。</p>
+
+<p>作業記録を兼ね失敗したことなども含め書いてあるので色々長いため、結論だけ知りたい場合は <a href="/blog/2015/05/31/how-to-build-libxml2-on-xrea-com-for-sculpin.html#%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a> まですっ飛ばすことをお勧めします。</p>
+
+<h2 id="libxml-%E3%82%92%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%EF%BC%86%E3%83%93%E3%83%AB%E3%83%89%E2%86%92%E5%A4%B1%E6%95%97" itemprop="articleSection">libxml をダウンロード＆ビルド→失敗</h2>
+
+<p>とりあえず <code>libxml</code> を <a href="https://git.gnome.org/browse/libxml2/">libxml2 - XML parser and markup toolkit</a> からダウンロードして解凍。</p>
+
+<pre><code class="bash"># pwd
+~
+# mkdir build
+# cd build
+# curl -kLO https://git.gnome.org/browse/libxml2/snapshot/libxml2-2.9.2.tar.xz
+# tar xf libxml2-2.9.2.tar.xz
+# cd libxml2-2.9.2
+</code></pre>
+
+<p><code>configure</code> が無いので <code>automake</code> で <code>configure</code> を作ってみる、、、がうまく行かなかった。</p>
+
+<pre><code class="bash"># pwd
+~/build/libxml2-2.9.2
+# ls -l configure.ac
+-rw-r--r--  1 XXXXXX XXXXXX 44763 2014-10-16 16:40 configure.ac
+# aclocal
+/usr/share/aclocal/progsreiserfs.m4:13: warning: underquoted definition of AC_CHECK_LIBREISERFS
+  run info '(automake)Extending aclocal'
+  or see http://sources.redhat.com/automake/automake.html#Extending-aclocal
+/usr/local/share/aclocal/libmcrypt.m4:17: warning: underquoted definition of AM_PATH_LIBMCRYPT
+configure.ac:2: error: Autoconf version 2.63 or higher is required
+configure.ac:2: the top level
+autom4te: /usr/bin/m4 failed with exit status: 63
+aclocal: autom4te failed with exit status: 63
+</code></pre>
+
+<p><a href="https://bugs.archlinux.org/task/20172#comments">FS#20172 : [progsreiserfs] underquoted definition of AC_CHECK_LIBREISERFS</a> を見てファイルをコピーし、修正してみるも</p>
+
+<pre><code class="bash"># pwd
+~/build/libxml2-2.9.2
+# cp -pr /usr/share/aclocal/ ../aclocal
+# vi ../aclocal/progsreiserfs.m4
+# diff /usr/share/aclocal/progsreiserfs.m4 ../aclocal/progsreiserfs.m4
+13c13
+&lt; AC_DEFUN(AC_CHECK_LIBREISERFS,
+---
+&gt; AC_DEFUN([AC_CHECK_LIBREISERFS],
+# aclocal --acdir=../aclocal
+/usr/local/share/aclocal/libmcrypt.m4:17: warning: underquoted definition of AM_PATH_LIBMCRYPT
+  run info '(automake)Extending aclocal'
+  or see http://sources.redhat.com/automake/automake.html#Extending-aclocal
+aclocal:configure.ac:52: warning: macro `AM_INIT_AUTOMAKE' not found in library
+aclocal:configure.ac:89: warning: macro `AM_CONDITIONAL' not found in library
+aclocal:configure.ac:216: warning: macro `AM_CONDITIONAL' not found in library
+aclocal:configure.ac:901: warning: macro `AM_CONDITIONAL' not found in library
+aclocal:configure.ac:1015: warning: macro `AM_CONDITIONAL' not found in library
+aclocal:configure.ac:1105: warning: macro `AM_CONDITIONAL' not found in library
+aclocal:configure.ac:1229: warning: macro `AM_CONDITIONAL' not found in library
+configure.ac:2: error: Autoconf version 2.63 or higher is required
+configure.ac:2: the top level
+autom4te: /usr/bin/m4 failed with exit status: 63
+aclocal: autom4te failed with exit status: 63
+</code></pre>
+
+<p>別のエラーが出てしまい、なおかつ、参照先のパスが変更できなかった。</p>
+
+<h2 id="automake-%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89%E2%86%92%E5%A4%B1%E6%95%97" itemprop="articleSection">automake のビルド→失敗</h2>
+
+<p>それならば、ということで今度は <code>automake</code> をビルドしてみることにした。</p>
+
+<p>とりあえず、 <a href="http://ftp.gnu.org/gnu/automake/?C=M;O=D">GNU Project Archives</a> からダウンロード＆解凍。</p>
+
+<pre><code class="bash"># cd ..
+# pwd
+~/build
+# curl -kLO http://ftp.gnu.org/gnu/automake/automake-1.15.tar.xz
+# tar xf automake-1.15.tar.xz
+# cd automake-1.15
+</code></pre>
+
+<p>そして <code>configure</code> をしてみると、、、</p>
+
+<pre><code class="bash"># ./configure  --prefix=$HOME/usr/automake
+checking whether make supports nested variables... yes
+checking build system type... i686-pc-linux-gnu
+checking host system type... i686-pc-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether ln -s works... yes
+checking for perl... /usr/local/bin/perl
+checking for tex... no
+checking for yacc... yacc
+checking for lex... lex
+checking whether autoconf is installed... yes
+checking whether autoconf works... yes
+checking whether autoconf is recent enough... no
+configure: error: Autoconf 2.65 or better is required.
+</code></pre>
+
+<p>！！！ <code>Autoconf 2.65 or better is required.</code> なん、、、だと？</p>
+
+<p>ぐぬぬ</p>
+
+<h2 id="autoconf-2.65-%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89%E2%86%92%E5%A4%B1%E6%95%97" itemprop="articleSection">Autoconf 2.65 のビルド→失敗</h2>
+
+<pre><code class="bash"># cd ..
+# pwd
+~/build
+# curl -OL http://ftpmirror.gnu.org/autoconf/autoconf-2.69.tar.gz
+# tar xzf autoconf-2.69.tar.gz
+# cd autoconf-2.69
+# ./configure --prefix=$HOME/usr/autoconf
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking build system type... i686-pc-linux-gnu
+checking host system type... i686-pc-linux-gnu
+configure: autobuild project... GNU Autoconf
+configure: autobuild revision... 2.69
+configure: autobuild hostname... s152
+configure: autobuild timestamp... 20150530T042915Z
+checking whether /bin/sh -n is known to work... yes
+checking for characters that cannot appear in file names... none
+checking whether directories can have trailing spaces... yes
+checking for expr... /usr/bin/expr
+checking for GNU M4 that supports accurate traces... configure: error: no acceptable m4 could be found in $PATH.
+GNU M4 1.4.6 or later is required; 1.4.16 or newer is recommended.
+GNU M4 1.4.15 uses a buggy replacement strstr on some systems.
+Glibc 2.9 - 2.12 and GNU M4 1.4.11 - 1.4.15 have another strstr bug.
+</code></pre>
+
+<p>ぐぬぬ</p>
+
+<h2 id="m4-1.4.17-%E3%82%92%E3%83%93%E3%83%AB%E3%83%89%EF%BC%86%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E2%86%92%E6%88%90%E5%8A%9F" itemprop="articleSection">m4 1.4.17 をビルド＆インストール→成功</h2>
+
+<pre><code class="bash"># cd ..
+# pwd
+~/build
+# curl -OL http://ftp.gnu.org/gnu/m4/m4-1.4.17.tar.xz
+# tar xf m4-1.4.17.tar.xz
+# cd m4-1.4.17
+# ./configure --prefix=$HOME/usr/m4
+# make
+# make install
+</code></pre>
+
+<h2 id="autoconf-2.65-%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89%EF%BC%86%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E2%86%92%E6%88%90%E5%8A%9F" itemprop="articleSection">Autoconf 2.65 のビルド＆インストール→成功</h2>
+
+<pre><code class="bash"># cd ../autoconf-2.69
+# pwd
+~/build/autoconf-2.69
+# PATH=$HOME/usr/m4/bin:$PATH ./configure --prefix=$HOME/usr/autoconf
+# PATH=$HOME/usr/m4/bin:$PATH make
+# PATH=$HOME/usr/m4/bin:$PATH make install
+</code></pre>
+
+<h2 id="automake-1.15-%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89%EF%BC%86%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E2%86%92%E6%88%90%E5%8A%9F" itemprop="articleSection">Automake 1.15 のビルド＆インストール→成功</h2>
+
+<pre><code class="bash"># cd ../automake-1.15
+# pwd
+~/build/automake-1.15
+# PATH=$HOME/usr/autoconf/bin:$PATH ./configure --prefix=$HOME/usr/automake
+# PATH=$HOME/usr/autoconf/bin:$PATH make
+# PATH=$HOME/usr/autoconf/bin:$PATH make install
+</code></pre>
+
+<h2 id="libxml-%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89%E2%86%92%E5%A4%B1%E6%95%97" itemprop="articleSection">libxml のビルド→失敗</h2>
+
+<pre><code class="bash"># cd ../libxml2-2.9.2
+# pwd
+~/build/libxml2-2.9.2
+# mkdir m4
+# PATH=$HOME/usr/autoconf/bin:$HOME/usr/m4/bin:$HOME/usr/automake/bin:$PATH aclocal
+# PATH=$HOME/usr/autoconf/bin:$HOME/usr/m4/bin:$HOME/usr/automake/bin:$PATH autoheader
+# PATH=$HOME/usr/autoconf/bin:$HOME/usr/m4/bin:$HOME/usr/automake/bin:$PATH automake
+configure.ac:52: warning: AM_INIT_AUTOMAKE: two- and three-arguments forms are deprecated.  For more info, see:
+configure.ac:52: http://www.gnu.org/software/automake/manual/automake.html#Modernize-AM_005fINIT_005fAUTOMAKE-invocation
+Makefile.am:22: error: Libtool library used but 'LIBTOOL' is undefined
+Makefile.am:22:   The usual way to define 'LIBTOOL' is to add 'LT_INIT'
+Makefile.am:22:   to 'configure.ac' and run 'aclocal' and 'autoconf' again.
+Makefile.am:22:   If 'LT_INIT' is in 'configure.ac', make sure
+Makefile.am:22:   its definition is in aclocal's search path.
+                         :
+    # PATH=$HOME/usr/autoconf/bin:$HOME/usr/m4/bin:$HOME/usr/automake/bin:$PATH autoscan
+    # PATH=$HOME/usr/autoconf/bin:$HOME/usr/m4/bin:$HOME/usr/automake/bin:$PATH autoconf
+    # PATH=$HOME/usr/automake/share/automake-1.15/:$PATH ./configure --prefix=$HOME/usr/libxml
+</code></pre>
+
+<p>なんか LibTool も居るみたい。</p>
+
+<h2 id="libtool-2.4.6-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%EF%BC%86%E3%83%93%E3%83%AB%E3%83%89%E2%86%92%E6%88%90%E5%8A%9F" itemprop="articleSection">LibTool 2.4.6 のインストール＆ビルド→成功</h2>
+
+<pre><code class="bash"># cd ..
+# pwd
+~/build
+# curl -OL http://ftp.gnu.org/gnu/libtool/libtool-2.4.6.tar.xz
+# tar xf libtool-2.4.6.tar.xz
+# cd libtool-2.4.6
+# PATH=$HOME/usr/m4/bin:$PATH ./configure --prefix=$HOME/usr/libtool
+# make
+# make install
+</code></pre>
+
+<h2 id="3-%E5%BA%A6%E7%9B%AE%E3%81%AE%E6%AD%A3%E7%9B%B4%E3%81%AA-libxml-%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89%EF%BC%86%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E2%86%92%E6%88%90%E5%8A%9F" itemprop="articleSection">3 度目の正直な libxml のビルド＆インストール→成功</h2>
+
+<pre><code class="bash"># cd ../libxml2-2.9.2
+# pwd
+~/build/libxml2-2.9.2
+# PATH=$HOME/usr/libtool/bin:$PATH libtoolize
+# PATH=$HOME/usr/autoconf/bin:$HOME/usr/m4/bin:$HOME/usr/automake/bin:$PATH aclocal
+# PATH=$HOME/usr/autoconf/bin:$HOME/usr/m4/bin:$HOME/usr/automake/bin:$PATH autoheader
+# PATH=$HOME/usr/autoconf/bin:$HOME/usr/m4/bin:$HOME/usr/automake/bin:$PATH automake --add-missing
+# PATH=$HOME/usr/autoconf/bin:$HOME/usr/m4/bin:$HOME/usr/automake/bin:$PATH autoconf
+# PATH=$HOME/usr/automake/share/automake-1.15/:$PATH ./configure --prefix=$HOME/usr/libxml --without-python
+                           :
+Checking lzma
+./configure: line 13094: syntax error near unexpected token `LZMA,liblzma,'
+./configure: line 13094: `    PKG_CHECK_MODULES(LZMA,liblzma,'
+</code></pre>
+
+<p>と <code>configure</code> 時にエラーが出るので少し修正。</p>
+
+<pre><code class="bash"># cp configure configure.old 
+# vi configure
+# diff configure.old configure
+13094,13096c13094,13096
+&lt;     PKG_CHECK_MODULES(LZMA,liblzma,
+&lt;         have_liblzma=yes,
+&lt;         have_liblzma=no)
+---
+&gt;     #PKG_CHECK_MODULES(LZMA,liblzma,
+&gt;     #    have_liblzma=yes,
+&gt;     #    have_liblzma=no)
+# PATH=$HOME/usr/automake/share/automake-1.15/:$PATH ./configure --prefix=$HOME/usr/libxml --without-python
+# make
+# make install
+</code></pre>
+
+<p>ちなみに <code>--without-python</code> オプションを指定しないと、システムディレクトリにインストール使用としてエラーが出てしまいます。
+インストール先のディレクトリを指定してもいいけど、まあ要らないので省いています。</p>
+
+<h2 id="sculpin-%E3%81%AE%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D" itemprop="articleSection">Sculpin の動作確認</h2>
+
+<pre><code class="bash"># LD_PRELOAD=~/usr/libxml/lib/libxml2.so php55cli sculpin.phar
+Sculpin version 2.0.x-dev (v2.0.0-46-g0862cc9) - app/dev/debug
+
+Usage:
+ [options] command [arguments]
+               :
+theme
+ theme:list        List currently installed themes.
+</code></pre>
+
+<p>と、うまく動くようになりました。</p>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81" itemprop="articleSection">まとめ</h2>
+
+<p>とりあえず、依存関係は</p>
+
+<pre><code class="mermaid">graph LR
+    libtool  --&gt; m4
+    libxml   --&gt; m4
+    libxml   --&gt; libtool
+    libxml   --&gt; automake
+    libxml   --&gt; autoconf
+    automake --&gt; autoconf
+</code></pre>
+
+<p>とこのようになっていました。</p>
+
+<p>ビルドは、</p>
+
+<ol>
+<li>m4</li>
+<li>libtool</li>
+<li>autoconf</li>
+<li>automake</li>
+<li>libxml</li>
+</ol>
+
+<p>の順でビルドしていくのが良いと思います。</p>
+
+<p>実際のコマンドラインは、</p>
+
+<p>まず、 <code>libxml</code> のビルドに必要なツール類のビルドを、</p>
+
+<pre><code class="bash"># mkdir -p build $HOME/usr/buildtools
+# cd build
+# for I in http://ftp.gnu.org/gnu/m4/m4-1.4.17.tar.xz http://ftp.gnu.org/gnu/libtool/libtool-2.4.6.tar.xz http://ftpmirror.gnu.org/autoconf/autoconf-2.69.tar.gz http://ftp.gnu.org/gnu/automake/automake-1.15.tar.xz ; do curl -LO $I ; done
+# for I in m4-1.4.17 libtool-2.4.6 autoconf-2.69 automake-1.15 ; do tar xf $I.tar.* ; pushd $I ; PATH=$HOME/usr/buildtools/bin:$PATH ./configure --prefix=$HOME/usr/buildtools ; PATH=$HOME/usr/buildtools/bin:$PATH make ; PATH=$HOME/usr/buildtools/bin:$PATH make install ; popd ; done
+</code></pre>
+
+<p>と、こんな感じで、 <code>$HOME/usr/buildtools</code> の下にインストールを行い、</p>
+
+<pre><code class="bash"># curl -kLO https://git.gnome.org/browse/libxml2/snapshot/libxml2-2.9.2.tar.xz
+# tar xf libxml2-2.9.2.tar.xz
+# pushd libxml2-2.9.2
+# for I in libtoolize aclocal autoheader "automake --add-missing" autoconf ; do PATH=$HOME/usr/buildtools/bin:$PATH $I ; done
+# sed -e 's/PKG_CHECK_MODULES(LZMA/#\0/g' -e 's/^        have_liblzma=/#\0/g' configure &gt; configure~ ; mv -f configure~ configure ; chmod +x configure
+# for I in "./configure --prefix=$HOME/usr/libxml --without-python" make "make install" ; do PATH=$HOME/usr/buildtools/bin:$HOME/usr/buildtools/share/automake-1.15/:$PATH $I ; done
+# popd
+</code></pre>
+
+<p>以上の感じで <code>libxml</code> をビルドすることが出来ると思います。</p>
+
+<pre><code class="bash"># ls -l ~/usr/libxml/*
+~/usr/libxml/bin:
+total 156
+-rwxr-xr-x  1 guest users   1684 2015-05-31 21:16 xml2-config
+-rwxr-xr-x  1 guest users  27475 2015-05-31 21:16 xmlcatalog
+-rwxr-xr-x  1 guest users 124327 2015-05-31 21:16 xmllint
+
+~/usr/libxml/include:
+total 0
+drwxr-xr-x  3 guest users 72 2015-05-31 21:16 libxml2
+
+~/usr/libxml/lib:
+total 7139
+drwxr-xr-x  3 guest users      72 2015-05-31 21:16 cmake
+-rw-r--r--  1 guest users 4103164 2015-05-31 21:16 libxml2.a
+-rwxr-xr-x  1 guest users     975 2015-05-31 21:16 libxml2.la
+lrwxrwxrwx  1 guest users      16 2015-05-31 21:16 libxml2.so -&gt; libxml2.so.2.9.2
+lrwxrwxrwx  1 guest users      16 2015-05-31 21:16 libxml2.so.2 -&gt; libxml2.so.2.9.2
+-rwxr-xr-x  1 guest users 3188079 2015-05-31 21:16 libxml2.so.2.9.2
+drwxr-xr-x  2 guest users      80 2015-05-31 21:16 pkgconfig
+-rw-r--r--  1 guest users     254 2015-05-31 21:16 xml2Conf.sh
+
+~/usr/libxml/share:
+total 0
+drwxr-xr-x  2 guest users 80 2015-05-31 21:16 aclocal
+drwxr-xr-x  3 guest users 80 2015-05-31 21:16 doc
+drwxr-xr-x  3 guest users 72 2015-05-31 21:16 gtk-doc
+drwxr-xr-x  4 guest users 96 2015-05-31 21:16 man
+</code></pre>
+
+<h2 id="%E5%8F%82%E8%80%83" itemprop="articleSection">参考</h2>
+
+<ul>
+<li><a href="http://qiita.com/ikedahidenori/items/8e533a9c168e269c4191">CORESERVERにgitをインストールする - Qiita</a></li>
+<li><a href="https://git.gnome.org/browse/libxml2/">libxml2 - XML parser and markup toolkit</a></li>
+<li><a href="http://www.xmlsoft.org/FAQ.html">FAQ</a></li>
+<li><a href="http://nopipi.hatenablog.com/entry/2013/01/14/025509">configureの作り方(autotoolsの使い方） - メモ。。メモ。。</a></li>
+<li><a href="https://bugs.archlinux.org/task/20172#comments">FS#20172 : [progsreiserfs] underquoted definition of AC_CHECK_LIBREISERFS</a></li>
+<li><a href="http://stackoverflow.com/questions/16612791/automake-demands-autoconf-2-65-or-better-and-yet-i-already-have-autoconf-2-69">Automake demands "Autoconf 2.65 or better" and yet I already have Autoconf 2.69 installed - Stack Overflow</a></li>
+<li><a href="https://github.com/dirkvdb/ffmpegthumbnailer/issues/37">aclocal: couldn't open directory `m4': No such file or directory · Issue #37 · dirkvdb/ffmpegthumbnailer</a></li>
+<li><a href="http://stackoverflow.com/questions/18978252/error-libtool-library-used-but-libtool-is-undefined#answer-18980043">c - error: Libtool library used but 'LIBTOOL' is undefined - Stack Overflow</a></li>
+</ul>
+
+        </div>
+        <hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" />
+        <footer>            <div style="line-height: 25px; height: 25px;">
+    <span style="display: inline-block; vertical-align: top;">
+        <i class="fa fa-calendar"></i>
+        <span itemprop="datePublished" content="2015-05-31">2015年05月31日</span>
+        &nbsp;/&nbsp;
+        <i class="fa fa-history"></i> <a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2015-05-31-how-to-build-libxml2-on-xrea-com-for-sculpin.md">変更履歴</a>
+        &nbsp;/&nbsp;
+        <i class="fa fa-thumb-tack"></i> <a href="/blog/2015/05/31/how-to-build-libxml2-on-xrea-com-for-sculpin.html">Permalink</a>
+        &nbsp;/&nbsp;
+    </span>
+    <meta itemprop="url" content="http://www.sharkpp.net/blog/2015/05/31/how-to-build-libxml2-on-xrea-com-for-sculpin.html" />
+    <span itemprop="author" itemscope itemtype="https://schema.org/Person"
+          style="display: none;"
+       ><span itemprop="name">sharkpp</span
+   ></span>
+    <a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2015%2F05%2F31%2Fhow-to-build-libxml2-on-xrea-com-for-sculpin.html"
+       class="hatena-bookmark-button"
+       data-hatena-bookmark-title="Sculpin を実行するために xrea.com 上で libxml2 を構築する方法 &mdash; さめたすたすのお家"
+       data-hatena-bookmark-layout="simple-balloon"
+       title="このエントリーをはてなブックマークに追加"
+      ><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png"
+            alt="このエントリーをはてなブックマークに追加"
+            width="20" height="20" style="border: none;" /></a
+      >
+    <a href="https://twitter.com/share" class="twitter-share-button"
+       data-url="http://www.sharkpp.net/blog/2015/05/31/how-to-build-libxml2-on-xrea-com-for-sculpin.html" data-via="sharkpp">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</div><div style="line-height: 25px; height: 25px;">
+                                <span class="categories">
+            <i class="fa fa-folder-open"></i> カテゴリ:
+                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a>                        </span>
+        &nbsp;/&nbsp;
+                                <span class="tags">
+            <i class="fa fa-tag"></i> タグ:
+                        <a href="/blog/tags/php">php</a>,                         <a href="/blog/tags/xrea.com">xrea.com</a>,                         <a href="/blog/tags/libxml">libxml</a>,                         <a href="/blog/tags/Linux">Linux</a>,                         <a href="/blog/tags/configure">configure</a>,                         <a href="/blog/tags/Sculpin">Sculpin</a>                        </span>
+        </div>
+        </footer>
+
+                    <hr style="border-top: none; border-bottom: 1px dashed #aaa; margin: 10px 0;" />
+            <nav class="article">
+                <ul class="list-unstyled row">
+                                            <li class="col-md-6 text-left"><a class="next" href="/blog/2015/06/06/pastebin-snippet-web-service-list.html" title="PasteBin/Snippet系サービスまとめ"><span class="title"><i class="fa fa-chevron-left"></i> PasteBin/Snippet系サービスまとめ</span></a></li>
+                                                                <li class="col-md-6 text-right"><a class="previous" href="/blog/2015/05/27/qt-japan-summit-2015.html" title="Qt JAPAN SUMMIT 2015 に行ってきた"><span class="title">Qt JAPAN SUMMIT 2015 に行ってきた</span> <i class="fa fa-chevron-right"></i></a></li>
+                                    </ul>
+            </nav>
+            </article>
+
+
+
+        </div>
+
+        <footer class="footer">
+            <dev class="overflow">
+                <div class="container text-center">
+                    <ul class="list-unstyled list-inline">
+                        <li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li>
+                        <li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li>
+                        <li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li>
+                        <li><i class="fa-li fa fa-ellipsis-h"></i> <a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li>
+                        <li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /blog/2015/05/31/how-to-build-libxml2-on-xrea-com-for-sculpin.html"
+                                  rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li>
+                    </ul>
+                </div>
+                <div class="container text-center">
+                    <ul class="list-unstyled list-inline">
+                        <li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li>
+                        <li class="text-muted">&copy; 2004-2017 sharkpp</li>
+                    </ul>
+                </div>
+                <div class="container text-center text-muted">
+                    <ruby>
+                        <rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                            >Creative Commons Attribution 4.0 International License</a>.</rb>
+                        <rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                  >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp>
+                    </ruby>
+                </div>
+                <div class="container text-center text-muted">
+                    <ruby>
+                        <rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
+                                                                            >The MIT License</a>.</rb>
+                        <rp>(</rp><rt>さらに、コードスニペットは <a rel="nofollow" href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license"
+                                                               >MIT ライセンス</a> の下にライセンスされています。</rt><rp>)</rp>
+                    </ruby>
+                </div>
+            </div>
+        </footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>')</script>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.js"></script>
+        <script>$('body').modal || document.write('<script src="/assets/bootstrap/js/bootstrap.min.js"><\/script>')</script>
+                
+        
+        <script src="/assets/highlightjs/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        <script type="text/javascript">
+            $('a img').each(function(){
+                var rel = ($(this).attr('src').match(/images\u002f([0-9_]{4}_[0-9_]{4})/i) ||
+                           ['','lightbox'])[1];
+                $(this).parent()
+                    .attr('data-lightbox', rel)
+                    .attr('data-title', $(this).attr('alt'))
+                    ;
+            });
+        </script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+        <script>$(document).ready(function(){ window.lightbox || $.getScript("/assets/lightbox2/js/lightbox.min.js"); });</script>
+
+                <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.5/jquery.smooth-scroll.min.js"></script>
+        <script>$.smoothScroll || document.write('<script src="/assets/jquery-smooth-scroll/jquery.smooth-scroll.min.js"><\/script>')</script>
+        <script type="text/javascript">
+            $('#toc a')
+                .each(function(){
+                    var id = $(this).attr('href').slice(1);
+                    $(this)
+                        .smoothScroll({
+                            scrollTarget: $('[id="' + id + '"]'),
+                            offset: -50,
+                            beforeScroll: function(){ /*history.pushState({}, id, "#" + id);*/ }
+                        });
+                })
+                ;
+            $('#go-top')
+                .on('click', function() {
+                    $.smoothScroll({
+                        scrollElement: $('body'),
+                        scrollTarget: '',
+                        beforeScroll: function(){ /*history.pushState({}, "", location.href.replace(location.hash, ''));*/ },
+                        afterScroll: function(){ $('body').css('position', ''); }
+                    });
+                    return false;
+                });
+            $(window).scroll(function () {
+                var scroll   = $(this).scrollTop();
+                var visibled = $('#go-top').css('display') == 'block';
+                var next_state = $('#go-top').attr('data-next-state');
+                if (100 <= scroll && (!visibled || 'hidden' == next_state))
+                    $('#go-top')
+                        .stop(true, true)
+                        .attr('data-next-state', 'visible')
+                        .fadeIn('slow', function(){
+                            $(this).removeAttr('data-next-state');
+                        });
+                else if (scroll < 100 && (visibled || 'visible' == next_state))
+                    $('#go-top')
+                        .stop(true, true)
+                        .attr('data-next-state', 'hidden')
+                        .fadeOut('slow', function(){
+                            $(this).removeAttr('data-next-state');
+                        });
+            });
+            $(window).scroll();
+        </script>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                // apply table to bootstrap css
+                $('table:not([class])')
+                    .addClass('table table-bordered table-hover table-condensed table-striped')
+                    .wrap("<div style='width:100%;overflow-x:auto;'></div>");
+             });
+        </script>
+
+        <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+
+
+<script type="text/javascript">
+    $('code.mermaid')
+        .removeClass('brainfuck')
+        .each(function(){
+            $(this).parent()
+                .replaceWith(
+                    '<div class="mermaid" style="white-space: pre; margin: 0 0 10px; background-color: #fefefe; border: 1px solid #ccc; border-radius: 4px;">' +
+                      $(this).text() +
+                    '</div>');
+        });
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mermaid/0.5.0/mermaid.full.min.js"></script>
+<script>window.mermaid || document.write('<script src="/assets/mermaid/dist/mermaid.full.min.js"><\/script>')</script>
+
+
+    </body>
+</html>

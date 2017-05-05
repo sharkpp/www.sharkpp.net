@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/TeraPad.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:50+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[TeraPad Temporary Tool]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/21/terapad-tptemp.html"/>
+            <updated>2008-07-21T00:11:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/21/terapad-tptemp.html</id>
+            <content type="html"><![CDATA[<h2 id="%E8%A9%B3%E7%B4%B0">詳細</h2>
+
+<h2 id="%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E">ソフトの説明</h2>
+
+<p>TeraPadで現在編集中のファイルをテンポラリファイルに保存し、指定されたコマンドを実行するソフトです。</p>
+
+<p>ちなみに、これだけでは何も出来ませんのであしからず。</p>
+
+<h2 id="%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">使用方法</h2>
+
+<p>TpJumpをTeraPadへ登録する時のツール設定項目です。</p>
+
+<table summary="設定項目"><tr>
+<th>
+名前
+</th>
+<td>
+(お好みで)
+</td>
+</tr>
+<tr>
+<th>
+実行ファイル
+</th>
+<td>
+C:\TeraPad\tool\TpTemp.exe<br /><br /> ※実行ファイルのパスは解凍したフォルダを指定してください。<br /> 例. C:\Program Files\TeraPad\tool\TpTemp に解凍したとすると<br /> 　<span style="text-decoration: underline">C:\TeraPad\tool</span>\TpTemp.exe<br /> 　この部分↑に解凍したフォルダを指定します。<br /> 　C:\Program Files\TeraPad\tool\TpTemp\TpTemp.exe<br />
+</td>
+</tr>
+<tr>
+<th>
+コマンドラインパラメータ
+</th>
+<td>
+下記「オプションなど」を参照してください
+</td>
+</tr>
+<tr>
+<th>
+作業フォルダ
+</th>
+<td>
+(空欄)
+</td>
+</tr>
+<tr>
+<th>
+ファイルの上書き保存
+</th>
+<td>
+"上書き保存しない" 推奨
+</td>
+</tr>
+<tr>
+<td colspan="2">
+その他のオプションについてはお好みで設定してください。
+</td>
+</tr>
+</table>
+
+<p><strong>オプションなど</strong></p>
+
+<pre>TpTemp.exe [/n[:]テンポラリ名] [/y] [実行コマンド]
+/n[:]テンポラリ名
+テンポラリの名前を固定する場合に指定しますが、同じファイルがあった場合には実行できません。
+ここに指定できるのはテンポラリのファイル名のみです。
+テンポラリは現在編集中のファイルのあるフォルダに作られます。
+未保存の場合には、TpTempのあるフォルダに作られます。
+/y
+テンポラリファイル名と同じファイルがあっても上書きの確認をせずにファイルを作ります。
+<span>注意! ファイルの指定を間違えると大切なファイルが失われる場合があります。</span>
+実行コマンド
+テンポラリファイルを渡し実行するコマンド
+何もしない場合は実行コマンドの最後にテンポラリファイル名が追加されます。
+/*/ が実行コマンドの中に入っている場合はテンポラリファイル名と置き換えられます。
+例.
+　TpTemp.exe notepad.exe
+　　編集中の内容をテンポラリに保存し、
+　　"notepad.exe テンポラリファイル名" として実行します。
+</pre>
+
+<h2 id="%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85">注意事項</h2>
+
+<p><span>注意! ファイルの指定を間違えると大切なファイルが失われる場合があります。
+</span></p>
+
+<h2 id="%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83">動作環境</h2>
+
+<p>Windows 2000で動作確認済み</p>
+
+<p>Windows 95/98/Me, Windows XP でも動作するはず</p>
+
+<p>TeraPad が必要です。</p>
+
+<h2 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%EF%BC%86%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール＆アンインストール</h2>
+
+<p><strong>インストール</strong></p>
+
+<p>適当なフォルダに解凍して、実行するだけです。</p>
+
+<p>なお、実行時に自動的に Machines フォルダがソフトと同じフォルダにできます。</p>
+
+<p><strong>アンインストール</strong></p>
+
+<p>解凍して出来たフォルダごと削除するだけです。レジストリは一切使用しておりません。</p>
+
+<h2 id="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</h2>
+
+<p><a href="http://www.vector.co.jp/soft/win95/writing/se356123.html" title="tptemp002.lzh">DOWNLOAD</a></p>
+
+<h2 id="%E5%B1%A5%E6%AD%B4">履歴</h2>
+
+<dl>
+<dt>2005/01/23<br />(01/29公開)</dt>
+<dd>[Ver.0.01]<br />某氏に「言い出しっぺの方が作るべきですよね?」と囁かれ作ってみる</dd>
+
+<dt>2005/02/05<br />(02/10公開)</dt>
+<dd>[Ver.0.02]<br />テンポラリの保存フォルダを変更<br />ファイル内容の最後の1バイトが欠ける不具合修正</dd>
+</dl>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[TeraPad KeyWord Get Tool]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/21/terapad-tpkwget.html"/>
+            <updated>2008-07-21T00:10:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/21/terapad-tpkwget.html</id>
+            <content type="html"><![CDATA[<h2 id="%E8%A9%B3%E7%B4%B0">詳細</h2>
+
+<h2 id="%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E">ソフトの説明</h2>
+
+<p>ソフトにキーワードを渡し起動するツールです。</p>
+
+<p>このソフト単体では役に立ちませんのであしからず。</p>
+
+<h2 id="%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">使用方法</h2>
+
+<p>TpJumpをTeraPadへ登録する時のツール設定項目です。</p>
+
+<table border="1" summary="設定項目"><tr>
+<th>
+名前
+</th>
+<td>
+(お好みで)
+</td>
+</tr>
+<tr>
+<th>
+実行ファイル
+</th>
+<td>
+C:\TeraPad\tool\TpkwGet.exe<br /><br /> ※実行ファイルのパスは解凍したフォルダを指定してください。<br /> 例. C:\Program Files\TeraPad\tool\TpkwGet に解凍したとすると<br /> 　<span style="text-decoration: underline">C:\TeraPad\tool</span>\TpkwGet.exe<br /> 　この部分↑に解凍したフォルダを指定します。<br /> 　C:\Program Files\TeraPad\tool\TpkwGet\TpkwGet.exe<br />
+</td>
+</tr>
+<tr>
+<th>
+コマンドラインパラメータ
+</th>
+<td>
+表示してほしい実行ファイルやヘルプファイルをフルパスで入力してください。※
+</td>
+</tr>
+<tr>
+<th>
+作業フォルダ
+</th>
+<td>
+(空欄)
+</td>
+</tr>
+<tr>
+<th>
+ファイルの上書き保存
+</th>
+<td>
+"上書き保存しない" を指定
+</td>
+</tr>
+<tr>
+<td colspan="2">
+その他のオプションについてはお好みで設定してください。
+</td>
+</tr>
+</table>
+
+<p><strong>コマンドラインパラメータ</strong></p>
+
+<pre>●辞書を引く
+　&gt;c:\jisho\dic.exe /keyWord=%s&lt;こんな感じ
+●実行ファイル（実行パラメータにキーワードを添付します）
+　HSP Help Manager(helpman.exe) など
+　&gt;c:\hsp255\hsphelp\helpman.exe %s&lt;こんな感じ
+※もちろん、ほんとにあるフォルダ、ファイルを指定しなければ意味はありません。
+※ファイル名に空白がある場合(c:\program files など)は'"'で囲ってください。
+</pre>
+
+<h2 id="%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83">動作環境</h2>
+
+<p>Windows 2000で動作確認済み</p>
+
+<p>Windows 95/98/Me, Windows XP でも動作するはず</p>
+
+<p>TeraPad が必要です。</p>
+
+<h2 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%EF%BC%86%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール＆アンインストール</h2>
+
+<p><strong>インストール</strong></p>
+
+<p>適当なフォルダに解凍して、実行するだけです。</p>
+
+<p>なお、実行時に自動的に Machines フォルダがソフトと同じフォルダにできます。</p>
+
+<p><strong>アンインストール</strong></p>
+
+<p>解凍して出来たフォルダごと削除するだけです。設定ファイル・レジストリは一切使用しておりません。</p>
+
+<h2 id="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</h2>
+
+<p><a href="/files/tpkwg000.lzh" title="tpkwg000.lzh">DOWNLOAD</a></p>
+
+<h2 id="%E5%B1%A5%E6%AD%B4">履歴</h2>
+
+<dl>
+<dt>2004/02/24</dt>
+<dd>[Ver.0.00]<br />初公開</dd>
+</dl>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[TeraPad KeyWord Help Tool]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/21/terapad-tpkwhelp.html"/>
+            <updated>2008-07-21T00:09:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/21/terapad-tpkwhelp.html</id>
+            <content type="html"><![CDATA[<h2 id="%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E">ソフトの説明</h2>
+
+<p>TeraPad でキー 一発でキーワードヘルプを呼び出し表示するソフトです</p>
+
+<p>このソフト単体では役に立ちませんのであしからず。</p>
+
+<h2 id="%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">使用方法</h2>
+
+<p>TpJumpをTeraPadへ登録する時のツール設定項目です。</p>
+
+<table border="1" summary="設定項目"><tr>
+<th>
+名前
+</th>
+<td>
+(お好みで)
+</td>
+</tr>
+<tr>
+<th>
+実行ファイル
+</th>
+<td>
+C:\TeraPad\tool\TpkwHelp.exe<br /><br /> ※実行ファイルのパスは解凍したフォルダを指定してください。<br /> 例. C:\Program Files\TeraPad\tool\TpkwHelp に解凍したとすると<br /> 　<span style="text-decoration: underline">C:\TeraPad\tool</span>\TpkwHelp.exe<br /> 　この部分↑に解凍したフォルダを指定します。<br /> 　C:\Program Files\TeraPad\tool\TpkwHelp\TpkwHelp.exe<br />
+</td>
+</tr>
+<tr>
+<th>
+コマンドラインパラメータ
+</th>
+<td>
+表示してほしい実行ファイルやヘルプファイルをフルパスで入力してください。※
+</td>
+</tr>
+<tr>
+<th>
+作業フォルダ
+</th>
+<td>
+(空欄)
+</td>
+</tr>
+<tr>
+<th>
+ファイルの上書き保存
+</th>
+<td>
+"上書き保存しない" を指定
+</td>
+</tr>
+<tr>
+<td colspan="2">
+その他のオプションについてはお好みで設定してください。
+</td>
+</tr>
+</table>
+
+<p><strong>コマンドラインパラメータ</strong></p>
+
+<pre>※キーワードが有効なのは今のところ、以下のファイルです。
+　●WinHelpファイル
+　　Win32APIヘルプ(win32.hlp) など
+　　&gt;C:\lcc32\bin\win32.hlp&lt;こんな感じ
+　●実行ファイル（実行パラメータにキーワードを添付します）
+　　HSP Help Manager(helpman.exe) など
+　　&gt;C:\hsp255\hsphelp\helpman.exe&lt;こんな感じ
+　●'*'付きファイル（'*'の所がキーワードに換えられます）
+　　キーワード別に分かれたHTMLファイル(*.html) など
+　　&gt;C:\win32api\*.htm&lt;こんな感じ
+　※もちろん、ほんとにあるフォルダ、ファイルを指定しなければ意味はありません。
+</pre>
+
+<h2 id="%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83">動作環境</h2>
+
+<p>Windows 2000で動作確認済み</p>
+
+<p>Windows 95/98/Me, Windows XP でも動作するはず</p>
+
+<p>TeraPad が必要です。</p>
+
+<h2 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%EF%BC%86%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール＆アンインストール</h2>
+
+<p><strong>インストール</strong></p>
+
+<p>適当なフォルダに解凍して、実行するだけです。</p>
+
+<p>なお、実行時に自動的に Machines フォルダがソフトと同じフォルダにできます。</p>
+
+<p><strong>アンインストール</strong></p>
+
+<p>解凍して出来たフォルダごと削除するだけです。設定ファイル・レジストリは一切使用しておりません。</p>
+
+<h2 id="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</h2>
+
+<p><a href="/files/tpkwh002.lzh" title="tpkwh002.lzh">DOWNLOAD</a></p>
+
+<h2 id="%E5%B1%A5%E6%AD%B4">履歴</h2>
+
+<dl>
+<dt>2004/02/24</dt>
+<dd>[Ver.0.02]<br />公開</dd>
+</dl>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[TeraPad Jump Tool]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/21/terapad-tpjump.html"/>
+            <updated>2008-07-21T00:08:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/21/terapad-tpjump.html</id>
+            <content type="html"><![CDATA[<h2 id="%E7%94%BB%E9%9D%A2">画面</h2>
+
+<p><img src="/images/2008_0721_tpjump.jpg" alt="画面" /></p>
+
+<h2 id="%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E">ソフトの説明</h2>
+
+<p>TeraPad Jump Tool(TpJump)は、TeraPad などに関数、ラベルを表示し、HSP 2.55さながら、ジャンプをするソフトです。</p>
+
+<p>現在対応しているジャンプ機能は以下のとおりです</p>
+
+<table border="1" width="90%" summary="TpJump対応形式"><tr>
+<th>
+拡張子
+</th>
+<th>
+形式名
+</th>
+<th>
+説明
+</th>
+</tr>
+<tr>
+<td colspan="3">
+cacpp.fpi
+</td>
+</tr>
+<tr>
+<td>
+*.c
+</td>
+<td>
+C
+</td>
+<td>
+関数<br />ラベル<br />Switch() ～ case :<br />
+</td>
+</tr>
+<tr>
+<td>
+*.cpp
+</td>
+<td>
+C++
+</td>
+<td>
+関数(スコープ解決演算子は未対応)<br />ラベル<br />Switch() ～ case :<br />
+</td>
+</tr>
+<tr>
+<td>
+*.h
+</td>
+<td>
+C ＆ C++ Header
+</td>
+<td>
+CとC++言語の関数が書いてある場合のみ
+</td>
+</tr>
+<tr>
+<td>
+*.rc
+</td>
+<td>
+Windows Resource
+</td>
+<td>
+リソースブロック<br />(ACCELERATORS, BITMAP, ICON, MENU, DIALOG, VERSIONINFO, STRINGTABLE)<br />
+</td>
+</tr>
+<tr>
+<td colspan="3">
+txt.fpi
+</td>
+</tr>
+<tr>
+<td rowspan="2">
+*.txt
+</td>
+<td rowspan="2">
+Text
+</td>
+<td>
+UNLHA32.DLL の"%n"形式ファイル
+</td>
+</tr>
+<tr>
+<td>
+WzEditorの[表示]メニューの[アウトライン]で表示できる形式
+</td>
+</tr>
+<tr>
+<td colspan="3">
+hsp.fpi
+</td>
+</tr>
+<tr>
+<td>
+*.as
+</td>
+<td>
+HSP※
+</td>
+<td>
+#deffunc で定義した命令<br />ラベル
+</td>
+</tr>
+<tr>
+<td colspan="3">
+html.fpi
+</td>
+</tr>
+<tr>
+<td>
+*.htm<br />*.html
+</td>
+<td>
+HTML
+</td>
+<td>
+HTML のアンカータグ(href,name)
+</td>
+</tr>
+</table>
+
+<p>※HSP(Hot Soup Processor) は onion software/おにたま氏 が作成された、インタプリタ型プログラミング言語です</p>
+
+<h2 id="%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">使用方法</h2>
+
+<p>TpJumpを設定したキー等で起動し移動先を選択することで移動することが出来ます。</p>
+
+<p>&#91;↑&#93;&#91;↓&#93;キーで選択、</p>
+
+<p>[Enter]キーで移動、</p>
+
+<p>[ESC]キーで戻ることが出来ます。</p>
+
+<p>TpJumpをTeraPadへ登録する時のツール設定項目です。</p>
+
+<table border="1" summary="設定項目"><tr>
+<th>
+名前
+</th>
+<td>
+(お好みで)
+</td>
+</tr>
+<tr>
+<th>
+実行ファイル
+</th>
+<td>
+C:\TeraPad\tool\TpJump.exe<br /><br /> ※実行ファイルのパスは解凍したフォルダを指定してください。<br /> 例. C:\Program Files\TeraPad\tool\TpJump に解凍したとすると<br /> 　<span style="text-decoration: underline">C:\TeraPad\tool</span>\TpJump.exe<br /> 　この部分↑に解凍したフォルダを指定します。<br /> 　C:\Program Files\TeraPad\tool\TpJump\TpJump.exe<br />
+</td>
+</tr>
+<tr>
+<th>
+コマンドラインパラメータ
+</th>
+<td>
+(空欄)
+</td>
+</tr>
+<tr>
+<th>
+作業フォルダ
+</th>
+<td>
+(空欄)
+</td>
+</tr>
+<tr>
+<th>
+ファイルの上書き保存
+</th>
+<td>
+"上書き保存しない" を指定
+</td>
+</tr>
+<tr>
+<td colspan="2">
+その他のオプションについてはお好みで設定してください。
+</td>
+</tr>
+</table>
+
+<h2 id="%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85">注意事項</h2>
+
+<ul>
+<li>大きいファイルの場合は、少し時間がかかる場合があります。</li>
+<li>折り返し桁指定で、折り返しを指定していると、ジャンプ先に命令などが無い場合があります。</li>
+<li>あまりにも大きいファイル(正確には64K Byte 以上)だと正確にジャンプ出来ない可能性があります。</li>
+<li><p>Inprise 系プログラミング環境(Borland Delphi や Borland C++ など)で作られたエディタは、 タスクバーとウインドウが別になっていて無理やり表示しようとするとタスクバーの表示と 食い違いが出てしまうので非表示や最小化になっているウインドウは無視するようにしています。</p>
+
+<p>TeraPad,K2Editor,鍋Editor がそのようなエディタです</p></li>
+</ul>
+
+<h2 id="%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83">動作環境</h2>
+
+<p>Windows 2000で動作確認済み</p>
+
+<p>Windows 95/98/Me, Windows XP でも動作するはず</p>
+
+<p>TeraPad が必要です。</p>
+
+<h2 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%EF%BC%86%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール＆アンインストール</h2>
+
+<p><strong>インストール</strong></p>
+
+<p>適当なフォルダに解凍して、実行するだけです。</p>
+
+<p>なお、実行時に自動的に Machines フォルダがソフトと同じフォルダにできます。</p>
+
+<p><strong>アンインストール</strong></p>
+
+<p>解凍して出来たフォルダごと削除するだけです。レジストリは一切使用しておりません。</p>
+
+<h2 id="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</h2>
+
+<p><a href="http://www.vector.co.jp/soft/win95/writing/se320394.html" title="tpjp010d.lzh">DOWNLOAD</a></p>
+
+<h2 id="%E5%B1%A5%E6%AD%B4">履歴</h2>
+
+<dl>
+<dt>2004/02/29<br />(03/02公開)</dt>
+<dd>[Ver.0.10d]<br />公開</dd>
+</dl>
+]]></content>
+        </entry>
+    </feed>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/Facebook.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:49+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[SNSの共有ボタンを設置できる jQuery (他も含む) プラグインをまとめてみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/06/14/collection-of-social-share-button-plugin.html"/>
+            <updated>2015-06-14T16:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/06/14/collection-of-social-share-button-plugin.html</id>
+            <content type="html"><![CDATA[<p>記事ページに Twitter とか Facebook とかの共有ボタンを設置したいなぁと思い、 AddThis で試しに追加してみると、、、なんと言うことでしょう、 AdBlock でボタンが消えてしまうではないですかorz</p>
+
+<p>ということで、公式のコードをぺたりんこするか jQuery などのプラグインで設置するかを悩み、また、ボタンのデザインをカスタマイズできないかと jQuery を使って設置できるプラグインを調べてまとめてみました。</p>
+
+<p>基本的には jQuery をキーワードに調べたので jQuery のプラグインですが、それ以外にも引っかかったので一応は乗せてあります。</p>
+
+<p><a href="https://docs.google.com/spreadsheets/d/1_tXrnlwV5Vbql-5yEgcPZ3q7PcIlV6DxHD4BJLExUgc/edit?usp=sharing">Social Share Button Plugin - Google スプレッドシート</a></p>
+
+<h2 id="%E3%82%81%E3%81%A8%E3%82%81">めとめ</h2>
+
+<p>ざっくりとした感じとしては、日本のサービスはやっぱりあまりサポートされていないなぁということ。</p>
+
+<p>Hatena Bookmark とかほとんどサポートされていませんでした。</p>
+
+<p>あと、 StumbleUpon って知らなかったのですが人気があるんでしょうか？</p>
+
+<p>ちなみに、 <code>btn</code> はボタンの設置が出来る、 <code>cnt</code> はカウンターの表示あり、です。</p>
+
+<table class="table table-bordered table-hover table-condensed table-striped" data-sheetrock="https://docs.google.com/spreadsheets/d/1_tXrnlwV5Vbql-5yEgcPZ3q7PcIlV6DxHD4BJLExUgc/edit#gid=0"></table>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://www.sitepoint.com/10-social-sharing-jquery-plugins-missed/">10 Social Sharing jQuery Plugins You May Have Missed</a></li>
+<li><a href="http://jquery-plugins.net/tag/social-share-button">social share button | jQuery Plugins</a></li>
+<li><a href="http://www.jqueryrain.com/demo/jquery-social-share-plugin/">35+ jQuery Social Share Plugin with Example</a></li>
+</ul>
+]]></content>
+        </entry>
+    </feed>

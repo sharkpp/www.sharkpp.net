@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3%E7%94%A8%E3%82%B2%E3%83%BC%E3%83%A0.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:32+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[ぱたぱた]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/21/pokecom-game-patapata.html"/>
+            <updated>2008-07-21T00:01:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/21/pokecom-game-patapata.html</id>
+            <content type="html"><![CDATA[<h2 id="%E7%94%BB%E9%9D%A2">画面</h2>
+
+<p><img src="/images/2008_0721_patapata.gif" alt="動作画面" /></p>
+
+<h2 id="%E3%83%AB%E3%83%BC%E3%83%AB%E3%83%BB%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E8%AA%AC%E6%98%8E">ルール・ゲームの説明</h2>
+
+<p>ライツアウト風(というかそのまま)のゲームです</p>
+
+<p>ゲームを起動すると、「モンダイヲツクッテマス」と、表示されるので、問題ができるまでしばらくまっていてください</p>
+
+<p>表示されたらパネルを反転させてクリアを目指してください</p>
+
+<p>スペースキーを押すとカーソルが示している所と周囲４つのパネルが反転します。</p>
+
+<p><img src="/images/2008_0721_pata_a.gif" alt="・" />→ <img src="/images/2008_0721_pata_b.gif" alt="＋" /></p>
+
+<p>全てのパネルを反転させることが出来たらクリアです</p>
+
+<p><strong>メニュー</strong></p>
+
+<p>NEW………新たに面を作ります</p>
+
+<p>RETRY……現在の面をやり直します</p>
+
+<p>GIVE UP…解答を諦め<!-- DEL:05/02/20 コンピュータ -->ポケコンに問題を解いてもらいます(ギブアップ後はNEWとRETRYが選べます)</p>
+
+<h2 id="%E6%93%8D%E4%BD%9C%E8%AA%AC%E6%98%8E">操作説明</h2>
+
+<p>↑キーで上</p>
+
+<p>↓キーで下</p>
+
+<p>←キーで左</p>
+
+<p>→キーで右にそれぞれカーソルが動きます、スペースキーでパネルを反転します</p>
+
+<p>GAME OVER・CLEAR 時スペースでメニューへ戻る</p>
+
+<h2 id="%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83">動作環境</h2>
+
+<p><img src="/images/pokecom-basic.gif" alt="BASIC" />プログラム</p>
+
+<p>PC-G850Sで動作確認済み</p>
+
+<h2 id="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</h2>
+
+<h2 id="%E5%B1%A5%E6%AD%B4">履歴</h2>
+
+<dl>
+<dt>2005/02/13</dt>
+<dd>公開</dd>
+
+<dt>2005/02/20</dt>
+<dd>説明変更</dd>
+
+<dt>2005/06/25</dt>
+<dd>ダンプリスト追加</dd>
+</dl>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[迷路]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/21/pokecom-game-maze.html"/>
+            <updated>2008-07-21T00:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/21/pokecom-game-maze.html</id>
+            <content type="html"><![CDATA[<h2 id="%E7%94%BB%E9%9D%A2">画面</h2>
+
+<p><img src="/images/2008_0721_maze.gif" alt="動作画面" /></p>
+
+<h2 id="%E3%83%AB%E3%83%BC%E3%83%AB%E3%83%BB%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E8%AA%AC%E6%98%8E">ルール・ゲームの説明</h2>
+
+<p><a href="http://www.r66.7-dj.com/~toshi1/">Toshi's HP</a>(Toshiさん)の迷路自動作成ルーチンを用いた迷路ゲームです</p>
+
+<p>まず、プログラムを実行すると、Hit any key! と表示されるのでスペースキーなどを押してください</p>
+
+<p>すると迷路を作成しますので作成が終るまで待っていてください</p>
+
+<p><strong>地図</strong></p>
+
+<p>左上にある矢印は現在の地図上での進行方向を示しています。</p>
+
+<p>地図上に最初から存在している白抜きの点はKEYがある場所です</p>
+
+<p>まず最初にここを目指してください</p>
+
+<p>KEYを取ると次に地図のふちのどこかに出口が現れますので<!-- 底 -->そこに到達したらゲームクリアです</p>
+
+<h2 id="%E6%93%8D%E4%BD%9C%E8%AA%AC%E6%98%8E">操作説明</h2>
+
+<p>↑キーで上</p>
+
+<p>↓キーで下</p>
+
+<p>←キーで左</p>
+
+<p>→キーで右にそれぞれ進みます</p>
+
+<p>スペースキーで地図を表示します</p>
+
+<h2 id="%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83">動作環境</h2>
+
+<p><img src="/images/pokecom-c.gif" alt="C言語" />プログラム</p>
+
+<p>PC-G850Sで動作確認済み</p>
+
+<h2 id="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</h2>
+
+<p>※さらに以下のファイルが必要です</p>
+
+<p>※ポケコンでは拡張子を .h として保存してください。</p>
+
+<p><span>※同梱の Readme.txt をよく読んでください
+</span></p>
+
+<h2 id="%E5%B1%A5%E6%AD%B4">履歴</h2>
+
+<dl>
+<dt>2004/09/26</dt>
+<dd>公開</dd>
+
+<dt>2004/12/19</dt>
+<dd>Windows版デモプログラム公開</dd>
+
+<dt>2005/05/05</dt>
+<dd>ダンプリスト追加</dd>
+</dl>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[BlockBreak]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/21/pokecom-game-bb.html"/>
+            <updated>2008-07-21T00:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/21/pokecom-game-bb.html</id>
+            <content type="html"><![CDATA[<h2 id="%E7%94%BB%E9%9D%A2">画面</h2>
+
+<p><img src="/images/2008_0721_bb.gif" alt="動作画面" /></p>
+
+<h2 id="%E3%83%AB%E3%83%BC%E3%83%AB%E3%83%BB%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E8%AA%AC%E6%98%8E">ルール・ゲームの説明</h2>
+
+<p>言わずとしてたブロック崩しです</p>
+
+<p>まず、プログラムを実行すると、"BLOCK BREAK" の文字がアニメーションするのでスペースキーなどを押してください</p>
+
+<p>ボールが上に動き出しゲームスタートです。</p>
+
+<p>ボールをブロックに当て壊してください</p>
+
+<p>ブロックを全部壊すか、ゲームオーバーになると終了します</p>
+
+<p><strong>アイテム</strong></p>
+
+<p>ブロックに当てるとたまに、当てた部分からアイテムが降ってくることがあります</p>
+
+<p>アイテムは、バーに当てると取ることが出来き、取れた場合は得点の下に取ったアイテムが表示されます</p>
+
+<p>アイテムには４種類あります</p>
+
+<table summary="アイテムの種類"><tr>
+<td>
+SCORE+
+</td>
+<td>
+得点が加算されます
+</td>
+</tr>
+<tr>
+<td>
+<small>○</small> UP
+</td>
+<td>
+画面内のボールが１つ増えます
+</td>
+</tr>
+<tr>
+<td>
+<<->>
+</td>
+<td>
+バーが広がります
+</td>
+</tr>
+<tr>
+<td>
+>>-<<
+</td>
+<td>
+バーが縮みます
+</td>
+</tr>
+</table>
+
+<h2 id="%E6%93%8D%E4%BD%9C%E8%AA%AC%E6%98%8E">操作説明</h2>
+
+<p>←キーで左</p>
+
+<p>→キーで右にバーが動きます</p>
+
+<h2 id="%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83">動作環境</h2>
+
+<p><img src="/images/pokecom-c.gif" alt="C言語" />プログラム</p>
+
+<p>PC-G850Sで動作確認済み</p>
+
+<h2 id="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</h2>
+
+<p>※さらに以下のファイルが必要です</p>
+
+<p>※ポケコンでは拡張子を .h として保存してください。</p>
+
+<p><span>※同梱の Readme.txt をよく読んでください
+</span></p>
+
+<h2 id="%E5%B1%A5%E6%AD%B4">履歴</h2>
+
+<dl>
+<dt>2004/12/19</dt>
+<dd>公開<br />Windows版デモプログラム公開</dd>
+
+<dt>2005/05/05</dt>
+<dd>ダンプリスト追加</dd>
+</dl>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[ポヨポヨ]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/20/pokecom-game-poyopoyo.html"/>
+            <updated>2008-07-20T23:59:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/20/pokecom-game-poyopoyo.html</id>
+            <content type="html"><![CDATA[<h2 id="%E7%94%BB%E9%9D%A2">画面</h2>
+
+<p><img src="/images/2008_0720_poyopoyo.gif" alt="動作画面" /></p>
+
+<h2 id="%E3%83%AB%E3%83%BC%E3%83%AB%E3%83%BB%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E8%AA%AC%E6%98%8E">ルール・ゲームの説明</h2>
+
+<p>某有名ゲームみたいなゲームです</p>
+
+<p>落ちてくるブロックを回転させ、同じ英字同士を４つ以上つなげ消してください</p>
+
+<p>２つ以上繋がると大文字が小文字に変化しますが、繋げる英字は大小を区別しません</p>
+
+<p>たまに、お邪魔ブロックが落ちてきますが、他のブロックを消す時、お邪魔ブロックが周囲にあればいっしょに消えていきます</p>
+
+<p><strong>メニュー</strong></p>
+
+<pre>START：  ゲーム開始
+CONFIG： お邪魔ブロックのON/OFF
+END：    ゲーム終了
+</pre>
+
+<h2 id="%E6%93%8D%E4%BD%9C%E8%AA%AC%E6%98%8E">操作説明</h2>
+
+<p>８キーで上</p>
+
+<p>２キーで下</p>
+
+<p>５キーで回転</p>
+
+<p>６キーで落下</p>
+
+<p><span class="fa fa-reply fa-flip-vertical" title="RETURN"></span>キーで決定</p>
+
+<p>GAME OVER・CLEAR 時スペースでメニューへ戻る</p>
+
+<h2 id="%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83">動作環境</h2>
+
+<p><img src="/images/pokecom-c.gif" alt="C言語" />プログラム</p>
+
+<p>PC-G850Sで動作確認済み</p>
+
+<h2 id="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</h2>
+
+<p>※さらに以下のファイルが必要です</p>
+
+<p>※ポケコンでは拡張子を .h として保存してください。</p>
+
+<p><span>※同梱の Readme.txt をよく読んでください
+</span></p>
+
+<h2 id="%E5%B1%A5%E6%AD%B4">履歴</h2>
+
+<dl>
+<dt>2004/03/14</dt>
+<dd>公開</dd>
+
+<dt>2004/12/19</dt>
+<dd>Windows版デモプログラム公開</dd>
+
+<dt>2005/05/05</dt>
+<dd>ダンプリスト追加</dd>
+</dl>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[ジャンケンゲーム]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/20/pokecom-game-janken.html"/>
+            <updated>2008-07-20T23:43:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/20/pokecom-game-janken.html</id>
+            <content type="html"><![CDATA[<h2 id="%E7%94%BB%E9%9D%A2">画面</h2>
+
+<p><img src="/images/2008_0720_janken.gif" alt="動作画面" /></p>
+
+<h2 id="%E3%83%AB%E3%83%BC%E3%83%AB%E3%83%BB%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E8%AA%AC%E6%98%8E">ルール・ゲームの説明</h2>
+
+<p>普通のジャンケンゲームです</p>
+
+<p>グーはチョキに勝ち、チョキはパーに勝ち、パーはグーに勝つといういたって簡単なルールです</p>
+
+<p>終了時に対戦成績が表示されます</p>
+
+<h2 id="%E6%93%8D%E4%BD%9C%E8%AA%AC%E6%98%8E">操作説明</h2>
+
+<p>０キーでグーを出す</p>
+
+<p>１キーでチョキを出す</p>
+
+<p>２キーでパーを出す</p>
+
+<p>３キーでゲーム終了</p>
+
+<h2 id="%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83">動作環境</h2>
+
+<p><img src="/images/pokecom-basic.gif" alt="BASIC" />プログラム</p>
+
+<p>PC-G850Sで動作確認済み</p>
+
+<h2 id="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</h2>
+
+<p><a href="/files/janken.txt">DOWNLOAD</a></p>
+
+<h2 id="%E5%B1%A5%E6%AD%B4">履歴</h2>
+
+<dl>
+<dt>2004/02/24</dt>
+<dd>公開</dd>
+</dl>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Escape]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/20/pokecom-game-escape.html"/>
+            <updated>2008-07-20T23:42:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/20/pokecom-game-escape.html</id>
+            <content type="html"><![CDATA[<h2 id="%E7%94%BB%E9%9D%A2">画面</h2>
+
+<p><img src="/images/2008_0720_escape.gif" alt="動作画面" /></p>
+
+<h2 id="%E3%83%AB%E3%83%BC%E3%83%AB%E3%83%BB%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E8%AA%AC%E6%98%8E">ルール・ゲームの説明</h2>
+
+<p>２種類のキーを交互に入力し、ハンマーから逃げるゲームです</p>
+
+<p>レベルを入力後、ゲームを開始すると少し後からハンマーが追ってくるので、ハンマーに追いつかれないようにキーを連打し逃げてください</p>
+
+<p>ハンマーに追いつかれると、叩かれて潰れてしまいます</p>
+
+<h2 id="%E6%93%8D%E4%BD%9C%E8%AA%AC%E6%98%8E">操作説明</h2>
+
+<p>どのキーでもいいので２種類のキーを押して前進させてください</p>
+
+<h2 id="%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83">動作環境</h2>
+
+<p><img src="/images/pokecom-basic.gif" alt="BASIC" />プログラム</p>
+
+<p>PC-G850Sで動作確認済み</p>
+
+<h2 id="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</h2>
+
+<p><a href="/files/esc.txt">DOWNLOAD</a></p>
+
+<h2 id="%E5%B1%A5%E6%AD%B4">履歴</h2>
+
+<dl>
+<dt>2004/02/24</dt>
+<dd>公開</dd>
+</dl>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[KeyHiter]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/20/pokecom-game-keyhiter.html"/>
+            <updated>2008-07-20T23:41:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/20/pokecom-game-keyhiter.html</id>
+            <content type="html"><![CDATA[<h2 id="%E7%94%BB%E9%9D%A2">画面</h2>
+
+<p><img src="/images/2008_0720_keyhit.gif" alt="動作画面" /></p>
+
+<h2 id="%E3%83%AB%E3%83%BC%E3%83%AB%E3%83%BB%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E8%AA%AC%E6%98%8E">ルール・ゲームの説明</h2>
+
+<p>一定間隔で表示されていく文字を入力するゲームです</p>
+
+<p>全ての文字を消せたらそのレベルはクリアです</p>
+
+<p>また、全て文字で埋まってしまったらゲームオーバーになります</p>
+
+<h2 id="%E6%93%8D%E4%BD%9C%E8%AA%AC%E6%98%8E">操作説明</h2>
+
+<p>表示されている英字のキーを押し文字を消します</p>
+
+<h2 id="%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83">動作環境</h2>
+
+<p><img src="/images/pokecom-basic.gif" alt="BASIC" />プログラム</p>
+
+<p>PC-G850Sで動作確認済み</p>
+
+<h2 id="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</h2>
+
+<p><a href="/files/keyhit.txt">DOWNLOAD</a></p>
+
+<h2 id="%E5%B1%A5%E6%AD%B4">履歴</h2>
+
+<dl>
+<dt>2004/02/24</dt>
+<dd>公開</dd>
+</dl>
+]]></content>
+        </entry>
+    </feed>

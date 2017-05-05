@@ -1,0 +1,3095 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/%E3%81%BE%E3%81%A8%E3%82%81.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:49+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Sculpin の Bundle をまとめてみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/09/03/list-of-sculpin-bundles.html"/>
+            <updated>2016-09-03T13:20:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/09/03/list-of-sculpin-bundles.html</id>
+            <content type="html"><![CDATA[<p>PHP 製の静的サイトジェネレータ <a href="https://sculpin.io/">Sculpin</a> へ導入することで機能を拡張するパッケージを Bundle と呼んでいますが、それを公式のドキュメントを参考に</p>
+
+<ul>
+<li>コンバータ</li>
+<li>ジェネレータ</li>
+<li>テーマ</li>
+<li>その他</li>
+</ul>
+
+<p>の 4 つのカテゴリへと Bundle を分類し、簡単な説明などをつけてまとめてみました。</p>
+
+<p>こうしてまとめて見るために、いろいろググってみますが、日本語で書かれた Sculpin の情報というのは少ないですね。</p>
+
+<p>今現在公開されているものを列挙していますが、最新の Sculpin に対応していないなど、もしかしたら利用できない Bundle があるかもしれないので、ご注意ください。</p>
+
+<h2 id="%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%BF">コンバータ</h2>
+
+<p><a href="https://sculpin.io/documentation/converters/">Converters - Sculpin</a> に書かれているように、何か、これは標準では Markdown で書式化された投稿ページを HTML へと変換する Bundle をここで列挙しています。</p>
+
+<h3 id="sculpin-league%2Fcommonmark-bundle">Sculpin league/commonmark bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/bcremer/sculpin-commonmark-bundle">bcremer/sculpin-commonmark-bundle</a></p>
+
+<p><a href="http://commonmark.org/">CommonMark</a> 記法で書かれた投稿をパースすることができるようにするバンドル。</p>
+
+<h3 id="sculpin-parsedown">Sculpin Parsedown</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/mavimo/sculpin-parsedown">mavimo/sculpin-parsedown</a></p>
+
+<p>標準の Markdown パーサーを置き換え、<code>sculpin generate</code> のパフォーマンスを上げることができるバンドル。</p>
+
+<p>Sculpin 本体にパッチを当てる必要があるようなので、導入の難易度は高めのようです。</p>
+
+<h3 id="sculpin-mthaml-bundle">Sculpin MtHaml Bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/fervo/sculpin-mthaml-bundle">fervo/sculpin-mthaml-bundle</a></p>
+
+<p>投稿を <a href="https://en.wikipedia.org/wiki/Microsoft_Assistance_Markup_Language">MAML</a> で作成できるようになるバンドル。</p>
+
+<h3 id="sculpin-restructuredtext-bundle">Sculpin reStructuredText Bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/rjkip/sculpin-rst-bundle">rjkip/sculpin-rst-bundle</a></p>
+
+<p>投稿を <a href="https://ja.wikipedia.org/wiki/ReStructuredText">ReStructuredText(reST)</a> で作成できるようになるバンドル。</p>
+
+<h2 id="%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF">ジェネレータ</h2>
+
+<p>投稿を列挙し特殊なページを作成したり、投稿内で利用できるタグクラウドなどのブロックを生成できる Bundle をここで列挙しています。</p>
+
+<h3 id="sculpin-less-bundle">Sculpin less bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/bcremer/sculpin-less-bundle">bcremer/sculpin-less-bundle</a></p>
+
+<p><code>sculpin generate</code> 実行時に <code>*.less</code> を LESS でプリプロセスし <code>*.css</code> を作成することができるようにするバンドル。</p>
+
+<h3 id="sculpin-redirect-bundle">Sculpin Redirect Bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/mavimo/sculpin-redirect-bundle">mavimo/sculpin-redirect-bundle</a></p>
+
+<p>投稿に別名を追加し、追加したパスから元のページへのリダイレクトを作成することができるようにするバンドル。</p>
+
+<p>「<a href="/blog/2016/06/12/using-sculpin-redirect-bundle.html">Sculpin でリダイレクトページを生成する Sculpin Redirect Bundle を使ってみた</a>」 で紹介と使い方を記事にしています。</p>
+
+<h3 id="sculpin-multilingual-bundle">Sculpin Multilingual Bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/rocketage/sculpin-multilingual-bundle">rocketage/sculpin-multilingual-bundle</a></p>
+
+<p>複数の言語用のサイトをサブドメインとして提供している場合にリソースを共通化できるようにすることができるバンドル。</p>
+
+<p>これは、 <code>ja.example.net</code> と <code>en.example.net</code> で利用するリソースを共通化し、<code>sculpin generate</code> 時に、各言語用のサイトそれぞれへとコピーできるようになるようです。</p>
+
+<h3 id="sculpin-related-posts-bundle">Sculpin Related Posts Bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/tsphethean/sculpin-related-posts-bundle">tsphethean/sculpin-related-posts-bundle</a></p>
+
+<p>記事と共通するタグを持つページの一覧を作成することができるようになるバンドル。</p>
+
+<p>レイアウトに、適当なテンプレートを記述することで、記事に関連するページとして表示することができるようです。</p>
+
+<h3 id="wjzijderveld%2Fsculpin-related-content-bundle">wjzijderveld/sculpin-related-content-bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/wjzijderveld/sculpin-related-content-bundle">wjzijderveld/sculpin-related-content-bundle</a></p>
+
+<p>記事と関連するタグを持つページの一覧を作成することができるようになるバンドル。</p>
+
+<p>レイアウトに、適当なテンプレートを記述することで、記事に関連するページとして表示することができるようです。</p>
+
+<h3 id="jbouzekri%2Fsculpin-tag-cloud-bundle">jbouzekri/sculpin-tag-cloud-bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/jbouzekri/sculpin-tag-cloud-bundle">jbouzekri/sculpin-tag-cloud-bundle</a></p>
+
+<p><a href="https://ja.wikipedia.org/wiki/%E3%82%BF%E3%82%B0%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89">タグクラウド</a>を作成することができるようになるバンドル。</p>
+
+<p>作者のページで実際に利用されているようです　つ <a href="http://blog.bouzekri.net/">Blog de Jonathan Bouzekri</a></p>
+
+<h3 id="beryllium%2Ficelus">beryllium/icelus</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/beryllium/icelus">beryllium/icelus</a></p>
+
+<p>所定の書き方をすることで <code>sculpin generate</code> 時に画像のサムネイルを生成することができるようになるバンドル。</p>
+
+<p>「<a href="/blog/2015/11/02/using-sculpin-thumbnail-generator-icelus.html">Sculpin でサムネイルを自動生成する Icelus Bundle を使ってみた</a>」 で紹介と使い方を記事にしています。</p>
+
+<h3 id="sculpin-projects-bundle">Sculpin Projects Bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/mavimo/sculpin-projects-bundle">mavimo/sculpin-projects-bundle</a></p>
+
+<p>所定のフォルダにまとめられたファイルからプロジェクトの一覧を作成するバンドル。</p>
+
+<p>こんな感じに作成されるようです　つ <a href="http://web.archive.org/web/20140815024704/http://mavimo.org/projects.html">Projects - Mavimo</a></p>
+
+<h3 id="sculpin-oembed-bundle">Sculpin oEmbed bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/bangpound/sculpin-oembed-bundle">bangpound/sculpin-oembed-bundle</a></p>
+
+<p><a href="http://oembed.com/">oEmbed</a> をサポートした URL を指定することで簡単に埋め込み用のコードを生成し、投稿に埋め込むことができるようになるバンドル。</p>
+
+<h3 id="jbouzekri%2Fsculpin-date-navigation-bundle">jbouzekri/sculpin-date-navigation-bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/jbouzekri/sculpin-date-navigation-bundle">jbouzekri/sculpin-date-navigation-bundle</a></p>
+
+<p>投稿の日時ごとのインデックスページとそのリンクを生成することができるようになるバンドル。</p>
+
+<h3 id="jbouzekri%2Fsculpin-search-bundle">jbouzekri/sculpin-search-bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/jbouzekri/sculpin-search-bundle">jbouzekri/sculpin-search-bundle</a></p>
+
+<p>投稿から予めインデックスを生成し、投稿内を <a href="https://github.com/linkedin/indextank-engine">IndexTank</a> を利用し検索することができるようになるバンドル。</p>
+
+<h3 id="ramsey%2Fsculpin-codeblock">ramsey/sculpin-codeblock</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/ramsey/sculpin-codeblock">ramsey/sculpin-codeblock</a></p>
+
+<p><a href="https://github.com/ramsey/twig-codeblock">ramsey/twig-codeblock</a> で拡張される <code>codeblock/endcodeblock</code> タグを利用することができるようになるバンドル。</p>
+
+<h3 id="sculpin-pages-bundle">Sculpin Pages Bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/fab/sculpin-pages-bundle">fab/sculpin-pages-bundle</a></p>
+
+<p>現在表示しているページをハイライトしているようなメニューを作ることができるようになるバンドル。</p>
+
+<p>bootstrap の navbar の active / 非active みたいな表示ができるようになる。</p>
+
+<p>利用例 つ <a href="https://github.com/FiacreGH/librairie-sycomore.ch/blob/master/source/_views/page.twig">librairie-sycomore.ch/page.twig at master · FiacreGH/librairie-sycomore.ch</a></p>
+
+<h3 id="sharkpp%2Fsculpin-calendarian-bundle">sharkpp/sculpin-calendarian-bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/sharkpp/sculpin-calendarian-bundle">sharkpp/sculpin-calendarian-bundle</a></p>
+
+<p>投稿の日付ごとにインデックスページを作ることができるようになるバンドル。</p>
+
+<p>拙作。</p>
+
+<p><a href="/blog/2015/08/09/create-sculpin-blog-archive-date-directory-bundle.html">Sculpin でブログアーカイブの日付ごとにポストをまとめたページを作るバンドルを作ってみた</a> で使い方を記事にしています。</p>
+
+<h3 id="wyrihaximus%2Fhtml-compress-sculpin">wyrihaximus/html-compress-sculpin</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/wyrihaximus/html-compress-sculpin">wyrihaximus/html-compress-sculpin</a></p>
+
+<p><code>sculpin generate</code> で生成される HTML ファイルを minify することができるようになるバンドル。</p>
+
+<p>Bundle と言って良いのかわからないですが、設定すると HTML を minify して圧縮してくれるようです。</p>
+
+<h2 id="%E3%83%86%E3%83%BC%E3%83%9E">テーマ</h2>
+
+<p>Sculpin 用のテーマをここでは列挙しています。</p>
+
+<p><a href="https://packagist.org/packages/sculpin/sculpin-theme-composer-plugin">sculpin-theme-composer-plugin</a> を利用すれば、 <code>composer.json</code> でテーマを管理できるようになる、ようです。</p>
+
+<p>なお、 Sculpin のテーマ機能自体は <a href="https://sculpin.io/documentation/themes/">Themes - Sculpin</a> に</p>
+
+<blockquote>
+  <p>WARNING
+  Theme support for Sculpin is still highly experimental. It has been stable in its current form since early 2014 but be aware that the theme API may change drastically sometime later this year.</p>
+</blockquote>
+
+<p>訳すと</p>
+
+<blockquote>
+  <p>警告
+  Sculpin のためのテーマのサポートはまだ非常に実験的なものです。これは初期の2014年以来現在の形で安定していますが、テーマ API は今年後半(※)にいつか大幅に変更される可能性があることに注意してください。</p>
+</blockquote>
+
+<p>訳注：2015年後半のこと つ <a href="https://github.com/sculpin/sculpin.io/commit/23f4d2f778c8ca9ef4070dac0041420bedb58ee9#diff-4a6302f145e637d38195213cf4295609">Warn people about changes to themes.</a></p>
+
+<p>と書かれているので、利用できなくなっている可能性があります。</p>
+
+<h3 id="slate-is-theme-for-github-pages-or-your-sculpin-site.">Slate is theme for GitHub Pages or your Sculpin site.</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/nedmas/slate">nedmas/slate</a></p>
+
+<p>Sculpin 用の <a href="https://github.com/jasoncostello/slate">Slate</a> テーマ。</p>
+
+<p>Slate はこんな感じのページのようです　つ <a href="http://jasoncostello.github.io/slate/">Slate : A responsive theme for GitHub Pages</a></p>
+
+<h3 id="minimal-mistakes-theme-for-sculpin-static-site-generator.">Minimal Mistakes theme for Sculpin static site generator.</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/chrisnharvey/minimal-mistakes">chrisnharvey/minimal-mistakes</a></p>
+
+<p>Sculpin 用の <a href="https://github.com/mmistakes/minimal-mistakes">Minimal Mistakes</a> テーマ。</p>
+
+<h3 id="a-bootstrap-3-blog-theme-for-sculpin">A Bootstrap 3 Blog Theme for Sculpin</h3>
+
+<p>ダウンロード：<a href="https://github.com/sculpin/bootstrap-3-blog-theme">sculpin/bootstrap-3-blog-theme</a></p>
+
+<p>Sculpin 用の Bootstrap 3 テーマ。</p>
+
+<h3 id="porting-of-sticko-theme-for-sculpin">Porting of Sticko theme for Sculpin</h3>
+
+<p>ダウンロード：<a href="https://github.com/mavimo/sculpin-theme-sticko">mavimo/sculpin-theme-sticko</a></p>
+
+<p>Sculpin 用の Sticko テーマ。</p>
+
+<h2 id="%E3%81%9D%E3%81%AE%E4%BB%96">その他</h2>
+
+<p>Sculpin cli を拡張するなど、前 3 つ以外に分類される Bundle をここで列挙しています。</p>
+
+<h3 id="sculpin%2Fsculpin-theme-composer-plugin">sculpin/sculpin-theme-composer-plugin</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/sculpin/sculpin-theme-composer-plugin">sculpin/sculpin-theme-composer-plugin</a></p>
+
+<p>Sculpin のテーマを Composer で管理できるようにするバンドル。</p>
+
+<p>README がないので使い方が分かりにくいですが、 <code>composer.json</code> に、Sculpin のテーマを書いておくと、インストール時にテーマを既定のテーマフォルダにコピーし、アンインストール時に削除してくれるようです。</p>
+
+<h3 id="sculpin-editor-bundle">Sculpin Editor Bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/mavimo/sculpin-editor-bundle">mavimo/sculpin-editor-bundle</a></p>
+
+<p><code>sculpin editor:create</code> コマンドを Sculpin へし、投稿の新規作成を容易にするバンドル。</p>
+
+<h3 id="opdavies%2Fsculpin-content-generator-bundle">opdavies/sculpin-content-generator-bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/opdavies/sculpin-content-generator-bundle">opdavies/sculpin-content-generator-bundle</a></p>
+
+<p><code>sculpin content:new:post</code> コマンドを追加し、容易に新しい投稿を作成できるようにするバンドル。</p>
+
+<h3 id="petemc%2Fsculpin-gulp-bundle">petemc/sculpin-gulp-bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/petemc/sculpin-gulp-bundle">petemc/sculpin-gulp-bundle</a></p>
+
+<p><code>sculpin generate</code> 時に、同時に <a href="http://gulpjs.com/">Gulp</a> を実行することができるようになるバンドル。</p>
+
+<h3 id="dragonmantank%2Ffillet-sculpin-bundle">dragonmantank/fillet-sculpin-bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/dragonmantank/fillet-sculpin-bundle">dragonmantank/fillet-sculpin-bundle</a></p>
+
+<p><a href="https://packagist.org/packages/dragonmantank/fillet">Fillet</a> と連携し、CMS から Sculpin への変換をサポートするバンドル。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://packagist.org/search/?q=sculpin">search of "sculpin" - Packagist</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[日付を文字列にするための書式を比較してみた (php と Ruby 編)]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/05/28/compare-format-for-date-to-string-php-and-ruby.html"/>
+            <updated>2016-05-28T22:50:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/05/28/compare-format-for-date-to-string-php-and-ruby.html</id>
+            <content type="html"><![CDATA[<p>php を使っている時に、日付を書式化する場合、 <code>date()</code> 関数と <code>strftime()</code> 関数があって、どっち使うべきだろうか、とか片方のフォーマットは他方でどれだっけ？とか、まあようするになんでに種類あるんだろう？って思うわけです。</p>
+
+<p>で、対応をまとめてみました。</p>
+
+<p>ほかの言語も調べてみると Ruby の方が色々とフォーマットが追加されてたりするので、比較対象として追加してあります。</p>
+
+<h2 id="%E6%9B%B8%E5%BC%8F%E3%81%AE%E6%AF%94%E8%BC%83">書式の比較</h2>
+
+<p>ざっと確認したところ、大まかに</p>
+
+<ul>
+<li>php の <code>date()</code></li>
+<li>php の <code>strftime()</code> 系 Python や Perl や Linux の <code>strftime()</code> 関数(拡張なし)</li>
+<li>Ruby の <code>Time#strftime()</code> 系 Linux の <code>DATE</code> コマンド や <code>strftime()</code> 関数(拡張あり)</li>
+</ul>
+
+<p>の３種類があるようです。</p>
+
+<p>さてはて php の <code>date()</code> は一体どこから出てきたのでしょうね。</p>
+
+<p>ともかく、 php と Ruby の関数の書式をまとめてみました。</p>
+
+<table>
+<thead>
+<tr>
+  <th align="center">php:strftime</th>
+  <th align="center">php:date</th>
+  <th align="center">ruby:Time#strftime</th>
+  <th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="center">%a</td>
+  <td align="center">D</td>
+  <td align="center">%a</td>
+  <td>短縮された曜日の名前</td>
+</tr>
+<tr>
+  <td align="center">%A</td>
+  <td align="center">l</td>
+  <td align="center">%A</td>
+  <td>完全な曜日の名前</td>
+</tr>
+<tr>
+  <td align="center">%d</td>
+  <td align="center">d</td>
+  <td align="center">%d</td>
+  <td>２桁０埋めの日付</td>
+</tr>
+<tr>
+  <td align="center">%e</td>
+  <td align="center"></td>
+  <td align="center">%e</td>
+  <td>２桁空白埋めの日付</td>
+</tr>
+<tr>
+  <td align="center">%j</td>
+  <td align="center"></td>
+  <td align="center">%j</td>
+  <td>３桁０埋め１開始の年間の通算日</td>
+</tr>
+<tr>
+  <td align="center">%u</td>
+  <td align="center">N</td>
+  <td align="center">%u</td>
+  <td>月曜を１で日曜を７とする曜日</td>
+</tr>
+<tr>
+  <td align="center">%w</td>
+  <td align="center">w</td>
+  <td align="center">%w</td>
+  <td>日曜を０で土曜を６とする曜日</td>
+</tr>
+<tr>
+  <td align="center">%U</td>
+  <td align="center"></td>
+  <td align="center">%U</td>
+  <td>最初の日曜を１開始とする年間の通算週</td>
+</tr>
+<tr>
+  <td align="center">%V</td>
+  <td align="center">W</td>
+  <td align="center">%V</td>
+  <td>最初の月曜を１開始とする年間の通算週、53週目は年をまたがる</td>
+</tr>
+<tr>
+  <td align="center">%W</td>
+  <td align="center"></td>
+  <td align="center">%W</td>
+  <td>最初の月曜を１開始とする年間の通算週</td>
+</tr>
+<tr>
+  <td align="center">%b, %h</td>
+  <td align="center">M</td>
+  <td align="center">%b, %h</td>
+  <td>短縮された月の名前</td>
+</tr>
+<tr>
+  <td align="center">%B</td>
+  <td align="center">F</td>
+  <td align="center">%B</td>
+  <td>完全な月の名前</td>
+</tr>
+<tr>
+  <td align="center">%m</td>
+  <td align="center">m</td>
+  <td align="center">%m</td>
+  <td>２桁０埋めの月</td>
+</tr>
+<tr>
+  <td align="center">%C</td>
+  <td align="center"></td>
+  <td align="center">%C</td>
+  <td>２桁０埋めの世紀</td>
+</tr>
+<tr>
+  <td align="center">%g</td>
+  <td align="center"></td>
+  <td align="center"></td>
+  <td>２桁であらわした年。ISO-8601:1988 標準形式</td>
+</tr>
+<tr>
+  <td align="center">%G</td>
+  <td align="center">o</td>
+  <td align="center"></td>
+  <td>%g の４桁完全版</td>
+</tr>
+<tr>
+  <td align="center">%y</td>
+  <td align="center">y</td>
+  <td align="center">%y</td>
+  <td>２桁０埋めの年のしも２桁</td>
+</tr>
+<tr>
+  <td align="center">%Y</td>
+  <td align="center">Y</td>
+  <td align="center">%Y</td>
+  <td>４桁０埋めの年</td>
+</tr>
+<tr>
+  <td align="center">%H</td>
+  <td align="center">H</td>
+  <td align="center">%H</td>
+  <td>２桁０埋めの24時間制の時間</td>
+</tr>
+<tr>
+  <td align="center">%k</td>
+  <td align="center"></td>
+  <td align="center">%k</td>
+  <td>２桁空白埋めの24時間制の時間</td>
+</tr>
+<tr>
+  <td align="center">%I</td>
+  <td align="center">h</td>
+  <td align="center">%I</td>
+  <td>２桁０埋めの12時間制の時間</td>
+</tr>
+<tr>
+  <td align="center">%l</td>
+  <td align="center"></td>
+  <td align="center">%l</td>
+  <td>２桁空白埋めの12時間制の時間</td>
+</tr>
+<tr>
+  <td align="center">%M</td>
+  <td align="center">i</td>
+  <td align="center">%M</td>
+  <td>２桁０埋めの分</td>
+</tr>
+<tr>
+  <td align="center">%p</td>
+  <td align="center">A</td>
+  <td align="center">%p</td>
+  <td>指定した時刻に応じた大文字の 'AM' あるいは 'PM'</td>
+</tr>
+<tr>
+  <td align="center">%P</td>
+  <td align="center">a</td>
+  <td align="center">%P</td>
+  <td>指定した時刻に応じた小文字の 'am' あるいは 'pm'</td>
+</tr>
+<tr>
+  <td align="center">%r</td>
+  <td align="center"></td>
+  <td align="center">%r</td>
+  <td>"%I:%M:%S %p" と同じ</td>
+</tr>
+<tr>
+  <td align="center">%R</td>
+  <td align="center"></td>
+  <td align="center">%R</td>
+  <td>"%H:%M" と同じ</td>
+</tr>
+<tr>
+  <td align="center">%S</td>
+  <td align="center">s</td>
+  <td align="center">%S</td>
+  <td>２桁０埋めの秒</td>
+</tr>
+<tr>
+  <td align="center">%T, %X</td>
+  <td align="center"></td>
+  <td align="center">%T, %X</td>
+  <td>"%H:%M:%S" と同じ</td>
+</tr>
+<tr>
+  <td align="center">%z</td>
+  <td align="center">O</td>
+  <td align="center">%z</td>
+  <td>タイムゾーン。UTC/GMTからのオフセット</td>
+</tr>
+<tr>
+  <td align="center">%Z</td>
+  <td align="center">T</td>
+  <td align="center">%Z</td>
+  <td>タイムゾーン</td>
+</tr>
+<tr>
+  <td align="center">%c</td>
+  <td align="center"></td>
+  <td align="center">%c</td>
+  <td>日付と時刻</td>
+</tr>
+<tr>
+  <td align="center">%D, %x</td>
+  <td align="center"></td>
+  <td align="center">%D, %x</td>
+  <td>"%m/%d/%y" と同じ</td>
+</tr>
+<tr>
+  <td align="center">%F</td>
+  <td align="center"></td>
+  <td align="center">%F</td>
+  <td>"%Y-%m-%d" と同じ</td>
+</tr>
+<tr>
+  <td align="center">%s</td>
+  <td align="center">U</td>
+  <td align="center">%s</td>
+  <td>Unix エポックからのタイムスタンプ</td>
+</tr>
+<tr>
+  <td align="center">%n</td>
+  <td align="center"></td>
+  <td align="center">%n</td>
+  <td>改行文字 ("\n")</td>
+</tr>
+<tr>
+  <td align="center">%t</td>
+  <td align="center"></td>
+  <td align="center">%t</td>
+  <td>タブ文字 ("\t")</td>
+</tr>
+<tr>
+  <td align="center">%%</td>
+  <td align="center"></td>
+  <td align="center">%%</td>
+  <td>パーセント文字 ("%")</td>
+</tr>
+<tr>
+  <td align="center">%a, %d %b %Y %T %z</td>
+  <td align="center">r</td>
+  <td align="center">%a, %d %b %Y %T %z</td>
+  <td>RFC 2822 フォーマットされた日付</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">j</td>
+  <td align="center">%-e</td>
+  <td>左寄せの日</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">S</td>
+  <td align="center"></td>
+  <td>英語形式の序数を表すサフィックス(stやndなど)</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">z</td>
+  <td align="center"></td>
+  <td>左寄せで０開始の年間の通算日</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">n</td>
+  <td align="center">%-m</td>
+  <td>左寄せの月</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">t</td>
+  <td align="center"></td>
+  <td>指定した月の日数</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">L</td>
+  <td align="center"></td>
+  <td>閏年であるかどうか</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">B</td>
+  <td align="center"></td>
+  <td>Swatch インターネット時間</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">g</td>
+  <td align="center">%-l</td>
+  <td>左寄せの12時間制の時間</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">G</td>
+  <td align="center">%-H</td>
+  <td>左寄せの24時間制の時間</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">u</td>
+  <td align="center">%6N</td>
+  <td>６桁０埋めのマイクロ秒</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">e</td>
+  <td align="center"></td>
+  <td>タイムゾーン識別子</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">I</td>
+  <td align="center"></td>
+  <td>サマータイム中か否か</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">P</td>
+  <td align="center">%:z</td>
+  <td>タイムゾーン。コロンが入ったUTC/GMTからのオフセット</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">Z</td>
+  <td align="center"></td>
+  <td>タイムゾーンのオフセット秒数</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">c</td>
+  <td align="center">%FT%T%:z</td>
+  <td>ISO 8601 日付</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center"></td>
+  <td align="center">%L, %3N</td>
+  <td>３桁０埋めのミリ秒</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center"></td>
+  <td align="center">%N</td>
+  <td>９桁０埋めのナノ秒</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center"></td>
+  <td align="center">%v</td>
+  <td>VMS形式の日付 (%e-%b-%Y)</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center"></td>
+  <td align="center">%::z</td>
+  <td>タイムゾーン。コロンが入った秒まで含むUTCからのオフセット</td>
+</tr>
+</tbody>
+</table>
+
+<p>表にして比較してみると、 php の <code>date()</code> 関数は若干サポートしているフォーマットが少ないですが、逆に特殊な内容をサポートしていたりと、なかなかおもしろいと思います。</p>
+
+<p>両方が合わさると最強ではないかと思わなくもないですが、英字1文字で対応するには厳しい気もしますね。</p>
+
+<p>比較は、手でやるのは面倒だったのでスクリプトを組んで調べましたが、まあ、これぐらいなら手でやっても良かったかもしれません。</p>
+
+<p>ほかの言語を追加で調べる場合には、楽ができそうですが。</p>
+
+<h2 id="%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%81%AE%E5%88%A9%E7%94%A8%E6%96%B9%E6%B3%95">スクリプトの利用方法</h2>
+
+<p>利用方法は下記の</p>
+
+<ul>
+<li><a href="https://gist.github.com/sharkpp/2bdf0b6a70fc08044b01b7089e6ef023">_format-diff.php</a></li>
+<li><a href="https://gist.github.com/sharkpp/84deb455f9e1ffbc50f8cf1d5a0c399b">php-date.php</a></li>
+<li><a href="https://gist.github.com/sharkpp/0426f8dd6650083dc30768fc9f3f3c61">php-strftime.php</a></li>
+<li><a href="https://gist.github.com/sharkpp/7f45f212b1d58609bf7ee19164630452">ruby-Time#strftime.rb</a></li>
+</ul>
+
+<p>を同じところにダウンロードして <code>_format-diff.php</code> を実行するだけです。</p>
+
+<pre><code class="bash">$ wget https://gist.githubusercontent.com/sharkpp/2bdf0b6a70fc08044b01b7089e6ef023/raw/bffcab5b2ac52c5d2878a351f6626cc3a431baf0/
+$ wget https://gist.githubusercontent.com/sharkpp/84deb455f9e1ffbc50f8cf1d5a0c399b/raw/5b8156bb66a21477ea2f6214721f8a7d46082379/
+$ wget https://gist.githubusercontent.com/sharkpp/0426f8dd6650083dc30768fc9f3f3c61/raw/9404cd04f9bde929e0d61c97408f0a89a566a449/
+$ wget https://gist.githubusercontent.com/sharkpp/7f45f212b1d58609bf7ee19164630452/raw/07c5e4093ad8db4af4048639fa7194b732c5387c/
+$
+$ php _format-diff.php
+|php:strftime|php:date|ruby:Time#strftime|説明|
+|:-:|:-:|:-:|-|
+|  %a  |  D  |        %a        ||
+|  %A  |  l  |        %A        ||
+</code></pre>
+
+<h2 id="%E5%AE%9F%E9%9A%9B%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89%E3%81%A1%E3%82%87%E3%81%A3%E3%81%A8%E9%95%B7%E3%81%84">実際のコード(ちょっと長い)</h2>
+
+<script src="https://gist.github.com/sharkpp/2bdf0b6a70fc08044b01b7089e6ef023.js"></script>
+
+<script src="https://gist.github.com/sharkpp/84deb455f9e1ffbc50f8cf1d5a0c399b.js"></script>
+
+<script src="https://gist.github.com/sharkpp/0426f8dd6650083dc30768fc9f3f3c61.js"></script>
+
+<script src="https://gist.github.com/sharkpp/7f45f212b1d58609bf7ee19164630452.js"></script>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://jp2.php.net/manual/ja/function.strftime.php">PHP: strftime - Manual</a></li>
+<li><a href="http://jp2.php.net/manual/ja/function.date.php">PHP: date - Manual</a></li>
+<li><a href="http://docs.ruby-lang.org/ja/2.2.0/method/Time/i/strftime.html">instance method Time#strftime (Ruby 2.2.0)</a></li>
+<li><a href="http://docs.python.jp/2/library/datetime.html#strftime-strptime-behavior">8.1. datetime — 基本的な日付型および時間型 — Python 2.7.x ドキュメント</a></li>
+<li><a href="https://linuxjm.osdn.jp/html/GNU_coreutils/man1/date.1.html">Man page of DATE</a></li>
+<li><a href="http://linuxjm.osdn.jp/html/LDP_man-pages/man3/strftime.3.html">Man page of STRFTIME</a></li>
+<li><a href="http://search.cpan.org/~dexter/POSIX-strftime-GNU-0.02/lib/POSIX/strftime/GNU.pm">POSIX::strftime::GNU - search.cpan.org</a></li>
+<li><a href="http://perldoc.jp/docs/modules/Time-Piece-1.08/Piece.pod#pod20351-12356-26041">Time::Piece - オブジェクト指向な時間オブジェクト - perldoc.jp</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[ファイル拡張子のようなドメインをまとめてみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/04/30/file-extension-domains.html"/>
+            <updated>2016-04-30T17:45:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/04/30/file-extension-domains.html</id>
+            <content type="html"><![CDATA[<p>以前に <a href="http://www.sharkpp.net/blog/2015/09/21/romaji-readable-domains.html">ローマ字として読むことが可能なドメインをまとめてみた</a> として、ローマ字として読めるドメインをまとめてみましたが、ある意味ではそれの第二弾のような内容です。</p>
+
+<p>今回は、ファイルの拡張子、例えば hogehoge.sh でシェルスクリプト、見たいな拡張子が他にもないか調べまとめてみることにしました。</p>
+
+<p>例えば、 <code>very-amazing.mov</code> とか <code>fiddle.py</code> とか <code>fiddle.pl</code> とか <code>fiddle.sh</code> とか <code>nandemo.zip</code> とか  <code>nandemo.cab</code> とか、ぱっと見で何ができるか、わかる気がしませんか？</p>
+
+<p>例によって <a href="http://www.iana.org/domains/root/db">IANA — Root Zone Database</a> をソースとして利用しています。</p>
+
+<p>下の表は <a href="https://docs.google.com/spreadsheets/d/164kFGy6G52qJ6xmqZ8oyxVwc5714mXoWYSohs23WZoo/edit?usp=sharing">ファイル拡張子のようなドメイン - Google スプレッドシート</a> から確認できます。</p>
+
+<h2 id="%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%8B%A1%E5%BC%B5%E5%AD%90%E3%81%AE%E3%82%88%E3%81%86%E3%81%AA-tld-%E3%81%AE%E4%B8%80%E8%A6%A7">ファイル拡張子のような TLD の一覧</h2>
+
+<table class="table table-bordered table-hover table-condensed table-striped" data-sheetrock="https://docs.google.com/spreadsheets/d/164kFGy6G52qJ6xmqZ8oyxVwc5714mXoWYSohs23WZoo/edit#gid=0"></table>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<p>ざっと見たところでは、あるアプリケーションの専用フォーマットに付けられている拡張子が多い気がします。</p>
+
+<p>ただ、その中でも、</p>
+
+<table>
+<thead>
+<tr>
+  <th>ドメイン/拡張子</th>
+  <th>種別</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>.ai</td>
+  <td>Adobe Illustrator File</td>
+</tr>
+<tr>
+  <td>.app</td>
+  <td>Mac OS X Application</td>
+</tr>
+<tr>
+  <td>.as</td>
+  <td>ActionScript File / HSP source File</td>
+</tr>
+<tr>
+  <td>.bz</td>
+  <td>Bzip Compressed File</td>
+</tr>
+<tr>
+  <td>.cab</td>
+  <td>Windows Cabinet File</td>
+</tr>
+<tr>
+  <td>.cc</td>
+  <td>C++ Source Code File</td>
+</tr>
+<tr>
+  <td>.coffee</td>
+  <td>CoffeeScript JavaScript File</td>
+</tr>
+<tr>
+  <td>.java</td>
+  <td>Java Source Code File</td>
+</tr>
+<tr>
+  <td>.md</td>
+  <td>Markdown Documentation File</td>
+</tr>
+<tr>
+  <td>.mobi</td>
+  <td>Mobipocket eBook</td>
+</tr>
+<tr>
+  <td>.mov</td>
+  <td>Apple QuickTime Movie</td>
+</tr>
+<tr>
+  <td>.pl</td>
+  <td>Perl Script</td>
+</tr>
+<tr>
+  <td>.ps</td>
+  <td>PostScript File</td>
+</tr>
+<tr>
+  <td>.py</td>
+  <td>Python Script</td>
+</tr>
+<tr>
+  <td>.sh</td>
+  <td>Bash Shell Script</td>
+</tr>
+<tr>
+  <td>.tk</td>
+  <td>Tk Script</td>
+</tr>
+<tr>
+  <td>.zip</td>
+  <td>Zipped File</td>
+</tr>
+</tbody>
+</table>
+
+<p>辺りが一般的なものっぽいかな？と言う気がします。</p>
+
+<p>まあ、なかなか活用は難しそうですが、この表を見て良いドメインを閃いきサービスを作ったのであれば、こっそりとサービスの極片隅に書いておいてもらえると嬉しいです。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://www.iana.org/domains/root/db">IANA — Root Zone Database</a></li>
+<li><a href="http://fileinfo.com/">FileInfo - The File Extensions Database</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[JavaScript や CSS の CDN サービスについて調べてみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/03/06/research-of-javascript-and-css-cdn.html"/>
+            <updated>2016-03-06T21:30:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/03/06/research-of-javascript-and-css-cdn.html</id>
+            <content type="html"><![CDATA[<p>jQuery や Bootstrap などの一般的なライブラリを使うときは自分のサイトに設置する以外に、 Content Delivery Network 略して CDN サービスで配信されているものを利用することもあります、というかこのページでも使っています。</p>
+
+<p>ということで、 CDN サービスを調べてみました。</p>
+
+<h2 id="%E5%AF%BE%E8%B1%A1">対象</h2>
+
+<p>一般的な多くのライブラリを配信しているサービス</p>
+
+<ul>
+<li><a href="https://cdnjs.com/">cdnjs.com - The free and open source CDN for web related libraries to speed up your website!</a></li>
+<li><a href="https://www.jsdelivr.com/">jsDelivr - A free super-fast CDN for developers and webmasters</a></li>
+<li><a href="https://developers.google.com/speed/libraries/">Hosted Libraries  |  Hosted Libraries  |  Google Developers</a></li>
+<li><a href="http://www.asp.net/ajax/cdn">Microsoft Ajax Content Delivery Network | The ASP.NET Site</a></li>
+</ul>
+
+<p>と、一部のライブラリの配信に特化しているサービス</p>
+
+<ul>
+<li><a href="https://code.jquery.com/">jQuery CDN</a></li>
+<li><a href="https://www.bootstrapcdn.com/">BootstrapCDN by MaxCDN</a></li>
+</ul>
+
+<p>を調べてみました。</p>
+
+<p>なお、結果は環境やタイミングなどにより変化することがある旨、予めご了承ください。</p>
+
+<h2 id="%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%81%94%E3%81%A8%E3%81%AE%E3%83%AC%E3%82%B9%E3%83%9D%E3%83%B3%E3%82%B9">ライブラリごとのレスポンス</h2>
+
+<p>調査は curl コマンドのレスポンスを <a href="https://gist.github.com/sharkpp/bc3de3bbaa5e99752ca1">research-of-javascript-and-css-cdn.php - Gist</a> のスクリプトで集計しその結果をもとにまとめています。</p>
+
+<p>各表は、50 回の問い合わせを算術平均した結果でソートしてあります。
+また、 <code>loss</code> は、要求でエラーが返ってきていないかの確認のため設けましたが滅多なことではエラーは返ってこないので常に <code>0.0 %</code> となっています。</p>
+
+<p>対象のライブラリは独断と偏見により、</p>
+
+<ul>
+<li><a href="https://jquery.com/">jQuery</a></li>
+<li><a href="https://jqueryui.com/">jQuery UI</a></li>
+<li><a href="https://jquerymobile.com/">jQuery Mobile</a></li>
+<li><a href="https://lodash.com/">lodash</a></li>
+<li><a href="http://snapsvg.io/">Snap.svg</a></li>
+<li><a href="https://d3js.org/">3D.js</a></li>
+<li><a href="http://threejs.org/">three.js</a></li>
+<li><a href="http://getbootstrap.com/">Bootstrap</a></li>
+<li><a href="https://fortawesome.github.io/Font-Awesome/">Font Awesome</a></li>
+<li><a href="https://angularjs.org/">AngularJS</a></li>
+</ul>
+
+<p>を選び調査しました。</p>
+
+<p>それぞれのライブラリは調査時点で各 CDN サービスで選択できる安定版を対象としています。
+なので、一部古いバージョンが混じっていますが間違ってはいません。</p>
+
+<h3 id="jquery">jQuery</h3>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Microsoft Ajax CDN</td>
+  <td align="right">2.2.1</td>
+  <td align="right">63 ms</td>
+  <td align="right">77 ms</td>
+  <td align="right">577 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">Google Hosted Libraries</td>
+  <td align="right">2.2.0</td>
+  <td align="right">216 ms</td>
+  <td align="right">224 ms</td>
+  <td align="right">242 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">2.2.1</td>
+  <td align="right">195 ms</td>
+  <td align="right">233 ms</td>
+  <td align="right">305 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">2.2.1</td>
+  <td align="right">319 ms</td>
+  <td align="right">366 ms</td>
+  <td align="right">476 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jQuery CDN</td>
+  <td align="right">2.2.1</td>
+  <td align="right">878 ms</td>
+  <td align="right">939 ms</td>
+  <td align="right">1008 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="lodash">lodash</h3>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">4.6.1</td>
+  <td align="right">129 ms</td>
+  <td align="right">168 ms</td>
+  <td align="right">196 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">4.6.1</td>
+  <td align="right">338 ms</td>
+  <td align="right">442 ms</td>
+  <td align="right">1006 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="snap.svg">Snap.svg</h3>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">0.4.1</td>
+  <td align="right">200 ms</td>
+  <td align="right">246 ms</td>
+  <td align="right">373 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">0.4.1</td>
+  <td align="right">344 ms</td>
+  <td align="right">386 ms</td>
+  <td align="right">451 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="d3.js">D3.js</h3>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">3.5.16</td>
+  <td align="right">302 ms</td>
+  <td align="right">330 ms</td>
+  <td align="right">419 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">3.5.16</td>
+  <td align="right">344 ms</td>
+  <td align="right">458 ms</td>
+  <td align="right">794 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="three.js">three.js</h3>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Google Hosted Libraries</td>
+  <td align="right">r69</td>
+  <td align="right">251 ms</td>
+  <td align="right">274 ms</td>
+  <td align="right">323 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">r74</td>
+  <td align="right">308 ms</td>
+  <td align="right">583 ms</td>
+  <td align="right">829 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">r74</td>
+  <td align="right">526 ms</td>
+  <td align="right">641 ms</td>
+  <td align="right">860 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="jquery-ui">jQuery UI</h3>
+
+<p>JavaScript</p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Microsoft Ajax CDN</td>
+  <td align="right">1.11.4</td>
+  <td align="right">90 ms</td>
+  <td align="right">104 ms</td>
+  <td align="right">612 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">Google Hosted Libraries</td>
+  <td align="right">1.11.4</td>
+  <td align="right">225 ms</td>
+  <td align="right">235 ms</td>
+  <td align="right">278 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">1.11.4</td>
+  <td align="right">320 ms</td>
+  <td align="right">411 ms</td>
+  <td align="right">606 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">1.11.4</td>
+  <td align="right">384 ms</td>
+  <td align="right">534 ms</td>
+  <td align="right">1003 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jQuery CDN</td>
+  <td align="right">1.11.4</td>
+  <td align="right">1096 ms</td>
+  <td align="right">1194 ms</td>
+  <td align="right">1760 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<p>CSS</p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Microsoft Ajax CDN</td>
+  <td align="right">1.11.4</td>
+  <td align="right">42 ms</td>
+  <td align="right">55 ms</td>
+  <td align="right">557 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">1.11.4</td>
+  <td align="right">155 ms</td>
+  <td align="right">185 ms</td>
+  <td align="right">215 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">Google Hosted Libraries</td>
+  <td align="right">1.11.4</td>
+  <td align="right">179 ms</td>
+  <td align="right">206 ms</td>
+  <td align="right">720 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">1.11.4</td>
+  <td align="right">295 ms</td>
+  <td align="right">347 ms</td>
+  <td align="right">980 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jQuery CDN</td>
+  <td align="right">1.11.4</td>
+  <td align="right">761 ms</td>
+  <td align="right">815 ms</td>
+  <td align="right">895 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="jquery-mobile">jQuery Mobile</h3>
+
+<p>JavaScript</p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Microsoft Ajax CDN</td>
+  <td align="right">1.4.5</td>
+  <td align="right">130 ms</td>
+  <td align="right">153 ms</td>
+  <td align="right">655 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">Google Hosted Libraries</td>
+  <td align="right">1.4.5</td>
+  <td align="right">221 ms</td>
+  <td align="right">234 ms</td>
+  <td align="right">288 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">1.4.5</td>
+  <td align="right">232 ms</td>
+  <td align="right">323 ms</td>
+  <td align="right">2678 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">1.4.5</td>
+  <td align="right">358 ms</td>
+  <td align="right">466 ms</td>
+  <td align="right">917 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jQuery CDN</td>
+  <td align="right">1.4.5</td>
+  <td align="right">1002 ms</td>
+  <td align="right">1141 ms</td>
+  <td align="right">1609 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<p>CSS</p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Microsoft Ajax CDN</td>
+  <td align="right">1.4.5</td>
+  <td align="right">86 ms</td>
+  <td align="right">102 ms</td>
+  <td align="right">606 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">Google Hosted Libraries</td>
+  <td align="right">1.4.5</td>
+  <td align="right">222 ms</td>
+  <td align="right">244 ms</td>
+  <td align="right">755 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">1.4.5</td>
+  <td align="right">232 ms</td>
+  <td align="right">272 ms</td>
+  <td align="right">1549 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">1.4.5</td>
+  <td align="right">360 ms</td>
+  <td align="right">466 ms</td>
+  <td align="right">655 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jQuery CDN</td>
+  <td align="right">1.4.5</td>
+  <td align="right">995 ms</td>
+  <td align="right">1124 ms</td>
+  <td align="right">1244 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="bootstrap">Bootstrap</h3>
+
+<p>CSS</p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Microsoft Ajax CDN</td>
+  <td align="right">3.3.6</td>
+  <td align="right">66 ms</td>
+  <td align="right">86 ms</td>
+  <td align="right">590 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">3.3.6</td>
+  <td align="right">187 ms</td>
+  <td align="right">223 ms</td>
+  <td align="right">761 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">3.3.6</td>
+  <td align="right">338 ms</td>
+  <td align="right">437 ms</td>
+  <td align="right">899 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">BootstrapCDN</td>
+  <td align="right">3.3.6</td>
+  <td align="right">844 ms</td>
+  <td align="right">909 ms</td>
+  <td align="right">1040 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<p>JavaScript</p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Microsoft Ajax CDN</td>
+  <td align="right">3.3.6</td>
+  <td align="right">42 ms</td>
+  <td align="right">55 ms</td>
+  <td align="right">571 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">3.3.6</td>
+  <td align="right">156 ms</td>
+  <td align="right">196 ms</td>
+  <td align="right">475 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">3.3.6</td>
+  <td align="right">307 ms</td>
+  <td align="right">347 ms</td>
+  <td align="right">853 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">BootstrapCDN</td>
+  <td align="right">3.3.6</td>
+  <td align="right">714 ms</td>
+  <td align="right">756 ms</td>
+  <td align="right">809 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="font-awesome">Font Awesome</h3>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Google Hosted Libraries</td>
+  <td align="right">1.4.9</td>
+  <td align="right">232 ms</td>
+  <td align="right">243 ms</td>
+  <td align="right">318 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">1.5.0</td>
+  <td align="right">220 ms</td>
+  <td align="right">330 ms</td>
+  <td align="right">434 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">1.5.0</td>
+  <td align="right">359 ms</td>
+  <td align="right">422 ms</td>
+  <td align="right">544 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="angularjs">AngularJS</h3>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Google Hosted Libraries</td>
+  <td align="right">1.4.9</td>
+  <td align="right">219 ms</td>
+  <td align="right">242 ms</td>
+  <td align="right">743 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">1.5.0</td>
+  <td align="right">223 ms</td>
+  <td align="right">312 ms</td>
+  <td align="right">759 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">1.5.0</td>
+  <td align="right">359 ms</td>
+  <td align="right">465 ms</td>
+  <td align="right">669 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<p>レスポンス速度としては大まかには</p>
+
+<table>
+<thead>
+<tr>
+  <th align="center">#</th>
+  <th>CDN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="center">1</td>
+  <td>Microsoft Ajax CDN</td>
+</tr>
+<tr>
+  <td align="center">2</td>
+  <td>Google Hosted Libraries</td>
+</tr>
+<tr>
+  <td align="center">3</td>
+  <td>jsDelivr</td>
+</tr>
+<tr>
+  <td align="center">4</td>
+  <td>cdnjs</td>
+</tr>
+<tr>
+  <td align="center">5</td>
+  <td>jQuery CDN</td>
+</tr>
+<tr>
+  <td align="center">6</td>
+  <td>BootstrapCDN</td>
+</tr>
+</tbody>
+</table>
+
+<p>の順のような感じです。</p>
+
+<p>配信しているライブラリの数としては</p>
+
+<table>
+<thead>
+<tr>
+  <th>CDN</th>
+  <th align="right">配信数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>cdnjs</td>
+  <td align="right">1835</td>
+</tr>
+<tr>
+  <td>jsDelivr</td>
+  <td align="right">1750</td>
+</tr>
+<tr>
+  <td>Microsoft Ajax CDN</td>
+  <td align="right">20</td>
+</tr>
+<tr>
+  <td>Google Hosted Libraries</td>
+  <td align="right">14</td>
+</tr>
+<tr>
+  <td>jQuery CDN</td>
+  <td align="right">6</td>
+</tr>
+<tr>
+  <td>BootstrapCDN</td>
+  <td align="right">3</td>
+</tr>
+</tbody>
+</table>
+
+<p>と、 cdnjs や jsDelivr が圧倒的に多いですが、 Bootstrap 用のテーマの Bootswatch は BootstrapCDN しか配信していないのでその場合はそれ一択です。
+Google Hosted Libraries の場合は、最新バージョンのライブラリが配信されていないこともあるのでレスポンスはいいですが超憂が必要となります。</p>
+
+<h2 id="%E3%81%8A%E3%81%BE%E3%81%91">おまけ</h2>
+
+<h3 id="%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%84%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%81%8C%E9%85%8D%E4%BF%A1%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%EF%BC%81">使いたいライブラリが配信されていない！</h3>
+
+<p>また、どうしても CDN を利用したい、でもライブラリがマイナーすぎて CDN で配信されていない、という場合は GitHub でライブラリが公開されている場合に限り  <a href="http://rawgit.com/">RawGit</a> を利用することもできます。</p>
+
+<p>まあ、その他の場合は諦めて素直に自分のサーバーのファイルを参照しましょう。</p>
+
+<h3 id="cdn-%E3%81%A7%E9%9A%9C%E5%AE%B3%E3%81%8C%E8%B5%B7%E3%81%8D%E3%81%9F%E3%82%89%EF%BC%9F">CDN で障害が起きたら？</h3>
+
+<p>参照している CDN で障害が起きた場合は、当然ながら、ページのレイアウトが崩れたりしてしまいます。
+基本的にはほとんど問題ないとはいえ、万が一に備えておいて悪くわありません。</p>
+
+<p>方策としては例えば、</p>
+
+<pre><code class="javascript">&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;window.jQuery || document.write('&lt;script src="/assets/jquery/jquery.min.js"&gt;&lt;\/script&gt;')&lt;/script&gt;
+</code></pre>
+
+<p>と、このような感じで、CDN を参照している script タグの直後に、判定式を書いて、読み込めていないようであれば、ローカルを参照することができます。</p>
+
+<p>また、専用のライブラリ <a href="http://fallback.io/">Fallback JS</a> を使ってみるのもいいかもしれません。
+ああ、 当然のことながら Fallback JS を CDN から読んではいけませんよ。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://qiita.com/narikei/items/cffb27b6d5788005d1b0">jsのよく使うホスティングサービス（cdn）まとめ - Qiita</a></li>
+<li><a href="http://www.hirok-k.com/blog/2634.html">ウェブ制作でよく使うjQuery関連のCDNまとめ</a></li>
+<li><a href="http://qiita.com/takanorig/items/89db46120d2ec171e3d8">GitHub上のファイルをCDNとして参照する - Qiita</a></li>
+<li><a href="https://hyper-text.org/archives/2014/07/dont_use_jquery_latest_js.shtml">jQuery 公式 Blog 「jquery-latest.js を使用するのをやめろ」 | WWW WATCH</a></li>
+<li><a href="http://little-braver.com/232/">JavaScriptライブラリーのCDN利用、フォールバック対応しました</a></li>
+<li><a href="http://fdays.blogspot.jp/2013/04/js-cdn-2013.html">floatingdays: JSの CDNの速度比較 （2013年版）</a></li>
+<li><a href="http://www.hongkiat.com/blog/css-javascript-fallback-methods/">10 Useful Fallback Methods For CSS And Javascript - Hongkiat</a></li>
+<li><a href="http://www.buildinsider.net/web/popularjslib/2015">人気上昇中のJavaScriptライブラリを調べてみた【2015年版】 - Build Insider</a></li>
+<li><a href="http://www.buildinsider.net/hub/survey/201504-popularjs">2015年、人気の「JavaScriptライブラリ＆ツール」はどれ？ Angular vs. Reactの行方 - Build Insider</a></li>
+<li><a href="http://please-sleep.cou929.nu/curl-write-out-option.html">curl でレスポンスタイムを計測 - Please Sleep</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[ローマ字として読むことが可能なドメインをまとめてみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/09/21/romaji-readable-domains.html"/>
+            <updated>2015-09-21T19:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/09/21/romaji-readable-domains.html</id>
+            <content type="html"><![CDATA[<p>よくトップレベルドメイン(TLD)を含めた状態で文字列を表現するドメイン名になっていることがあります。</p>
+
+<p>たとえば、<code>about.me = "About me"</code> や <code>delicio.us = Delicious</code> とかです。
+これ、ローマ字でもできると思いませんか？</p>
+
+<p>なので、ドメインの一覧のリストを作り、その中からローマ字として読めそうな TLD のまとめを作ってみました。</p>
+
+<p>なお、<code>.hitachi</code> など企業が持っている物や、<code>.tokyo</code> とかのように在住者のみを対象としているドメイン、さらには維持費が月額１万を超える物などもあるので、読めたからといって取得し維持できるとは限らないですので参考程度ではありますです。</p>
+
+<p>下の表は <a href="https://docs.google.com/spreadsheets/d/1dKEZFofML-d3EDDZIVOFkxbALKGMConF_RF6eck1eKs/edit?usp=sharing">ローマ字になるドメイン - Google スプレッドシート</a> から確認できます。</p>
+
+<h2 id="%E4%BA%94%E5%8D%81%E9%9F%B3%E3%81%AE%E8%A1%A8%E5%86%85%E3%81%A7%E5%AD%98%E5%9C%A8%E3%81%99%E3%82%8B-tld">五十音の表内で存在する TLD</h2>
+
+<p>五十音に含まれる、１文字もしくは２文字として読むことが可能な TLD を表としてまとめてみました。</p>
+
+<p>存在する文字は TLD として記載してあります。</p>
+
+<table class="table table-bordered table-hover table-condensed table-striped" data-sheetrock="https://docs.google.com/spreadsheets/d/1dKEZFofML-d3EDDZIVOFkxbALKGMConF_RF6eck1eKs/edit#gid=1665663076"></table>
+
+<h2 id="%E3%83%AD%E3%83%BC%E3%83%9E%E5%AD%97%E3%81%A8%E3%81%97%E3%81%A6%E8%AA%AD%E3%82%81%E3%82%8B-tld-%E3%81%AE%E4%B8%80%E8%A6%A7">ローマ字として読める TLD の一覧</h2>
+
+<p><a href="http://www.iana.org/domains/root/db">IANA — Root Zone Database</a> からドメイン名の一覧を作成し、ローマ字として読むことが可能な一覧を作成しました。</p>
+
+<p>なお、企業が保有している、取得資格がない、高額など、様々な理由により、読めるからといって取得できるとは限りませんので悪しからず。</p>
+
+<table class="table table-bordered table-hover table-condensed table-striped" data-sheetrock="https://docs.google.com/spreadsheets/d/1dKEZFofML-d3EDDZIVOFkxbALKGMConF_RF6eck1eKs/edit#gid=344367018"></table>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://www.iana.org/domains/root/db">IANA — Root Zone Database</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[SNSの共有ボタンを設置できる jQuery (他も含む) プラグインをまとめてみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/06/14/collection-of-social-share-button-plugin.html"/>
+            <updated>2015-06-14T16:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/06/14/collection-of-social-share-button-plugin.html</id>
+            <content type="html"><![CDATA[<p>記事ページに Twitter とか Facebook とかの共有ボタンを設置したいなぁと思い、 AddThis で試しに追加してみると、、、なんと言うことでしょう、 AdBlock でボタンが消えてしまうではないですかorz</p>
+
+<p>ということで、公式のコードをぺたりんこするか jQuery などのプラグインで設置するかを悩み、また、ボタンのデザインをカスタマイズできないかと jQuery を使って設置できるプラグインを調べてまとめてみました。</p>
+
+<p>基本的には jQuery をキーワードに調べたので jQuery のプラグインですが、それ以外にも引っかかったので一応は乗せてあります。</p>
+
+<p><a href="https://docs.google.com/spreadsheets/d/1_tXrnlwV5Vbql-5yEgcPZ3q7PcIlV6DxHD4BJLExUgc/edit?usp=sharing">Social Share Button Plugin - Google スプレッドシート</a></p>
+
+<h2 id="%E3%82%81%E3%81%A8%E3%82%81">めとめ</h2>
+
+<p>ざっくりとした感じとしては、日本のサービスはやっぱりあまりサポートされていないなぁということ。</p>
+
+<p>Hatena Bookmark とかほとんどサポートされていませんでした。</p>
+
+<p>あと、 StumbleUpon って知らなかったのですが人気があるんでしょうか？</p>
+
+<p>ちなみに、 <code>btn</code> はボタンの設置が出来る、 <code>cnt</code> はカウンターの表示あり、です。</p>
+
+<table class="table table-bordered table-hover table-condensed table-striped" data-sheetrock="https://docs.google.com/spreadsheets/d/1_tXrnlwV5Vbql-5yEgcPZ3q7PcIlV6DxHD4BJLExUgc/edit#gid=0"></table>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://www.sitepoint.com/10-social-sharing-jquery-plugins-missed/">10 Social Sharing jQuery Plugins You May Have Missed</a></li>
+<li><a href="http://jquery-plugins.net/tag/social-share-button">social share button | jQuery Plugins</a></li>
+<li><a href="http://www.jqueryrain.com/demo/jquery-social-share-plugin/">35+ jQuery Social Share Plugin with Example</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[PasteBin/Snippet系サービスまとめ]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/06/06/pastebin-snippet-web-service-list.html"/>
+            <updated>2015-06-06T07:51:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/06/06/pastebin-snippet-web-service-list.html</id>
+            <content type="html"><![CDATA[<p>以前にTwitterでつぶやいた <a href="https://docs.google.com/spreadsheets/d/1TNov1uXtnPERVAFiUvkzvJ5BfZfghO2A_h2rwgY9qNg/edit?usp=sharing">pastebin/Snippet系サービスまとめ</a> をここでもメモ</p>
+
+<p>テキスト系は色々ありますが RUN CODE が出来るプログラミング系は数えるほどしか無い印象。</p>
+
+<p>他に見つかったら順次アプデということで。</p>
+
+<h2 id="%E3%81%BA%E3%81%9F%E3%81%A3%E3%81%A8">ぺたっと</h2>
+
+<table class="table table-bordered table-hover table-condensed table-striped" data-sheetrock="https://docs.google.com/spreadsheets/d/1TNov1uXtnPERVAFiUvkzvJ5BfZfghO2A_h2rwgY9qNg/edit#gid=0"></table>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[oAuth 認証を提供しているサービスをまとめてみました]]></title>
+            <link href="http://www.sharkpp.net/blog/2014/03/30/oauth-providers-list.html"/>
+            <updated>2014-03-30T23:35:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2014/03/30/oauth-providers-list.html</id>
+            <content type="html"><![CDATA[<p>oAuth 認証を提供しているサービスをまとめてみました。</p>
+
+<p>どちらかというと Opauth で使えそうなサービス一覧、が正しいのかもしれません。</p>
+
+<p>ついでに、ステータスやアプリケーションの登録を行うためのサイトも全てではないですが調べてあります。</p>
+
+<p>一覧は <a href="http://opauth.org/">Opauth ? Multi-provider authentication framework for PHP</a> や <a href="https://packagist.org/packages/opauth/">Packagist</a> などを参考にしています。</p>
+
+<table><tr>
+<th align="center">
+Opauth
+</th>
+<th align="left">
+プロバイダ
+</th>
+<th align="center">
+oAuth
+</th>
+<th align="left">
+開発サイト(アプリ登録など)
+</th>
+<th align="left">
+ステータスの確認ページ
+</th>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/asana">○</a>
+</td>
+<td align="left">
+<a href="https://asana.com/">Asana</a>
+</td>
+<td align="center">
+<a href="http://tools.ietf.org/html/draft-ietf-oauth-v2-31">2.0 draft 31</a>
+</td>
+<td align="left">
+<a href="http://developer.asana.com/documentation/#AsanaConnect">API Documentation at Asana Developers</a>
+</td>
+<td align="left">
+<a href="https://asana.com/status">Asana - Status</a>
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/bitbucket">○</a>
+</td>
+<td align="left">
+<a href="https://bitbucket.org/">Bitbucket</a>
+</td>
+<td align="center">
+1.0a
+</td>
+<td align="left">
+<a href="https://confluence.atlassian.com/display/BITBUCKET/OAuth+on+Bitbucket">Atlassian Documentation</a>
+</td>
+<td align="left">
+<a href="http://status.bitbucket.org/">Atlassian Bitbucket Status</a>
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://github.com/rasa/opauth-disqus">○</a>
+</td>
+<td align="left">
+<a href="http://disqus.com/">Disqus</a>
+</td>
+<td align="center">
+<a href="http://tools.ietf.org/html/draft-ietf-oauth-v2-30">2.0 draft 30</a>
+</td>
+<td align="left">
+<a href="http://disqus.com/api/docs/auth/">Authentication - API - Disqus</a>
+</td>
+<td align="left">
+<a href="http://status.disqus.com/">Disqus Status</a>
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://github.com/arbales/opauth-do">○</a>
+</td>
+<td align="left">
+<a href="http://www.do.com/">Do</a>
+</td>
+<td align="center">
+</td>
+<td align="left">
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/evernote">○</a>
+</td>
+<td align="left">
+<a href="http://evernote.com/">Evernote</a>
+</td>
+<td align="center">
+1.0a
+</td>
+<td align="left">
+<a href="http://dev.evernote.com/intl/jp/appcenter/">Evernote Developers</a>
+</td>
+<td align="left">
+<a href="http://status.evernote.com/">Evernote Status | Evernote Corporation</a>
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/facebook">○</a>
+</td>
+<td align="left">
+<a href="https://www.facebook.com/">Facebook</a>
+</td>
+<td align="center">
+2.0
+</td>
+<td align="left">
+<a href="https://developers.facebook.com/apps/">Apps - Facebook Developers</a>
+</td>
+<td align="left">
+<a href="https://developers.facebook.com/status/">プラットフォームの現在の状態</a>
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/flickr">○</a>
+</td>
+<td align="left">
+<a href="https://www.flickr.com/">Flickr</a>
+</td>
+<td align="center">
+1.0a
+</td>
+<td align="left">
+<a href="http://www.flickr.com/services/api/auth.oauth.html">Flickr Services</a>
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/frype">○</a>
+</td>
+<td align="left">
+<a href="http://www.frype.com/">Frype</a>
+</td>
+<td align="center">
+</td>
+<td align="left">
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/foursquare">○</a>
+</td>
+<td align="left">
+<a href="https://ja.foursquare.com/?">Foursquare</a>
+</td>
+<td align="center">
+</td>
+<td align="left">
+<a href="https://developer.foursquare.com/overview/auth#registration">foursquare for Developers</a>
+</td>
+<td align="left">
+<a href="http://status.foursquare.com/">Foursquare Status</a>
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/github">○</a>
+</td>
+<td align="left">
+<a href="https://github.com/">GitHub</a>
+</td>
+<td align="center">
+</td>
+<td align="left">
+<a href="https://github.com/settings/applications/new">New OAuth Application</a>
+</td>
+<td align="left">
+<a href="https://status.github.com/">GitHub System Status</a>
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/google">○</a>
+</td>
+<td align="left">
+<a href="https://www.google.com/">Google</a>
+</td>
+<td align="center">
+2.0
+</td>
+<td align="left">
+<a href="https://console.developers.google.com/">Google Cloud Console</a>
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+×
+</td>
+<td align="left">
+<a href="http://gree.jp/">GREE</a>
+</td>
+<td align="center">
+1.0
+</td>
+<td align="left">
+<a href="https://docs.developer.gree.net/ja/globaltechnicalspecs/oauth">GREE Developer Center</a>
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/instagram">○</a>
+</td>
+<td align="left">
+<a href="http://instagram.com/">Instagram</a>
+</td>
+<td align="center">
+2.0
+</td>
+<td align="left">
+<a href="http://instagram.com/developer/register/">Instagram開発者ドキュメント</a>
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/linkedin">○</a>
+</td>
+<td align="left">
+<a href="https://www.linkedin.com/">LinkedIn</a>
+</td>
+<td align="center">
+2.0
+</td>
+<td align="left">
+<a href="https://www.linkedin.com/secure/developer">LinkedIn Developer Network</a>
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/live">○</a>
+</td>
+<td align="left">
+<a href="https://www.live.com">Windows Live</a>
+</td>
+<td align="center">
+2.0
+</td>
+<td align="left">
+<a href="https://account.live.com/developers/applications">Live</a>
+</td>
+<td align="left">
+<a href="https://status.live.com">Service Status - Microsoft services</a>
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/mailru">○</a>
+</td>
+<td align="left">
+<a href="http://mail.ru/">Mail.Ru</a>
+</td>
+<td align="center">
+</td>
+<td align="left">
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/meetup">○</a>
+</td>
+<td align="left">
+<a href="http://www.meetup.com/">Meetup</a>
+</td>
+<td align="center">
+2.0
+</td>
+<td align="left">
+<a href="https://secure.meetup.com/meetup_api/oauth_consumers/create">Your OAuth Consumers - Meetup</a>
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/mixi">○</a>
+</td>
+<td align="left">
+<a href="https://mixi.jp/">mixi</a>
+</td>
+<td align="center">
+2.0
+</td>
+<td align="left">
+<a href="https://sap.mixi.jp/home.pl">mixi</a>
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/openid">○</a>
+</td>
+<td align="left">
+OpenID
+</td>
+<td align="center">
+</td>
+<td align="left">
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/paypal">○</a>
+</td>
+<td align="left">
+<a href="https://www.paypal.com/">PayPal</a>
+</td>
+<td align="center">
+</td>
+<td align="left">
+<a href="https://developer.paypal.com/webapps/developer/applications">PayPal Developer</a>
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/probook">○</a>
+</td>
+<td align="left">
+<a href="http://probook.bg/">Probook</a>
+</td>
+<td align="center">
+2.0
+</td>
+<td align="left">
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+×
+</td>
+<td align="left">
+<a href="https://www.tumblr.com/">Tumblr</a>
+</td>
+<td align="center">
+1.0a
+</td>
+<td align="left">
+<a href="https://www.tumblr.com/oauth/apps">Tumblr</a>
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/sinaweibo">○</a>
+</td>
+<td align="left">
+<a href="http://weibo.com/">Sina Weibo (新浪微博)</a>
+</td>
+<td align="center">
+</td>
+<td align="left">
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/thecity">○</a>
+</td>
+<td align="left">
+<a href="http://www.onthecity.org/">The City</a>
+</td>
+<td align="center">
+2.0
+</td>
+<td align="left">
+<a href="https://api.onthecity.org/docs/apps">The City ? API Docs</a>
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/twitter">○</a>
+</td>
+<td align="left">
+<a href="https://twitter.com/">Twitter</a>
+</td>
+<td align="center">
+2.0
+</td>
+<td align="left">
+<a href="https://dev.twitter.com/">Twitter Developers</a>
+</td>
+<td align="left">
+<a href="https://dev.twitter.com/status">API Status | Twitter Developers</a>
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/vkontakte">○</a>
+</td>
+<td align="left">
+<a href="https://vk.com/">VKontakte</a>
+</td>
+<td align="center">
+2.0
+</td>
+<td align="left">
+<a href="http://vk.com/developers.php">Developers｜VK</a>
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+×
+</td>
+<td align="left">
+<a href="https://www.yahoo.com">Yahoo</a>
+</td>
+<td align="center">
+</td>
+<td align="left">
+<a href="http://developer.yahoo.com/oauth/">Yahoo! Developer Network</a>
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/yahoojp">○</a>
+</td>
+<td align="left">
+<a href="http://www.yahoo.co.jp/">Yahoo! Japan</a>
+</td>
+<td align="center">
+2.0
+</td>
+<td align="left">
+<a href="https://e.developer.yahoo.co.jp/dashboard/">アプリケーションの管理</a>
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/yandex">○</a>
+</td>
+<td align="left">
+<a href="http://www.yandex.ru/">yandex</a>
+</td>
+<td align="center">
+</td>
+<td align="left">
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+×
+</td>
+<td align="left">
+<a href="http://www.hatena.ne.jp/">はてな</a>
+</td>
+<td align="center">
+</td>
+<td align="left">
+<a href="http://developer.hatena.ne.jp/ja/documents/auth/apis/oauth/consumer">Hatena Developer Center</a>
+</td>
+<td align="left">
+なし
+</td>
+</tr>
+<tr>
+<td align="center">
+×
+</td>
+<td align="left">
+<a href="http://www.rakuten.co.jp/">楽天</a>
+</td>
+<td align="center">
+</td>
+<td align="left">
+<a href="https://webservice.rakuten.co.jp/document/oauth">楽天ウェブサービス(RAKUTEN WEBSERVICE)</a>
+</td>
+<td align="left">
+<a href="https://webservice.rakuten.co.jp/status">楽天ウェブサービス: APIモニター</a>
+</td>
+</tr>
+</table>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[*-users.jp(?ユーザのためのハブサイト)のその後を追跡調査(2013-12-29版)]]></title>
+            <link href="http://www.sharkpp.net/blog/2013/12/29/user-jp-follow-up2.html"/>
+            <updated>2013-12-29T14:46:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2013/12/29/user-jp-follow-up2.html</id>
+            <content type="html"><![CDATA[<p><a href="/blog/2013/01/24/user-jp-follow-up.html">*-user.jp(?ユーザのためのハブサイト)のその後を追跡調査</a>の追跡調査をしてみました。</p>
+
+<p>まあ、何がきっかけって hsp-users.jp がスパムサイトに使われていたのがドメイン切れしたっぽいので取得してみたのと他どうなっているかな？って思ったので確認してみました。</p>
+
+<p>色々探し回って前回対象になっていないところも下記参考リンクを元に追加しました。</p>
+
+<p>ちなみに、再登録したとかで登録日が変わっていたりするので一概には言えないですが、、、大体、2008-05-20から半年程度ぐらいが当時の流行に乗って作られたサイトのようですね。</p>
+
+<hr />
+
+<h3 id="2014-01-11-%E8%BF%BD%E8%A8%98">2014-01-11 追記</h3>
+
+<p>qt-users.jp を追加したのとタイトルなどが user.jp になってたのを修正しました。</p>
+
+<hr />
+
+<h2 id="%E8%AA%BF%E6%9F%BB%E7%B5%90%E6%9E%9C">調査結果</h2>
+
+<p>例によって、状態→ドメイン名順、でソートしてあります。</p>
+
+<p>列挙した55サイト中、32ものサイトが現状ではドメイン切れや別サイトに変わっていました。 前回からも、3サイトがドメイン切れなどに変わっています。</p>
+
+<p>java-users.jp とか oracle-users.jp は昔からあったようなので調査から除外すべきかもと思いましたが参考までに乗せておくことにしました。</p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">ドメイン</th>
+  <th align="left">サイトタイトル</th>
+  <th align="left">状態(2013-01-24)</th>
+  <th align="left">状態(2013-12-29)</th>
+  <th align="left">登録者</th>
+  <th align="left">登録日</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">air-users.jp</td>
+  <td align="left">日本の AIR ユーザのためのハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">エアーユーザーズ</td>
+  <td align="left">2008-05-21</td>
+</tr>
+<tr>
+  <td align="left">arc-users.jp</td>
+  <td align="left">日本の Arc ユーザのためのハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">松村竜次</td>
+  <td align="left">2008-05-22</td>
+</tr>
+<tr>
+  <td align="left">as-users.jp</td>
+  <td align="left">日本の ActionScript ユーザのためのハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">新藤　愛大</td>
+  <td align="left">2008-05-20</td>
+</tr>
+<tr>
+  <td align="left">cakephp-users.jp</td>
+  <td align="left">日本のcakePHP ユーザのためのハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">長瀬　幸雄</td>
+  <td align="left">2009-09-09</td>
+</tr>
+<tr>
+  <td align="left">csharp-users.jp</td>
+  <td align="left">日本 C# ユーザー会</td>
+  <td align="left">※未調査</td>
+  <td align="left"></td>
+  <td align="left">岩永信之</td>
+  <td align="left">2009-03-16</td>
+</tr>
+<tr>
+  <td align="left">emacs-users.jp</td>
+  <td align="left"><del>日本の Emacs ユーザのためのハブサイト</del><br/>Emacsつかおうゼ！</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">30days-night.jp</td>
+  <td align="left">2011-07-01</td>
+</tr>
+<tr>
+  <td align="left">erlang-users.jp</td>
+  <td align="left">日本のErlang/OTPユーザーのためのハブサイト</td>
+  <td align="left">※未調査</td>
+  <td align="left"></td>
+  <td align="left">Tsukasa Hamano</td>
+  <td align="left">2008-06-18</td>
+</tr>
+<tr>
+  <td align="left">hsp-users.jp</td>
+  <td align="left">日本のHSPユーザのためのハブサイト</td>
+  <td align="left">乗っ取られ(健康食品)</td>
+  <td align="left"></td>
+  <td align="left">sharkpp</td>
+  <td align="left">2013-12-12</td>
+</tr>
+<tr>
+  <td align="left">www.java-users.jp</td>
+  <td align="left">日本 Java ユーザグループ</td>
+  <td align="left">※未調査</td>
+  <td align="left"></td>
+  <td align="left">稚内北星学園大学</td>
+  <td align="left">2006-11-30</td>
+</tr>
+<tr>
+  <td align="left">joomla-users.jp</td>
+  <td align="left">日本の Joomla! ユーザのためのハブサイト</td>
+  <td align="left">※未調査</td>
+  <td align="left"></td>
+  <td align="left">新川 隆司</td>
+  <td align="left">2008-07-01</td>
+</tr>
+<tr>
+  <td align="left">js-users.jp</td>
+  <td align="left">日本の JavaScript ユーザのためのハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">(株)ユビキタスエンターテインメント</td>
+  <td align="left">2008-05-21</td>
+</tr>
+<tr>
+  <td align="left">mercurial-users.jp</td>
+  <td align="left">Mercurial ユーザの為のハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">飯野 卓見</td>
+  <td align="left">2011-11-14</td>
+</tr>
+<tr>
+  <td align="left">opera-users.jp</td>
+  <td align="left">日本のOperaユーザのためのハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">横澤 拓弥</td>
+  <td align="left">2008-05-21</td>
+</tr>
+<tr>
+  <td align="left">www.oracle-users.jp</td>
+  <td align="left">オラクル(Oracle/Oracle11g)ユーザーズガイド  データベースユーザのための情報コンテンツ</td>
+  <td align="left">※未調査</td>
+  <td align="left"></td>
+  <td align="left">株式会社サイバネティック</td>
+  <td align="left">2013-08-27</td>
+</tr>
+<tr>
+  <td align="left">perl-users.jp</td>
+  <td align="left">日本のPerlユーザのためのハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">ヤッポー</td>
+  <td align="left">2008-05-20</td>
+</tr>
+<tr>
+  <td align="left">php-users.jp</td>
+  <td align="left">日本のPHPユーザのためのハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">田口元</td>
+  <td align="left">2008-05-20</td>
+</tr>
+<tr>
+  <td align="left">qt-users.jp</td>
+  <td align="left">日本 Qt ユーザー会 - Japan Qt Users' Group</td>
+  <td align="left">※未調査</td>
+  <td align="left"></td>
+  <td align="left">橋本 賢弥</td>
+  <td align="left">2012-10-22</td>
+</tr>
+<tr>
+  <td align="left">sb-users.jp</td>
+  <td align="left">日本の Serene Bach / sb ユーザのためのハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">ライズ</td>
+  <td align="left">2009-05-02</td>
+</tr>
+<tr>
+  <td align="left">scheme-users.jp</td>
+  <td align="left">日本の Scheme ユーザのためのハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">m-oz.com</td>
+  <td align="left">2008-05-25</td>
+</tr>
+<tr>
+  <td align="left">skk-users.jp</td>
+  <td align="left">日本のSKKユーザのためのハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">宇佐美 健太</td>
+  <td align="left">2013-01-18</td>
+</tr>
+<tr>
+  <td align="left">www.smalltalk-users.jp</td>
+  <td align="left">日本のSmalltalkユーザのためのハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">合同会社ソフトウメヤ</td>
+  <td align="left">2008-07-06</td>
+</tr>
+<tr>
+  <td align="left">tenga-users.jp</td>
+  <td align="left">日本の TENGA ユーザのためのハブサイト</td>
+  <td align="left">※未調査</td>
+  <td align="left"></td>
+  <td align="left">Hamachiya Corp.</td>
+  <td align="left">2008-05-25</td>
+</tr>
+<tr>
+  <td align="left">vim-users.jp</td>
+  <td align="left">日本の Vim ユーザのためのハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">田中康太郎</td>
+  <td align="left">2008-05-24</td>
+</tr>
+<tr>
+  <td align="left">apogee-users.jp</td>
+  <td align="left">Apogee User Group</td>
+  <td align="left">※未調査</td>
+  <td align="left">サイトダウン</td>
+  <td align="left">株式会社ゼオ</td>
+  <td align="left">2002-11-11</td>
+</tr>
+<tr>
+  <td align="left">hauhau-users.jp</td>
+  <td align="left">日本の はうはう ユーザのためのハブサイト</td>
+  <td align="left">※未調査</td>
+  <td align="left">サイトダウン</td>
+  <td align="left">沢渡真雪</td>
+  <td align="left">2008-05-23</td>
+</tr>
+<tr>
+  <td align="left">nakano-users.jp</td>
+  <td align="left">中野人のためのハブサイト</td>
+  <td align="left">※未調査</td>
+  <td align="left">サイトダウン</td>
+  <td align="left"></td>
+  <td align="left">2010-11-01</td>
+</tr>
+<tr>
+  <td align="left">php5-users.jp</td>
+  <td align="left">日本の PHP5 ユーザのためのハブサイト</td>
+  <td align="left">※未調査</td>
+  <td align="left">サイトダウン</td>
+  <td align="left">--</td>
+  <td align="left">2010-11-01</td>
+</tr>
+<tr>
+  <td align="left">python-users.jp</td>
+  <td align="left">日本のPythonユーザのためのハブサイト</td>
+  <td align="left">乗っ取られ(レーシック)</td>
+  <td align="left">サイトダウン</td>
+  <td align="left">野本孝彦</td>
+  <td align="left">2013-08-06</td>
+</tr>
+<tr>
+  <td align="left">cf-users.jp</td>
+  <td align="left">日本の ColdFusion ユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">chumby-users.jp</td>
+  <td align="left">日本のChumbyユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">edgenow-users.jp</td>
+  <td align="left">日本のEDGE Now!ユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">eroge-users.jp</td>
+  <td align="left">日本のエロゲーユーザのためのハブサイト</td>
+  <td align="left">※未調査</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">ethna-users.jp</td>
+  <td align="left">日本のEthnaユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">git-users.jp</td>
+  <td align="left">日本の Git ユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">haxe-users.jp</td>
+  <td align="left">日本の haXe ユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">io-users.jp</td>
+  <td align="left">日本の Io ユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">mac-users.jp</td>
+  <td align="left">日本の Mac ユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">mobile-users.jp</td>
+  <td align="left">日本のモバイルサイト開発者のためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">munou-users.jp</td>
+  <td align="left">日本の 人工無脳 ユーザのためのハブサイト</td>
+  <td align="left">乗っ取られ(脱毛)</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">nucleus-users.jp</td>
+  <td align="left">日本のNucleusユーザのためのハブサイト</td>
+  <td align="left">乗っ取られ(ダイエット)</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">okinawa-web-users.jp</td>
+  <td align="left">沖縄のWebユーザのためのハブサイト</td>
+  <td align="left">※未調査</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">pdf-users.jp</td>
+  <td align="left">日本の PDF ユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">pyobjc-users.jp</td>
+  <td align="left">日本の PyObjC ユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">rails-users.jp</td>
+  <td align="left">日本の Rails ユーザのためのハブサイト</td>
+  <td align="left">乗っ取られ(中古車)</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">sql-users.jp</td>
+  <td align="left">日本の SQL ユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">users-users.jp</td>
+  <td align="left">IT系ハブサイトのハブサイト</td>
+  <td align="left">※未調査</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">windows-users.jp</td>
+  <td align="left"></td>
+  <td align="left">※未調査</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">wp-users.jp</td>
+  <td align="left">日本の WordPress ユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">www.awk-users.jp</td>
+  <td align="left">日本の AWK ユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">xen-users.jp</td>
+  <td align="left">日本の Xen ユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">courier-users.jp</td>
+  <td align="left">日本 Courier ユーザ会 (JCUG; Japan Courier Users Group)</td>
+  <td align="left">※未調査</td>
+  <td align="left">ゴルフSEO</td>
+  <td align="left">藤田 誠</td>
+  <td align="left">2008-02-07</td>
+</tr>
+<tr>
+  <td align="left">firefox-users.jp</td>
+  <td align="left">日本のFirefoxユーザのためのハブサイト</td>
+  <td align="left">サイトダウン</td>
+  <td align="left">ドメインSEO？</td>
+  <td align="left">リンククラブ</td>
+  <td align="left">2008-05-27</td>
+</tr>
+<tr>
+  <td align="left">ruby-users.jp</td>
+  <td align="left">日本のRubyユーザのためのハブサイト</td>
+  <td align="left">乗っ取られ(エステ)</td>
+  <td align="left">乗っ取られ(エステ)</td>
+  <td align="left">松井 一</td>
+  <td align="left">2011-07-01</td>
+</tr>
+<tr>
+  <td align="left">seasar-users.jp</td>
+  <td align="left">Seasar User's PortalSite</td>
+  <td align="left">※未調査</td>
+  <td align="left">乗っ取られ(石鹸)</td>
+  <td align="left">小林　直矢</td>
+  <td align="left">2011-04-03</td>
+</tr>
+<tr>
+  <td align="left">zf-users.jp</td>
+  <td align="left">日本の ZendFramework ユーザのためのハブサイト</td>
+  <td align="left">乗っ取られ(資格取得)</td>
+  <td align="left">乗っ取られ(資格取得)</td>
+  <td align="left">間々田　敬子</td>
+  <td align="left">2010-07-01</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://d.hatena.ne.jp/Watson/20080521/1211302951">xxxx-users.jp - Watsonのメモ</a></li>
+<li><a href="http://blog.ptlabo.net/index.php?id=11060004">*-users.jp :: てくてく糸巻き</a></li>
+<li><a href="http://loumo.jp/wp/archive/20080522201610/">http://loumo.jp/wp/archive/20080522201610/</a></li>
+<li><a href="http://d.hatena.ne.jp/boscono/20080526/p1">http://d.hatena.ne.jp/boscono/20080526/p1</a></li>
+<li><a href="http://d.hatena.ne.jp/dreamfire/20110201/users_jp">今こそ「*-users.jp」再まとめ - いつも先延ばし。</a></li>
+<li><a href="http://scheme-users.jp/links.html">Scheme リンク集 - Scheme-users.jp</a></li>
+<li><a href="http://zapanet.info/blog/item/1293">*-users.jpを作って思ったこと、期待していること</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[*-user.jp(?ユーザのためのハブサイト)のその後を追跡調査]]></title>
+            <link href="http://www.sharkpp.net/blog/2013/01/24/user-jp-follow-up.html"/>
+            <updated>2013-01-24T01:48:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2013/01/24/user-jp-follow-up.html</id>
+            <content type="html"><![CDATA[<p>ふと、hsp-user.jp がドメイン切れ→乗っ取られで健康食品のページになって久しいなと思い出して、他のサイトたちはどうなっているんだろうと調べてみました。</p>
+
+<p>とりあえず、技術系の *-users.jp に絞って列挙してみました。</p>
+
+<h3 id="2013-02-05-%E8%BF%BD%E8%A8%98">2013-02-05 追記</h3>
+
+<p>本来の目的が分かりにくいのでタイトルを「-user.jpのその後を追跡調査」から「-user.jp(?ユーザのためのハブサイト)のその後を追跡調査」と変更しました。</p>
+
+<p>目的としては、perl-user.jp から始まった、「?ユーザのためのハブサイト」系でちらほら別のページになっていたりアクセスできなくなっているのに気が付いて結局実際どのぐらい残念な状態になっているのか興味があったので調べてみた次第です。</p>
+
+<p>結果は、ひどい有様。</p>
+
+<p>列挙した38サイト中、23ものサイトが現状ではドメイン切れや別サイトに変わっていました。</p>
+
+<p>予想ではドメイン切れは少ないと思ったのですがドメインの更新料が高くて手放してしまったのでしょうか？</p>
+
+<p>アクセスできるページもトップページのみだったり更新がされていなかったりと活用されていないところもちらほら見受けられます。</p>
+
+<p>洒落で取っては見たけど結局うまく活用できず、、、ってパターンが多いかもです。</p>
+
+<table></tr>
+<th>
+ドメイン名
+</th>
+<th>
+サイト名
+</th>
+<th>
+状態(2013-01-24)
+</th></tr> </tr>
+<td>
+AIR-users.jp
+</td>
+<td>
+日本の AIR ユーザのためのハブサイト
+</td>
+<td>
+</td></tr> </tr>
+<td>
+AS-users.jp
+</td>
+<td>
+日本の ActionScript ユーザのためのハブサイト
+</td>
+<td>
+</td></tr> </tr>
+<td>
+Arc-users.jp
+</td>
+<td>
+日本の Arc ユーザのためのハブサイト
+</td>
+<td>
+</td></tr> </tr>
+<td>
+Mercurial-users.jp
+</td>
+<td>
+Mercurial ユーザの為のハブサイト
+</td>
+<td>
+</td></tr> </tr>
+<td>
+Opera-users.jp
+</td>
+<td>
+<del>日本のOperaユーザのためのハブサイト</del> Opera-users.jp
+</td>
+<td>
+</td></tr> </tr>
+<td>
+PHP-users.jp
+</td>
+<td>
+日本のPHPユーザのためのハブサイト
+</td>
+<td>
+</td></tr> </tr>
+<td>
+Perl-users.jp
+</td>
+<td>
+日本のPerlユーザのためのハブサイト
+</td>
+<td>
+</td></tr> </tr>
+<td>
+Scheme-users.jp
+</td>
+<td>
+日本の Scheme ユーザのためのハブサイト
+</td>
+<td>
+</td></tr> </tr>
+<td>
+cakephp-users.jp
+</td>
+<td>
+日本のcakePHP ユーザのためのハブサイト
+</td>
+<td>
+</td></tr> </tr>
+<td>
+emacs-users.jp
+</td>
+<td>
+<del>日本の Emacs ユーザのためのハブサイト</del> Emacsつかおうゼ！
+</td>
+<td>
+</td></tr> </tr>
+<td>
+js-users.jp
+</td>
+<td>
+日本の JavaScript ユーザのためのハブサイト
+</td>
+<td>
+</td></tr> </tr>
+<td>
+sb-users.jp
+</td>
+<td>
+日本の Serene Bach / sb ユーザのためのハブサイト
+</td>
+<td>
+</td></tr> </tr>
+<td>
+skk-users.jp
+</td>
+<td>
+日本のSKKユーザのためのハブサイト
+</td>
+<td>
+</td></tr> </tr>
+<td>
+vim-users.jp
+</td>
+<td>
+日本の Vim ユーザのためのハブサイト
+</td>
+<td>
+</td></tr> </tr>
+<td>
+www.smalltalk-users.jp
+</td>
+<td>
+日本のSmalltalkユーザのためのハブサイト
+</td>
+<td>
+</td></tr> </tr>
+<td>
+Firefox-users.jp
+</td>
+<td>
+日本のFirefoxユーザのためのハブサイト
+</td>
+<td>
+サイトダウン
+</td></tr> </tr>
+<td>
+CF-users.jp
+</td>
+<td>
+日本の ColdFusion ユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+Chumby-users.jp
+</td>
+<td>
+日本のChumbyユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+Ethna-users.jp
+</td>
+<td>
+日本のEthnaユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+Mobile-users.jp
+</td>
+<td>
+日本のモバイルサイト開発者のためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+SQL-users.jp
+</td>
+<td>
+日本の SQL ユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+WP-users.jp
+</td>
+<td>
+日本の WordPress ユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+edgenow-users.jp
+</td>
+<td>
+日本のEDGE Now!ユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+git-users.jp
+</td>
+<td>
+日本の Git ユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+haxe-users.jp
+</td>
+<td>
+日本の haXe ユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+io-users.jp
+</td>
+<td>
+日本の Io ユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+mac-users.jp
+</td>
+<td>
+日本の Mac ユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+pdf-users.jp
+</td>
+<td>
+日本の PDF ユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+pyobjc-users.jp
+</td>
+<td>
+日本の PyObjC ユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+www.awk-users.jp
+</td>
+<td>
+日本の AWK ユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+xen-users.jp
+</td>
+<td>
+日本の Xen ユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+HSP-users.jp
+</td>
+<td>
+日本のHSPユーザのためのハブサイト
+</td>
+<td>
+乗っ取られ(健康食品)
+</td></tr> </tr>
+<td>
+Rails-users.jp
+</td>
+<td>
+日本の Rails ユーザのためのハブサイト
+</td>
+<td>
+乗っ取られ(中古車)
+</td></tr> </tr>
+<td>
+Ruby-users.jp
+</td>
+<td>
+日本のRubyユーザのためのハブサイト
+</td>
+<td>
+乗っ取られ(エステ)
+</td></tr> </tr>
+<td>
+munou-users.jp
+</td>
+<td>
+日本の 人工無脳 ユーザのためのハブサイト
+</td>
+<td>
+乗っ取られ(脱毛)
+</td></tr> </tr>
+<td>
+nucleus-users.jp
+</td>
+<td>
+日本のNucleusユーザのためのハブサイト
+</td>
+<td>
+乗っ取られ(ダイエット)
+</td></tr> </tr>
+<td>
+python-users.jp
+</td>
+<td>
+日本のPythonユーザのためのハブサイト
+</td>
+<td>
+乗っ取られ(レーシック)
+</td></tr> </tr>
+<td>
+zf-users.jp
+</td>
+<td>
+日本の ZendFramework ユーザのためのハブサイト
+</td>
+<td>
+乗っ取られ(資格取得)
+</td></tr>
+</table>
+]]></content>
+        </entry>
+    </feed>

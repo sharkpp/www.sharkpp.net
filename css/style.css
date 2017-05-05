@@ -1,0 +1,147 @@
+h4 small
+{
+    display: block;
+    font-size: 60%;
+    color: #888;
+}
+
+.mainContent, .footer > .container {
+    max-width: 900px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    padding-top: 60px; /* トップナビゲーションの高さ */
+    padding-bottom: 20px; /* コンテンツとフッターとの間の隙間 */
+    margin-bottom: 160px; /* フッターの高さ */
+}
+
+article.full-contents {
+    border-bottom: 1px dashed #aaa;
+}
+
+article img {
+    max-width: 100%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 160px; /* フッターの高さ */
+    background-color: #222;
+    color: #ccc;
+}
+
+.footer .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 10px auto 0;
+}
+
+.footer .overflow {
+    position: absolute;
+    background-color: #222;
+}
+
+.footer ul {
+    margin-bottom: 0;
+}
+
+.footer a {
+    color: #ccc;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+    .sidebar {
+        padding-top: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .jump-button {
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+    .jump-button:first-child {
+      padding-left: 15px;
+    }
+    .jump-button:last-child {
+      padding-right: 15px;
+    }
+    .jump-button > a {
+        font-size: 100%;
+    }
+}
+
+/*********************************************
+ * ギャラーリーページ用
+ *********************************************/
+
+.tiles-wrap {
+    position: relative;
+    margin: 10px 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.tiles-wrap .thumbnail {
+    float: left;
+    display: block;
+}
+
+.tiles-wrap .thumbnail .caption {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.tiles-wrap .caption h3,
+.tiles-wrap .caption p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+.contenthover {
+    padding: 5px;
+    display: none;
+}
+
+.contenthover,
+.contenthover h3,
+.contenthover a {
+    color:#fff;
+}
+
+.contenthover h3,
+.contenthover p {
+    margin:0 0 10px 0;
+    line-height:1.4em;
+    padding:0;
+}
+
+.contenthover .ch_normal {
+    width: 100%;
+}
+
+.toolbar {
+}
+
+.toolbar .btn {
+    background: #000;
+    border-color: #666;
+    color: #999;
+}
+
+.toolbar .btn:hover {
+    border-color: #fff;
+    color: #fff;
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/Chart.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:50+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[グラフ描画ライブラリとFeedパーサーライブラリ]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/09/03/memo-chart-library-and-feed-paser-library.html"/>
+            <updated>2008-09-03T00:46:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/09/03/memo-chart-library-and-feed-paser-library.html</id>
+            <content type="html"><![CDATA[<p>忘れないようにメモ</p>
+
+<p>PHP用のライブラリ</p>
+
+<p>ProtoChart - グラフ描画ライブラリ - MITライセンス</p>
+
+<p><a href="http://www.deensoft.com/lab/protochart/">http://www.deensoft.com/lab/protochart/</a></p>
+
+<p>SimplePie - Feedパーサーライブラリ</p>
+
+<p><a href="http://simplepie.org/wiki/reference/simplepie/start">http://simplepie.org/wiki/reference/simplepie/start</a></p>
+]]></content>
+        </entry>
+    </feed>

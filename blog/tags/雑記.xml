@@ -1,0 +1,1481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/%E9%9B%91%E8%A8%98.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:48+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[技術書典2に行ってきた]]></title>
+            <link href="http://www.sharkpp.net/blog/2017/04/10/techbookfest2.html"/>
+            <updated>2017-04-10T23:50:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2017/04/10/techbookfest2.html</id>
+            <content type="html"><![CDATA[<p>去年から始まった技術書オンリーな同人イベント、「<a href="https://techbookfest.org/event/tbf02">技術書典２</a>」が、昨日の 4月9日に開催されました。
+今年も小雨が降る天気の中、去年の「技術書典」に引き続き行ってきました。
+これは、そのレポート、もしくは戦果報告となります。</p>
+
+<p><img src="/images/2017_0409_tf2.jpg" alt="会場前にて" /></p>
+
+<h2 id="%E5%A7%8B%E3%82%81%E3%81%AB">始めに</h2>
+
+<p>まず、去年のレポートは「<a href="/blog/2016/06/27/techbookfest.html">技術書典に行ってきた — さめたすたすのお家</a>
+」です。</p>
+
+<p>去年は、参加サークル数が 57 で、入場者数は、1400 名でした。
+今年は、場所を通運会館から秋葉原UDXホールへ移し、サークル数200？、入場者数が3100名 (<a href="https://twitter.com/TechBooster/status/850983169037697024">※</a>)と、大幅に増えています。</p>
+
+<h2 id="%E5%BD%93%E6%97%A5">当日</h2>
+
+<p>時間ピッタリで行ったら、すでに長蛇の列ができていたという去年の反省を踏まえ、かつ、公式より</p>
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E6%8A%80%E8%A1%93%E6%9B%B8%E5%85%B8?src=hash">#技術書典</a> 当日の一般入場についてお伝えします！ 11時より一般入場開始ですが、前回の反省を踏まえ秋葉原UDXでは10時より列形成開始の予定です。しかしながら、朝が一番人員繰りが厳しい時間帯なのでお手柔らかにお願いします。10時から列整理に割いている人員はわずかです…！</p>&mdash; TechBooster@超技術書典 (@TechBooster) <a href="https://twitter.com/TechBooster/status/849875400465371136">2017年4月6日</a></blockquote>
+
+<p>というアナウンスがあったので、10時に会場へ到着するよう行動しました。
+まあ、現実は非情ですでにそこそこ並んでいたわけですが。</p>
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E6%8A%80%E8%A1%93%E6%9B%B8%E5%85%B82?src=hash">#技術書典2</a> 来たけど10時の時点でエラいことに。列に並んでいると、Androidがとか、gitが、slackが、ハッカソンが、ハンダが、抵抗がとか、技術系の会話がなされてるのは興味深い <a href="https://t.co/Fd3fe2ePzx">pic.twitter.com/Fd3fe2ePzx</a></p>&mdash; ともかく、さめたすたすには気をつけて。 (@sharkpp) <a href="https://twitter.com/sharkpp/status/850878524860669957">2017年4月9日</a></blockquote>
+
+<p>で、列の待機中は、</p>
+
+<p><a href="/images/2017_0409_tf2_map.png"><img src="/_thumbs/76f83f6553b2ac95822f722833c9c297-256x256.png" alt="探索マップ"></a></p>
+
+<p>こんなマップを作っていたり、つぶやいたりして時間を潰していました。
+途中、少し肌寒くトイレが近くて危なかったけど、何とかなった。</p>
+
+<p>スタッフさんの「8ビットに並んで」とか、並んでいる人の、git がーとか、Rails がーとか、言う話を BGM で聞きつつ、あぁ、技術系のイベントなんだなぁと、しみじみ。</p>
+
+<p>途中、スタッフさんが、赤い手提げバッグを持って回っているなぁと思ったら、どうやら「技術季報？？？」ってタイトルの要するにはパンフレットを配ってたので、もちろん購入。</p>
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E6%8A%80%E8%A1%93%E6%9B%B8%E5%85%B82?src=hash">#技術書典2</a> まだ開場前だけどスタッフさんが購入しませんかってまわってきたのでもちろん挙手。技術季報（￥1000）の創刊号をゲットした！超会議の情報も載っているようだ <a href="https://t.co/HjPSDf6GAN">pic.twitter.com/HjPSDf6GAN</a></p>&mdash; ともかく、さめたすたすには気をつけて。 (@sharkpp) <a href="https://twitter.com/sharkpp/status/850885307771650048">2017年4月9日</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>まあ、これは後からでも会場内で買えるのは分かっていたけど、なんとなく先に購入。
+手提げバッグだけの場合は、無料で貰えたようです。</p>
+
+<p>そうこうするうちに、半歩前へ詰め、列が更に4列加わり、あ、これはエラいことになるなと。
+どうやら最終的にビルを回り込んで反対側まで列が伸びていた様子。</p>
+
+<p>そして、開場時間を超え最終確認に数分を掛けて、ついに開場。
+８人✕２“行”ずつの入場で、自分は５番目ぐらいの“行”だったから、前に多分 70 人前後はいた計算。</p>
+
+<p>会場内に入り、早速お目当てのサークルさんを駆け巡る。</p>
+
+<p>戦利品は後ほどで。</p>
+
+<p>知り合いのサークルさんに挨拶しつつ、新刊を買いつつ、本を、時には本以外を購入していると、お金に羽が生えたように財布から飛んで行きました。</p>
+
+<p>ともかく、一時間ぐらい会場内にいたけど、入場制限をしていたため、多少は窮屈だったけどそこまでギュウギュウということはなかったので良かったかなぁ。
+まあ、企業ブース前はもう少し広く取ってほしかったけど。
+あとは、新刊落としました、とか、未だに来て射ないサークルがあったり、とか、まあそんな感じ。</p>
+
+<p>グルッと一周りして、購入忘れがないことを確認。
+知り合いのサークルさんに再度挨拶をして会場を出ました。</p>
+
+<p>最後は、去年と同じように、秋葉原のヤマト運輸営業所で荷物を発送、身軽になって帰りましたとさ。</p>
+
+<h2 id="%E6%88%A6%E5%88%A9%E5%93%81">戦利品</h2>
+
+<p>今回の戦利品</p>
+
+<p><img src="/images/2017_0409_tf2_booty.jpg" alt="戦利品" /></p>
+
+<table>
+<thead>
+<tr>
+  <th>ブース</th>
+  <th>サークル名</th>
+  <th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td></td>
+  <td>達人出版会</td>
+  <td>「技術季報 2017 SPRING」※技術書典カタログ</td>
+</tr>
+<tr>
+  <td>あ-10</td>
+  <td>docker-machine（ドッカーマシーン）</td>
+  <td>「技術者のためのやさしい数学」</td>
+</tr>
+<tr>
+  <td>い-05</td>
+  <td>空と月</td>
+  <td>「兎と亀」</td>
+</tr>
+<tr>
+  <td>い-10</td>
+  <td>TOKYO FLIP-FLOP（トーキョーフリップフロップ）</td>
+  <td>「フロッピーせんべい」「アクリル製フロッピー」２種</td>
+</tr>
+<tr>
+  <td>う-11</td>
+  <td>ひみつラボ</td>
+  <td>「RustでGBAのプログラムを作ろう！」</td>
+</tr>
+<tr>
+  <td>え-05</td>
+  <td>NP-complete（エヌピーコンプリート）</td>
+  <td>「WEBASSEMBLY USUI BOOK</td>
+</tr>
+<tr>
+  <td>え-28</td>
+  <td>理ろぐ</td>
+  <td>「Qt Quickを使いこなすクロスプラットフォームUIプログラミング2」</td>
+</tr>
+<tr>
+  <td>お-05</td>
+  <td>イプシロン</td>
+  <td>「立体写真のつくりかた解説」</td>
+</tr>
+<tr>
+  <td>お-12</td>
+  <td>めがねをかけるんだ（メガネヲカケルンダ）</td>
+  <td>「TensorFlowはじめました」</td>
+</tr>
+<tr>
+  <td>き-10</td>
+  <td>ラムダノート株式会社</td>
+  <td>「Ruby でつくる Ruby」</td>
+</tr>
+<tr>
+  <td>き-15</td>
+  <td>株式会社ブックウォーカー</td>
+  <td>「かんたん電子書籍」※無料配布</td>
+</tr>
+</tbody>
+</table>
+
+<p>※敬称略</p>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<p>今回の教訓やメモなど</p>
+
+<ul>
+<li>公式のアナウンスをよく見ておこう。</li>
+<li>トイレは事前に済ませること。</li>
+<li>チラシがぐちゃぐちゃになるから A4 クリアファイルを持って行こう</li>
+<li>来年もあれば行こう（超会議はパスしました）</li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[HAPPY NEW YEAR 2017]]></title>
+            <link href="http://www.sharkpp.net/blog/2017/01/01/happy-new-year-2017.html"/>
+            <updated>2017-01-01T10:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2017/01/01/happy-new-year-2017.html</id>
+            <content type="html"><![CDATA[<p>明けましておめでとうございます。</p>
+
+<p>ほむぺ開設 13 年目、になるのかな？
+今年一年よろしくお願いします。</p>
+
+<p>去年は、コンテストに久しぶりにし応募したので、今年も応募したいなと。</p>
+
+<p>では、今年の目標をば。</p>
+
+<h2 id="%E7%9B%AE%E6%A8%99">目標</h2>
+
+<ul>
+<li>ホムペの更新の仕組みが壊れたっぽいのでなんとかする</li>
+</ul>
+
+<p>これは、緊急の課題。</p>
+
+<p>どうも、レンタル鯖のプログラムの更新でアップデートがうまくいかなくなったようなので、修正するか、いっそのこと GitHub Pages に移行してもよいかもしれない。</p>
+
+<p>あとは、</p>
+
+<h3 id="hsp%E9%96%A2%E9%80%A3">HSP関連</h3>
+
+<ul>
+<li><a href="http://hsp-users.jp/">HSP関連サイト</a>の定期的な更新。</li>
+<li>HSPコンテスト作品の製作！</li>
+<li>Advent Calendar の開催</li>
+<li>macOSで利用できるドキュメントビューアの作成</li>
+</ul>
+
+<h3 id="%E3%82%A2%E3%83%97%E3%83%AA%E9%96%A2%E9%80%A3">アプリ関連</h3>
+
+<ul>
+<li><a href="https://github.com/sharkpp/TimestampFreezer">TimestampFreezer</a> のバイナリ公開</li>
+<li>バイナリエディタを作りたい</li>
+<li>macOS用のGUI Diff が欲しい</li>
+</ul>
+
+<h3 id="%E3%81%9D%E3%81%AE%E4%BB%96">その他</h3>
+
+<ul>
+<li>素材関係をもう少し整理</li>
+<li>音素材の公開</li>
+</ul>
+
+<p>、、、できるかなぁ？</p>
+
+<p>てなわけで、よろしくお願いいたします。</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[大晦日@2016]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/12/31/new-years-eve-2016.html"/>
+            <updated>2016-12-31T12:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/12/31/new-years-eve-2016.html</id>
+            <content type="html"><![CDATA[<h2 id="1-%E5%B9%B4%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A">1 年を振り返り</h2>
+
+<p>皆さま、今年は良い年だったでしょうか？
+それとも、悪い年だったでしょうか？</p>
+
+<p>私は、まあぼちぼちと言ったところでしょうかね。</p>
+
+<p>悪かった人は、「<a href="http://hsproom.me/program/view/?p=146">除夜の鐘</a>」を突いて見るのはどうでしょうか？</p>
+
+<p>と言うことで、今年の反省をば。</p>
+
+<h2 id="%E7%B5%90%E6%9E%9C">結果</h2>
+
+<p>まずは、今年の正月 <a href="/blog/2016/01/01/happy-new-year-2016.html">HAPPY NEW YEAR 2016</a> に掲げた目標です。</p>
+
+<ul>
+<li><a href="http://hsp-users.jp/">HSP関連サイト</a>の立ち上げ</li>
+<li>HSPコンテスト作品の製作</li>
+<li><a href="https://github.com/sharkpp/TimestampFreezer">TimestampFreezer</a> のバイナリ公開</li>
+<li>バイナリエディタ作りたい</li>
+<li>素材関係をもう少し整理</li>
+<li>音素材の公開</li>
+</ul>
+
+<p>と、こんな感じ。</p>
+
+<p>「<a href="http://hsp-users.jp/">HSP関連サイト</a>の立ち上げ」は、とりあえず無事？立ち上げましたが、ちょっと色々忙しくて、コンテスト期間中の更新などできなかったのがダメでしたね。
+活動報告などは <a href="https://twitter.com/hsp_users_jp">@hsp_users_jp</a> や <a href="https://github.com/hsp-users-jp">GitHub</a> でしています。</p>
+
+<p>「HSPコンテスト作品の製作」の方は、<a href="/blog/2016/10/31/entry-the-HSP-program-contest-2016.html">HSP プログラムコンテスト 2016 へ応募しました(５年ぶり)</a>の通り、久しぶりに応募し、「（有）テクノキット賞」を<a href="http://hsp.tv/contest2016/cntst_fresult.html#1274">受賞</a>しました。
+Wineで開発完了を整えたのが功を奏したのかもしれないです。</p>
+
+<p>他には、<a href="/blog/2016/">アーカイブ - 2016</a> にある諸々や、「<a href="https://togetter.com/li/1058301">Qt 勉強会 @ Nagoya No3 #qtjp - Togetterまとめ</a>」に出席してみたり、お酒美味しそうだなーと「<a href="https://togetter.com/li/998224">よんた@keita44_f4 さんの日本酒の感想ツイートまとめ</a>」を作ってみたり、「<a href="http://qiita.com/advent-calendar/2016/hsp">Hot Soup Processor Advent Calendar 2016</a>」を主催してみたりとかして遊んでいました。</p>
+
+<p>まあ、まとめると</p>
+
+<ul>
+<li>Sculpin</li>
+<li>HSP + Wine</li>
+<li>Qt</li>
+</ul>
+
+<p>ぐらいかな？</p>
+
+<h2 id="%E5%8F%8D%E7%9C%81">反省</h2>
+
+<p>とりあえず、<a href="http://hsp-users.jp/">hsp-users.jp</a>を立ち上げたら立ち上げたで途中でほったらかしはダメですね。</p>
+
+<p>あとは、いい加減素材関係や途中槍のソフトをなんとかしたいです。</p>
+
+<p>来年はもうちょっとなんとかしたいな、と言うあたりで今年の反省会終了です。</p>
+
+<p>来年もよろしくお願いしますです。</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[技術書典に行ってきた]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/06/27/techbookfest.html"/>
+            <updated>2016-06-27T00:50:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/06/27/techbookfest.html</id>
+            <content type="html"><![CDATA[<p>一昨日、6月25日に技術系の同人誌や書籍に絞った、俗に○○オンリーって言われる系統の、今回は技術書オンリーなイベント「<a href="https://techbookfest.org/">技術書典</a>」へ行ってきたので、戦利品のまとめを兼ねてレポします。</p>
+
+<p>自身の属しているカテゴリとしては、同人誌の即売会はかなり久しぶりに行った感じの人なので、ちょっと他の○○オンリーイベントと会場の状態や入場整理などの比較がしづらいですが、そんな人から見たら、こうだった、という感じのレポートとなります。</p>
+
+<p><img src="/images/2016_0625_techbookfest.jpg" alt="会場前にて" /></p>
+
+<h2 id="%E4%BA%8B%E5%89%8D%E6%BA%96%E5%82%99">事前準備</h2>
+
+<p>とりあえず、ゲットしたい物や回りたいところを決めました。</p>
+
+<p>とりあえず「技術書典」の<a href="https://techbookfest.org/#circle">サークルの紹介</a>を辿って目星をつけてみましたが、面白そうなところばっかりで絞るのが大変でした。</p>
+
+<p><a href="https://twitter.com/IoriAYANE/status/746328930076889088">Qt本の既刊が少ないとの情報</a>を作者の<a href="https://twitter.com/IoriAYANE">理音伊織</a>さんが Twitter で、当日の配布物のお品書きとともに流していたので、無理を承知でお願いしたら、取り置きしておきますと嬉しい返事を貰えたので、これはすごく感謝です。
+まあ、過去に勉強会などで顔を合わせてお話したことがあるので無理を聞いて貰えたんだと思います。</p>
+
+<p>最終的には</p>
+
+<table>
+<thead>
+<tr>
+  <th>ブース</th>
+  <th>サークル名</th>
+  <th>ペンネーム</th>
+  <th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>A-27</td>
+  <td>理ろぐ</td>
+  <td>理音伊織</td>
+  <td>第一目標！</td>
+</tr>
+<tr>
+  <td>A-05</td>
+  <td>とのさまラボ×ロボットパートナー</td>
+  <td>西田寛輔</td>
+  <td>「ロボットのほん」</td>
+</tr>
+<tr>
+  <td>A-04</td>
+  <td>だめだめだん</td>
+  <td>はどら</td>
+  <td>ニキシー管時計の展示</td>
+</tr>
+<tr>
+  <td>A-06</td>
+  <td>こそこそ団</td>
+  <td>のむむ</td>
+  <td>「ROSではじめるホビーロボット」</td>
+</tr>
+<tr>
+  <td>A-08</td>
+  <td>日本Androidの会 金沢支部・VR部</td>
+  <td>kinneko</td>
+  <td>「バッキーボール組み立てキット」</td>
+</tr>
+<tr>
+  <td>A-09</td>
+  <td>日常ガジェット研究所</td>
+  <td>delmont</td>
+  <td>「蛍光表示管を使った時計の頒布(予定)」</td>
+</tr>
+<tr>
+  <td>A-16</td>
+  <td>にじけん</td>
+  <td>出水洸太郎「ゲームの修羅場」</td>
+  <td></td>
+</tr>
+<tr>
+  <td>A-26</td>
+  <td>G Storm</td>
+  <td>kyo</td>
+  <td>「OpenvSwitchの同人誌の改訂版」</td>
+</tr>
+<tr>
+  <td>A-28</td>
+  <td>めがねをかけるんだ</td>
+  <td>Keiji ARIYAMA</td>
+  <td>「TensorFlowはじめました CIFAR-10奮闘記」</td>
+</tr>
+<tr>
+  <td>A-13</td>
+  <td>O'Creilly</td>
+  <td>@3846masa</td>
+  <td>「お蔵入り」</td>
+</tr>
+</tbody>
+</table>
+
+<p>※敬称略</p>
+
+<p>辺りに目星を付けました。</p>
+
+<h2 id="%E5%85%A5%E5%A0%B4%E3%81%BE%E3%81%A7">入場まで</h2>
+
+<p>ここで、ちょっと失敗しました。</p>
+
+<p>そこそこ余裕を持って出て、ウロウロとした後に会場に着くと………　そこには長蛇の列と、無情な入場制限が待っていましたとさ。</p>
+
+<p>とほほ。</p>
+
+<p>一応は15分ほど前に着いたんですが、その時点で、すでに100名以上集まっていたようで、最後尾のカードを持ったスタッフさんが「11時に入場できるのはここまでです。この後は11時30分以降の入場となります」みたいなことを話してました。</p>
+
+<p>一応スタッフさんは列に並ばないように言っていたので、11時入場にあぶれた人たちと同じように、並ばずに列の周辺をウロウロしていました。</p>
+
+<p>しばらくしたら、流れで11時入場の最後尾の更に後ろに、11時30分入場予定の列が出来始めたので、まあ、慌てて並びましたとも。</p>
+
+<p>結局のところ、運営側も、はじめてのイベントだったのでどのぐらいの人が集まるか予想が出来なかったので、ふんわりとした対応になったのかな、と。
+まあそれでも入場整理券のロール（写真撮り忘れた）を用意していたようなので、むしろ最初からそれ使えばよかったのでは？　と思ったり思わなかったり、まあ、今更ですね。</p>
+
+<p>とりあえず、一人目から100人目までは、11時の入場開始とともに順次、会場内というかビルに吸い込まれていきました。</p>
+
+<p>次の101人目からは、しばらくは列にそのまま並んでいたけど、流石に列の長さが長いと思ったのか、入場整理券のロールをどこからか取り出して配り始めました。
+まあ、「整理券を貰ったら解散してください」って言われて、整理券を渡されたは良いけど、どう扱うかのアナウンスがしばらくなかったので、なかなか列が解散しなかったです。</p>
+
+<p>結局、101人目からは公式のツイッターアカウント <a href="https://twitter.com/TechBooster">@TechBooster</a> でのアナウンスで整理券番号の○○番までは○○に入場できます、みたいな感じ無事？に順番にビルの中へ吸い込まれるようになりましたとさ。</p>
+
+<p>それでも、最初は該当範囲に整理券の番号が含まれている人が入場時間に近くになると集まってきて入口付近が団子になっていました。</p>
+
+<p>帰り際には別の所に列ができていたので、もしかしたら団子にならないように列を作るようになっていたのかもしれませんが、確認していないのでわからないです。</p>
+
+<h2 id="%E5%85%A5%E5%A0%B4%E5%BE%8C">入場後</h2>
+
+<p>とりあえず、入場すると「技術書典」のログが印字された緑のエコバック、これは先着500人限定 <del>200人限定</del> (※万年筆が200人限定だったようです) の特典を貰いました。</p>
+
+<p>そして、いの一番に、取り置きして貰ってるサークルの場所へ行って本を確保しました。
+自分、確保してもらっているので大丈夫って他のサークル見るより、確保してもらっているなんて申し訳ない、と思う人なので。</p>
+
+<p>まあ、それはともかく、会場へ入って抱いた印象は、ちょっと通り道が狭い、ということですね。
+会場自体が狭いのはどうしようもないですが、通路が二人が通れるぐらいしかなかたので、サークルブース前で見本誌を手にとって立ち止まってしまうともう、通りにくいのなんの、まあ自分も立ち止まった人なので人のことは言えないですけど。</p>
+
+<p>そんなこんなで、２階のブースを回ったり地下のブースを回ったり、で目標としていたものをゲットしたり、内容を見て諦めたりと、充実したイベントでした、ホクホク。</p>
+
+<h2 id="%E4%BC%9A%E5%A0%B4%E3%82%92%E5%87%BA%E3%81%9F%E3%81%82%E3%81%A8%E3%81%A7">会場を出たあとで</h2>
+
+<p>先着特典の万年筆をもらい忘れたのは痛恨でしたが、それに気がつくのはしばらく後だったので、ここでは関係ないことです。</p>
+
+<p>戦利品を手で持ち帰るか発送するか、自分はヤマトで発送しました。</p>
+
+<p>コンビニで発送すればいいじゃない、という話があって、イベント前にいろいろ調べたところ、そうだ営業所があるはずなのでそこから送れば良い！
+と、調べたら土日休みが多いようで…　結局秋葉原駅側にちょうど<a href="http://www.e-map.ne.jp/p/yamato01/dtl/038842/?&amp;cond1=1&amp;cond21=1&amp;&amp;his=aw,nm">秋葉原駅前センター</a>があったのでそこで発送しました。</p>
+
+<p>営業所だと箱とか袋とか、まあ当然の事ながら代金はかかりますが用意があるので今回のような不織布バックでも送ることができるので便利です。</p>
+
+<p><img src="/images/2016_0625_yamato_package.jpg" alt="ヤマトの荷物" /></p>
+
+<p>ともかく、こんな感じで発送しました（別のものも一緒に入れて発送したので多少はかさが増えています）。
+この袋は20円ほどでした。</p>
+
+<h2 id="%E7%B5%90%E6%9E%9C">結果</h2>
+
+<p><img src="/images/2016_0625_trophybooty.jpg" alt="戦利品" /></p>
+
+<p>戦利品のリスト</p>
+
+<p><strong>※PDF</strong> = PDFダウンロード特典あり</p>
+
+<table>
+<thead>
+<tr>
+  <th>ブース</th>
+  <th>サークル名</th>
+  <th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>A-27</td>
+  <td>理ろぐ</td>
+  <td>・インストーラを作ろう！ <strong>※PDF</strong><br>・インストーラを作ろう！！<br>・Qt Quickを使いこなすクロスプラットフォームUIプログラミング  <strong>※PDF</strong><br>・qmake入門 <strong>※PDF</strong></td>
+</tr>
+<tr>
+  <td>A-28</td>
+  <td>めがねをかけるんだ</td>
+  <td>・TensorFlowはじめました CIFAR-10奮闘記</td>
+</tr>
+<tr>
+  <td>A-13</td>
+  <td>O'Creilly</td>
+  <td>・実践 お蔵入り <strong>※PDF</strong><br>・詳説 お蔵入り <strong>※PDF</strong></td>
+</tr>
+<tr>
+  <td>B-10</td>
+  <td>トゲトゲ団</td>
+  <td>・ちょっとだけVulkan（電子書籍のみ） <strong>※PDF</strong></li></td>
+</tr>
+<tr>
+  <td>キ-02</td>
+  <td>シス管系女子</td>
+  <td>・シス管系女子コピー本</td>
+</tr>
+</tbody>
+</table>
+
+<p>※敬称略</p>
+
+<p>ホクホク</p>
+
+<h2 id="%E3%81%8A%E3%81%BE%E3%81%91%E3%81%AE%E3%81%8A%E3%81%BE%E3%81%91">おまけのおまけ</h2>
+
+<p>プロ生ちゃん（暮井慧）とコラボでコースターがもらえるという話だったので貰ってきました。</p>
+
+<p><img src="/images/2016_0626_pronamachan_collaboration.jpg" alt="コラボコースター" /></p>
+
+<p>こちらは、秋葉原にあるタコスの店「BLAISE」で貰いました。</p>
+
+<p><img src="/images/2016_0625_pronamachan_brise_collaboration.jpg" alt="プロ生ちゃん（暮井慧）コースター１" /></p>
+
+<p>こちらは、6月14日から在庫が無くなるまで配布<a href="https://twitter.com/BLAISE01600438/status/742548837869359114">※</a> のようです。</p>
+
+<table>
+<thead>
+<tr>
+  <th>項目</th>
+  <th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>住所</td>
+  <td><a href="https://goo.gl/maps/EjYn9djxEt72">東京都千代田区外神田3-7-9</a></td>
+</tr>
+<tr>
+  <td>営業</td>
+  <td>11:00 ～ 20:30 不定休</td>
+</tr>
+<tr>
+  <td>ウエブページ</td>
+  <td><a href="http://tacos-akiba.com/">BLAISE　～ブレイズ～</a></td>
+</tr>
+<tr>
+  <td>ツイッターアカウント</td>
+  <td><a href="https://twitter.com/BLAISE01600438">@BLAISE01600438</a> ※@BLAISE は別の人へリンクするので注意！</td>
+</tr>
+</tbody>
+</table>
+
+<p>こちらは、西荻窪にあるパイナップルラーメンの店「パパパパパイン」で貰いました。</p>
+
+<p><img src="/images/2016_0626_pronamachan_papapapapine_collaboration.jpg" alt="プロ生ちゃん（暮井慧）コースター２" /></p>
+
+<p>こちらは6月26日から配布で、こちらも在庫限り<a href="https://twitter.com/paishio/status/746136049852678144">※</a> のようです。</p>
+
+<table>
+<thead>
+<tr>
+  <th>項目</th>
+  <th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>住所</td>
+  <td><a href="https://goo.gl/maps/RgvYVqem2NS2">東京都杉並区西荻南３−１２−１ 日伸西荻プラザ 1F</a></td>
+</tr>
+<tr>
+  <td>営業</td>
+  <td>11:00 ～ 20:00 水曜定休</td>
+</tr>
+<tr>
+  <td>ウエブページ</td>
+  <td><a href="http://www.papapapapine.com/">パイナップルラーメン屋さん　パパパパパイン　ホームページ、通販（西荻窪）</a></td>
+</tr>
+<tr>
+  <td>ツイッターアカウント</td>
+  <td><a href="https://twitter.com/paishio">@paishio</a></td>
+</tr>
+</tbody>
+</table>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[HAPPY NEW YEAR 2016]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/01/01/happy-new-year-2016.html"/>
+            <updated>2016-01-01T10:50:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/01/01/happy-new-year-2016.html</id>
+            <content type="html"><![CDATA[<p>明けましておめでとうございます。</p>
+
+<p>ほむぺ開設 12 年目に入ろうかという感じですが、また今年一年よろしくお願いします。</p>
+
+<p>やばいですね、来年で干支一周しちゃいますよ、、、</p>
+
+<p>去年は、やっと少しだけ消化できたので今年はもうちょっと頑張りたいと思います！</p>
+
+<ul>
+<li><a href="http://hsp-users.jp/">HSP関連サイト</a>の立ち上げ</li>
+<li>HSPコンテスト作品の製作</li>
+<li><a href="https://github.com/sharkpp/TimestampFreezer">TimestampFreezer</a> のバイナリ公開</li>
+<li>バイナリエディタ作りたい</li>
+<li>素材関係をもう少し整理</li>
+<li>音素材の公開</li>
+</ul>
+
+<p>、、、できるかなぁ？</p>
+
+<p>てなわけで、よろしくお願いいたします。</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[大晦日@2015]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/12/31/new-years-eve-2015.html"/>
+            <updated>2015-12-31T18:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/12/31/new-years-eve-2015.html</id>
+            <content type="html"><![CDATA[<h2 id="1-%E5%B9%B4%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A">1 年を振り返り</h2>
+
+<p>毎年毎年、何をやってるんだろうねーと思うこと幾歳月。
+皆様、いかがお過ごしでしょうか？</p>
+
+<p>では、今年の反省会、いってみよー！</p>
+
+<h2 id="%E7%B5%90%E6%9E%9C">結果</h2>
+
+<p>今年の正月 <a href="/blog/2015/01/01/happy-new-year-2015.html">HAPPY NEW YEAR 2015</a> に掲げた目標は</p>
+
+<ul>
+<li><a href="http://hsp-users.jp/">HSP関連サイト</a>の立ち上げ</li>
+<li><a href="https://github.com/sharkpp/hspide">HSP IDE</a> を Qt 5 でリライト</li>
+<li>HSPコンテスト作品の製作</li>
+<li>このサイトのデザイン変更＆整理</li>
+<li>バイナリエディタ作りたい</li>
+</ul>
+
+<p>と、例年に比べ、控えめになっています。</p>
+
+<p>その結果、<a href="/blog/2015/06/28/site-reboot-by-sculpin.html">Sculpin でホムペを再構築したときのメモ</a> で書いたように、静的サイトジェネレータの <a href="https://sculpin.io/">Sculpin</a> でサイトを再構築できました。</p>
+
+<p>github に push するとサイトが更新できるとか、プログラマブルでいいと思います。</p>
+
+<h2 id="%E5%8F%8D%E7%9C%81">反省</h2>
+
+<p>反省としては、ここ最近、毎年のごとく、HSPコンテストに応募できなかったのが悔しい。</p>
+
+<p>なんとなくだけど、時間がないのはそうなんだけれど、スペック的な問題でメインで触るのが Windows 機から Mac に変わったのも影響しているのではないかと思う。</p>
+
+<p>今年やったこととしては、</p>
+
+<ul>
+<li><a href="/blog/2015/05/27/qt-japan-summit-2015.html">Qt JAPAN SUMMIT 2015</a> に行ってきたり</li>
+<li>FuelPHP のドキュメントの翻訳作業
+→ <a href="/blog/2015/06/22/fuelphp-documents-translation-month-alone.html">ひとり FuelPHP ドキュメント翻訳月間 お疲れ様でした
+</a></li>
+<li>Userscript 作ったり
+→ <a href="https://greasyfork.org/ja/scripts/9647-calculation-of-selection-length">calculation of selection length</a></li>
+<li>サクラエディタ用のプラグインを作ったり
+→ <a href="/blog/2015/09/05/release-sakura-editor-plugin-text-convert-extension-pack.html">サクラエディタ用テキスト変換拡張パックを公開</a></li>
+<li>php やったり php やったり</li>
+</ul>
+
+<p>ぐらいかな？</p>
+
+<p>とりあえず、来年もよろしくお願いしますです。</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[FuelPHPのメモ]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/08/23/fuelphp-memo.html"/>
+            <updated>2015-08-23T18:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/08/23/fuelphp-memo.html</id>
+            <content type="html"><![CDATA[<p>落ち葉拾い的な？</p>
+
+<p>SSDの肥やしになっていたのをサルベージしてきました。</p>
+
+<p>FuelPHP を使っている中で気がついたことのメモです。</p>
+
+<h2 id="orm%5Cmodel_temporal-%E3%82%92%E4%BD%BF%E3%81%86%E3%81%A8%E3%81%8D%E3%81%AE%E6%B3%A8%E6%84%8F%E7%82%B9">Orm\Model_Temporal を使うときの注意点</h2>
+
+<p><a href="http://fuelphp.com/docs/packages/orm/intro.html">Orm パッケージ</a>の <a href="http://fuelphp.com/docs/packages/orm/model/temporal.html">Model_Temporal</a> という、データを履歴管理するのに便利そうなモデルが FuelPHP 1.6 以降で実装されています。</p>
+
+<p>このモデルを使っているときにちょっと気がついたことがあるのでメモしておきます。</p>
+
+<p>とりあえず、モデルは次のような感じで用意します。
+<code>mysql_timestamp</code> に <code>true</code> と指定しているのが <a href="http://fuelphp.com/docs/packages/orm/model/temporal.html">Temporal Model - Orm Package - FuelPHP Documentation</a> の例と違うところですが、 <code>false</code> でも同じ問題が起きます。 <strong>要確認</strong></p>
+
+<pre><code class="php">// app/classes/model/mytemporal.php
+class Model_MyTemporal extends Orm\Model_Temporal
+{
+    protected static $_primary_key = array('id', 'temporal_start', 'temporal_end');
+    protected static $_temporal = array(
+        'start_column' =&gt; 'temporal_start',
+        'end_column' =&gt; 'temporal_end',
+        'mysql_timestamp' =&gt; true, // ここを true に
+    );
+}
+</code></pre>
+
+<p>テストで↓のようなのを実行します。</p>
+
+<pre><code class="php">// app/tests/model/mytemporal.php
+
+$model = new Model_MyTemporal();
+$model-&gt;save();
+</code></pre>
+
+<p>そして実行</p>
+
+<pre><code class="bash">[root@localhost test_temporal_model]# oil t --group=App
+Tests Running...This may take a few moments.
+PHPUnit 3.7.31 by Sebastian Bergmann.
+
+Configuration read from /var/www/html/test_temporal_model/fuel/core/phpunit.xml
+
+.
+
+Time: 68 ms, Memory: 22.50Mb
+
+OK (1 test, 5 assertions)
+</code></pre>
+
+<p>日付を 2040/1/1 00:00 にしてみると、、、</p>
+
+<p>下は失敗、、、、</p>
+
+<pre><code class="bash">[root@localhost test_temporal_model]# date 010100002040
+2040年  1月  1日 日曜日 00:00:00 JST
+[root@localhost test_temporal_model]# oil t --group=App
+Tests Running...This may take a few moments.
+PHPUnit 3.7.31 by Sebastian Bergmann.
+
+Configuration read from /var/www/html/test_temporal_model/fuel/core/phpunit.xml
+
+E
+
+Time: 12 ms, Memory: 20.50Mb
+
+There was 1 error:
+
+1) Test_Model_MyTemporal::test_save_and_between
+PDOException: SQLSTATE[HY000]: General error: 2013 Lost connection to MySQL server during query
+
+/var/www/html/test_temporal_model/fuel/core/classes/database/pdo/connection.php:150
+/var/www/html/test_temporal_model/fuel/core/classes/database/pdo/connection.php:113
+/var/www/html/test_temporal_model/fuel/core/classes/database/pdo/connection.php:167
+/var/www/html/test_temporal_model/fuel/core/classes/database/query.php:287
+/var/www/html/test_temporal_model/fuel/core/classes/dbutil.php:621
+/var/www/html/test_temporal_model/fuel/core/classes/migrate.php:595
+/var/www/html/test_temporal_model/fuel/core/classes/migrate.php:74
+/var/www/html/test_temporal_model/fuel/core/classes/autoloader.php:364
+/var/www/html/test_temporal_model/fuel/core/classes/autoloader.php:247
+/var/www/html/test_temporal_model/fuel/app/tests/model/mytemporal.php:12
+
+FAILURES!
+Tests: 1, Assertions: 0, Errors: 1.
+[root@localhost test_temporal_model]# 
+</code></pre>
+
+<p>まあ、詳しくは調べていないですが、どうやら MySQL で 32ビットで日付を扱っているためのようです。</p>
+
+<p><a href="http://tech-blog.tsukaby.com/archives/179">MySQLの日付型の扱い方や機能をまとめてみました | つかびーの技術日記</a> などを見ると DATETIME 型を使うといいようですね。</p>
+
+<h2 id="opauth-%E3%82%AF%E3%83%A9%E3%82%B9-%E3%83%A1%E3%83%A2">Opauth クラス メモ</h2>
+
+<ul>
+<li>Opauth::forge() ではプロバイダのIdは大文字小文字区別して、一致しないと、 <strong><code>Unsupported or undefined Opauth strategy - XXXXX</code></strong> と例外が発行される、基本小文字？</li>
+<li><strong><code>Authentication error: the callback returned an error auth response</code></strong> とログイン時に出た場合、Webサーバーを再起動すれば直る、、、かも(なんかセッションが残ってるか、期限が切れてるけどリセットできてない？)</li>
+<li>設定の <code>opauth.auto_registration</code> を true にしておけば、ユーザー名とメールアドレスがあれば、初めての認証時に自動でユーザー登録してログインできる(Twitterはメールアドレスが取得できないので無理そう)</li>
+<li>ログイン中にOauthでアカウントと関連付けると、既に別のアカウントで関連づけていても関連付けが変更される(A ユーザーに Twitter の @hoge を関連づけた後、 B ユーザーでログイン中に @hoge に関連づけると、関連づけされているユーザーが A あら B に変更されてしまう、 <code>login_or_register()</code> の戻り値は <code>'linked'</code>)</li>
+<li>関連付けの解除は存在しないので、解除したい場合は <code>_providers</code> から <code>parent_id</code> と <code>provider</code> で探して削除する</li>
+</ul>
+
+<h2 id="ormauth-%E3%82%AF%E3%83%A9%E3%82%B9-%E3%83%A1%E3%83%A2">Ormauth クラス メモ</h2>
+
+<ul>
+<li><code>Auth::member()</code> は <code>Auth::member($group, $user)</code> ではなく <code>Auth::member($group, 'Ormgroup', $user)</code> っぽい(それでも欲しかった情報が取得できなかったけど)</li>
+</ul>
+
+<h2 id="orm-%E3%82%AF%E3%83%A9%E3%82%B9-%E3%83%A1%E3%83%A2">Orm クラス メモ</h2>
+
+<ul>
+<li><code>Model_SoftDelete</code> は <code>Model_XXX::query()</code> からは 論理削除が出来ないので <code>Model_XXX::find()</code> で探してから削除する</li>
+<li><code>Model_SoftDelete</code> は <code>Model_XXX::find('all'</code>) では削除が呼び出せないので foreach でまわして処理する</li>
+<li><code>Model_Temporal::query()</code> で検索すると全ての履歴が範囲に含まれてしまうので、自分で <code>where('temporal_start', '&lt;=', $timestamp)-&gt;where('temporal_end', '&gt;=', $timestamp)</code> として制限を掛けないと最新の履歴のみが取得できない</li>
+<li><code>hoge IN SUBQUERY</code> なサブクエリを使うときには <code>-&gt;where('id', 'in', DB::expr('('.$subQuery-&gt;get_query(true).')'))</code> とすれば一応使える</li>
+<li><code>Model_Soft::disable_filter()</code> は <code>Model_Soft::query()</code> の前で使用しないと効果がない。</li>
+<li><code>$this-&gt;_is_new</code> を <code>true</code> にした場合、 <code>_original_relations</code> もクリア(リレーションごとに空に)しないと new したときと同じ動作にならない。</li>
+<li><code>Model_Huga::query()-&gt;related('hoge')-&gt;where('hoge.id', '!=', null)-&gt;get_one()</code> すると結果がおかしくなることがあるので <code>Model_Huga::query()-&gt;related('hoge')-&gt;where('hoge.id', '!=', null)-&gt;limit_row(1)-&gt;get()</code> とする(参考：<a href="http://stackoverflow.com/questions/13399884/fuelphp-orm-related-limit-ignored">php - Fuelphp ORM related limit ignored - Stack Overflow</a>)</li>
+</ul>
+
+<h2 id="file-%E3%82%AF%E3%83%A9%E3%82%B9-%E3%83%A1%E3%83%A2">File クラス メモ</h2>
+
+<ul>
+<li><code>$area-&gt;read_dir()</code> では <code>File_Handler_Directory</code> が返されるのでこのオブジェクトのインターフェースを通してディレクトリ内のファイルの一覧を取得することはできない。</li>
+</ul>
+
+<h2 id="%E3%81%9D%E3%81%AE%E4%BB%96-%E3%83%A1%E3%83%A2">その他 メモ</h2>
+
+<ul>
+<li><code>oil t</code> など CLI インターフェースでは Asset は使えないので <code>Config::set('assets.fail_silently', true);</code> しておくとエラーが出ない(暫定)</li>
+<li><code>DomainException: Form instance already exists, cannot be recreated. Use instance() instead of forge() to retrieve the existing instance.</code> って言われたらリクエスト内で <code>::forge('hoge')</code> の <code>hoge</code> が同じ物が居るってこと</li>
+</ul>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<p>とりあえず、フレームワークを触るとドキュメントに載っていないことが色々でてくるのはしょうがないのかなぁと思います。</p>
+
+<p>まぁ、そのうち、整理してまとめたいなぁとは思いますが、きっと手つかずのままになるの未来予想が出来てしまいます。</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[PHP で日本語を含む HTML から Markdown に変換する方法]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/07/05/how-to-japanese-html-to-markdown-in-php.html"/>
+            <updated>2015-07-05T12:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/07/05/how-to-japanese-html-to-markdown-in-php.html</id>
+            <content type="html"><![CDATA[<p>ホムペを再構築するにあたり<a href="/blog/2015/06/28/site-reboot-by-sculpin.html">Sculpin でホムペを再構築したときのメモ</a>でもサラッと書いたけど“.html をスクリプトで .md に変換＆リンクを再構成”というのが割と厄介だった。</p>
+
+<p>PHP で Markdown 記法から HTML への変換を行うライブラリ/パッケージは多数見つかるが、その逆の HTML から Markdown 記法への変換を行う物は数えるほどしかありませんでした。</p>
+
+<p>ざっと探した感じでは</p>
+
+<ul>
+<li><a href="https://github.com/nickcernis/html-to-markdown">nickcernis/html-to-markdown</a></li>
+<li><a href="https://github.com/Elephant418/Markdownify">Elephant418/Markdownify</a></li>
+</ul>
+
+<p>ぐらいのようです。</p>
+
+<p>結局、１番目の <code>html-to-markdown</code> は思ったように動いてくれなかったので、２つ目の <code>Markdownify</code> を使うようにしたのですがこちらも癖があって意図通りに動かすのは大変でした。</p>
+
+<h2 id="%E6%BA%96%E5%82%99">準備</h2>
+
+<p>とりあえず、ライブラリを使えるように準備をします。</p>
+
+<p><strong>composer.json</strong></p>
+
+<pre><code class="json">{
+    "require": {
+        "pixel418/markdownify": "2.1.*"
+    }
+}
+</code></pre>
+
+<p>と、先の内容で Composer の設定ファイルを作り、</p>
+
+<pre><code class="bash">$ php -r "readfile('https://getcomposer.org/installer');" | php
+$ php composer.phar install
+</code></pre>
+
+<p>Composer のインストール＆ライブラリのインストール。</p>
+
+<p>コレだけで</p>
+
+<pre><code class="php">&lt;?php
+
+require_once(dirname(__FILE__) . '/vendor/autoload.php');
+
+</code></pre>
+
+<p>とすると使えるようになります。</p>
+
+<p><code>Composer</code> 便利！</p>
+
+<h2 id="%E5%AE%9F%E9%9A%9B%E3%81%AB%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B">実際に使ってみる</h2>
+
+<pre><code class="php">&lt;?php
+
+require_once(dirname(__FILE__) . '/vendor/autoload.php');
+
+$html=&lt;&lt;&lt;'EOD'
+&lt;h1&gt;てすとヘッダレベル１&lt;/h1&gt;
+&lt;p&gt;ぱらぐらふ1234&lt;/p&gt;
+&lt;p&gt;ABCDE色々いろいろ&lt;/p&gt;
+EOD;
+
+$md = new Markdownify\Converter();
+$markdown = $md-&gt;parseString($html . PHP_EOL);
+unset($md);
+
+echo $markdown . PHP_EOL;
+</code></pre>
+
+<p>こんな感じの内容でテストしてみましょう。</p>
+
+<pre><code class="markdown"># てすとヘッダレベル１
+
+ぱらぐらふ1234
+
+ABCDE色? いろいろ
+</code></pre>
+
+<p>とりあえず変換できて、、い、、る？</p>
+
+<p><code>ABCDE色々いろいろ</code> が <code>ABCDE色? いろいろ</code> と文字化けてしまっています。</p>
+
+<p>今回、ここが手子摺ったっ部分です。</p>
+
+<h2 id="markdonify-%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9">Markdonify の使い方</h2>
+
+<p>簡単な使い方</p>
+
+<pre><code class="php">    $md = new Markdownify\Converter(/* パラメータ */);
+    $markdown = $md-&gt;parseString($html . PHP_EOL);
+    unset($md);
+</code></pre>
+
+<p>たったコレだけです！</p>
+
+<h3 id="%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF">パラメータ</h3>
+
+<p><code>Markdownify\Converter</code> クラスのコンストラクタで <code>Markdownify\Converter($linkPosition = self::LINK_AFTER_CONTENT, $bodyWidth = MDFY_BODYWIDTH, $keepHTML = MDFY_KEEPHTML)</code> のようにパラメータを与えられるようになっています。</p>
+
+<table>
+<thead>
+<tr>
+  <th>引数名</th>
+  <th>デフォルト値</th>
+  <th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>$linkPosition</code></td>
+  <td><code>LINK_AFTER_CONTENT</code></td>
+  <td>リンクの位置を定義。<br/><code>Markdownify\Converter::LINK_AFTER_CONTENT</code> の場合は末尾にまとめる。<br/><code>Markdownify\Converter::LINK_AFTER_PARAGRAPH</code> の場合は段落ごとにまとめる。<br/><code>Markdownify\Converter::LINK_IN_PARAGRAPH</code> の場合はその場で定義。</td>
+</tr>
+<tr>
+  <td><code>$bodyWidth</code></td>
+  <td><code>false</code></td>
+  <td>出力を所定の幅で折り返すかどうか。 <code>false</code> もしくは 26 以上の値。</td>
+</tr>
+<tr>
+  <td><code>$keepHTML</code></td>
+  <td><code>true</code></td>
+  <td>markdown へ変換できない HTMLを維持するか、それを破棄するかどうか。</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="%24linkposition-%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF">$linkPosition パラメータ</h3>
+
+<p>リンクの位置を定義するパラメータです。</p>
+
+<p>共通のコードをベースにパラメータを変えて結果を比較してみます。</p>
+
+<pre><code class="php">&lt;?php
+require_once(dirname(__FILE__) . '/vendor/autoload.php');
+
+$html=&lt;&lt;&lt;'EOD'
+&lt;h1&gt;てすとヘッダレベル１&lt;/h1&gt;
+&lt;p&gt;ぱらぐらふ&lt;a href="http://example.net/~hoge/"&gt;xxxx&lt;/a&gt;1234&lt;/p&gt;
+&lt;p&gt;ABCDE&lt;a href="http://example.net/~fuga/"&gt;aaaa&lt;/a&gt;いろいろ&lt;/p&gt;
+&lt;p&gt;いろいろABCDE&lt;/p&gt;
+&lt;h2&gt;てすとヘッダレベル２&lt;/h2&gt;
+&lt;p&gt;パラグラフ1234&lt;/p&gt;
+&lt;p&gt;いろいろ&lt;a href="http://example.net/~foo/"&gt;bbbb&lt;/a&gt;ABCDE&lt;/p&gt;
+&lt;h2&gt;てすとヘッダレベル２&lt;/h2&gt;
+&lt;p&gt;いろいろABCDE&lt;/p&gt;
+EOD;
+
+$md = new Markdownify\Converter(/* $linkPosition パラメータ */);
+echo $md-&gt;parseString($html).PHP_EOL;
+</code></pre>
+
+<p>このコードの <code>/* $linkPosition パラメータ */</code> の部分を <code>Markdownify\Converter::LINK_AFTER_CONTENT</code> や <code>Markdownify\Converter::LINK_AFTER_PARAGRAPH</code> に変えた結果を乗せます。</p>
+
+<h4 id="link_after_content">LINK_AFTER_CONTENT</h4>
+
+<p>の結果は</p>
+
+<pre><code class="markdown"># てすとヘッダレベル１
+
+ぱらぐらふ[xxxx][1]＆[xxx2][2]1234
+
+ABCDE[aaaa][3]いろいろ
+
+いろいろABCDE
+
+## てすとヘッダレベル２
+
+パラグラフ1234
+
+いろいろ[bbbb][4]ABCDE
+
+## てすとヘッダレベル２
+
+いろいろABCDE
+
+ [1]: http://example.net/~hoge/
+ [2]: http://example.net/~hoge2/
+ [3]: http://example.net/~fuga/
+ [4]: http://example.net/~foo/
+</code></pre>
+
+<p>のように、末尾にリンクがまとめて出力されます。</p>
+
+<h4 id="link_after_paragraph">LINK_AFTER_PARAGRAPH</h4>
+
+<p>の結果は</p>
+
+<pre><code class="markdown"># てすとヘッダレベル１
+
+ぱらぐらふ[xxxx][1]＆[xxx2][2]1234
+
+ [1]: http://example.net/~hoge/
+ [2]: http://example.net/~hoge2/
+
+ABCDE[aaaa][3]いろいろ
+
+ [3]: http://example.net/~fuga/
+
+いろいろABCDE
+
+## てすとヘッダレベル２
+
+パラグラフ1234
+
+いろいろ[bbbb][4]ABCDE
+
+ [4]: http://example.net/~foo/
+
+## てすとヘッダレベル２
+
+いろいろABCDE
+</code></pre>
+
+<p>のように、段落ごとににリンクがまとめて出力されます。</p>
+
+<h4 id="link_in_paragraph">LINK_IN_PARAGRAPH</h4>
+
+<p>の結果は</p>
+
+<pre><code class="markdown"># てすとヘッダレベル１
+
+ぱらぐらふ[xxxx](http://example.net/~hoge/)＆[xxx2](http://example.net/~hoge2/)1234
+
+ABCDE[aaaa](http://example.net/~fuga/)いろいろ
+
+いろいろABCDE
+
+## てすとヘッダレベル２
+
+パラグラフ1234
+
+いろいろ[bbbb](http://example.net/~foo/)ABCDE
+
+## てすとヘッダレベル２
+
+いろいろABCDE
+</code></pre>
+
+<p>のように、リンクはその場で出力されます。</p>
+
+<p>手で記述する場合に近いと思います。</p>
+
+<h3 id="%24bodywidth">$bodyWidth</h3>
+
+<p>出力を所定の幅で折り返すかどうかを指定するパラメータです。
+ソースを確認すると <code>false</code> もしくは 26 以上の値が有効なようです。</p>
+
+<p>また、日本語の文字列は容易に文字化けます。</p>
+
+<pre><code class="php">&lt;?php
+require_once(dirname(__FILE__) . '/vendor/autoload.php');
+
+$html=&lt;&lt;&lt;'EOD'
+&lt;p&gt;government of the people, by the people, for the people&lt;/p&gt;
+EOD;
+
+$md = new Markdownify\Converter(Markdownify\Converter::LINK_AFTER_CONTENT, false);
+echo $md-&gt;parseString($html).PHP_EOL;
+</code></pre>
+
+<p>だと、</p>
+
+<pre><code class="markdown"># government of the people, by the people, for the people
+
+government of the people, by the people, for the people
+</code></pre>
+
+<p>こうなりますが、 30 を指定すると</p>
+
+<pre><code class="php"># government of the people, by
+the people, for the people
+
+government of the people, by
+the people, for the people
+</code></pre>
+
+<p>このようになります。</p>
+
+<p>、、、長いヘッダも折り返されてしまうのでちょっと困りますね。</p>
+
+<p>あまりにも長い内容が無い限り、このパラメータは <code>false</code> で問題ないと思います。</p>
+
+<h3 id="%24keephtml">$keepHTML</h3>
+
+<p>markdown に変換できないタグを残す(<code>true</code>)か残さない(<code>false</code>)かを指定するパラメータです。</p>
+
+<pre><code class="php">&lt;?php
+require_once(dirname(__FILE__) . '/vendor/autoload.php');
+
+$html=&lt;&lt;&lt;'EOD'
+&lt;h1&gt;ほげ&lt;/h1&gt;
+&lt;p&gt;ふがふがふが &lt;table&gt;&lt;tr&gt;&lt;td&gt;a&lt;/td&gt;&lt;td&gt;b&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt; &lt;/p&gt;
+EOD;
+
+$md = new Markdownify\Converter(Markdownify\Converter::LINK_AFTER_CONTENT, false, true);
+echo $md-&gt;parseString($html).PHP_EOL;
+</code></pre>
+
+<p>この結果</p>
+
+<pre><code class="markdown"># ほげ
+
+ふがふがふが 
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      a
+    &lt;/td&gt;
+
+    &lt;td&gt;
+      b
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+
+<p>となりますが、<code>false</code> を指定すると</p>
+
+<pre><code class="markdown"># ほげ
+
+ふがふがふが 
+
+a
+
+b
+</code></pre>
+
+<p>こうなります。</p>
+
+<p>中身のコンテンツはそのまま残るので<code>table</code>タグ等は意図せぬ結果になってしまうかもしれません。</p>
+
+<h2 id="markdonify-%E3%82%92%E4%BD%BF%E3%81%86%E3%81%A8%E3%81%8D%E3%81%AE%E6%B3%A8%E6%84%8F%E7%82%B9">Markdonify を使うときの注意点</h2>
+
+<ul>
+<li>そのまま使うと日本語文字が化ける場合がある
+解決方法は次の項で</li>
+<li><code>parseString</code> を２回以上呼び出すと結果がおかしくなる
+毎回 <code>unset</code> することで解決</li>
+</ul>
+
+<h2 id="%E6%97%A5%E6%9C%AC%E8%AA%9E%E6%96%87%E3%81%AE%E6%96%87%E5%AD%97%E5%8C%96%E3%81%91%E3%81%AE%E8%A7%A3%E6%B1%BA%E7%AD%96">日本語文の文字化けの解決策</h2>
+
+<p>いろいろ試行錯誤はすっ飛ばしますが解決策はこれです。</p>
+
+<pre><code class="php">&lt;?php
+
+require_once(dirname(__FILE__) . '/vendor/autoload.php');
+
+function text2entities($text)
+{
+  return preg_replace_callback('/./u', function($m){
+        $s = $m[0];
+        $len = strlen($s);
+        switch ($len) {
+        case 1: return $s;
+        case 2: return '&amp;#'.(((ord($s[0])&amp;0x1F)&lt;&lt;6)|(ord($s[1])&amp;0x3F)).';';
+        case 3: return '&amp;#'.(((ord($s[0])&amp;0xF)&lt;&lt;12)|((ord($s[1])&amp;0x3F)&lt;&lt;6)|(ord($s[2])&amp;0x3F)).';';
+        case 4: return '&amp;#'.(((ord($s[0])&amp;0x7)&lt;&lt;18)|((ord($s[1])&amp;0x3F)&lt;&lt;12)|((ord($s[2])&amp;0x3F)&lt;&lt;6)
+                             |(ord($s[3])&amp;0x3F)).';';
+        case 5: return '&amp;#'.(((ord($s[0])&amp;0x3)&lt;&lt;24)|((ord($s[1])&amp;0x3F)&lt;&lt;18)|((ord($s[2])&amp;0x3F)&lt;&lt;12)
+                            |((ord($s[3])&amp;0x3F)&lt;&lt;6)|(ord($s[4])&amp;0x3F)).';';
+        case 6: return '&amp;#'.(((ord($s[0])&amp;0x1)&lt;&lt;30)|((ord($s[1])&amp;0x3F)&lt;&lt;24)|((ord($s[2])&amp;0x3F)&lt;&lt;18)
+                            |((ord($s[3])&amp;0x3F)&lt;&lt;12)|((ord($s[4])&amp;0x3F)&lt;&lt;6)|(ord($s[5])&amp;0x3F)).';';
+        }
+        return $s;
+      }, $text);
+}
+
+function entities2text($text)
+{
+  return
+    preg_replace_callback('/&amp;#([0-9]+);/u', function($m){
+        $u = intval($m[1]);
+             if (0x00000000 &lt;= $u &amp;&amp; $u &lt;= 0x0000007F) { return chr($u); }
+        else if (0x00000080 &lt;= $u &amp;&amp; $u &lt;= 0x000007FF) { return chr(0xC0|($u&gt;&gt;6)).chr(0x80|($u&amp;0x3F)); }
+        else if (0x00000800 &lt;= $u &amp;&amp; $u &lt;= 0x0000FFFF)
+             { return chr(0xE0|($u&gt;&gt;12)).chr(0x80|(($u&gt;&gt;6)&amp;0x3F)).chr(0x80|($u&amp;0x3F)); }
+        else if (0x00010000 &lt;= $u &amp;&amp; $u &lt;= 0x001FFFFF)
+             { return chr(0xF0|($u&gt;&gt;18)).chr(0x80|(($u&gt;&gt;12)&amp;0x3F)).chr(0x80|(($u&gt;&gt;6)&amp;0x3F))
+                     .chr(0x80|($u&amp;0x3F)); }
+        else if (0x00200000 &lt;= $u &amp;&amp; $u &lt;= 0x03FFFFFF)
+             { return chr(0xF8|($u&gt;&gt;24)).chr(0x80|(($u&gt;&gt;18)&amp;0x3F)).chr(0x80|(($u&gt;&gt;12)&amp;0x3F))
+                     .chr(0x80|(($u&gt;&gt;6)&amp;0x3F)).chr(0x80|($u&amp;0x3F)); }
+        else if (0x04000000 &lt;= $u &amp;&amp; $u &lt;= 0x04000000)
+             { return chr(0xFC|($u&gt;&gt;30)).chr(0x80|(($u&gt;&gt;24)&amp;0x3F)).chr(0x80|(($u&gt;&gt;18)&amp;0x3F))
+                     .chr(0x80|(($u&gt;&gt;12)&amp;0x3F)).chr(0x80|(($u&gt;&gt;6)&amp;0x3F)).chr(0x80|($u&amp;0x3F)); }
+        return $s;
+      }, $text);
+}
+
+$html=&lt;&lt;&lt;'EOD'
+&lt;h1&gt;てすとヘッダレベル１&lt;/h1&gt;
+&lt;p&gt;ぱらぐらふ1234&lt;p/&gt;
+&lt;p&gt;ABCDE色々いろいろ&lt;p/&gt;
+EOD;
+
+$md = new Markdownify\Converter();
+$markdown = entities2text( $md-&gt;parseString( text2entities( $html ) . PHP_EOL) );
+unset($md);
+
+
+echo $markdown . PHP_EOL;
+</code></pre>
+
+<p>結局のところ、 <code>々</code> などの文字を <code>&amp;#12293;</code> のような数値文字参照に一旦変換し、 Makrdown に変換後にもとに戻すようにしました。</p>
+
+<p>おそらくは、ライブラリの中の文字読み取り処理が ASCII 文字のみ処理することを前提として組んであるのでうまく行かないのではないかと予想できるのですが、変換を間に挟むことでとりあえずうまく動いてしまったので深くは辿ってはいません。</p>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<p>とりあえず、まとめとして、 php を使い日本語を含む HTML を Markdown に変換するには、数値文字参照に変換した後 <a href="https://github.com/Elephant418/Markdownify">Markdownify</a> を使い、元に戻すことで出来る！</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx">Introduction - Composer</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/%E6%96%87%E5%AD%97%E5%8F%82%E7%85%A7">文字参照 - Wikipedia</a></li>
+<li><a href="https://github.com/Elephant418/Markdownify">Elephant418/Markdownify</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Sculpin でホムペを再構築したときのメモ]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/06/28/site-reboot-by-sculpin.html"/>
+            <updated>2015-06-28T18:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/06/28/site-reboot-by-sculpin.html</id>
+            <content type="html"><![CDATA[<p><a href="https://sculpin.io/">Sculpin</a> でホムペを再構築してからだいたい一ヶ月ぐらい経ちました。</p>
+
+<p>元のページは、 Markdown で作ったり はてな記法で書いてたり色々あったので全ページをクロールしてダウンロードした .html から .md への変換スクリプトを書きページを再構成しました。</p>
+
+<p>手順としては</p>
+
+<ol>
+<li>全ページをクロール</li>
+<li>.html をスクリプトで .md に変換＆リンクを再構成(実際の変換スクリプトは <a href="https://github.com/sharkpp/www.sharkpp.net/blob/master/convert">www.sharkpp.net/convert/ - GitHub</a> を参照)</li>
+<li>Sculpin で構築しやすいように再構成</li>
+<li>Github へ push したら自動で更新する仕組みを実装( <a href="/blog/2015/05/31/how-to-build-libxml2-on-xrea-com-for-sculpin.html">Sculpin を実行するために xrea.com 上で libxml2 を構築する方法</a> や <a href="https://github.com/sharkpp/www.sharkpp.net/blob/master/site">www.sharkpp.net/site - GitHub</a> を参照)</li>
+<li>公開</li>
+</ol>
+
+<p>という感じです。</p>
+
+<p>いろいろ自分好みなページを作る中で Sculpin の挙動を調べたメモを記録として残しておきます。</p>
+
+<h2 id="%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%83%A9%E3%82%A4%E3%83%B3">コマンドライン</h2>
+
+<h3 id="%E6%A7%8B%E7%AF%89">構築</h3>
+
+<pre><code class="bash">$ php sculpin.phar generate
+</code></pre>
+
+<p>または</p>
+
+<pre><code class="bash">$ php sculpin.phar generate --env=prod
+</code></pre>
+
+<h3 id="%E6%A7%8B%E7%AF%89%EF%BC%86%E3%83%86%E3%82%B9%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E8%B5%B7%E5%8B%95">構築＆テストサーバー起動</h3>
+
+<pre><code class="bash">$ php sculpin.phar generate --watch --server
+</code></pre>
+
+<h2 id="sculpin-%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%A7%E3%81%8D%E3%82%8B%E5%A4%89%E6%95%B0">Sculpin で使用できる変数</h2>
+
+<h3 id="%E3%83%9A%E3%83%BC%E3%82%B8%E5%86%85%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%A7%E3%81%8D%E3%82%8B%E5%A4%89%E6%95%B0">ページ内で使用できる変数</h3>
+
+<table>
+<thead>
+<tr>
+  <th>変数名</th>
+  <th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>site</td>
+  <td><code>sculpin_site.yml</code> の値</td>
+</tr>
+<tr>
+  <td>page</td>
+  <td>ページ自体</td>
+</tr>
+<tr>
+  <td>formatter</td>
+  <td>テンプレートエンジン名( <code>twig</code> など)</td>
+</tr>
+<tr>
+  <td>converters</td>
+  <td>？</td>
+</tr>
+<tr>
+  <td>relative_root_url</td>
+  <td>ページ自体から見たルートへの相対パス</td>
+</tr>
+<tr>
+  <td>data</td>
+  <td><code>Frontmatter</code> (各ページ先頭での指示) で宣言されたコンテンツ</td>
+</tr>
+<tr>
+  <td>layout</td>
+  <td>レイアウト名</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="site-%E5%A4%89%E6%95%B0">site 変数</h3>
+
+<p><code>app/config/sculpin_site.yml</code> で指定した値が設定されます。</p>
+
+<table>
+<thead>
+<tr>
+  <th>キー</th>
+  <th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>.posts</td>
+  <td><code>use: ["posts"]</code></td>
+</tr>
+<tr>
+  <td>.subtitle</td>
+  <td><code>app/config/sculpin_site.yml</code> で指定した値</td>
+</tr>
+<tr>
+  <td>.url</td>
+  <td>サイトのURL。引数 <code>--url</code> で指定した値。</td>
+</tr>
+<tr>
+  <td>.author</td>
+  <td><code>app/config/sculpin_site.yml</code> で指定した値</td>
+</tr>
+<tr>
+  <td>.env</td>
+  <td>引数 <code>--env</code> で指定した値。<code>dev</code> など</td>
+</tr>
+<tr>
+  <td>.calculated_date</td>
+  <td>ページの生成日時</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="page-%E5%A4%89%E6%95%B0">page 変数</h3>
+
+<p>ページ自体の情報を参照できる変数。</p>
+
+<pre><code class="yaml">---
+title: "Sculpin でホムペを再構築"
+date: 2015-06-28 18:00
+tags: [雑記,php,xrea.com,Sculpin]
+categories: [ブログ]
+user_data: [hoge,fuga]
+
+---
+
+</code></pre>
+
+<p>の <code>user_data</code> の用な感じで自由に値を指定することも出来ます。</p>
+
+<p><code>post.data</code> と <code>data</code> は同じ内容を参照しているようです。</p>
+
+<h3 id="data-%E5%A4%89%E6%95%B0">data 変数</h3>
+
+<p><code>Frontmatter</code> (各ページ先頭での指示) で <code>use: XXX</code> として宣言されたコンテンツが読み込まれます。</p>
+
+<h2 id="tips%E7%9A%84%E3%81%AA%E3%82%81%E3%82%82">Tips的なめも</h2>
+
+<h3 id="%E3%83%96%E3%83%AD%E3%82%B0%E3%83%9A%E3%83%BC%E3%82%B8%E6%84%8F%E5%A4%96%E3%82%92%E5%8F%82%E7%85%A7%E3%81%99%E3%82%8B%E5%A4%89%E6%95%B0%E3%82%84%E6%96%B9%E6%B3%95%E3%81%AF%E7%84%A1%E3%81%84">ブログページ意外を参照する変数や方法は無い</h3>
+
+<p>Sculpin 自体には <code>SculpinPostsBundle</code> から生成される <code>blogs/YYYY/MM/DD/XXXX</code> を参照するような感じで、ブログページ以外の単体ページを参照する仕組みは標準ではなさそうです。
+ただ、拡張として内部の情報を参照する形で作れば出来そうな感じではあるようです。</p>
+
+<h3 id=".htaccess-%E8%87%AA%E4%BD%93%E3%82%92%E3%82%B3%E3%83%94%E3%83%BC%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AF%E5%87%BA%E6%9D%A5%E3%81%AA%E3%81%84">.htaccess 自体をコピーすることは出来ない</h3>
+
+<p>あれっと思いましたが、
+<a href="https://github.com/sculpin/sculpin/issues/121">Is it expected behavior that .htaccess file is not carried over from source dir to destination? - Issue #121 - sculpin/sculpin</a> を見ると <code>.htaccess</code> 自体をページ生成時にコピーすることは出来ない様です。
+が、ちょっと考えると <code>htaccess.twig</code> というファイルを作り</p>
+
+<pre><code>---
+permalink: .htaccess
+---
+# hoge fuga
+</code></pre>
+
+<p>とすればいいようです。</p>
+
+<h3 id="%E8%A8%98%E4%BA%8B%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E5%BC%B5%E3%82%8B%E3%81%AB%E3%81%AF%E3%83%A1%E3%82%BF%E6%83%85%E5%A0%B1%E3%81%8C%E5%BF%85%E8%A6%81">記事へのリンクを張るにはメタ情報が必要</h3>
+
+<p>ヘッダとして</p>
+
+<pre><code class="markdown"># Sculpin でホムペを再構築
+</code></pre>
+
+<p>の様にしても記事へのリンクが張られなかった。
+タグ情報とかも結局入れるのでこのような形にする</p>
+
+<pre><code class="markdown">---
+title: "Sculpin でホムペを再構築"
+
+---
+</code></pre>
+
+<h3 id="%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%E3%81%AF%E3%83%80%E3%83%96%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%A7%E5%9B%B2%E3%81%86%E3%81%B9%E3%81%97">タイトルはダブルコーテーションで囲うべし</h3>
+
+<p>タイトルの頭に記号が含まれると</p>
+
+<pre><code class="bash">$ php sculpin.phar generate --watch --server
+     ! FileSource:FilesystemDataSource:.../source:_posts/2013-01-24-user-jp-follow-up.md Reference "-user.jp(?ユーザのためのハブサイト)のその後を追跡調査" does not exist at line 0. !
+    Detected new or updated files
+    Generating: 100% (215 sources / 0.04 seconds)
+               :
+</code></pre>
+
+<p>の様に処理できない場合がある模様。
+なので、ダブルコーテーションで囲うことでこの問題を回避出来る。</p>
+
+<h3 id="%E3%83%87%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E3%81%A7%E5%85%A8%E3%81%A6%E3%81%AE%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E6%8B%A1%E5%BC%B5%E5%AD%90%E3%82%92%E4%BB%98%E3%81%91%E3%82%8B%E3%81%AB%E3%81%AF%EF%BC%9F">デフォルトで全てのページに拡張子を付けるには？</h3>
+
+<p>設定を下記のようにする。</p>
+
+<pre><code class="yaml"># app/config/sculpin_kernel.yml
+sculpin:
+    permalink: :basename.html
+
+</code></pre>
+
+<p>ただし、ページネーションやページ内に埋め込まれているリンクは別個修正する必要がある。</p>
+
+<h3 id="twig-extensions-%E3%82%92%E4%BD%BF%E3%81%86%E6%96%B9%E6%B3%95">Twig Extensions を使う方法</h3>
+
+<p><a href="http://twig.sensiolabs.org/doc/extensions/text.html">truncate</a> などを使用するために必要な <a href="http://twig.sensiolabs.org/doc/extensions/index.html">Twig Extensions</a> は <code>sculpin.phar</code> 自体には組み込まれていますが、デフォルトでは無効となっていてそのままでは利用できないようです。</p>
+
+<p>利用するには <code>app/config/sculpin_services.yml</code> を作り設定を行う必要があります。</p>
+
+<p><code>sculpin_services.yml</code> の利用方法は <a href="https://sculpin.io/documentation/bundles/SculpinPostsBundle/">SculpinPostsBundle — Sculpin — PHP Static Site Generator</a> あたりに書いてありますが、残念ながらドキュメントからのリンクが張られていないようです。</p>
+
+<p>また、残念なことに <code>sculpin_services_{ENV}.yml</code> の用な感じで環境ごとに拡張の有効/無効を切り替えて使用することは出来ないようです。</p>
+
+<pre><code class="yaml"># app/config/sculpin_services.yml
+services:
+    twig.extension.text:
+        class: Twig_Extensions_Extension_Text
+        tags:
+            - { name: twig.extension }
+</code></pre>
+
+<p>と、このようなファイルを作ることで</p>
+
+<pre><code class="html">&lt;div&gt;{{ post.contents | truncate }}&lt;/div&gt;
+</code></pre>
+
+<p>このように使用することが可能になります。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://sculpin.io/documentation/">Documentation — Sculpin — PHP Static Site Generator</a></li>
+<li><a href="http://blog.a-way-out.net/blog/2013/10/11/how-to-use-sculpin/">PHPで静的サイトを簡単に作成できるSculpin — A Day in Serenity (Reloaded) — PHP, FuelPHP, Linux or something</a></li>
+<li><a href="https://github.com/dragonmantank/solarized-sculpin">dragonmantank/solarized-sculpin</a></li>
+<li><a href="https://github.com/GhislainPhu/ghislainphu.fr/blob/29ff7d704dab9df39d586b7781c47955019c0864/app/config/sculpin_kernel.yml">ghislainphu.fr/sculpin_kernel.yml at 29ff7d704dab9df39d586b7781c47955019c0864 - GhislainPhu/ghislainphu.fr</a></li>
+<li><a href="http://twig.sensiolabs.org/doc/filters/index.html">Filters - Documentation - Twig - The flexible, fast, and secure PHP template engine</a></li>
+<li><a href="http://akasingo.com/483">Twig: 連想配列の連結</a></li>
+<li><a href="https://adamcod.es/2014/02/07/getting-started-with-sculpin.html">Getting Started With Sculpin - adamcod.es</a></li>
+<li><a href="https://github.com/andrewshell/blog.andrewshell.org">andrewshell/blog.andrewshell.org</a></li>
+<li><a href="https://sculpin.io/documentation/bundles/SculpinPostsBundle/">SculpinPostsBundle — Sculpin — PHP Static Site Generator</a></li>
+<li><a href="https://github.com/sculpin/sculpin/issues/121">Is it expected behavior that .htaccess file is not carried over from source dir to destination? - Issue #121 - sculpin/sculpin</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[新たなマスコット爆誕とfaviconの更新]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/06/07/revelation-new-mascot-and-update-favicon.html"/>
+            <updated>2015-06-07T20:45:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/06/07/revelation-new-mascot-and-update-favicon.html</id>
+            <content type="html"><![CDATA[<p>favicon 関係が <a href="https://sculpin.io/mascot/">Jackson</a> のままだったのは <a href="https://sculpin.io/">Sculpin</a> のブログスケルトンをベースに変更していったのが原因な訳で。</p>
+
+<p>置き換えようにも置き換えるための画像が無くてそのままにしていたのだけど、 Inkscape でごにょごにょしてそれらしいのをでっち上げました。</p>
+
+<h2 id="%E6%96%B0%E3%81%97%E3%81%84-favicon-%E3%81%AE%E5%AD%90">新しい favicon の子</h2>
+
+<p>新しい favicon の子です。</p>
+
+<p>ホオジロザメをイメージしてみたのだけれども今イチそうは見えない謎生物が爆誕しました。</p>
+
+<p><a href="/images/noname/1024x1024.png"><img src="/images/noname/128x128.png" alt="favicon" /></a></p>
+
+<p>SVG は つ <a href="/images/noname/favicon.svg">favicon.svg</a></p>
+
+<p>ライセンスは CC BY 4.0 でお願いします。</p>
+]]></content>
+        </entry>
+    </feed>

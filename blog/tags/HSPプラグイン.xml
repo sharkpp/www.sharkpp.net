@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/HSP%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:50+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[PCB Software製プラグインの再配布]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/09/06/redistribution-pcbsoft-plugin.html"/>
+            <updated>2008-09-06T02:01:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/09/06/redistribution-pcbsoft-plugin.html</id>
+            <content type="html"><![CDATA[<p>PCB Software(高橋 周平)さんが店じまいをしてしまい、ドメインももうすぐ<s>切れそうな</s>切れたので取り敢えず再配布するようにしてみました。</p>
+
+<p>それと、pcbnet2の方はmd5命令の動作に不具合があったのでそちらも直したものを公開しました。</p>
+
+<p>ファイルのダウンロードは<a href="/blog/2008/09/06/pcbsoft.html">再配布ページ</a>と<a href="/blog/2008/09/06/hsp-pcbnet2.html">プラグイン</a>のページからどうぞ。</p>
+
+<h3 id="2008%E5%B9%B410%E6%9C%8811%E6%97%A5%E4%B8%80%E9%83%A8%E4%BF%AE%E6%AD%A3">2008年10月11日一部修正</h3>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[PCB Software製プラグインの再配布]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/09/06/pcbsoft.html"/>
+            <updated>2008-09-06T01:52:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/09/06/pcbsoft.html</id>
+            <content type="html"><![CDATA[<p>PCB Software(高橋 周平)さんが店じまいしてしまったので公開していたプラグインやツールの再配布を行っています。</p>
+
+<p>再配布しているファイルは公開当時の内容のままです。</p>
+
+<p>また最終版のソース・サンプルから独自に<a href="/blog/2008/08/20/hsp-pcbnet2-sample-hsp3-fix.html">pcbnet2のサンプルのHSP3対応</a>や<a href="/blog/2008/09/06/hsp-pcbnet2.html">pcbnet2のバグの修正</a>などもこのサイトで行っています。</p>
+
+<ul>
+<li><a href="/files/pcbnet2_final.zip" title="pcbnet2">pcbnet ver.final</a></li>
+<li><a href="/files/pcbnet_final.zip" title="pcbnet">pcbnet2 ver.final</a></li>
+<li><a href="/files/hspsockA_final.zip" title="hspsockA">hspsockA ver. final</a></li>
+<li><a href="/files/hst_final.zip" title="hspsockA">Hot Soup Taster ver. final</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[pcbnet2 改変版]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/09/06/hsp-pcbnet2.html"/>
+            <updated>2008-09-06T01:42:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/09/06/hsp-pcbnet2.html</id>
+            <content type="html"><![CDATA[<p>PCB Software(高橋 周平)さん作のpcbnet2の再配布およびバグ修正などをしています。</p>
+
+<h2 id="%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89">ダウンロード</h2>
+
+<ul>
+<li><a href="/files/pcbnet2_unofficial_20080906.zip">DOWNLOAD</a></li>
+<li><a href="/files/pcbnet2_final.zip">pcbnet2 ver.final</a>(オリジナル最終バージョン)</li>
+</ul>
+
+<h2 id="%E5%B1%A5%E6%AD%B4">履歴</h2>
+
+<dl>
+<dt>2008/09/06</dt>
+<dd>公開<br />md5関数でハッシュ値の算出を継続して行うと値がおかしかった問題を修正</dd>
+</dl>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[pcbnet2 付属サンプルをHSP3に対応させてみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/08/21/pcbnet2-sample-modified-for-hsp3-syntax.html"/>
+            <updated>2008-08-21T00:15:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/08/21/pcbnet2-sample-modified-for-hsp3-syntax.html</id>
+            <content type="html"><![CDATA[<p>pcbnet2 付属サンプルはHSP2の書式で書かれているのでHSP3では動作していなかったのでまず手始めにサンプルから修正してみた。</p>
+
+<p><a href="/blog/2008/08/20/hsp-pcbnet2-sample-hsp3-fix.html">ダウンロードページ</a></p>
+
+<p>まあそんなに修正とはいえあまり変更点は無かったけどnetipv6命令が廃止したのにサンプルには書いてあったりして少し悩みはした。</p>
+
+<p>今のところ問題ないけどランタイム作るときや今後を考えてpcbnet2をHSP3形式のプラグインに移植を行ってみようかと少し考えています。</p>
+
+<p>あと、md5関数がバグっていたりするので直したものを公開したいとは思っているのでそのうち公開します。</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[pcbnet2 付属サンプルのHSP3対応修正]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/08/20/hsp-pcbnet2-sample-hsp3-fix.html"/>
+            <updated>2008-08-20T23:54:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/08/20/hsp-pcbnet2-sample-hsp3-fix.html</id>
+            <content type="html"><![CDATA[<h2 id="%E8%AA%AC%E6%98%8E">説明</h2>
+
+<p>pcbnet2に付属のサンプルはHSP2の書式で書かれているのでこれをHSP3で実行できるように修正を行いました。</p>
+
+<h2 id="%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89">ダウンロード</h2>
+
+<p><a href="/files/pcbnet2_sample_hsp3_fix_20080821.zip">DOWNLOAD</a></p>
+
+<h2 id="%E5%B1%A5%E6%AD%B4">履歴</h2>
+
+<dl>
+<dt>2008/08/21</dt>
+<dd>公開</dd>
+</dl>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[memfile.hpi]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/08/15/hsp-memfile-hpi.html"/>
+            <updated>2008-08-15T01:03:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/08/15/hsp-memfile-hpi.html</id>
+            <content type="html"><![CDATA[<h2 id="%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%81%AE%E8%AA%AC%E6%98%8E">プラグインの説明</h2>
+
+<p>HSP 3.1以降用のファイル読み込みフックプラグインです。</p>
+
+<p>プラグインやDLLが行うファイルの読み込みをフックして実際のデータの読み込みをメモリ上から行うようにするプラグインです。</p>
+
+<p>たとえば、<del title="出来ません">MIDIをEXEにパックして再生を行うことや</del>Easy3DでモデルデータをEXEに埋め込むことも出来ます。</p>
+
+<p>が、実用には程遠いでしょう。</p>
+
+<p>なお<span class="warning">このプラグインについての動作保障はありませんし今後する予定もありません。</span></p>
+
+<h2 id="%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83">動作環境</h2>
+
+<p>HSP 3.1 以降</p>
+
+<p>Windows XP/Vista(2000は未検証)</p>
+
+<h2 id="%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</h2>
+
+<ul>
+<li>memfile.hpi - プラグインファイル</li>
+<li>memfile.as - プラグインヘッダファイル</li>
+<li>readme.txt - 最初に読むファイル</li>
+<li>sample
+
+<ul>
+<li>sample1.hsp - 基本的なサンプル</li>
+<li>sample2.hsp - 【実行不可】MIDIのバッファからの再生サンプル</li>
+<li>sample3.hsp - 【実行不可】PNGのメモリからの読み込みサンプル</li>
+<li>sample4.hsp - GIFのメモリからの読み込みサンプル</li>
+<li>sample5.hsp - oggのメモリからの読み込みサンプル</li>
+<li>sample6.hsp - Easy3Dのモデルデータ・テクスチャのメモリからの読み込みサンプル</li>
+</ul></li>
+</ul>
+
+<h2 id="%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89">ダウンロード</h2>
+
+<p><a href="/files/memfile001.zip">DOWNLOAD</a></p>
+
+<h2 id="%E5%B1%A5%E6%AD%B4">履歴</h2>
+
+<dl>
+<dt>2008/08/17</dt>
+<dd>公開</dd>
+</dl>
+]]></content>
+        </entry>
+    </feed>

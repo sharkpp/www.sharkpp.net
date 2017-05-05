@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/Windows%207.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:50+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Windows 7 RC1 が公開]]></title>
+            <link href="http://www.sharkpp.net/blog/2009/05/07/windows-7-rc1-publicly-availabled.html"/>
+            <updated>2009-05-07T01:47:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2009/05/07/windows-7-rc1-publicly-availabled.html</id>
+            <content type="html"><![CDATA[<p>Windows 7 RC1 が一般公開されたようなのでVMware Playerにインストールしてみました。</p>
+
+<p>で色々触っていたらブルースクリーンにもなったのでそちらのスクリーンショットもどうぞ。</p>
+
+<p><strong>インストール画面</strong></p>
+
+<p><a href="/images/2009_0507_win7rc1x86_install.png"><img src="/images/2009_0507_win7rc1x86_install_s.jpg" alt="2009_0507_win7rc1x86_install.png" /></a></p>
+
+<p><strong>OS起動画面</strong></p>
+
+<p><a href="/images/2009_0507_win7rc1x86_os_loading.png"><img src="/images/2009_0507_win7rc1x86_os_loading_s.jpg" alt="2009_0507_win7rc1x86_os_loading.png" /></a></p>
+
+<p><strong>ログイン画面</strong></p>
+
+<p><a href="/images/2009_0507_win7rc1x86_login.png"><img src="/images/2009_0507_win7rc1x86_login_s.jpg" alt="2009_0507_win7rc1x86_login.png" /></a></p>
+
+<p><strong>インストール直後のデスクトップ</strong></p>
+
+<p><a href="/images/2009_0507_win7rc1x86_desktop.png"><img src="/images/2009_0507_win7rc1x86_desktop_s.jpg" alt="2009_0507_win7rc1x86_desktop.png" /></a></p>
+
+<p><strong>ゲストPCのスペック</strong></p>
+
+<p><a href="/images/2009_0507_win7rc1x86_guest_spec.png"><img src="/images/2009_0507_win7rc1x86_guest_spec_s.jpg" alt="2009_0507_win7rc1x86_guest_spec.png" /></a></p>
+
+<p><strong>このサイトをIE8で表示</strong></p>
+
+<p><a href="/images/2009_0507_win7rc1x86_ie8_with_my_site.png"><img src="/images/2009_0507_win7rc1x86_ie8_with_my_site_s.jpg" alt="2009_0507_win7rc1x86_ie8_with_my_site.png" /></a></p>
+
+<p><strong>HSP3.1のデモを実行</strong></p>
+
+<p><a href="/images/2009_0507_win7rc1x86_hsp3demo.png"><img src="/images/2009_0507_win7rc1x86_hsp3demo_s.jpg" alt="2009_0507_win7rc1x86_hsp3demo.png" /></a></p>
+
+<p><strong>ブルースクリーン</strong></p>
+
+<p><a href="/images/2009_0507_win7rc1x86_bluescreen.png"><img src="/images/2009_0507_win7rc1x86_bluescreen_s.jpg" alt="2009_0507_win7rc1x86_bluescreen.png" /></a></p>
+]]></content>
+        </entry>
+    </feed>

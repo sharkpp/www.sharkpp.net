@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>C言語講座 第一回 キー入力 &mdash; さめたすたすのお家</title>
+        <meta charset="utf-8">
+        <meta name="theme-color" content="#6877AA">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="index, follow">
+        <meta name="keywords" content="ポケコン">
+        <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/lightbox2/css/lightbox.css" rel="stylesheet" type="text/css" />
+        <link href="/css/style.min.css" rel="stylesheet" type="text/css" />
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <link rel="apple-touch-startup-image" href="/images/noname/2048x2048.png">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="shortcut icon" sizes="76x76" href="/images/noname/76x76.png">
+        <link rel="shortcut icon" sizes="120x120" href="/images/noname/120x120.png">
+        <link rel="shortcut icon" sizes="128x128" href="/images/noname/128x128.png">
+        <link rel="shortcut icon" sizes="152x152" href="/images/noname/152x152.png">
+        <link rel="shortcut icon" sizes="196x196" href="/images/noname/196x196.png">
+        <link rel="shortcut icon" sizes="512x512" href="/images/noname/512x512.png">
+        <link rel="shortcut icon" sizes="1024x1024" href="/images/noname/1024x1024.png">
+        <link rel="shortcut icon" sizes="2048x2048" href="/images/noname/2048x2048.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/noname/76x76.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/noname/120x120.png">
+        <link rel="apple-touch-icon" sizes="128x128" href="/images/noname/128x128.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/noname/152x152.png">
+        <link rel="apple-touch-icon" sizes="196x196" href="/images/noname/196x196.png">
+        <link rel="apple-touch-icon" sizes="512x512" href="/images/noname/512x512.png">
+        <link rel="apple-touch-icon" sizes="1024x1024" href="/images/noname/1024x1024.png">
+        <link rel="apple-touch-icon" sizes="2048x2048" href="/images/noname/2048x2048.png">
+
+        <link rel="stylesheet" href="/assets/highlightjs/styles/github.css" />
+        <link rel="alternate" type="application/atom+xml" href="/atom.xml" title="さめたすたすのお家 activity feed" />
+        <style>
+        /** quick fix because bootstrap <pre> has a background-color. */
+        pre code { background-color: inherit; }
+        </style>
+                <style>
+        #go-top {
+            display: none;
+            bottom: 40px;
+            right: 30px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #fff;
+            position: fixed;
+            z-index: 999;
+        }
+        #go-top > i {
+            font-size: 36px;
+            line-height: 40px;
+        }
+        #toc {
+            margin-left: 10px;
+            margin-bottom: 10px;
+            max-width: 350px;
+            word-wrap: break-word;
+        }
+        </style>
+                    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">さめたすたすのお家</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav pull-right">
+                        <li><a href="/blog/"><i class="fa fa-archive"></i> アーカイブ</a></li>
+                        <li><a href="/blog/categories"><i class="fa fa-folder-open"></i> カテゴリ</a></li>
+                        <li><a href="/blog/tags"><i class="fa fa-tags"></i> タグ</a></li>
+                        <li><a href="/product/"><i class="fa fa-download"></i> 作ったもの</a></li>
+                        <li><a href="/graffiti/"><i class="fa fa-paint-brush"></i> 落書き</a></li>
+                        <li><a href="/link.html"><i class="fa fa-link"></i> リンク</a></li>
+                        <li><a href="/about">About</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <div class="mainContent container">
+                                                                                    
+    <ol class="breadcrumb" itemscope="itemscope"
+                           itemtype="http://schema.org/BreadcrumbList">
+        <li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/"
+           ><i class="fa fa-home fa-lg"></i
+     >&nbsp;<span itemprop="name">HOME</span
+           ><meta itemprop="position" content="1"
+          /></a
+       ></li>
+        <li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/blog/categories/ポケコン"
+           ><span>ポケコン</span
+           ><meta itemprop="position" content="2"
+          /></a
+       ></li>
+        <li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/blog/categories/ポケコン講座"
+           ><span>ポケコン講座</span
+           ><meta itemprop="position" content="3"
+          /></a
+       ></li>
+        <li
+            class="active"><span 
+           ><span>C言語講座 第一回 キー入力</span
+       ></li>
+    </ol>
+
+    <article itemscope="itemscope" itemtype="http://schema.org/Article">
+        <meta itemscope="itemscope" itemprop="mainEntityOfPage"
+              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net/blog/2008/07/20/pokecom-lecture-01-key-input.html"/>
+        <header>
+            <h1><span itemprop="headline">C言語講座 第一回 キー入力</span> <small>post</small></h1>
+        </header>
+
+<div id="toc" class="panel panel-default pull-right">
+    <div class="panel-heading text-center">目次</div>
+        <div class="panel-body" style="padding: 10px;">
+            <ul class="fa-ul">
+            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%A7%8B%E3%82%81%E3%81%AB">始めに</a>
+</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%85%B6%E3%81%AE%E5%A3%B1">其の壱</a>
+</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%85%B6%E3%81%AE%E5%BC%90">其の弐</a>
+</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%85%B6%E3%81%AE%E5%8F%82">其の参</a>
+</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E6%9C%80%E5%BE%8C%E3%81%AB">最後に</a>
+</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%B1%A5%E6%AD%B4">履歴</a>
+        </ul>
+    </div>
+</div>
+
+<div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div>
+
+        <div itemprop="articleBody">
+            <h2 id="%E5%A7%8B%E3%82%81%E3%81%AB" itemprop="articleSection">始めに</h2>
+
+<!-- 20050206 -->
+
+<p>ポケコンの、BASIC には INKEY$ があるのに、Ｃ言語には、<code>getch()</code> と <code>kbhit()</code> しかないんじゃ? というわけで、第一回のＣ言語 講座は、キー入力を扱うことにします。</p>
+
+<h2 id="%E5%85%B6%E3%81%AE%E5%A3%B1" itemprop="articleSection">其の壱</h2>
+
+<!-- 20050206 -->
+
+<p>まず、<code>getch()</code> と <code>kbhit()</code> を組み合わせて、</p>
+
+<pre>int inkey()
+{
+if(kbhit())
+return getch();
+return 0;
+}
+main()
+{
+int c;
+while(1) {
+c = inkey();
+printf("KEY = %c[%02X] \n", c, c);
+}
+}
+</pre>
+
+<p>として、キーを入力しようとしても、なぜキーを入力すると表示がとまってしまうのかというと、 おそらく <code>getch()</code> が内部でキー入力を待っているので停止しているからなのだと考えられます。</p>
+
+<h2 id="%E5%85%B6%E3%81%AE%E5%BC%90" itemprop="articleSection">其の弐</h2>
+
+<!-- 20050206 -->
+
+<p>そこで、Ｃ言語でキーを入力するために <code>call()</code> 命令を<!-- 20050206:実現して -->使ってみようという事になります。</p>
+
+<p>以下は、<a href="http://freett.com/hazy/">「未完成な張りぼて」</a>からの引用です ^_^;</p>
+
+<p><code>main()</code> は上のプログラムを使ってください。</p>
+
+<pre>char inkeyt1(void){    <span>/*キー入力関数軽量型（不都合あり）*/</span>
+static char *p="へSセヘVセ2ェ□ノ";    <span>/*□はスペース*/</span>
+call((unsigned)p ,0);
+return (peek(0x20aa));
+}
+</pre>
+
+<p>「未完成な張りぼて」では詳しく触れられていないようなので、逆アセして解析してみます。</p>
+
+<p><code>call()</code> で呼び出している、<code>p</code> が一番肝心なプログラムです。</p>
+
+<pre>ORG   100H
+CALL  0BE53H      <span>;  0xBE53 をコール</span>
+CALL  0BE56H      <span>;  0xBE56 をコール</span>
+LD    (20AAH),A   <span>;  0x20AA 番地に A レジスタ値を書き出し</span>
+RET               <span>;  戻る</span>
+END
+</pre>
+
+<p>てな具合です。</p>
+
+<p><code>0xBE53</code> は キー入力 の ROM 内関数で、</p>
+
+<p><code>0xBE56</code> は <code>0xBE53</code> からの戻り値を "アスキーコードに変換" する ROM 内関数<del>のよう</del>です。</p>
+
+<p><del>(‥のようです、というのは、どこにも記載がないからです。結果からするとおそらく、ということです。)
+</del></p>
+
+<p><span>(2005/02/06)教員用の指導書に記載がありました。
+</span></p>
+
+<p>で、どんな不具合が発生するかというと、<code>0x20AA</code> 番地に書き出すことが曲者であって、 もし <code>0x20AA</code> 番地に他のプログラムがあった場合にはそれと書きつぶしてしまうことが問題なのです。</p>
+
+<p>そこで、<code>LD (20AAH),A</code> を <code>LD (0FFH),A</code> にしてみたら、</p>
+
+<pre>int inkey()
+{
+static char *p="へSセヘVセ2\xff\0ノ";
+call((unsigned)p ,0);
+return peek(0x20aa);
+}
+</pre>
+
+<p>こうなりました。</p>
+
+<p>しかし、これでもまだ、不安が残ります。 もし、<code>0xFF</code> 番地にステータスを記録するプログラムだった場合は？</p>
+
+<h2 id="%E5%85%B6%E3%81%AE%E5%8F%82" itemprop="articleSection">其の参</h2>
+
+<!-- 20050206 -->
+
+<p>そこで、<code>call()</code> をおさらいしてみます。</p>
+
+<pre>unsigned call(unsigned adr, void * arg_HL);
+adr    : 機械語の先頭アドレス
+arg_HL : HL レジスタに渡される値
+戻り値 : HL レジスタの値
+</pre>
+
+<p>だそうです。</p>
+
+<p>そこで、この戻り値を利用し値を返すことにします。</p>
+
+<p>まず、アセンブラソースです。</p>
+
+<pre>ORG     100H
+CALL    0BE53H      <span>;  0xBE53 をコール</span>
+CALL    0BE56H      <span>;  0xBE56 をコール</span>
+LD      L,A         <span>;  L レジスタに A レジスタ値を書き出し</span>
+RET                 <span>;  戻る</span>
+END
+</pre>
+
+<p>根本的には、変化していないのですが、<code>LD (0FFH),A</code> の部分を変更しました。</p>
+
+<p>なんか使い方が間違っているような気もしますが、Ｃ言語のソースは、こうなりました。</p>
+
+<pre>int inkey()
+{
+static char *p="ヘＳセヘＶセｏノ"; <span>/* 全て全角にしてあります */</span>
+return call((unsigned)p,0);
+}
+</pre>
+
+<p>結構すっきりしたと思います。</p>
+
+<p><strong>ちなみに、このプログラムは、同時にはキーを取得できません。</strong></p>
+
+<p><code>call()</code> で機械語を呼び出し、結果を HL レジスタを戻り値としてキーコードを返しています。</p>
+
+<p>H レジスタは、呼び出し時に 0 になっているので結果的に L レジスタの値が戻ってくるわけです。</p>
+
+<h2 id="%E6%9C%80%E5%BE%8C%E3%81%AB" itemprop="articleSection">最後に</h2>
+
+<!-- 20050206 -->
+
+<p>長々と<!-- 20050206:講座をやってきた -->書いた割には、重要なのは、上のプログラムだけ(しかも、他人のふんどしで相撲を取っているし)。</p>
+
+<p>まあ、第一回の講座は、これでお開きです。</p>
+
+<p>最後に、プログラムとキーコード表をのせたいと思います。</p>
+
+<p>長々とお付き合いありがとうございました。</p>
+
+<p>プログラム <a href="/files/inkey.h">inkey.h</a></p>
+
+<p>　名前を inkey.h に変え、</p>
+
+<p>　<code>#include "inkey.h"</code></p>
+
+<p>　として読込むか、直接記述してお使いください。</p>
+
+<table class="table table-striped" style="font-size: small;" summary="inkey.h で取得できるキーのコード表"><caption>キーコード表</caption> 
+<tr><th>下位＼上位</th><th style="width: 1em;"></th><th style="width: 1em;">1</th><th style="width: 1em;">2</th><th style="width: 1em;">3</th><th style="width: 1em;">4</th><th style="width: 1em;">5</th><th style="width: 1em;">6</th><th style="width: 1em;">7</th><th style="width: 1em;">～</th><th style="width: 1em;">D</th><th style="width: 1em;">～</th><th style="width: 1em;">F</th></tr>
+<tr><th ></th><td>入力なし</td><td><span>2ndF</span></td><td>スペース</td><td></td><td>@</td><td>P</td><td></td><td>p</td><td rowspan="16"></td><td rowspan="15"></td><td rowspan="16"></td><td><span>ASMBL</span></td></tr>
+<tr><th>1</th><td><span>BASIC</span></td><td><span>カナ</span></td><td>!</td><td>1</td><td>A</td><td>Q</td><td>a</td><td>q</td><td><span>BASE-n</span></td></tr>
+<tr><th>2</th><td><span>TEXT</span></td><td><span>INS</span></td><td>"</td><td>2</td><td>B</td><td>R</td><td>b</td><td>r</td><td><span>コントラスト</span></td></tr>
+<tr><th>3</th><td><span>C</span></td><td><span>DRG</span></td><td>#</td><td>3</td><td>C</td><td>S</td><td>c</td><td>s</td><td></td></tr>
+<tr><th>4</th><td><span>STAT</span></td><td><span>CAPS</span></td><td>$</td><td>4</td><td>D</td><td>T</td><td>d</td><td>t</td><td></td></tr>
+<tr><th>5</th><td></td><td><span>ANS</span></td><td>%</td><td>5</td><td>E</td><td>U</td><td>e</td><td>u</td><td></td></tr>
+<tr><th>6</th><td><span>OFF</span></td><td>(-)</td><td>&</td><td>6</td><td>F</td><td>V</td><td>f</td><td>v</td><td></td></tr>
+<tr><th>7</th><td><span>P⇔NP</span></td><td><span>CONST</span></td><td>'</td><td>7</td><td>G</td><td>W</td><td>g</td><td>w</td><td></td></tr>
+<tr><th>8</th><td><span>BS</span></td><td><span>(CONST)</span></td><td>(</td><td>8</td><td>H</td><td>X</td><td>h</td><td>x</td><td></td></tr>
+<tr><th>9</th><td><span>DEL</span></td><td><span>R・CM</span></td><td>)</td><td>9</td><td>I</td><td>Y</td><td>i</td><td>y</td><td></td></tr>
+<tr><th>A</th><td><span>TAB</span></td><td><span>M+</span></td><td>*</td><td>:</td><td>J</td><td>Z</td><td>j</td><td>z</td><td></td></tr>
+<tr><th>B</th><td><span>CA</span></td><td><span>M-</span></td><td>+</td><td>;</td><td>K</td><td>[</td><td>k</td><td>{</td><td>”</td></tr>
+<tr><th>C</th><td><span>CLS</span></td><td>→</td><td>,</td><td><</td><td>L</td><td>\</td><td>l</td><td>|</td><td></td></tr>
+<tr><th>D</th><td><span class="fa fa-reply fa-flip-vertical" title="RETURN"></span></td><td>←</td><td>-</td><td>=</td><td>M</td><td>]</td><td>m</td><td>}</td><td></td></tr>
+<tr><th>E</th><td><span>DIGIT</span></td><td>↑</td><td>.</td><td>></td><td>N</td><td>^</td><td>n</td><td>~</td><td>他のキー</td></tr>
+<tr><th>F</th><td><span>F⇔E</span></td><td>↓</td><td>/</td><td>?</td><td>O</td><td>_</td><td>o</td><td></td><td>゜</td><td></td></tr>
+</table>
+
+<p>※<span>色</span>文字 特殊なキーの名前</p>
+
+<p>※<span>色</span>文字 [2ndF] または [SHIFT] を押したときの名前</p>
+
+<h2 id="%E5%B1%A5%E6%AD%B4" itemprop="articleSection">履歴</h2>
+
+<dl>
+<dt>2004/02/24</dt>
+<dd>公開</dd>
+
+<dt>2005/02/06</dt>
+<dd>注釈追加<br />構成変更</dd>
+</dl>
+
+<div class="siblings_navigation">前 | C言語講座 第一回 キー入力 | <a href="/blog/2008/07/20/pokecom-lecture-02-file-size-compact.html" title="C言語講座 第二回 ファイルサイズの縮小" >次</a>
+</div>
+
+        </div>
+        <hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" />
+        <footer>            <div style="line-height: 25px; height: 25px;">
+    <span style="display: inline-block; vertical-align: top;">
+        <i class="fa fa-calendar"></i>
+        <span itemprop="datePublished" content="2008-07-20">2008年07月20日</span>
+        &nbsp;/&nbsp;
+        <i class="fa fa-history"></i> <a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2008-07-20-pokecom-lecture-01-key-input.md">変更履歴</a>
+        &nbsp;/&nbsp;
+        <i class="fa fa-thumb-tack"></i> <a href="/blog/2008/07/20/pokecom-lecture-01-key-input.html">Permalink</a>
+        &nbsp;/&nbsp;
+    </span>
+    <meta itemprop="url" content="http://www.sharkpp.net/blog/2008/07/20/pokecom-lecture-01-key-input.html" />
+    <span itemprop="author" itemscope itemtype="https://schema.org/Person"
+          style="display: none;"
+       ><span itemprop="name">sharkpp</span
+   ></span>
+    <a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2008%2F07%2F20%2Fpokecom-lecture-01-key-input.html"
+       class="hatena-bookmark-button"
+       data-hatena-bookmark-title="C言語講座 第一回 キー入力 &mdash; さめたすたすのお家"
+       data-hatena-bookmark-layout="simple-balloon"
+       title="このエントリーをはてなブックマークに追加"
+      ><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png"
+            alt="このエントリーをはてなブックマークに追加"
+            width="20" height="20" style="border: none;" /></a
+      >
+    <a href="https://twitter.com/share" class="twitter-share-button"
+       data-url="http://www.sharkpp.net/blog/2008/07/20/pokecom-lecture-01-key-input.html" data-via="sharkpp">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</div><div style="line-height: 25px; height: 25px;">
+                                <span class="categories">
+            <i class="fa fa-folder-open"></i> カテゴリ:
+                        <a href="/blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3">ポケコン</a>,                         <a href="/blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3%E8%AC%9B%E5%BA%A7">ポケコン講座</a>                        </span>
+        &nbsp;/&nbsp;
+                                <span class="tags">
+            <i class="fa fa-tag"></i> タグ:
+                        <a href="/blog/tags/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3">ポケコン</a>                        </span>
+        </div>
+        </footer>
+
+                    <hr style="border-top: none; border-bottom: 1px dashed #aaa; margin: 10px 0;" />
+            <nav class="article">
+                <ul class="list-unstyled row">
+                                            <li class="col-md-6 text-left"><a class="next" href="/blog/2008/07/20/pokecom-lecture-02-file-size-compact.html" title="C言語講座 第二回 ファイルサイズの縮小"><span class="title"><i class="fa fa-chevron-left"></i> C言語講座 第二回 ファイルサイズの縮小</span></a></li>
+                                                                <li class="col-md-6 text-right"><a class="previous" href="/blog/2008/07/20/pokecom-pcg850v.html" title="PC-G850S/PC-G850V 性能比較"><span class="title">PC-G850S/PC-G850V 性能比較</span> <i class="fa fa-chevron-right"></i></a></li>
+                                    </ul>
+            </nav>
+            </article>
+
+
+
+        </div>
+
+        <footer class="footer">
+            <dev class="overflow">
+                <div class="container text-center">
+                    <ul class="list-unstyled list-inline">
+                        <li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li>
+                        <li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li>
+                        <li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li>
+                        <li><i class="fa-li fa fa-ellipsis-h"></i> <a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li>
+                        <li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /blog/2008/07/20/pokecom-lecture-01-key-input.html"
+                                  rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li>
+                    </ul>
+                </div>
+                <div class="container text-center">
+                    <ul class="list-unstyled list-inline">
+                        <li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li>
+                        <li class="text-muted">&copy; 2004-2017 sharkpp</li>
+                    </ul>
+                </div>
+                <div class="container text-center text-muted">
+                    <ruby>
+                        <rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                            >Creative Commons Attribution 4.0 International License</a>.</rb>
+                        <rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                  >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp>
+                    </ruby>
+                </div>
+                <div class="container text-center text-muted">
+                    <ruby>
+                        <rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
+                                                                            >The MIT License</a>.</rb>
+                        <rp>(</rp><rt>さらに、コードスニペットは <a rel="nofollow" href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license"
+                                                               >MIT ライセンス</a> の下にライセンスされています。</rt><rp>)</rp>
+                    </ruby>
+                </div>
+            </div>
+        </footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>')</script>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.js"></script>
+        <script>$('body').modal || document.write('<script src="/assets/bootstrap/js/bootstrap.min.js"><\/script>')</script>
+                
+        
+        <script src="/assets/highlightjs/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        <script type="text/javascript">
+            $('a img').each(function(){
+                var rel = ($(this).attr('src').match(/images\u002f([0-9_]{4}_[0-9_]{4})/i) ||
+                           ['','lightbox'])[1];
+                $(this).parent()
+                    .attr('data-lightbox', rel)
+                    .attr('data-title', $(this).attr('alt'))
+                    ;
+            });
+        </script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+        <script>$(document).ready(function(){ window.lightbox || $.getScript("/assets/lightbox2/js/lightbox.min.js"); });</script>
+
+                <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.5/jquery.smooth-scroll.min.js"></script>
+        <script>$.smoothScroll || document.write('<script src="/assets/jquery-smooth-scroll/jquery.smooth-scroll.min.js"><\/script>')</script>
+        <script type="text/javascript">
+            $('#toc a')
+                .each(function(){
+                    var id = $(this).attr('href').slice(1);
+                    $(this)
+                        .smoothScroll({
+                            scrollTarget: $('[id="' + id + '"]'),
+                            offset: -50,
+                            beforeScroll: function(){ /*history.pushState({}, id, "#" + id);*/ }
+                        });
+                })
+                ;
+            $('#go-top')
+                .on('click', function() {
+                    $.smoothScroll({
+                        scrollElement: $('body'),
+                        scrollTarget: '',
+                        beforeScroll: function(){ /*history.pushState({}, "", location.href.replace(location.hash, ''));*/ },
+                        afterScroll: function(){ $('body').css('position', ''); }
+                    });
+                    return false;
+                });
+            $(window).scroll(function () {
+                var scroll   = $(this).scrollTop();
+                var visibled = $('#go-top').css('display') == 'block';
+                var next_state = $('#go-top').attr('data-next-state');
+                if (100 <= scroll && (!visibled || 'hidden' == next_state))
+                    $('#go-top')
+                        .stop(true, true)
+                        .attr('data-next-state', 'visible')
+                        .fadeIn('slow', function(){
+                            $(this).removeAttr('data-next-state');
+                        });
+                else if (scroll < 100 && (visibled || 'visible' == next_state))
+                    $('#go-top')
+                        .stop(true, true)
+                        .attr('data-next-state', 'hidden')
+                        .fadeOut('slow', function(){
+                            $(this).removeAttr('data-next-state');
+                        });
+            });
+            $(window).scroll();
+        </script>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                // apply table to bootstrap css
+                $('table:not([class])')
+                    .addClass('table table-bordered table-hover table-condensed table-striped')
+                    .wrap("<div style='width:100%;overflow-x:auto;'></div>");
+             });
+        </script>
+
+        <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+
+
+    </body>
+</html>

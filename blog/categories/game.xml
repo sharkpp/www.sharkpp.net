@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/categories/game.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:32+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[モグラ叩き]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/21/mogura.html"/>
+            <updated>2008-07-21T00:07:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/21/mogura.html</id>
+            <content type="html"><![CDATA[<h2 id="%E7%94%BB%E9%9D%A2">画面</h2>
+
+<p><img src="/images/2008_0721_mogura.jpg" alt="画面" /></p>
+
+<h2 id="%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E">ソフトの説明</h2>
+
+<p>最大 ５匹 が同時に出現するモグラ叩きです。</p>
+
+<p>畑を荒らす、いたずらモグラを正義のピコピコハンマーで叩きこらしめて下さい。</p>
+
+<h2 id="%E9%81%8A%E3%81%B3%E6%96%B9">遊び方</h2>
+
+<p><img src="/images/2008_0721_mog_st.gif" alt="[モグラ叩きStart]" />をクリックしてモグラ叩きスタート。</p>
+
+<p>レベルを設定するには  <img src="/images/2008_0721_mog_lvs.gif" alt="[Level Select]" />をクリックする。</p>
+
+<p><img src="/images/2008_0721_mog_lv.gif" alt="[Level - ?]" />にカーソルを合わせてクリックし、 <img src="/images/2008_0721_mog_ok.gif" alt="[OK]" />をクリックする。</p>
+
+<p>モグラの数を設定するには  <img src="/images/2008_0721_mog_set.gif" alt="[Setting]" />をクリックする。</p>
+
+<p><img src="/images/2008_0721_mog_mog.gif" alt="[モグラ ? 匹]" />にカーソルを合わせてクリックし、 <img src="/images/2008_0721_mog_ok.gif" alt="[OK]" />をクリックする。</p>
+
+<p>スコアを見るには  <img src="/images/2008_0721_mog_sc.gif" alt="Score" />をクリックする</p>
+
+<p><img src="/images/2008_0721_mog_lr.gif" alt="[←][→]" />ボタンでレベルを指定できます。</p>
+
+<p>終了は <img src="/images/2008_0721_x.gif" alt="[X]" />で。</p>
+
+<h2 id="%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83">動作環境</h2>
+
+<p>Windows 2000で動作確認済み</p>
+
+<p>Windows 95/98/Me, Windows XP でも動作するはず</p>
+
+<h2 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%EF%BC%86%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール＆アンインストール</h2>
+
+<p><strong>インストール</strong></p>
+
+<p>適当なフォルダに解凍して、実行するだけです。</p>
+
+<p><strong>アンインストール</strong></p>
+
+<p>解凍して出来たファイルとmogura.ini を削除するだけです。レジストリは一切使用しておりません。</p>
+
+<h2 id="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</h2>
+
+<p><a href="/files/mogu107g.lzh" title="mogu107g.lzh">DOWNLOAD</a></p>
+
+<h2 id="%E5%B1%A5%E6%AD%B4">履歴</h2>
+
+<dl>
+<dt>2004/02/24</dt>
+<dd>[Ver.0.07g]<br />公開</dd>
+</dl>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[AtomScan]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/21/atomscan.html"/>
+            <updated>2008-07-21T00:07:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/21/atomscan.html</id>
+            <content type="html"><![CDATA[<h2 id="%E7%94%BB%E9%9D%A2">画面</h2>
+
+<p><img src="/images/2008_0721_atomscan.jpg" alt="画面" /></p>
+
+<h2 id="%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E">ソフトの説明</h2>
+
+<p>箱の中に隠された爆弾を見つけ出すゲームです。</p>
+
+<p>このゲームのアイデアは、有澤 誠 氏 編「応用プログラミング集」のBlackBox ゲームから取りました。</p>
+
+<p>元々、ポケコン用に移植した物を再度、パソコンに多少、改良して移植したものです。</p>
+
+<h2 id="%E9%81%8A%E3%81%B3%E6%96%B9%E3%83%BB%E3%83%AB%E3%83%BC%E3%83%AB">遊び方・ルール</h2>
+
+<p><strong>タイトル画面</strong></p>
+
+<p>中心付近に見える  <img src="/images/2008_0721_as_mp.gif" alt="?＋" />ボタンを押して爆弾の数を設定してください。</p>
+
+<p>設定したら、 <img src="/images/2008_0721_as_ok.gif" alt="[OK]" />を押してください。</p>
+
+<p><strong>ゲーム画面[検査]</strong></p>
+
+<p>１～32までの数字の部分にマウスカーソルを持っていくと、赤色の枠が出てきます。</p>
+
+<p>そのままクリックするとRAY を当てた結果が表示されます。</p>
+
+<p><strong>ゲーム画面[爆弾選択]</strong></p>
+
+<p>左上にある  <img src="/images/2008_0721_as_chk.gif" alt="[CHECK]" />ボタンを押すとこのモードに入ります。</p>
+
+<p>もう一度押すと、元のゲーム画面に戻ります。</p>
+
+<p>数字の部分ではなくボックスの部分にカーソルを持って行き、爆弾を指定してください。</p>
+
+<p>残りが０になると、 <img src="/images/2008_0721_as_chk.gif" alt="[CHECK]" />が  <img src="/images/2008_0721_as_ok.gif" alt="[OK]" />に変わります。</p>
+
+<p><img src="/images/2008_0721_as_ok.gif" alt="[OK]" />を押すと、結果が出てきて、ゲームが終ります。</p>
+
+<h2 id="%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83">動作環境</h2>
+
+<p>Windows 2000で動作確認済み</p>
+
+<p>Windows 95/98/Me, Windows XP でも動作するはず</p>
+
+<h2 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%EF%BC%86%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール＆アンインストール</h2>
+
+<p><strong>インストール</strong></p>
+
+<p>適当なフォルダに解凍して、実行するだけです。</p>
+
+<p><strong>アンインストール</strong></p>
+
+<p>解凍して出来たフォルダを削除するだけです。レジストリは一切使用しておりません。</p>
+
+<h2 id="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</h2>
+
+<p><a href="/files/atom002g.lzh" title="atom002g.lzh">DOWNLOAD</a></p>
+
+<h2 id="%E5%B1%A5%E6%AD%B4">履歴</h2>
+
+<dl>
+<dt>2004/02/24</dt>
+<dd>[Ver.0.02g]<br />公開</dd>
+</dl>
+]]></content>
+        </entry>
+    </feed>

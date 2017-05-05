@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/categories/%E3%83%91%E3%83%83%E3%83%81.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:32+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[「Virtual Floppy Image Converter」改造パッチ]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/08/10/patch-vfic.html"/>
+            <updated>2008-08-10T02:29:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/08/10/patch-vfic.html</id>
+            <content type="html"><![CDATA[<p>RED 氏作の「VFIC」のフォントの大きさを変え見やすくする改造パッチです。</p>
+
+<p>ソフト入手先:<a href="http://www.vector.co.jp/soft/win95/util/se151106.html">Vector</a></p>
+
+<dl>
+<dt>2004/02/24</dt>
+<dd>For Ver.0.73 <a href="/files/fix_vfic073_r1.lzh">DOWNLOAD</a></dd>
+</dl>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[「VaporCD」日本語化パッチ]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/08/10/patch-vaporcd.html"/>
+            <updated>2008-08-10T02:27:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/08/10/patch-vaporcd.html</id>
+            <content type="html"><![CDATA[<p>Brad Johnson 氏作の「VaporCD」を日本語化します。</p>
+
+<p>ソフト入手先:<a href="http://vaporcd.sourceforge.net/" title="VaporCD CD-ROM Volume Emulation">ホームページ</a></p>
+
+<dl>
+<dt>2004/02/24</dt>
+<dd>For Ver.1.41 <a href="/files/jp_vcd141_r1.lzh">DOWNLOAD</a></dd>
+</dl>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[「KISS for Win32」日本語化パッチ]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/08/10/patch-wkiss.html"/>
+            <updated>2008-08-10T02:27:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/08/10/patch-wkiss.html</id>
+            <content type="html"><![CDATA[<p>F.K 氏作の「KISS for Win32」を日本語化します。</p>
+
+<p>ソフト入手先:<a href="http://www.kiss-wkp.com/">WORLD KISS PROJECT</a> ライブラリ</p>
+
+<dl>
+<dt>2004/02/24</dt>
+<dd>For Ver.0.05a <a href="/files/jp_wkiss005_r1.lzh">DOWNLOAD</a></dd>
+</dl>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[「IconShop」日本語化パッチ]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/08/10/patch-iconshop.html"/>
+            <updated>2008-08-10T02:26:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/08/10/patch-iconshop.html</id>
+            <content type="html"><![CDATA[<p>Lion Tech 氏作の「IconShop」を日本語化します。</p>
+
+<p>ソフト入手先:<a href="http://users.pandora.be/liontech/" title="LionTech">ホームページ</a></p>
+
+<dl>
+<dt>2004/02/24</dt>
+<dd>For Ver.1.13 <a href="/files/jp_ishop113_r1.lzh">DOWNLOAD</a></dd>
+</dl>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[「URL Cache Copy Program」日本語化パッチ]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/08/10/patch-cpcache.html"/>
+            <updated>2008-08-10T02:25:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/08/10/patch-cpcache.html</id>
+            <content type="html"><![CDATA[<p>Thrasher 氏作の「CpCache」を日本語化します。</p>
+
+<p>ソフト入手先:<a href="http://www3.airnet.ne.jp/~vzr04461/" title="Thrasher's Personal Laboratory.">ホームページ</a></p>
+
+<dl>
+<dt>2004/02/24</dt>
+<dd>For Ver.1.83 <a href="/files/jp_cpcache183_r1.lzh">DOWNLOAD</a></dd>
+</dl>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[「ぷーさめ32 for Windows」日本語化パッチ]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/08/10/patch-pusame.html"/>
+            <updated>2008-08-10T02:23:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/08/10/patch-pusame.html</id>
+            <content type="html"><![CDATA[<p>ＥＤ(飯田　英隆) 氏作の「ぷーさめ32 for Windows」を日本語化します。</p>
+
+<p>ソフト入手先:<a href="http://homepage3.nifty.com/edshp/">ED's Home Page</a></p>
+
+<dl>
+<dt>2004/02/24</dt>
+<dd>For Ver.0.98a <a href="/files/jp_pusame098_r1.lzh">DOWNLOAD</a></dd>
+</dl>
+]]></content>
+        </entry>
+    </feed>

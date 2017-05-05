@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /blog/tags/$
+Disallow: /blog/categories/$
+
+Sitemap: http://www.sharkpp.net/sitemap.xml

@@ -1,0 +1,2166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/Qt.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:48+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[じゅげむったー(仮)の開発日記 その１]]></title>
+            <link href="http://www.sharkpp.net/blog/2017/04/16/jugemutter-development-diary-1st.html"/>
+            <updated>2017-04-16T23:07:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2017/04/16/jugemutter-development-diary-1st.html</id>
+            <content type="html"><![CDATA[<p>さて、先月に続いて今月も参加した <a href="https://qt-users.connpass.com/event/53963/">Qt 勉強会 @ Nagoya No7(17.04) - connpass</a> のまとめ。</p>
+
+<p>つぶやきは <a href="https://togetter.com/li/1101299">Qt勉強会 Tokyo #46 + Nagoya # 7 つぶやきまとめ - Togetterまとめ</a> でまとめられています。</p>
+
+<p>今月は先月から作り始めた、長文投稿専用Twitterクライアントの開発をしました。</p>
+
+<p>レポジトリは ... <a href="https://github.com/sharkpp/Jugemutter">sharkpp/Jugemutter: 長文投稿専用クライアント「じゅげむったー」</a> です。</p>
+
+<h2 id="%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">はじめに</h2>
+
+<p>会場に到着する前のこと。</p>
+
+<p>マクドナルドで昼食を食べ、いざ会場へ行かん、としたところで、外を見ると土砂降り，とまでは行かないけれど雨がザーザー<ruby><rb>OMG</rb><rp>(</rp><rt>おーまいがー</rt><rp>)</rp></ruby>。</p>
+
+<p>慌ててコンビニで傘を買って行きましたとさ。
+いや、まさか雨が降るとは思わず、折り畳み傘をカバンに入れてなかったのです。</p>
+
+<p>会場に着くと、主催の <a href="https://twitter.com/nekomatu">@nekomatu</a> さん以外おらず。
+もともと <a href="https://twitter.com/IoriAYANE">@IoriAYANE</a> さんも調子を崩して参加できず、だったので特に人数が少なかった。</p>
+
+<p>しばらくして、最後の一人も到着で、もくもく開始。</p>
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">本日のおやつ <a href="https://twitter.com/hashtag/qtjp?src=hash">#qtjp</a> <a href="https://t.co/HhGVbaUAWk">pic.twitter.com/HhGVbaUAWk</a></p>&mdash; 夜は短し歩けよさめたすたす (@sharkpp) <a href="https://twitter.com/sharkpp/status/853103000910413824">2017年4月15日</a></blockquote>
+
+<h2 id="%E3%82%84%E3%81%A3%E3%81%9F%E3%81%93%E3%81%A8">やったこと</h2>
+
+<p>ドキュメントを見つつ、画面周りを作成。</p>
+
+<p>QtCreator みたいに左側にツールバーを設置してみようと思うが、どうやらデザイナ上ではウィジェットとしてツールバーは設置できないようだ。
+「<a href="http://stackoverflow.com/questions/26691010/how-to-change-toolbar-layout-in-qt-creator">How to change toolbar layout in Qt Creator? - Stack Overflow</a>」 を見ると、 <code>.ui</code> を直接触れって書いてあって、確かにできるんだけど... いいのかな？</p>
+
+<p><code>QPlainTextEdit</code> の画面内の余白、
+<img src="images/2017_0415_qplaintextedit_margin.png" />
+を計算するうまい方法はないものかと、探すも見つからず。
+<a href="http://doc.qt.io/qt-5/qwidget.html#contentsMargins">QWidget::contentsMargins()</a>はどうも違うらしい。</p>
+
+<p><code>QLabel</code> の文字色は ... そうだ、そうだ。
+<code>foregroundRole()</code> を使うんだ、とか。</p>
+
+<p>調べながら、コードを書いているとなかなか進まないなぁ。</p>
+
+<h2 id="%E6%88%90%E6%9E%9C">成果</h2>
+
+<p>とりあえず、なんとなくの画面はできてきた感じ。</p>
+
+<p><img src="/images/2017_0415_jugemutter.png" /></p>
+
+<p>もうちょっとで文章を分割してつぶやけるところまて行ったけど、残念ながら時間切れ。</p>
+
+<ul>
+<li>分割して投稿</li>
+<li>文章をWYSIWYGで編集＆プレビューしたい</li>
+<li>投稿のレジューム機能</li>
+<li>マルチアカウント管理</li>
+</ul>
+
+<p>とか、まだまだ先は長そうだ。</p>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<h2 id="%E7%9F%A5%E3%81%A3%E3%81%9F%E3%81%93%E3%81%A8">知ったこと</h2>
+
+<ul>
+<li>Qt
+
+<ul>
+<li><a href="http://doc.qt.io/qt-5/properties.html"><code>Q_PROPERTY</code></a> は   <code>setProperty()</code> / <code>property()</code> でアクセスできるようにするマクロ。
+何回か、同じ勘違いをやっているけど、 setter/getter を自動で作る機能ではない。</li>
+<li>パスに日本語が含まれていると qmake が失敗するらしい、このご時世に。</li>
+</ul></li>
+<li>QtCreator
+
+<ul>
+<li>のソースエディタで、変数の後に <code>.</code> を入力すると <code>-&gt;</code> に変換される。便利！</li>
+<li>デザイナ上でツールバーを削除してしまった場合は、オブジェクトインスペクタ？上の <code>QMainWIndow</code> を右クリックして「ツールバーを追加」で追加できる。</li>
+<li><code>QDesignerCustomWidgetCollectionInterface</code> とか長ったらしい名前は <code>QDCW</code> と入力すれば補完される！
+参考：<a href="http://qiita.com/task_jp/items/098319a33bd946955c0a#%E3%82%AD%E3%83%A3%E3%83%A1%E3%83%AB%E3%82%B1%E3%83%BC%E3%82%B9%E5%AF%BE%E5%BF%9C%E3%81%AE%E8%A3%9C%E5%AE%8C%E3%82%92%E6%9C%80%E5%A4%A7%E9%99%90%E3%81%AB%E6%B4%BB%E7%94%A8%E3%81%97%E3%82%88%E3%81%86">Qt Creator を便利に使いこなそう - Qiita # キャメルケース対応の補完を最大限に活用しよう</a></li>
+<li><code>QString m_xxx;</code> などとメンバ変数を定義して、「リファクタリング」を実行すれば  <code>setXxx()</code> と <code>xxx()</code> つまり setter/getter の宣言と実装の枠組みが自動で追加される。
+参考：* <a href="http://stackoverflow.com/questions/19729288/auto-generate-setters-getters-with-qtcreator">c++ - Auto-generate setters/getters with QTCreator? - Stack Overflow</a></li>
+</ul></li>
+</ul>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/26691010/how-to-change-toolbar-layout-in-qt-creator">How to change toolbar layout in Qt Creator? - Stack Overflow</a></li>
+<li><a href="http://stackoverflow.com/questions/18909507/qtextedit-sets-fix-line-height-paragraph-spacing">qt - QTextEdit sets fix line Height, paragraph spacing - Stack Overflow</a></li>
+<li><a href="http://stackoverflow.com/questions/10317845/qplaintextedit-line-spacing">c++ - qplaintextedit line spacing - Stack Overflow</a></li>
+<li><a href="http://qiita.com/task_jp/items/098319a33bd946955c0a#%E3%82%AD%E3%83%A3%E3%83%A1%E3%83%AB%E3%82%B1%E3%83%BC%E3%82%B9%E5%AF%BE%E5%BF%9C%E3%81%AE%E8%A3%9C%E5%AE%8C%E3%82%92%E6%9C%80%E5%A4%A7%E9%99%90%E3%81%AB%E6%B4%BB%E7%94%A8%E3%81%97%E3%82%88%E3%81%86">Qt Creator を便利に使いこなそう - Qiita</a></li>
+<li><a href="http://stackoverflow.com/questions/2749798/qlabel-set-color-of-text-and-background">qt - QLabel: set color of text and background - Stack Overflow</a></li>
+<li><a href="http://doc.qt.io/qt-5/properties.html">The Property System | Qt Core 5.8</a></li>
+<li><a href="http://stackoverflow.com/questions/19729288/auto-generate-setters-getters-with-qtcreator">c++ - Auto-generate setters/getters with QTCreator? - Stack Overflow</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[技術書典2に行ってきた]]></title>
+            <link href="http://www.sharkpp.net/blog/2017/04/10/techbookfest2.html"/>
+            <updated>2017-04-10T23:50:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2017/04/10/techbookfest2.html</id>
+            <content type="html"><![CDATA[<p>去年から始まった技術書オンリーな同人イベント、「<a href="https://techbookfest.org/event/tbf02">技術書典２</a>」が、昨日の 4月9日に開催されました。
+今年も小雨が降る天気の中、去年の「技術書典」に引き続き行ってきました。
+これは、そのレポート、もしくは戦果報告となります。</p>
+
+<p><img src="/images/2017_0409_tf2.jpg" alt="会場前にて" /></p>
+
+<h2 id="%E5%A7%8B%E3%82%81%E3%81%AB">始めに</h2>
+
+<p>まず、去年のレポートは「<a href="/blog/2016/06/27/techbookfest.html">技術書典に行ってきた — さめたすたすのお家</a>
+」です。</p>
+
+<p>去年は、参加サークル数が 57 で、入場者数は、1400 名でした。
+今年は、場所を通運会館から秋葉原UDXホールへ移し、サークル数200？、入場者数が3100名 (<a href="https://twitter.com/TechBooster/status/850983169037697024">※</a>)と、大幅に増えています。</p>
+
+<h2 id="%E5%BD%93%E6%97%A5">当日</h2>
+
+<p>時間ピッタリで行ったら、すでに長蛇の列ができていたという去年の反省を踏まえ、かつ、公式より</p>
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E6%8A%80%E8%A1%93%E6%9B%B8%E5%85%B8?src=hash">#技術書典</a> 当日の一般入場についてお伝えします！ 11時より一般入場開始ですが、前回の反省を踏まえ秋葉原UDXでは10時より列形成開始の予定です。しかしながら、朝が一番人員繰りが厳しい時間帯なのでお手柔らかにお願いします。10時から列整理に割いている人員はわずかです…！</p>&mdash; TechBooster@超技術書典 (@TechBooster) <a href="https://twitter.com/TechBooster/status/849875400465371136">2017年4月6日</a></blockquote>
+
+<p>というアナウンスがあったので、10時に会場へ到着するよう行動しました。
+まあ、現実は非情ですでにそこそこ並んでいたわけですが。</p>
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E6%8A%80%E8%A1%93%E6%9B%B8%E5%85%B82?src=hash">#技術書典2</a> 来たけど10時の時点でエラいことに。列に並んでいると、Androidがとか、gitが、slackが、ハッカソンが、ハンダが、抵抗がとか、技術系の会話がなされてるのは興味深い <a href="https://t.co/Fd3fe2ePzx">pic.twitter.com/Fd3fe2ePzx</a></p>&mdash; ともかく、さめたすたすには気をつけて。 (@sharkpp) <a href="https://twitter.com/sharkpp/status/850878524860669957">2017年4月9日</a></blockquote>
+
+<p>で、列の待機中は、</p>
+
+<p><a href="/images/2017_0409_tf2_map.png"><img src="/_thumbs/76f83f6553b2ac95822f722833c9c297-256x256.png" alt="探索マップ"></a></p>
+
+<p>こんなマップを作っていたり、つぶやいたりして時間を潰していました。
+途中、少し肌寒くトイレが近くて危なかったけど、何とかなった。</p>
+
+<p>スタッフさんの「8ビットに並んで」とか、並んでいる人の、git がーとか、Rails がーとか、言う話を BGM で聞きつつ、あぁ、技術系のイベントなんだなぁと、しみじみ。</p>
+
+<p>途中、スタッフさんが、赤い手提げバッグを持って回っているなぁと思ったら、どうやら「技術季報？？？」ってタイトルの要するにはパンフレットを配ってたので、もちろん購入。</p>
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E6%8A%80%E8%A1%93%E6%9B%B8%E5%85%B82?src=hash">#技術書典2</a> まだ開場前だけどスタッフさんが購入しませんかってまわってきたのでもちろん挙手。技術季報（￥1000）の創刊号をゲットした！超会議の情報も載っているようだ <a href="https://t.co/HjPSDf6GAN">pic.twitter.com/HjPSDf6GAN</a></p>&mdash; ともかく、さめたすたすには気をつけて。 (@sharkpp) <a href="https://twitter.com/sharkpp/status/850885307771650048">2017年4月9日</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>まあ、これは後からでも会場内で買えるのは分かっていたけど、なんとなく先に購入。
+手提げバッグだけの場合は、無料で貰えたようです。</p>
+
+<p>そうこうするうちに、半歩前へ詰め、列が更に4列加わり、あ、これはエラいことになるなと。
+どうやら最終的にビルを回り込んで反対側まで列が伸びていた様子。</p>
+
+<p>そして、開場時間を超え最終確認に数分を掛けて、ついに開場。
+８人✕２“行”ずつの入場で、自分は５番目ぐらいの“行”だったから、前に多分 70 人前後はいた計算。</p>
+
+<p>会場内に入り、早速お目当てのサークルさんを駆け巡る。</p>
+
+<p>戦利品は後ほどで。</p>
+
+<p>知り合いのサークルさんに挨拶しつつ、新刊を買いつつ、本を、時には本以外を購入していると、お金に羽が生えたように財布から飛んで行きました。</p>
+
+<p>ともかく、一時間ぐらい会場内にいたけど、入場制限をしていたため、多少は窮屈だったけどそこまでギュウギュウということはなかったので良かったかなぁ。
+まあ、企業ブース前はもう少し広く取ってほしかったけど。
+あとは、新刊落としました、とか、未だに来て射ないサークルがあったり、とか、まあそんな感じ。</p>
+
+<p>グルッと一周りして、購入忘れがないことを確認。
+知り合いのサークルさんに再度挨拶をして会場を出ました。</p>
+
+<p>最後は、去年と同じように、秋葉原のヤマト運輸営業所で荷物を発送、身軽になって帰りましたとさ。</p>
+
+<h2 id="%E6%88%A6%E5%88%A9%E5%93%81">戦利品</h2>
+
+<p>今回の戦利品</p>
+
+<p><img src="/images/2017_0409_tf2_booty.jpg" alt="戦利品" /></p>
+
+<table>
+<thead>
+<tr>
+  <th>ブース</th>
+  <th>サークル名</th>
+  <th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td></td>
+  <td>達人出版会</td>
+  <td>「技術季報 2017 SPRING」※技術書典カタログ</td>
+</tr>
+<tr>
+  <td>あ-10</td>
+  <td>docker-machine（ドッカーマシーン）</td>
+  <td>「技術者のためのやさしい数学」</td>
+</tr>
+<tr>
+  <td>い-05</td>
+  <td>空と月</td>
+  <td>「兎と亀」</td>
+</tr>
+<tr>
+  <td>い-10</td>
+  <td>TOKYO FLIP-FLOP（トーキョーフリップフロップ）</td>
+  <td>「フロッピーせんべい」「アクリル製フロッピー」２種</td>
+</tr>
+<tr>
+  <td>う-11</td>
+  <td>ひみつラボ</td>
+  <td>「RustでGBAのプログラムを作ろう！」</td>
+</tr>
+<tr>
+  <td>え-05</td>
+  <td>NP-complete（エヌピーコンプリート）</td>
+  <td>「WEBASSEMBLY USUI BOOK</td>
+</tr>
+<tr>
+  <td>え-28</td>
+  <td>理ろぐ</td>
+  <td>「Qt Quickを使いこなすクロスプラットフォームUIプログラミング2」</td>
+</tr>
+<tr>
+  <td>お-05</td>
+  <td>イプシロン</td>
+  <td>「立体写真のつくりかた解説」</td>
+</tr>
+<tr>
+  <td>お-12</td>
+  <td>めがねをかけるんだ（メガネヲカケルンダ）</td>
+  <td>「TensorFlowはじめました」</td>
+</tr>
+<tr>
+  <td>き-10</td>
+  <td>ラムダノート株式会社</td>
+  <td>「Ruby でつくる Ruby」</td>
+</tr>
+<tr>
+  <td>き-15</td>
+  <td>株式会社ブックウォーカー</td>
+  <td>「かんたん電子書籍」※無料配布</td>
+</tr>
+</tbody>
+</table>
+
+<p>※敬称略</p>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<p>今回の教訓やメモなど</p>
+
+<ul>
+<li>公式のアナウンスをよく見ておこう。</li>
+<li>トイレは事前に済ませること。</li>
+<li>チラシがぐちゃぐちゃになるから A4 クリアファイルを持って行こう</li>
+<li>来年もあれば行こう（超会議はパスしました）</li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Qt Network Authorization を使った Twitter API の利用]]></title>
+            <link href="http://www.sharkpp.net/blog/2017/03/25/twitter-api-using-qt-network-authorization.html"/>
+            <updated>2017-03-25T22:59:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2017/03/25/twitter-api-using-qt-network-authorization.html</id>
+            <content type="html"><![CDATA[<p>さて、先月に続いて今月も参加した <a href="https://qt-users.connpass.com/event/52009/">Qt 勉強会 @ Nagoya No6(17.03)</a> のまとめ。</p>
+
+<p>今回はいつもに増して短め。</p>
+
+<p><a href="https://github.com/sharkpp/Jugemutter">sharkpp/Jugemutter: 長文投稿専用クライアント「じゅげむったー」</a> で成果物を公開しています。</p>
+
+<h2 id="%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">はじめに</h2>
+
+<p>まずは、クラスの実装をしていきます。</p>
+
+<p><a href="https://doc-snapshots.qt.io/qt5-5.8/examples-qtnetworkauth.html">Qt Network Authorization Examples | Qt Network Authorization 5.8</a> に Twitter認証のサンプルがあるので、それを参考にしつつ <a href="https://github.com/sharkpp/NetworkStorageAccessSample">NetworkStorageAccessSample</a> で実装した認証済みトークンの保存処理を実装していきました。</p>
+
+<p>あ、<a href="http://www.sharkpp.net/blog/2017/01/28/first-impression-qt-network-authorization.html">はじめての Qt Network Authorization</a> も参考にしています。</p>
+
+<p>そろそろ、だれか Qt Network Authorization を触った記事を書いてくれないだろうか？</p>
+
+<h2 id="%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88">ポイント</h2>
+
+<p>実装するクラスは <code>QOAuth1</code> クラスから派生します。</p>
+
+<p>これは、認証した後のトークンの復帰処理で <code>setStatus(QAbstractOAuth::Status::Granted)</code> の実行が必要となります。
+ただし、該当のメソッドが <code>protected</code> として実装されているので、 <code>QOAuth1</code> クラスから派生する必要があるのです。</p>
+
+<p>APIの各エンドポイントを設定</p>
+
+<p>まあ、この辺はサンプルと同じです。</p>
+
+<pre><code class="cpp">setTemporaryCredentialsUrl(QUrl("https://api.twitter.com/oauth/request_token"));
+setAuthorizationUrl(QUrl("https://api.twitter.com/oauth/authenticate"));
+setTokenCredentialsUrl(QUrl("https://api.twitter.com/oauth/access_token"));
+</code></pre>
+
+<p>OAuth の認証を、ブラウザを利用するために、</p>
+
+<pre><code class="cpp">setReplyHandler(new QOAuthHttpServerReplyHandler(this));
+</code></pre>
+
+<p>としますが、これを実行するとポートを開きに行くので、必要な時のみポートを開くか PIN 認証にする方が良いかもしれません。</p>
+
+<p>この時、</p>
+
+<pre><code class="cpp">connect(this, &amp;QAbstractOAuth::authorizeWithBrowser,
+        this, &amp;Twitter::handleAuthorizeWithBrowser);
+</code></pre>
+
+<p>としてシグナルをスロットと関連づけて、</p>
+
+<pre><code class="cpp">void Twitter::handleAuthorizeWithBrowser(QUrl url)
+{
+    QDesktopServices::openUrl(url);
+}
+</code></pre>
+
+<p>のような感じで実装することで、ブラウザで認証することができます。</p>
+
+<p><code>grant()</code> を呼び出すことで認証開始するので、適当なメソッドでラップします。</p>
+
+<p>認証後は、</p>
+
+<pre><code>connect(this, &amp;QOAuth1::granted, this, &amp;Twitter::authenticated);
+</code></pre>
+
+<p>とすることで、 <code>authenticated()</code> を認証時に呼ばされるシグナルとして登録できます。</p>
+
+<p>つぶやくには</p>
+
+<pre><code>    QUrl url("https://api.twitter.com/1.1/statuses/update.json");
+    QUrlQuery query(url);
+    query.addQueryItem("status", "hogehoge");
+    url.setQuery(query);
+    QNetworkReply *reply = post(url);
+    connect(reply, &amp;QNetworkReply::finished, this, &amp;Twitter::tweetFinished);
+</code></pre>
+
+<p>みたいな感じです。</p>
+
+<p>まあ、後から振り返ると割と簡単な部類になると思うけど、いろいろハマってしまいました。</p>
+
+<h2 id="%E3%81%84%E3%82%8D%E3%81%84%E3%82%8D%E5%A4%B1%E6%95%97%E8%AB%87">いろいろ失敗談</h2>
+
+<p>なぜか今回はハマることハマること。</p>
+
+<p>ハマった所をメモとして残しておきます。</p>
+
+<ul>
+<li><code>setClientIdentifier()</code> / <code>setClientSharedSecret()</code> と <code>token()</code> / <code>tokenSecret()</code> をなぜかとり間違える
+なぜ間違えたし。</li>
+<li>設定したはずの、Consumer Key / Consumer Secret が設定されていなくて、<code>QOAuthOobReplyHandler::networkReplyFinished: Host requires authentication</code> とデバッグ主力に出る。
+<code>setModifyParametersFunction</code> で今の Stage とライブラリのソースをにらめっこで原因を見つけた。</li>
+<li>呟く内容が別の変数を参照していたために空っぽで <code>Missing required parameter: status.</code> と返答が返ってくる。
+うん、たしかに設定されてなかったね。</li>
+<li><del><code>connect()</code> でラムダ式を使うとなぜか <code>qobject_cast&lt;QNetworkReply*&gt;(sender())</code> が <code>nullptr</code>。</del>
+<del>横着せずに 別メソッドを作って設定すると大丈夫だった。何で？</del>
+後で試したら大丈夫だった。</li>
+</ul>
+
+<p>と、こんな感じ。</p>
+
+<p>結局、時間内になんとかつぶやきを書き込むまでは行けたけど、先のハマりがなければ、もう少し行けたかもしれない。</p>
+
+<h2 id="%E3%83%84%E3%82%A4%E3%83%83%E3%82%BF%E3%83%BC%E3%81%AE%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E7%99%BB%E9%8C%B2">ツイッターのアプリケーション登録</h2>
+
+<p><a href="https://apps.twitter.com/app/new">Create an application | Twitter Application Management</a> でアプリケーションを登録できる。</p>
+
+<p>ただし、電話番号を認証していないと <ruby><rb>You must add your mobile phone to your Twitter profile before creating an application.</rb><rp>(</rp><rt>アプリケーションを作成する前に携帯電話を Twitter プロファイルに追加する必要があります。</rt><rp>)</rp></ruby> って怒られる。</p>
+
+<p>一度登録したら、電話番号の登録を解除しても、登録内容の変更とかは問題なくできる模様。</p>
+
+<p>で、登録時、SMSで飛んでくるトークンを何回入力しても弾かれるので、途方にくれてたけど <a href="http://absg.hatenablog.com/entry/2015/01/26/163057">twitterの電話番号認証がうまくいかないとき - やったこと</a> を見たらリロードすれば大丈夫のようなので試して見たらできた。
+何じゃそりゃ？</p>
+
+<p>まあともかく、アプリケーションを登録したら、Consumer Key / Consumer Secret を確認しアプリケーションに設定。</p>
+
+<p>これでOK。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://www.sharkpp.net/blog/2017/01/28/first-impression-qt-network-authorization.html">はじめての Qt Network Authorization — さめたすたすのお家</a></li>
+<li><a href="https://doc-snapshots.qt.io/qt5-5.8/examples-qtnetworkauth.html">Qt Network Authorization Examples | Qt Network Authorization 5.8</a></li>
+<li><a href="https://dev.twitter.com/docs">Twitter Developer Documentation — Twitter Developers</a></li>
+<li><a href="https://github.com/sharkpp/NetworkStorageAccessSample">sharkpp/NetworkStorageAccessSample: Qt Network Authorization "Network storage access" sample</a></li>
+<li><a href="https://syncer.jp/Web/API/Twitter/REST_API/POST/statuses/update/">POST statuses/update - ツイートを投稿する</a> ※情報が古いようだ</li>
+<li><a href="http://westplain.sakuraweb.com/translate/twitter/Documentation/REST-APIs/Public-API/POST-statuses-update.cgi">POST statuses/update - Twitter 開発者ドキュメント 日本語訳</a></li>
+<li><a href="https://dev.twitter.com/rest/tools/console">API Console — Twitter Developers</a></li>
+<li><a href="http://absg.hatenablog.com/entry/2015/01/26/163057">twitterの電話番号認証がうまくいかないとき - やったこと</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Qt Network Authorization を使った Dropbox API　の利用]]></title>
+            <link href="http://www.sharkpp.net/blog/2017/02/28/dropbox-api-using-qt-network-authorization.html"/>
+            <updated>2017-02-28T01:45:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2017/02/28/dropbox-api-using-qt-network-authorization.html</id>
+            <content type="html"><![CDATA[<p>さて、今月も参加した <a href="https://qt-users.connpass.com/event/50191/">Qt 勉強会 @ Nagoya No5(17.02)</a> のまとめ。</p>
+
+<p>※ <a href="https://togetter.com/li/1092293">Qt 勉強会 @ Nagoya No5(17.02) - Togetterまとめ</a> で当日のつぶやきがまとめられています。</p>
+
+<p>今回も、前回に引き続き、<a href="https://doc.qt.io/qt-5/qtnetworkauth-index.html">Qt Network Authorization</a> を色々さわって見ることにしました。</p>
+
+<p>そして、翌日へとオーバーランをしつつ <a href="https://github.com/sharkpp/NetworkStorageAccessSample">sharkpp/NetworkStorageAccessSample: Qt Network Authorization "Network storage access" sample</a> を作りました。</p>
+
+<p>とりあえず、今時点では、Dropbox への認証と、ファイルのアップロードができます。</p>
+
+<h2 id="dropbox-%E3%81%B8%E3%81%AE%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E7%99%BB%E9%8C%B2">Dropbox へのアプリケーションの登録</h2>
+
+<p>何はともあれまずはここからです。</p>
+
+<p><a href="https://www.dropbox.com/developers">Developers - Dropbox</a> から "Create your app" を、そして <ruby><rb>Choose the type of access you need</rb><rp>(</rp><rt>必要なアクセスの種類を選択する</rt><rp>)</rp></ruby> は、 "App folder" を選び、アプリケーションを登録します。</p>
+
+<p><a href="http://qiita.com/kz_morita/items/3ae70b10351a48a806eb">スタンドアロンアプリでDropbox APIを使ってaccess_tokenを取得する - Qiita</a> が参考になります。</p>
+
+<p>API の詳細は <a href="https://www.dropbox.com/developers/documentation/http/documentation">HTTP - Developers - Dropbox</a> を。</p>
+
+<h2 id="%E8%BA%93%E3%81%84%E3%81%9F%E3%81%A8%E3%81%93%E3%82%8D">躓いたところ</h2>
+
+<p>Qt Network Authorization で Dropbox API へとアクセスしようと頑張りましたが、 Qt Network Authorization がテクノロジープレビューなためなのか、 Dropbox API が特殊なのか、はたまた両方なのか、現状ハマりどころが多い気がします。</p>
+
+<p>OAuth 1 での Tumblr API アクセスは簡単だったんだけどなぁ、と。</p>
+
+<h3 id="%E8%AA%8D%E8%A8%BC%E5%BE%8C%E3%81%AE%E5%8B%95%E4%BD%9C%E3%82%92-oob-%E6%96%B9%E5%BC%8F%E3%81%AB%E3%81%97%E3%81%9F%E3%81%84%E3%81%8C...">認証後の動作を oob 方式にしたいが...</h3>
+
+<p>色々試して、一応 oob 方式での認証ができた。</p>
+
+<p>もう少し調べたら Qt Network Authorization の redditclient サンプルで、コールバックによる認証を扱っていたのでそれを参考にすればできそうな感じではある。
+ただ、Dropbox では、コールバックアドレスを厳密に設定するように求めているようなので、あらかじめ <code>http://localhost:12345/</code> や <code>http://localhost:12346/</code> など何個かのローカルアドレスを設定しておき、その中から開けるポートを開いて認証する、ということをすれば多分動くのではないかと思う。</p>
+
+<p>認証を oob (Out-of-band 要するに pin で認証) で行うためには redirect_uri に <code>oob</code> とか空文字を設定するのではなく、省略しないとダメだった。
+API ドキュメントをよく読むと確かに書いてあったけど、見逃していたorz</p>
+
+<p><code>QOAuthOobReplyHandler::callback()</code> メソッドで <code>redirect_uri</code> の値が指定できるが、省略はできないようなので、</p>
+
+<pre><code class="cpp">    setModifyParametersFunction([&amp;](Stage stage, QVariantMap* data) {
+        if (Stage::RequestingAuthorization == stage || // 認証要求開始
+            Stage::RequestingAccessToken   == stage)   // アクセストークン要求開始
+        {
+            data-&gt;remove(Key::redirectUri);
+        }
+    });
+</code></pre>
+
+<p>と、このように <code>QAbstractOAuth::setModifyParametersFunction()</code> メソッドでパラメータを削除することで対応。</p>
+
+<h2 id="pin-%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%81%AF%E3%81%A9%E3%81%86%E3%81%99%E3%82%8C%E3%81%B0%EF%BC%9F">Pin の設定はどうすれば？</h2>
+
+<p>ソースを読んでも、特に Pin を設定するメソッドとかなさそうだったので、自分でシグナルを発行してあげることにした。</p>
+
+<pre><code class="cpp">    void setPinCode(const QString&amp; code)
+    {
+        QVariantMap data;
+        data.insert(Key::error, "");
+        data.insert(Key::code, code); // code = access token
+        data.insert(Key::state, currentState);
+        Q_EMIT callbackReceived(data);
+    }
+</code></pre>
+
+<p>こんな感じで <code>callbackReceived</code> シグナルに適当なパラメータをセットするとうまくいった。</p>
+
+<h2 id="%E3%81%AA%E3%81%9C-%22content-type%3A-text%2Fjavascript%22-%E3%81%AA%E3%81%AE%EF%BC%9F">なぜ "Content-Type: text/javascript" なの？</h2>
+
+<p>アクセストークンを取得するためのエンドポイント <code>https://api.dropboxapi.com/oauth2/token</code> の結果がなんと <code>Content-Type: text/javascript</code> で返ってきていた。</p>
+
+<p>そう、 <code>Content-Type: application/json</code> ではなく。</p>
+
+<p>API ドキュメントを確認すると、他の API では、 <code>Content-Type: application/json</code> を返すのにもかかわらず、である。</p>
+
+<p>まあ、ともかく Qt Network Authorization のソースを見ると、<code>Content-Type: text/javascript</code> との比較は埋め込みでどうにもならないので、</p>
+
+<p><code>QNetworkReply</code> を派生して</p>
+
+<pre><code>    void fixContentType()
+    {
+        setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+    }
+</code></pre>
+
+<p>のようなメソッドを追加し、無理やりキャストして</p>
+
+<pre><code>    void networkReplyFinished(QNetworkReply *reply)
+    {
+        DropboxOAuthOobReply *reply_ = (DropboxOAuthOobReply *)reply;
+        reply_-&gt;fixContentType(); // fix content-type, "text/javascript" to "application/json"
+        QOAuthOobReplyHandler::networkReplyFinished(reply);
+    }
+</code></pre>
+
+<p>このように <code>networkReplyFinished()</code> のタイミングで実行することで対応した。</p>
+
+<p>ただ、コンパイラの実装によってはNGかもしれないので、 Qt Network Authorization 側で対応しないとダメだなーと。</p>
+
+<h2 id="%E3%81%AA%E3%81%9C%E3%80%81%E3%82%AF%E3%82%A8%E3%83%AA%E3%81%97%E3%81%8B%E8%A8%AD%E5%AE%9A%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E3%81%AE%E3%81%A7%E3%81%99%E3%81%8B%EF%BC%9F">なぜ、クエリしか設定できないのですか？</h2>
+
+<p>認証ができて、さあ API を呼び出してみよう、と思ったところで、 Dropbox API は REST API を捨てたようで、全ての呼び出しが POST メソッド、必要なパラメータは <code>Dropbox-API-Arg</code> ヘッダ、と特殊なことをしていたために、<code>QAbstractOAuth::post()</code> では処理が足りなかった。</p>
+
+<p>そういう訳なので、自分でヘッダとかポストデータとかを設定できるようなメソッドを実装した。</p>
+
+<h2 id="%E3%83%88%E3%83%BC%E3%82%AF%E3%83%B3%E3%81%AE%E4%BF%9D%E5%AD%98%E3%81%A8%E5%BE%A9%E5%85%83">トークンの保存と復元</h2>
+
+<p>これはハマりどころではないですが、前回できなかった認証後の状態の保存処理も実装しました。</p>
+
+<p>保存時は、<code>QOAuth2AuthorizationCodeFlow::token()</code> の結果を返すだけです。</p>
+
+<pre><code class="cpp">const QString Dropbox::serialize() const
+{
+    if (QAbstractOAuth::Status::Granted != status()) {
+        return "";
+    }
+    return token();
+}
+</code></pre>
+
+<p>読み込み時は、<code>setToken()</code> と <code>setStatus()</code> に <code>QAbstractOAuth::Status::Granted</code> を設定して、擬似的に認証済み、と状態を変更します。</p>
+
+<pre><code class="cpp">void Dropbox::deserialize(const QString&amp; token)
+{
+    if (token.isEmpty()) {
+        return;
+    }
+
+    setToken(token);
+    setStatus(QAbstractOAuth::Status::Granted);
+}
+</code></pre>
+
+<p>この時、忘れずに認証したよ、のシグナルを定義しているのであれば呼ぶ必要があります。</p>
+
+<h3 id="%E3%81%9D%E3%81%AE%E4%BB%96">その他</h3>
+
+<p>https なので通信内容を横から解析ができないので、結構面倒。
+どうにか、中間者攻撃風に途中で通信を解析できる方法を作らないと結構デバッグが面倒。</p>
+
+<h2 id="%E7%9B%AE%E6%A8%99">目標</h2>
+
+<p>とりあえず、Dropbox の アップロードはできたので、ダウンロードや、削除。
+<code>redirect_uri</code> を指定しての認証や、 Box などの別のオンラインストレージへのアクセスなどを追加していきたいな、と。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://www.slideshare.net/ginpei_jp/dropbox-api-39190004">Dropbox APIさわってみた</a> ※情報が古いっぽい</li>
+<li><a href="https://gist.github.com/voluntas/fe9394ce56ef4a305aa14168c09a3991">Dropbox API v2 仕様まとめ · GitHub</a></li>
+<li><a href="https://www.dropbox.com/developers/documentation/http/documentation">HTTP - Developers - Dropbox</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[はじめての Qt Network Authorization]]></title>
+            <link href="http://www.sharkpp.net/blog/2017/01/28/first-impression-qt-network-authorization.html"/>
+            <updated>2017-01-28T16:50:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2017/01/28/first-impression-qt-network-authorization.html</id>
+            <content type="html"><![CDATA[<p>先日、ちょうど「<a href="https://mag.osdn.jp/17/01/25/161000">設定を統合した「Qt 5.8」が登場 | OSDN Magazine</a>」の記事が目に入り、ふんふんと読んでいたところで、Qt Lite も気になりましたが、それよりも OAuth 2 と OAuth 2 に対応した <a href="https://doc.qt.io/qt-5/qtnetworkauth-index.html">Qt Network Authorization</a> が技術プレビューで追加、と書かれていたので軽く試して見ました。</p>
+
+<p>と言うことで、新しくなってから２回目の参加になる <a href="https://qt-users.connpass.com/event/48608/">Qt 勉強会 @ Nagoya No4(17.01)</a> は、Qt Network Authorization を触って見ることにしました。</p>
+
+<p>※ <a href="https://togetter.com/li/1092291">Qt 勉強会 @ Nagoya No4(17.01) - Togetterまとめ</a> で当日のつぶやきがまとめられています。</p>
+
+<p>結論を先に言うと、 <strong>Qt Network Authorization</strong> は簡単に OAuth 認証をアプリケーションへ組み込めるようです。</p>
+
+<p>気になる点としては、</p>
+
+<ul>
+<li>ドキュメントが少ない</li>
+<li>認証が通った後「Callback received. Feel free to close this page.」と書かれたページがブラウザで開いたままになる。
+
+<ul>
+<li>これは自動で閉じてほしい</li>
+</ul></li>
+<li>コールバックを受け取るためにポートを自動で開くのでファイヤーウォールなどでブロックしていると失敗する</li>
+</ul>
+
+<p>などですが、まあ現状は技術プレビューの段階なので正式版までになんとかなっていてほしいなと。</p>
+
+<h2 id="%E3%81%BE%E3%81%9A%E5%A7%8B%E3%82%81%E3%81%AB">まず始めに</h2>
+
+<p>まあ、大前提として、Qt Network Authorization を利用するには Qt 5.8 以降が必要となります。</p>
+
+<p>次に <a href="http://doc.qt.io/qt-5/qtnetworkauth-index.html">Qt Network Authorization 5.8</a> を参考に、</p>
+
+<p>.pro に</p>
+
+<pre><code>QT += network networkauth
+</code></pre>
+
+<p>と追加しましょう。</p>
+
+<p>あとは、 Twitter なり Tumblr なりなんなりへ、アプリケーションを登録して OAuth Consumer Key と Secret Key を取得しておきましょう。
+この時、コールバックURLを書く必要がある場合は、適当なアドレスを書いておけば問題ありません。</p>
+
+<h2 id="%E6%B5%81%E3%82%8C">流れ</h2>
+
+<p>最低限のプログラムの流れです。</p>
+
+<p>OAuth 1.x なら QOAuth1 クラスを基底クラスにして処理を実装していけば良いようです。</p>
+
+<p>今回は、 Tumblr で試していたので OAuth 1.0a 対応の QOAuth1 を触りますが、 QOAuth2 でも多分大体同じだと思います。</p>
+
+<p>ただ、 QOAuth1 のドキュメントがないので <a href="http://doc.qt.io/qt-5/qabstractoauth.html">QAbstractOAuth</a> クラスのドキュメントで我慢しましょう。</p>
+
+<h3 id="url%E3%81%AE%E7%99%BB%E9%8C%B2">URLの登録</h3>
+
+<p>とりあえず３種類のURLを登録する必要があります。</p>
+
+<table>
+<thead>
+<tr>
+  <th>メソッド</th>
+  <th>URL例</th>
+  <th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>setTemporaryCredentialsUrl</td>
+  <td>https://api.twitter.com/oauth/request_token<br/>https://www.tumblr.com/oauth/request_token</td>
+  <td>トークンの要求</td>
+</tr>
+<tr>
+  <td>setAuthorizationUrl</td>
+  <td>https://api.twitter.com/oauth/authenticate<br/>https://www.tumblr.com/oauth/authorize</td>
+  <td>認証</td>
+</tr>
+<tr>
+  <td>setTokenCredentialsUrl</td>
+  <td>https://api.twitter.com/oauth/access_token<br/>https://www.tumblr.com/oauth/access_token</td>
+  <td>アクセストークン取得</td>
+</tr>
+</tbody>
+</table>
+
+<p>いずれも <code>QAbstractOAuth</code> クラスの public メンバメソッドです。</p>
+
+<p>ここに変なのを指定すると <code>QOAuthOobReplyHandler::networkReplyFinished: Protocol "" is unknown</code> と言われたりします。</p>
+
+<h3 id="consumer-key-%E3%81%A8-secret-key-%E3%81%AE%E6%8C%87%E5%AE%9A">Consumer Key と Secret Key の指定</h3>
+
+<p>OAuth Consumer Key と Secret Key を指定します。
+これ自体の扱いはいろいろ厄介なのですが、とりあえずそれは置いておきます。</p>
+
+<p><code>QOAuth1.setClientCredentials()</code> に <code>QPair&lt;QString, QString&gt;</code> で指定します。</p>
+
+<p><code>QPair&lt;QString, QString&gt;().first</code> は Consumer Key で</p>
+
+<p><code>QPair&lt;QString, QString&gt;().second</code> は Secret Key です。</p>
+
+<h3 id="%E8%AA%8D%E8%A8%BC%E8%A6%81%E6%B1%82">認証要求</h3>
+
+<p>ここまで設定できたら <code>grant()</code> を呼ぶことで、認証手続きが開始されます。</p>
+
+<h3 id="%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%A7%E3%81%AE%E8%AA%8D%E8%A8%BC%E8%A6%81%E6%B1%82%E3%81%AE%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB">ブラウザでの認証要求のシグナル</h3>
+
+<p><code>grant()</code> を呼ぶと <code>QAbstractOAuth::authorizeWithBrowser</code> シグナルが飛んでくるので、あらかじめスロットで受け取れるようにしておきましょう。</p>
+
+<p><a href="http://doc.qt.io/qt-5/qabstractoauth.html#authorizeWithBrowser">QAbstractOAuth::authorizeWithBrowser</a> の中で引数に指定されたURLをウェブブラウザで開くことでいつも利用しているブラウザを用いた認証ができるような仕組みになっています。</p>
+
+<p>ただ、この処理を実現するために、アプリケーション自身でポートをリッスンし、そのアドレスをコールバックとして指定しているようで、ファイヤーウォールなどでブロックされる可能性があるので注意が必要です。</p>
+
+<h3 id="%E8%AA%8D%E8%A8%BC%E5%AE%8C%E4%BA%86%E3%81%AE%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB">認証完了のシグナル</h3>
+
+<p>認証が完了すると <a href="http://doc.qt.io/qt-5/qabstractoauth.html#grant">QOAuth1::granted</a> シグナルが飛ぶので、必要に応じてメッセージを出すなり、UIを有効化させるなりで利用できると思います。</p>
+
+<p>一応、認証後にはアクセストークンも取れるので、それを保存しておけば次回以降は認証が必要なくなると思いますが、すこし試したところうまくいきませんでした。</p>
+
+<h3 id="api%E3%82%92%E5%91%BC%E3%81%B6">APIを呼ぶ</h3>
+
+<p>ここまできたら、後は簡単で <code>QAbstractOAuth</code> に含まれるメンバメソッドの get() / head() / post() を呼ぶだけで、非同期でコンテンツが取得できます。</p>
+
+<p>要求アドレスへ <code>api_key</code> などというパラメータをユーザーがつける必要はないので扱いやすいと思います。</p>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<ul>
+<li><strong>Qt Network Authorization</strong> は簡単に OAuth 認証をアプリケーションへ組み込めそう</li>
+<li>サンプルがあるからまあなんとかなりそう</li>
+<li>ツイッター連携とか実装するのが簡単になるね！</li>
+</ul>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://doc.qt.io/qt-5/qtnetworkauth-index.html">Qt Network Authorization 5.8</a></li>
+<li><a href="https://doc-snapshots.qt.io/qt5-5.8/examples-qtnetworkauth.html">Qt Network Authorization Examples | Qt Network Authorization 5.8</a></li>
+<li><a href="http://code.qt.io/cgit/qt/qtnetworkauth.git/">qt/qtnetworkauth.git - Qt Network Authenticators; QtOAuth in particular</a></li>
+<li><a href="http://www.sharkpp.net/blog/2014/03/30/oauth-providers-list.html">oAuth 認証を提供しているサービスをまとめてみました — さめたすたすのお家</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[QMacCocoaViewContainer を使ってみる]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/12/10/qt-advent-calendar-2016-10th-day.html"/>
+            <updated>2016-12-10T17:25:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/12/10/qt-advent-calendar-2016-10th-day.html</id>
+            <content type="html"><![CDATA[<p>こんにちは、こんばんは。</p>
+
+<p><a href="http://qiita.com/advent-calendar/2016/qt">Qt Advent Calendar 2016</a> の 10日目を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p>
+
+<p>今回は <a href="http://doc.qt.io/qt-5/qmaccocoaviewcontainer.html">QMacCocoaViewContainer</a> Class を触ってみようかと思います。</p>
+
+<p>題して「QMacCocoaViewContainer を使ってみる」です。</p>
+
+<h2 id="%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">はじめに</h2>
+
+<p>これは、 Qt で macOS Sierra の <a href="https://developer.apple.com/reference/appkit/nstouchbar">Touch Bar</a> を使ってみようとして挫折したあれこれのから生まれた記事であります。</p>
+
+<p>公式の方では <a href="https://bugreports.qt.io/browse/QTBUG-56908">[QTBUG-56908] Support NSTouchBar on latest MacBook Pro - Qt Bug Tracker</a> で 5.9 を目標に実装が提案？されているようです。</p>
+
+<p>まあ、とりあえず Touch Bar の事は忘れましょう。</p>
+
+<h2 id="%E7%92%B0%E5%A2%83">環境</h2>
+
+<table>
+<thead>
+<tr>
+  <th>項目</th>
+  <th>値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>OS</td>
+  <td>macOS Sierra 10.12.1 (16B2659)</td>
+</tr>
+<tr>
+  <td>Qt</td>
+  <td>5.7.0</td>
+</tr>
+<tr>
+  <td>Qt Creator</td>
+  <td>4.1.0</td>
+</tr>
+</tbody>
+</table>
+
+<p>この記事では Qt Creator でコードを書いていきます。</p>
+
+<h2 id="%E7%9B%AE%E6%A8%99%E3%81%AA%E3%81%A9">目標など</h2>
+
+<p>今回は <a href="https://developer.apple.com/reference/appkit/nsbutton">NSButton</a> を Qt のウインドウ上に表示してクリックをハンドリングするまでがこの記事の内容になります。</p>
+
+<p>とりあえず作るクラスの階層です。</p>
+
+<pre><code>CocoaButton -- QPushButton を派生
+  +-- CocoaButtonWrapper -- NSButton の参照を所有
+        +-- CocoaButtonProxy -- NSButton のクリックを CocoaButtonWrapper に送る
+</code></pre>
+
+<p><code>CocoaButton</code> が Qt のウィジェットとして利用できるようにするクラスで、そのほかに <code>CocoaButtonWrapper</code> や <code>CocoaButtonProxy</code> があります。</p>
+
+<h2 id="%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E4%BD%9C%E3%82%8B">プロジェクトを作る</h2>
+
+<p>まず適当なプロジェクトを作り、<code>NSButton</code> ボタン用のクラスを追加します。</p>
+
+<p><a href="http://doc.qt.io/qt-5/ios-support.html#using-objective-c-code-in-qt-applications">Using Objective-C Code in Qt Applications</a> に書かれているように <code>OBJECTIVE_SOURCES</code> に <code>.mm</code> ファイルを追加しますが、「クラスの定義」でソースファイル名の拡張子を <code>.mm</code> に変更した場合は自動で設定してくれるようです。</p>
+
+<p><a href="/images/2016_1210_qtcreator_newclass.png"><img src="/_thumbs/9821c8921f122c38b6db04654a1b4bba-384x384.png" alt="Qt Creator"></a></p>
+
+<p>また、 <code>NSButton</code> などを利用するので .pro に AppKit をリンクするように <code>LIBS</code> に追加します。</p>
+
+<pre><code class="diff"><br />  FORMS    += mainwindow.ui
++ 
++ OBJECTIVE_SOURCES += \
++     cocoabutton.mm
++ 
++ macx: LIBS += -framework AppKit
+</code></pre>
+
+<p>こんな感じです。</p>
+
+<p>完全な内容は <a href="https://github.com/sharkpp/MacCocoaWithQtSample/blob/master/MacCocoaWithQtSample.pro">MacCocoaWithQtSample.pro</a> を見てみてください。</p>
+
+<h2 id="cocoabutton-%E3%81%AE%E5%AE%9F%E8%A3%85">CocoaButton の実装</h2>
+
+<p>追加したファイルにクラスの実装をしていきます。</p>
+
+<p><a href="https://github.com/sharkpp/MacCocoaWithQtSample/blob/master/cocoabutton.mm">cocoabutton.mm</a> に <code>CocoaButton</code> を実装してきます。</p>
+
+<p>Qt Cretor のデザイナでボタンを設置したいがために <code>moveEvent</code> や <code>resizeEvent</code> を実装します。</p>
+
+<pre><code class="cpp">void CocoaButton::moveEvent(QMoveEvent *event)
+{
+    NSRect frame;
+    frame = [m_wrpper-&gt;m_refButton frame];
+    frame.origin.x = event-&gt;pos().x();
+    frame.origin.y = event-&gt;pos().y();
+    [m_wrpper-&gt;m_refButton setFrame:frame];
+}
+
+void CocoaButton::resizeEvent(QResizeEvent *event)
+{
+    NSRect frame;
+    frame = [m_wrpper-&gt;m_refButton frame];
+    frame.size.width = event-&gt;size().width();
+    frame.size.height = event-&gt;size().height();
+    [m_wrpper-&gt;m_refButton setFrame:frame];
+}
+</code></pre>
+
+<p><code>setText</code> でボタンのキャプションを変えれるようにしておきます。</p>
+
+<pre><code class="cpp">void CocoaButton::setText(const QString &amp;text)
+{
+    [m_wrpper-&gt;m_refButton setTitle: text.toNSString()];
+}
+</code></pre>
+
+<p>あとは、</p>
+
+<pre><code class="cpp">    CocoaButtonProxy *proxy = [[CocoaButtonProxy alloc] init:this];
+    [m_refButton setTarget:proxy];
+    [m_refButton setAction:@selector(clicked:)];
+</code></pre>
+
+<p>みたいな形で Objective-C で実装された target と action を登録して</p>
+
+<pre><code class="objectivec">- (IBAction)clicked:(id)sender
+{
+    proxyDest-&gt;handleClicked();
+}
+</code></pre>
+
+<p>とすれば、クリックで C++ で実装されたメソッドが呼び出せます。</p>
+
+<p>最後に <code>CocoaButtonProxy</code> から <code>CocoaButton</code> そしてその上位へとシグナルを飛ばすようにすれば、</p>
+
+<pre><code class="cpp">connect(ui-&gt;buttonCocoa, SIGNAL(clicked()), this, SLOT(onCocoaButtonClick()));
+</code></pre>
+
+<p>このような形でシグナルを受け取ることができます。</p>
+
+<p><a href="/images/2016_1210_sample_ss.png"><img src="/_thumbs/199fc30fdfe0a59ceab9e8c4e83bc0e6-384x384.png" alt="Qt Creator"></a></p>
+
+<p>実際に動かすとこんな感じです。</p>
+
+<h2 id="%E6%88%90%E6%9E%9C%E7%89%A9">成果物</h2>
+
+<p><a href="https://github.com/sharkpp/MacCocoaWithQtSample">sharkpp/MacCocoaWithQtSample</a> に今回の記事の完全なソースを置いておきます。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://doc.qt.io/qt-5/qmaccocoaviewcontainer.html">QMacCocoaViewContainer Class | Qt Widgets 5.7</a></li>
+<li><a href="https://bugreports.qt.io/browse/QTBUG-40583">[QTBUG-40583] Unable to use QMacCocoaViewContainer - Qt Bug Tracker</a></li>
+<li><a href="https://github.com/vasi/vdfuse/blob/master/include/VBox/VBoxCocoa.h">vdfuse/VBoxCocoa.h at master - vasi/vdfuse</a></li>
+</ul>
+
+<h2 id="%E6%9C%80%E5%BE%8C%E3%81%AB">最後に</h2>
+
+<p>今回は、<a href="https://developer.apple.com/reference/appkit/nstouchbar">Touch Bar</a> を Qt から使ってみたい、から始まり結果、かなりスケールダウンした記事となりましたが、それもこれも、初めてさわる Objective-C が原因でしたが、今回いろいろ調べてなんとなくわかってきたので Touch Bar の方も何かしらためせるといいなと思っています。</p>
+
+<p>それでは、また。</p>
+
+<p>明日は <a href="https://twitter.com/nekomatu">@nekomatu</a> さんによる「<a href="http://nekomatu.blogspot.jp/2016/12/develop-qtapp-with-qtcreator-on-buildroot.html">BuildrootとQtCreatorを使ってQtアプリを開発する方法</a>」です。
+お楽しみに。</p>
+
+<hr />
+
+<p>この投稿は <strong><a href="http://qiita.com/advent-calendar/2016/qt">Qt Advent Calendar 2016</a></strong> の <strong>10日目</strong>の記事です。</p>
+
+<ul>
+<li>９日目の記事: <a href="http://qiita.com/hermit4/items/6282640a7fe4dbcdec43">スレッドの同期について学ぼう(その１）</a></li>
+<li>11日目の記事: <a href="http://nekomatu.blogspot.jp/2016/12/develop-qtapp-with-qtcreator-on-buildroot.html">BuildrootとQtCreatorを使ってQtアプリを開発する方法</a></li>
+</ul>
+
+<hr />
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[File Drop Buffer をリリースしました]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/07/31/file-drop-buffer-release.html"/>
+            <updated>2016-07-31T23:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/07/31/file-drop-buffer-release.html</id>
+            <content type="html"><![CDATA[<p>Qt を利用し、<a href="https://github.com/sharkpp/FileDropBuffer">FileDropBuffer</a> というソフトを作ってみました。</p>
+
+<p>ダウンロードは <a href="https://github.com/sharkpp/FileDropBuffer/releases">GitHub リリースページ</a> からどうぞ。</p>
+
+<p>基本機能自体は Qt に実装済みのものを利用したので、プロトタイプはできるのが早かったですが、アイコンつけたり背景を設定したりに時間がかかりました。</p>
+
+<h2 id="%E3%81%93%E3%82%8C%E3%81%AF%E3%81%AA%E3%81%AB%EF%BC%9F">これはなに？</h2>
+
+<p>通常は、ファイルのドラッグ ＆ ドロップは、一度しかできないですが、このソフトに溜め込むことで、複数の操作が一度にできるようになります。</p>
+
+<p>例えば、</p>
+
+<ul>
+<li>ファイルをドロップして形式を変換するコンバータがあるとして、別々のフォルダにあるファイルを一度に変換できる。</li>
+<li>複数のフォルダのファイルを一度に別のフォルダにコピーや移動できる。</li>
+</ul>
+
+<p>など、です。</p>
+
+<h2 id="%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89">ダウンロード</h2>
+
+<table>
+<thead>
+<tr>
+  <th>OS</th>
+  <th>リンク</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Windows</td>
+  <td><a href="https://github.com/sharkpp/FileDropBuffer/releases/download/v0.1.0/FileDropBuffer-win-0.1.0.zip">FileDropBuffer-win-0.1.0.zip</a> ※ GitHub</td>
+</tr>
+<tr>
+  <td>OS X (macOS)</td>
+  <td><a href="https://github.com/sharkpp/FileDropBuffer/releases/download/v0.1.0/FileDropBuffer-mac-0.1.0.dmg">FileDropBuffer-mac-0.1.0.dmg</a> ※ GitHub</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール</h2>
+
+<p>ファイルを解凍するだけで実行できます。</p>
+
+<p>解凍した中にできている <code>File Drop Buffer</code> というアプリケーションを実行してください。</p>
+
+<h2 id="%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">アンインストール</h2>
+
+<p>レジストリや設定ファイルなどは利用していないので、フォルダごと削除するだけです。</p>
+
+<h2 id="%E4%BD%BF%E3%81%84%E6%96%B9">使い方</h2>
+
+<p>まず、ファイルをこのソフトの <code>Drop file here</code> と書かれている部分にドロップします。</p>
+
+<p><img src="/images/2016_0731_FileDropBuffer_droping.png" alt="ファイルのドロップ" /></p>
+
+<p>何回かファイルをドロップし終えたら、アプリケーションの中央に表示されているファイルアイコンをドラッグし、目標とするアプリケーションへドロップします。</p>
+
+<p><img src="/images/2016_0731_FileDropBuffer_draging.png" alt="ファイルのドラッグ" /></p>
+
+<p>その他の機能は</p>
+
+<ul>
+<li>右下のゴミ箱ボタンは、保持しているファイルの一覧をクリア</li>
+<li>その隣のボタンは、アプリケーションの最前面解除＆設定</li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[技術書典に行ってきた]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/06/27/techbookfest.html"/>
+            <updated>2016-06-27T00:50:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/06/27/techbookfest.html</id>
+            <content type="html"><![CDATA[<p>一昨日、6月25日に技術系の同人誌や書籍に絞った、俗に○○オンリーって言われる系統の、今回は技術書オンリーなイベント「<a href="https://techbookfest.org/">技術書典</a>」へ行ってきたので、戦利品のまとめを兼ねてレポします。</p>
+
+<p>自身の属しているカテゴリとしては、同人誌の即売会はかなり久しぶりに行った感じの人なので、ちょっと他の○○オンリーイベントと会場の状態や入場整理などの比較がしづらいですが、そんな人から見たら、こうだった、という感じのレポートとなります。</p>
+
+<p><img src="/images/2016_0625_techbookfest.jpg" alt="会場前にて" /></p>
+
+<h2 id="%E4%BA%8B%E5%89%8D%E6%BA%96%E5%82%99">事前準備</h2>
+
+<p>とりあえず、ゲットしたい物や回りたいところを決めました。</p>
+
+<p>とりあえず「技術書典」の<a href="https://techbookfest.org/#circle">サークルの紹介</a>を辿って目星をつけてみましたが、面白そうなところばっかりで絞るのが大変でした。</p>
+
+<p><a href="https://twitter.com/IoriAYANE/status/746328930076889088">Qt本の既刊が少ないとの情報</a>を作者の<a href="https://twitter.com/IoriAYANE">理音伊織</a>さんが Twitter で、当日の配布物のお品書きとともに流していたので、無理を承知でお願いしたら、取り置きしておきますと嬉しい返事を貰えたので、これはすごく感謝です。
+まあ、過去に勉強会などで顔を合わせてお話したことがあるので無理を聞いて貰えたんだと思います。</p>
+
+<p>最終的には</p>
+
+<table>
+<thead>
+<tr>
+  <th>ブース</th>
+  <th>サークル名</th>
+  <th>ペンネーム</th>
+  <th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>A-27</td>
+  <td>理ろぐ</td>
+  <td>理音伊織</td>
+  <td>第一目標！</td>
+</tr>
+<tr>
+  <td>A-05</td>
+  <td>とのさまラボ×ロボットパートナー</td>
+  <td>西田寛輔</td>
+  <td>「ロボットのほん」</td>
+</tr>
+<tr>
+  <td>A-04</td>
+  <td>だめだめだん</td>
+  <td>はどら</td>
+  <td>ニキシー管時計の展示</td>
+</tr>
+<tr>
+  <td>A-06</td>
+  <td>こそこそ団</td>
+  <td>のむむ</td>
+  <td>「ROSではじめるホビーロボット」</td>
+</tr>
+<tr>
+  <td>A-08</td>
+  <td>日本Androidの会 金沢支部・VR部</td>
+  <td>kinneko</td>
+  <td>「バッキーボール組み立てキット」</td>
+</tr>
+<tr>
+  <td>A-09</td>
+  <td>日常ガジェット研究所</td>
+  <td>delmont</td>
+  <td>「蛍光表示管を使った時計の頒布(予定)」</td>
+</tr>
+<tr>
+  <td>A-16</td>
+  <td>にじけん</td>
+  <td>出水洸太郎「ゲームの修羅場」</td>
+  <td></td>
+</tr>
+<tr>
+  <td>A-26</td>
+  <td>G Storm</td>
+  <td>kyo</td>
+  <td>「OpenvSwitchの同人誌の改訂版」</td>
+</tr>
+<tr>
+  <td>A-28</td>
+  <td>めがねをかけるんだ</td>
+  <td>Keiji ARIYAMA</td>
+  <td>「TensorFlowはじめました CIFAR-10奮闘記」</td>
+</tr>
+<tr>
+  <td>A-13</td>
+  <td>O'Creilly</td>
+  <td>@3846masa</td>
+  <td>「お蔵入り」</td>
+</tr>
+</tbody>
+</table>
+
+<p>※敬称略</p>
+
+<p>辺りに目星を付けました。</p>
+
+<h2 id="%E5%85%A5%E5%A0%B4%E3%81%BE%E3%81%A7">入場まで</h2>
+
+<p>ここで、ちょっと失敗しました。</p>
+
+<p>そこそこ余裕を持って出て、ウロウロとした後に会場に着くと………　そこには長蛇の列と、無情な入場制限が待っていましたとさ。</p>
+
+<p>とほほ。</p>
+
+<p>一応は15分ほど前に着いたんですが、その時点で、すでに100名以上集まっていたようで、最後尾のカードを持ったスタッフさんが「11時に入場できるのはここまでです。この後は11時30分以降の入場となります」みたいなことを話してました。</p>
+
+<p>一応スタッフさんは列に並ばないように言っていたので、11時入場にあぶれた人たちと同じように、並ばずに列の周辺をウロウロしていました。</p>
+
+<p>しばらくしたら、流れで11時入場の最後尾の更に後ろに、11時30分入場予定の列が出来始めたので、まあ、慌てて並びましたとも。</p>
+
+<p>結局のところ、運営側も、はじめてのイベントだったのでどのぐらいの人が集まるか予想が出来なかったので、ふんわりとした対応になったのかな、と。
+まあそれでも入場整理券のロール（写真撮り忘れた）を用意していたようなので、むしろ最初からそれ使えばよかったのでは？　と思ったり思わなかったり、まあ、今更ですね。</p>
+
+<p>とりあえず、一人目から100人目までは、11時の入場開始とともに順次、会場内というかビルに吸い込まれていきました。</p>
+
+<p>次の101人目からは、しばらくは列にそのまま並んでいたけど、流石に列の長さが長いと思ったのか、入場整理券のロールをどこからか取り出して配り始めました。
+まあ、「整理券を貰ったら解散してください」って言われて、整理券を渡されたは良いけど、どう扱うかのアナウンスがしばらくなかったので、なかなか列が解散しなかったです。</p>
+
+<p>結局、101人目からは公式のツイッターアカウント <a href="https://twitter.com/TechBooster">@TechBooster</a> でのアナウンスで整理券番号の○○番までは○○に入場できます、みたいな感じ無事？に順番にビルの中へ吸い込まれるようになりましたとさ。</p>
+
+<p>それでも、最初は該当範囲に整理券の番号が含まれている人が入場時間に近くになると集まってきて入口付近が団子になっていました。</p>
+
+<p>帰り際には別の所に列ができていたので、もしかしたら団子にならないように列を作るようになっていたのかもしれませんが、確認していないのでわからないです。</p>
+
+<h2 id="%E5%85%A5%E5%A0%B4%E5%BE%8C">入場後</h2>
+
+<p>とりあえず、入場すると「技術書典」のログが印字された緑のエコバック、これは先着500人限定 <del>200人限定</del> (※万年筆が200人限定だったようです) の特典を貰いました。</p>
+
+<p>そして、いの一番に、取り置きして貰ってるサークルの場所へ行って本を確保しました。
+自分、確保してもらっているので大丈夫って他のサークル見るより、確保してもらっているなんて申し訳ない、と思う人なので。</p>
+
+<p>まあ、それはともかく、会場へ入って抱いた印象は、ちょっと通り道が狭い、ということですね。
+会場自体が狭いのはどうしようもないですが、通路が二人が通れるぐらいしかなかたので、サークルブース前で見本誌を手にとって立ち止まってしまうともう、通りにくいのなんの、まあ自分も立ち止まった人なので人のことは言えないですけど。</p>
+
+<p>そんなこんなで、２階のブースを回ったり地下のブースを回ったり、で目標としていたものをゲットしたり、内容を見て諦めたりと、充実したイベントでした、ホクホク。</p>
+
+<h2 id="%E4%BC%9A%E5%A0%B4%E3%82%92%E5%87%BA%E3%81%9F%E3%81%82%E3%81%A8%E3%81%A7">会場を出たあとで</h2>
+
+<p>先着特典の万年筆をもらい忘れたのは痛恨でしたが、それに気がつくのはしばらく後だったので、ここでは関係ないことです。</p>
+
+<p>戦利品を手で持ち帰るか発送するか、自分はヤマトで発送しました。</p>
+
+<p>コンビニで発送すればいいじゃない、という話があって、イベント前にいろいろ調べたところ、そうだ営業所があるはずなのでそこから送れば良い！
+と、調べたら土日休みが多いようで…　結局秋葉原駅側にちょうど<a href="http://www.e-map.ne.jp/p/yamato01/dtl/038842/?&amp;cond1=1&amp;cond21=1&amp;&amp;his=aw,nm">秋葉原駅前センター</a>があったのでそこで発送しました。</p>
+
+<p>営業所だと箱とか袋とか、まあ当然の事ながら代金はかかりますが用意があるので今回のような不織布バックでも送ることができるので便利です。</p>
+
+<p><img src="/images/2016_0625_yamato_package.jpg" alt="ヤマトの荷物" /></p>
+
+<p>ともかく、こんな感じで発送しました（別のものも一緒に入れて発送したので多少はかさが増えています）。
+この袋は20円ほどでした。</p>
+
+<h2 id="%E7%B5%90%E6%9E%9C">結果</h2>
+
+<p><img src="/images/2016_0625_trophybooty.jpg" alt="戦利品" /></p>
+
+<p>戦利品のリスト</p>
+
+<p><strong>※PDF</strong> = PDFダウンロード特典あり</p>
+
+<table>
+<thead>
+<tr>
+  <th>ブース</th>
+  <th>サークル名</th>
+  <th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>A-27</td>
+  <td>理ろぐ</td>
+  <td>・インストーラを作ろう！ <strong>※PDF</strong><br>・インストーラを作ろう！！<br>・Qt Quickを使いこなすクロスプラットフォームUIプログラミング  <strong>※PDF</strong><br>・qmake入門 <strong>※PDF</strong></td>
+</tr>
+<tr>
+  <td>A-28</td>
+  <td>めがねをかけるんだ</td>
+  <td>・TensorFlowはじめました CIFAR-10奮闘記</td>
+</tr>
+<tr>
+  <td>A-13</td>
+  <td>O'Creilly</td>
+  <td>・実践 お蔵入り <strong>※PDF</strong><br>・詳説 お蔵入り <strong>※PDF</strong></td>
+</tr>
+<tr>
+  <td>B-10</td>
+  <td>トゲトゲ団</td>
+  <td>・ちょっとだけVulkan（電子書籍のみ） <strong>※PDF</strong></li></td>
+</tr>
+<tr>
+  <td>キ-02</td>
+  <td>シス管系女子</td>
+  <td>・シス管系女子コピー本</td>
+</tr>
+</tbody>
+</table>
+
+<p>※敬称略</p>
+
+<p>ホクホク</p>
+
+<h2 id="%E3%81%8A%E3%81%BE%E3%81%91%E3%81%AE%E3%81%8A%E3%81%BE%E3%81%91">おまけのおまけ</h2>
+
+<p>プロ生ちゃん（暮井慧）とコラボでコースターがもらえるという話だったので貰ってきました。</p>
+
+<p><img src="/images/2016_0626_pronamachan_collaboration.jpg" alt="コラボコースター" /></p>
+
+<p>こちらは、秋葉原にあるタコスの店「BLAISE」で貰いました。</p>
+
+<p><img src="/images/2016_0625_pronamachan_brise_collaboration.jpg" alt="プロ生ちゃん（暮井慧）コースター１" /></p>
+
+<p>こちらは、6月14日から在庫が無くなるまで配布<a href="https://twitter.com/BLAISE01600438/status/742548837869359114">※</a> のようです。</p>
+
+<table>
+<thead>
+<tr>
+  <th>項目</th>
+  <th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>住所</td>
+  <td><a href="https://goo.gl/maps/EjYn9djxEt72">東京都千代田区外神田3-7-9</a></td>
+</tr>
+<tr>
+  <td>営業</td>
+  <td>11:00 ～ 20:30 不定休</td>
+</tr>
+<tr>
+  <td>ウエブページ</td>
+  <td><a href="http://tacos-akiba.com/">BLAISE　～ブレイズ～</a></td>
+</tr>
+<tr>
+  <td>ツイッターアカウント</td>
+  <td><a href="https://twitter.com/BLAISE01600438">@BLAISE01600438</a> ※@BLAISE は別の人へリンクするので注意！</td>
+</tr>
+</tbody>
+</table>
+
+<p>こちらは、西荻窪にあるパイナップルラーメンの店「パパパパパイン」で貰いました。</p>
+
+<p><img src="/images/2016_0626_pronamachan_papapapapine_collaboration.jpg" alt="プロ生ちゃん（暮井慧）コースター２" /></p>
+
+<p>こちらは6月26日から配布で、こちらも在庫限り<a href="https://twitter.com/paishio/status/746136049852678144">※</a> のようです。</p>
+
+<table>
+<thead>
+<tr>
+  <th>項目</th>
+  <th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>住所</td>
+  <td><a href="https://goo.gl/maps/RgvYVqem2NS2">東京都杉並区西荻南３−１２−１ 日伸西荻プラザ 1F</a></td>
+</tr>
+<tr>
+  <td>営業</td>
+  <td>11:00 ～ 20:00 水曜定休</td>
+</tr>
+<tr>
+  <td>ウエブページ</td>
+  <td><a href="http://www.papapapapine.com/">パイナップルラーメン屋さん　パパパパパイン　ホームページ、通販（西荻窪）</a></td>
+</tr>
+<tr>
+  <td>ツイッターアカウント</td>
+  <td><a href="https://twitter.com/paishio">@paishio</a></td>
+</tr>
+</tbody>
+</table>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Qt JAPAN SUMMIT 2015 に行ってきた]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/05/27/qt-japan-summit-2015.html"/>
+            <updated>2015-05-27T20:58:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/05/27/qt-japan-summit-2015.html</id>
+            <content type="html"><![CDATA[<p>去年の <a href="/blog/2014/05/20/qt-developer-day-2014-tokyo.html">Qt DEVELOPER DAY 2014 Tokyo</a> に続き 2015-05-26 に行われた <a href="https://www.qt.io/qtjapansummit2015/">Qt JAPAN SUMMIT 2015</a> に行ってきました。</p>
+
+<p>メモった内容が予想以上の量になってしまったので、面倒な人は読み飛ばして<a href="/blog/2015/05/27/qt-japan-summit-2015.html#%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a>を読むといいのです。</p>
+
+<ul>
+<li>2015-05-28 誤記修正＆スライド追記</li>
+<li>2015-05-31 スライド追記</li>
+</ul>
+
+<h2 id="%E9%96%8B%E5%A0%B4%E3%83%BB%E5%8F%97%E4%BB%989%3A00---10%3A08">開場・受付(9:00 - 10:08)</h2>
+
+<p>9:00 から受付開始だったけど、もろもろの事情から少し遅れて会場に到着。</p>
+
+<p>とりあえず Pepper が居た！</p>
+
+<h2 id="general-%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF10%3A08---12%3A30">General トラック(10:08 - 12:30)</h2>
+
+<h3 id="%E5%BE%A1%E6%8C%A8%E6%8B%B610%3A08---10%3A23">御挨拶(10:08 - 10:23)</h3>
+
+<p>８分ほど遅れて開始。</p>
+
+<p>セミナー会場はパッと見で７割から８割ほどが埋まった状態。</p>
+
+<p><a href="https://twitter.com/task_jp">鈴木 佑</a> – 日本Qtユーザー会</p>
+
+<ul>
+<li>お昼は配布＆セミナー会場でもぐもぐします。</li>
+<li>午後は２階から５階へ移動し、 Business トラックと Technical &amp; Features トラックに分かれます。</li>
+<li>スポンサー様(<a href="https://www.qt.io/">The Qt Company</a> (<a href="http://osdn.jp/magazine/14/08/08/072200">Digiaからスピンオフ</a>)様、<a href="https://www.sra.co.jp/">株式会社 SRA</a> 様、<a href="http://www.isb.co.jp/">株式会社アイ・エス・ビー</a>様、<a href="http://www.windriver.com/japan/">ウインドリバー</a>様、 <a href="http://www.adeneo-embedded.com/">Adeneo Embedded</a> 様、<a href="http://www.ptp.co.jp/">株式会社 PTP</a> 様、<a href="http://qt-users.jp/">日本 Qt ユーザー会</a>様)と QtJS イベント事務局様に感謝を！</li>
+<li>見所
+
+<ul>
+<li>Lars Knoll による基調講演</li>
+<li>ライトニングトーク大会</li>
+<li>デモ展示、スポンサーによるショーケース</li>
+</ul></li>
+<li>目標
+
+<ul>
+<li>もっと知ってもらう</li>
+<li>より便利に使ってもらう</li>
+<li>みんなで話をしたい</li>
+<li>みなさんに楽しんでもらいたい</li>
+<li>そして
+
+<ul>
+<li>日本で全体的に盛り上がっていく</li>
+<li>日本すげーとなる</li>
+<li>「来年もこのイベントを無料で開催できる」</li>
+</ul></li>
+</ul></li>
+<li>来年はスポンサーになりませんか？</li>
+<li>午後は５階！午後は５階！</li>
+</ul>
+
+<h3 id="strategy-insight-%26-qt-roadmap%3A-build-your-world-with-qt-10%3A23---11%3A10">Strategy Insight &amp; Qt Roadmap: Build your world with Qt (10:23 - 11:10)</h3>
+
+<p>「戦略の見通し ＆ Qt のロードマップ : Qt と共にあなたの世界を構築」</p>
+
+<p>Lars Knoll - The Qt Company</p>
+
+<p>MacBook がクラッシュしちゃった！ Oh no!</p>
+
+<p>この間に、 Qt が 20 周年を記念しユーザー会よりケーキが送られた。</p>
+
+<blockquote class="twitter-tweet" lang="ja"><p lang="en" dir="ltr">What a great cake! Celebrating 20 years of Qt at the Japan Summit <a href="https://twitter.com/hashtag/qtjp?src=hash">#qtjp</a> <a href="http://t.co/dJkpLVWyTU">pic.twitter.com/dJkpLVWyTU</a></p>&mdash; Lars Knoll (@LarsKnoll) <a href="https://twitter.com/LarsKnoll/status/603049082009956353">2015, 5月 26</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<ul>
+<li>The Qt Company の代表かつチーフメンテナ</li>
+<li>20 周年を祝い先週、オフィスでもお祝いした。</li>
+<li>1997 年に Qt を初めて知り、 2000 年から Qt に実際に関わり始めた。</li>
+<li>Qt はアプリケーションまたはデバイスを開発するために必要なこと全て、アプリケーションの開発を簡単に、楽しくできるように！</li>
+<li>デスクトップ、 Windows Mobile 、 Android 、 iOS 、 どのスクリーンもサポート</li>
+<li>いろんなデバイスでネイティブな表示も出来、独自の表示も出来る。</li>
+<li>事例
+
+<ul>
+<li><a href="http://www.autodesk.co.jp/products/maya/overview">Autodesk Maya</a></li>
+<li><a href="http://www.teslamotors.com/">Tesla Motors</a> : 車載ダッシュボードなど</li>
+<li>航空管制システム、ヨーロッパの半分ほどの空港で利用されている。</li>
+<li>フライトエンターテイメント、９割程度で利用。</li>
+</ul></li>
+<li>クロスプラットフォーム
+
+<ul>
+<li>非グラフィックな API 、 スレッドやファイルI/O、 Unicode サポートなど</li>
+<li>デスクトップ
+
+<ul>
+<li>Windows 、 Windows RT</li>
+<li>Mac</li>
+<li>Linux</li>
+</ul></li>
+<li>Mobile
+
+<ul>
+<li>Android</li>
+<li>iOS</li>
+<li>Windows Phone</li>
+</ul></li>
+<li>組み込み
+
+<ul>
+<li>Linux</li>
+<li><a href="http://ja.wikipedia.org/wiki/QNX">QNX</a></li>
+<li>Windows Embedded</li>
+<li>vxWorks</li>
+</ul></li>
+</ul></li>
+<li>ツール
+
+<ul>
+<li>Qt Creator</li>
+</ul></li>
+<li>UI techology
+
+<ul>
+<li>Qt Widget ... 従来のアプリケーションを作る場合は</li>
+<li>Qt Quick ... タッチスクリーンのサポートなどをしたい場合</li>
+<li>Qt OpenGL ... OpenGL のコンテンツをインテグレート、</li>
+<li>Qt Canvas 3D</li>
+<li>Qt 3D ... 3Dモデルを読み込んで表示できる</li>
+<li>Qt Web Engine ... WebKit ベースから Google が Fork したライブラリベースに、 Qt Quick でも Qt Widget のどちらでも埋め込める</li>
+<li>Qt Multimedia ... AVサポート、カメラサポートなど</li>
+</ul></li>
+<li>接続性
+
+<ul>
+<li>ネットワーク</li>
+<li>IPC</li>
+<li>シリアルポート</li>
+<li>Web Sockets</li>
+<li>NFC</li>
+<li>XML/JSON/DBUS</li>
+<li>Bluetooth</li>
+<li>マッピングとルーティング</li>
+</ul></li>
+<li>パフォーマンス
+
+<ul>
+<li>Qtは推定80万ユーザー</li>
+<li>C++ ベースの確固たる基盤</li>
+</ul></li>
+<li>固有のプラットフォームの作成</li>
+<li>見地
+
+<ul>
+<li>組み込みデバイスへのさらなる対応、高応答性をもつことが出来る物のひとつ</li>
+<li>より早くより簡単にデバイスを作成できるように</li>
+<li>組み込みデバイスのアップデートを保つ</li>
+<li>ユーザーインターフェースをより良く、例えば Qt Quick と イラストレータとの親和性など</li>
+</ul></li>
+<li>まとめ
+
+<ul>
+<li>アプリケーション開発
+
+<ul>
+<li>デスクトップとモバイル</li>
+</ul></li>
+<li>デバイスの作成
+
+<ul>
+<li>yacto 向けのリファレンススタック</li>
+<li>独自のスタックの作成用のツール</li>
+<li>デバイスシミュレータ</li>
+</ul></li>
+<li>ライセンス
+
+<ul>
+<li>オープンソース(LGPLv2.1 / LGPLv3) と コマーシャル(The Qt Company license) のデュアルライセンス</li>
+</ul></li>
+<li>ロードマップ
+
+<ul>
+<li>2015-05-15 5.5 beta リリース</li>
+<li>2015-06-XX 5.5 final リリース予定</li>
+<li>2015-11-XX 5.6 リリース予定</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="qt%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%99%E3%82%B9%E3%83%88%E3%83%97%E3%83%A9%E3%82%AF%E3%83%86%E3%82%A3%E3%82%B9-11%3A10---11%3A43">Qtにおけるベストプラクティス (11:10 - 11:43)</h3>
+
+<p>SRA 山口 大介</p>
+
+<ul>
+<li>Qtでどうする？
+
+<ul>
+<li>ライセンス</li>
+<li>パフォーマンス</li>
+<li>マルチプラットフォーム</li>
+<li>アーキテクチャ</li>
+<li>ポーティング</li>
+<li>日本語入力</li>
+<li>テスト</li>
+<li>他言語対応</li>
+<li>Qt4 から Qt5 へのバージョンアップ</li>
+<li>アーキテクチャ</li>
+</ul></li>
+<li>よく問題になること
+
+<ul>
+<li>バグ、障害</li>
+<li>性能が出ない</li>
+<li>アーキテクチャ</li>
+</ul></li>
+<li>困らないために
+
+<ul>
+<li>「バグ、障害」に困らないために Qt の実装・テストを知っていますか？</li>
+<li>「性能が出ない」に困らないために Qt の実装・設計を知っていますか？</li>
+<li>「アーキテクチャ」に困らないために Qt の設計を知っていますか？</li>
+</ul></li>
+<li>活用するために
+
+<ul>
+<li>よくしり</li>
+<li>課題を明確にし</li>
+<li></li>
+</ul></li>
+<li>Qtに置けるテスト
+
+<ul>
+<li>静的解析や動的解析 → Civerty Fortify CPPCheck Valgrind Purify</li>
+<li>単体テスト → QTestLib Google Mock</li>
+<li>GUIテスト → Squish for Qt</li>
+<li>コードカバレッジ → Squish Coco</li>
+<li>集計 → Covertura</li>
+<li>などを → Jenkins で管理</li>
+</ul></li>
+<li><a href="http://www.froglogic.com/squish/gui-testing/">Squish for Qt</a>
+
+<ul>
+<li>ユーザー操作をスクリプト化</li>
+<li>Qt 専用</li>
+<li>あ</li>
+</ul></li>
+<li>Qt における高速化
+
+<ul>
+<li>QML Profiler</li>
+<li><a href="http://doc.qt.io/QtQuickCompiler/">Qt Quick Compiler</a> (商用ライセンスのみ)
+
+<ul>
+<li>C++ に変換し高速化</li>
+<li>10 倍以上高速化することも</li>
+</ul></li>
+</ul></li>
+<li>Qt Linguist による他言語化
+
+<ul>
+<li>それぞれの言語文字列の長さの違いの対応</li>
+<li>QML では fontSizeMode で制御可能</li>
+<li><a href="http://www.translationzone.com/jp/trados.html">TRADOS</a> が出力する XML との連携も出来る</li>
+</ul></li>
+<li>Qt 4 から Qt 5 へのバージョンアップ
+
+<ul>
+<li>比較的簡単にできる</li>
+<li>Tips がいろいろ公開されている</li>
+</ul></li>
+<li>Qt のライセンス
+
+<ul>
+<li>商用と LGPL と GPL</li>
+<li>LGPL を使用して開発すると 商用ライセンスへ移行できない。</li>
+</ul></li>
+<li>まとめ
+
+<ul>
+<li>テストなどの仕組みは最初にしっかり作ればあとが楽になる</li>
+</ul></li>
+</ul>
+
+<h3 id="%E4%BC%91%E6%86%A9-11%3A45---12%3A00">休憩 (11:45 - 12:00)</h3>
+
+<p>11:45 から 12:00 まで</p>
+
+<h3 id="qt-for-your-multiscreen-strategy-12%3A00---12%3A30">Qt for your Multiscreen Strategy (12:00 - 12:30)</h3>
+
+<p>「あなたのマルチスクリーン戦略のための Qt 」</p>
+
+<p>Qt - A Framework for the Multi-Screen World
+「QT - マルチスクリーンの世界のためのフレームワーク」</p>
+
+<p>Nils Christian Roscher-Nielsen – The Qt Company</p>
+
+<ul>
+<li>マルチスクリーン世界のための 4 つのコンセプト
+
+<ul>
+<li>C++ の力</li>
+<li>QML でネイティブなパフォーマンス</li>
+<li>ハイブリッドアプリケーション開発</li>
+<li>相互接続性</li>
+</ul></li>
+<li>アプリケーション開発とデバイス作成とSDKの作成
+
+<ul>
+<li>自動車業界
+
+<ul>
+<li>デバイスにアプリケーションをインストールしカスタマイズできるようになってきている。</li>
+<li>頻繁なアップデート、UIのカスタマイズ</li>
+</ul></li>
+</ul></li>
+<li>C++ の力
+
+<ul>
+<li>C++ の API により高速に、強力にアプリケーションを構築することが出来る。
+
+<ul>
+<li>C++11 、 C++14 なども対応。</li>
+</ul></li>
+<li>UIで一番良い方法は Qt Quick を使用すること。</li>
+<li>QWidget では対応が難しい OpenGL 用に最適化した言語を作ることにした。</li>
+<li>Qt Quick により プラットフォームにではなくそれぞれの会社ごとの独自色を出すことが出来る。</li>
+<li>相互接続製、 C++ と Javascript との間で簡単に接続することが出来る</li>
+</ul></li>
+<li>あなたのデバイスでのマルチスクリーン
+
+<ul>
+<li>QML を使うことでデスクトップ、モバイル、組み込みで最適化された画面を容易に準備できる。</li>
+</ul></li>
+<li>Qt Creator はカスタマイズが容易に出来て独自のデバイスにも対応できる</li>
+<li>LGPLv3 にアップしたので LGPLv2 で曖昧だった部分が明確になった。</li>
+</ul>
+
+<h2 id="%E4%BC%91%E6%86%A9%2F%E3%82%B9%E3%83%9D%E3%83%B3%E3%82%B5%E3%83%BC%E3%83%BB%E3%83%87%E3%83%A2%E3%82%B7%E3%83%A7%E3%83%BC%E3%82%B1%E3%83%BC%E3%82%B9-12%3A30---13%3A30">休憩/スポンサー・デモショーケース (12:30 - 13:30)</h2>
+
+<h3 id="%E3%81%8A%E6%98%BC">お昼</h3>
+
+<p>お昼もぐもぐ♪ Qt 20周年のケーキも切り分けられて配られていました。</p>
+
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:300px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://instagram.com/p/3IWku5Pb1M/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_top">Qt 20周年ケーキ配布ミッションコンプリート！ #qtjp #qtjs</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">@sharkppが投稿した写真 - <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-05-26T03:44:53+00:00">2015 5月 25 8:44午後 PDT</time></p></div></blockquote>
+
+<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+
+<h3 id="%E3%83%A9%E3%82%A4%E3%83%88%E3%83%8B%E3%83%B3%E3%82%B0%E3%83%88%E3%83%BC%E3%82%AF%E5%A4%A7%E4%BC%9A-12%3A30-%E3%81%8B%E3%82%89-13%3A30">ライトニングトーク大会 (12:30 から 13:30)</h3>
+
+<h3 id="qt-%E3%81%8A%E3%82%84%E3%81%A4%E9%83%A8%E6%B4%BB%E5%8B%95%E5%A0%B1%E5%91%8A">Qt おやつ部活動報告</h3>
+
+<p><a href="https://twitter.com/hermit4">@hermit4</a></p>
+
+<p><a href="/blog/2014/05/20/qt-developer-day-2014-tokyo.html#qt%E3%81%8A%E3%82%84%E3%81%A4%E9%83%A8%E6%B4%BB%E5%8B%95%E5%A0%B1%E5%91%8A">内容は去年と同じ</a></p>
+
+<h3 id="%E3%83%9A%E3%83%83%E3%83%91%E3%83%BC">ペッパー</h3>
+
+<p>川田 卓志 - ALDEBARAN</p>
+
+<ul>
+<li>ペッパーの開発ツール、コレグラフを作るのに Qt を使ったよ</li>
+<li>Windows / Linux / Mac で同じ UI を作ることが出来た</li>
+</ul>
+
+<h3 id="qt-quick-%E3%81%A7%E3%82%AA%E3%83%88%E3%82%B2%E3%83%BC">Qt quick でオトゲー</h3>
+
+<p><a href="https://twitter.com/latte_zero">@latte_zero</a></p>
+
+<ul>
+<li>Jubeat 風ゲーム</li>
+<li>文化祭のために 1 ヶ月ぐらいで作成</li>
+<li>Qt Quick 本をみて Qt Quick で作ろうと考えた</li>
+<li>コードは QML 3000 行、 Javascript 1000 行、 C++ 200 行</li>
+</ul>
+
+<h3 id="mujin-%E3%81%AE%E7%B4%B9%E4%BB%8B">MUJIN の紹介</h3>
+
+<ul>
+<li>工作機械用の制御プログラムを作っている</li>
+<li>Pick Worker の UI 部分を Qt で作った</li>
+</ul>
+
+<h3 id="mac-os-x-%E7%94%A8%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B3%E3%83%94%E3%83%BC%E3%82%BD%E3%83%95%E3%83%88%E3%80%8Crapidcopy%E3%80%8D%E3%81%AE%E9%96%8B%E7%99%BA">Mac OS X 用ファイルコピーソフト「RapidCopy」の開発</h3>
+
+<p>澤津 健吾 - <a href="http://www.lespace.co.jp/">レスパスビジョン株式会社</a></p>
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/CZ022q7n3TKTTz" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+
+<div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/KengoSawa2/20150526-rapidcopy-lt-onn-qt-japan-summit-2015" title="20150526 RapidCopy LT on Qt Japan Summit 2015" target="_blank">20150526 RapidCopy LT on Qt Japan Summit 2015</a> </strong> from <strong><a href="//www.slideshare.net/KengoSawa2" target="_blank">L&#x27;espaceVision</a></strong> </div>
+
+<ul>
+<li>Mac で TB 単位のファイル操作に標準の Finder が耐えられない</li>
+<li>Windows のファイルコピーソフト FastCopy をベースとして Mac に移植</li>
+<li>FastCopy は WIN32API のみでフレームワークをいっさい使用していない
+
+<ul>
+<li>ファイル操作部分は POSIX として移植</li>
+<li>GUI に Qt を使用</li>
+<li>その他、新規実装部分にも Qt を使用</li>
+</ul></li>
+</ul>
+
+<h3 id="%E3%82%B3%E3%83%A9%E3%83%BC%E3%82%B8%E3%83%A5%E4%BD%9C%E6%88%90%E3%82%BD%E3%83%95%E3%83%88">コラージュ作成ソフト</h3>
+
+<p>郵便局勤めのサンデープログラマ氏</p>
+
+<ul>
+<li><a href="http://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%A9%E3%83%BC%E3%82%B8%E3%83%A5">コラージュ</a>作成ソフトを Qt Quick で作成</li>
+<li>資料を探すのが大変だった</li>
+</ul>
+
+<h2 id="technical-%26-features-%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF-13%3A35---18%3A45">Technical &amp; Features トラック (13:35 - 18:45)</h2>
+
+<p>5 階に移動</p>
+
+<h3 id="custom-modern-qt-quick-components-13%3A35---14%3A40">Custom Modern Qt Quick Components (13:35 - 14:40)</h3>
+
+<p>Sébastien Ronsse – Adeneo Embedded</p>
+
+<ul>
+<li>壁にトグルスイッチをつける デモを交えたセッション</li>
+<li>Qt Quick とは？</li>
+<li>クロスプラットフォーム</li>
+<li>Qt Creator はすばらしい開発環境</li>
+<li>iOS や Android などのモバイルプラットフォームがをターゲットとしている</li>
+<li>Qt Quick はパワフルでしかし簡単だ</li>
+<li>楽勝におすすめできる。</li>
+<li>ハードウェアアクセラレーションで応答性を高く</li>
+</ul>
+
+<p>FAQ</p>
+
+<dl>
+<dt>Q. OpenGL を使うにはシーングラフを使うしかないのか？直接は扱えない？</dt>
+<dd>A. QQuickItem やフレームバッファを使えば可能</dd>
+
+<dt>&nbsp;</dt>
+<dt>Q. どこかにこのセッションのスライドなどをアップする予定はあるか？</dt>
+<dd>A. アップする予定はなかったがどこかに上げましょう</dd>
+
+<dt>&nbsp;</dt>
+<dt>Q. QtWidget で同じことはできるか？</dt>
+<dd>A. QtWwdget でできなくはないが複雑な処理が必要になる。 Qt Quick だと簡単かつダイナミックに書ける。</dd>
+
+<dt>&nbsp;</dt>
+<dt>Q. QtWidget と Qt Quick と同じようなことが出来るものがあるがそればわざとそうしているのか？</dt>
+<dd>A. QtWdget は長く使われてきたもの。Qt Quick は UI とロジックを分けて記述しやすくしやすくなってる</dd>
+</dl>
+
+<h3 id="using-qt-creator-value-add-features-to-further-productivity-14%3A40---15%3A45">Using Qt Creator Value-Add Features to Further Productivity (14:40 - 15:45)</h3>
+
+<p><a href="https://twitter.com/takumiasaki">朝木 卓見</a> – 株式会社 SRA</p>
+
+<ul>
+<li>QtCreator 使われてる方、挙手→意外と多い</li>
+<li>Qt 以外でも使われてる例もある
+
+<ul>
+<li>→ベアメタル</li>
+<li>プラグインで拡張できるが、Ｃ系じゃないと大変</li>
+</ul></li>
+<li>インストール方法は Online Installer 、 Offline Installer 、 QtCreator 単体、の 3 種類。
+
+<ul>
+<li>QtCreator も Qt も常に最新を使いたいなら Online Installer で</li>
+</ul></li>
+<li>ユニットテストや C や C++ のソース単体の作成、リポジトリの取り込みもできる</li>
+<li>Qt Quick Designer</li>
+<li>gdb は最近のバージョン、 python scripting extension が必要</li>
+<li>Windows は cdb が必要</li>
+<li>Windows でのデバッグが遅くなったらリビルドやおまじないを追加</li>
+<li>QML プロファイリング</li>
+<li>Qt5 で対応イベントが増えた影響で遅くなる場合がある</li>
+<li>プロファイルを有効にしているとセキュリティ的に脆弱になるので注意</li>
+<li>クイックアクセス(locator)</li>
+<li>QML の文法チェックなどもできる</li>
+</ul>
+
+<p>商用版</p>
+
+<ul>
+<li>Auto Test → テスト結果を色分けが出来る</li>
+<li>Clang static analyzer → Clangを使って解析、 Clang は同梱されていない</li>
+<li>Qt Quick Designer 拡張
+
+<ul>
+<li>Path View でのパスの編集</li>
+<li>エレメント公開用のチェック</li>
+<li>コネクションペイン</li>
+</ul></li>
+<li>QML Profiling
+
+<ul>
+<li>シーングラフ</li>
+<li>メモリ使用量など</li>
+</ul></li>
+<li>CPU usage anlayzer
+
+<ul>
+<li>次期qt device creation(boot2qt)用？</li>
+</ul></li>
+<li>Qt Quick Compiler</li>
+</ul>
+
+<h3 id="%E4%BC%91%E6%86%A9%2F%E3%82%B9%E3%83%9D%E3%83%B3%E3%82%B5%E3%83%BC%E3%83%BB%E3%83%87%E3%83%A2%E3%82%B7%E3%83%A7%E3%83%BC%E3%82%B1%E3%83%BC%E3%82%B9-15%3A45---16%3A15">休憩/スポンサー・デモショーケース (15:45 - 16:15)</h3>
+
+<h3 id="%E5%9C%B0%E5%91%B3%E3%81%AB%E4%BE%BF%E5%88%A9%E3%81%AA-qt-%E3%81%AE%E2%97%AF%E2%97%AF-16%3A15---17%3A15">地味に便利な Qt の◯◯ (16:15 - 17:15)</h3>
+
+<p><a href="https://twitter.com/task_jp">鈴木 佑</a> – 日本Qtユーザー会</p>
+
+<script async class="speakerdeck-embed" data-id="0344db39536341099c2c1248f8ff75ac" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
+<p>Q_PROPERTY に MEMBER が追加</p>
+
+<ul>
+<li>Q_PROPERTY は C++ ではあまり必要ではない</li>
+<li>Javascript とのやり取りでは必要</li>
+<li>たくさんプロパティがあるとゲッターとセッターの定義が大変、 MEMBER を使えばメンバ変数の定義だけで良い</li>
+</ul>
+
+<pre><code class="cpp">Q_PROPERTY(QColor color MEMBER m_color NOTIFY colorChanged)
+Q_PROPERTY(qreal spacing MEMBER m_spacing NOTIFY spacingChanged)
+Q_PROPERTY(QString text MEMBER m_text NOTIFY textChanged)
+</code></pre>
+
+<p>コマンドラインの引数</p>
+
+<ul>
+<li>コマンドラインの解析用クラス(<a href="http://doc.qt.io/qt-5/qcommandlineparser.html">QCommandLineParser Class</a>)が追加された</li>
+</ul>
+
+<p>qDebug()</p>
+
+<p>おさらい</p>
+
+<ul>
+<li>いろいろなレベル(エラー、警告、情報)がある</li>
+<li>C 形式 <code>qDebig("")</code> と C++ 形式 <code>qDebug() &lt;&lt; ""</code> の 2 つの形式がある</li>
+<li>スペースと改行文字が勝手に入る。</li>
+<li>C++ 形式だと Qt のクラスのダンプができる。</li>
+</ul>
+
+<p>出力の変更</p>
+
+<ul>
+<li><code>qDebig().nospace()</code> でスペースなし</li>
+<li><code>qDebig().noquote()</code> で文字列のダブルクォートが出なくなる</li>
+</ul>
+
+<p>QDebug 型</p>
+
+<pre><code class="cpp">{
+    QDebug dbg = qDebug();
+    dbg &lt;&lt; "";
+} // このタイミングで出力
+</code></pre>
+
+<ul>
+<li>QDebug 型の変数を作ると内容をバッファリングし変数が破棄されるタイミングで出力されるようにできる。</li>
+</ul>
+
+<p>16進数で出力もできる</p>
+
+<p>独自のクラスのダンプを作るときに <a href="http://doc.qt.io/qt-5/qdebugstatesaver.html">QDebugStateSaver Class</a> を使うと <code>.nospace()</code> などの状態を保持できる。</p>
+
+<p><del>qStdOut() で標準出力</del></p>
+
+<p>カテゴリ分け</p>
+
+<ul>
+<li>マクロや環境変数で制御しなくても5.2から(5.3から関数形式も)は <a href="http://doc.qt.io/qt-5/qloggingcategory.html">QLoggingCategory Class</a> と <a href="http://doc.qt.io/qt-5/qloggingcategory.html#qCDebug">QCDebug</a> でログのカテゴリを定義してオン/オフを制御できる。</li>
+<li><a href="http://doc.qt.io/qt-5/qloggingcategory.html#Q_LOGGING_CATEGORY">Q_LOGGING_CATEGORY マクロ</a>も追加</li>
+<li>カテゴリは <a href="http://doc.qt.io/qt-5/qloggingcategory.html#setFilterRules">QLoggingCategory::setFilterRules</a> (カテゴリ内のレベルも制御できる)や設定ファイルで指定する方法などがある。</li>
+<li>QqMessagePattern/Q_MESSAGE_PATTERN でログの出力フォーマットを指定できてファイル名を出力することができる</li>
+<li><a href="http://doc.qt.io/qt-5/qtglobal.html#qInstallMessageHandler">qInstallMessageHandler</a> で ログの出力先も変えられるが、スレッドセーフと再起に対して安全であることが求められる。</li>
+</ul>
+
+<p>QInfo と QIonfo が追加された</p>
+
+<h3 id="highlights-of-the-latest-qt-5-features-17%3A15---18%3A10">Highlights of the latest Qt 5 Features (17:15 - 18:10)</h3>
+
+<p>「最新の Qt5 の機能のハイライト」</p>
+
+<p>Lars Knoll – The Qt Company</p>
+
+<ul>
+<li>Windows 10/Store App リリースに合わせる</li>
+<li>Android バッケージサイズの最適化、ルックアンドフィール、</li>
+<li>iOS xcode 6 サポート、ポップアップメニューなどよりネイティブのサポートの改善</li>
+<li>3D コンテンツのサポートもよりいっそうすすめる
+OpenGL の統合、 8 bit alpha/grayscale サポート、 exif rotate</li>
+<li>Qt 5.5 で Qt Canvas 3D を完全サポート、 <a href="http://threejs.org/">three.js</a> なともサポート</li>
+<li>Qt 5.5 から Qt 3D の最初のテクノロジープレピューが利用できるようになる</li>
+<li>Qt Multimedia をプラットフォーム感での差異をなくすように改善を進めている</li>
+<li>Qt Quick
+
+<ul>
+<li>typed Array をサポート</li>
+<li>C++ と js との間を改善</li>
+<li>パフォーマンスの改善</li>
+<li>QQuickRenderControl</li>
+<li>TreeView の追加</li>
+<li>OS X ネイティブなジェスチャーを特定のコンポーネントでサポート</li>
+<li>Qt Quick Compiler を正式追加</li>
+<li>OpenGL 無しでの描画を行う 2D Render の追加</li>
+<li>新しいコントロールコンポーネントセット、 Qt 5.6 で最初のリリース予定</li>
+</ul></li>
+<li>QWeb Engine を完全サポートしパフォーマンスも改善</li>
+<li>プラットフォーム
+
+<ul>
+<li>iOS WebView のサポート追加</li>
+<li>Qt Web Channel</li>
+<li>Qt Bluetooth / Bluetooth LE 、iOSは仕様上 Bluetooth LE のみサポート</li>
+<li>Qt Location を Qt 5.5 より追加</li>
+</ul></li>
+<li>Virtual Keyboard を追加 (商用ライセンスのみ)</li>
+<li>QStorageInfo の追加</li>
+<li>Data Visualization (商用ライセンスのみ)</li>
+<li>Wayland もサポート</li>
+</ul>
+
+<p>FAQ</p>
+
+<dl>
+<dt>Q. Qt5 はどのぐらいサポートする予定か？</dt>
+<dd>A. Qt4 は 2004 から 10 年以上サポートしているのでそれぐらいはサポートするだろう、だだ Qt 6 の話は出てきてないのでしばらくは Qt 5 のサポートは続く。 The Qt Company としては新しいバージョンが出てからも最低でも2年程度はサポートする予定だ。</dd>
+
+<dt>&nbsp;</dt>
+<dt>Q. QtWdget もサポートを続けるのか？</dt>
+<dd>A. 今後もサポートするし削除することもない。 OS の更新でルックアンドフィードが変わった場合も可能な限りサポートする。</dd>
+</dl>
+
+<h3 id="qmake-%E5%85%A5%E9%96%80-18%3A10---18%3A45">qmake 入門 (18:10 - 18:45)</h3>
+
+<p><a href="https://twitter.com/hermit4">石田 伸吾</a> – 日本Qtユーザー会</p>
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/fczhDZ1ekppu1y" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+
+<div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/ShingoIshida/qmake" title="qmake入門" target="_blank">qmake入門</a> </strong> from <strong><a href="//www.slideshare.net/ShingoIshida" target="_blank">hermit4 Ishida</a></strong> </div>
+
+<ul>
+<li>qmake はクロスプラットフォーム用のツールで makefile やソリューションファイルなどを作れる</li>
+<li>変数、if など 制御構文、コメントも使える</li>
+<li>変数に対して正規表現での文字列置き換えもできる</li>
+<li>文字列途中のコメントはそのままコメントとして処理されてしまう</li>
+<li>多くの組み込み関数がある</li>
+<li>C++11 用など makefile のテンプレートが予め用意されている</li>
+<li>qmake を使いこなしていくと闇が現れる</li>
+<li><code>qmake -d</code> でデバックできる <code>-dd</code> とかでレベルを上げれる</li>
+</ul>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<ul>
+<li>サミット的には全体的にスケジュールが押していた感じ</li>
+<li>会場は電源が無かったので大変だった</li>
+<li>来月 Qt 5.5 がリリース予定</li>
+<li>今年秋には Qt 5.6 をリリース予定(これは正式リリースじゃない？)</li>
+<li>Qt はメジャーなプラットフォームのほとんどで利用できるようになっているよ</li>
+<li>組み込み向けにもカスタマイズした Qt をビルドする方法の用意があるよ</li>
+<li>QtWidget も Qt Quick と平行して開発するよ</li>
+<li>Qt 5 のサポートは Qt 6 もまだ出てないからしばらくこのままサポートされるよ</li>
+<li>Qt Canvas 3D を正式にリリースしたので three.js もそのまま使えるよ</li>
+<li>Qt Bluetooth や Qt Location など新たなコンポーネントも続々追加されているよ</li>
+<li>Qt Creator もどんどん便利な機能が増えているよ</li>
+<li>Pepper の開発ツールも工作機械用の画面でもファイルコピーツールでも Qt は使われているよ</li>
+<li>qDebug() よりもカテゴリ管理をサポートした qCDebug() を使ってみないか？</li>
+<li>qmake 便利だよ</li>
+</ul>
+
+<p>と以上でした。
+メモ書きが予想以上に大量でおかしいな？的なあれでしたがなかなか興味深い話が聞けて良かったです。</p>
+
+<p>ちなみに、今年のノベルティーはボールペンとエコバックでした。</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Qt DEVELOPER DAY 2014 Tokyo に行ってきました]]></title>
+            <link href="http://www.sharkpp.net/blog/2014/05/20/qt-developer-day-2014-tokyo.html"/>
+            <updated>2014-05-20T22:19:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2014/05/20/qt-developer-day-2014-tokyo.html</id>
+            <content type="html"><![CDATA[<p><a href="http://qt.digia.com/Jp/QtDD2014/">Qt DEVELOPER DAY 2014 Tokyo に行ってきました</a> に行ってきました。</p>
+
+<p>要所要所でのメモで不正確な内容かもしれませんが聴いたセッションの内容をまとめました。</p>
+
+<p>人々のつぶやきは <a href="http://togetter.com/li/669676">Qt Developer Day Tokyo 2014 - Togetterまとめ</a> にまとめられています。</p>
+
+<h2 id="%E9%96%8B%E5%A0%B4%E3%83%BB%E5%8F%97%E4%BB%989%3A00---10%3A00">開場・受付(9:00 - 10:00)</h2>
+
+<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">受付待ち <a href="https://twitter.com/hashtag/QtDDTokyo?src=hash">#QtDDTokyo</a> <a href="https://twitter.com/hashtag/QtJP?src=hash">#QtJP</a> <a href="http://t.co/dSSjU4rrvc">http://t.co/dSSjU4rrvc</a></p>&mdash; さめたすたす-22号 (@sharkpp) <a href="https://twitter.com/sharkpp/status/468548131756724225">2014, 5月 20</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">発見！ <a href="https://twitter.com/hashtag/QtDDTokyo?src=hash">#QtDDTokyo</a> <a href="https://twitter.com/hashtag/QtJP?src=hash">#QtJP</a> <a href="http://t.co/gpSJnoiybl">http://t.co/gpSJnoiybl</a></p>&mdash; さめたすたす-22号 (@sharkpp) <a href="https://twitter.com/sharkpp/status/468550069608656896">2014, 5月 20</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>Tシャツを貰いました。</p>
+
+<h2 id="%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%A9%E3%83%AB%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF10%3A00---12%3A30">ジェネラルトラック(10:00 - 12:30)</h2>
+
+<h3 id="%E5%BE%A1%E6%8C%A8%E6%8B%B610%3A00---10%3A15">御挨拶(10:00 - 10:15)</h3>
+
+<p>JP Niemi (Qt セールス＆マーケティング, 副社長, Digia, Qt)</p>
+
+<ul>
+<li>若干始まりは遅れたけど挨拶は時刻通り終わる</li>
+</ul>
+
+<h3 id="%E6%8A%80%E8%A1%93%E3%81%AE%E5%A3%81%E3%82%92%E6%89%93%E3%81%A1%E7%A0%B4%E3%82%8B10%3A15---10%3A30">技術の壁を打ち破る(10:15 - 10:30)</h3>
+
+<p>現代のアプリケーション開発の最前線にある Qt</p>
+
+<p>Tommi Laitinen (インターナショナルプロダクツ上級副社長, Digia, Qt)</p>
+
+<ul>
+<li>少ないコードでより多くの製品を</li>
+<li>よりよいユーザーエクスペリエンスを、一番手でありたい</li>
+<li>クロスプラットフォームの対応で一番になりたい！</li>
+<li>Qtは開発者が開発者のために開発したものなので開発者の声に耳を傾けないといけない</li>
+<li>Qt Enterprise Enbeded もあるよ！</li>
+<li>昨年末にQt 5.2をリリース、一時間までまでは最新バージョンでしたが、Qt 5.3 を本日リリースされました</li>
+<li>Qt Quick Compiler はリバースエンジニアリングを防ぐ手段も提供 ※このバージョンでは製品版のみ</li>
+<li>だんだん世の中のアプリケーションはクラウドサービスに移行すると考えるのでクラウドを提供することにした(<a href="http://qtcloudservices.com/">Qt Cloud Services</a>)</li>
+<li>WindowsRT にも対応(ベータサポートで 5.4 で正式対応予定)</li>
+<li>昨年から iOS などもサポート</li>
+<li>最新の OS やウェブシステムも対応</li>
+<li>95% のユーザーが満足しているが、満足度をもっと上げていきたい</li>
+</ul>
+
+<h3 id="qt-%E3%81%AE%E3%81%82%E3%82%86%E3%81%BF10%3A30---11%3A15">Qt のあゆみ(10:30 - 11:15)</h3>
+
+<p>我々の今とテクノロジーの向かう先</p>
+
+<p>Lars Knoll (Qt CTO および Qt Project チーフメンテナ, Digia, Qt)</p>
+
+<ul>
+<li>Qt 5.2 と本日リリースの5.3及びその未来について</li>
+<li>TrolltechがQtを開発しだしてから20年経った</li>
+<li>二人の開発者が立ち上げたプロジェクト</li>
+<li>一枚のファックスに書かれた仕様書からQtは始まった <a href="https://twitter.com/task_jp/status/468566003832471553">写真</a></li>
+<li>Qt 5.2 は Qt everywhere を実現、デスクトップだけでなくモバイルにもフォーカス、将来に向けたAPIの拡張など改良を行った</li>
+<li>Qt 5.3 は安定性、ユーザーエクスペリエンスを高める</li>
+<li>AndroidとiOSてばQtWebKitはサポートされてない</li>
+<li>WinRTのベータサポートが追加された、WebKitはサポートしてない</li>
+<li>ウィジェットベースのアプリに Qt Quick の機能を統合する <a href="http://qt-project.org/doc/qt-5/qquickwidget.html">QtQuickWidget</a> が追加された</li>
+<li>新しいQtQuickエンジンやシーンレンダラー</li>
+<li>Qt Quick Compiler は QMLをネイティブなコードにコンパイルしてパフォーマンスを改善し、また、そしてQMLのコードを保護する</li>
+<li>新しいモジュール、Positioning や bluetooth 、 NFC を追加</li>
+<li>Webkit を更新、ただし、最後のリリースになり、次は Chromium で Fork された WebKit をベースにした物(Qt WebEngine)に変わる</li>
+<li>Qt clud service は data storage と managed websocket を提供し、managed runtime を提供予定</li>
+<li>リリースのタイミングは Time based release に変更され、5.4 は 10月〜11月頃、5.5 は来年の4月〜5月を予定</li>
+<li>Qt 5.4 は WinRT の正式サポートや bluetooth の拡張などが目玉</li>
+<li>Qt 5.5 のリリースの目玉はまだ決まっていない</li>
+<li>Qt 5.3 はデスクトップの強化もしてるので Qt 4 から Qt 5 へ移行しやすくなってるので、ぜひ移行して欲しい</li>
+</ul>
+
+<h3 id="%E4%BC%91%E6%81%AF11%3A15---11%3A30">休息(11:15 - 11:30)</h3>
+
+<p>席に荷物を置いて休息する人もちらほら、、、</p>
+
+<h3 id="%E6%97%A5%E6%9C%AC%E5%B8%82%E5%A0%B4%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Bqt%E3%81%AE%E6%8B%A1%E3%81%8C%E3%82%8A11%3A30---12%3A00">日本市場におけるQtの拡がり(11:30 - 12:00)</h3>
+
+<p>山口 大介 (シニアマネージャー、株式会社SRA)</p>
+
+<ul>
+<li>SRA はライセンス販売以外にQtouch や Qinput なども作ってる</li>
+<li>SRA が関係した書籍以外に Qt Quickの本 も紹介</li>
+<li>Qt は世界で100万ダウンロード！</li>
+<li>ナビメーカーの半数でQtを採用！</li>
+</ul>
+
+<h3 id="qt%E3%81%AF%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AEinternet-of-things%E3%81%AB%E3%81%A4%E3%81%AA%E3%81%8C%E3%82%8B%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E3%81%AE%E6%88%A6%E7%95%A5%E3%82%92%E5%BE%8C%E6%8A%BC%E3%81%97%E3%81%97%E3%81%BE%E3%81%9912%3A00---12%3A30">QtはあなたのInternet of Thingsにつながるデバイスの戦略を後押しします(12:00 - 12:30)</h3>
+
+<p>Tuukka Ahoniemi (テクニカルプロダクトマーケティングマネージャー, Digia, Qt)</p>
+
+<ul>
+<li>Qt Cloud Services でセンサーをネットワーク経由で使うことが出来る</li>
+<li>デザインの変更にも Qt Quick を使っていたから即対応が出来た</li>
+</ul>
+
+<h2 id="%E3%83%A9%E3%83%B3%E3%83%81%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%BB%E5%B1%95%E7%A4%BA12%3A30---13%3A30">ランチタイム・展示(12:30 - 13:30)</h2>
+
+<blockquote class="twitter-tweet" lang="ja"><p>お弁当もぐもぐ♪ <a href="https://twitter.com/search?q=%23QtJP&src=hash">#QtJP</a> <a href="https://twitter.com/search?q=%23QtDDTokyo&src=hash">#QtDDTokyo</a> <a href="https://twitter.com/search?q=%23mogmog&src=hash">#mogmog</a> <a href="http://t.co/mB2Csd8WmF">http://t.co/mB2Csd8WmF</a></p>&mdash; 98式AVさめたすたす (@sharkpp) <a href="https://twitter.com/sharkpp/statuses/468595870535933952">2014, 5月 20</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<h2 id="lt12%3A45---13%3A30">LT(12:45 - 13:30)</h2>
+
+<p>弁当を食べながらLTを聴く</p>
+
+<h3 id="qt%E3%81%AE%E3%82%88%E3%81%84%E3%81%A8%E6%80%9D%E3%81%86%E3%81%A8%E3%81%93%E3%82%8D">Qtのよい(と思う)ところ</h3>
+
+<p><a href="https://twitter.com/IoriAYANE">@IoriAYANE</a></p>
+
+<ul>
+<li>簡単</li>
+<li>少ないコードで高機能</li>
+<li>QtWidget と Qt Quick</li>
+<li>マルチプラットフォーム</li>
+</ul>
+
+<h3 id="%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%E4%B8%8D%E6%98%8E">タイトル不明</h3>
+
+<p>柴田充也</p>
+
+<ul>
+<li>スマートフォンはスマートですか？</li>
+<li>そのスマホ Qt 動いてますか？</li>
+<li>Ubuntu touch の紹介</li>
+<li>Qt Creatorでアプリが作れる</li>
+<li>Ubuntu touch は全て Qt 製</li>
+<li>Nexus 4 /Nexus 7 2013 / Nexus 10 をサポート</li>
+<li>ARMhf / i386 エミュレータが有る</li>
+</ul>
+
+<h3 id="qt-creator%E3%81%A7remote_debug">Qt creatorでremote_debug</h3>
+
+<p><a href="http://www.slideshare.net/sazuzas/qt-creatorremotedebug">Qt creatorでremote_debug</a> by <a href="https://twitter.com/sazus">@sazus</a></p>
+
+<ul>
+<li>Qt on せんべい あるよ！</li>
+<li>Embeded Linux (non X Window System)</li>
+<li>組み込み環境のデバッグでQtCreator使ってますか？</li>
+<li>Qt Creator で デプロイやリモートでバッグが出来る！</li>
+</ul>
+
+<h3 id="qt%E3%81%8A%E3%82%84%E3%81%A4%E9%83%A8%E6%B4%BB%E5%8B%95%E5%A0%B1%E5%91%8A">Qtおやつ部活動報告</h3>
+
+<p><a href="https://twitter.com/hermit4">@hermit4</a></p>
+
+<ul>
+<li>おやつを持ち込む人は部員</li>
+<li>Qtのケーキやガム、チロルチョコも作った</li>
+<li>普段はみかんや饅頭など</li>
+<li>Androidは女子部があるのに、、、おやつ目当てのひと募集</li>
+<li>勉強会はどなたでも参加可能！</li>
+<li>アドレスは <a href="http://qt-users.jp/">http://qt-users.jp/</a></li>
+</ul>
+
+<h3 id="qt-developer-day-2014-%E3%80%9C-%E5%89%8D%E5%9B%9E%E3%81%8B%E3%82%89%E3%81%AE%EF%BC%92%E5%B9%B4%E5%8D%8A-%E3%80%9C">Qt Developer Day 2014 〜 前回からの２年半 〜</h3>
+
+<p><a href="https://twitter.com/moguriso">@moguriso</a></p>
+
+<ul>
+<li>intel MeeGo 捨てた！</li>
+<li>NOKIA Meego/Qt 捨てた！</li>
+<li>日本Qtユーザー会発足</li>
+<li>関東、名古屋、大阪で勉強会が開催</li>
+</ul>
+
+<h2 id="%E3%83%86%E3%82%AF%E3%83%8B%E3%82%AB%E3%83%AB%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF13%3A30---18%3A15">テクニカルトラック(13:30 - 18:15)</h2>
+
+<h3 id="qt-%E3%81%A8-qt-creator13%3A30---15%3A00">Qt と Qt Creator(13:30 - 15:00)</h3>
+
+<p><a href="https://twitter.com/bluepicky">杉田 研治</a> (プログラマ, 株式会社 SRA)</p>
+
+<ul>
+<li>商用版はグラフ、データビジュアライゼーション、<a href="http://doc.qt.digia.com/QtPurchasing/">Qt Purchasing API</a>(Android/iOS用ストア向け)など</li>
+<li>デバッガは QString や QList などの中身を表示できる！</li>
+<li>Qt用の拡張は、Qt CreatorのバージョンやWindowsの場合はデバッグやリリースなどにも気お付けないとうまく動かない</li>
+<li>Qt Creator だとオーバーライドされた関数はイタリックで表示されるのでプロトタイプが間違っている場合にはすぐ分かる！</li>
+<li>OS X での emacs のキーバインドは 3.2 で取り込まれる予定</li>
+<li>Qt Creator 3.1 の新機能としては Clang コードモデルなど</li>
+</ul>
+
+<h3 id="qtquick-%E3%81%AE%E7%B4%B9%E4%BB%8B15%3A00---16%3A00">QtQuick の紹介(15:00 - 16:00)</h3>
+
+<p><a href="https://twitter.com/takumiasaki">朝木卓見</a> (シニアコンサルタント, 株式会社 SRA)</p>
+
+<ul>
+<li>Qt Quick が出来た背景</li>
+<li>もっと動きのある、タッチやジェチャー、アニメーションやエフェクトがあるUIを簡単に作りたい</li>
+<li>C++の機能が増えても楽にはならないしサンプルどまりだった</li>
+<li>ユーザー入力系にはキーボードやマウス入力などがある</li>
+<li>レイアウトはカラムやグリッドなど</li>
+<li>ステートは状態の定義やトランジションなど</li>
+<li>アニメーションには NumberAnimation など複数種類がある</li>
+<li>Easing (補完関数？) には線形やバウンスなどがある</li>
+<li>モデルビューはリストモデル、グリッドビュー、パスビュー(任意の曲線上に並べる)など</li>
+<li>パーティクルも表示できるがいろいろな種類のパーティクルのデモはブースで(もしくは<a href="https://play.google.com/store/apps/details?id=com.digia.Qt5Intro&amp;hl=ja">サンプルアプリ</a>)</li>
+<li>シェーダーは OpenGL が使える、使用頻度の高そうなものは予め定義してあるので QtGraphicalEffect を import をすれば使える</li>
+<li>ファイル単位で独自の QML を部品として再利用できる</li>
+<li>Loaderを使った動的なオブジェクトの生成もできる</li>
+<li>HTML5 の canvas 風エレメントも QtQuick2 からある</li>
+<li>Bluetooth や NFC を Qt Quick から使えるモジュールもある</li>
+<li>QtWidget 風の Qt Quick Controls が別で用意してある</li>
+<li>現状 Qt Quick Designer は雛形の作成用として使うぐらいが良さそう</li>
+<li>QQuickRenderControl はレンダリング制御用のクラスで現状はプライベートクラスだけど後々に公開APIになる予定</li>
+</ul>
+
+<h3 id="%E4%BC%91%E6%86%A916%3A00---16%3A15">休憩(16:00 - 16:15)</h3>
+
+<h3 id="qt-enterprise-embedded-%E3%81%AB%E3%82%88%E3%82%8B%E7%B5%84%E3%81%BF%E8%BE%BC%E3%81%BF%E9%96%8B%E7%99%BA%E3%81%AE%E7%B4%B9%E4%BB%8B16%3A15--17%3A15">Qt Enterprise Embedded による組み込み開発の紹介(16:15 -17:15)</h3>
+
+<p>Tuukka Ahoniemi &amp; Andy Nichols (ソフトウェアエンジニア, Digia, Qt)</p>
+
+<ul>
+<li>デプロイに半日かかったりビルド設定が大変だったりを Qt enterprise enbeded を使って変えていきたい</li>
+<li>その価値はプロジェクトの開発期間の短縮</li>
+<li>Qt creaitor が中心となりデプロイやデバックをすることが可能</li>
+<li>キュートのシステムはエッシェンシャルとアドオンにわけられる</li>
+<li>Qt quick はモバイルにも組み込みも使われている</li>
+<li>Qt Creator からのデプロイは USBでもIPでもできる</li>
+<li>キーワード：Boot to Qt</li>
+<li>Boot to Qt では標準でNexus 7やエミュレータなどが使用可能でカスタマイズすることで他にも対応することができる</li>
+<li>グラフや仮想キーボードなどが含まれている</li>
+</ul>
+
+<h3 id="qt-quick%E3%81%A8qt-quick-controls%E3%81%AE%E6%B7%B1%E6%B7%B5%E3%81%B817%3A15---18%3A15">Qt QuickとQt Quick Controlsの深淵へ(17:15 - 18:15)</h3>
+
+<p>Dr. Gabriel de Dietrich (シニアソフトウェアディベロッパー, Digia, Qt)</p>
+
+<ul>
+<li>QtQuick の <code>Qt.platform.os</code> で os が分かる</li>
+<li><code>import QtQuick.Controls</code> で Qt Quick Control を使える</li>
+<li>QtQuick.Dialogs はファイル選択などができるモジュール</li>
+<li>Menu/MenuItem でメニューを表示できる</li>
+<li>C++のようにActionってエレメントありツールバーやメニューからと処理を共通化できる</li>
+<li>DockWidget は入る可能性はあるが時間はかかる</li>
+<li>一億行をテーブルビューに入れた場合もデータの再利用をしたりで出来るだけパフォーマンスが出るようになっている</li>
+<li>QtQuickWidget を使って表示するのではなく今はまだ QtQuick をUiで使うほうがいいと思う</li>
+</ul>
+
+<h2 id="%E6%87%87%E8%A6%AA%E4%BC%9A">懇親会</h2>
+
+<p>日本Qtユーザー会の皆様で乾杯＆もぐもぐ</p>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<p>はじめてな感じの日本でやる海外企業の展示会に潜入した結果ですが、同時通訳を聴けたり質問(自分はしていないですが)も通訳してもらったりと聞き取れなくて (´・ω・｀) な状態にはならなかったので良かったです。</p>
+
+<p>ただ、人によるのでしょうがスライドの文字が小さかったので後ろの席だと、場合によっては前の方でも内容が見えないことが有ったので座るなら前の方がいい感じでした。 いろいろな話が聞けて、自分的には満足な一日でした。</p>
+
+<p>あとは、開催日が平日でなければとかはなきにしもあらず、、、でしたが、休みを取ってまでして行ってよかった感じです。</p>
+]]></content>
+        </entry>
+    </feed>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/QEMU.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:50+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[QEmu Launcher]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/21/qemul.html"/>
+            <updated>2008-07-21T00:06:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/21/qemul.html</id>
+            <content type="html"><![CDATA[<h2 id="%E7%94%BB%E9%9D%A2">画面</h2>
+
+<p><img src="/images/2008_0721_qemul.jpg" alt="画面" /></p>
+
+<h2 id="%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E">ソフトの説明</h2>
+
+<p>このソフトは QEMU の実行や設定をGUIで出来るフロントエンドです。</p>
+
+<h2 id="%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">使用方法</h2>
+
+<p>新しい仮想マシンを追加するには、ソフトの画面上の  <img src="/images/2008_0721_ql_pc.gif" alt="PCアイコン(左から３番目)" />をクリックし表示されるタブに、 項目を入力して保存をクリックしてください。</p>
+
+<p>QEmu Launcher の設定をするには、 <img src="/images/2008_0721_ql_conf.gif" alt="歯車っぽいアイコン(左から４番目)" />をクリックします。</p>
+
+<ul>
+<li>QEMU のあるフォルダ
+
+<ul>
+<li>qemu.exe のあるフォルダを指定してください。</li>
+</ul></li>
+<li>BIOS のあるフォルダ
+
+<ul>
+<li>bios.bin のあるフォルダを指定してください。</li>
+</ul></li>
+<li>QEMU-IMG のあるフォルダ
+
+<ul>
+<li>qemu-img.exe のあるフォルダを指定してください。<br />
+(qemu.exeと同じ場所にあることが多いです)</li>
+</ul></li>
+<li>仮想マシン定義ファイルの保存先
+
+<ul>
+<li>QEmu Launcher で設定した仮想マシン定義ファイルを保存するフォルダを指定してください。</li>
+</ul></li>
+</ul>
+
+<p>QEMUと同じフォルダに置いた場合にはBIOSのあるフォルダ以外は変更する必要はないと思います。</p>
+
+<p>QEMUを実行するには、仮想マシンの設定をリストから選択し、 <img src="/images/2008_0721_ql_pow.gif" alt="電源アイコン(左から２番目)" />をクリックしてください。</p>
+
+<p>QEMUを終了するには、ゲストPC上で終了処理をするか、QEMUのウインドウを閉じるか、QEmu Launcher の電源アイコンをクリックしてください。</p>
+
+<p>※[新しい仮想マシンの作成]を選択している時にQEMUを実行した場合には、電源アイコンを押すとQEMUが起動していなければ起動し、起動していれば終了した後、現在の設定で再度実行します。 (やってみれば分かると思います)</p>
+
+<p><strong>仮想マシンのリストを右クリックすると、複製と削除が出来ます</strong></p>
+
+<p>あとは、色々触れば分かると思います。</p>
+
+<p>エラーで終了した場合には、ダイアログが出ますので内容を確認すれば、どの設定が悪いのか分かると思います。</p>
+
+<p><span>なお、保存していない状態でも QEMU の起動はできますが、別の設定を選択したり、保存せずに終了すると、変更内容は失われます。
+</span></p>
+
+<h2 id="%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83">動作環境</h2>
+
+<p>Windows 2000で動作確認済み</p>
+
+<p>Windows XP でも動くようだ</p>
+
+<p>Windows 95/98/Me でも動作するはず</p>
+
+<p>QEMU v0.6.0 以上が必要です。</p>
+
+<h2 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%EF%BC%86%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール＆アンインストール</h2>
+
+<p><strong>インストール</strong></p>
+
+<p>フォルダに解凍して、実行するだけです。</p>
+
+<p>なお、仮想マシン設定を保存するためにフォルダできます。</p>
+
+<p>使用方法などについては上記をご覧ください。</p>
+
+<p><strong>アンインストール</strong></p>
+
+<p>解凍して出来たファイルと「仮想マシン定義ファイルの保存先」に指定したフォルダ、QEmuL.ini を削除するだけです。</p>
+
+<p>レジストリは一切使用しておりません。</p>
+
+<h2 id="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</h2>
+
+<p><a href="http://www.vector.co.jp/soft/win95/util/se340805.html" title="qemul002.lzh">DOWNLOAD</a></p>
+
+<h2 id="%E5%B1%A5%E6%AD%B4">履歴</h2>
+
+<dl>
+<dt>2004/09/05</dt>
+<dd>[Ver.0.01a]<br />初公開</dd>
+
+<dt>2005/02/13</dt>
+<dd>PCJapan 2005年03月号に掲載されました</dd>
+
+<dt>2005/04/13</dt>
+<dd>PCJapan 2005年05月号に掲載されました</dd>
+
+<dt>2005/04/16</dt>
+<dd>[Ver.0.02]<br />設定項目追加や複数起動対応など色々修正</dd>
+
+<dt>2005/05/08</dt>
+<dd>紹介ページの内容修正</dd>
+
+<dt>2005/07/17</dt>
+<dd>PCJapan 2005年08月号に掲載されました</dd>
+</dl>
+]]></content>
+        </entry>
+    </feed>

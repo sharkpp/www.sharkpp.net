@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="512"
+   height="512"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.0 r9654"
+   sodipodi:docname="magic_circle2.svg"
+   style="display:inline"
+   inkscape:export-filename="magic_circle2_512x512.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <title
+     id="title3030">Magic circle no.2</title>
+  <defs
+     id="defs4">
+    <filter
+       inkscape:collect="always"
+       id="filter6359">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="9.3117902"
+         id="feGaussianBlur6361" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter6363">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="7.9877359"
+         id="feGaussianBlur6365" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter6367"
+       x="-0.099462034"
+       width="1.1989241"
+       y="-0.10468188"
+       height="1.2093638">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="9.3963845"
+         id="feGaussianBlur6369" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter6371"
+       x="-0.29848224"
+       width="1.5969645"
+       y="-0.29848224"
+       height="1.5969645">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="10.818109"
+         id="feGaussianBlur6373" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter6375">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="9.7450026"
+         id="feGaussianBlur6377" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter6379">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="9.7450026"
+         id="feGaussianBlur6381" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter6383">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="11.321656"
+         id="feGaussianBlur6385" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter6387"
+       x="-0.11715321"
+       width="1.2343064"
+       y="-0.11715321"
+       height="1.2343064">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="9.7450026"
+         id="feGaussianBlur6389" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter6391"
+       x="-0.13463877"
+       width="1.2692775"
+       y="-0.13463875"
+       height="1.2692775">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="9.7450026"
+         id="feGaussianBlur6393" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter6395">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="9.2946667"
+         id="feGaussianBlur6397" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.8164062"
+     inkscape:cx="182.77849"
+     inkscape:cy="256"
+     inkscape:document-units="px"
+     inkscape:current-layer="g6171"
+     showgrid="false"
+     inkscape:window-width="1600"
+     inkscape:window-height="1144"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Magic circle no.2</dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/3.0/" />
+        <dc:date>2011-04-16</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>sharkpp</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>sharkpp</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:identifier>http://www.sharkpp.net/gallery/graffiti/magic_circle2.svg</dc:identifier>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by/3.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="back"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <rect
+       style="color:#000000;fill:#000000;fill-opacity:1;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect4306"
+       width="512"
+       height="512"
+       x="0"
+       y="-3.6998182e-014" />
+  </g>
+  <g
+     style="display:inline"
+     transform="translate(0,-540.36218)"
+     id="g6171"
+     inkscape:groupmode="layer"
+     inkscape:label="magic circle glow">
+    <path
+       transform="matrix(1.046523,0,0,1.046523,-70.356398,459.47799)"
+       d="m 476.1212,322.42426 c 0,90.77552 -73.5881,164.36363 -164.36363,164.36363 -90.77553,0 -164.36363,-73.58811 -164.36363,-164.36363 0,-90.77553 73.5881,-164.36364 164.36363,-164.36364 90.77553,0 164.36363,73.58811 164.36363,164.36364 z"
+       sodipodi:ry="164.36363"
+       sodipodi:rx="164.36363"
+       sodipodi:cy="322.42426"
+       sodipodi:cx="311.75757"
+       id="path6173"
+       style="color:#000000;fill:none;stroke:#75ffbd;stroke-width:2.86663556000000020;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;filter:url(#filter6359)"
+       sodipodi:type="arc" />
+    <path
+       transform="matrix(1.2199956,0,0,1.2199956,-89.69956,486.16479)"
+       d="m 395.28602,265.35913 c 0,55.94585 -45.35308,101.29893 -101.29893,101.29893 -55.94585,0 -101.29893,-45.35308 -101.29893,-101.29893 0,-55.94585 45.35308,-101.29893 101.29893,-101.29893 55.94585,0 101.29893,45.35308 101.29893,101.29893 z"
+       sodipodi:ry="101.29893"
+       sodipodi:rx="101.29893"
+       sodipodi:cy="265.35913"
+       sodipodi:cx="293.98709"
+       id="path6175"
+       style="color:#000000;fill:none;stroke:#75ffbd;stroke-width:2.45902561999999980;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;filter:url(#filter6363)"
+       sodipodi:type="arc" />
+    <text
+       transform="matrix(1.0371013,0,0,1.0371013,-12.211052,-31.177014)"
+       sodipodi:linespacing="125%"
+       id="text6177"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#75ffbd;fill-opacity:1;stroke:none;font-family:Rune;-inkscape-font-specification:Rune;filter:url(#filter6367)"
+       xml:space="preserve"><textPath
+         id="textPath6179"
+         xlink:href="#path4094">Du must verstehn! Aus Eins mach Zehn, Und Zwei las gehn, Und Drei mach gleich, So bist du reich. Verlier die Vier! Aus Funf und Sechs, So sagt die Hex, Mach Sieben und Acht, So ist's vollbracht: Und Neun ist Eins, Und Zehn ist keins. Das ist</textPath></text>
+    <path
+       transform="matrix(0.90080461,0,0,0.90080461,13.81268,581.58214)"
+       d="m 227.92259,162.95914 c 0,24.02023 -19.47225,43.49247 -43.49248,43.49247 -24.02023,0 -43.49247,-19.47224 -43.49247,-43.49247 0,-24.02023 19.47224,-43.49248 43.49247,-43.49248 24.02023,0 43.49248,19.47225 43.49248,43.49248 z"
+       sodipodi:ry="43.492474"
+       sodipodi:rx="43.492474"
+       sodipodi:cy="162.95914"
+       sodipodi:cx="184.43011"
+       id="path6181"
+       style="color:#000000;fill:none;stroke:#75ffbd;stroke-width:3.33035587999999990;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;filter:url(#filter6371)"
+       sodipodi:type="arc" />
+    <rect
+       y="624.09332"
+       x="83.731071"
+       height="344.53787"
+       width="344.53787"
+       id="rect6183"
+       style="color:#000000;fill:none;stroke:#75ffbd;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;filter:url(#filter6375)" />
+    <rect
+       transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,0,0)"
+       y="571.86353"
+       x="-554.36273"
+       height="344.53787"
+       width="344.53787"
+       id="rect6185"
+       style="color:#000000;fill:none;stroke:#75ffbd;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;filter:url(#filter6379)" />
+    <path
+       transform="matrix(0.86074002,0,0,0.86074002,-12.437147,519.37893)"
+       d="m 476.1212,322.42426 c 0,90.77552 -73.5881,164.36363 -164.36363,164.36363 -90.77553,0 -164.36363,-73.58811 -164.36363,-164.36363 0,-90.77553 73.5881,-164.36364 164.36363,-164.36364 90.77553,0 164.36363,73.58811 164.36363,164.36364 z"
+       sodipodi:ry="164.36363"
+       sodipodi:rx="164.36363"
+       sodipodi:cy="322.42426"
+       sodipodi:cx="311.75757"
+       id="path6187"
+       style="color:#000000;fill:none;stroke:#75ffbd;stroke-width:3.48537301999999990;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;filter:url(#filter6383)"
+       sodipodi:type="arc" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path6189"
+       d="M 151.71681,894.30774 351.35288,694.67167"
+       style="fill:none;stroke:#75ffbd;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter6387)" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path6191"
+       d="M 353.65748,898.3408 179.94818,724.63148"
+       style="fill:none;stroke:#75ffbd;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter6391)" />
+    <text
+       transform="matrix(1.048451,0,0,1.048451,-12.404539,-38.585161)"
+       sodipodi:linespacing="125%"
+       id="text6193"
+       style="font-size:21.26719666000000000px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#75ffbd;fill-opacity:1;stroke:none;font-family:Rune;-inkscape-font-specification:Rune;filter:url(#filter6395)"
+       xml:space="preserve"><textPath
+         id="textPath6195"
+         xlink:href="#path2985-9">Du must verstehn!Aus Eins mach Zehn, Und Zwei las gehn, Und Drei mach </textPath></text>
+  </g>
+  <g
+     inkscape:label="magic circle"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-540.36218)"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <path
+       sodipodi:type="arc"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:2.86663556;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path2985"
+       sodipodi:cx="311.75757"
+       sodipodi:cy="322.42426"
+       sodipodi:rx="164.36363"
+       sodipodi:ry="164.36363"
+       d="m 476.1212,322.42426 c 0,90.77552 -73.5881,164.36363 -164.36363,164.36363 -90.77553,0 -164.36363,-73.58811 -164.36363,-164.36363 0,-90.77553 73.5881,-164.36364 164.36363,-164.36364 90.77553,0 164.36363,73.58811 164.36363,164.36364 z"
+       transform="matrix(1.046523,0,0,1.046523,-70.356398,459.47799)" />
+    <path
+       sodipodi:type="arc"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:2.45902562;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path3761"
+       sodipodi:cx="293.98709"
+       sodipodi:cy="265.35913"
+       sodipodi:rx="101.29893"
+       sodipodi:ry="101.29893"
+       d="m 395.28602,265.35913 c 0,55.94585 -45.35308,101.29893 -101.29893,101.29893 -55.94585,0 -101.29893,-45.35308 -101.29893,-101.29893 0,-55.94585 45.35308,-101.29893 101.29893,-101.29893 55.94585,0 101.29893,45.35308 101.29893,101.29893 z"
+       transform="matrix(1.2199956,0,0,1.2199956,-89.69956,486.16479)" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Rune;-inkscape-font-specification:Rune"
+       id="text4096"
+       sodipodi:linespacing="125%"
+       transform="matrix(1.0371013,0,0,1.0371013,-12.211052,-31.177014)"><textPath
+         xlink:href="#path4094"
+         id="textPath4174">Du must verstehn! Aus Eins mach Zehn, Und Zwei las gehn, Und Drei mach gleich, So bist du reich. Verlier die Vier! Aus Funf und Sechs, So sagt die Hex, Mach Sieben und Acht, So ist's vollbracht: Und Neun ist Eins, Und Zehn ist keins. Das ist</textPath></text>
+    <path
+       sodipodi:type="arc"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:3.33035588;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path3763"
+       sodipodi:cx="184.43011"
+       sodipodi:cy="162.95914"
+       sodipodi:rx="43.492474"
+       sodipodi:ry="43.492474"
+       d="m 227.92259,162.95914 c 0,24.02023 -19.47225,43.49247 -43.49248,43.49247 -24.02023,0 -43.49247,-19.47224 -43.49247,-43.49247 0,-24.02023 19.47224,-43.49248 43.49247,-43.49248 24.02023,0 43.49248,19.47225 43.49248,43.49248 z"
+       transform="matrix(0.90080461,0,0,0.90080461,13.81268,581.58214)" />
+    <rect
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3821"
+       width="344.53787"
+       height="344.53787"
+       x="83.731071"
+       y="624.09332" />
+    <rect
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3821-8"
+       width="344.53787"
+       height="344.53787"
+       x="-554.36273"
+       y="571.86353"
+       transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,0,0)" />
+    <path
+       sodipodi:type="arc"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:3.48537302;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path2985-9"
+       sodipodi:cx="311.75757"
+       sodipodi:cy="322.42426"
+       sodipodi:rx="164.36363"
+       sodipodi:ry="164.36363"
+       d="m 476.1212,322.42426 c 0,90.77552 -73.5881,164.36363 -164.36363,164.36363 -90.77553,0 -164.36363,-73.58811 -164.36363,-164.36363 0,-90.77553 73.5881,-164.36364 164.36363,-164.36364 90.77553,0 164.36363,73.58811 164.36363,164.36364 z"
+       transform="matrix(0.86074002,0,0,0.86074002,-12.437147,519.37893)" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="M 151.71681,894.30774 351.35288,694.67167"
+       id="path3878"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="M 353.65748,898.3408 179.94818,724.63148"
+       id="path3878-6"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:21.26719666px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Rune;-inkscape-font-specification:Rune"
+       id="text3974"
+       sodipodi:linespacing="125%"
+       transform="matrix(1.048451,0,0,1.048451,-12.404539,-38.585161)"><textPath
+         xlink:href="#path2985-9"
+         id="textPath4012">Du must verstehn!Aus Eins mach Zehn, Und Zwei las gehn, Und Drei mach </textPath></text>
+    <path
+       sodipodi:type="spiral"
+       style="fill:none;stroke:none"
+       id="path4094"
+       sodipodi:cx="248.84302"
+       sodipodi:cy="255.44946"
+       sodipodi:expansion="1"
+       sodipodi:revolution="5"
+       sodipodi:radius="112.89646"
+       sodipodi:argument="-30.637424"
+       sodipodi:t0="0"
+       d="m 248.84302,255.44946 c 2.41803,2.38491 -2.02184,4.43609 -3.96387,4.01893 -5.2628,-1.13048 -6.15395,-7.85534 -4.07398,-11.94667 3.72058,-7.31844 13.50683,-8.24027 19.92946,-4.12903 9.42547,6.03342 10.38781,19.23477 4.18408,27.91226 -8.2686,11.56573 -24.98981,12.56138 -35.89505,4.23913 -13.72314,-10.47271 -14.74843,-30.75777 -4.29418,-43.87785 12.66149,-15.89018 36.53299,-16.94326 51.86064,-4.34923 18.06311,14.84162 19.14299,42.31275 4.40428,59.84344 -17.01641,20.23987 -48.09553,21.34598 -67.82623,4.45933 -22.41928,-19.18768 -23.55125,-53.88044 -4.51439,-75.80903 21.35649,-24.60056 59.66691,-25.75818 83.79183,-4.56943 26.78324,23.52353 27.96636,65.45453 4.62449,91.77462 -25.68925,28.96697 -71.24306,30.17549 -99.75742,4.67954 -31.15153,-27.85396 -32.38536,-77.0323 -4.73459,-107.74022 30.01787,-33.33673 82.8221,-34.59583 115.72301,-4.78964 35.52246,32.18116 36.80679,88.61237 4.84469,123.70581 -34.34393,37.70862 -94.40302,39.01813 -131.6886,4.89974 -39.89514,-36.50628 -41.22982,-100.19399 -4.95479,-139.6714 38.66829,-42.08194 105.98523,-43.44178 147.65419,-5.00984 44.26901,40.83 45.65398,111.7767 5.06489,155.63699"
+       transform="matrix(1.0022441,0,0,1.002232,16.64193,555.07363)" />
+  </g>
+</svg>

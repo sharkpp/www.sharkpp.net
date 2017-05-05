@@ -1,0 +1,1398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/C%2B%2B.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:48+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[じゅげむったー(仮)の開発日記 その１]]></title>
+            <link href="http://www.sharkpp.net/blog/2017/04/16/jugemutter-development-diary-1st.html"/>
+            <updated>2017-04-16T23:07:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2017/04/16/jugemutter-development-diary-1st.html</id>
+            <content type="html"><![CDATA[<p>さて、先月に続いて今月も参加した <a href="https://qt-users.connpass.com/event/53963/">Qt 勉強会 @ Nagoya No7(17.04) - connpass</a> のまとめ。</p>
+
+<p>つぶやきは <a href="https://togetter.com/li/1101299">Qt勉強会 Tokyo #46 + Nagoya # 7 つぶやきまとめ - Togetterまとめ</a> でまとめられています。</p>
+
+<p>今月は先月から作り始めた、長文投稿専用Twitterクライアントの開発をしました。</p>
+
+<p>レポジトリは ... <a href="https://github.com/sharkpp/Jugemutter">sharkpp/Jugemutter: 長文投稿専用クライアント「じゅげむったー」</a> です。</p>
+
+<h2 id="%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">はじめに</h2>
+
+<p>会場に到着する前のこと。</p>
+
+<p>マクドナルドで昼食を食べ、いざ会場へ行かん、としたところで、外を見ると土砂降り，とまでは行かないけれど雨がザーザー<ruby><rb>OMG</rb><rp>(</rp><rt>おーまいがー</rt><rp>)</rp></ruby>。</p>
+
+<p>慌ててコンビニで傘を買って行きましたとさ。
+いや、まさか雨が降るとは思わず、折り畳み傘をカバンに入れてなかったのです。</p>
+
+<p>会場に着くと、主催の <a href="https://twitter.com/nekomatu">@nekomatu</a> さん以外おらず。
+もともと <a href="https://twitter.com/IoriAYANE">@IoriAYANE</a> さんも調子を崩して参加できず、だったので特に人数が少なかった。</p>
+
+<p>しばらくして、最後の一人も到着で、もくもく開始。</p>
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">本日のおやつ <a href="https://twitter.com/hashtag/qtjp?src=hash">#qtjp</a> <a href="https://t.co/HhGVbaUAWk">pic.twitter.com/HhGVbaUAWk</a></p>&mdash; 夜は短し歩けよさめたすたす (@sharkpp) <a href="https://twitter.com/sharkpp/status/853103000910413824">2017年4月15日</a></blockquote>
+
+<h2 id="%E3%82%84%E3%81%A3%E3%81%9F%E3%81%93%E3%81%A8">やったこと</h2>
+
+<p>ドキュメントを見つつ、画面周りを作成。</p>
+
+<p>QtCreator みたいに左側にツールバーを設置してみようと思うが、どうやらデザイナ上ではウィジェットとしてツールバーは設置できないようだ。
+「<a href="http://stackoverflow.com/questions/26691010/how-to-change-toolbar-layout-in-qt-creator">How to change toolbar layout in Qt Creator? - Stack Overflow</a>」 を見ると、 <code>.ui</code> を直接触れって書いてあって、確かにできるんだけど... いいのかな？</p>
+
+<p><code>QPlainTextEdit</code> の画面内の余白、
+<img src="images/2017_0415_qplaintextedit_margin.png" />
+を計算するうまい方法はないものかと、探すも見つからず。
+<a href="http://doc.qt.io/qt-5/qwidget.html#contentsMargins">QWidget::contentsMargins()</a>はどうも違うらしい。</p>
+
+<p><code>QLabel</code> の文字色は ... そうだ、そうだ。
+<code>foregroundRole()</code> を使うんだ、とか。</p>
+
+<p>調べながら、コードを書いているとなかなか進まないなぁ。</p>
+
+<h2 id="%E6%88%90%E6%9E%9C">成果</h2>
+
+<p>とりあえず、なんとなくの画面はできてきた感じ。</p>
+
+<p><img src="/images/2017_0415_jugemutter.png" /></p>
+
+<p>もうちょっとで文章を分割してつぶやけるところまて行ったけど、残念ながら時間切れ。</p>
+
+<ul>
+<li>分割して投稿</li>
+<li>文章をWYSIWYGで編集＆プレビューしたい</li>
+<li>投稿のレジューム機能</li>
+<li>マルチアカウント管理</li>
+</ul>
+
+<p>とか、まだまだ先は長そうだ。</p>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<h2 id="%E7%9F%A5%E3%81%A3%E3%81%9F%E3%81%93%E3%81%A8">知ったこと</h2>
+
+<ul>
+<li>Qt
+
+<ul>
+<li><a href="http://doc.qt.io/qt-5/properties.html"><code>Q_PROPERTY</code></a> は   <code>setProperty()</code> / <code>property()</code> でアクセスできるようにするマクロ。
+何回か、同じ勘違いをやっているけど、 setter/getter を自動で作る機能ではない。</li>
+<li>パスに日本語が含まれていると qmake が失敗するらしい、このご時世に。</li>
+</ul></li>
+<li>QtCreator
+
+<ul>
+<li>のソースエディタで、変数の後に <code>.</code> を入力すると <code>-&gt;</code> に変換される。便利！</li>
+<li>デザイナ上でツールバーを削除してしまった場合は、オブジェクトインスペクタ？上の <code>QMainWIndow</code> を右クリックして「ツールバーを追加」で追加できる。</li>
+<li><code>QDesignerCustomWidgetCollectionInterface</code> とか長ったらしい名前は <code>QDCW</code> と入力すれば補完される！
+参考：<a href="http://qiita.com/task_jp/items/098319a33bd946955c0a#%E3%82%AD%E3%83%A3%E3%83%A1%E3%83%AB%E3%82%B1%E3%83%BC%E3%82%B9%E5%AF%BE%E5%BF%9C%E3%81%AE%E8%A3%9C%E5%AE%8C%E3%82%92%E6%9C%80%E5%A4%A7%E9%99%90%E3%81%AB%E6%B4%BB%E7%94%A8%E3%81%97%E3%82%88%E3%81%86">Qt Creator を便利に使いこなそう - Qiita # キャメルケース対応の補完を最大限に活用しよう</a></li>
+<li><code>QString m_xxx;</code> などとメンバ変数を定義して、「リファクタリング」を実行すれば  <code>setXxx()</code> と <code>xxx()</code> つまり setter/getter の宣言と実装の枠組みが自動で追加される。
+参考：* <a href="http://stackoverflow.com/questions/19729288/auto-generate-setters-getters-with-qtcreator">c++ - Auto-generate setters/getters with QTCreator? - Stack Overflow</a></li>
+</ul></li>
+</ul>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/26691010/how-to-change-toolbar-layout-in-qt-creator">How to change toolbar layout in Qt Creator? - Stack Overflow</a></li>
+<li><a href="http://stackoverflow.com/questions/18909507/qtextedit-sets-fix-line-height-paragraph-spacing">qt - QTextEdit sets fix line Height, paragraph spacing - Stack Overflow</a></li>
+<li><a href="http://stackoverflow.com/questions/10317845/qplaintextedit-line-spacing">c++ - qplaintextedit line spacing - Stack Overflow</a></li>
+<li><a href="http://qiita.com/task_jp/items/098319a33bd946955c0a#%E3%82%AD%E3%83%A3%E3%83%A1%E3%83%AB%E3%82%B1%E3%83%BC%E3%82%B9%E5%AF%BE%E5%BF%9C%E3%81%AE%E8%A3%9C%E5%AE%8C%E3%82%92%E6%9C%80%E5%A4%A7%E9%99%90%E3%81%AB%E6%B4%BB%E7%94%A8%E3%81%97%E3%82%88%E3%81%86">Qt Creator を便利に使いこなそう - Qiita</a></li>
+<li><a href="http://stackoverflow.com/questions/2749798/qlabel-set-color-of-text-and-background">qt - QLabel: set color of text and background - Stack Overflow</a></li>
+<li><a href="http://doc.qt.io/qt-5/properties.html">The Property System | Qt Core 5.8</a></li>
+<li><a href="http://stackoverflow.com/questions/19729288/auto-generate-setters-getters-with-qtcreator">c++ - Auto-generate setters/getters with QTCreator? - Stack Overflow</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Qt Network Authorization を使った Twitter API の利用]]></title>
+            <link href="http://www.sharkpp.net/blog/2017/03/25/twitter-api-using-qt-network-authorization.html"/>
+            <updated>2017-03-25T22:59:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2017/03/25/twitter-api-using-qt-network-authorization.html</id>
+            <content type="html"><![CDATA[<p>さて、先月に続いて今月も参加した <a href="https://qt-users.connpass.com/event/52009/">Qt 勉強会 @ Nagoya No6(17.03)</a> のまとめ。</p>
+
+<p>今回はいつもに増して短め。</p>
+
+<p><a href="https://github.com/sharkpp/Jugemutter">sharkpp/Jugemutter: 長文投稿専用クライアント「じゅげむったー」</a> で成果物を公開しています。</p>
+
+<h2 id="%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">はじめに</h2>
+
+<p>まずは、クラスの実装をしていきます。</p>
+
+<p><a href="https://doc-snapshots.qt.io/qt5-5.8/examples-qtnetworkauth.html">Qt Network Authorization Examples | Qt Network Authorization 5.8</a> に Twitter認証のサンプルがあるので、それを参考にしつつ <a href="https://github.com/sharkpp/NetworkStorageAccessSample">NetworkStorageAccessSample</a> で実装した認証済みトークンの保存処理を実装していきました。</p>
+
+<p>あ、<a href="http://www.sharkpp.net/blog/2017/01/28/first-impression-qt-network-authorization.html">はじめての Qt Network Authorization</a> も参考にしています。</p>
+
+<p>そろそろ、だれか Qt Network Authorization を触った記事を書いてくれないだろうか？</p>
+
+<h2 id="%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88">ポイント</h2>
+
+<p>実装するクラスは <code>QOAuth1</code> クラスから派生します。</p>
+
+<p>これは、認証した後のトークンの復帰処理で <code>setStatus(QAbstractOAuth::Status::Granted)</code> の実行が必要となります。
+ただし、該当のメソッドが <code>protected</code> として実装されているので、 <code>QOAuth1</code> クラスから派生する必要があるのです。</p>
+
+<p>APIの各エンドポイントを設定</p>
+
+<p>まあ、この辺はサンプルと同じです。</p>
+
+<pre><code class="cpp">setTemporaryCredentialsUrl(QUrl("https://api.twitter.com/oauth/request_token"));
+setAuthorizationUrl(QUrl("https://api.twitter.com/oauth/authenticate"));
+setTokenCredentialsUrl(QUrl("https://api.twitter.com/oauth/access_token"));
+</code></pre>
+
+<p>OAuth の認証を、ブラウザを利用するために、</p>
+
+<pre><code class="cpp">setReplyHandler(new QOAuthHttpServerReplyHandler(this));
+</code></pre>
+
+<p>としますが、これを実行するとポートを開きに行くので、必要な時のみポートを開くか PIN 認証にする方が良いかもしれません。</p>
+
+<p>この時、</p>
+
+<pre><code class="cpp">connect(this, &amp;QAbstractOAuth::authorizeWithBrowser,
+        this, &amp;Twitter::handleAuthorizeWithBrowser);
+</code></pre>
+
+<p>としてシグナルをスロットと関連づけて、</p>
+
+<pre><code class="cpp">void Twitter::handleAuthorizeWithBrowser(QUrl url)
+{
+    QDesktopServices::openUrl(url);
+}
+</code></pre>
+
+<p>のような感じで実装することで、ブラウザで認証することができます。</p>
+
+<p><code>grant()</code> を呼び出すことで認証開始するので、適当なメソッドでラップします。</p>
+
+<p>認証後は、</p>
+
+<pre><code>connect(this, &amp;QOAuth1::granted, this, &amp;Twitter::authenticated);
+</code></pre>
+
+<p>とすることで、 <code>authenticated()</code> を認証時に呼ばされるシグナルとして登録できます。</p>
+
+<p>つぶやくには</p>
+
+<pre><code>    QUrl url("https://api.twitter.com/1.1/statuses/update.json");
+    QUrlQuery query(url);
+    query.addQueryItem("status", "hogehoge");
+    url.setQuery(query);
+    QNetworkReply *reply = post(url);
+    connect(reply, &amp;QNetworkReply::finished, this, &amp;Twitter::tweetFinished);
+</code></pre>
+
+<p>みたいな感じです。</p>
+
+<p>まあ、後から振り返ると割と簡単な部類になると思うけど、いろいろハマってしまいました。</p>
+
+<h2 id="%E3%81%84%E3%82%8D%E3%81%84%E3%82%8D%E5%A4%B1%E6%95%97%E8%AB%87">いろいろ失敗談</h2>
+
+<p>なぜか今回はハマることハマること。</p>
+
+<p>ハマった所をメモとして残しておきます。</p>
+
+<ul>
+<li><code>setClientIdentifier()</code> / <code>setClientSharedSecret()</code> と <code>token()</code> / <code>tokenSecret()</code> をなぜかとり間違える
+なぜ間違えたし。</li>
+<li>設定したはずの、Consumer Key / Consumer Secret が設定されていなくて、<code>QOAuthOobReplyHandler::networkReplyFinished: Host requires authentication</code> とデバッグ主力に出る。
+<code>setModifyParametersFunction</code> で今の Stage とライブラリのソースをにらめっこで原因を見つけた。</li>
+<li>呟く内容が別の変数を参照していたために空っぽで <code>Missing required parameter: status.</code> と返答が返ってくる。
+うん、たしかに設定されてなかったね。</li>
+<li><del><code>connect()</code> でラムダ式を使うとなぜか <code>qobject_cast&lt;QNetworkReply*&gt;(sender())</code> が <code>nullptr</code>。</del>
+<del>横着せずに 別メソッドを作って設定すると大丈夫だった。何で？</del>
+後で試したら大丈夫だった。</li>
+</ul>
+
+<p>と、こんな感じ。</p>
+
+<p>結局、時間内になんとかつぶやきを書き込むまでは行けたけど、先のハマりがなければ、もう少し行けたかもしれない。</p>
+
+<h2 id="%E3%83%84%E3%82%A4%E3%83%83%E3%82%BF%E3%83%BC%E3%81%AE%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E7%99%BB%E9%8C%B2">ツイッターのアプリケーション登録</h2>
+
+<p><a href="https://apps.twitter.com/app/new">Create an application | Twitter Application Management</a> でアプリケーションを登録できる。</p>
+
+<p>ただし、電話番号を認証していないと <ruby><rb>You must add your mobile phone to your Twitter profile before creating an application.</rb><rp>(</rp><rt>アプリケーションを作成する前に携帯電話を Twitter プロファイルに追加する必要があります。</rt><rp>)</rp></ruby> って怒られる。</p>
+
+<p>一度登録したら、電話番号の登録を解除しても、登録内容の変更とかは問題なくできる模様。</p>
+
+<p>で、登録時、SMSで飛んでくるトークンを何回入力しても弾かれるので、途方にくれてたけど <a href="http://absg.hatenablog.com/entry/2015/01/26/163057">twitterの電話番号認証がうまくいかないとき - やったこと</a> を見たらリロードすれば大丈夫のようなので試して見たらできた。
+何じゃそりゃ？</p>
+
+<p>まあともかく、アプリケーションを登録したら、Consumer Key / Consumer Secret を確認しアプリケーションに設定。</p>
+
+<p>これでOK。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://www.sharkpp.net/blog/2017/01/28/first-impression-qt-network-authorization.html">はじめての Qt Network Authorization — さめたすたすのお家</a></li>
+<li><a href="https://doc-snapshots.qt.io/qt5-5.8/examples-qtnetworkauth.html">Qt Network Authorization Examples | Qt Network Authorization 5.8</a></li>
+<li><a href="https://dev.twitter.com/docs">Twitter Developer Documentation — Twitter Developers</a></li>
+<li><a href="https://github.com/sharkpp/NetworkStorageAccessSample">sharkpp/NetworkStorageAccessSample: Qt Network Authorization "Network storage access" sample</a></li>
+<li><a href="https://syncer.jp/Web/API/Twitter/REST_API/POST/statuses/update/">POST statuses/update - ツイートを投稿する</a> ※情報が古いようだ</li>
+<li><a href="http://westplain.sakuraweb.com/translate/twitter/Documentation/REST-APIs/Public-API/POST-statuses-update.cgi">POST statuses/update - Twitter 開発者ドキュメント 日本語訳</a></li>
+<li><a href="https://dev.twitter.com/rest/tools/console">API Console — Twitter Developers</a></li>
+<li><a href="http://absg.hatenablog.com/entry/2015/01/26/163057">twitterの電話番号認証がうまくいかないとき - やったこと</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Qt Network Authorization を使った Dropbox API　の利用]]></title>
+            <link href="http://www.sharkpp.net/blog/2017/02/28/dropbox-api-using-qt-network-authorization.html"/>
+            <updated>2017-02-28T01:45:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2017/02/28/dropbox-api-using-qt-network-authorization.html</id>
+            <content type="html"><![CDATA[<p>さて、今月も参加した <a href="https://qt-users.connpass.com/event/50191/">Qt 勉強会 @ Nagoya No5(17.02)</a> のまとめ。</p>
+
+<p>※ <a href="https://togetter.com/li/1092293">Qt 勉強会 @ Nagoya No5(17.02) - Togetterまとめ</a> で当日のつぶやきがまとめられています。</p>
+
+<p>今回も、前回に引き続き、<a href="https://doc.qt.io/qt-5/qtnetworkauth-index.html">Qt Network Authorization</a> を色々さわって見ることにしました。</p>
+
+<p>そして、翌日へとオーバーランをしつつ <a href="https://github.com/sharkpp/NetworkStorageAccessSample">sharkpp/NetworkStorageAccessSample: Qt Network Authorization "Network storage access" sample</a> を作りました。</p>
+
+<p>とりあえず、今時点では、Dropbox への認証と、ファイルのアップロードができます。</p>
+
+<h2 id="dropbox-%E3%81%B8%E3%81%AE%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E7%99%BB%E9%8C%B2">Dropbox へのアプリケーションの登録</h2>
+
+<p>何はともあれまずはここからです。</p>
+
+<p><a href="https://www.dropbox.com/developers">Developers - Dropbox</a> から "Create your app" を、そして <ruby><rb>Choose the type of access you need</rb><rp>(</rp><rt>必要なアクセスの種類を選択する</rt><rp>)</rp></ruby> は、 "App folder" を選び、アプリケーションを登録します。</p>
+
+<p><a href="http://qiita.com/kz_morita/items/3ae70b10351a48a806eb">スタンドアロンアプリでDropbox APIを使ってaccess_tokenを取得する - Qiita</a> が参考になります。</p>
+
+<p>API の詳細は <a href="https://www.dropbox.com/developers/documentation/http/documentation">HTTP - Developers - Dropbox</a> を。</p>
+
+<h2 id="%E8%BA%93%E3%81%84%E3%81%9F%E3%81%A8%E3%81%93%E3%82%8D">躓いたところ</h2>
+
+<p>Qt Network Authorization で Dropbox API へとアクセスしようと頑張りましたが、 Qt Network Authorization がテクノロジープレビューなためなのか、 Dropbox API が特殊なのか、はたまた両方なのか、現状ハマりどころが多い気がします。</p>
+
+<p>OAuth 1 での Tumblr API アクセスは簡単だったんだけどなぁ、と。</p>
+
+<h3 id="%E8%AA%8D%E8%A8%BC%E5%BE%8C%E3%81%AE%E5%8B%95%E4%BD%9C%E3%82%92-oob-%E6%96%B9%E5%BC%8F%E3%81%AB%E3%81%97%E3%81%9F%E3%81%84%E3%81%8C...">認証後の動作を oob 方式にしたいが...</h3>
+
+<p>色々試して、一応 oob 方式での認証ができた。</p>
+
+<p>もう少し調べたら Qt Network Authorization の redditclient サンプルで、コールバックによる認証を扱っていたのでそれを参考にすればできそうな感じではある。
+ただ、Dropbox では、コールバックアドレスを厳密に設定するように求めているようなので、あらかじめ <code>http://localhost:12345/</code> や <code>http://localhost:12346/</code> など何個かのローカルアドレスを設定しておき、その中から開けるポートを開いて認証する、ということをすれば多分動くのではないかと思う。</p>
+
+<p>認証を oob (Out-of-band 要するに pin で認証) で行うためには redirect_uri に <code>oob</code> とか空文字を設定するのではなく、省略しないとダメだった。
+API ドキュメントをよく読むと確かに書いてあったけど、見逃していたorz</p>
+
+<p><code>QOAuthOobReplyHandler::callback()</code> メソッドで <code>redirect_uri</code> の値が指定できるが、省略はできないようなので、</p>
+
+<pre><code class="cpp">    setModifyParametersFunction([&amp;](Stage stage, QVariantMap* data) {
+        if (Stage::RequestingAuthorization == stage || // 認証要求開始
+            Stage::RequestingAccessToken   == stage)   // アクセストークン要求開始
+        {
+            data-&gt;remove(Key::redirectUri);
+        }
+    });
+</code></pre>
+
+<p>と、このように <code>QAbstractOAuth::setModifyParametersFunction()</code> メソッドでパラメータを削除することで対応。</p>
+
+<h2 id="pin-%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%81%AF%E3%81%A9%E3%81%86%E3%81%99%E3%82%8C%E3%81%B0%EF%BC%9F">Pin の設定はどうすれば？</h2>
+
+<p>ソースを読んでも、特に Pin を設定するメソッドとかなさそうだったので、自分でシグナルを発行してあげることにした。</p>
+
+<pre><code class="cpp">    void setPinCode(const QString&amp; code)
+    {
+        QVariantMap data;
+        data.insert(Key::error, "");
+        data.insert(Key::code, code); // code = access token
+        data.insert(Key::state, currentState);
+        Q_EMIT callbackReceived(data);
+    }
+</code></pre>
+
+<p>こんな感じで <code>callbackReceived</code> シグナルに適当なパラメータをセットするとうまくいった。</p>
+
+<h2 id="%E3%81%AA%E3%81%9C-%22content-type%3A-text%2Fjavascript%22-%E3%81%AA%E3%81%AE%EF%BC%9F">なぜ "Content-Type: text/javascript" なの？</h2>
+
+<p>アクセストークンを取得するためのエンドポイント <code>https://api.dropboxapi.com/oauth2/token</code> の結果がなんと <code>Content-Type: text/javascript</code> で返ってきていた。</p>
+
+<p>そう、 <code>Content-Type: application/json</code> ではなく。</p>
+
+<p>API ドキュメントを確認すると、他の API では、 <code>Content-Type: application/json</code> を返すのにもかかわらず、である。</p>
+
+<p>まあ、ともかく Qt Network Authorization のソースを見ると、<code>Content-Type: text/javascript</code> との比較は埋め込みでどうにもならないので、</p>
+
+<p><code>QNetworkReply</code> を派生して</p>
+
+<pre><code>    void fixContentType()
+    {
+        setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+    }
+</code></pre>
+
+<p>のようなメソッドを追加し、無理やりキャストして</p>
+
+<pre><code>    void networkReplyFinished(QNetworkReply *reply)
+    {
+        DropboxOAuthOobReply *reply_ = (DropboxOAuthOobReply *)reply;
+        reply_-&gt;fixContentType(); // fix content-type, "text/javascript" to "application/json"
+        QOAuthOobReplyHandler::networkReplyFinished(reply);
+    }
+</code></pre>
+
+<p>このように <code>networkReplyFinished()</code> のタイミングで実行することで対応した。</p>
+
+<p>ただ、コンパイラの実装によってはNGかもしれないので、 Qt Network Authorization 側で対応しないとダメだなーと。</p>
+
+<h2 id="%E3%81%AA%E3%81%9C%E3%80%81%E3%82%AF%E3%82%A8%E3%83%AA%E3%81%97%E3%81%8B%E8%A8%AD%E5%AE%9A%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E3%81%AE%E3%81%A7%E3%81%99%E3%81%8B%EF%BC%9F">なぜ、クエリしか設定できないのですか？</h2>
+
+<p>認証ができて、さあ API を呼び出してみよう、と思ったところで、 Dropbox API は REST API を捨てたようで、全ての呼び出しが POST メソッド、必要なパラメータは <code>Dropbox-API-Arg</code> ヘッダ、と特殊なことをしていたために、<code>QAbstractOAuth::post()</code> では処理が足りなかった。</p>
+
+<p>そういう訳なので、自分でヘッダとかポストデータとかを設定できるようなメソッドを実装した。</p>
+
+<h2 id="%E3%83%88%E3%83%BC%E3%82%AF%E3%83%B3%E3%81%AE%E4%BF%9D%E5%AD%98%E3%81%A8%E5%BE%A9%E5%85%83">トークンの保存と復元</h2>
+
+<p>これはハマりどころではないですが、前回できなかった認証後の状態の保存処理も実装しました。</p>
+
+<p>保存時は、<code>QOAuth2AuthorizationCodeFlow::token()</code> の結果を返すだけです。</p>
+
+<pre><code class="cpp">const QString Dropbox::serialize() const
+{
+    if (QAbstractOAuth::Status::Granted != status()) {
+        return "";
+    }
+    return token();
+}
+</code></pre>
+
+<p>読み込み時は、<code>setToken()</code> と <code>setStatus()</code> に <code>QAbstractOAuth::Status::Granted</code> を設定して、擬似的に認証済み、と状態を変更します。</p>
+
+<pre><code class="cpp">void Dropbox::deserialize(const QString&amp; token)
+{
+    if (token.isEmpty()) {
+        return;
+    }
+
+    setToken(token);
+    setStatus(QAbstractOAuth::Status::Granted);
+}
+</code></pre>
+
+<p>この時、忘れずに認証したよ、のシグナルを定義しているのであれば呼ぶ必要があります。</p>
+
+<h3 id="%E3%81%9D%E3%81%AE%E4%BB%96">その他</h3>
+
+<p>https なので通信内容を横から解析ができないので、結構面倒。
+どうにか、中間者攻撃風に途中で通信を解析できる方法を作らないと結構デバッグが面倒。</p>
+
+<h2 id="%E7%9B%AE%E6%A8%99">目標</h2>
+
+<p>とりあえず、Dropbox の アップロードはできたので、ダウンロードや、削除。
+<code>redirect_uri</code> を指定しての認証や、 Box などの別のオンラインストレージへのアクセスなどを追加していきたいな、と。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://www.slideshare.net/ginpei_jp/dropbox-api-39190004">Dropbox APIさわってみた</a> ※情報が古いっぽい</li>
+<li><a href="https://gist.github.com/voluntas/fe9394ce56ef4a305aa14168c09a3991">Dropbox API v2 仕様まとめ · GitHub</a></li>
+<li><a href="https://www.dropbox.com/developers/documentation/http/documentation">HTTP - Developers - Dropbox</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[はじめての Qt Network Authorization]]></title>
+            <link href="http://www.sharkpp.net/blog/2017/01/28/first-impression-qt-network-authorization.html"/>
+            <updated>2017-01-28T16:50:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2017/01/28/first-impression-qt-network-authorization.html</id>
+            <content type="html"><![CDATA[<p>先日、ちょうど「<a href="https://mag.osdn.jp/17/01/25/161000">設定を統合した「Qt 5.8」が登場 | OSDN Magazine</a>」の記事が目に入り、ふんふんと読んでいたところで、Qt Lite も気になりましたが、それよりも OAuth 2 と OAuth 2 に対応した <a href="https://doc.qt.io/qt-5/qtnetworkauth-index.html">Qt Network Authorization</a> が技術プレビューで追加、と書かれていたので軽く試して見ました。</p>
+
+<p>と言うことで、新しくなってから２回目の参加になる <a href="https://qt-users.connpass.com/event/48608/">Qt 勉強会 @ Nagoya No4(17.01)</a> は、Qt Network Authorization を触って見ることにしました。</p>
+
+<p>※ <a href="https://togetter.com/li/1092291">Qt 勉強会 @ Nagoya No4(17.01) - Togetterまとめ</a> で当日のつぶやきがまとめられています。</p>
+
+<p>結論を先に言うと、 <strong>Qt Network Authorization</strong> は簡単に OAuth 認証をアプリケーションへ組み込めるようです。</p>
+
+<p>気になる点としては、</p>
+
+<ul>
+<li>ドキュメントが少ない</li>
+<li>認証が通った後「Callback received. Feel free to close this page.」と書かれたページがブラウザで開いたままになる。
+
+<ul>
+<li>これは自動で閉じてほしい</li>
+</ul></li>
+<li>コールバックを受け取るためにポートを自動で開くのでファイヤーウォールなどでブロックしていると失敗する</li>
+</ul>
+
+<p>などですが、まあ現状は技術プレビューの段階なので正式版までになんとかなっていてほしいなと。</p>
+
+<h2 id="%E3%81%BE%E3%81%9A%E5%A7%8B%E3%82%81%E3%81%AB">まず始めに</h2>
+
+<p>まあ、大前提として、Qt Network Authorization を利用するには Qt 5.8 以降が必要となります。</p>
+
+<p>次に <a href="http://doc.qt.io/qt-5/qtnetworkauth-index.html">Qt Network Authorization 5.8</a> を参考に、</p>
+
+<p>.pro に</p>
+
+<pre><code>QT += network networkauth
+</code></pre>
+
+<p>と追加しましょう。</p>
+
+<p>あとは、 Twitter なり Tumblr なりなんなりへ、アプリケーションを登録して OAuth Consumer Key と Secret Key を取得しておきましょう。
+この時、コールバックURLを書く必要がある場合は、適当なアドレスを書いておけば問題ありません。</p>
+
+<h2 id="%E6%B5%81%E3%82%8C">流れ</h2>
+
+<p>最低限のプログラムの流れです。</p>
+
+<p>OAuth 1.x なら QOAuth1 クラスを基底クラスにして処理を実装していけば良いようです。</p>
+
+<p>今回は、 Tumblr で試していたので OAuth 1.0a 対応の QOAuth1 を触りますが、 QOAuth2 でも多分大体同じだと思います。</p>
+
+<p>ただ、 QOAuth1 のドキュメントがないので <a href="http://doc.qt.io/qt-5/qabstractoauth.html">QAbstractOAuth</a> クラスのドキュメントで我慢しましょう。</p>
+
+<h3 id="url%E3%81%AE%E7%99%BB%E9%8C%B2">URLの登録</h3>
+
+<p>とりあえず３種類のURLを登録する必要があります。</p>
+
+<table>
+<thead>
+<tr>
+  <th>メソッド</th>
+  <th>URL例</th>
+  <th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>setTemporaryCredentialsUrl</td>
+  <td>https://api.twitter.com/oauth/request_token<br/>https://www.tumblr.com/oauth/request_token</td>
+  <td>トークンの要求</td>
+</tr>
+<tr>
+  <td>setAuthorizationUrl</td>
+  <td>https://api.twitter.com/oauth/authenticate<br/>https://www.tumblr.com/oauth/authorize</td>
+  <td>認証</td>
+</tr>
+<tr>
+  <td>setTokenCredentialsUrl</td>
+  <td>https://api.twitter.com/oauth/access_token<br/>https://www.tumblr.com/oauth/access_token</td>
+  <td>アクセストークン取得</td>
+</tr>
+</tbody>
+</table>
+
+<p>いずれも <code>QAbstractOAuth</code> クラスの public メンバメソッドです。</p>
+
+<p>ここに変なのを指定すると <code>QOAuthOobReplyHandler::networkReplyFinished: Protocol "" is unknown</code> と言われたりします。</p>
+
+<h3 id="consumer-key-%E3%81%A8-secret-key-%E3%81%AE%E6%8C%87%E5%AE%9A">Consumer Key と Secret Key の指定</h3>
+
+<p>OAuth Consumer Key と Secret Key を指定します。
+これ自体の扱いはいろいろ厄介なのですが、とりあえずそれは置いておきます。</p>
+
+<p><code>QOAuth1.setClientCredentials()</code> に <code>QPair&lt;QString, QString&gt;</code> で指定します。</p>
+
+<p><code>QPair&lt;QString, QString&gt;().first</code> は Consumer Key で</p>
+
+<p><code>QPair&lt;QString, QString&gt;().second</code> は Secret Key です。</p>
+
+<h3 id="%E8%AA%8D%E8%A8%BC%E8%A6%81%E6%B1%82">認証要求</h3>
+
+<p>ここまで設定できたら <code>grant()</code> を呼ぶことで、認証手続きが開始されます。</p>
+
+<h3 id="%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%A7%E3%81%AE%E8%AA%8D%E8%A8%BC%E8%A6%81%E6%B1%82%E3%81%AE%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB">ブラウザでの認証要求のシグナル</h3>
+
+<p><code>grant()</code> を呼ぶと <code>QAbstractOAuth::authorizeWithBrowser</code> シグナルが飛んでくるので、あらかじめスロットで受け取れるようにしておきましょう。</p>
+
+<p><a href="http://doc.qt.io/qt-5/qabstractoauth.html#authorizeWithBrowser">QAbstractOAuth::authorizeWithBrowser</a> の中で引数に指定されたURLをウェブブラウザで開くことでいつも利用しているブラウザを用いた認証ができるような仕組みになっています。</p>
+
+<p>ただ、この処理を実現するために、アプリケーション自身でポートをリッスンし、そのアドレスをコールバックとして指定しているようで、ファイヤーウォールなどでブロックされる可能性があるので注意が必要です。</p>
+
+<h3 id="%E8%AA%8D%E8%A8%BC%E5%AE%8C%E4%BA%86%E3%81%AE%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB">認証完了のシグナル</h3>
+
+<p>認証が完了すると <a href="http://doc.qt.io/qt-5/qabstractoauth.html#grant">QOAuth1::granted</a> シグナルが飛ぶので、必要に応じてメッセージを出すなり、UIを有効化させるなりで利用できると思います。</p>
+
+<p>一応、認証後にはアクセストークンも取れるので、それを保存しておけば次回以降は認証が必要なくなると思いますが、すこし試したところうまくいきませんでした。</p>
+
+<h3 id="api%E3%82%92%E5%91%BC%E3%81%B6">APIを呼ぶ</h3>
+
+<p>ここまできたら、後は簡単で <code>QAbstractOAuth</code> に含まれるメンバメソッドの get() / head() / post() を呼ぶだけで、非同期でコンテンツが取得できます。</p>
+
+<p>要求アドレスへ <code>api_key</code> などというパラメータをユーザーがつける必要はないので扱いやすいと思います。</p>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<ul>
+<li><strong>Qt Network Authorization</strong> は簡単に OAuth 認証をアプリケーションへ組み込めそう</li>
+<li>サンプルがあるからまあなんとかなりそう</li>
+<li>ツイッター連携とか実装するのが簡単になるね！</li>
+</ul>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://doc.qt.io/qt-5/qtnetworkauth-index.html">Qt Network Authorization 5.8</a></li>
+<li><a href="https://doc-snapshots.qt.io/qt5-5.8/examples-qtnetworkauth.html">Qt Network Authorization Examples | Qt Network Authorization 5.8</a></li>
+<li><a href="http://code.qt.io/cgit/qt/qtnetworkauth.git/">qt/qtnetworkauth.git - Qt Network Authenticators; QtOAuth in particular</a></li>
+<li><a href="http://www.sharkpp.net/blog/2014/03/30/oauth-providers-list.html">oAuth 認証を提供しているサービスをまとめてみました — さめたすたすのお家</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[名古屋Qt勉強会#11 に参加しました]]></title>
+            <link href="http://www.sharkpp.net/blog/2014/01/25/qt-nagoya-11.html"/>
+            <updated>2014-01-25T17:47:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2014/01/25/qt-nagoya-11.html</id>
+            <content type="html"><![CDATA[<p><a href="http://www.zusaar.com/event/2987003">名古屋Qt勉強会#11 1/25</a></p>
+
+<h2 id="%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B">自己紹介</h2>
+
+<p>みんなで自己紹介</p>
+
+<h2 id="qt%E3%81%AAweb%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BCsilk%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">QtなWebサーバーSilkを使ってみよう</h2>
+
+<p>概要：@taskさんの開発しているQt製Webサーバーの紹介</p>
+
+<p>発表者：<a href="https://twitter.com/IoriAYANE">@ioriayane</a></p>
+
+<p>スライド：<a href="https://skydrive.live.com/view.aspx?resid=EB0105628CDDA274!1705&amp;cid=eb0105628cdda274&amp;app=PowerPoint&amp;wdo=2&amp;authkey=!APnQqbO3wjP_IGk">スライド</a></p>
+
+<p><a href="http://silk.qtquick.me/">Silk</a>とはQtによるQtのためのWebサーバー by <a href="https://twitter.com/task_jp">@task_jp</a></p>
+
+<p>Qtで簡単にHTMLが書ける</p>
+
+<p>艦メモ関連で更新とかでWebサーバーも必要になるからWebサーバーもQtで書けばいいじゃん！ってそそのかされた模様</p>
+
+<p>Silkを動かすには？</p>
+
+<ul>
+<li>VPSとか必要(バイナリを動かせる必要がある)</li>
+<li>Ubuntuだと公式配布が動く</li>
+<li>プラグインも追加できるので</li>
+</ul>
+
+<p>注意点</p>
+
+<ul>
+<li>キャッシュは設定でoffにしておかないと動的なコンテンツがうまく表示されない(デフォルトではon)</li>
+<li>Ubuntu では ポート80 を開くには sudo が必要</li>
+<li>実行権限を付けないとQMLがそのまま表示される！</li>
+</ul>
+
+<p>負荷的にはまだ気になるほどではない。 負荷ツールなどを使って試してみると良いかも？</p>
+
+<h2 id="qt5%E3%81%A7%E3%82%B0%E3%83%A9%E3%83%95%E8%A1%A8%E7%A4%BA%E3%82%92%E3%81%99%E3%82%8B%E3%82%88%EF%BC%81">Qt5でグラフ表示をするよ！</h2>
+
+<p>発表者：<a href="https://twitter.com/sazus">@sazus</a></p>
+
+<p>スライド：<a href="http://www.slideshare.net/sazuzas/20140125-qt-nagoya11qtgraph">スライド</a></p>
+
+<p>Qwtグラフについて</p>
+
+<p><a href="http://qwt.sourceforge.net/">Qwt</a>は何が出来る？</p>
+
+<ul>
+<li>Qt用(QML用は無い)</li>
+<li>散布図</li>
+<li>棒グラフ</li>
+<li>アナログクロック</li>
+<li>コンパス</li>
+<li>ダイヤル</li>
+<li>温度計</li>
+<li>ノブ</li>
+<li>カウンター</li>
+</ul>
+
+<p>最近も更新が続いている</p>
+
+<p>.pro の QwtExamples と QwtPlayground のコメントを外しておくとサンプルとかも一緒にビルドされて幸せになれるかも？</p>
+
+<p>注意点</p>
+
+<ul>
+<li>QtCreatorのビルドしたQtのバージョンでプラグインをビルドしないとQtCreatorでウィジェットが認識できないのでバージョンダイアログで確認</li>
+<li>Windows用はVCでビルドしないと行けない</li>
+</ul>
+
+<h2 id="%E3%82%82%E3%81%8F%E3%82%82%E3%81%8F">もくもく</h2>
+
+<p>今回のもくもくは <a href="https://github.com/sharkpp/hspide">hspide</a> の続き</p>
+
+<p>OpenHSP をビルドしようとしてみたけど、、、ソースを取るところで躓く</p>
+
+<p>あきらめて、依存しているソースを探す処理を追加しようとがんばる。</p>
+
+<p>しばらくさわっていなかったので色々時間がかかった。</p>
+
+<h2 id="%E6%87%87%E8%A6%AA%E4%BC%9A">懇親会</h2>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[名古屋Qt勉強会#10に参加しました]]></title>
+            <link href="http://www.sharkpp.net/blog/2013/10/20/qt-nagoya-10.html"/>
+            <updated>2013-10-20T17:12:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2013/10/20/qt-nagoya-10.html</id>
+            <content type="html"><![CDATA[<p><a href="http://www.zusaar.com/event/1027053">名古屋Qt勉強会#10 10/19 on Zusaar</a></p>
+
+<p>名古屋Qt勉強会 #10 に参加しました。</p>
+
+<p>今日はもくもく回</p>
+
+<p>OSC Tokyo とかとかと日程が被ってたので人数が少なかったです。</p>
+
+<h2 id="%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B">自己紹介</h2>
+
+<p>とりあえず、全員そろったところで自己紹介</p>
+
+<p>ちょっと、大事なお知らせがあった。</p>
+
+<blockquote class="twitter-tweet"><p>いおりさんに <a href="https://twitter.com/search?q=%23qtngy&src=hash">#qtngy</a> 雑用係を交代していただくことになりました。</p>&mdash; mizmit1222 (@mizmit1222) <a href="https://twitter.com/mizmit1222/statuses/391427552427782144">October 19, 2013</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>お疲れ様でした。</p>
+
+<h2 id="%E3%82%82%E3%81%8F%E3%82%82%E3%81%8F">もくもく</h2>
+
+<p>ひたすらもくもく</p>
+
+<p>昔作った <a href="/blog/2008/07/21/timekeep.html">TimerKeeper</a> を再実装してみようとおもって、もくもくしてみた。</p>
+
+<p>ウィジェットの配置からアクションやスロットまで、ほとんどをレイアウトエディタで作ってみた。</p>
+
+<p>久しぶりにさわったから結構手間取ったけどそれなりに。</p>
+
+<p>リスト部分は QListView でモデルベースが推奨されてるって話だったのでそのように実装してみた。 前に QStanderdItemModel をベースに作ったことはあったけど QAbstractItemModel から作ってみたけど、思ったほど大変じゃなかった、うまくできてるな〜、、、、。</p>
+
+<p>で、リストにヘッダを付けようと思って四苦八苦、、、で、<a href="http://qt-project.org/doc/qt-5.0/qtwidgets/qlistview.html">ドキュメント</a>を見たら、、、<code>"This view does not display horizontal or vertical headers; to display a list of items with a horizontal header, use QTreeView instead."</code> (訳:"このビューは、水平または垂直のヘッダを表示しません、代わりにQTreeViewを使用し、水平方向のヘッダーとアイテムのリストを表示してください。") だと、、、!?</p>
+
+<p>いや、、、そういえば前にも引っかかった気が、、、 WIN32API にどっぷりだと勘違いしちゃうのかな、、、？</p>
+
+<p>たしかに、デザイナのプロパティにそれらしい項目ないなーと思ってはいたけど、、、</p>
+
+<p>で、ウィジェットを QTreeView に変更したらそのまま表示できた、、、モデルベースはうまくできてる、便利！</p>
+
+<p>なんかヘッダが「1、2、3」って表示されてるので<a href="http://qt-project.org/doc/qt-5.0/qtcore/qabstractitemmodel.html#setHeaderData">QAbstractItemModel::setHeaderData()</a>で値を指定してみたけどうまく行かなかった、、、ので、もしかして？っと思って試してたら、値を指定しても保存してくれていない様子、<a href="http://qt-project.org/doc/qt-5.0/qtcore/qabstractitemmodel.html#headerData">QAbstractItemModel::headerData()</a>で値を返したら表示されるようになった。</p>
+
+<p>で、、、 hspide からファイルのドラッグ＆ドロップの処理をコピペ（おい）</p>
+
+<p>アイコンもとりあえずなのを使って実装。</p>
+
+<p>リストからの除外時に<a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man3/utime.3.html">ファイルのタイムスタンプを戻す処理</a>を実装、、、でとりあえず時間内に機能が動くようになった。</p>
+
+<p>今回は、結構ギリギリな感じではあったけどQtのパワーを改めて感じたもくもくであった。</p>
+
+<p>成果物つ <a href="https://github.com/sharkpp/TimestampFreezer">sharkpp/TimestampFreezer</a></p>
+
+<p><img src="/images/2013_1019_tf_ss.png" alt="TimestampFreezer on Mac" /></p>
+
+<p>バイナリはもう少し実装したらな感じかな、、、(汗)</p>
+
+<h2 id="%E6%87%87%E8%A6%AA%E4%BC%9A">懇親会</h2>
+
+<p>手羽先＆ピザ 美味しかったです。</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[名古屋Qt勉強会#9に参加しました]]></title>
+            <link href="http://www.sharkpp.net/blog/2013/07/13/qt-nagoya-9.html"/>
+            <updated>2013-07-13T22:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2013/07/13/qt-nagoya-9.html</id>
+            <content type="html"><![CDATA[<p><a href="http://www.zusaar.com/event/826006">名古屋Qt勉強会#9 7/13 on Zusaar</a></p>
+
+<p>名古屋Qt勉強会 #9 に参加しました。</p>
+
+<h3 id="%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B">自己紹介</h3>
+
+<p>集まったメンバーで自己紹介</p>
+
+<h3 id="qt-for-android">Qt for Android</h3>
+
+<p>発表者：<a href="https://twitter.com/IoriAYANE">@IoriAYANE</a></p>
+
+<p>正式採用に近づくQt for AndroidでQt Quickアプリを作る</p>
+
+<h4 id="%E5%BF%85%E8%A6%81%E3%81%AA%E7%89%A9">必要な物</h4>
+
+<ul>
+<li>Qt</li>
+<li>Android SDK</li>
+<li>Android NDK</li>
+<li>Apach Ant 1.8 以上</li>
+<li>Open JDS v6 以上 or JDK 7</li>
+</ul>
+
+<p>QtCreator で CTRL+K 押して ?Android で確認できる</p>
+
+<p>設定すると設定ダイアログがすごく重くなる！</p>
+
+<p>プロジェクトは Qt Quick2 を選ぶ！ するとAndroidが選べる</p>
+
+<p>Qtのライブラリはアプリ自体に組み込むようになったのでアプリのサイズが大きくなった！ 共有ライブラリを使うようにもできるけどそのままapkで配布すると悲惨なことに、、、</p>
+
+<p>Androidでのマルティメディアファイルの参照方法はよくわからない。</p>
+
+<p>Qt Quick2 で簡単にゲームも作れる！</p>
+
+<h3 id="raspberrypi%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6qt%E3%81%A7%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3">RaspberryPiを使ってQtでプレゼン</h3>
+
+<p>発表者：<a href="https://twitter.com/sazus">@sazus</a></p>
+
+<p>プレゼンは持ち歩く時代！</p>
+
+<p>qml-presentation-system でプレゼン</p>
+
+<ul>
+<li><a href="https://gitorious.org/bakeqtpi">bakeqtpi - Gitorious</a></li>
+<li><a href="https://github.com/sazus/miso-ni-qtpi">sazus/miso-ni-qtpi - GitHub</a></li>
+</ul>
+
+<p>Qt.labs.presentation プラグインを import することでプレゼン用の Slide エレメントなどが使えるようになる</p>
+
+<p>プレゼンというよりプログラムしてる感じ、、、</p>
+
+<h3 id="qt%E3%81%A7%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86">Qtでウェブサービスを作ろう</h3>
+
+<p>発表者：<a href="https://twitter.com/task_jp">@task_jp</a></p>
+
+<p>とりあえずJavaもphpもなんやかんやも覚えるの大変なのでサーバーもクライアントもQtで</p>
+
+<p>サーバーサイドは C++ で書きたくないしオーバースペック！</p>
+
+<p><a href="http://silk.qtquick.me/">silk - simple and flexible web framework</a></p>
+
+<p>33分だけUbuntuが起動して自由にさわれる→ <a href="http://instantserver.io">Instant Server</a></p>
+
+<p>作ってみたサービス→<a href="http://tweet2pocket.com/">Tweet2Pocket</a></p>
+
+<h3 id="qplanet%E3%81%AE%E4%BD%9C%E6%88%90%E3%81%AB%E6%8C%91%E6%88%A6%E4%B8%AD">QPlanetの作成に挑戦中</h3>
+
+<p>発表者：<a href="https://twitter.com/hermit4">@hermit4</a></p>
+
+<p><a href="http://www.planetplanet.org/">Planet Feed Reader</a></p>
+
+<p>QtでXMLを扱う方法は３種類</p>
+
+<ul>
+<li>QXmlStreamReader/Writer(QtCore)</li>
+<li>QtXml</li>
+<li>QtXmlPaterns(XQuery実装)</li>
+</ul>
+
+<p>XQuery は XPath で Dom を操作できる テンプレートを定義することで読み出した内容を使って別の内容として出すことができる。</p>
+
+<h3 id="%E3%82%82%E3%81%8F%E3%82%82%E3%81%8F">もくもく</h3>
+
+<p>以下もくもく</p>
+
+<p>Qtのインストールを何度もやり直しつつhspideをやっとMacでビルド通るようにしました。</p>
+
+<p>アイコンが表示されてなかったので <a href="http://www.dotapon.sakura.ne.jp/blog/?p=776">MacアプリのRetina対応アイコン(*.icns)を作成する方法 | DOTAPON Blog</a> や <a href="http://qt-project.org/doc/qt-4.8/appicon.html">Setting the Application Icon | Documentation | Qt Project</a> あたりを見ながらやってみたけどうまく行かなかったところで終了。</p>
+
+<h3 id="%E6%87%87%E8%A6%AA%E4%BC%9A">懇親会</h3>
+
+<p>手羽先＆ピザ</p>
+
+<p>もぐもぐおいしかったです。</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Boost.勉強会 #11 東京 に参加しました]]></title>
+            <link href="http://www.sharkpp.net/blog/2013/06/01/boost-11-in-tokyo.html"/>
+            <updated>2013-06-01T22:47:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2013/06/01/boost-11-in-tokyo.html</id>
+            <content type="html"><![CDATA[<p>久しぶりのboost勉強会でした。 早速ですが、レポートというかメモというかをドーゾです。</p>
+
+<ul>
+<li><a href="http://partake.in/events/e75cde86-75c8-47ce-b647-2dbd0495b053#">Boost.勉強会 #11 東京 - PARTAKE</a></li>
+<li><a href="http://sekico.co/zaseki/141">Boost.勉強会 #11 東京 #boostjpの座席表 - セキココ</a></li>
+</ul>
+
+<h2 id="c%2B%2B%E3%83%9D%E3%82%B1%E3%83%83%E3%83%88%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">C++ポケットリファレンスについて</h2>
+
+<p>著者前へ→一人足りないwww</p>
+
+<p>C++11の日本語初のリファレンス。</p>
+
+<p>著者ズ→ <a href="https://twitter.com/nyaocat">@nyaocat</a> <a href="https://twitter.com/andochin">@andochin</a> <a href="https://twitter.com/hotwatermorning">@hotwatermorning</a> <a href="https://twitter.com/wraith13">@wraith13</a> <a href="https://twitter.com/egtra">@egtra</a> <a href="https://twitter.com/cpp_akira">@cpp_akira</a></p>
+
+<p>コミュニティから本を出していきたい！</p>
+
+<ul>
+<li>日本語の問題が苦労した</li>
+<li>Redmineで校正を管理</li>
+</ul>
+
+<h2 id="boost%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E4%B8%80%E5%91%A8%E3%81%AE%E6%97%85-1.51.0%3F1.53.0">Boostライブラリ一周の旅 1.51.0?1.53.0</h2>
+
+<ul>
+<li>発表者：<a href="https://twitter.com/cpp_akira">@cpp_akira</a></li>
+<li>スライド：<a href="http://www.slideshare.net/faithandbrave/boost-tour-1530-merge">Boost Tour 1.53.0 merge</a></li>
+</ul>
+
+<h3 id="atomic">Atomic</h3>
+
+<p>InterlockedIncrimentなどの置き換え、mutexの代わりなど。</p>
+
+<h3 id="lookfree">Lookfree</h3>
+
+<p>キュー、スタック、順位付きキューなどの実装がある。 push() や pop() がシュッパイする可能性があるので注意が必要！</p>
+
+<h3 id="coroutine">Coroutine</h3>
+
+<p>処理中に中断＆復帰ができる。</p>
+
+<p>次のバージョン(1.54)でStackOverflowをあまり気にしなくてすむ機能が入る。</p>
+
+<h3 id="multiprecision">Multiprecision</h3>
+
+<p>多倍長整数計算ライブラリ。</p>
+
+<h3 id="odeint">Odeint</h3>
+
+<p>常微分方程式を解くライブラリ。 ゲームでも使えるらしい。</p>
+
+<h2 id="c%2B%2B%E3%81%A7%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92db%E3%81%AB%E4%BF%9D%E5%AD%98%E3%81%97%E3%81%A6%E6%89%B1%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">C++でデータをDBに保存して扱ってみよう</h2>
+
+<ul>
+<li>発表者：<a href="https://twitter.com/sakisaka7">@sakisaka7</a></li>
+<li>スライド：<a href="http://beta.saki7.jp/slides/boost-study-11-cpp-database/">C++でDBにデータを保存して扱ってみよう :: Boost.勉強会 #11</a></li>
+</ul>
+
+<p>リレーショナルデータベース使ってる人→６〜７割</p>
+
+<p>C++で使えるO/Rマッパーのはなし。</p>
+
+<p>JSONで大量のデータの管理はいくない！</p>
+
+<p>Wt(ウィッティー) <a href="http://www.webtoolkit.eu/wt/doc/tutorial/dbo/tutorial.html">Wt::Dbo Tutorial</a></p>
+
+<p>JSONと比べデータベースを使うと、データの整合性や検索、同期、そしてデータ構造の管理などもできる！</p>
+
+<p>bind処理も実装してある。</p>
+
+<p>ほかにもC++のO/Rマッパーには次のような物がある。</p>
+
+<ul>
+<li><a href="http://www.treefrogframework.org/ja/%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88/%E3%83%A2%E3%83%87%E3%83%AB/or%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0">O/Rマッピング | TreeFrog Framework</a></li>
+<li><a href="http://www.codesynthesis.com/products/odb/">ODB - C++ Object-Relational Mapping (ORM)</a></li>
+<li><a href="https://code.google.com/p/boost-rdb/">boost.RDB</a></li>
+</ul>
+
+<p>会場からつ boost.python boost.Fusion などを絡め統一的なのができるのでは？</p>
+
+<h3 id="%E3%81%8A%E3%81%BE%E3%81%91">おまけ</h3>
+
+<p>何故、あえてC++なのか</p>
+
+<ul>
+<li>データは表示するための物</li>
+<li>見やすいインターフェースが必要</li>
+<li>HTMLとかのインターフェースに特化した物を使う</li>
+<li>C++はデータを表示するインターフェースには向いていないのではないか？</li>
+<li>C++の立ち位置を再確認するべき！</li>
+<li>C++とWeb系言語を連携しよう！</li>
+</ul>
+
+<h2 id="%E6%98%BC%E4%BC%91%E3%81%BF%EF%BC%86c%2B%2B%E3%83%9D%E3%82%B1%E3%83%83%E3%83%88%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9%E8%B3%BC%E5%85%A5%E7%A5%AD%E3%82%8A">昼休み＆C++ポケットリファレンス購入祭り</h2>
+
+<p>C++ポケットリファレンスをまだ購入していない人を有志で募って近くの本屋さんで購入しようって流れになったので、乗りました。</p>
+
+<p>集まったのは9人</p>
+
+<p>一番近くの三省堂書店に突撃しましたが、4冊しか置いてませんでした(後でTwitterでtweetされていましたがいつの間にかまた補充されていたようです)</p>
+
+<p>周辺を探しましたが新刊でしかも技術書は扱っているところが少ないようで見つかりませんでした。</p>
+
+<p>結局、未購入の人は秋葉原まで行って購入してきたようです(自分は三省堂書店で購入しました)。</p>
+
+<p>あと、午後の発表の合間に著者ズにサインをしていただきました。</p>
+
+<h2 id="the-instrumental-c%2B%2B">The Instrumental C++</h2>
+
+<ul>
+<li>発表者：<a href="https://twitter.com/hotwatermorning">@hotwatermorning</a></li>
+<li>スライド：<a href="https://www.dropbox.com/s/8t7nfmxh7yprjzv/The%20Instrumental%20C%2B%2B.pdf">The Instrumental C++.pdf</a></li>
+</ul>
+
+<p>DTMer(D™を使っている人)向けの発表</p>
+
+<p>※ただし、対象者は数人の模様</p>
+
+<p>VSTプラグインを実装してみた話</p>
+
+<p>サンプルでノイズを作るのに boost.Random を使っています。</p>
+
+<h3 id="midi">MIDI</h3>
+
+<ul>
+<li>ノートオン‥‥音を出す信号、ピアノの鍵盤を押したり笛を吹いたりする動作</li>
+<li>ノートオフ‥‥音を止める信号、ピアノの鍵盤を離したりする動作</li>
+</ul>
+
+<h3 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h3>
+
+<ul>
+<li><a href="http://gihyo.jp/book/2013/978-4-7741-5522-7">「サウンドプログラミング入門」青木直史</a> オススメ</li>
+<li>VSTプラグインをがんばって実装してもホスト側が機能を実装していないこともあるので注意！</li>
+</ul>
+
+<h2 id="c%2B%2B%E3%81%A7%E3%81%BC%E3%81%8F%E3%81%8C%E5%BF%98%E3%82%8C%E3%81%8C%E3%81%A1%E3%81%AA%E3%81%93%E3%81%A8">C++でぼくが忘れがちなこと</h2>
+
+<ul>
+<li>発表者：<a href="https://twitter.com/andochin">@andochin</a></li>
+</ul>
+
+<p>C++覚えてますか？</p>
+
+<ul>
+<li>型周り、char と signed char と unsigned char や int[n]_t</li>
+<li>typedefとcv修飾</li>
+<li>virtualはいらない、overrideでいい</li>
+<li>const参照での浮動小数点型と整数型、 const int &amp;i = d; // dのテンポラリが保持される</li>
+<li>アクセス修飾子、、、、</li>
+<li>operator&amp; をオーバーロードしていても addressof()でポインタ値がとれる</li>
+<li>operator void の挙動、operator void をオーバーロードしていると static_cast<void>(s); とするとGCC4.7では呼ばれる</li>
+<li>uniformd initializerによる初期化、 {} でクラスも初期化ができる。</li>
+<li>クラスメンバの初期化の順番は宣言した順番に初期化される。</li>
+</ul>
+
+<p>C言語との違い</p>
+
+<ul>
+<li>main() Cではreturnが必要だけどC++では必要ない、C++では再起などが禁止</li>
+<li>式中の型宣言</li>
+<li>条件式の結果、代入式、カンマ演算子の結果がCだと右辺値だけどC++は左辺値</li>
+<li>戻り値の有無、Cではエラーにならないが不定な値が返る、C++ではエラー</li>
+<li>typedefと構造体(クラス)、C++では同じスコープで別のtypedefを作れない</li>
+<li>定数の扱い、C++では未初期化の定数を作れない const int NG;</li>
+</ul>
+
+<h2 id="cilkplus%2C-tbb%2C-openmp">CilkPlus, TBB, OpenMP</h2>
+
+<ul>
+<li>発表者：<a href="https://twitter.com/krustf">@krustf</a></li>
+</ul>
+
+<p>並列プログラミングの話</p>
+
+<p>支える技術</p>
+
+<ul>
+<li>Intel CilkPlus</li>
+<li>Intel TBB</li>
+<li>OpenMP</li>
+<li>Future/Promise</li>
+</ul>
+
+<h3 id="intel-cilkplus">Intel CilkPlus</h3>
+
+<p>並列プログラミング用のコンパイル拡張、GCCやLLVMでも使用可能。</p>
+
+<ul>
+<li>cilk&#95;spawn と cilk&#95;sync</li>
+<li>Array Notation 自動でSIMD化される</li>
+<li>＃pragma simd</li>
+<li>Elemental Functions</li>
+</ul>
+
+<h3 id="intel-tbb">Intel TBB</h3>
+
+<p>C++STL風のアルゴリズム</p>
+
+<p>parallel&#95;for と parallel&#95;reduce があればだいたい事足りる。</p>
+
+<h4 id="parallel_for">parallel_for</h4>
+
+<ul>
+<li>並列でforを実行</li>
+<li>範囲の分割幅を指定</li>
+<li>C++11のラムダ式が使える</li>
+</ul>
+
+<h4 id="parallel_reduce">parallel_reduce</h4>
+
+<ul>
+<li>並列リダクションを実行</li>
+<li>C++11のラムダ式が使える</li>
+</ul>
+
+<h3 id="openmp">OpenMP</h3>
+
+<p>＃pragma で指示</p>
+
+<h3 id="future%2Fpromise">Future/Promise</h3>
+
+<p>詳しくは、去年の筑波で発表された資料を参照</p>
+
+<h3 id="%E3%83%9E%E3%83%BC%E3%82%AF%E3%81%99%E3%82%8B%E7%90%86%E7%94%B1">マークする理由</h3>
+
+<p>コンパイラは並列化可能かどうかの判断が難しい。</p>
+
+<p>なので、プログラマが指示してあげる。</p>
+
+<h3 id="%E3%83%99%E3%83%B3%E3%83%81%E3%83%9E%E3%83%BC%E3%82%AF">ベンチマーク</h3>
+
+<p>時間がなかったので適当</p>
+
+<p>性能差には大きく変化はない。</p>
+
+<ul>
+<li><a href="http://accc.riken.jp/2145.htm">姫野ベンチマーク</a></li>
+</ul>
+
+<h3 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h3>
+
+<ul>
+<li>CilkPlus や Intel TBB を使おう</li>
+<li>C++11 が使える場合は Promise もいいかも</li>
+<li><a href="http://www.amazon.co.jp/dp/4877833056">構造化並列プログラミング</a> がおすすめ</li>
+</ul>
+
+<h2 id="hello%2C-c%2B%2B-%2B-javascript-world%21">Hello, C++ + JavaScript World!</h2>
+
+<ul>
+<li>発表者：<a href="https://twitter.com/hecomi">@hecomi</a></li>
+</ul>
+
+<h3 id="%E4%B8%96%E7%95%8C%E8%A6%B3">世界観</h3>
+
+<ul>
+<li>ChromeのJSエンジンはV8</li>
+<li>V8はC++で実装</li>
+<li>SimCityやNode.jsやQtでも</li>
+<li>NaitiveClient</li>
+<li><a href="https://github.com/kripken/emscripten">Emscripten</a> (C++をJSに変換)</li>
+<li>Android</li>
+</ul>
+
+<h3 id="node.js">Node.js</h3>
+
+<p>サーバーサイド JavaScript プラットフォーム</p>
+
+<p>ブラウザでできないようなことができる</p>
+
+<ul>
+<li>ローカルのファイルを読み込んだり</li>
+<li>サーバーを立てたり</li>
+<li>npm モジュールで拡張可能</li>
+</ul>
+
+<h3 id="qt">Qt</h3>
+
+<p>QtQuickでV8を使用</p>
+
+<h3 id="naitiveclient">NaitiveClient</h3>
+
+<ul>
+<li>NaCl(塩)</li>
+<li>ブラウザ上で安全にネイティブのコードを実行</li>
+<li>Pepper(湖沼) API ローカルファイル、キーボード、ゲームパッドへのアクセスなど</li>
+<li>Twitterより： Portable NaCl LLVM中間言語を使いマルチプラットフォーム対応に</li>
+</ul>
+
+<h3 id="emscripten">Emscripten</h3>
+
+<ul>
+<li>LLVM-IRをJavaScriptに変換</li>
+<li>C++ →(Clang)→ LLVM-IR →(Emscripten)→ JavaScript</li>
+<li>UnrealEnginがヌルサクで → <a href="http://www.unrealengine.com/html5/">Epic Citadel</a></li>
+<li>Qtもブラウザで動く！</li>
+<li>HellowWorldは12万行に!?</li>
+<li>asm.js形式で吐き出すので OdinMonkey で動かすとロードは遅いけどヌルサク</li>
+</ul>
+
+<h2 id="%E6%9C%AA%E6%9D%A5%E3%81%AEc%2B%2B%E3%81%AB%E5%90%91%E3%81%91%E3%81%A6%E6%9B%B8%E3%81%84%E3%81%9F%E8%AB%96%E6%96%87%E3%81%A8%E3%81%84%E3%81%86%E5%90%8D%E3%81%AE%E3%83%8D%E3%82%BF%E5%B8%B3">未来のC++に向けて書いた論文という名のネタ帳</h2>
+
+<ul>
+<li><p>発表者：<a href="https://twitter.com/Sigureya">@Sigureya</a></p></li>
+<li><p>マクロ的な何か(boost.spirit.qi)</p></li>
+<li><p>まとめ、LISPは神の言語、C++は邪心の言語</p></li>
+<li>LISPの布教</li>
+<li>30分のところ、5分で終了</li>
+</ul>
+
+<h2 id="%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E3%81%AE%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">コンテナのパフォーマンスについて</h2>
+
+<ul>
+<li><p>発表者：<a href="https://twitter.com/hgodai">@hgodai</a></p></li>
+<li><p>29歳教</p></li>
+<li><p>Ivar jacobson と一緒に仕事をしたことが</p></li>
+<li>思考を硬直させない</li>
+<li>常識、慣例、しきたり、都市伝説に惑わされない、 <strong>自分の目で確かめる</strong></li>
+</ul>
+
+<h3 id="std%3A%3Avector%E3%81%A7%E3%81%84%E3%81%84%E3%81%AE%EF%BC%9F">std::vectorでいいの？</h3>
+
+<ul>
+<li>プロフェッショナルは「とりあえず」は似合わない</li>
+<li>「とりあえず」していいのは「ビール」</li>
+</ul>
+
+<h3 id="%E3%83%99%E3%83%B3%E3%83%81%E3%83%9E%E3%83%BC%E3%82%AF">ベンチマーク</h3>
+
+<ul>
+<li>std::deque + Win/VS2012 はなぜかすごい遅い</li>
+<li>oreoreアロケータ使った場合、std::deque や boost::stable_vector が遅い</li>
+<li>emplace&#95;back() つかえるなら push&#95;back() を使うよりパフォーマンス的に良いことが多い</li>
+<li>insert()は std::list は爆速、大きなデータの場合は boost::stable_vector も候補に加えてもよい</li>
+<li>検索は unorderd_map が早い、ソート済みvectorはそこそこ早い</li>
+</ul>
+
+<p><a href="http://ssa.techarts.co.jp/">ソフトウエア研究会in秋葉原</a></p>
+
+<h2 id="c%2B%2B14%E3%81%AE%E6%A6%82%E8%A6%81">C++14の概要</h2>
+
+<ul>
+<li><p>発表者：<a href="https://twitter.com/cpp_akira">@cpp_akira</a></p></li>
+<li><p>C++11のバグ修正＆マイナーアップデート、改め、色々機能追加あり</p></li>
+<li><p>C++17を目指すC++1yも</p></li>
+</ul>
+
+<h3 id="%E3%82%B3%E3%82%A2%E6%A9%9F%E8%83%BD">コア機能</h3>
+
+<ul>
+<li>2進数リテラル、 0b1100 で 12</li>
+<li>実行時サイズの配列、 定数だけでなくローカル変数や引数でも配列を初期化できるようになった、確保できなかったり0が指定された場合は例外が発生する</li>
+<li>通常の関数の戻り値型推論、ラムダ式と同様に通常の関数でも戻り値を推論できるようにする</li>
+<li>ジェネリックラムダ、ラムダ式の引数にautoが使えるようになる</li>
+<li>一般化されたらラムダキャプチャ</li>
+<li>constexpr関数の制限緩和</li>
+<li>変数テンプレート、変数定義にテンプレートを使用できるようになる</li>
+<li>軽量コンセプト、C++11で入らなかったコンセプトの軽量版</li>
+</ul>
+
+<h3 id="%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA">ライブラリ</h3>
+
+<ul>
+<li>make&#95;unique()、std::unique&#95;ptr のヘルパ関数</li>
+<li>exchange()、非並列プログラミング用compere_exchange()</li>
+<li>コンパイル時整数シーケンス、主にstd::tuple用</li>
+<li>tupleの型指定get()、インデックスではなく指定した型を取得できるようになる、最終的に変わるかも？</li>
+<li>quotedマニュピレータ、Boost.Iostreams由来</li>
+<li>ユーザー定義リテラルライブラリ</li>
+<li>Type Traitsのエリアステンプレート版、C++11のType Traitsライブラリに対するエイリアステンプレートのラッパー</li>
+<li>optional型、boost::optional由来、一部boostから変更(none→nullopt)</li>
+<li>実行時サイズの配列、dynarray<T>、std::vector風なインターフェースを持ちスタックでメモリを確保するコンテナ</li>
+<li>共有ミューテックス、multiple-reader / single-writer なミューテックス、shared_lock<T> / .lock_shared() が追加</li>
+<li>ファイルシステム、ファイル属性やパス、ディレクトリのサポート、boost.FileSystem V3由来</li>
+<li>ネットワークライブラリの基本的な機能、間に合わないのでバイトオーダーの交換機能のみ</li>
+</ul>
+
+<p>入らないもの</p>
+
+<ul>
+<li>モジュールシステム</li>
+<li>Rangeライブラリ</li>
+<li>コルーティン</li>
+</ul>
+
+<p>などなど</p>
+
+<h3 id="%E3%81%93%E3%81%93%E3%81%8B%E3%82%89%E5%A7%8B%E3%82%81%E3%82%88%E3%81%86">ここから始めよう</h3>
+
+<ul>
+<li><a href="http://isocpp.org/">Standard C++ Foundation</a></li>
+<li>↑のRSS</li>
+<li>std-proposalsのML</li>
+</ul>
+
+<h3 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h3>
+
+<ul>
+<li>C++14には便利な機能が入るっぽい、ただし状況が変わるかも？</li>
+<li>C++14の次はC++1y</li>
+<li>C++の仕様策定はクローズドからオープンに</li>
+</ul>
+
+<h2 id="%E5%85%A8%E4%BD%93%E7%9A%84%E3%81%AA%E3%81%BE%E3%81%A8%E3%82%81">全体的なまとめ</h2>
+
+<p>久しぶりのboost.勉強会でしたが、相変わらずboost成分が少ないなーと。</p>
+
+<p>あと、C++ポケットリファレンスを買って著者にサインをもらう流れが面白かったなと、、、ただ、自分もですが休憩時間を越えてサインに行列ができたのはちょっとまずかったと反省(自分は越える前に席には戻っていましたが、、)。</p>
+
+<p>個人的にはJavaScript関連はジャストミートで聞いていて楽しかったです。</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[続・QtQuick2でアプリ作ってみたよ]]></title>
+            <link href="http://www.sharkpp.net/blog/2013/05/19/qtquick2-taskmemgraph.html"/>
+            <updated>2013-05-19T18:48:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2013/05/19/qtquick2-taskmemgraph.html</id>
+            <content type="html"><![CDATA[<p>勉強会の続きが結構かかってしまったけど何とかそれなりに形になりました。</p>
+
+<p>もしくは、力尽きたともいうorz</p>
+
+<p><img src="/images/2013_0519_qtquick2_mac.png" alt="QtQuick2 on Mac" /> <img src="/images/2013_0519_qtquick2_win.png" alt="QtQuick2 on Windows" /></p>
+
+<p>とりあえず、完成までの流れおば</p>
+
+<h2 id="qtquick2%E3%81%A7ui%E6%8F%8F%E7%94%BB%E3%82%92%E4%BD%9C%E6%88%90">QtQuick2でUI描画を作成</h2>
+
+<p>勉強会ではここで力尽きました。</p>
+
+<p>QtQuick2でCanvasエレメント上に円グラフを描き描きしてそれらしい形に。</p>
+
+<p>後からTextエレメントでプロセス名の一覧とメモリの使用量を表示できるようにしました。</p>
+
+<h3 id="%E5%8F%82%E8%80%83">参考</h3>
+
+<ul>
+<li><a href="http://qt-project.org/doc/qt-5.0/qtquick/qml-qtquick2-loader.html">QtQuick 5.0: Loader | Documentation | Qt Project</a></li>
+<li><a href="http://qt-project.org/doc/qt-5.0/qtquick/qml-qtquick2-item.html">QtQuick 5.0: Item | Documentation | Qt Project</a></li>
+<li><a href="http://relog.xii.jp/mt5r/2012/03/qmlqt-16.html">QML(Qt)のエレメントを動的に生成をする - 理ろぐ</a></li>
+<li><a href="http://harmattan-dev.nokia.com/docs/platform-api-reference/xml/daily-docs/libqt4/qdeclarativemodels.html#qobjectlist-based-model">Qt 4.7: QML Data Models</a></li>
+</ul>
+
+<h2 id="qml%E3%81%A8c%2B%2B%E3%81%AE%E9%80%A3%E6%90%BA">QMLとC++の連携</h2>
+
+<p>最初作ったプロジェクトではどうもC++の関数が呼べなかったらしく少し回り道を、、、してしまったがプロジェクトを作り直して準備完了。</p>
+
+<p>単純なQStringとかを返すのではなくいろんな情報を持つオブジェクトを返したかったので少し変わった事をしています。</p>
+
+<p><a href="https://github.com/sharkpp/TaskMemGraph/blob/master/processlist.h">TaskMemGraph/processlist.h at master ? sharkpp/TaskMemGraph - GitHub</a> や <a href="https://github.com/sharkpp/TaskMemGraph/blob/master/processinfo.h">TaskMemGraph/processinfo.h at master ? sharkpp/TaskMemGraph - GitHub</a> など で実装しているのですが、<code>ProcessInfo</code>クラスは<code>QObject</code>から派生していて、<code>Q_PROPERTY</code>でプロパティーを定義しています。</p>
+
+<p>こうすると、QML側では、</p>
+
+<pre><code>var v = item;
+var yy = v.name;
+</code></pre>
+
+<p>みたいに呼び出せます。</p>
+
+<p>で、<code>ProcessList</code>クラスも<code>QObject</code>から派生していて、<code>Q_INVOKABLE</code>で必要なメソッドを定義してあります。</p>
+
+<p>戻り値を<code>QList&lt;QObject*&gt;</code>で定義するとQML側では、</p>
+
+<pre><code>var v = hoge.data();
+for(i in v) {
+    var yy = v[i].name;
+}
+</code></pre>
+
+<p>みたいに呼び出せます。</p>
+
+<p>もちろん、</p>
+
+<pre><code>qmlRegisterType&lt;ProcessInfo&gt;("ProcessLib",1,0,"ProcessInfo");
+qmlRegisterType&lt;ProcessList&gt;("ProcessLib",1,0,"ProcessList");
+</code></pre>
+
+<p>のような感じで型の登録が必要になります。</p>
+
+<p>ただ、なかなか思ったような処理のやり方がわからず探し回りました。</p>
+
+<h3 id="%E5%8F%82%E8%80%83">参考</h3>
+
+<ul>
+<li><a href="http://utworks.net/?p=64">&#91;Qt&#93;&#91;QML&#93;QMLとC++コードの連携 ? Utworks</a></li>
+<li><a href="http://qt-project.org/doc/qt-4.8/qtbinding.html">Using QML Bindings in C++ Applications | Documentation | Qt Project</a></li>
+<li><a href="http://d.hatena.ne.jp/hecomi/20130503/1367594609">QtQuick での C++ × QML バインディングについてまとめてみた - 凹みTips</a></li>
+<li><a href="http://www.developer.nokia.com/Community/Wiki/Calling_Qt_class_methods_from_QML">Calling Qt class methods from QML - Nokia Developer Wiki</a></li>
+<li><a href="http://stackoverflow.com/questions/14287252/accessing-c-qlists-from-qml">Accessing C++ QLists from QML - Stack Overflow</a></li>
+</ul>
+
+<h2 id="mac%E3%81%A7%E3%81%AE%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E6%93%8D%E4%BD%9C%E3%81%AE%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">Macでのプロセス操作のプログラミング</h2>
+
+<p>ここから、完全に未知の領域です。</p>
+
+<p>Macのプログラム、なにそれ？おいしいの？状態でしたが、、、そもそも、何をキーワードにして検索をすればいいかとか どこを見ればいいかとかが分からず、今回一番苦労したところです。</p>
+
+<p>結局は、<a href="https://developer.apple.com/">Apple Developer</a>が総本山だったってことが分かったのですが、それにしても 目的の処理をしようとする方法も分からず？？？な状態でしたが、まあ、何とかなるもんです。</p>
+
+<h3 id="%E5%8F%82%E8%80%83">参考</h3>
+
+<ul>
+<li><a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man3/sysctl.3.html">sysctl(3) Mac OS X Developer Tools Manual Page</a></li>
+<li><a href="https://blogs.oracle.com/dns/entry/understanding_the_authorization_framework_on">Using task&#95;for&#95;pid on Mac OS X (Doug's Note System)</a></li>
+<li><a href="http://os-tres.net/blog/2010/02/17/mac-os-x-and-task-for-pid-mach-call/">Mac OS X and task&#95;for&#95;pid() mach call - Ivan's blog</a></li>
+<li><a href="https://www.evernote.com/pub/view/wishi/crazylazy/b213a94c-0780-4271-8c77-7da7f92a62b3?locale=ja#st=p&amp;n=b213a94c-0780-4271-8c77-7da7f92a62b3">Evernote 共有ノートブック: IT sec research</a></li>
+<li><a href="http://qt-project.org/doc/qt-5.0/qtdoc/qmake-platform-notes.html">QtDoc 5.0: qmake Platform Notes | Documentation | Qt Project</a></li>
+<li><a href="http://d.hatena.ne.jp/ny23/20100818/p2">(Mac OS X / LINUX での) 外部コマンドの消費メモリのモニタリング - ny23の日記</a></li>
+</ul>
+
+<h2 id="windows%E3%81%A7%E3%81%AE%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E6%93%8D%E4%BD%9C%E3%81%AE%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">Windowsでのプロセス操作のプログラミング</h2>
+
+<p>こっち側はまあAPIとかは少し探しましたが、まあそれなりで、、、</p>
+
+<p>MSDNで日本語の内容も読めるし圧倒的に日本語の資料が多いので簡単です。</p>
+
+<p>こういうところはユーザー数の違いが顕著に出ますね。</p>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<p>初めてQtQuick2をやってみて、、、まあそれなりに手が動いたのはJavaScriptベースだったからでしょうか？</p>
+
+<p>まだ、ちょっと自分の作りたい方向性のものとちょっと違うので、このままどっぷりはまっていくかというとそうでもなさそうですが、 雰囲気は掴めたので何かの時には、またを出しそうな感じです。</p>
+
+<p>そもそも、初っ端からC++との連携とかMacのプロセス操作とかハードルが高すぎましたねorz</p>
+
+<p><a href="https://github.com/sharkpp/TaskMemGraph">sharkpp/TaskMemGraph - GitHub</a>でソースを公開していますがバイナリはなんかdllがたくさん必要なので公開していません。 主にサイズ的な制限で、、、Windows側は必要なDLLが総計40MBですってよorz</p>
+
+<p>ちなみに、動かすのに管理者権限が必要になります。</p>
+
+<p>Mac側は確実に、そして、Windows側はXPでしか試していないですが、恐らく管理者権限が必要だと思います。</p>
+
+<p>Macで動かしたアプリのスクショです。</p>
+
+<p><a href="/images/2013_0519_qtquick2_mac.jpg"><img src="/images/2013_0519_qtquick2_mac.png" alt="QtQuick2 on Mac" /></a></p>
+
+<p>こっちはWindowsで動かしたアプリのスクショです。</p>
+
+<p><a href="/images/2013_0519_qtquick2_win.jpg"><img src="/images/2013_0519_qtquick2_win.png" alt="QtQuick2 on Windows" /></a></p>
+
+<p>自分で試してみたいという奇特な方は、<a href="https://github.com/sharkpp/TaskMemGraph">sharkpp/TaskMemGraph - GitHub</a>からソースを取得して遊んでみてください。</p>
+
+<p>ではでは</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[ANSI Escape Sequences Emulator作ったよ]]></title>
+            <link href="http://www.sharkpp.net/blog/2013/03/10/aese-command.html"/>
+            <updated>2013-03-10T00:30:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2013/03/10/aese-command.html</id>
+            <content type="html"><![CDATA[<p>ふと思いついて、ANSIエスケープシーケンスエミュレータなるものを作ってみました。</p>
+
+<p>ソースは <a href="https://github.com/sharkpp/AnsiEscapeSequencesEmulator">sharkpp/AnsiEscapeSequencesEmulator - GitHub</a> に公開してあります。</p>
+
+<p>バイナリも出来ます→<a href="/files/aese_20130310_r2402.zip">ダウンロード</a></p>
+
+<p>まずは、百聞は一見にしかずです。</p>
+
+<p>↓が、</p>
+
+<p><a href="/images/2013_0310_aese_before.png"><img src="/images/2013_0310_aese_before_s.png" alt="aese適用前" /></a></p>
+
+<p>↓になります。</p>
+
+<p><a href="/images/2013_0310_aese_after.png"><img src="/images/2013_0310_aese_after_s.png" alt="aese適用後" /></a></p>
+
+<p>いやほんと、ぱっと思いついてさくっと作った割にはうまく動いてくれていい感じです。</p>
+
+<p>以下、README からです。</p>
+
+<h2 id="%E4%BD%95%E3%81%8C%E5%87%BA%E6%9D%A5%E3%82%8B%EF%BC%9F">何が出来る？</h2>
+
+<p>Windows 標準のターミナル、いわゆる、「コマンドプロンプト」は、 ANSI エスケープシーケンスをサポートしていません。</p>
+
+<p>aese コマンドは Windows API でANSIエスケープシーケンスを再現します。</p>
+
+<p>下記の機能を実装しています。</p>
+
+<ol>
+<li>標準出力を受け取りエスケープシーケンスを取り除く</li>
+<li>文字属性の再現(部分的)</li>
+<li>カーソルの移動の再現(未実装)</li>
+</ol>
+
+<h2 id="%E4%BD%BF%E3%81%84%E6%96%B9">使い方</h2>
+
+<pre><code class="bash">&gt; echo ^[[43maaa^[[0m|aese
+</code></pre>
+
+<p><code>^[</code> は <code>CTRL + [</code> と入力します。コードは <code>0x1B</code> です。</p>
+]]></content>
+        </entry>
+    </feed>

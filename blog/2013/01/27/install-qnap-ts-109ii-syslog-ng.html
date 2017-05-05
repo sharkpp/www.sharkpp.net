@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>QNAP TS-109II への syslog-ng の導入メモ &mdash; さめたすたすのお家</title>
+        <meta charset="utf-8">
+        <meta name="theme-color" content="#6877AA">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="index, follow">
+        <meta name="keywords" content="QNAP,Linux">
+        <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/lightbox2/css/lightbox.css" rel="stylesheet" type="text/css" />
+        <link href="/css/style.min.css" rel="stylesheet" type="text/css" />
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <link rel="apple-touch-startup-image" href="/images/noname/2048x2048.png">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="shortcut icon" sizes="76x76" href="/images/noname/76x76.png">
+        <link rel="shortcut icon" sizes="120x120" href="/images/noname/120x120.png">
+        <link rel="shortcut icon" sizes="128x128" href="/images/noname/128x128.png">
+        <link rel="shortcut icon" sizes="152x152" href="/images/noname/152x152.png">
+        <link rel="shortcut icon" sizes="196x196" href="/images/noname/196x196.png">
+        <link rel="shortcut icon" sizes="512x512" href="/images/noname/512x512.png">
+        <link rel="shortcut icon" sizes="1024x1024" href="/images/noname/1024x1024.png">
+        <link rel="shortcut icon" sizes="2048x2048" href="/images/noname/2048x2048.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/noname/76x76.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/noname/120x120.png">
+        <link rel="apple-touch-icon" sizes="128x128" href="/images/noname/128x128.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/noname/152x152.png">
+        <link rel="apple-touch-icon" sizes="196x196" href="/images/noname/196x196.png">
+        <link rel="apple-touch-icon" sizes="512x512" href="/images/noname/512x512.png">
+        <link rel="apple-touch-icon" sizes="1024x1024" href="/images/noname/1024x1024.png">
+        <link rel="apple-touch-icon" sizes="2048x2048" href="/images/noname/2048x2048.png">
+
+        <link rel="stylesheet" href="/assets/highlightjs/styles/github.css" />
+        <link rel="alternate" type="application/atom+xml" href="/atom.xml" title="さめたすたすのお家 activity feed" />
+        <style>
+        /** quick fix because bootstrap <pre> has a background-color. */
+        pre code { background-color: inherit; }
+        </style>
+                <style>
+        #go-top {
+            display: none;
+            bottom: 40px;
+            right: 30px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #fff;
+            position: fixed;
+            z-index: 999;
+        }
+        #go-top > i {
+            font-size: 36px;
+            line-height: 40px;
+        }
+        #toc {
+            margin-left: 10px;
+            margin-bottom: 10px;
+            max-width: 350px;
+            word-wrap: break-word;
+        }
+        </style>
+                    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">さめたすたすのお家</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav pull-right">
+                        <li><a href="/blog/"><i class="fa fa-archive"></i> アーカイブ</a></li>
+                        <li><a href="/blog/categories"><i class="fa fa-folder-open"></i> カテゴリ</a></li>
+                        <li><a href="/blog/tags"><i class="fa fa-tags"></i> タグ</a></li>
+                        <li><a href="/product/"><i class="fa fa-download"></i> 作ったもの</a></li>
+                        <li><a href="/graffiti/"><i class="fa fa-paint-brush"></i> 落書き</a></li>
+                        <li><a href="/link.html"><i class="fa fa-link"></i> リンク</a></li>
+                        <li><a href="/about">About</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <div class="mainContent container">
+                                                                                
+                                
+    <ol class="breadcrumb" itemscope="itemscope"
+                           itemtype="http://schema.org/BreadcrumbList">
+        <li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/"
+           ><i class="fa fa-home fa-lg"></i
+     >&nbsp;<span itemprop="name">HOME</span
+           ><meta itemprop="position" content="1"
+          /></a
+       ></li>
+        <li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/blog/2013/"
+           ><span>2013</span
+           ><meta itemprop="position" content="2"
+          /></a
+       ></li>
+        <li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/blog/2013/01/"
+           ><span>01</span
+           ><meta itemprop="position" content="3"
+          /></a
+       ></li>
+        <li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/blog/2013/01/27/"
+           ><span>27</span
+           ><meta itemprop="position" content="4"
+          /></a
+       ></li>
+        <li
+            class="active"><span 
+           ><span>QNAP TS-109II への syslog-ng の導入メモ</span
+       ></li>
+    </ol>
+
+    <article itemscope="itemscope" itemtype="http://schema.org/Article">
+        <meta itemscope="itemscope" itemprop="mainEntityOfPage"
+              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net/blog/2013/01/27/install-qnap-ts-109ii-syslog-ng.html"/>
+        <header>
+            <h1><span itemprop="headline">QNAP TS-109II への syslog-ng の導入メモ</span> <small>post</small></h1>
+        </header>
+
+<div id="toc" class="panel panel-default pull-right">
+    <div class="panel-heading text-center">目次</div>
+        <div class="panel-body" style="padding: 10px;">
+            <ul class="fa-ul">
+            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール</a>
+</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E8%A8%AD%E5%AE%9A%E3%81%AE%E7%B7%A8%E9%9B%86">設定の編集</a>
+</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E3%81%AB%E7%99%BB%E9%8C%B2">スタートアップに登録</a>
+</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#logrotate%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">logrotateをインストール</a>
+</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#logrotate%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%82%92%E7%B7%A8%E9%9B%86">logrotateの設定を編集</a>
+</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%AE%9A%E6%9C%9F%E5%AE%9F%E8%A1%8C%E3%81%AE%E3%81%9F%E3%82%81crontab%E3%81%AB%E7%99%BB%E9%8C%B2">定期実行のためcrontabに登録</a>
+</li></ul></li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%8F%82%E8%80%83">参考</a>
+            </li></ul></li>
+        </ul>
+    </div>
+</div>
+
+<div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div>
+
+        <div itemprop="articleBody">
+            <p>なんか今使ってるNASも古くなってきたけど、まだまだ現役です。</p>
+
+<p>ってことで、ルーターのログを取るために QNAP TS-109II への syslog-ng の導入をしたときのメモです。</p>
+
+<h4 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" itemprop="articleSection">インストール</h4>
+
+<pre><code># ipkg update
+# ipkg install syslog-ng
+</code></pre>
+
+<h4 id="%E8%A8%AD%E5%AE%9A%E3%81%AE%E7%B7%A8%E9%9B%86" itemprop="articleSection">設定の編集</h4>
+
+<pre><code># vi /opt/etc/syslog-ng/syslog-ng.conf
+</code></pre>
+
+<p>とりあえず、必須の設定</p>
+
+<p>下記の２行を削除して</p>
+
+<pre><code>source src { pipe("/proc/kmsg");unix-stream("/dev/log"); internal(); };
+source net { udp(); };
+</code></pre>
+
+<p>設定を追加</p>
+
+<pre><code>source src { file ("/proc/kmsg" log_prefix("kernel: ")); unix-stream ("/tmp/log"); internal(); };
+source net { udp(ip(0.0.0.0) port(514)); tcp(ip(0.0.0.0) port(514)); };
+</code></pre>
+
+<p>これをしないと、</p>
+
+<pre><code>Error binding socket; addr='AF_UNIX(/dev/log)', error='Address already in use (98)'
+Error initializing source driver; source='src'
+</code></pre>
+
+<p>などと怒られる。</p>
+
+<p>今回の目的、ルーターのログを保存するために、設定を追加。 これを設定してなくて、しばらく、ログが出てこないのはなぜだろうと悩んだのはここだけの秘密。</p>
+
+<pre><code>destination router { file("/opt/var/log/router.log"); };
+filter f_router { match("APXXXXXXXXXXXX "); };
+log { source(net); filter(f_router); destination(router); };
+log { source(net); destination(messages); };
+</code></pre>
+
+<p>既存のsyslogの停止</p>
+
+<pre><code># /sbin/daemon_mgr qsyslogd stop /sbin/qsyslogd
+# /sbin/daemon_mgr syslogd stop /sbin/syslogd
+</code></pre>
+
+<p>syslog-ngの起動</p>
+
+<pre><code># syslog-ng start
+</code></pre>
+
+<h4 id="%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E3%81%AB%E7%99%BB%E9%8C%B2" itemprop="articleSection">スタートアップに登録</h4>
+
+<p>QPKGの設定に追加することで機能の有効無効がUIから操作でき、また、自動実行もされるようになる。</p>
+
+<pre><code># vi /etc/config/qpkg.conf
+</code></pre>
+
+<p>で下記内容を追加</p>
+
+<pre><code>[syslog-ng]
+Name = syslog-ng
+Date = 2013-01-25
+Enable = TRUE
+Shell = /share/HDA_DATA/.scripts/syslog-ng_qpkg_start.sh
+Install_Path = /share/HDA_DATA/.qpkg/Optware/etc
+Author = me
+
+# vi /share/HDA_DATA/.scripts/syslog-ng_qpkg_start.sh
+</code></pre>
+
+<p>で下記内容を保存</p>
+
+<pre><code>#!/bin/sh
+
+QPKG_NAME="syslog-ng"
+
+THIS_SCRIPT="[$(basename $0)]"
+LOG=echo
+OPT=/share/HDA_DATA/.qpkg/Optware
+LOG_FILE=${OPT}/var/log/scripts.log
+SLEEP=10
+
+$LOG $THIS_SCRIPT $(date "+[%Y-%m-%d %H:%M:%S]") $QPKG_NAME $1 | tee -a $LOG_FILE
+
+_exit() {
+   $LOG $THIS_SCRIPT $(date "+[%Y-%m-%d %H:%M:%S]") "Error: " $* | tee -a $LOG_FILE
+   exit 1
+}
+
+_log() {
+   $LOG $THIS_SCRIPT $(date "+[%Y-%m-%d %H:%M:%S]") $* | tee -a $LOG_FILE
+}
+
+case "$1" in
+   start)
+   pidof syslog-ng &amp;&amp; _exit "$QPKG_NAME already running. Exiting."
+
+   pidof qsyslogd &amp;&amp; _log "Found qsyslogd. Killing it." &amp;&amp; /sbin/daemon_mgr qsyslogd stop /sbin/qsyslogd 
+
+   pidof syslogd &amp;&amp; _log "Found syslogd. Killing it." &amp;&amp; /sbin/daemon_mgr syslogd stop /sbin/syslogd 
+
+   _log "Starting $QPKG_NAME"
+   /opt/sbin/syslog-ng start
+   pidof $QPKG_NAME &amp;&amp; _log "$QPKG_NAME up and running"
+   ;;
+
+   stop)
+   killall syslog-ng
+   ;;
+
+   restart)
+   $0 stop; $0 start
+   ;;
+
+   *)
+   _exit "Unknown command $1. Usage: $0 {start|stop|restart}"
+esac
+exit 0
+</code></pre>
+
+<h4 id="logrotate%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" itemprop="articleSection">logrotateをインストール</h4>
+
+<pre><code># ipkg update
+# ipkg install logrotate
+</code></pre>
+
+<h4 id="logrotate%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%82%92%E7%B7%A8%E9%9B%86" itemprop="articleSection">logrotateの設定を編集</h4>
+
+<pre><code># vi /opt/etc/logrotate.conf
+
+#rotate 5
+weekly
+missingok
+notifempty
+delaycompress
+compress
+
+/opt/var/log/*.log
+/opt/var/log/mail.*
+/opt/var/log/messages
+/opt/var/log/debug
+/opt/var/log/syslog {
+   postrotate
+       /share/HDA_DATA/.scripts/syslog-ng_qpkg_start.sh restart
+   endscript
+}
+</code></pre>
+
+<h4 id="%E5%AE%9A%E6%9C%9F%E5%AE%9F%E8%A1%8C%E3%81%AE%E3%81%9F%E3%82%81crontab%E3%81%AB%E7%99%BB%E9%8C%B2" itemprop="articleSection">定期実行のためcrontabに登録</h4>
+
+<pre><code># crontab -e
+</code></pre>
+
+<p>で下記のように編集し</p>
+
+<pre><code>0 21 * * * /opt/sbin/logrotate /opt/etc/logrotate.conf
+</code></pre>
+
+<p>下記のコマンドで反映</p>
+
+<pre><code>/etc/init.d/crond.sh restart
+</code></pre>
+
+<p>とりあえず、ログのローテートとはまだ未確認だけどルーターのログを保存できるようになったしよしとしよう。</p>
+
+<h3 id="%E5%8F%82%E8%80%83" itemprop="articleSection">参考</h3>
+
+<ul>
+<li><a href="http://forum.qnap.com/viewtopic.php?f=121&amp;t=17151">QNAP NAS Community Forum ? View topic - [HOWTO] Syslog-ng- receive router logs</a></li>
+<li><a href="http://forum.qnap.com/viewtopic.php?t=5379">QNAP NAS Community Forum ? View topic - where to link optware auto-start</a></li>
+<li><a href="http://forum.qnap.com/viewtopic.php?t=11507">QNAP NAS Community Forum ? View topic - rsyslog</a></li>
+<li><a href="http://tokusan-sk49.cocolog-nifty.com/blog/2010/05/qnapsyslog-ng-c.html">QNAPにsyslog-ng: とくさんブログ</a></li>
+<li><a href="http://www.marronkun.net/linux/other/syslogng_000047.html">syslog-ng.confの設定 : マロンくん.NET</a></li>
+<li><a href="http://www.atmarkit.co.jp/fsecurity/rensai/unix_sec09/unix_sec01.html">＠IT：止められないUNIXサーバの管理対策 第9回</a></li>
+</ul>
+
+        </div>
+        <hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" />
+        <footer>            <div style="line-height: 25px; height: 25px;">
+    <span style="display: inline-block; vertical-align: top;">
+        <i class="fa fa-calendar"></i>
+        <span itemprop="datePublished" content="2013-01-27">2013年01月27日</span>
+        &nbsp;/&nbsp;
+        <i class="fa fa-history"></i> <a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2013-01-27-install-qnap-ts-109ii-syslog-ng.md">変更履歴</a>
+        &nbsp;/&nbsp;
+        <i class="fa fa-thumb-tack"></i> <a href="/blog/2013/01/27/install-qnap-ts-109ii-syslog-ng.html">Permalink</a>
+        &nbsp;/&nbsp;
+    </span>
+    <meta itemprop="url" content="http://www.sharkpp.net/blog/2013/01/27/install-qnap-ts-109ii-syslog-ng.html" />
+    <span itemprop="author" itemscope itemtype="https://schema.org/Person"
+          style="display: none;"
+       ><span itemprop="name">sharkpp</span
+   ></span>
+    <a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2013%2F01%2F27%2Finstall-qnap-ts-109ii-syslog-ng.html"
+       class="hatena-bookmark-button"
+       data-hatena-bookmark-title="QNAP TS-109II への syslog-ng の導入メモ &mdash; さめたすたすのお家"
+       data-hatena-bookmark-layout="simple-balloon"
+       title="このエントリーをはてなブックマークに追加"
+      ><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png"
+            alt="このエントリーをはてなブックマークに追加"
+            width="20" height="20" style="border: none;" /></a
+      >
+    <a href="https://twitter.com/share" class="twitter-share-button"
+       data-url="http://www.sharkpp.net/blog/2013/01/27/install-qnap-ts-109ii-syslog-ng.html" data-via="sharkpp">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</div><div style="line-height: 25px; height: 25px;">
+                                <span class="categories">
+            <i class="fa fa-folder-open"></i> カテゴリ:
+                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a>                        </span>
+        &nbsp;/&nbsp;
+                                <span class="tags">
+            <i class="fa fa-tag"></i> タグ:
+                        <a href="/blog/tags/QNAP">QNAP</a>,                         <a href="/blog/tags/Linux">Linux</a>                        </span>
+        </div>
+        </footer>
+
+                    <hr style="border-top: none; border-bottom: 1px dashed #aaa; margin: 10px 0;" />
+            <nav class="article">
+                <ul class="list-unstyled row">
+                                            <li class="col-md-6 text-left"><a class="next" href="/blog/2013/02/17/fuelphp-workshop-in-osu-vol-3.html" title="FuelPHP 勉強会 大須 vol.3 に参加しました"><span class="title"><i class="fa fa-chevron-left"></i> FuelPHP 勉強会 大須 vol.3 に参加しました</span></a></li>
+                                                                <li class="col-md-6 text-right"><a class="previous" href="/blog/2013/01/24/user-jp-follow-up.html" title="*-user.jp(?ユーザのためのハブサイト)のその後を追跡調査"><span class="title">*-user.jp(?ユーザのためのハブサイト)のその後を追跡調査</span> <i class="fa fa-chevron-right"></i></a></li>
+                                    </ul>
+            </nav>
+            </article>
+
+
+
+        </div>
+
+        <footer class="footer">
+            <dev class="overflow">
+                <div class="container text-center">
+                    <ul class="list-unstyled list-inline">
+                        <li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li>
+                        <li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li>
+                        <li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li>
+                        <li><i class="fa-li fa fa-ellipsis-h"></i> <a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li>
+                        <li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /blog/2013/01/27/install-qnap-ts-109ii-syslog-ng.html"
+                                  rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li>
+                    </ul>
+                </div>
+                <div class="container text-center">
+                    <ul class="list-unstyled list-inline">
+                        <li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li>
+                        <li class="text-muted">&copy; 2004-2017 sharkpp</li>
+                    </ul>
+                </div>
+                <div class="container text-center text-muted">
+                    <ruby>
+                        <rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                            >Creative Commons Attribution 4.0 International License</a>.</rb>
+                        <rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                  >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp>
+                    </ruby>
+                </div>
+                <div class="container text-center text-muted">
+                    <ruby>
+                        <rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
+                                                                            >The MIT License</a>.</rb>
+                        <rp>(</rp><rt>さらに、コードスニペットは <a rel="nofollow" href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license"
+                                                               >MIT ライセンス</a> の下にライセンスされています。</rt><rp>)</rp>
+                    </ruby>
+                </div>
+            </div>
+        </footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>')</script>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.js"></script>
+        <script>$('body').modal || document.write('<script src="/assets/bootstrap/js/bootstrap.min.js"><\/script>')</script>
+                
+        
+        <script src="/assets/highlightjs/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        <script type="text/javascript">
+            $('a img').each(function(){
+                var rel = ($(this).attr('src').match(/images\u002f([0-9_]{4}_[0-9_]{4})/i) ||
+                           ['','lightbox'])[1];
+                $(this).parent()
+                    .attr('data-lightbox', rel)
+                    .attr('data-title', $(this).attr('alt'))
+                    ;
+            });
+        </script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+        <script>$(document).ready(function(){ window.lightbox || $.getScript("/assets/lightbox2/js/lightbox.min.js"); });</script>
+
+                <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.5/jquery.smooth-scroll.min.js"></script>
+        <script>$.smoothScroll || document.write('<script src="/assets/jquery-smooth-scroll/jquery.smooth-scroll.min.js"><\/script>')</script>
+        <script type="text/javascript">
+            $('#toc a')
+                .each(function(){
+                    var id = $(this).attr('href').slice(1);
+                    $(this)
+                        .smoothScroll({
+                            scrollTarget: $('[id="' + id + '"]'),
+                            offset: -50,
+                            beforeScroll: function(){ /*history.pushState({}, id, "#" + id);*/ }
+                        });
+                })
+                ;
+            $('#go-top')
+                .on('click', function() {
+                    $.smoothScroll({
+                        scrollElement: $('body'),
+                        scrollTarget: '',
+                        beforeScroll: function(){ /*history.pushState({}, "", location.href.replace(location.hash, ''));*/ },
+                        afterScroll: function(){ $('body').css('position', ''); }
+                    });
+                    return false;
+                });
+            $(window).scroll(function () {
+                var scroll   = $(this).scrollTop();
+                var visibled = $('#go-top').css('display') == 'block';
+                var next_state = $('#go-top').attr('data-next-state');
+                if (100 <= scroll && (!visibled || 'hidden' == next_state))
+                    $('#go-top')
+                        .stop(true, true)
+                        .attr('data-next-state', 'visible')
+                        .fadeIn('slow', function(){
+                            $(this).removeAttr('data-next-state');
+                        });
+                else if (scroll < 100 && (visibled || 'visible' == next_state))
+                    $('#go-top')
+                        .stop(true, true)
+                        .attr('data-next-state', 'hidden')
+                        .fadeOut('slow', function(){
+                            $(this).removeAttr('data-next-state');
+                        });
+            });
+            $(window).scroll();
+        </script>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                // apply table to bootstrap css
+                $('table:not([class])')
+                    .addClass('table table-bordered table-hover table-condensed table-striped')
+                    .wrap("<div style='width:100%;overflow-x:auto;'></div>");
+             });
+        </script>
+
+        <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/HTML5.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:49+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[除夜の鐘をブログパーツにしてみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/12/31/joya-no-kane-for-blog-parts.html"/>
+            <updated>2015-12-31T12:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/12/31/joya-no-kane-for-blog-parts.html</id>
+            <content type="html"><![CDATA[<p>この季節の風物詩、「除夜の鐘」がブログパーツになって帰ってきた！</p>
+
+<p>ってな感じの更新を行ったのでその紹介。</p>
+
+<p>HSPDish.js そのままでブログパーツにしたので、この程度なら書き直したほうが早いかも、、、と思わなくもない。</p>
+
+<h2 id="%E7%B0%A1%E5%8D%98%E3%81%AA%E7%B4%B9%E4%BB%8B">簡単な紹介</h2>
+
+<p>除夜の鐘をつくだけのプログラムです。</p>
+
+<p>表示されている鐘をクリックします。</p>
+
+<p>すると、煩悩が「ゴ～ン」という音とともに消えて行くことでしょう。</p>
+
+<h2 id="%E4%BD%BF%E3%81%84%E6%96%B9">使い方</h2>
+
+<p>すぐに表示させる場合は、このような感じ。</p>
+
+<pre><code class="html">&lt;iframe src="https://cdn.rawgit.com/sharkpp/joya_no_kane/v1.0.1/widget.html"
+　　　　　width="128" height="128" frameborder="0" scrolling="no"&gt;&lt;/iframe&gt;
+</code></pre>
+
+<iframe src="https://cdn.rawgit.com/sharkpp/joya_no_kane/v1.0.1/widget.html"
+        width="128" height="128" frameborder="0" scrolling="no"></iframe>
+
+<p><i class="fa fa-external-link-square"></i> <a href="https://rawgit.com/">RawGit</a> を利用しています。</p>
+
+<p><i class="fa fa-exclamation-triangle"></i> ランタイムやリソースを含めたサイズの合計が 1MB 程度あるので注意が必要です。</p>
+
+<h2 id="%E3%81%9D%E3%81%AE%E4%BB%96%E3%83%AA%E3%83%B3%E3%82%AF">その他リンク</h2>
+
+<ul class="fa-ul">
+<li><i class="fa-li fa fa-external-link-square"></i><a href="https://github.com/sharkpp/joya_no_kane">ソースコード</a></li>
+<li><i class="fa-li fa fa-external-link-square"></i><a href="http://sharkpp.github.io/joya_no_kane/">GitHubページ</a></li>
+<li><i class="fa-li fa fa-external-link-square"></i><a href="http://hsproom.me/program/view/?p=146">HSP部屋(β)</a></li>
+<li><i class="fa-li fa fa-download"></i><a href="/files/bells100.zip">Windows版ダウンロード</a></li>
+<li><i class="fa-li fa fa-download"></i><a href="https://github.com/sharkpp/joya_no_kane/zipball/master">HTML/ブログパーツ版ダウンロード</a></li>
+</ul>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://testcording.com/?p=1259">TEST CORDING » GithubからJavaScriptを読み込み時は専用のドメインから！</a></li>
+<li><a href="http://hsproom.me/help/#ブログパーツ">ヘルプ - HSP部屋(β)</a></li>
+<li><a href="http://www.onionsoft.net/hsp/v34/doclib/hsp3dish_js.htm">HSP3Dish WebGL/JavaScript版(hsp3dish.js)プログラミングガイド</a></li>
+</ul>
+]]></content>
+        </entry>
+    </feed>

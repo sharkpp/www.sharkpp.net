@@ -1,0 +1,2554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/php.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:49+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[PHP と Sheets API を利用して Google Spread Sheets を操作する方法]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/09/22/how-to-use-google-spreadsheets-api-for-php.html"/>
+            <updated>2016-09-22T20:50:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/09/22/how-to-use-google-spreadsheets-api-for-php.html</id>
+            <content type="html"><![CDATA[<p>bot 的な何かで諸々集計して、Google スプレッドシートへ内容を保存しようと思い、いろいろ調べてみたところ、見つかった情報が古くなっていたので多少試行錯誤して動くようにした結果をまとめてみました。</p>
+
+<p>PHP を開発言語としていますが、認証キーの登録などの部分は共通なので、他の言語でも多少参考になると思います。</p>
+
+<h2 id="%E6%BA%96%E5%82%99">準備</h2>
+
+<p>実際のコードを書く前に、認証キーの取得や対象のスプレッドシートの追加などが必要です。</p>
+
+<p>大まかな手順は、</p>
+
+<ol>
+<li><a href="https://console.developers.google.com/">Google API Console</a> へプロジェクトを追加</li>
+<li>認証情報を作成</li>
+<li><a href="https://docs.google.com/spreadsheets/">Google スプレッドシート</a> で対象のスプレッドシートを作成</li>
+<li>スプレッドシートを読み書きできるように共有を作成</li>
+<li><a href="https://console.developers.google.com/apis/api/sheets.googleapis.com/overview">Google Sheets API - API Manager</a> から API を有効にする</li>
+<li>実際にコードを書いて Go !</li>
+</ol>
+
+<p>こんな感じです。</p>
+
+<h3 id="api-console-%E3%81%B8%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E8%BF%BD%E5%8A%A0">API Console へプロジェクトを追加</h3>
+
+<p>まずは <a href="https://console.developers.google.com/">Google API Console</a> へアクセスし、プロジェクトを作成します。</p>
+
+<p><a href="/images/2016_0922_gsapi_01_api_console.png"><img src="/_thumbs/b4ed5f9cdcb99ba5dd3e7320ef6d2dee-512x512.png" alt="API Console"></a></p>
+
+<p>初めて Google API Console へアクセスの場合は、プロジェクトが作成されていないので、どん！と、「プロジェクトの作成」ボタンが表示されます。</p>
+
+<p><a href="/images/2016_0922_gsapi_02_add_project_from_menu.png"><img src="/_thumbs/6f5470aa8cba6258db79fe1e27302f5b-512x512.png" alt="メニューからのプロジェクトの追加"></a></p>
+
+<p>すでに別のプロジェクトがある場合は、そのまま使うか、メニューから「プロジェクトを作成」を選んでください。</p>
+
+<p><a href="/images/2016_0922_gsapi_03_add_project_wizard.png"><img src="/_thumbs/ed6917ddbf28b5689d3237936dff2362-512x512.png" alt="プロジェクトの追加のウィザード"></a></p>
+
+<p>プロジェクト名などを設定し、「作成」ボタンを押下するとプロジェクトが作成されます。</p>
+
+<h3 id="%E8%AA%8D%E8%A8%BC%E6%83%85%E5%A0%B1%E3%82%92%E4%BD%9C%E6%88%90">認証情報を作成</h3>
+
+<p><a href="/images/2016_0922_gsapi_04_add_auth_select_type.png"><img src="/_thumbs/0796ae157cf798dec123b3f6d93f913f-512x512.png" alt="認証情報の種類の選択肢"></a></p>
+
+<p>左側のナビメニューから「認証情報」を選択し、「認証情報の作成」を選ぶと、作成する認証情報の種別が表示されます。</p>
+
+<p>ここでは「サービスアカウント キー」を選びます。</p>
+
+<p>今回作成するキーは</p>
+
+<table>
+<thead>
+<tr>
+  <th>選択肢</th>
+  <th>選択内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>認証情報(の種類)</td>
+  <td>サービスアカウント キー</td>
+</tr>
+<tr>
+  <td>サービスアカウント(の種類)</td>
+  <td>App Engine default service account</td>
+</tr>
+<tr>
+  <td>キーのタイプ</td>
+  <td>JSON</td>
+</tr>
+</tbody>
+</table>
+
+<p>です。</p>
+
+<p>その他の種別でのアクセス方法は、<a href="https://developers.google.com/sheets/quickstart/php">PHP Quickstart  |  Sheets API  |  Google Developers</a> や <a href="https://developers.google.com/api-client-library/php/">API Client Library for PHP (Beta)  |  Google Developers</a>
+ などを参考にしてみてください。</p>
+
+<p><a href="/images/2016_0922_gsapi_05_add_auth_select_account_type.png"><img src="/_thumbs/7128de0de57e7f3b016e1775f7af4545-512x512.png" alt="サービスアカウントの種類の選択肢"></a></p>
+
+<p>サービスアカウントの種類は、</p>
+
+<ul>
+<li>App Engine default service account</li>
+<li>Compute Engine default service account</li>
+</ul>
+
+<p>の二種類が今のところ最初から用意されているようです。</p>
+
+<p><a href="/images/2016_0922_gsapi_06_add_auth_select_account_type.png"><img src="/_thumbs/e692f89fec3de8c21fc0b299ee1e81f3-512x512.png" alt="サービスアカウントの種類の選択"></a></p>
+
+<p>今回選ぶのは「App Engine default service account」で、キーのタイプは「JSON」です。</p>
+
+<p><a href="/images/2016_0922_gsapi_07_auth_key_downloaded.png"><img src="/_thumbs/b895feb479f467a128587579783c8fb2-512x512.png" alt="認証情報のダウンロード"></a></p>
+
+<p>作成すると、キーがダウンロードされるので大切に保管しましょう。</p>
+
+<p>このキーのコピーはサーバー側にもないので、なくした場合は作り直す必要があります。</p>
+
+<h3 id="%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%83%89%E3%82%B7%E3%83%BC%E3%83%88%E3%82%92%E4%BD%9C%E6%88%90">スプレッドシートを作成</h3>
+
+<p>操作対象のスプレッドシートを <a href="https://docs.google.com/spreadsheets/">Google スプレッドシート</a> で作成します。</p>
+
+<h3 id="%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%83%89%E3%82%B7%E3%83%BC%E3%83%88%E3%81%AE%E5%85%B1%E6%9C%89%E3%82%92%E4%BD%9C%E6%88%90">スプレッドシートの共有を作成</h3>
+
+<p>API を経由してスプレッドシートへアクセスできるように共有を作成します。</p>
+
+<p><a href="/images/2016_0922_gsapi_08_spreadsheet_share_for_api.png"><img src="/_thumbs/260e5b9fc8ffe8879eeceefd83ef7314-512x512.png" alt="API 用にスプレッドシートを共有"></a></p>
+
+<p>書き込みしないのであれば、「閲覧者」でも問題ないかもしれませんが、試していません。</p>
+
+<p><a href="/images/2016_0922_gsapi_09_service_account_key_email.png"><img src="/_thumbs/7f521331334e9d8c580987e042ed8727-512x512.png" alt="サービスアカウントキーの電子メール"></a></p>
+
+<p>この時、設定するメールアドレスは、<a href="https://console.developers.google.com/iam-admin/serviceaccounts/">IAM と管理</a> の「サービスアカウント」メニューから取得できます。</p>
+
+<p><a href="/images/2016_0922_gsapi_10_service_account_key_email_from_json.png"><img src="/_thumbs/093622c2b71fb2037c0be98cf5518e9b-512x512.png" alt="認証情報 JSON に書かれたサービスアカウントキーの電子メール"></a></p>
+
+<p>ダウンロードした、秘密鍵を含むキーファイルにも書かれているので、JSON を開いた中の <code>client_email</code> からも取得できます。</p>
+
+<p><a href="/images/2016_0922_gsapi_11_service_account_keys_list.png"><img src="/_thumbs/7bc0205120c10ee549155f9cccc10081-512x512.png" alt="サービスアカウントの一覧"></a></p>
+
+<p>API Console の「認証情報」メニューを選び「サービス アカウントの管理」のリンクから飛ぶことができます。</p>
+
+<h3 id="api-%E3%82%92%E6%9C%89%E5%8A%B9%E3%81%AB%E3%81%99%E3%82%8B">API を有効にする</h3>
+
+<p>この状態で、実行するとエラーが結果として帰ってきます。</p>
+
+<pre><code class="json">{
+  "error": {
+    "code": 403,
+    "message": "Google Sheets API has not been used in project {PROJECT_ID} before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/sheets.googleapis.com/overview?project={PROJECT_ID} then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.",
+    "errors": [
+      {
+        "message": ...,
+        "domain": "global",
+        "reason": "forbidden"
+      }
+    ],
+    "status": "PERMISSION_DENIED"
+  }
+}
+</code></pre>
+
+<p>メッセージの部分はこのように書いてあります。</p>
+
+<blockquote>
+  <p>Google Sheets API has not been used in project {PROJECT_ID} before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/sheets.googleapis.com/overview?project={PROJECT_ID} then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.</p>
+</blockquote>
+
+<p>訳すと、</p>
+
+<blockquote>
+  <p>Google Sheets API は、以前のプロジェクト {PROJECT_ID} で使用されていないか、無効になっています。 https://console.developers.google.com/apis/api/sheets.googleapis.com/overview?project={PROJECT_ID} を訪れ、API を有効にした後、再試行してください。最近この API を有効にした場合は、操作が当社のシステムに伝播するまで数分待ち、再試行してください。</p>
+</blockquote>
+
+<p>と、「API が有効になっていないなどで、操作ができなかったよ」と書かれています。</p>
+
+<p><a href="/images/2016_0922_gsapi_12_spreadsheet_api_enable.png"><img src="/_thumbs/fb0a318c501a66421493d2bc091c9014-512x512.png" alt="Sheats API を有効に"></a></p>
+
+<p>なので、指示に従い <a href="https://console.developers.google.com/apis/api/sheets.googleapis.com/overview">Google Sheets API - API Manager</a> から API を有効にします。</p>
+
+<h2 id="%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89">サンプルコード</h2>
+
+<p><a href="/images/2016_0922_gsapi_13_spreadsheet_read_area.png"><img src="/_thumbs/c1b6ec67fc2b678be4035bffb1863cd9-512x512.png" alt="スプレッドシートの読み取りエリア"></a></p>
+
+<p>B2:B3 に 値を書き込み、 A1:D5 までを取得するという、簡単なサンプルコードです。</p>
+
+<h3 id="%E6%BA%96%E5%82%99">準備</h3>
+
+<p>PHP 用の Google API クライアントライブラリは <a href="https://github.com/google/google-api-php-client">google/google-api-php-client: A PHP client library for accessing Google APIs</a> が公式のライブラリとなります。</p>
+
+<p>Composer 経由でインストールできるので、</p>
+
+<ul>
+<li><code>composer.json</code> の <code>require</code> に <code>"google/apiclient": "^2.0"</code> を追加して <code>composer install</code></li>
+<li><code>composer require google/apiclient:^2.0</code></li>
+</ul>
+
+<p>のどちらかの方法でインストールができます。</p>
+
+<h3 id="%E3%82%B3%E3%83%BC%E3%83%89">コード</h3>
+
+<p>サンプルで使う <code>composer.json</code> です。
+<code>composer install</code> してください。</p>
+
+<pre><code>{
+    "name": "sharkpp/gsapi-example",
+    "require": {
+        "google/apiclient": "^2.0"
+    }
+}
+</code></pre>
+
+<p>サンプルコードです。</p>
+
+<p>サンプロコード内で、参照されている環境変数にはそれ添えr次のような値をセットしてください。</p>
+
+<table>
+<thead>
+<tr>
+  <th>環境変数名</th>
+  <th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>SERVICE_KEY_JSON</code></td>
+  <td>先の手順でダウンロードしたファイル。例えば <code>My Project-19c43c948fd7.json</code> のような名前</td>
+</tr>
+<tr>
+  <td><code>SPREADSHEET_ID</code></td>
+  <td>スプレッドシートを識別する id。例えば <code>https://docs.google.com/spreadsheets/d/XXXXX/edit#gid=9999</code> がスプレッドシートのアドレスだった場合は、<code>XXXXX</code> が <code>SPREADSHEET_ID</code> で、今開いているシートの id が <code>9999</code> となります。</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code>&lt;?php
+
+date_default_timezone_set('Asia/Tokyo');
+
+require 'vendor/autoload.php';
+
+define('CREDENTIALS_PATH', getenv('SERVICE_KEY_JSON'));
+define('SPREADSHEET_ID',   getenv('SPREADSHEET_ID'));
+
+putenv('GOOGLE_APPLICATION_CREDENTIALS='.dirname(__FILE__).'/'.CREDENTIALS_PATH);
+$client = new Google_Client();
+$client-&gt;useApplicationDefaultCredentials();
+$client-&gt;addScope(Google_Service_Sheets::SPREADSHEETS);
+$client-&gt;setApplicationName('test');
+
+$service = new Google_Service_Sheets($client);
+
+// B2:B3 を更新
+$value = new Google_Service_Sheets_ValueRange();
+$value-&gt;setValues([ 'values' =&gt; [ 'aaaa', 'bbbb' ] ]);
+$response = $service-&gt;spreadsheets_values-&gt;update(SPREADSHEET_ID, 'シート1!B2', $value, [ 'valueInputOption' =&gt; 'USER_ENTERED' ] );
+
+// A1:D5 の範囲を取得
+$response = $service-&gt;spreadsheets_values-&gt;get(SPREADSHEET_ID, 'シート1!A1:D5');
+foreach ($response-&gt;getValues() as $index =&gt; $cols) {
+    echo sprintf('#%d &gt;&gt; "%s"', $index+1, implode('", "', $cols)).PHP_EOL;
+}
+</code></pre>
+
+<p>実行すると、まず</p>
+
+<table>
+<thead>
+<tr>
+  <th align="center"></th>
+  <th>A</th>
+  <th>B</th>
+  <th>C</th>
+  <th>D</th>
+  <th>...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="center"><strong>1</strong></td>
+  <td>　　　</td>
+  <td>　　　</td>
+  <td>　　　</td>
+  <td>　　　</td>
+  <td>　</td>
+</tr>
+<tr>
+  <td align="center"><strong>2</strong></td>
+  <td></td>
+  <td>aaaa</td>
+  <td>bbbb</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td align="center"><strong>3</strong></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td align="center"><strong>4</strong></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td align="center"><strong>5</strong></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td align="center">...</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+</tbody>
+</table>
+
+<p>値が書き込まれ、表の範囲が取得されますが、</p>
+
+<table>
+<thead>
+<tr>
+  <th align="center"></th>
+  <th>A</th>
+  <th>B</th>
+  <th>C</th>
+  <th>D</th>
+  <th>...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="center"><strong>1</strong></td>
+  <td>　　　</td>
+  <td>　　　</td>
+  <td>　　　</td>
+  <td>　　　</td>
+  <td>　</td>
+</tr>
+<tr>
+  <td align="center"><strong>2</strong></td>
+  <td></td>
+  <td>aaaa</td>
+  <td>bbbb</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td align="center"><strong>3</strong></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td align="center"><strong>4</strong></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td align="center"><strong>5</strong></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td align="center">...</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+</tbody>
+</table>
+
+<p>実際に結果から値として取り出せるのは、セルに値がセットされている</p>
+
+<table>
+<thead>
+<tr>
+  <th align="center"></th>
+  <th align="center">A</th>
+  <th align="center">B</th>
+  <th align="center">C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="center"><strong>1</strong></td>
+  <td align="center">　☆　</td>
+  <td align="center">　　　</td>
+  <td align="center">　　　</td>
+</tr>
+<tr>
+  <td align="center"><strong>2</strong></td>
+  <td align="center">☆</td>
+  <td align="center">☆</td>
+  <td align="center">☆</td>
+</tr>
+</tbody>
+</table>
+
+<p>この範囲だけになります。</p>
+
+<pre><code class="bash">$ php test.php 
+#1 &gt;&gt; ""
+#2 &gt;&gt; "", "aaaa", "bbbb"
+</code></pre>
+
+<p>実際に中身を表示させると、こうなります。</p>
+
+<p>そのため、対象範囲すべてが確保されているものとして、直接添え字を指定しアクセスすると <code>Notice: Undefined offset: ...</code> となるので注意が必要です。</p>
+
+<h2 id="%E5%9B%B0%E3%81%A3%E3%81%9F%E6%99%82%E3%81%AF">困った時は</h2>
+
+<h3 id="%E2%97%AF%E2%97%AF%E3%81%AE%E3%82%84%E3%82%8A%E6%96%B9%E3%81%8C%E3%82%8F%E3%81%8B%E3%82%89%E3%81%AA%E3%81%84">◯◯のやり方がわからない</h3>
+
+<p>PHP のクライアントライブラリの使い方を懇切丁寧に書いたドキュメントはなさそうなので、</p>
+
+<ul>
+<li><a href="https://github.com/google/google-api-php-client">google/google-api-php-client</a> の README.md</li>
+<li>ライブラリのソースコード <code>vendor/google/apiclient-services/Google/Service/Sheets/*</code></li>
+<li><a href="https://developers.google.com/sheets/quickstart/php">PHP Quickstart  |  Sheets API  |  Google Developers</a></li>
+<li><a href="https://developers.google.com/sheets/reference/rest/">Google Sheets API  |  Sheets API  |  Google Developers</a></li>
+<li><a href="http://stackoverflow.com/">Stack Overflow</a></li>
+</ul>
+
+<p>あたりから、気合て探しましょう！</p>
+
+<p>…まあ基本的に英語です。</p>
+
+<h3 id="php-%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3">PHP のバージョン</h3>
+
+<p><a href="https://github.com/google/google-api-php-client">A PHP client library for accessing Google APIs</a> を動かすのに必要な PHP のバージョンは <code>PHP 5.4.0 or higher</code> と README に書かれているのですが、正解なようで間違っています。</p>
+
+<p>最新を Composer でインストールすると、依存しているライブラリで <a href="http://php.net/manual/ja/function.curl-reset.php">curl_reset</a> を利用しているものがあり、しかし、この関数が実装されたのは <code>PHP 5.5.0</code> からなので、結果としてエラーで動作しません。</p>
+
+<p>回避手段は、ドキュメントの「ユーザーが投稿した注記」の <a href="http://php.net/manual/ja/function.curl-reset.php#119616">#119616</a> に書かれているように、</p>
+
+<pre><code class="php">&lt;?php
+
+// ---- 追加開始 ----
+
+if (function_exists('curl_init') &amp;&amp;
+    !function_exists('curl_reset')) {
+    function curl_reset(&amp;$ch) {
+        $ch = curl_init();
+    }
+}
+
+// ---- 追加終了 ----
+
+require 'vendor/autoload.php';
+           :
+</code></pre>
+
+<p>こんな感じの関数を定義してあげれば OK です。</p>
+
+<p>手元では <code>PHP 5.4.12</code> で動作しています。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://www.yoheim.net/blog.php?q=20160205">[Python] Google SpreadSheetをAPI経由で読み書きする - YoheiM .NET</a></li>
+<li><a href="http://wwld.jp/2015/11/07/spreadsheet-api.html">Python3でGoogle SpreadsheetをDBのように利用する</a></li>
+<li><a href="http://blog.mach3.jp/2015/09/16/google-spreadsheet-api-01.html">Google APIs Client Library for PHP を使ってスプレッドシートを読み書きする（1） - Mach3.laBlog</a></li>
+<li><a href="https://github.com/google/google-api-php-client">google/google-api-php-client: A PHP client library for accessing Google APIs</a></li>
+<li><a href="https://developers.google.com/sheets/quickstart/php">PHP Quickstart  |  Sheets API  |  Google Developers</a></li>
+<li><a href="https://developers.google.com/sheets/reference/rest/v4/spreadsheets/request#UpdateCellsRequest">Request Resource | Sheets API | Google Developers</a></li>
+<li><a href="http://stackoverflow.com/questions/38949913/google-sheet-api-change-sheets-cell-format">php - Google Sheet Api Change Sheet's Cell Format - Stack Overflow</a></li>
+<li><a href="http://stackoverflow.com/questions/37816307/google-spreadsheet-api-v4-with-php-how-to-insert-empty-row-to-beginning">Google spreadsheet API v4 with PHP - how to insert empty row to beginning - Stack Overflow</a></li>
+<li><a href="http://stackoverflow.com/questions/38025841/trying-to-append-a-row-to-a-google-spreadsheet-in-php">Trying to append a row to a Google Spreadsheet in PHP - Stack Overflow</a></li>
+<li><a href="https://developers.google.com/api-client-library/php/">API Client Library for PHP (Beta)  |  Google Developers</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Sculpin の Bundle をまとめてみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/09/03/list-of-sculpin-bundles.html"/>
+            <updated>2016-09-03T13:20:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/09/03/list-of-sculpin-bundles.html</id>
+            <content type="html"><![CDATA[<p>PHP 製の静的サイトジェネレータ <a href="https://sculpin.io/">Sculpin</a> へ導入することで機能を拡張するパッケージを Bundle と呼んでいますが、それを公式のドキュメントを参考に</p>
+
+<ul>
+<li>コンバータ</li>
+<li>ジェネレータ</li>
+<li>テーマ</li>
+<li>その他</li>
+</ul>
+
+<p>の 4 つのカテゴリへと Bundle を分類し、簡単な説明などをつけてまとめてみました。</p>
+
+<p>こうしてまとめて見るために、いろいろググってみますが、日本語で書かれた Sculpin の情報というのは少ないですね。</p>
+
+<p>今現在公開されているものを列挙していますが、最新の Sculpin に対応していないなど、もしかしたら利用できない Bundle があるかもしれないので、ご注意ください。</p>
+
+<h2 id="%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%BF">コンバータ</h2>
+
+<p><a href="https://sculpin.io/documentation/converters/">Converters - Sculpin</a> に書かれているように、何か、これは標準では Markdown で書式化された投稿ページを HTML へと変換する Bundle をここで列挙しています。</p>
+
+<h3 id="sculpin-league%2Fcommonmark-bundle">Sculpin league/commonmark bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/bcremer/sculpin-commonmark-bundle">bcremer/sculpin-commonmark-bundle</a></p>
+
+<p><a href="http://commonmark.org/">CommonMark</a> 記法で書かれた投稿をパースすることができるようにするバンドル。</p>
+
+<h3 id="sculpin-parsedown">Sculpin Parsedown</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/mavimo/sculpin-parsedown">mavimo/sculpin-parsedown</a></p>
+
+<p>標準の Markdown パーサーを置き換え、<code>sculpin generate</code> のパフォーマンスを上げることができるバンドル。</p>
+
+<p>Sculpin 本体にパッチを当てる必要があるようなので、導入の難易度は高めのようです。</p>
+
+<h3 id="sculpin-mthaml-bundle">Sculpin MtHaml Bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/fervo/sculpin-mthaml-bundle">fervo/sculpin-mthaml-bundle</a></p>
+
+<p>投稿を <a href="https://en.wikipedia.org/wiki/Microsoft_Assistance_Markup_Language">MAML</a> で作成できるようになるバンドル。</p>
+
+<h3 id="sculpin-restructuredtext-bundle">Sculpin reStructuredText Bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/rjkip/sculpin-rst-bundle">rjkip/sculpin-rst-bundle</a></p>
+
+<p>投稿を <a href="https://ja.wikipedia.org/wiki/ReStructuredText">ReStructuredText(reST)</a> で作成できるようになるバンドル。</p>
+
+<h2 id="%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF">ジェネレータ</h2>
+
+<p>投稿を列挙し特殊なページを作成したり、投稿内で利用できるタグクラウドなどのブロックを生成できる Bundle をここで列挙しています。</p>
+
+<h3 id="sculpin-less-bundle">Sculpin less bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/bcremer/sculpin-less-bundle">bcremer/sculpin-less-bundle</a></p>
+
+<p><code>sculpin generate</code> 実行時に <code>*.less</code> を LESS でプリプロセスし <code>*.css</code> を作成することができるようにするバンドル。</p>
+
+<h3 id="sculpin-redirect-bundle">Sculpin Redirect Bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/mavimo/sculpin-redirect-bundle">mavimo/sculpin-redirect-bundle</a></p>
+
+<p>投稿に別名を追加し、追加したパスから元のページへのリダイレクトを作成することができるようにするバンドル。</p>
+
+<p>「<a href="/blog/2016/06/12/using-sculpin-redirect-bundle.html">Sculpin でリダイレクトページを生成する Sculpin Redirect Bundle を使ってみた</a>」 で紹介と使い方を記事にしています。</p>
+
+<h3 id="sculpin-multilingual-bundle">Sculpin Multilingual Bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/rocketage/sculpin-multilingual-bundle">rocketage/sculpin-multilingual-bundle</a></p>
+
+<p>複数の言語用のサイトをサブドメインとして提供している場合にリソースを共通化できるようにすることができるバンドル。</p>
+
+<p>これは、 <code>ja.example.net</code> と <code>en.example.net</code> で利用するリソースを共通化し、<code>sculpin generate</code> 時に、各言語用のサイトそれぞれへとコピーできるようになるようです。</p>
+
+<h3 id="sculpin-related-posts-bundle">Sculpin Related Posts Bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/tsphethean/sculpin-related-posts-bundle">tsphethean/sculpin-related-posts-bundle</a></p>
+
+<p>記事と共通するタグを持つページの一覧を作成することができるようになるバンドル。</p>
+
+<p>レイアウトに、適当なテンプレートを記述することで、記事に関連するページとして表示することができるようです。</p>
+
+<h3 id="wjzijderveld%2Fsculpin-related-content-bundle">wjzijderveld/sculpin-related-content-bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/wjzijderveld/sculpin-related-content-bundle">wjzijderveld/sculpin-related-content-bundle</a></p>
+
+<p>記事と関連するタグを持つページの一覧を作成することができるようになるバンドル。</p>
+
+<p>レイアウトに、適当なテンプレートを記述することで、記事に関連するページとして表示することができるようです。</p>
+
+<h3 id="jbouzekri%2Fsculpin-tag-cloud-bundle">jbouzekri/sculpin-tag-cloud-bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/jbouzekri/sculpin-tag-cloud-bundle">jbouzekri/sculpin-tag-cloud-bundle</a></p>
+
+<p><a href="https://ja.wikipedia.org/wiki/%E3%82%BF%E3%82%B0%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89">タグクラウド</a>を作成することができるようになるバンドル。</p>
+
+<p>作者のページで実際に利用されているようです　つ <a href="http://blog.bouzekri.net/">Blog de Jonathan Bouzekri</a></p>
+
+<h3 id="beryllium%2Ficelus">beryllium/icelus</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/beryllium/icelus">beryllium/icelus</a></p>
+
+<p>所定の書き方をすることで <code>sculpin generate</code> 時に画像のサムネイルを生成することができるようになるバンドル。</p>
+
+<p>「<a href="/blog/2015/11/02/using-sculpin-thumbnail-generator-icelus.html">Sculpin でサムネイルを自動生成する Icelus Bundle を使ってみた</a>」 で紹介と使い方を記事にしています。</p>
+
+<h3 id="sculpin-projects-bundle">Sculpin Projects Bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/mavimo/sculpin-projects-bundle">mavimo/sculpin-projects-bundle</a></p>
+
+<p>所定のフォルダにまとめられたファイルからプロジェクトの一覧を作成するバンドル。</p>
+
+<p>こんな感じに作成されるようです　つ <a href="http://web.archive.org/web/20140815024704/http://mavimo.org/projects.html">Projects - Mavimo</a></p>
+
+<h3 id="sculpin-oembed-bundle">Sculpin oEmbed bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/bangpound/sculpin-oembed-bundle">bangpound/sculpin-oembed-bundle</a></p>
+
+<p><a href="http://oembed.com/">oEmbed</a> をサポートした URL を指定することで簡単に埋め込み用のコードを生成し、投稿に埋め込むことができるようになるバンドル。</p>
+
+<h3 id="jbouzekri%2Fsculpin-date-navigation-bundle">jbouzekri/sculpin-date-navigation-bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/jbouzekri/sculpin-date-navigation-bundle">jbouzekri/sculpin-date-navigation-bundle</a></p>
+
+<p>投稿の日時ごとのインデックスページとそのリンクを生成することができるようになるバンドル。</p>
+
+<h3 id="jbouzekri%2Fsculpin-search-bundle">jbouzekri/sculpin-search-bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/jbouzekri/sculpin-search-bundle">jbouzekri/sculpin-search-bundle</a></p>
+
+<p>投稿から予めインデックスを生成し、投稿内を <a href="https://github.com/linkedin/indextank-engine">IndexTank</a> を利用し検索することができるようになるバンドル。</p>
+
+<h3 id="ramsey%2Fsculpin-codeblock">ramsey/sculpin-codeblock</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/ramsey/sculpin-codeblock">ramsey/sculpin-codeblock</a></p>
+
+<p><a href="https://github.com/ramsey/twig-codeblock">ramsey/twig-codeblock</a> で拡張される <code>codeblock/endcodeblock</code> タグを利用することができるようになるバンドル。</p>
+
+<h3 id="sculpin-pages-bundle">Sculpin Pages Bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/fab/sculpin-pages-bundle">fab/sculpin-pages-bundle</a></p>
+
+<p>現在表示しているページをハイライトしているようなメニューを作ることができるようになるバンドル。</p>
+
+<p>bootstrap の navbar の active / 非active みたいな表示ができるようになる。</p>
+
+<p>利用例 つ <a href="https://github.com/FiacreGH/librairie-sycomore.ch/blob/master/source/_views/page.twig">librairie-sycomore.ch/page.twig at master · FiacreGH/librairie-sycomore.ch</a></p>
+
+<h3 id="sharkpp%2Fsculpin-calendarian-bundle">sharkpp/sculpin-calendarian-bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/sharkpp/sculpin-calendarian-bundle">sharkpp/sculpin-calendarian-bundle</a></p>
+
+<p>投稿の日付ごとにインデックスページを作ることができるようになるバンドル。</p>
+
+<p>拙作。</p>
+
+<p><a href="/blog/2015/08/09/create-sculpin-blog-archive-date-directory-bundle.html">Sculpin でブログアーカイブの日付ごとにポストをまとめたページを作るバンドルを作ってみた</a> で使い方を記事にしています。</p>
+
+<h3 id="wyrihaximus%2Fhtml-compress-sculpin">wyrihaximus/html-compress-sculpin</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/wyrihaximus/html-compress-sculpin">wyrihaximus/html-compress-sculpin</a></p>
+
+<p><code>sculpin generate</code> で生成される HTML ファイルを minify することができるようになるバンドル。</p>
+
+<p>Bundle と言って良いのかわからないですが、設定すると HTML を minify して圧縮してくれるようです。</p>
+
+<h2 id="%E3%83%86%E3%83%BC%E3%83%9E">テーマ</h2>
+
+<p>Sculpin 用のテーマをここでは列挙しています。</p>
+
+<p><a href="https://packagist.org/packages/sculpin/sculpin-theme-composer-plugin">sculpin-theme-composer-plugin</a> を利用すれば、 <code>composer.json</code> でテーマを管理できるようになる、ようです。</p>
+
+<p>なお、 Sculpin のテーマ機能自体は <a href="https://sculpin.io/documentation/themes/">Themes - Sculpin</a> に</p>
+
+<blockquote>
+  <p>WARNING
+  Theme support for Sculpin is still highly experimental. It has been stable in its current form since early 2014 but be aware that the theme API may change drastically sometime later this year.</p>
+</blockquote>
+
+<p>訳すと</p>
+
+<blockquote>
+  <p>警告
+  Sculpin のためのテーマのサポートはまだ非常に実験的なものです。これは初期の2014年以来現在の形で安定していますが、テーマ API は今年後半(※)にいつか大幅に変更される可能性があることに注意してください。</p>
+</blockquote>
+
+<p>訳注：2015年後半のこと つ <a href="https://github.com/sculpin/sculpin.io/commit/23f4d2f778c8ca9ef4070dac0041420bedb58ee9#diff-4a6302f145e637d38195213cf4295609">Warn people about changes to themes.</a></p>
+
+<p>と書かれているので、利用できなくなっている可能性があります。</p>
+
+<h3 id="slate-is-theme-for-github-pages-or-your-sculpin-site.">Slate is theme for GitHub Pages or your Sculpin site.</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/nedmas/slate">nedmas/slate</a></p>
+
+<p>Sculpin 用の <a href="https://github.com/jasoncostello/slate">Slate</a> テーマ。</p>
+
+<p>Slate はこんな感じのページのようです　つ <a href="http://jasoncostello.github.io/slate/">Slate : A responsive theme for GitHub Pages</a></p>
+
+<h3 id="minimal-mistakes-theme-for-sculpin-static-site-generator.">Minimal Mistakes theme for Sculpin static site generator.</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/chrisnharvey/minimal-mistakes">chrisnharvey/minimal-mistakes</a></p>
+
+<p>Sculpin 用の <a href="https://github.com/mmistakes/minimal-mistakes">Minimal Mistakes</a> テーマ。</p>
+
+<h3 id="a-bootstrap-3-blog-theme-for-sculpin">A Bootstrap 3 Blog Theme for Sculpin</h3>
+
+<p>ダウンロード：<a href="https://github.com/sculpin/bootstrap-3-blog-theme">sculpin/bootstrap-3-blog-theme</a></p>
+
+<p>Sculpin 用の Bootstrap 3 テーマ。</p>
+
+<h3 id="porting-of-sticko-theme-for-sculpin">Porting of Sticko theme for Sculpin</h3>
+
+<p>ダウンロード：<a href="https://github.com/mavimo/sculpin-theme-sticko">mavimo/sculpin-theme-sticko</a></p>
+
+<p>Sculpin 用の Sticko テーマ。</p>
+
+<h2 id="%E3%81%9D%E3%81%AE%E4%BB%96">その他</h2>
+
+<p>Sculpin cli を拡張するなど、前 3 つ以外に分類される Bundle をここで列挙しています。</p>
+
+<h3 id="sculpin%2Fsculpin-theme-composer-plugin">sculpin/sculpin-theme-composer-plugin</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/sculpin/sculpin-theme-composer-plugin">sculpin/sculpin-theme-composer-plugin</a></p>
+
+<p>Sculpin のテーマを Composer で管理できるようにするバンドル。</p>
+
+<p>README がないので使い方が分かりにくいですが、 <code>composer.json</code> に、Sculpin のテーマを書いておくと、インストール時にテーマを既定のテーマフォルダにコピーし、アンインストール時に削除してくれるようです。</p>
+
+<h3 id="sculpin-editor-bundle">Sculpin Editor Bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/mavimo/sculpin-editor-bundle">mavimo/sculpin-editor-bundle</a></p>
+
+<p><code>sculpin editor:create</code> コマンドを Sculpin へし、投稿の新規作成を容易にするバンドル。</p>
+
+<h3 id="opdavies%2Fsculpin-content-generator-bundle">opdavies/sculpin-content-generator-bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/opdavies/sculpin-content-generator-bundle">opdavies/sculpin-content-generator-bundle</a></p>
+
+<p><code>sculpin content:new:post</code> コマンドを追加し、容易に新しい投稿を作成できるようにするバンドル。</p>
+
+<h3 id="petemc%2Fsculpin-gulp-bundle">petemc/sculpin-gulp-bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/petemc/sculpin-gulp-bundle">petemc/sculpin-gulp-bundle</a></p>
+
+<p><code>sculpin generate</code> 時に、同時に <a href="http://gulpjs.com/">Gulp</a> を実行することができるようになるバンドル。</p>
+
+<h3 id="dragonmantank%2Ffillet-sculpin-bundle">dragonmantank/fillet-sculpin-bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/dragonmantank/fillet-sculpin-bundle">dragonmantank/fillet-sculpin-bundle</a></p>
+
+<p><a href="https://packagist.org/packages/dragonmantank/fillet">Fillet</a> と連携し、CMS から Sculpin への変換をサポートするバンドル。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://packagist.org/search/?q=sculpin">search of "sculpin" - Packagist</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Sculpin でリダイレクトページを生成する Sculpin Redirect Bundle を使ってみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/06/12/using-sculpin-redirect-bundle.html"/>
+            <updated>2016-06-12T13:01:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/06/12/using-sculpin-redirect-bundle.html</id>
+            <content type="html"><![CDATA[<p>GitHub Pages にホムペを移行させようと考えていたけど、 <a href="https://help.github.com/articles/redirects-on-github-pages/">Redirects on GitHub Pages</a> を見ると</p>
+
+<blockquote>
+  <p>For the security of our users, GitHub Pages does not support customer server configuration files such as .htaccess or .conf.
+  訳：ユーザーの皆様の安全のために、GitHub Pages は、.htaccess ファイルや .conf のような顧客のサーバ設定ファイルをサポートしていません。</p>
+</blockquote>
+
+<p>って記載があるので、ページのリダイレクトを GitHub Pages ではできないのかって思ってたけど、すぐ後に</p>
+
+<blockquote>
+  <p>using the <a href="https://github.com/jekyll/jekyll-redirect-from">Jekyll Redirect From plugin</a>, you can automatically redirect visitors to the updated URL.
+  訳：<a href="https://github.com/jekyll/jekyll-redirect-from">Jekyll Redirect From プラグイン</a>を使用して、更新された URL への訪問者を自動的にリダイレクトすることができます。</p>
+</blockquote>
+
+<p>と、書いてあったので Jekyll は出来ていいな〜と、使いたいのは Sculpin なんだけどなぁって考えて…… そうだ！なければ作ればいいじゃん！</p>
+
+<p>と、その前に、<a href="https://packagist.org/">Packagist</a> で <a href="https://packagist.org/search/?tags=sculpin">#sculpin</a> を探してみたところ、ちょうど良さそうなの <a href="https://packagist.org/packages/mavimo/sculpin-redirect-bundle">mavimo/sculpin-redirect-bundle - Packagist</a>
+ があったので使ってみました。</p>
+
+<h2 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール</h2>
+
+<p>内容的には Bundle の README を見れば OK です。</p>
+
+<p><code>sculpin.json</code> にパッケージを追加。</p>
+
+<pre><code class="diff">     "require": {
++        "mavimo/sculpin-redirect-bundle": "@dev"
+     },
+</code></pre>
+
+<p>次に <code>sculpin update</code> をします。
+次の手順を先に行うと実行できると言えばできるのですが、 Bundle のクラスがないよ！って怒られるので先に更新をします。</p>
+
+<pre><code class="bash">$ php sculpin update
+Loading composer repositories with package information
+      :
+Compiling component files
+</code></pre>
+
+<p><code>app/SculpinKernel.php</code> にパッケージのクラスを追加。</p>
+
+<pre><code class="diff">     protected function getAdditionalSculpinBundles()
+     {
+         return array(
++           'Mavimo\Sculpin\Bundle\RedirectBundle\SculpinRedirectBundle'
+         );
+     }
+ }
+</code></pre>
+
+<p class="alert alert-info" role="alert">ファイルが存在しない場合は、 <a href="https://github.com/beryllium/icelus#installation">beryllium/icelus § Installation</a> や <a href="https://sculpin.io/documentation/extending-sculpin/configuration/">Configuration — Sculpin</a> を参考にして <code>app/SculpinKernel.php</code> を作ってください。
+</p>
+
+<p>次にリダイレクト用のページの元となるテンプレート <code>source/_layouts/redirect.html</code> を作ります。
+作る内容は Bundle の README のままでもいいですし、リダイレクト先を <code>{{ site.url }}{{ page.destination.url }}</code> としてもいいでしょう。</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+{% spaceless %}
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="content-type" content="text/html; charset=utf-8" /&gt;
+    &lt;meta http-equiv="refresh" content="0;url={{ page.destination.url }}" /&gt;
+  &lt;/head&gt;
+&lt;/html&gt;
+{% endspaceless %}
+</code></pre>
+
+<p>そして、これで、準備は完了です。</p>
+
+<p>余談として、 <code>redirect.html</code> を作る場所が README には <code>Then create a redirect.html file in your theme</code> としか書かれていないので、最初 <code>source</code> 直下にファイルを置いてテストしていたところ生成されず小一時間ほど頭を悩ましました。
+ページ生成時時には、ログが大量に流れていくのですが、</p>
+
+<pre><code class="bash">$ php sculpin.phar generate
+Detected new or updated files
+Generating: 100% (80 sources / 0.01 seconds)
+Converting:  71% [ Twig_Error_Loader: Template "redirect" is not defined (Sculpin\Bundle\TwigBundle\FlexibleExtensionFilesystemLoader: Template "redirect" is not defined.). ]
+              :
+</code></pre>
+
+<p>と、このようなログが出ていたので、拡張子を変えてみたり、いろいろ変えてみた結果、もしかして！と思い <code>source/_layouts/redirect.html</code> にファイルを作ると思った通りに動作するようになったのでした。</p>
+
+<h2 id="%E5%88%A9%E7%94%A8%E6%96%B9%E6%B3%95">利用方法</h2>
+
+<p>こちらも基本的には Bundle の README に書かれている通りです。</p>
+
+<p>それぞれのページ用のファイルの先頭部分、ページタイトルや日時が書かれている部分に転送元のパスを列挙するだけで OK です。</p>
+
+<p>例として <code>main.html</code> が転送先とします。</p>
+
+<pre><code class="yaml">          :
+redirect:
+    - alias-path.html
+    - old-path.html
+
+---
+        :
+</code></pre>
+
+<p>と、このような感じで書くと <code>alias-path.html</code> と <code>old-path.html</code> が生成されて、そのアドレスにアクセスされると <code>main.html</code> へと転送されます。</p>
+
+<p>例えば <a href="https://github.com/sharkpp/travis-ci-pull-test/commit/8888448e41b1439570011158c2be2396f4afbab3#diff-8b370a9f2d572cc50d203266c8281d58">commit 8888448e41b1439570011158c2be2396f4afbab3</a> のように追加すると <a href="http://sharkpp.github.io/travis-ci-pull-test/old-path.html">/old-path.html</a> からアクセスすると <a href="http://sharkpp.github.io/travis-ci-pull-test/blog/2013/02/04/highlight/">/blog/2013/02/04/highlight/</a> へと転送されます。</p>
+
+<h2 id="%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88-redirect.html-%E3%81%A7%E5%88%A9%E7%94%A8%E3%81%A7%E3%81%8D%E3%82%8B%E5%A4%89%E6%95%B0">テンプレート redirect.html で利用できる変数</h2>
+
+<table>
+<thead>
+<tr>
+  <th>変数名</th>
+  <th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>page.destination</code></td>
+  <td>リダイレクト先の <code>page</code> の内容</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://packagist.org/packages/mavimo/sculpin-redirect-bundle">mavimo/sculpin-redirect-bundle - Packagist</a></li>
+<li><a href="https://github.com/mavimo/sculpin-redirect-bundle/blob/master/RedirectGenerator.php">sculpin-redirect-bundle/RedirectGenerator.php at master · mavimo/sculpin-redirect-bundle</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[日付を文字列にするための書式を比較してみた (php と Ruby 編)]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/05/28/compare-format-for-date-to-string-php-and-ruby.html"/>
+            <updated>2016-05-28T22:50:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/05/28/compare-format-for-date-to-string-php-and-ruby.html</id>
+            <content type="html"><![CDATA[<p>php を使っている時に、日付を書式化する場合、 <code>date()</code> 関数と <code>strftime()</code> 関数があって、どっち使うべきだろうか、とか片方のフォーマットは他方でどれだっけ？とか、まあようするになんでに種類あるんだろう？って思うわけです。</p>
+
+<p>で、対応をまとめてみました。</p>
+
+<p>ほかの言語も調べてみると Ruby の方が色々とフォーマットが追加されてたりするので、比較対象として追加してあります。</p>
+
+<h2 id="%E6%9B%B8%E5%BC%8F%E3%81%AE%E6%AF%94%E8%BC%83">書式の比較</h2>
+
+<p>ざっと確認したところ、大まかに</p>
+
+<ul>
+<li>php の <code>date()</code></li>
+<li>php の <code>strftime()</code> 系 Python や Perl や Linux の <code>strftime()</code> 関数(拡張なし)</li>
+<li>Ruby の <code>Time#strftime()</code> 系 Linux の <code>DATE</code> コマンド や <code>strftime()</code> 関数(拡張あり)</li>
+</ul>
+
+<p>の３種類があるようです。</p>
+
+<p>さてはて php の <code>date()</code> は一体どこから出てきたのでしょうね。</p>
+
+<p>ともかく、 php と Ruby の関数の書式をまとめてみました。</p>
+
+<table>
+<thead>
+<tr>
+  <th align="center">php:strftime</th>
+  <th align="center">php:date</th>
+  <th align="center">ruby:Time#strftime</th>
+  <th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="center">%a</td>
+  <td align="center">D</td>
+  <td align="center">%a</td>
+  <td>短縮された曜日の名前</td>
+</tr>
+<tr>
+  <td align="center">%A</td>
+  <td align="center">l</td>
+  <td align="center">%A</td>
+  <td>完全な曜日の名前</td>
+</tr>
+<tr>
+  <td align="center">%d</td>
+  <td align="center">d</td>
+  <td align="center">%d</td>
+  <td>２桁０埋めの日付</td>
+</tr>
+<tr>
+  <td align="center">%e</td>
+  <td align="center"></td>
+  <td align="center">%e</td>
+  <td>２桁空白埋めの日付</td>
+</tr>
+<tr>
+  <td align="center">%j</td>
+  <td align="center"></td>
+  <td align="center">%j</td>
+  <td>３桁０埋め１開始の年間の通算日</td>
+</tr>
+<tr>
+  <td align="center">%u</td>
+  <td align="center">N</td>
+  <td align="center">%u</td>
+  <td>月曜を１で日曜を７とする曜日</td>
+</tr>
+<tr>
+  <td align="center">%w</td>
+  <td align="center">w</td>
+  <td align="center">%w</td>
+  <td>日曜を０で土曜を６とする曜日</td>
+</tr>
+<tr>
+  <td align="center">%U</td>
+  <td align="center"></td>
+  <td align="center">%U</td>
+  <td>最初の日曜を１開始とする年間の通算週</td>
+</tr>
+<tr>
+  <td align="center">%V</td>
+  <td align="center">W</td>
+  <td align="center">%V</td>
+  <td>最初の月曜を１開始とする年間の通算週、53週目は年をまたがる</td>
+</tr>
+<tr>
+  <td align="center">%W</td>
+  <td align="center"></td>
+  <td align="center">%W</td>
+  <td>最初の月曜を１開始とする年間の通算週</td>
+</tr>
+<tr>
+  <td align="center">%b, %h</td>
+  <td align="center">M</td>
+  <td align="center">%b, %h</td>
+  <td>短縮された月の名前</td>
+</tr>
+<tr>
+  <td align="center">%B</td>
+  <td align="center">F</td>
+  <td align="center">%B</td>
+  <td>完全な月の名前</td>
+</tr>
+<tr>
+  <td align="center">%m</td>
+  <td align="center">m</td>
+  <td align="center">%m</td>
+  <td>２桁０埋めの月</td>
+</tr>
+<tr>
+  <td align="center">%C</td>
+  <td align="center"></td>
+  <td align="center">%C</td>
+  <td>２桁０埋めの世紀</td>
+</tr>
+<tr>
+  <td align="center">%g</td>
+  <td align="center"></td>
+  <td align="center"></td>
+  <td>２桁であらわした年。ISO-8601:1988 標準形式</td>
+</tr>
+<tr>
+  <td align="center">%G</td>
+  <td align="center">o</td>
+  <td align="center"></td>
+  <td>%g の４桁完全版</td>
+</tr>
+<tr>
+  <td align="center">%y</td>
+  <td align="center">y</td>
+  <td align="center">%y</td>
+  <td>２桁０埋めの年のしも２桁</td>
+</tr>
+<tr>
+  <td align="center">%Y</td>
+  <td align="center">Y</td>
+  <td align="center">%Y</td>
+  <td>４桁０埋めの年</td>
+</tr>
+<tr>
+  <td align="center">%H</td>
+  <td align="center">H</td>
+  <td align="center">%H</td>
+  <td>２桁０埋めの24時間制の時間</td>
+</tr>
+<tr>
+  <td align="center">%k</td>
+  <td align="center"></td>
+  <td align="center">%k</td>
+  <td>２桁空白埋めの24時間制の時間</td>
+</tr>
+<tr>
+  <td align="center">%I</td>
+  <td align="center">h</td>
+  <td align="center">%I</td>
+  <td>２桁０埋めの12時間制の時間</td>
+</tr>
+<tr>
+  <td align="center">%l</td>
+  <td align="center"></td>
+  <td align="center">%l</td>
+  <td>２桁空白埋めの12時間制の時間</td>
+</tr>
+<tr>
+  <td align="center">%M</td>
+  <td align="center">i</td>
+  <td align="center">%M</td>
+  <td>２桁０埋めの分</td>
+</tr>
+<tr>
+  <td align="center">%p</td>
+  <td align="center">A</td>
+  <td align="center">%p</td>
+  <td>指定した時刻に応じた大文字の 'AM' あるいは 'PM'</td>
+</tr>
+<tr>
+  <td align="center">%P</td>
+  <td align="center">a</td>
+  <td align="center">%P</td>
+  <td>指定した時刻に応じた小文字の 'am' あるいは 'pm'</td>
+</tr>
+<tr>
+  <td align="center">%r</td>
+  <td align="center"></td>
+  <td align="center">%r</td>
+  <td>"%I:%M:%S %p" と同じ</td>
+</tr>
+<tr>
+  <td align="center">%R</td>
+  <td align="center"></td>
+  <td align="center">%R</td>
+  <td>"%H:%M" と同じ</td>
+</tr>
+<tr>
+  <td align="center">%S</td>
+  <td align="center">s</td>
+  <td align="center">%S</td>
+  <td>２桁０埋めの秒</td>
+</tr>
+<tr>
+  <td align="center">%T, %X</td>
+  <td align="center"></td>
+  <td align="center">%T, %X</td>
+  <td>"%H:%M:%S" と同じ</td>
+</tr>
+<tr>
+  <td align="center">%z</td>
+  <td align="center">O</td>
+  <td align="center">%z</td>
+  <td>タイムゾーン。UTC/GMTからのオフセット</td>
+</tr>
+<tr>
+  <td align="center">%Z</td>
+  <td align="center">T</td>
+  <td align="center">%Z</td>
+  <td>タイムゾーン</td>
+</tr>
+<tr>
+  <td align="center">%c</td>
+  <td align="center"></td>
+  <td align="center">%c</td>
+  <td>日付と時刻</td>
+</tr>
+<tr>
+  <td align="center">%D, %x</td>
+  <td align="center"></td>
+  <td align="center">%D, %x</td>
+  <td>"%m/%d/%y" と同じ</td>
+</tr>
+<tr>
+  <td align="center">%F</td>
+  <td align="center"></td>
+  <td align="center">%F</td>
+  <td>"%Y-%m-%d" と同じ</td>
+</tr>
+<tr>
+  <td align="center">%s</td>
+  <td align="center">U</td>
+  <td align="center">%s</td>
+  <td>Unix エポックからのタイムスタンプ</td>
+</tr>
+<tr>
+  <td align="center">%n</td>
+  <td align="center"></td>
+  <td align="center">%n</td>
+  <td>改行文字 ("\n")</td>
+</tr>
+<tr>
+  <td align="center">%t</td>
+  <td align="center"></td>
+  <td align="center">%t</td>
+  <td>タブ文字 ("\t")</td>
+</tr>
+<tr>
+  <td align="center">%%</td>
+  <td align="center"></td>
+  <td align="center">%%</td>
+  <td>パーセント文字 ("%")</td>
+</tr>
+<tr>
+  <td align="center">%a, %d %b %Y %T %z</td>
+  <td align="center">r</td>
+  <td align="center">%a, %d %b %Y %T %z</td>
+  <td>RFC 2822 フォーマットされた日付</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">j</td>
+  <td align="center">%-e</td>
+  <td>左寄せの日</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">S</td>
+  <td align="center"></td>
+  <td>英語形式の序数を表すサフィックス(stやndなど)</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">z</td>
+  <td align="center"></td>
+  <td>左寄せで０開始の年間の通算日</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">n</td>
+  <td align="center">%-m</td>
+  <td>左寄せの月</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">t</td>
+  <td align="center"></td>
+  <td>指定した月の日数</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">L</td>
+  <td align="center"></td>
+  <td>閏年であるかどうか</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">B</td>
+  <td align="center"></td>
+  <td>Swatch インターネット時間</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">g</td>
+  <td align="center">%-l</td>
+  <td>左寄せの12時間制の時間</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">G</td>
+  <td align="center">%-H</td>
+  <td>左寄せの24時間制の時間</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">u</td>
+  <td align="center">%6N</td>
+  <td>６桁０埋めのマイクロ秒</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">e</td>
+  <td align="center"></td>
+  <td>タイムゾーン識別子</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">I</td>
+  <td align="center"></td>
+  <td>サマータイム中か否か</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">P</td>
+  <td align="center">%:z</td>
+  <td>タイムゾーン。コロンが入ったUTC/GMTからのオフセット</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">Z</td>
+  <td align="center"></td>
+  <td>タイムゾーンのオフセット秒数</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">c</td>
+  <td align="center">%FT%T%:z</td>
+  <td>ISO 8601 日付</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center"></td>
+  <td align="center">%L, %3N</td>
+  <td>３桁０埋めのミリ秒</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center"></td>
+  <td align="center">%N</td>
+  <td>９桁０埋めのナノ秒</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center"></td>
+  <td align="center">%v</td>
+  <td>VMS形式の日付 (%e-%b-%Y)</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center"></td>
+  <td align="center">%::z</td>
+  <td>タイムゾーン。コロンが入った秒まで含むUTCからのオフセット</td>
+</tr>
+</tbody>
+</table>
+
+<p>表にして比較してみると、 php の <code>date()</code> 関数は若干サポートしているフォーマットが少ないですが、逆に特殊な内容をサポートしていたりと、なかなかおもしろいと思います。</p>
+
+<p>両方が合わさると最強ではないかと思わなくもないですが、英字1文字で対応するには厳しい気もしますね。</p>
+
+<p>比較は、手でやるのは面倒だったのでスクリプトを組んで調べましたが、まあ、これぐらいなら手でやっても良かったかもしれません。</p>
+
+<p>ほかの言語を追加で調べる場合には、楽ができそうですが。</p>
+
+<h2 id="%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%81%AE%E5%88%A9%E7%94%A8%E6%96%B9%E6%B3%95">スクリプトの利用方法</h2>
+
+<p>利用方法は下記の</p>
+
+<ul>
+<li><a href="https://gist.github.com/sharkpp/2bdf0b6a70fc08044b01b7089e6ef023">_format-diff.php</a></li>
+<li><a href="https://gist.github.com/sharkpp/84deb455f9e1ffbc50f8cf1d5a0c399b">php-date.php</a></li>
+<li><a href="https://gist.github.com/sharkpp/0426f8dd6650083dc30768fc9f3f3c61">php-strftime.php</a></li>
+<li><a href="https://gist.github.com/sharkpp/7f45f212b1d58609bf7ee19164630452">ruby-Time#strftime.rb</a></li>
+</ul>
+
+<p>を同じところにダウンロードして <code>_format-diff.php</code> を実行するだけです。</p>
+
+<pre><code class="bash">$ wget https://gist.githubusercontent.com/sharkpp/2bdf0b6a70fc08044b01b7089e6ef023/raw/bffcab5b2ac52c5d2878a351f6626cc3a431baf0/
+$ wget https://gist.githubusercontent.com/sharkpp/84deb455f9e1ffbc50f8cf1d5a0c399b/raw/5b8156bb66a21477ea2f6214721f8a7d46082379/
+$ wget https://gist.githubusercontent.com/sharkpp/0426f8dd6650083dc30768fc9f3f3c61/raw/9404cd04f9bde929e0d61c97408f0a89a566a449/
+$ wget https://gist.githubusercontent.com/sharkpp/7f45f212b1d58609bf7ee19164630452/raw/07c5e4093ad8db4af4048639fa7194b732c5387c/
+$
+$ php _format-diff.php
+|php:strftime|php:date|ruby:Time#strftime|説明|
+|:-:|:-:|:-:|-|
+|  %a  |  D  |        %a        ||
+|  %A  |  l  |        %A        ||
+</code></pre>
+
+<h2 id="%E5%AE%9F%E9%9A%9B%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89%E3%81%A1%E3%82%87%E3%81%A3%E3%81%A8%E9%95%B7%E3%81%84">実際のコード(ちょっと長い)</h2>
+
+<script src="https://gist.github.com/sharkpp/2bdf0b6a70fc08044b01b7089e6ef023.js"></script>
+
+<script src="https://gist.github.com/sharkpp/84deb455f9e1ffbc50f8cf1d5a0c399b.js"></script>
+
+<script src="https://gist.github.com/sharkpp/0426f8dd6650083dc30768fc9f3f3c61.js"></script>
+
+<script src="https://gist.github.com/sharkpp/7f45f212b1d58609bf7ee19164630452.js"></script>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://jp2.php.net/manual/ja/function.strftime.php">PHP: strftime - Manual</a></li>
+<li><a href="http://jp2.php.net/manual/ja/function.date.php">PHP: date - Manual</a></li>
+<li><a href="http://docs.ruby-lang.org/ja/2.2.0/method/Time/i/strftime.html">instance method Time#strftime (Ruby 2.2.0)</a></li>
+<li><a href="http://docs.python.jp/2/library/datetime.html#strftime-strptime-behavior">8.1. datetime — 基本的な日付型および時間型 — Python 2.7.x ドキュメント</a></li>
+<li><a href="https://linuxjm.osdn.jp/html/GNU_coreutils/man1/date.1.html">Man page of DATE</a></li>
+<li><a href="http://linuxjm.osdn.jp/html/LDP_man-pages/man3/strftime.3.html">Man page of STRFTIME</a></li>
+<li><a href="http://search.cpan.org/~dexter/POSIX-strftime-GNU-0.02/lib/POSIX/strftime/GNU.pm">POSIX::strftime::GNU - search.cpan.org</a></li>
+<li><a href="http://perldoc.jp/docs/modules/Time-Piece-1.08/Piece.pod#pod20351-12356-26041">Time::Piece - オブジェクト指向な時間オブジェクト - perldoc.jp</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Sculpin で自動的に「続きを見る」リンクを作る方法]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/12/29/sculpin-tips-auto-more-link.html"/>
+            <updated>2015-12-29T23:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/12/29/sculpin-tips-auto-more-link.html</id>
+            <content type="html"><![CDATA[<p>なんか、 <a href="http://sculpin.io/">Sculpin</a> の日本語情報が圧倒的に少ない気がするのでTipsを投下してみます。</p>
+
+<p>このサイトで使っている自動的に「続きを見る」リンク</p>
+
+<p><img src="/images/2015_1229_more_link.png" alt="「続きを見る」リンク" /></p>
+
+<p>のような感じのリンクを作る方法です。</p>
+
+<h2 id="%E6%96%B9%E5%90%91%E6%80%A7">方向性</h2>
+
+<p>方向性としては、</p>
+
+<pre><code class="md">じゅげむと、いろは歌は、、、、
+ほげふが
+
+## じゅげむ
+
+寿限無寿限無、、、
+
+## いろは歌
+
+色はにほへど　散りぬるを 、、、、
+
+</code></pre>
+
+<p>と、</p>
+
+<ol>
+<li>最初のセクション(<code>じゅげむと、いろは歌は、、、、</code>の部分)</li>
+<li>レベル２ヘッダ(<code>じゅげむ</code>の部分)</li>
+<li>セクション(<code>寿限無寿限無、、、</code>の部分)</li>
+<li>以下続き</li>
+</ol>
+
+<p>のような感じの投稿内容から</p>
+
+<pre><code class="html">じゅげむと、いろは歌は、、、、
+ほげふが
+
+&lt;a href="..."&gt;... 続きを見る&lt;/a&gt;
+</code></pre>
+
+<p>のように、最初のセクションを抜き出し、「続きを見る」リンクを作るようにします。</p>
+
+<h2 id="%E6%BA%96%E5%82%99">準備</h2>
+
+<p>うちのホムペは <a href="https://github.com/sculpin/sculpin-blog-skeleton">sculpin/sculpin-blog-skeleton</a> ベースなので、これをベースとして直していく感じになります。</p>
+
+<p>そうでない場合は、適時読み替えてください。</p>
+
+<p>まず Twig で、<code>preg_XXX</code> 系が利用できるようになる拡張をインストールします。</p>
+
+<p>利用するのは、<a href="https://packagist.org/packages/jasny/twig-extensions">jasny/twig-extensions</a> です。</p>
+
+<p><code>app/config/sculpin_services.yml</code> に追記 or なければ作成し、Twig 拡張を利用できるようにします。</p>
+
+<pre><code class="diff">+ services:
++     twig.extension.text:
++         class: Twig_Extensions_Extension_Text
++         tags:
++             - { name: twig.extension }
++     twig.extension.pcre:
++         class: Jasny\Twig\PcreExtension
++         tags:
++             - { name: twig.extension }
+</code></pre>
+
+<p><code>sculpin.json</code> に</p>
+
+<pre><code class="diff">          "components/jquery": "~1.9.1",
+-         "components/highlightjs": "~7.3.0"
++         "components/highlightjs": "~7.3.0",
++         "jasny/twig-extensions": "@dev"
+      },
+      "config": {
+</code></pre>
+
+<p><code>jasny/twig-extensions</code> を追加し</p>
+
+<pre><code>$ php sculpin.phar install
+</code></pre>
+
+<p>のようにしてインストール。</p>
+
+<h2 id="%E4%BD%9C%E6%88%90">作成</h2>
+
+<p>やっていることは驚くほど簡単です。</p>
+
+<p><code>source/index.html</code> がトップページ用のテンプレートですが、</p>
+
+<pre><code class="diff">         &lt;/header&gt;
+          &lt;div&gt;
+-             {{ post.blocks.content|raw }}
++             {{ post.blocks.content|preg_replace('!^(.+?)(&lt;h.*)?$!sm', '$1') | raw }}
++             {% if post.blocks.content|preg_replace('!^(.+?)(&lt;h.*)?$!sm', '$1') != post.blocks.content %}
++                 &amp;hellip;&amp;nbsp;&lt;a href=""&gt;続きを見る&lt;/a&gt;
++             {% endif %}
+          &lt;/div&gt;
+          &lt;hr /&gt;
+</code></pre>
+
+<p>と、このような感じにスケルトンから変更します。</p>
+
+<p>やっていることは、</p>
+
+<ol>
+<li>生成済みコンテンツ(<code>post.blocks.content</code>) に対して、最初のヘッダタグの直前までを抜き出す</li>
+<li>「続きを見る」リンク追加、ただし、コンテンツが省略されていないこと。</li>
+</ol>
+
+<p>と、すごく単純なことです。</p>
+
+<p>これの肝は、最初のセクションにはヘッダタグがない、ということで、これはレベル１のヘッダタグとしてページタイトルが別になるようにしてあるためなので、違う構造であれば試行錯誤は必要ですが、うまいこと正規表現を変えて対応できると思います。</p>
+
+<h2 id="%E7%B5%90%E6%9E%9C">結果</h2>
+
+<p><img src="/images/2015_1229_more_link2.png" alt="「続きを見る」リンク" /></p>
+
+<p>やったね！</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://github.com/sharkpp/www.sharkpp.net/commit/98c87d045e04da9717cd5a30f650aea9dc373096">sharkpp/www.sharkpp.net@98c87d0</a></li>
+<li><a href="http://symfony.com/doc/current/cookbook/templating/twig_extension.html#register-an-extension-as-a-service">How to Write a custom Twig Extension (The Symfony CookBook)</a></li>
+<li><a href="https://github.com/jasny/twig-extensions">jasny/twig-extensions</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[NestedSets Model を使って FuelPHP 用コメントボックスパッケージを作った話]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/12/05/fuelphp-advent-calender-2015-5th.html"/>
+            <updated>2015-12-05T01:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/12/05/fuelphp-advent-calender-2015-5th.html</id>
+            <content type="html"><![CDATA[<p>こんにちは、こんばんは、昨日に引き続き <a href="http://qiita.com/advent-calendar/2015/fuelphp">FuelPHP Advent Calendar 2015</a> の 5 日目を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p>
+
+<p>今回は、一番最後に追加された <a href="http://fuelphp.com/docs/packages/orm/model/nestedset.html">NestedSets Model</a> (日本語訳は <a href="http://fuelphp.jp/docs/1.8/packages/orm/model/nestedset.html">NestedSets Model @ fuelphp.jp</a> を参照) を使って <a href="https://disqus.com/">Disqus</a> や <a href="https://developers.facebook.com/docs/plugins/comments">Facebook Comments</a> のようなものを貼り付けられる FuelPHP パッケージを作ってみた話をしようかと思います。</p>
+
+<p>実際のパッケージは <a href="https://github.com/sharkpp/fuel-commentbox">sharkpp/fuel-commentbox</a> からダウンロードできます。</p>
+
+<p><a href="/images/2015_1205_fuel_5th_example.png"><img src="/_thumbs/2cfb4ea909d3694cb9ebc8bc118c223e-512x512.png" alt="画面例"></a></p>
+
+<p>こんな画面になります。</p>
+
+<h2 id="nestedsets-model-%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9">NestedSets Model の使い方</h2>
+
+<p>使い方を、、、と言いつつ、実際は公式ドキュメントの <a href="http://fuelphp.com/docs/packages/orm/model/nestedset.html">NestedSets Model</a> (日本語訳は <a href="http://fuelphp.jp/docs/1.8/packages/orm/model/nestedset.html">NestedSets Model @ fuelphp.jp</a> を参照) を参照すれば簡単に使えてしまうぐらいに整っていると思います。</p>
+
+<p>基本的な機能は <code>\Orm\Model_Nestedset</code> からの派生としてモデルクラスを作れば特に考えることもなく用意されたものを使うことができます。</p>
+
+<p><code>model/commentbox.php</code></p>
+
+<pre><code class="php">namespace Commentbox;
+
+class Model_Commentbox extends \Orm\Model_Nestedset
+{
+    protected static $_properties = array(
+</code></pre>
+
+<p>のような感じです。</p>
+
+<p><a href="http://fuelphp.jp/docs/1.8/packages/oil/generate.html#/model_nestedset">oil generate</a> のドキュメントを参照すると</p>
+
+<pre><code class="bash">$ php oil g model post title:varchar[50] body:text user_id:int --nestedset
+</code></pre>
+
+<p>と、実は、このような感じでスケルトンを作ることもできるため、ドキュメントを見ながら必要なフィールドを用意したりマイグレーションコードを用意したりする必要もなく、簡単に機能の実装に入ることができます。</p>
+
+<p><a href="https://github.com/sharkpp/fuel-commentbox/commit/a2222480c0151b9f9a68f5e1336d2f4b50360343#diff-5d2aaa6da1e3955b9a2582f5894e5d8e">multi tree に必要なフィールドを追加 · sharkpp/fuel-commentbox@a222248</a></p>
+
+<pre><code class="diff"> @@ -8,6 +8,7 @@ class Model_Commentbox extends \Orm\Model_Nestedset
+        'id',
+        'left_id',
+        'right_id',
++       'tree_id',
+        'comment_key',
+        'user_id',
+        'name',
+ @@ -30,6 +31,9 @@ class Model_Commentbox extends \Orm\Model_Nestedset
+    );
+
+    protected static $_tree = array(
++       'left_field' =&gt; 'left_id',
++       'right_field' =&gt; 'right_id',
++       'tree_field' =&gt; 'tree_id',
+        'title_field' =&gt; 'comment_key',
+    );
+
+</code></pre>
+
+<p>と、このように、 <code>tree_id</code> を追加することで、</p>
+
+<ul>
+<li>唯一の親を持つツリーで管理する</li>
+<li>複数の親を持つツリーで管理する</li>
+</ul>
+
+<p>か、を選べるようになっています。</p>
+
+<p>コメントや掲示板、などは「複数の親を持つツリーで管理する」方が管理しやすいのではないかと自分は思います。</p>
+
+<p>なので、追加するには先にルートを作っておいたほうが管理がしやすいので</p>
+
+<p><code>classes/model/commentbox.php</code></p>
+
+<pre><code class="php">    public static function get_parent($comment_key, $create = false)
+    {
+        $root = self::get_item($comment_key);
+        if (null != $root ||
+            ! $create)
+        {
+            return $root;
+        }
+        $root = new static();
+        $root-&gt;comment_key = $comment_key;
+        $root-&gt;user_id = -1;
+        $root-&gt;name = '';
+        $root-&gt;email = '';
+        $root-&gt;website = '';
+        $root-&gt;body = '';
+        $root-&gt;save();
+        return $root;
+    }
+</code></pre>
+
+<p>のように、ルートノード取得時に、存在しなければルートノードを作成するメソッドを作り、扱いやすくしています。</p>
+
+<p>子を追加するときは</p>
+
+<pre><code class="php">                    }
+
+                    $model-&gt;child($parent)-&gt;save();
+                }
+</code></pre>
+
+<p>のような感じです。</p>
+
+<p>ツリーの扱いとしては、例えば、</p>
+
+<p><code>classes/commentbox.php</code></p>
+
+<pre><code class="php">        $form = $this-&gt;fieldset();
+        $root = Model_Commentbox::get_parent($this-&gt;comment_key);
+        $tree = $root ? $root-&gt;dump_tree() : array();
+        $user_page_empty
+</code></pre>
+
+<p>このように <code>dump_tree()</code> 関数を使うことで指定のアイテムを含めた下位のツリーを丸ごと取ることができます。</p>
+
+<p>ドキュメントではこの他にも、ツリーを移動するためのメソッドが多数用意されています。</p>
+
+<p>また、通常のモデルのように</p>
+
+<p><code>classes/commentbox.php</code></p>
+
+<pre><code class="php">                { // 投稿処理
+                    // キーとなるハッシュを生成
+                    for ($comment_key = \Str::random('alnum', 32);
+                         Model_Commentbox::query()
+                            -&gt;where('comment_key', $comment_key)
+                            -&gt;count();
+                         $comment_key = \Str::random('alnum', 32))
+                        continue;
+</code></pre>
+
+<p>と <code>query()</code> メソッドを使い個別に条件を追加して検索することもできます。</p>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<ul>
+<li>oil コマンドでスケルトンを作ることができるので素早く実装に進むことができる。</li>
+<li>２種類の管理の仕方、「唯一の親を持つツリーで管理する」か「複数の親を持つツリーで管理する」があり、フィールドの有無でどちらか選ぶことができる。</li>
+<li>通常のモデルクラスと同じように条件を指定し検索することができる。</li>
+<li>多彩なツリーの移動メソッドがあらかじめ用意されている。</li>
+</ul>
+
+<p>と、このような感じなのでサクサクと実装できるのではないかと思います。</p>
+
+<p>ぜひ使って見てください。</p>
+
+<p>以上、<a href="https://twitter.com/sharkpp">@sharkpp</a> がお送りいたしました。</p>
+
+<p>この文章は <a href="https://creativecommons.org/licenses/by/4.0/legalcode.ja">クリエイティブ・コモンズ 表示 4.0 国際</a> ライセンス、コードスニペットは <a href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license">MIT ライセンス</a> の下に提供されています。</p>
+
+<h2 id="%E3%81%8A%E3%81%BE%E3%81%91">おまけ</h2>
+
+<p>コメントに張り付くアイコンの表示としては <a href="http://ja.gravatar.com/">Gravatar</a> が有名ですが、探してみるとマイナー気味ですがおもしろそーなサービスが他にもあったのでこのパッケージでは選んで使えるようにしてあります。</p>
+
+<p><a href="http://ja.gravatar.com/">Gravatar</a> は</p>
+
+<p><img src="/images/2015_1205_fuel_5th_avatar_example_gravatar.png" alt="avatar example gravatar" /></p>
+
+<p>こんな感じの表示になります。</p>
+
+<p>その２は、<a href="http://robohash.org/">RoboHash</a> というサービスで、アイコンがいろんなタイプのロボットで表示され、背景も何種類か選ぶことができます。</p>
+
+<p><img src="/images/2015_1205_fuel_5th_avatar_example_robohash.png" alt="avatar example robohash" /></p>
+
+<p>こんな感じの表示になります。</p>
+
+<p>その３は、<a href="http://avatars.adorable.io/">Adorable Avatars!</a> というサービスで、とぼけた？ような顔のアイコンを作ってくれます。
+ただ、このサービスはアイコンの種類が少ないのか意外とアイコンが被ってしまうことが多い気がします。</p>
+
+<p><img src="/images/2015_1205_fuel_5th_avatar_example_adorable.png" alt="avatar example adorable" /></p>
+
+<p>こんな感じの表示になります。</p>
+
+<p><a href="https://github.com/sharkpp/fuel-commentbox/blob/master/classes/util/avatar.php">Avatar</a> というクラスを作りまとめて管理しているので他にも同じようなサービスが見つかったら簡単に追加できるようにしてあるので誰か使って欲しいなぁ、なんて。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://fennec.hatenablog.com/entry/2012/12/12/031408">fuel-nestedsetsを試す。 - 備忘録的な @7wk</a></li>
+<li><a href="http://fennec.hatenablog.com/entry/2012/12/12/231456">fuel-nestedsetsを試す。の続き。 - 備忘録的な @7wk</a></li>
+<li><a href="http://fuelphp.jp/docs/1.8/packages/orm/model/nestedset.html">NestedSets Model @ fuelphp.jp</a></li>
+</ul>
+
+<hr>
+
+<p>この投稿は <strong><a href="http://qiita.com/advent-calendar/2015/fuelphp">FuelPHP Advent Calendar 2015</a></strong> の <strong>5日目</strong>の記事です。</p>
+
+<ul>
+<li>4日目の記事: <a href="http://www.sharkpp.net/blog/2015/12/04/fuelphp-advent-calender-2015-4th.html">Markdown Wiki を通して Model_Temporal の使い方を覚えよう</a></li>
+<li>6日目の記事: <a href="http://qiita.com/wata/items/22bf3ad75a854aa8f119">DBUnit拡張を使ったFuelPHPのテストを考える</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Markdown Wiki を通して Temporal Model の使い方を覚えよう]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/12/04/fuelphp-advent-calender-2015-4th.html"/>
+            <updated>2015-12-04T02:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/12/04/fuelphp-advent-calender-2015-4th.html</id>
+            <content type="html"><![CDATA[<p>こんにちは、こんばんは、<a href="http://qiita.com/advent-calendar/2015/fuelphp">FuelPHP Advent Calendar 2015</a> の 4 日目を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p>
+
+<p>今回は Temporal Model を使って Markdown で記述できる簡易 Wiki を作ってみることにします。</p>
+
+<p>題して「Markdown Wiki を通して Temporal Model の使い方を覚えよう」です。</p>
+
+<p>完成品は <a href="https://github.com/sharkpp/md-micro-wiki">md-micro-wiki @ github.com</a> にコミットし <a href="https://www.vagrantup.com/">Vagrant</a> を使って簡単に試せるようにしてあります。</p>
+
+<h2 id="%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">はじめに</h2>
+
+<p>Markdwon で記述できる簡単な Wiki の作成を通して <a href="http://fuelphp.com/docs/packages/orm/model/temporal.html">Temporal Model</a> (日本語訳は <a href="http://fuelphp.jp/docs/1.8/packages/orm/model/temporal.html">Temporal Model @ fuelphp.jp</a> を参照) の使い方を説明してみようと思います。</p>
+
+<p>作るものの要件として</p>
+
+<ul>
+<li>FuelPHP 1.7.3 を使用</li>
+<li>履歴が残せる簡易な Wiki アプリ</li>
+<li>Model_Temporal クラスを使用</li>
+<li>Markdown で本文を記述</li>
+<li>ログイン管理は長くなるので省略</li>
+</ul>
+
+<p>を簡単に決め作ってみました。</p>
+
+<p>また、なるべく Oil コマンドの Generate 機能でスケルトンを作り実装の速度を上げてみたいと思います。</p>
+
+<h2 id="%E7%92%B0%E5%A2%83%E3%81%AE%E6%BA%96%E5%82%99">環境の準備</h2>
+
+<p>データベースは FuelPHP の開発環境デフォルトの</p>
+
+<table>
+<thead>
+<tr>
+  <th>項目名</th>
+  <th>値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>データベース名</td>
+  <td>fuel_dev</td>
+</tr>
+<tr>
+  <td>ユーザー名</td>
+  <td>root</td>
+</tr>
+<tr>
+  <td>パスワード</td>
+  <td>root</td>
+</tr>
+</tbody>
+</table>
+
+<p>とします。</p>
+
+<h2 id="fuelphp-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">FuelPHP のインストール</h2>
+
+<p><a href="http://fuelphp.com/docs/installation/instructions.html">Instruction</a> (日本語訳は <a href="http://fuelphp.jp/docs/1.8/installation/instructions.html">インストール方法 @ fuelphp.jp</a> を参照) を確認しながら、 Composer を使い、サクッとインストールします。</p>
+
+<p>この時、PHP のタイムゾーンを設定しておかないとエラーが発生してインストール処理が中断するので注意です。</p>
+
+<pre><code>$ composer create-project fuel/fuel:dev-1.7/master --prefer-dist md-micro-wiki
+</code></pre>
+
+<p>Welcome ページもいらないので削除します。</p>
+
+<pre><code>$ cd md-micro-wiki
+$ rm -rf fuel/app/{classes/{controller/welcome.php,presenter/welcome/},views/welcome/}
+$ touch fuel/app/classes/presenter/.gitkeep
+</code></pre>
+
+<p>この状態でアクセすると 404 ページの表示になります。</p>
+
+<p><img src="/images/2015_1204_fuel_4th_404.png" alt="FuelPHP 404 page" /></p>
+
+<h2 id="%E5%AE%9F%E8%A3%85">実装</h2>
+
+<h3 id="%E3%83%A2%E3%83%87%E3%83%AB%E3%82%84%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%81%AA%E3%81%A9%E3%81%AE%E3%82%B9%E3%82%B1%E3%83%AB%E3%83%88%E3%83%B3%E3%82%92%E8%BF%BD%E5%8A%A0">モデルやコントローラなどのスケルトンを追加</h3>
+
+<p><a href="http://fuelphp.com/docs/packages/orm/intro.html">Introduction - Orm Package</a> (日本語訳は <a href="http://fuelphp.jp/docs/1.8/packages/orm/intro.html">はじめに - Orm パッケージ @ fuelphp.jp</a> を参照) を参考にORM パッケージを有効化します。</p>
+
+<p><code>fuel/app/config/config.php</code></p>
+
+<pre><code class="diff">@@ -256,7 +256,7 @@
+    /**************************************************************************/
+    /* Always Load                                                            */
+    /**************************************************************************/
+-   // 'always_load'  =&gt; array(
++   'always_load'  =&gt; array(
+
+        /**
+         * These packages are loaded on Fuel's startup.
+@@ -269,9 +269,9 @@
+         *     array('auth' =&gt; PKGPATH.'auth/')
+         * );
+         */
+-       // 'packages'  =&gt; array(
+-       //  //'orm',
+-       // ),
++       'packages'  =&gt; array(
++           'orm',
++       ),
+
+        /**
+         * These modules are always loaded on Fuel's startup. You can specify them
+@@ -307,6 +307,6 @@
+         * If you don't want the lang in a group use null as groupname.
+         */
+        // 'language'  =&gt; array(),
+-   // ),
++   ),
+
+ );
+</code></pre>
+
+<p>Oil コマンドの Generate 機能を使い、モデルやコントローラ、ビューのスケルトンを作ります。</p>
+
+<pre><code class="bash">$ php oil g controller page list view revision edit delete
+$ php oil g model page title:string body:text body_html:text brief:string --temporal
+</code></pre>
+
+<p><a href="http://fuelphp.com/docs/packages/oil/generate.html#/model_temporal">Generate - Oil Package</a> (日本語訳は <a href="http://fuelphp.jp/docs/1.8/packages/oil/generate.html#/model_temporal">Generate - Oil パッケージ @ fuelphp.jp</a> を参照) の注意に書かれているように、マイグレーションコードを修正し主キーを設定します。</p>
+
+<p><code>fuel/app/migrations/001_create_pages.php</code></p>
+
+<pre><code class="diff">            'body_html' =&gt; array('type' =&gt; 'text'),
+            'brief' =&gt; array('constraint' =&gt; 255, 'type' =&gt; 'varchar'),
+
+-       ), array('id'));
++       ), array('id', 'temporal_start', 'temporal_end'));
+    }
+
+    public function down()
+</code></pre>
+
+<p>マイグレーションを実行しテーブルを作成します。</p>
+
+<pre><code>$ php oil r migrate
+</code></pre>
+
+<h3 id="%E3%82%B3%E3%83%BC%E3%83%89%E3%82%92%E8%BF%BD%E5%8A%A0">コードを追加</h3>
+
+<p>ここから若干巻きで進めます。</p>
+
+<ol>
+<li>ルーティング、モデル、ビューテンプレートの実装</li>
+<li>ページ編集画面の実装</li>
+<li>ページ表示画面の実装</li>
+<li>ページ一覧表示画面の実装</li>
+<li>ページ編集履歴の実装</li>
+<li>ページ削除画面の実装</li>
+</ol>
+
+<p>の順番で実装を行います。</p>
+
+<p>ルーティングをごそっと変えて、ページの表示、編集、履歴表示、削除、ができるようにします。</p>
+
+<p><code>fuel/app/config/routes.php</code></p>
+
+<pre><code class="diff"> &lt;?php
+ return array(
+-   '_root_'  =&gt; 'welcome/index',  // The default route
+-   '_404_'   =&gt; 'welcome/404',    // The main 404 route
+-   
+-   'hello(/:name)?' =&gt; array('welcome/hello', 'name' =&gt; 'hello'),
++   '_root_' =&gt; 'page/view',
++   '(create|edit|revision|list)' =&gt; 'page/$1',
++   'revision/(:num)' =&gt; 'page/view//$1',
++   '(:segment)/(create|edit|revision|delete)' =&gt; 'page/$2/$1',
++   '(:segment)/revision/(:num)' =&gt; 'page/view/$1/$2',
++   '(:segment)' =&gt; 'page/view/$1',
+ );
+</code></pre>
+
+<p>Markdown から HTML への変換処理メソッドやオブザーバー、バリデーション、ページタイトルからレコードを探すメソッドなどを実装します。</p>
+
+<p>ページタイトルのカラムを今回は主キーとしていないため、ページタイトルから特定のリビジョンを示すレコードを探すには、</p>
+
+<ol>
+<li>ページタイトルで引っかかる最新のレコードを取得する。</li>
+<li>レコードから <code>id</code> を取得し、リビジョンを指定し検索。</li>
+</ol>
+
+<p>と、2 回のクエリを発行しないとダメなようです。</p>
+
+<p><code>fuel/app/classes/model/page.php</code></p>
+
+<pre><code class="diff"><br />    protected static $_table_name = 'pages';
+
++   protected static $_observers = array('Orm\\Observer_Self' =&gt; array(
++    'events' =&gt; array('before_save')
++   ));
++   
++   public function _event_before_save()
++   {
++       $this-&gt;body_html = self::parse_markdown($this-&gt;body);
++   }
++
++   public static function parse_markdown($text)
++   {
++       $text = preg_replace('!\[\]\((.+?)\)!', '[$1]($1)', $text);
++       return Markdown::parse(Security::xss_clean($text));
++   }
++
++   public static function validate($factory)
++   {
++       $val = Validation::forge($factory);
++       $val-&gt;add_field('title', 'Title', 'max_length[255]|valid_string[specials,dashes]');
++       $val-&gt;add_field('body', 'Body', 'required');
++       $val-&gt;add_field('brief', 'Brief', 'max_length[255]');
++
++       return $val;
++   }
++
++   public static function get_by_title($title, $timestamp = null)
++   {
++       $page = self::find('first',
++                                           array(
++                                               'where' =&gt; array( array('title', $title) )
++                       ));
++
++       if ( $page &amp;&amp; $timestamp)
++       {
++           $page = self::find_revision($page-&gt;id, $timestamp);
++       }
++
++       return $page;
++   }
++
++   public static function enum_revisions_by_title($title)
++   {
++       if ( (! $page = self::get_by_title($title)) ||
++                (! $revisions = self::find_revisions_between($page-&gt;id)) )
++       {
++           return null;
++       }
++       return array_reverse($revisions);
++   }
++
+ }
+</code></pre>
+
+<h3 id="%E3%83%93%E3%83%A5%E3%83%BC%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E4%BF%AE%E6%AD%A3">ビューテンプレートを修正</h3>
+
+<p><code>fuel/app/views/template.php</code></p>
+
+<pre><code class="diff">@@ -11,6 +11,20 @@
+ &lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="col-md-12"&gt;
++&lt;?php $action = preg_match('!/(edit|revision|delete)(/[0-9]+)?!', '/' . Uri::string(), $match) ? $match[1] : ''; ?&gt;
++           &lt;div class="pull-right"&gt;
++               &lt;?php echo Html::anchor('', 'Top'); ?&gt;
++               |
++               &lt;?php echo Html::anchor('list', 'List'); ?&gt;
++               ||
++               &lt;?php echo '' == $action || 'list' == Uri::string() ? 'Read' : Html::anchor($name, 'Read'); ?&gt;
++               |
++               &lt;?php echo '' != $action || 'list' == Uri::string() ? 'Edit' : Html::anchor($name . '/edit', 'Edit'); ?&gt;
++               |
++               &lt;?php echo ('revision' == $action &amp;&amp; !isset($match[2])) || ('revision' != $action &amp;&amp; '' != $action) || 'list' == Uri::string() ? 'Revision' : Html::anchor($name . '/revision', 'Revision'); ?&gt;
++               |
++               &lt;?php echo '' != $action || '' == Uri::string() || 'list' == Uri::string() ? 'Delete' : Html::anchor($name . '/delete', 'Delete'); ?&gt;
++           &lt;/div&gt;
+            &lt;h1&gt;&lt;?php echo $title; ?&gt;&lt;/h1&gt;
+            &lt;hr&gt;
+ &lt;?php if (Session::get_flash('success')): ?&gt;
+@@ -29,9 +43,15 @@
+                &lt;/p&gt;
+            &lt;/div&gt;
+ &lt;?php endif; ?&gt;
++&lt;?php if ('revision' == $action &amp;&amp; isset($match[2])): ?&gt;
++           &lt;div class="alert alert-warning"&gt;
++               &lt;p&gt;This is an &lt;?php echo Html::anchor($name . '/revision', 'old revision'); ?&gt; of this page.&lt;/p&gt;
++           &lt;/div&gt;
++&lt;?php endif; ?&gt;
+        &lt;/div&gt;
+        &lt;div class="col-md-12"&gt;
+ &lt;?php echo $content; ?&gt;
++           &lt;hr&gt;
+        &lt;/div&gt;
+        &lt;footer&gt;
+            &lt;p class="pull-right"&gt;Page rendered in {exec_time}s using {mem_usage}mb of memory.&lt;/p&gt;
+</code></pre>
+
+<h3 id="%E3%83%9A%E3%83%BC%E3%82%B8%E8%A1%A8%E7%A4%BA%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85">ページ表示用のコントローラメソッドとビュー実装</h3>
+
+<p>実装すると作成 or 編集したページが表示できるようになります。</p>
+
+<p><code>fuel/app/classes/controller/page.php</code></p>
+
+<pre><code class="diff">-   public function action_view()
++   public function action_view($name = '', $timestamp = null)
+    {
+-       $data["subnav"] = array('view'=&gt; 'active' );
+-       $this-&gt;template-&gt;title = 'Page &amp;raquo; View';
+-       $this-&gt;template-&gt;content = View::forge('pa/view', $data);
++       if ( ! $page = Model_Page::get_by_title($name, $timestamp) ) {
++           if ( $timestamp) {
++               throw new HttpNotFoundException;
++           }
++           Response::redirect($name . '/edit');
++       }
++
++       $this-&gt;template-&gt;title = (empty($name) ? '(top)' : $name);
++       $this-&gt;template-&gt;name = $name;
++       $this-&gt;template-&gt;content = View::forge('page/view')
++                                   -&gt;set_safe('page', $page);
+    }
+</code></pre>
+
+<p><code>fuel/app/views/page/view.php</code></p>
+
+<pre><code class="php">&lt;?php echo $page-&gt;body_html; ?&gt;&lt;/p&gt;
+</code></pre>
+
+<h3 id="%E3%83%9A%E3%83%BC%E3%82%B8%E7%B7%A8%E9%9B%86%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85">ページ編集用のコントローラメソッドとビュー実装</h3>
+
+<p>実装すると、ページの編集ができるようになります。</p>
+
+<p><a href="/images/2015_1204_fuel_4th_editing.png"><img src="/_thumbs/32e1813e0bc4e7a012b748c5263e4779-256x256.png" alt="編集中"></a></p>
+
+<p>またプレビュー機能も同時に実装しています。</p>
+
+<p><a href="/images/2015_1204_fuel_4th_editing_preview.png"><img src="/_thumbs/6f633f1b809c34d8892cbbc7187817d7-256x256.png" alt="編集中のプレビュー"></a></p>
+
+<p><code>fuel/app/classes/controller/page.php</code></p>
+
+<pre><code class="diff">-   public function action_edit()
++   
++   public function action_edit($name = '')
+    {
+-       $data["subnav"] = array('edit'=&gt; 'active' );
+-       $this-&gt;template-&gt;title = 'Page &amp;raquo; Edit';
+-       $this-&gt;template-&gt;content = View::forge('pa/edit', $data);
++       $page = Model_Page::get_by_title($name);
++       $new_page = ! $page;
++
++       if (Input::method() == 'POST') {
++           $val = Model_Page::validate($new_page ? 'create' : 'edit');
++           if ($val-&gt;run(array('title' =&gt; $name))) {
++               $page = $page ?: Model_Page::forge();
++               $page-&gt;title = $val-&gt;validated('title');
++               $page-&gt;body  = $val-&gt;validated('body');
++               $page-&gt;brief = $val-&gt;validated('brief');
++               if (!Input::post('preview')) {
++                   if ($page-&gt;save()) {
++                       Session::set_flash('success', $new_page ? 'Added page.' : 'Updated page.');
++                       Response::redirect($name);
++                   }
++                   else {
++                       Session::set_flash('error', $new_page ? 'Could not save page.' : 'Could not update page.');
++                   }
++               }
++           }
++           else {
++               Session::set_flash('error', $val-&gt;error());
++           }
++           $this-&gt;template-&gt;set_global('body_html', Model_Page::parse_markdown(Input::post('body')), false);
++       }
++       else if ($page) {
++           $page-&gt;brief = '';
++       }
++
++       $this-&gt;template-&gt;set_global('page', $page, false);
++
++       $this-&gt;template-&gt;title = ($new_page ? 'Creating ' : 'Editing ') . (empty($name) ? '(top)' : $name);
++       $this-&gt;template-&gt;name = $name;
++       $this-&gt;template-&gt;content = View::forge('page/edit');
+    }
+</code></pre>
+
+<p><code>fuel/app/views/page/edit.php</code></p>
+
+<pre><code class="php">&lt;?php if (isset($body_html)): ?&gt;
+&lt;div class="alert alert-info"&gt;
+    &lt;p&gt;This is only a preview; your changes have not yet been saved! → &lt;a href="#form"&gt;Go to editing area&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;?php echo $body_html; ?&gt;
+&lt;hr&gt;
+&lt;?php endif ?&gt;
+&lt;?php echo Form::open(array("class"=&gt;"form-horizontal")); ?&gt;
+
+    &lt;fieldset id="form"&gt;
+        &lt;div class="form-group"&gt;
+            &lt;?php echo Form::label('Body', 'body', array('class'=&gt;'control-label')); ?&gt;
+
+                &lt;?php echo Form::textarea('body', Input::post('body', isset($page) ? $page-&gt;body : ''), array('class' =&gt; 'col-md-8 form-control', 'rows' =&gt; 8, 'placeholder'=&gt;'Body')); ?&gt;
+
+        &lt;/div&gt;
+        &lt;div class="form-group"&gt;
+            &lt;?php echo Form::label('Brief', 'brief', array('class'=&gt;'control-label')); ?&gt;
+
+                &lt;?php echo Form::input('brief', Input::post('brief', isset($page) ? $page-&gt;brief : ''), array('class' =&gt; 'col-md-4 form-control', 'placeholder'=&gt;'Brief')); ?&gt;
+
+        &lt;/div&gt;
+        &lt;div class="form-group"&gt;
+            &lt;?php echo Form::submit('submit', 'Save', array('class' =&gt; 'btn btn-primary')); ?&gt;
+            &lt;?php echo Form::submit('preview', 'Preview', array('class' =&gt; 'btn btn-normal')); ?&gt;
+            &lt;?php echo Html::anchor(isset($page) ? $page-&gt;title : '', 'Cancel', array('class' =&gt; 'btn btn-normal')); ?&gt;
+        &lt;/div&gt;
+    &lt;/fieldset&gt;
+&lt;?php echo Form::close(); ?&gt;
+</code></pre>
+
+<h3 id="%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7%E8%A1%A8%E7%A4%BA%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85">ページ一覧表示用のコントローラメソッドとビュー実装</h3>
+
+<p>実装すると追加したページの一覧が、</p>
+
+<p><a href="/images/2015_1204_fuel_4th_page_list.png"><img src="/_thumbs/e85a6468e24b04b7fb73195c6775a7b8-256x256.png" alt="リスト表示"></a></p>
+
+<p>と、このような感じで表示できるようになります。</p>
+
+<p><code>fuel/app/classes/controller/page.php</code></p>
+
+<pre><code class="diff">    public function action_list()
+    {
+-       $data["subnav"] = array('list'=&gt; 'active' );
+-       $this-&gt;template-&gt;title = 'Page &amp;raquo; List';
+-       $this-&gt;template-&gt;content = View::forge('pa/list', $data);
++       $data['pages'] = Model_Page::find('all');
++
++       $this-&gt;template-&gt;title = 'List of all pages';
++       $this-&gt;template-&gt;content = View::forge('page/list', $data);
+    }
+</code></pre>
+
+<p><code>fuel/app/views/page/list.php</code></p>
+
+<pre><code class="php">&lt;div class="row"&gt;
+  &lt;div class="col-md-6"&gt;
+    &lt;ul&gt;
+&lt;?php for ($i = 0, $num = count($pages), $page = current($pages); $page; $i++, $page = next($pages)): ?&gt;
+      &lt;li&gt;&lt;?php echo Html::anchor($page-&gt;title, empty($page-&gt;title) ? '(top)' : $page-&gt;title); ?&gt;&lt;/li&gt;
+&lt;?php if (intval(($num-1)/2) == $i): ?&gt;
+        &lt;/ul&gt;&lt;/div&gt;&lt;div class="col-md-6"&gt;&lt;ul&gt;
+&lt;?php endif; ?&gt;
+&lt;?php endfor; ?&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3 id="%E3%83%9A%E3%83%BC%E3%82%B8%E5%B1%A5%E6%AD%B4%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85">ページ履歴用のコントローラメソッドとビュー実装</h3>
+
+<p>実装するとページの編集履歴が</p>
+
+<p><a href="/images/2015_1204_fuel_4th_revision.png"><img src="/_thumbs/ccc99f4b994b0f8ff4c582dee40eb0c4-256x256.png" alt="履歴"></a></p>
+
+<p>と、このような感じで表示できるようになります。</p>
+
+<p>各リビジョンは日付が該当リビジョンの内容を表示するためのリンクとなっています。</p>
+
+<p><code>fuel/app/classes/controller/page.php</code></p>
+
+<pre><code class="diff">-   public function action_revision()
++   public function action_revision($name = '')
+    {
+-       $data["subnav"] = array('revision'=&gt; 'active' );
+-       $this-&gt;template-&gt;title = 'Page &amp;raquo; Revision';
+-       $this-&gt;template-&gt;content = View::forge('pa/revision', $data);
++       if ( ! $data['revisions'] = Model_Page::enum_revisions_by_title($name) ) {
++           throw new HttpNotFoundException;
++       }
++
++       $this-&gt;template-&gt;title = 'Revision of ' . (empty($name) ? '(top)' : $name);
++       $this-&gt;template-&gt;name = $name;
++       $this-&gt;template-&gt;content = View::forge('page/revision', $data);
+    }
+</code></pre>
+
+<p><code>fuel/app/views/page/revision.php</code></p>
+
+<pre><code class="php">&lt;table&gt;
+&lt;?php $i = 0; foreach ($revisions as $revision): ?&gt;
+  &lt;tr&gt;
+&lt;?php if (0 == $i): ?&gt;
+  &lt;td&gt;&lt;?php echo Html::anchor($revision-&gt;title, Date::forge($revision-&gt;temporal_start)-&gt;format("%Y-%m-%d %H:%M:%S")); ?&gt;&lt;/td&gt;
+&lt;?php else: ?&gt;
+  &lt;td&gt;&lt;?php echo Html::anchor($revision-&gt;title . '/revision/' . $revision-&gt;temporal_start, Date::forge($revision-&gt;temporal_start)-&gt;format("%Y-%m-%d %H:%M:%S")); ?&gt;&lt;/td&gt;
+&lt;?php endif; ?&gt;
+    &lt;td&gt;&lt;?php echo empty($revision-&gt;brief) ? '' : '(' . $revision-&gt;brief . ')'; ?&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;?php $i++; endforeach; ?&gt;
+&lt;/table&gt;
+</code></pre>
+
+<h3 id="%E3%83%9A%E3%83%BC%E3%82%B8%E5%89%8A%E9%99%A4%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85">ページ削除用のコントローラメソッドとビュー実装</h3>
+
+<p>実装すると削除処理ができるようになります。</p>
+
+<p><a href="/images/2015_1204_fuel_4th_delete.png"><img src="/_thumbs/2cdf9085abd8d7791b23c8d9ba986fc3-256x256.png" alt="削除"></a></p>
+
+<p><code>fuel/app/classes/controller/page.php</code></p>
+
+<pre><code class="diff">-   public function action_delete()
++   public function action_delete($name)
+    {
+-       $data["subnav"] = array('delete'=&gt; 'active' );
+-       $this-&gt;template-&gt;title = 'Page &amp;raquo; Delete';
+-       $this-&gt;template-&gt;content = View::forge('pa/delete', $data);
++       if ( ! $data['page'] = Model_Page::get_by_title($name) ) {
++           throw new HttpNotFoundException;
++       }
++
++       if (Input::post('submit')) {
++           if ($data['page']-&gt;purge()) {
++               Session::set_flash('success', 'Deleted page');
++               Response::redirect('');
++           }
++           else {
++               Session::set_flash('error', 'Could not delete page');
++           }
++       }
++
++       $this-&gt;template-&gt;title = $name;
++       $this-&gt;template-&gt;name = $name;
++       $this-&gt;template-&gt;content = View::forge('page/delete', $data);
+    }
+</code></pre>
+
+<p><code>fuel/app/views/page/delete.php</code></p>
+
+<pre><code class="php">&lt;p&gt;Are you sure you want to delete &lt;?php echo $page-&gt;title; ?&gt; ?&lt;/p&gt;
+&lt;?php echo Form::open(array("class"=&gt;"form-horizontal")); ?&gt;
+  &lt;?php echo Form::submit('submit', 'Yes, Delete', array('class' =&gt; 'btn btn-danger')); ?&gt;
+  &lt;?php echo Html::anchor(isset($page) ? $page-&gt;title : '', 'Cancel', array('class' =&gt; 'btn btn-normal')); ?&gt;
+&lt;?php echo Form::close(); ?&gt;
+</code></pre>
+
+<h2 id="wiki-%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9">Wiki の使い方</h2>
+
+<p>基本的な動作として、ページがない場合は新規作成画面に移動します。</p>
+
+<p>そのため、初期状態でトップページにアクセスするとトップページの作成画面に移動します。</p>
+
+<p>書式は <a href="https://michelf.ca/projects/php-markdown/">PHP Markdown</a> のドキュメントが参考になります。</p>
+
+<p>加えて、リンクのテキストを</p>
+
+<pre><code class="markdown">[](テスト)
+</code></pre>
+
+<p>のような感じに省略した場合、</p>
+
+<pre><code class="markdown">[テスト](テスト)
+</code></pre>
+
+<p>の形式に直されます。</p>
+
+<p>また、このような形で各ページに対してリンクを貼ることができます。</p>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<p>駆け足でしたが、 Temporal Model を使って簡単に Markdown で編集できる Wiki を作ることができました。</p>
+
+<p>とりあえず、今回わかったことをまとめると</p>
+
+<ul>
+<li><code>php oil g model XXX ... --temporal</code> で Temporal Model のスケルトンが簡単に生成できる、がマイグレーションコードに手を入れる必要あり。</li>
+<li>主キー以外のカラムから特定リビジョンを取得するには 2 回のデータベースクエリ発行が必要。</li>
+<li>単純なモデルクラスに少し足した感じなので簡単に扱うことができる</li>
+</ul>
+
+<p>と、若干の考慮する点などがありますが、 Temporal Model は履歴管理を実装として含んでいるためユーザーが複雑なクエリを構築することなく、単純なモデルクラスのような感じで扱うことができます。</p>
+
+<p>ぜひ使って見てください。</p>
+
+<p>以上、<a href="https://twitter.com/sharkpp">@sharkpp</a> がお送りいたしました。</p>
+
+<p>この文章は <a href="https://creativecommons.org/licenses/by/4.0/legalcode.ja">クリエイティブ・コモンズ 表示 4.0 国際</a> ライセンス、コードスニペットは <a href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license">MIT ライセンス</a> の下に提供されています。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://fuelphp.jp/docs/1.8/packages/orm/model/temporal.html">Temporal Model - Orm パッケージ - FuelPHP ドキュメント</a></li>
+<li><a href="https://www.mediawiki.org/wiki/Manual:Database_layout/ja">Manual:データベースのレイアウト - MediaWiki</a></li>
+<li><a href="http://www.slideshare.net/takyam1213/temporal-model-takyam">What's Temporal model FuelPHP東京勉強会03</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/Help:%E4%BB%A5%E5%89%8D%E3%81%AE%E7%89%88%E3%81%AB%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E6%88%BB%E3%81%99%E6%96%B9%E6%B3%95">Help:以前の版にページを戻す方法 - Wikipedia</a></li>
+<li><a href="https://michelf.ca/projects/php-markdown/">PHP Markdown</a></li>
+</ul>
+
+<hr>
+
+<p>この投稿は <strong><a href="http://qiita.com/advent-calendar/2015/fuelphp">FuelPHP Advent Calendar 2015</a></strong> の <strong>4日目</strong>の記事です。</p>
+
+<ul>
+<li>3日目の記事: <a href="http://qiita.com/ken880guchi/items/300b16b8b8473c3b45a9">FuelPHP で TODO アプリケーションを作ってみた。</a></li>
+<li>5日目の記事: <a href="http://www.sharkpp.net/blog/2015/12/05/fuelphp-advent-calender-2015-5th.html">NestedSets Model を使って FuelPHP 用コメントボックスパッケージを作った話</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[FuelPHP ドキュメント翻訳のための git メモ]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/11/03/git-memo-for-fuel-docs-trans.html"/>
+            <updated>2015-11-03T08:54:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/11/03/git-memo-for-fuel-docs-trans.html</id>
+            <content type="html"><![CDATA[<p><a href="/blog/2013/06/01/first-github-fork-and-fuelphp-docs-jp.html">初めてのForkとFuelPHP 1.6 翻訳ウィーク参加</a> で git の操作方法をメモってたけど色々おかしかったので新たにメモ。</p>
+
+<p>それ以外にも関連する事柄をメモ。</p>
+
+<h2 id="%E6%9C%AA%E7%BF%BB%E8%A8%B3%E3%81%AE%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%E3%82%92%E6%8E%A2%E3%81%99">未翻訳のドキュメントを探す</h2>
+
+<pre><code class="bash">$ grep -RE " [a-zA-Z]+\.\s*$" * | grep -v "MIT license"
+</code></pre>
+
+<p>や</p>
+
+<pre><code class="bash">$ grep -RE " you " *
+</code></pre>
+
+<p>とすることでなんとなく探せます。</p>
+
+<p>なんとなくですが。</p>
+
+<h2 id="%E8%A6%AA%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%8B%E3%82%89%E3%83%9E%E3%83%BC%E3%82%B8">親リポジトリからマージ</h2>
+
+<p>親リポジトリは</p>
+
+<pre><code class="bash">$ git remote set-url upstream &lt;URL&gt;
+</code></pre>
+
+<p>で指定しておき</p>
+
+<pre><code class="bash">$ git remote -v
+</code></pre>
+
+<p>で現状を確認できる。</p>
+
+<p>そして、</p>
+
+<pre><code class="bash">$ git pull upstream &lt;BRANCH_NAME&gt;
+</code></pre>
+
+<p>でマージする。</p>
+
+<p>さらに、自分の GitHub に pull アンド push でマージ。</p>
+
+<pre><code class="bash">$ git push origin 1.8/develop_japanese
+$ git pull origin 1.8/develop_japanese
+</code></pre>
+
+<p>ブランチを切って作業していればマージも自動で終わるはず。</p>
+
+<p>upstream から pull した後で↓の</p>
+
+<p><img src="/images/2015_1103_github_desktop_sync_button.png" alt="GitHub Desktop Sync Button" /></p>
+
+<p>GitHub Desktop の Sync ボタンでも自分のレポジトリにマージできるので普段はそっちの方が簡単。</p>
+
+<h2 id="%E3%83%9E%E3%83%BC%E3%82%B8%E6%B8%88%E3%81%BF%E3%81%AE%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81%E3%82%92%E6%8E%A2%E3%81%99">マージ済みのブランチを探す</h2>
+
+<pre><code class="bash">git branch -r --list --merged | grep -vE "((upstream|NEKOGET)/|origin/[0-9]+)"
+</code></pre>
+
+<h2 id="pr%E3%81%97%E3%81%9F%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81%E3%81%AE%E5%89%8A%E9%99%A4">PRしたブランチの削除</h2>
+
+<p>GitHub の Pull Request ページから</p>
+
+<p><img src="/images/2015_1103_delete_branch.png" alt="Delete branch" /></p>
+
+<p>のようにブランチを削除したりできる。</p>
+
+<p>が、コマンドラインで処理をすることもできます。</p>
+
+<p>ローカルのブランチを削除するにはこう↓</p>
+
+<pre><code class="bash">git branch -d &lt;branchname&gt;
+</code></pre>
+
+<p>リモートのブランチを削除するにはこう↓</p>
+
+<pre><code class="bash">git push origin :&lt;branchname&gt;
+</code></pre>
+
+<h2 id="omg%21-%E9%96%93%E9%81%95%E3%81%A3%E3%81%9F%E5%90%8D%E5%89%8D%E3%81%A7%E9%96%93%E9%81%95%E3%81%A3%E3%81%9F%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%82%92%E6%9B%B8%E3%81%84%E3%81%A6%E3%82%B3%E3%83%9F%E3%83%83%E3%83%88%E3%81%97%E3%81%A6%E3%81%BE%E3%81%A3%E3%81%9F">OMG! 間違った名前で間違ったメッセージを書いてコミットしてまった</h2>
+
+<p>一連の流れはこう↓</p>
+
+<pre><code class="bash">$ git branch -m &lt;OLD_BRANCH_NAME&gt; &lt;NEW_BRANCH_NAME&gt;
+$ git checkout &lt;OLD_BRANCH_NAME&gt;
+$ git push origin :&lt;OLD_BRANCH_NAME&gt;
+$ git branch --unset-upstream
+$ git commit --amend -m "&lt;NEW_COMMIT_LOG&gt;"
+$ git push origin &lt;NEW_BRANCH_NAME&gt;
+</code></pre>
+
+<p>個別解説。</p>
+
+<p>直前のコミットログを修正するにはこう↓</p>
+
+<pre><code class="bash">$ git commit --amend -m "&lt;NEW_COMMIT_LOG&gt;"
+</code></pre>
+
+<p>ローカルのブランチ名を変更するにはこう↓</p>
+
+<pre><code class="bash">$ git branch -m &lt;OLD_BRANCH_NAME&gt; &lt;NEW_BRANCH_NAME&gt;
+</code></pre>
+
+<p>ローカルと同じ名前のリモートブランチを削除した場合に注意されることがあるので関連付け？を解除するには切り替えたブランチ上でこう↓</p>
+
+<pre><code class="bash">$ git branch --unset-upstream
+</code></pre>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://d.hatena.ne.jp/hnw/20110528">GitHubへpull requestする際のベストプラクティス - hnwの日記</a></li>
+<li><a href="http://qiita.com/makoto_kw/items/c825e17e2a577bb83e19">Gitで使われていないリモートブランチの整理 - Qiita</a></li>
+<li><a href="http://qiita.com/kon_yu/items/e9ebd7f778df430a4223">GitHub - Gitのリモートリポジトリの名前を付け替える　〜Railsのアップグレードを例にして〜 - Qiita</a></li>
+<li><a href="http://tobysoft.net/wiki/index.php?git%2F%A5%B3%A5%DF%A5%C3%A5%C8%A5%ED%A5%B0%A4%F2%BD%A4%C0%B5%A4%B9%A4%EB%CA%FD%CB%A1#q9692e83">git/コミットログを修正する方法 - TOBY SOFT wiki</a></li>
+<li><a href="http://dqn.sakusakutto.jp/2011/10/git_push_origin_master.html">Git超入門："git push origin master"の"push"と"origin"と"master"の意味がわからないあなたへ · DQNEO起業日記</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Sculpin でサムネイルを自動生成する Icelus Bundle を使ってみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/11/02/using-sculpin-thumbnail-generator-icelus.html"/>
+            <updated>2015-11-02T12:50:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/11/02/using-sculpin-thumbnail-generator-icelus.html</id>
+            <content type="html"><![CDATA[<p>Sculpin でページ生成時にサムネイルを作る Bundle 無いかなぁ？</p>
+
+<p>無いなら作ろうかなぁ〜って思って <a href="https://packagist.org/">Packagist</a> を探してみたらそれらしいのを見つけたので試してみた。</p>
+
+<p>見つけたのは <a href="https://packagist.org/packages/beryllium/icelus">beryllium/icelus - Packagist</a> です。</p>
+
+<blockquote>
+  <p>Thumbnail generator for Sculpin-based websites</p>
+</blockquote>
+
+<p>と書いてありました。</p>
+
+<h2 id="%E3%81%A8%E3%82%8A%E3%81%82%E3%81%88%E3%81%9A%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B">とりあえず使ってみる</h2>
+
+<p>完全な差分は <a href="https://github.com/sharkpp/www.sharkpp.net/commit/68efa31f1f13a8db8ab45dd5d1cbfb019fffa316">IcelusBundle を追加してサムネイルを自動で生成するように変更 · sharkpp/www.sharkpp.net@68efa31</a> です。</p>
+
+<h3 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール</h3>
+
+<p><code>sculpin.json</code> にパッケージを追加。</p>
+
+<pre><code class="diff">         "components/jquery": "~1.9.1",
+         "components/highlightjs": "~7.3.0",
+         "jasny/twig-extensions": "@dev",
+-        "sharkpp/sculpin-calendarian-bundle": "dev-master"
++        "sharkpp/sculpin-calendarian-bundle": "dev-master",
++        "beryllium/icelus": "*"
+     },
+     "autoload": {
+         "psr-0": {
+</code></pre>
+
+<p>そして、おもむろに <code>sculpin.phar update</code> を実行。</p>
+
+<pre><code class="bash">$ php sculpin.phar update
+Loading composer repositories with package information
+Updating dependencies
+  - Installing imanee/imanee (1.2.2)
+    Downloading: 100%         
+
+  - Installing beryllium/icelus (1.0.0)
+    Downloading: 100%         
+
+Writing lock file
+Generating autoload files
+Compiling component files
+</code></pre>
+
+<p><code>app/SculpinKernel.php</code> にパッケージのクラスを追加。</p>
+
+<pre><code class="diff">     protected function getAdditionalSculpinBundles()
+     {
+         return array(
+-           'Sharkpp\Sculpin\Bundle\CalendarianBundle\SculpinCalendarianBundle'
++           'Sharkpp\Sculpin\Bundle\CalendarianBundle\SculpinCalendarianBundle',
++           'Beryllium\Icelus\IcelusBundle',
+         );
+     }
+ }
+</code></pre>
+
+<p class="alert alert-info" role="alert">ファイルが存在しない場合は、 <a href="https://github.com/beryllium/icelus#installation">beryllium/icelus § Installation</a> や <a href="https://sculpin.io/documentation/extending-sculpin/configuration/">Configuration — Sculpin</a> を参考にして <code>app/SculpinKernel.php</code> を作ってください。
+</p>
+
+<h2 id="%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B">使ってみる</h2>
+
+<p>の前に、どうやら Markdown Converter と相性というか、タイミングが悪いみたいで、</p>
+
+<pre><code class="markdown">![64 x 64]({{ thumbnail('/images/noname/196x196.png', 64, 64) }})
+</code></pre>
+
+<p>と記述すると、</p>
+
+<pre><code class="md">![64 x 64](/_thumbs/b0d061130443fcd10d882073d6ef32f0-64x64.png)
+</code></pre>
+
+<p>と、このように惜しい感じになるので</p>
+
+<pre><code class="html">&lt;img src="{{ thumbnail('/images/noname/196x196.png', 64, 64) }}" alt="64 x 64"&gt;
+</code></pre>
+
+<p>と、HTMLのタグで直接記述しないとダメなようです。</p>
+
+<h3 id="%E5%85%83%E7%94%BB%E5%83%8F">元画像</h3>
+
+<p><img src="/images/noname/196x196.png" alt="196 x 196" /></p>
+
+<h3 id="64px-%E3%81%AE%E3%82%B5%E3%83%A0%E3%83%8D%E3%82%A4%E3%83%AB">64px のサムネイル</h3>
+
+<p><img src="/_thumbs/b0d061130443fcd10d882073d6ef32f0-64x64.png" alt="64 x 64"></p>
+
+<pre><code class="html">&lt;img src="{{ thumbnail('/images/noname/196x196.png', 64, 64) }}" alt="64 x 64"&gt;
+</code></pre>
+
+<h3 id="16px-%E3%81%AE%E3%82%B5%E3%83%A0%E3%83%8D%E3%82%A4%E3%83%AB">16px のサムネイル</h3>
+
+<p><img src="/_thumbs/b0d061130443fcd10d882073d6ef32f0-16x16.png" alt="16 x 16"></p>
+
+<pre><code class="html">&lt;img src="{{ thumbnail('/images/noname/196x196.png', 16, 16) }}" alt="16 x 16"&gt;
+</code></pre>
+
+<h3 id="%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AE%E3%83%9F%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">ドキュメントのミスについて</h3>
+
+<p>あと、最初に使い方を<a href="https://github.com/beryllium/icelus/blob/484174cc735c0589ffe77d94f165e9f6c9f3c726/README.md#usage">ドキュメント</a>で見たところ、</p>
+
+<pre><code class="hmtl">&lt;a href="image.jpg"&gt;&lt;img src="{% thumbnail('image.jpg', 100, 100) %}"&gt;&lt;/a&gt;
+</code></pre>
+
+<p>と記述してあったので素直にその通り書いて、実行したところ、</p>
+
+<pre><code class="bash">             :
+Generating: 100% (1079 sources / 0.17 seconds)
+Converting:  14% [ Twig_Error_Syntax: Unexpected tag name "thumbnail" (expecting closing tag for the "for" tag defined near line 7) in "FileSource:FilesystemDataSource:~/git/test/source:test.html" at line 14 ]
+ [ Twig_Error_Syntax: Unexpected tag name "thumbnail" (expecting closing tag for the "for" tag defined near line 7) in "FileSource:FilesystemDataSource:~/git/test/source:test.html" at line 14 ]
+100% (1722 sources / 7.49 seconds)
+             :
+</code></pre>
+
+<p>とエラーが出たので、</p>
+
+<p>しばらく、これ実は使えない？とか、設定が足らない？とか思いながらしばらく試してみて、ふと</p>
+
+<pre><code class="hmtl">&lt;a href="image.jpg"&gt;&lt;img src="{{ thumbnail('image.jpg', 100, 100) }}"&gt;&lt;/a&gt;
+</code></pre>
+
+<p>と書かないとダメなのではと思い試してみたところ、うまく動きました。</p>
+
+<p>これは、 もう Pull Request するしかないと思ってサクッと <a href="https://github.com/beryllium/icelus/pull/1">PR</a> しました。</p>
+
+<h3 id="%E8%A8%AD%E5%AE%9A%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">設定について</h3>
+
+<p><a href="https://github.com/beryllium/icelus/blob/484174cc735c0589ffe77d94f165e9f6c9f3c726/DependencyInjection/Configuration.php">icelus/DependencyInjection/Configuration.php</a> とかを見ると設定で出力先などが変更できそうな気がしましたが、、、</p>
+
+<p>他のソースを見ると使っている形跡がなく、そもそもドキュメントにも記載がないのできっと作りかけなのでしょう。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://packagist.org/packages/beryllium/icelus">beryllium/icelus - Packagist</a></li>
+<li><a href="https://github.com/beryllium/icelus">beryllium/icelus</a></li>
+<li><a href="http://twig.sensiolabs.org/doc/templates.html">Twig for Template Designers - Documentation - Twig - The flexible, fast, and secure PHP template engine</a></li>
+<li><a href="https://sculpin.io/documentation/generators/">Generators — Sculpin — PHP Static Site Generator</a></li>
+<li><a href="https://sculpin.io/documentation/extending-sculpin/configuration/">Configuration — Sculpin — PHP Static Site Generator</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[PHP local pastebin を公開]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/09/20/publish-php-local-pastebin.html"/>
+            <updated>2015-09-20T00:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/09/20/publish-php-local-pastebin.html</id>
+            <content type="html"><![CDATA[<p>phpのビルトインサーバーを使用したローカル用のpastebin的な何かを公開しました。</p>
+
+<p>画面イメージはこんな感じ。</p>
+
+<p><img src="/images/2015_0919_php_local_pastebin_ss.png" alt="screenshot" /></p>
+
+<p><a href="https://github.com/sharkpp/php-local-pastebin">sharkpp/php-local-pastebin</a> からダウンロードできます。</p>
+
+<p>使い方は、ダウンロードして、</p>
+
+<pre><code class="bash"># php index.php
+</code></pre>
+
+<p>でサーバーが動き出します。</p>
+
+<p>履歴機能をつけようと思っていたけど、ちょっと力尽きたorz</p>
+
+<p>なので、そのうち履歴機能が増えるかもです。</p>
+]]></content>
+        </entry>
+    </feed>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/UserScript.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:49+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Tumblr. extend shortcut key 作りました]]></title>
+            <link href="http://www.sharkpp.net/blog/2014/11/23/released-tumblr-extend-shortcut-key.html"/>
+            <updated>2014-11-23T17:51:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2014/11/23/released-tumblr-extend-shortcut-key.html</id>
+            <content type="html"><![CDATA[<p><a href="https://www.tumblr.com/">Tumblr.</a>™のダッシュボードで使用できるショートカットキーを追加するスクリプトを作りました。</p>
+
+<p>レポジトリは <a href="https://github.com/sharkpp-userscripts/tumblr-extend-shortcut-key">sharkpp-userscripts/tumblr-extend-shortcut-key</a> です。</p>
+
+<p>userscripts.org がいつの間にか死んでいたので <a href="https://greasyfork.org/ja/users/5799-sharkpp">GreasyFork</a> を移転先にしてぼちぼちと再アップロードをしていきたいと思い、ユーザースクリプトの置き場を github に <a href="https://github.com/sharkpp-userscripts">sharkpp UserScripts</a> として作りました。</p>
+
+<p>とりあえず、リハビリをかねて新しく作ったスクリプトは GreasyFork の <a href="https://greasyfork.org/ja/scripts/6588-tumblr-extend-shortcut-key">Tumblr. extend shortcut key</a> からインストールできます。</p>
+
+<h2 id="%E6%A9%9F%E8%83%BD%E3%81%AE%E7%B4%B9%E4%BB%8B">機能の紹介</h2>
+
+<p>機能的な部分を、、、まあ、何が出来るかってと、 <code>alt + E</code> とかをリブログのポップアップ画面時にも出来るようにとか、ブログをショートカットキーで選択できるようにとか、そんな感じです。</p>
+
+<h3 id="%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC%E3%81%AE%E4%B8%80%E8%A6%A7">ショートカットキーの一覧</h3>
+
+<table>
+<thead>
+<tr>
+  <th>ショートカットキー</th>
+  <th>機能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><tt>alt + [数字キー]</tt></td>
+  <td>ブログを選択</td>
+</tr>
+<tr>
+  <td><tt>alt + R</tt></td>
+  <td>今すぐ投稿(リブログ)</td>
+</tr>
+<tr>
+  <td><tt>alt + E</tt></td>
+  <td>予約投稿に追加</td>
+</tr>
+<tr>
+  <td><tt>alt + D</tt></td>
+  <td>下書きに追加</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="%E3%83%96%E3%83%AD%E3%82%B0%E3%81%AE%E9%81%B8%E6%8A%9E">ブログの選択</h3>
+
+<p>ブログが複数有る場合に <code>alt + [数字キー]</code> で、<code>[数字キー]</code> で指定したブログに切り替えることができます。</p>
+
+<p>ブログが数字キーのどれに割り当てられているか？は、リストを表示することでショートカットキーが末尾に表示されるのため確認することが出来ます。</p>
+
+<p><img src="/images/2014_1123_blog-select.png" alt="ブログの選択" /></p>
+
+<h2 id="%E6%8A%95%E7%A8%BF%E6%8C%87%E7%A4%BA">投稿指示</h2>
+
+<p>投稿指示は、「今すぐ投稿」と「予約投稿に追加」と「下書きに追加」に、それぞれショートカットキーが新たに割り当てられています。</p>
+
+<p>ブログの選択と同じように、リストを表示することでショートカットキーの確認が出来ます。</p>
+
+<p><img src="/images/2014_1123_reblog-button.png" alt="リブログボタン" /></p>
+]]></content>
+        </entry>
+    </feed>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/HSPlet.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:50+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[HSPLetについて]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/09/02/about-hsplet.html"/>
+            <updated>2008-09-02T01:35:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/09/02/about-hsplet.html</id>
+            <content type="html"><![CDATA[<p>1ヶ月ぐらい前の記事だけどfujidigさんの所でHSPLetの挙動について書かれていたのでトラックバックのテストついでに書いてみる。</p>
+
+<p><a href="http://d.hatena.ne.jp/chaperatta/20080805/1217938231">HSPLet あれこれ</a></p>
+
+<p>このコードを実行するとHSP 3.1とHSPLetで挙動が違う</p>
+
+<pre>#runtime "hsplet3"
+a = 0, 1, 3, 4, 5, 6
+dim b, 6
+mes "length(a)=" + length(a)
+mes "length(b)=" + length(b)
+</pre>
+
+<p>HSP 3.1</p>
+
+<pre>length(a)=6
+length(b)=6
+</pre>
+
+<p>HSPLet 3.0</p>
+
+<pre>length(a)=16
+length(b)=6
+</pre>
+
+<p>どうもdimで初期化せずに代入すると最低16は配列の要素が確保されてしまうようで、foreachで変数を処理するとHSPではエラーが出ずにHSPLetでエラーが出てしまうことがある。</p>
+
+<p>HSPLetもメンテとかしてみたい気はするが取り敢えず他ごと優先でいきたいと思います。</p>
+]]></content>
+        </entry>
+    </feed>

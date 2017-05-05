@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/QML.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:49+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[名古屋Qt勉強会#8に行ってきたよ＆QtQuick2でアプリ作ってみたよ]]></title>
+            <link href="http://www.sharkpp.net/blog/2013/04/28/qt-nagoya-8-and-qtquick2.html"/>
+            <updated>2013-04-28T00:07:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2013/04/28/qt-nagoya-8-and-qtquick2.html</id>
+            <content type="html"><![CDATA[<p>久しぶりの名古屋Qt勉強会でした。</p>
+
+<p><a href="http://www.zusaar.com/event/607003">名古屋Qt勉強会#8 4/27</a></p>
+
+<p>今回は発表する人が無かったので全員での自己紹介の後はもくもく会になったので良い機会なのでhspideの続きではなく未体験ゾーンのQtQuick2で何か作ってみることにしました。</p>
+
+<p>ここからは少し雑談を挟みつつひたすらもくもくしていきます。</p>
+
+<p>雑談は、Twitterに流れている物だと、</p>
+
+<blockquote class="twitter-tweet" lang="ja"><p>なんとなくスルー QT @<a href="https://twitter.com/mizmit1222">mizmit1222</a>: OSC名古屋はなんとなくスルーということで <a href="https://twitter.com/search/%23qtngy">#qtngy</a></p>&mdash; 理音伊織さん (@IoriAYANE) <a href="https://twitter.com/IoriAYANE/status/327998905256136704">2013年4月27日</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>とかそんな感じです。</p>
+
+<p>QtQuick2を使うための準備としてのQt5のインストールは数日前に終わっていたので(今回の勉強会がもくもくになりそうな感じであったので準備していた)とりあえずプロジェクトを作ってHello Worldを表示するのは簡単でした。</p>
+
+<p>で、こっから少し躓きました。</p>
+
+<p>QtCreatorでデザインボタンを押すとカーソルがくるくる回って一向に先に進まない、しばらく待っていると画面が切り替わるが、やっぱりカーソルはくるくる。</p>
+
+<p>で、現行のQtCreatorはQtQuick2に対応していないとの情報が勉強会に参加している人から得られたのですが、最終的にはどうも状況が違っていてQtCreatorがうまく動いていないのではないかとの結論になりました。</p>
+
+<p>とりあえず、そんな感じでQtCreatorのデザイナーを使うのをあきらめて参考ページを見つつ作っていくことに。</p>
+
+<p>ざっとやった感じで何となく見えてきたのは、JavaScriptっぽいなーと、まあ、V8エンジンを使っていたり(なんか別のになる、なったらしいけど)するのでまあそりゃそうだなーって感じではあるのですが、、、</p>
+
+<p>あとは、現状の理解の範囲では部品をぽこぽこ置いていきそれに対してプロパティーをセットしてって感じですね。</p>
+
+<p>ただ、前に見聞きした話だとQMLはイベントドリブンではなくステートドリブンだって話だったような気がしたのでなんか違うのかも？(検索かけたら自分のページが出てきた、、、)</p>
+
+<p>で、結局、色々あってがんばったのですが、途中でタイムアップしてしまいました。</p>
+
+<p><img src="/images/2013_0427_qtquick2.png" alt="image" /></p>
+
+<p>表示的な部分は少し微妙なところはありますが大体できた感じです。 ただ、この先が問題、、、</p>
+
+<p>作りたかった物はどうもQtの機能だけでは実現できないようでネイティブな機能、WindowsならAPIだとかLinuxならシステムコールだとかを呼び出さないと行けない代物。 なので、まあ、ここからが完全なる未体験ゾーンかなーと思います。 Macのシステムプログラミングなんてやったことねーよ(´・ω・｀)</p>
+
+<p>ってことで、ぐぐってもよくわからないのでQtのソースなどを足がかりに進めていこうかなーと思います。</p>
+
+<p>つ <a href="https://github.com/sharkpp/TaskMemGraph">sharkpp/TaskMemGraph - GitHub</a></p>
+
+<p>以上、報告終わり</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://blog.flugel.biz/2009/12/html5-canvas-arc_17.html">Just Metal, Just Baroque.: 扇形を作る(moveTo+arc+closePath) [html5 の Canvas を使ってみる：第四回]</a></li>
+<li><a href="http://www.html5.jp/canvas/how2.html">さまざまな図形を描く - Canvas - HTML5.JP</a></li>
+<li><a href="http://relog.xii.jp/mt5r/2012/07/qmlqtcanvas.html">QML(Qt)でCanvasを使ってみた - 理ろぐ</a></li>
+<li><a href="http://relog.xii.jp/mt5r/2011/09/qmlqtjavascript.html">QML(Qt)でJavaScript（処理）を分離する - 理ろぐ</a></li>
+<li><a href="http://www.colorspire.com/rgb-color-wheel/">Online RGB Color Wheel</a></li>
+<li><a href="http://d.hatena.ne.jp/ja9/20100903/1283504341">RGB色空間とHSV色空間の相互変換 Javascript版 - 今日も適当ダイアリー</a></li>
+</ul>
+]]></content>
+        </entry>
+    </feed>

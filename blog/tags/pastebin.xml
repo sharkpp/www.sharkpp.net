@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/pastebin.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:49+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[PasteBin/Snippet系サービスまとめ]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/06/06/pastebin-snippet-web-service-list.html"/>
+            <updated>2015-06-06T07:51:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/06/06/pastebin-snippet-web-service-list.html</id>
+            <content type="html"><![CDATA[<p>以前にTwitterでつぶやいた <a href="https://docs.google.com/spreadsheets/d/1TNov1uXtnPERVAFiUvkzvJ5BfZfghO2A_h2rwgY9qNg/edit?usp=sharing">pastebin/Snippet系サービスまとめ</a> をここでもメモ</p>
+
+<p>テキスト系は色々ありますが RUN CODE が出来るプログラミング系は数えるほどしか無い印象。</p>
+
+<p>他に見つかったら順次アプデということで。</p>
+
+<h2 id="%E3%81%BA%E3%81%9F%E3%81%A3%E3%81%A8">ぺたっと</h2>
+
+<table class="table table-bordered table-hover table-condensed table-striped" data-sheetrock="https://docs.google.com/spreadsheets/d/1TNov1uXtnPERVAFiUvkzvJ5BfZfghO2A_h2rwgY9qNg/edit#gid=0"></table>
+]]></content>
+        </entry>
+    </feed>

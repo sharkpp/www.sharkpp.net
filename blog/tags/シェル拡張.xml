@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/%E3%82%B7%E3%82%A7%E3%83%AB%E6%8B%A1%E5%BC%B5.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:50+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Lhaplus x64 shell extension ver.1.0.1.0をリリースしました]]></title>
+            <link href="http://www.sharkpp.net/blog/2009/11/25/now-release-lhaplus-x64-shell-extension-ver-1-0-1-0.html"/>
+            <updated>2009-11-25T01:58:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2009/11/25/now-release-lhaplus-x64-shell-extension-ver-1-0-1-0.html</id>
+            <content type="html"><![CDATA[<p><div class="alert alert-danger alert-dismissible" role="alert">
+  <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
+  <dl style="margin-bottom: 0; margin-left: 35px;">
+    <dt>2015-06-02 追記</dt>
+    <dd>Lhaplus Version 1.70 以降のバージョンで公式に 64bit な Windows でのコンテキストメニュー表示がサポートされました。
+    非公式なこのシェル拡張をアンインストールし Lhaplus をアップデートすることをお勧めします。</dd>
+  </dl>
+</div>
+</p>
+
+<p>DLLなし圧縮・解凍ソフト <a href="http://hoehoe.com/">Lhaplus</a> の 64bit版Windows用シェル拡張をアップデートしました。</p>
+
+<p>今回のアップデートは不具合修正のみです。</p>
+
+<p>フォルダツリーやナビゲーションウィンドウを表示した状態での右クリックで「圧縮」や「解凍」などのメニュー項目が表示されていなかった不具合を修正しました。</p>
+
+<p>普段、フォルダツリーなんか表示していないのでまったく気が付かなかったです...とほほ</p>
+
+<p>アップデートは、アンインストール→PC再起動(ログオフでもか？試してないです)→インストールの手順で行ってください。</p>
+
+<p>再起動を行わないとexplorer.exeがdllをロックしたままでファイルの上書きが出来ないのでインストールに失敗してしまいます。</p>
+
+<p>ダウンロードは、<a href="/blog/categories/%E3%83%84%E3%83%BC%E3%83%AB">ツール</a>からどうぞ</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Lhaplus x64 shell extension ver.1.0.0.0をリリースしました]]></title>
+            <link href="http://www.sharkpp.net/blog/2009/08/23/now-release-lhaplus-x64-shell-extension-ver-1-0-0-0.html"/>
+            <updated>2009-08-23T16:44:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2009/08/23/now-release-lhaplus-x64-shell-extension-ver-1-0-0-0.html</id>
+            <content type="html"><![CDATA[<p><div class="alert alert-danger alert-dismissible" role="alert">
+  <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
+  <dl style="margin-bottom: 0; margin-left: 35px;">
+    <dt>2015-06-02 追記</dt>
+    <dd>Lhaplus Version 1.70 以降のバージョンで公式に 64bit な Windows でのコンテキストメニュー表示がサポートされました。
+    非公式なこのシェル拡張をアンインストールし Lhaplus をアップデートすることをお勧めします。</dd>
+  </dl>
+</div>
+</p>
+
+<p>DLLなし圧縮・解凍ソフト <a href="http://hoehoe.com/">Lhaplus</a> の 64bit版Windows用シェル拡張を公開しました。</p>
+
+<p>いつまでたってもだれも(作者さんさえも！)x64対応のLhaplusのシェル拡張を公開する気配が無いので勉強を兼ねて作ってみました。</p>
+
+<p>いきなりバージョンが1.0.0.0から始まっていますが特に深い意味はありません。</p>
+
+<p>ダウンロードは、<a href="/blog/categories/%E3%83%84%E3%83%BC%E3%83%AB">ツール</a>からどうぞ</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Lhaplus x64 shell extension]]></title>
+            <link href="http://www.sharkpp.net/blog/2009/08/23/lhaplus-x64-shell-extension.html"/>
+            <updated>2009-08-23T16:31:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2009/08/23/lhaplus-x64-shell-extension.html</id>
+            <content type="html"><![CDATA[<p><div class="alert alert-danger alert-dismissible" role="alert">
+  <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
+  <dl style="margin-bottom: 0; margin-left: 35px;">
+    <dt>2015-06-02 追記</dt>
+    <dd>Lhaplus Version 1.70 以降のバージョンで公式に 64bit な Windows でのコンテキストメニュー表示がサポートされました。
+    非公式なこのシェル拡張をアンインストールし Lhaplus をアップデートすることをお勧めします。</dd>
+  </dl>
+</div>
+</p>
+
+<h3 id="%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E">ソフトの説明</h3>
+
+<p>DLLなし圧縮・解凍ソフト <a href="http://hoehoe.com/">Lhaplus</a> の 64bit版Windows用シェル拡張です。</p>
+
+<p>Lhaplus標準のシェル拡張では32bit版Windows用しか対応しておらず、残念な思いをしていたので作りました。</p>
+
+<h3 id="%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89">ダウンロード</h3>
+
+<p><a href="/files/LplsShlx64-v1.0.1.0.zip" title="LplsShlx64-v1.0.1.0.zip">DOWNLOAD</a></p>
+
+<h3 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール</h3>
+
+<ul>
+<li>任意のフォルダに解凍して install.cmd を実行してください。</li>
+<li>※Lhaplusのインストール先はレジストリから取得します。</li>
+<li>※インストール時には管理者権限が必要です。<br />
+　Windows Vista 以降の場合、右クリックメニューの「管理者として実行」から実行してください。</li>
+<li>※アップデートを行う場合は、一旦アンインストール後、DLLなどを削除した後に行ってください。<br />
+　アンインストールを行わずにアップデートすると、DLLのコピーに失敗します。</li>
+</ul>
+
+<h3 id="%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">アンインストール</h3>
+
+<ul>
+<li>uninstall.cmd を実行しDLLなどを再起動後に削除してください。</li>
+<li>※アンインストール時には管理者権限が必要です。<br />
+　Windows Vista 以降の場合、右クリックメニューの「管理者として実行」から実行してください。</li>
+</ul>
+
+<h3 id="%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D%E7%92%B0%E5%A2%83">動作確認環境</h3>
+
+<p>PC　: 自作PC</p>
+
+<p>OS　: Windows XP Professional x64 Edition Version 5.20.3790 SP2</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Windows 7 Ulitimate x64 Edition Version 6.1.7100 RC1</p>
+
+<p>App : Lhaplus 1.57</p>
+
+<p>以上の環境で動作を確認しました。</p>
+
+<h3 id="%E6%9B%B4%E6%96%B0%E5%B1%A5%E6%AD%B4">更新履歴</h3>
+
+<ul>
+<li>1.0.0.0 2009-08-23　ほしい機能が実装できたのでリリース</li>
+<li>1.0.1.0 2009-11-25　フォルダツリー/ナビゲーションウィンドウを表示している場合にメニュー項目が表示されていなかった問題を修正</li>
+</ul>
+]]></content>
+        </entry>
+    </feed>

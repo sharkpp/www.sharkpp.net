@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3%E7%94%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:32+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[rand.h]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/20/pokecom-program-rand-h.html"/>
+            <updated>2008-07-20T23:40:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/20/pokecom-program-rand-h.html</id>
+            <content type="html"><![CDATA[<div><img src="/images/pokecom-c.gif" alt="C言語" /> <a href="/files/rand.h">DOWNLOAD</a> 2004/03/14
+</div>
+
+<div><code>rnd;</code>
+: 説明　：乱数を取得します。
+
+<dd>
+引数　：なし
+</dd>
+<dd>
+戻り値：0 ～ 32767 までの乱数
+</dd><code>int rand(void);</code>
+: 説明　：乱数を取得します。
+
+<dd>
+引数　：なし
+</dd>
+<dd>
+戻り値：-32768 ～ 32767 までの乱数
+</dd><code>void srand(unsigned);</code>
+: 説明　：乱数を初期化します。
+
+<dd>
+引数　：乱数のたね
+</dd>
+<dd>
+戻り値：なし
+</dd><code>void srnd(void);</code>
+: 説明　：乱数を初期化します。
+
+<dd>
+引数　：なし
+</dd>
+<dd>
+戻り値：なし
+</dd>
+<dd>
+<span>※ FEh 番地に乱数のたねを書き込みます。</span>
+</dd>
+
+</div>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[inkey.h]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/20/pokecom-program-inkey-h.html"/>
+            <updated>2008-07-20T23:39:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/20/pokecom-program-inkey-h.html</id>
+            <content type="html"><![CDATA[<div><img src="/images/pokecom-c.gif" alt="C言語" /> <a href="/files/inkey.h">DOWNLOAD</a> 2004/03/14
+</div>
+
+<div><code>int inkey(void);</code>
+: 説明　：キーボードからのキー入力を取得します。
+
+<dd>
+引数　：なし
+</dd>
+<dd>
+戻り値：アスキー文字
+</dd>
+ 返される文字については
+<a href="/blog/2008/07/20/pokecom-lecture-01-key-input.html">ポケコンＣ言語講座 第一回 キー入力</a>の表を参照してください。
+</div>
+]]></content>
+        </entry>
+    </feed>

@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/%E5%A4%A7%E6%99%A6%E6%97%A5.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:48+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[大晦日@2016]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/12/31/new-years-eve-2016.html"/>
+            <updated>2016-12-31T12:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/12/31/new-years-eve-2016.html</id>
+            <content type="html"><![CDATA[<h2 id="1-%E5%B9%B4%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A">1 年を振り返り</h2>
+
+<p>皆さま、今年は良い年だったでしょうか？
+それとも、悪い年だったでしょうか？</p>
+
+<p>私は、まあぼちぼちと言ったところでしょうかね。</p>
+
+<p>悪かった人は、「<a href="http://hsproom.me/program/view/?p=146">除夜の鐘</a>」を突いて見るのはどうでしょうか？</p>
+
+<p>と言うことで、今年の反省をば。</p>
+
+<h2 id="%E7%B5%90%E6%9E%9C">結果</h2>
+
+<p>まずは、今年の正月 <a href="/blog/2016/01/01/happy-new-year-2016.html">HAPPY NEW YEAR 2016</a> に掲げた目標です。</p>
+
+<ul>
+<li><a href="http://hsp-users.jp/">HSP関連サイト</a>の立ち上げ</li>
+<li>HSPコンテスト作品の製作</li>
+<li><a href="https://github.com/sharkpp/TimestampFreezer">TimestampFreezer</a> のバイナリ公開</li>
+<li>バイナリエディタ作りたい</li>
+<li>素材関係をもう少し整理</li>
+<li>音素材の公開</li>
+</ul>
+
+<p>と、こんな感じ。</p>
+
+<p>「<a href="http://hsp-users.jp/">HSP関連サイト</a>の立ち上げ」は、とりあえず無事？立ち上げましたが、ちょっと色々忙しくて、コンテスト期間中の更新などできなかったのがダメでしたね。
+活動報告などは <a href="https://twitter.com/hsp_users_jp">@hsp_users_jp</a> や <a href="https://github.com/hsp-users-jp">GitHub</a> でしています。</p>
+
+<p>「HSPコンテスト作品の製作」の方は、<a href="/blog/2016/10/31/entry-the-HSP-program-contest-2016.html">HSP プログラムコンテスト 2016 へ応募しました(５年ぶり)</a>の通り、久しぶりに応募し、「（有）テクノキット賞」を<a href="http://hsp.tv/contest2016/cntst_fresult.html#1274">受賞</a>しました。
+Wineで開発完了を整えたのが功を奏したのかもしれないです。</p>
+
+<p>他には、<a href="/blog/2016/">アーカイブ - 2016</a> にある諸々や、「<a href="https://togetter.com/li/1058301">Qt 勉強会 @ Nagoya No3 #qtjp - Togetterまとめ</a>」に出席してみたり、お酒美味しそうだなーと「<a href="https://togetter.com/li/998224">よんた@keita44_f4 さんの日本酒の感想ツイートまとめ</a>」を作ってみたり、「<a href="http://qiita.com/advent-calendar/2016/hsp">Hot Soup Processor Advent Calendar 2016</a>」を主催してみたりとかして遊んでいました。</p>
+
+<p>まあ、まとめると</p>
+
+<ul>
+<li>Sculpin</li>
+<li>HSP + Wine</li>
+<li>Qt</li>
+</ul>
+
+<p>ぐらいかな？</p>
+
+<h2 id="%E5%8F%8D%E7%9C%81">反省</h2>
+
+<p>とりあえず、<a href="http://hsp-users.jp/">hsp-users.jp</a>を立ち上げたら立ち上げたで途中でほったらかしはダメですね。</p>
+
+<p>あとは、いい加減素材関係や途中槍のソフトをなんとかしたいです。</p>
+
+<p>来年はもうちょっとなんとかしたいな、と言うあたりで今年の反省会終了です。</p>
+
+<p>来年もよろしくお願いしますです。</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[大晦日@2015]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/12/31/new-years-eve-2015.html"/>
+            <updated>2015-12-31T18:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/12/31/new-years-eve-2015.html</id>
+            <content type="html"><![CDATA[<h2 id="1-%E5%B9%B4%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A">1 年を振り返り</h2>
+
+<p>毎年毎年、何をやってるんだろうねーと思うこと幾歳月。
+皆様、いかがお過ごしでしょうか？</p>
+
+<p>では、今年の反省会、いってみよー！</p>
+
+<h2 id="%E7%B5%90%E6%9E%9C">結果</h2>
+
+<p>今年の正月 <a href="/blog/2015/01/01/happy-new-year-2015.html">HAPPY NEW YEAR 2015</a> に掲げた目標は</p>
+
+<ul>
+<li><a href="http://hsp-users.jp/">HSP関連サイト</a>の立ち上げ</li>
+<li><a href="https://github.com/sharkpp/hspide">HSP IDE</a> を Qt 5 でリライト</li>
+<li>HSPコンテスト作品の製作</li>
+<li>このサイトのデザイン変更＆整理</li>
+<li>バイナリエディタ作りたい</li>
+</ul>
+
+<p>と、例年に比べ、控えめになっています。</p>
+
+<p>その結果、<a href="/blog/2015/06/28/site-reboot-by-sculpin.html">Sculpin でホムペを再構築したときのメモ</a> で書いたように、静的サイトジェネレータの <a href="https://sculpin.io/">Sculpin</a> でサイトを再構築できました。</p>
+
+<p>github に push するとサイトが更新できるとか、プログラマブルでいいと思います。</p>
+
+<h2 id="%E5%8F%8D%E7%9C%81">反省</h2>
+
+<p>反省としては、ここ最近、毎年のごとく、HSPコンテストに応募できなかったのが悔しい。</p>
+
+<p>なんとなくだけど、時間がないのはそうなんだけれど、スペック的な問題でメインで触るのが Windows 機から Mac に変わったのも影響しているのではないかと思う。</p>
+
+<p>今年やったこととしては、</p>
+
+<ul>
+<li><a href="/blog/2015/05/27/qt-japan-summit-2015.html">Qt JAPAN SUMMIT 2015</a> に行ってきたり</li>
+<li>FuelPHP のドキュメントの翻訳作業
+→ <a href="/blog/2015/06/22/fuelphp-documents-translation-month-alone.html">ひとり FuelPHP ドキュメント翻訳月間 お疲れ様でした
+</a></li>
+<li>Userscript 作ったり
+→ <a href="https://greasyfork.org/ja/scripts/9647-calculation-of-selection-length">calculation of selection length</a></li>
+<li>サクラエディタ用のプラグインを作ったり
+→ <a href="/blog/2015/09/05/release-sakura-editor-plugin-text-convert-extension-pack.html">サクラエディタ用テキスト変換拡張パックを公開</a></li>
+<li>php やったり php やったり</li>
+</ul>
+
+<p>ぐらいかな？</p>
+
+<p>とりあえず、来年もよろしくお願いしますです。</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[除夜の鐘をブログパーツにしてみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/12/31/joya-no-kane-for-blog-parts.html"/>
+            <updated>2015-12-31T12:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/12/31/joya-no-kane-for-blog-parts.html</id>
+            <content type="html"><![CDATA[<p>この季節の風物詩、「除夜の鐘」がブログパーツになって帰ってきた！</p>
+
+<p>ってな感じの更新を行ったのでその紹介。</p>
+
+<p>HSPDish.js そのままでブログパーツにしたので、この程度なら書き直したほうが早いかも、、、と思わなくもない。</p>
+
+<h2 id="%E7%B0%A1%E5%8D%98%E3%81%AA%E7%B4%B9%E4%BB%8B">簡単な紹介</h2>
+
+<p>除夜の鐘をつくだけのプログラムです。</p>
+
+<p>表示されている鐘をクリックします。</p>
+
+<p>すると、煩悩が「ゴ～ン」という音とともに消えて行くことでしょう。</p>
+
+<h2 id="%E4%BD%BF%E3%81%84%E6%96%B9">使い方</h2>
+
+<p>すぐに表示させる場合は、このような感じ。</p>
+
+<pre><code class="html">&lt;iframe src="https://cdn.rawgit.com/sharkpp/joya_no_kane/v1.0.1/widget.html"
+　　　　　width="128" height="128" frameborder="0" scrolling="no"&gt;&lt;/iframe&gt;
+</code></pre>
+
+<iframe src="https://cdn.rawgit.com/sharkpp/joya_no_kane/v1.0.1/widget.html"
+        width="128" height="128" frameborder="0" scrolling="no"></iframe>
+
+<p><i class="fa fa-external-link-square"></i> <a href="https://rawgit.com/">RawGit</a> を利用しています。</p>
+
+<p><i class="fa fa-exclamation-triangle"></i> ランタイムやリソースを含めたサイズの合計が 1MB 程度あるので注意が必要です。</p>
+
+<h2 id="%E3%81%9D%E3%81%AE%E4%BB%96%E3%83%AA%E3%83%B3%E3%82%AF">その他リンク</h2>
+
+<ul class="fa-ul">
+<li><i class="fa-li fa fa-external-link-square"></i><a href="https://github.com/sharkpp/joya_no_kane">ソースコード</a></li>
+<li><i class="fa-li fa fa-external-link-square"></i><a href="http://sharkpp.github.io/joya_no_kane/">GitHubページ</a></li>
+<li><i class="fa-li fa fa-external-link-square"></i><a href="http://hsproom.me/program/view/?p=146">HSP部屋(β)</a></li>
+<li><i class="fa-li fa fa-download"></i><a href="/files/bells100.zip">Windows版ダウンロード</a></li>
+<li><i class="fa-li fa fa-download"></i><a href="https://github.com/sharkpp/joya_no_kane/zipball/master">HTML/ブログパーツ版ダウンロード</a></li>
+</ul>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://testcording.com/?p=1259">TEST CORDING » GithubからJavaScriptを読み込み時は専用のドメインから！</a></li>
+<li><a href="http://hsproom.me/help/#ブログパーツ">ヘルプ - HSP部屋(β)</a></li>
+<li><a href="http://www.onionsoft.net/hsp/v34/doclib/hsp3dish_js.htm">HSP3Dish WebGL/JavaScript版(hsp3dish.js)プログラミングガイド</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[大晦日@2014]]></title>
+            <link href="http://www.sharkpp.net/blog/2014/12/31/new-years-eve-2014.html"/>
+            <updated>2014-12-31T17:04:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2014/12/31/new-years-eve-2014.html</id>
+            <content type="html"><![CDATA[<h3 id="1%E5%B9%B4%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A">1年を振り返り</h3>
+
+<p>いやはや、毎年ままならない物です(´・ω・｀) 今年の反省会。</p>
+
+<p>まずは今年の正月<a href="/blog/2014/01/01/happy-new-year-2014.html">HAPPY NEW YEAR 2014</a>に掲げた目標から</p>
+
+<h3 id="%E9%A0%91%E5%BC%B5%E3%82%8B">頑張る</h3>
+
+<ul>
+<li>HSP関連のあるサイトの立ち上げ
+
+<ul>
+<li>進捗：進行中</li>
+</ul></li>
+<li><a href="https://play.google.com/store/apps/details?id=net.sharkpp.Tumbdash">Tumbdash</a>のアップデート
+
+<ul>
+<li>進捗：完全に放置、、、</li>
+</ul></li>
+<li><a href="https://github.com/sharkpp/hspide">HSP IDE</a>の公開
+
+<ul>
+<li>進捗：完全に放置、、、</li>
+</ul></li>
+<li>HSPコンテスト作品の製作
+
+<ul>
+<li>結果：出来ませんでしたorz アイデアだけは作ったよ(泣)</li>
+</ul></li>
+<li>このサイトのデザイン変更＆整理
+
+<ul>
+<li>進捗：なし、、、10周年だったけどタイミングを逃してしまいましたorz</li>
+</ul></li>
+<li><a href="https://github.com/sharkpp/Archelon">Archelon</a>の正式公開
+
+<ul>
+<li>進捗：使いたかったところで結局使わなかったので放置</li>
+</ul></li>
+<li><a href="https://github.com/sharkpp/TimestampFreezer">TimestampFreezer</a>の正式公開
+
+<ul>
+<li>進捗：完全に放置、、、 バイナリだけは作っておきたかった</li>
+</ul></li>
+</ul>
+
+<h3 id="%E3%81%A7%E3%81%8D%E3%81%9F%E3%82%89%E3%81%84%E3%81%84%E3%81%AA">できたらいいな</h3>
+
+<ul>
+<li>Raspberry Pi で何か作る
+
+<ul>
+<li>進捗：なし</li>
+</ul></li>
+<li>yabuinuのHSP3.3対応
+
+<ul>
+<li>進捗：なし</li>
+</ul></li>
+<li>掲示板の設置
+
+<ul>
+<li>進捗：なし</li>
+</ul></li>
+<li>とあるシェル拡張の公開
+
+<ul>
+<li>進捗：なし</li>
+</ul></li>
+<li>とあるツールの公開←なんだっけこれ？
+
+<ul>
+<li>進捗：なし、、、もう何だったか分からなくなったからもういいよね</li>
+</ul></li>
+<li>音素材の公開
+
+<ul>
+<li>進捗：なし</li>
+</ul></li>
+<li>QtのTipsをまとめる
+
+<ul>
+<li>進捗：なし、、、最近 Qt さわってない(´・ω・｀)</li>
+</ul></li>
+</ul>
+
+<h3 id="%E5%8F%8D%E7%9C%81">反省</h3>
+
+<p>とりあえず、毎年のことながら何も進んでいないというか別のことをやっていたというか、、、</p>
+
+<p>今年やったことと言えば、</p>
+
+<ul>
+<li>HSP関連のあるサイトの立ち上げに関連して Chef と Ruby と named のお勉強</li>
+<li>FuelPHP のドキュメントの翻訳作業</li>
+<li><a href="https://github.com/sharkpp-cookbooks">Chef Cookbooks</a> レポジトリを GitHub に追加し Chef の Cookbook を公開</li>
+<li><a href="https://github.com/sharkpp-userscripts">Userscripts</a> レポジトリを GitHub に追加し、いつのまにか運用が止まっていた userscripts.org から <a href="https://greasyfork.org/">greasyfork.org</a> に切り替え</li>
+<li>Qt の勉強会やら <a href="/blog/2014/05/20/qt-developer-day-2014-tokyo.html">Qt DEVELOPER DAY 2014 Tokyo</a> に行ってきたり</li>
+</ul>
+
+<p>ぐらいかな？</p>
+
+<p>思ったよりも、というか、途中で気力がついえて Chef で環境構築をしているのがすごく時間がかかり未だに公開できていないという、、、この体たらくが今年一番の反省点かなぁと、、、</p>
+
+<p>とりあえず、基本的な部分は後ちょっとだと思うので公開できるまでがんばります。</p>
+
+<p>とりあえず、来年もよろしくお願いしますです。</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[大晦日@2013]]></title>
+            <link href="http://www.sharkpp.net/blog/2013/12/31/new-years-eve-2013.html"/>
+            <updated>2013-12-31T18:27:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2013/12/31/new-years-eve-2013.html</id>
+            <content type="html"><![CDATA[<h3 id="1%E5%B9%B4%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A">1年を振り返り</h3>
+
+<p>今年もやってきました、、、大反省会orz</p>
+
+<p>今年の正月<a href="/blog/2013/01/01/happy-new-year-2013.html">HAPPY NEW YEAR 2013</a>に掲げた目標</p>
+
+<ul>
+<li><a href="https://play.google.com/store/apps/details?id=net.sharkpp.Tumbdash">Tumbdash</a>のアップデート</li>
+<li>HSPコンテスト作品の製作←今年は落とさないようにしないと</li>
+<li><a href="https://github.com/sharkpp/hspide">HSP IDE</a>の公開←引き続き機能実装</li>
+<li>Raspberry Pi で何か作る</li>
+<li>HSP関連のあるサイトの立ち上げ</li>
+<li>yabuinuのHSP3.3対応</li>
+<li>このサイトのデザイン変更＆整理</li>
+<li>掲示板の設置</li>
+<li>とあるシェル拡張の公開</li>
+<li>とあるツールの公開←なんだっけこれ？</li>
+<li>音素材の公開</li>
+<li>QtのTipsをまとめる</li>
+</ul>
+
+<p>まあ見事に何もかもできてないですよー、、、、</p>
+
+<p>「HSP関連のあるサイトの立ち上げ」はドメインとってしまったので背水の陣で作り上げる覚悟です！</p>
+
+<p>「このサイトのデザイン変更＆整理」はもうすぐ10年目だし何かやりたいとは思ってるけど、、、間に合うだろうか？</p>
+
+<p>「Tumbdash」と「HSP IDE」はさすがに放置はやめたいな、、、、</p>
+
+<p>あと、Raspberry Pi とかも何かしないとなー</p>
+
+<h3 id="%E3%81%A8%E3%82%8A%E3%81%82%E3%81%88%E3%81%9A%E3%81%AA%E3%80%81%E3%81%BE%E3%81%A8%E3%82%81">とりあえずな、まとめ</h3>
+
+<ul>
+<li><a href="/blog/2013/03/16/bought-surface-rt.html">Surface RT 買いました</a>→いまはアイデアメモ的に使ってます</li>
+<li><a href="https://theta360.com/ja/">RICOH THETA</a> 買っちゃった！レポ作ってないから年明けに書きたいなー</li>
+<li><a href="https://github.com/sharkpp/AnsiEscapeSequencesEmulator">ANSI Escape Sequences Emulator</a>は思いつきにしてはいい感じなできでした！</li>
+<li>Qtで<a href="https://github.com/sharkpp/TaskMemGraph">TaskMemGraph</a>や<a href="https://github.com/sharkpp/TimestampFreezer">TimestampFreezer</a>を作ってみた</li>
+<li>FuelPHP でアプリケーションを作ってみた→<a href="https://github.com/sharkpp/Archelon">Archelon</a>(あともうちょっと)</li>
+<li>Advent Calendar に初めて参加したよ！→<a href="http://atnd.org/events/45096">FuelPHP Advent Calendar 2013</a>が<a href="http://tatsu-zine.com/books/fuelphpadvent2013">電子書籍</a>になってます</li>
+<li>ことしもHSPプログラムコンテスト落としてしまったorz</li>
+</ul>
+
+<p>ってことで来年もがんばるぞ！</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[大晦日@2012]]></title>
+            <link href="http://www.sharkpp.net/blog/2012/12/31/new-years-eve-2012.html"/>
+            <updated>2012-12-31T17:33:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2012/12/31/new-years-eve-2012.html</id>
+            <content type="html"><![CDATA[<h3 id="1%E5%B9%B4%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A">1年を振り返り</h3>
+
+<p>今年の正月<a href="/blog/2012/01/05/happy-new-year-2012.html">HAPPY NEW YEAR 2012</a>に掲げた目標</p>
+
+<ul>
+<li>HSP関連のあるサイトの立ち上げ</li>
+<li>yabuinuのHSP3.2対応</li>
+<li>このサイトのデザイン変更＆整理</li>
+<li>掲示板の設置</li>
+<li>Androidアプリの公開</li>
+<li>とあるシェル拡張の公開</li>
+<li>とあるツールの公開</li>
+<li>HSPコンテスト作品の製作</li>
+<li>音素材の公開</li>
+<li><a href="https://github.com/sharkpp/hspide">HSP IDE</a>の公開</li>
+<li>QtのTipsをまとめる</li>
+</ul>
+
+<p>で、今年の大チョンボは、まさかのHSPプログラムコンテストを落としてしまったことでしょうか？</p>
+
+<p>とりあえず、<a href="https://github.com/sharkpp/hspide">HSP IDE</a>はまあナイトリービルド程度ですが公開できたといえなくはないかな？</p>
+
+<p>Androidアプリも、HSPプログラムコンテストを落とす一因にはなったのですが公開できました。 ちょっと今、壮大な直しでドつぼにはまってますが、、、</p>
+
+<p>HSP関連のあるサイトは、結局どのサイトも更新が止まってしまったっぽいですね、継続するにはやはりそれなりの力が居るようです。</p>
+
+<p>サイトのデザインとかシステムとかもまた変えたいなーと、Wordpressでもいいかなーと思ってたけど、FuelPHPを弄り出してまた自作したい気持ちがむくむくと出てきました。</p>
+
+<p>まあ、大まけして</p>
+
+<ul>
+<li><a href="https://github.com/sharkpp/hspide">HSP IDE</a>の公開</li>
+<li>Androidアプリの公開</li>
+</ul>
+
+<p>やれたのはこんな感じかな？</p>
+
+<p>とりあえず、総括としては、</p>
+
+<ul>
+<li>色々勉強会に顔を出してみました、boost.jpとFuelPHPとQt と、興味が分散していたりするのですが、、、</li>
+<li>Mac Book Air 買って外でもプログラミングできる環境に♪→<a href="/blog/2012/07/13/got-macbook-air.html">MacBook Air を買いました</a></li>
+<li>Amazon kindle paperwhite を買ってみました→<a href="/blog/2012/11/20/buy-the-amazon-kindle-paperwhite.html">Amazon kindle paperwhite 買ってしまった</a></li>
+<li>Titanium Mobile でアプリを作れるようになった＆公開したよ→<a href="/blog/2012/10/16/tumbdash.html">Tumbdash公開</a></li>
+<li>ぼちぼちいろんな所行くようになった</li>
+</ul>
+
+<p>って感じかな？</p>
+
+<p>また来年も頑張るぞー</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[大晦日@2011]]></title>
+            <link href="http://www.sharkpp.net/blog/2011/12/31/new-years-eve-of-2011.html"/>
+            <updated>2011-12-31T10:08:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2011/12/31/new-years-eve-of-2011.html</id>
+            <content type="html"><![CDATA[<h4 id="1%E5%B9%B4%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A">1年を振り返り</h4>
+
+<p>今年の正月(<a href="/blog/2011/01/01/happy-new-year-2011.html">HAPPY NEW YEAR 2011</a>)に掲げた目標</p>
+
+<p>...達成率0% orz</p>
+
+<p>まず、今年の目標</p>
+
+<ul>
+<li>HSP関連のあるサイトの立ち上げ</li>
+<li>yabuinuのHSP3.2対応</li>
+<li>このサイトのデザイン変更＆整理</li>
+<li>掲示板の設置</li>
+<li>Androidアプリの公開</li>
+<li>とあるシェル拡張の公開</li>
+<li>とあるツールの公開</li>
+<li>HSPコンテスト作品の製作</li>
+<li>音素材の公開</li>
+</ul>
+
+<p>で、出来たのは、HSPコンテスト作品の製作ぐらいでしょうか？</p>
+
+<p>とあるツールの公開は、必要なくなってしまったし、とあるシェル拡張の公開やAndroidアプリの公開は全く進んでいない、と言うか他のことに興味が移って進んでいないと言うかorz</p>
+
+<p>HSP関連のあるサイトの立ち上げは、他の人が作ってるからまあ様子見。</p>
+
+<p>メールで要望とかもらったのも全く進んでいないし何をやっているんだろうか？orz</p>
+
+<p>まあ、とりあえず、今年の総括</p>
+
+<ul>
+<li>正月はプログラムして楽しかったよ→<a href="/blog/2011/01/01/joya-no-kane.html">除夜の鐘</a></li>
+<li>pixiv始めたよ→<a href="http://www.pixiv.net/member.php?id=1547498">pixiv</a></li>
+<li>github始めたよ→<a href="https://github.com/sharkpp">github</a></li>
+<li>新しいドメイン取ったけど使ってないよorz</li>
+<li>HSPプログラムコンテストに応募(<a href="/blog/2011/08/31/entry-the-HSP-program-contest-2011.html">その1</a>,<a href="/blog/2011/09/27/entry-the-HSP-program-contest-2011-2.html">その2</a>)→<a href="/blog/2011/11/26/hsp-program-contest-2011-has-passed-the-initial-screening.html">予選突破</a>→<a href="/blog/2011/12/08/hsp-program-contest-2011-winner.html">入賞</a>したよ</li>
+<li>一度挫折したけど、またQt使い始めたよ</li>
+</ul>
+
+<p>ってぐらいかな？</p>
+
+<p>あと、東北の方は地震＆原発コンボで大変だったようだけど来年はいいことあるさ、きっと</p>
+
+<p>まあ、来年も頑張る>&lt;</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[除夜の鐘]]></title>
+            <link href="http://www.sharkpp.net/blog/2011/01/01/joya-no-kane.html"/>
+            <updated>2011-01-01T02:32:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2011/01/01/joya-no-kane.html</id>
+            <content type="html"><![CDATA[<h3 id="%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E">ソフトの説明</h3>
+
+<p><img src="/images/2011_0101_joya_no_kane.jpg" alt="画面" /></p>
+
+<p>このソフトは除夜の鐘をPCでつくためのソフトです。</p>
+
+<h3 id="%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89">ダウンロード</h3>
+
+<p><a href="/files/bells100.zip" title="bells100.zip">DOWNLOAD</a></p>
+
+<h3 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール</h3>
+
+<ul>
+<li>フォルダに解凍して、実行するだけです。</li>
+</ul>
+
+<h3 id="%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">アンインストール</h3>
+
+<ul>
+<li>解凍して出来たファイルを削除するだけです。</li>
+<li>レジストリは一切使用しておりません。</li>
+</ul>
+
+<h3 id="%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D%E7%92%B0%E5%A2%83">動作確認環境</h3>
+
+<p>PC　: 自作PC</p>
+
+<p>OS　: Windows XP Professional x64 Edition Version 5.20.3790 SP2</p>
+
+<p>以上の環境で動作を確認しました。</p>
+
+<h3 id="%E6%9B%B4%E6%96%B0%E5%B1%A5%E6%AD%B4">更新履歴</h3>
+
+<ul>
+<li>1.0.0.0 2011-01-01　初版</li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[大晦日@2010]]></title>
+            <link href="http://www.sharkpp.net/blog/2010/12/31/new-years-eve-of-2010.html"/>
+            <updated>2010-12-31T02:40:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2010/12/31/new-years-eve-of-2010.html</id>
+            <content type="html"><![CDATA[<h4 id="1%E5%B9%B4%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A">1年を振り返り</h4>
+
+<p>今年の正月(<a href="/blog/2010/01/01/happy-new-year-2010.html">HAPPY NEW YEAR 2010</a>)に掲げた目標</p>
+
+<p>...達成率0% orz</p>
+
+<ul>
+<li>HSP関連のあるサイトの立ち上げ</li>
+<li>yabuinuのHSP3.2対応</li>
+<li>このサイトのデザイン変更＆整理</li>
+<li>掲示板の設置</li>
+</ul>
+
+<p>まあ、それはそれとして...</p>
+
+<p>今年一年を振り返ると、MSDNを購入(でもいまだ使わず...)したり、HSPコンテストに応募(賞取りました)したり、Twitterで頑張ってつぶやいてみたり、GalaxySを購入(おもちゃが増えましたw)しスマートフォンデビューしたりとまあ、割と充実していたかなーと</p>
+
+<p>めんどくさいながらも1ヶ月に一度のブログ更新は何とかできたようです。</p>
+
+<p>何かしらの製作物の公開は途中で止まってしまったのでこれは来年の目標と仕様かと思います。</p>
+
+<p>あとは、製作中のAndroidアプリが予想以上に手間取っていることや中途で放り投げているソフトの完成をしたいなーと思います。</p>
+
+<p>と、メールで来ているQEmu Launcherやpcbnet2の要望や不具合の対応もしたいなーと思います。</p>
+
+<p>思うに、時間が足りないんだな....そう思いたい</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[大晦日@2009]]></title>
+            <link href="http://www.sharkpp.net/blog/2009/12/31/new-years-eve-of-2009.html"/>
+            <updated>2009-12-31T01:13:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2009/12/31/new-years-eve-of-2009.html</id>
+            <content type="html"><![CDATA[<p>さて、今年も残すところ1日を切りました。</p>
+
+<p>そんなわけで、この1年でやり残した事を書いてきます。</p>
+
+<h3 id="%E3%81%BE%E3%81%9A%E3%80%81%E5%A0%B1%E5%91%8A%E3%81%A8%E3%81%8A%E8%A9%AB%E3%81%B3...">まず、報告とお詫び...</h3>
+
+<p><a href="http://hsp.tv/contest2009/">HSPプログラムコンテスト2009</a>で入賞しました。</p>
+
+<p>（有）テクノキット賞を頂きました。</p>
+
+<p>ネット審査員でコメントしていただいた方ごめんなさい。デバック途中で気が付いていましたがデバッグしている時間がありませんでしたorz</p>
+
+<p>修正版を登録できればよいのですが出来ない場合でも、そのうちいろいろ追加したかった機能などを含め公開したいと思っています。</p>
+
+<p><a href="/blog/2009/09/30/hsp-yabuinu.html">yabuinu</a>について、<a href="/blog/2009/09/30/yabuinu-the-obfuscator-and-scrambler-for-hsp3-0-0-1-0-release.html">HSP3用難読化＆独自スクランブル ツール ”yabuinu” を公開しました</a>で「HSP3の他バージョン用も簡単に実装できそうですが」と書いたのですが、HSP 3.2版はランタイムのソースが非公開なので当分は実装出来そうにありません。</p>
+
+<p>大丈夫だろうと高をくくっていたら意外な落とし穴がありましたorz</p>
+
+<p>HSP3.1ではランタイムのソースを公開して、HSP3.2で非公開としている意図が分からず、おにたまさんに公開をお願いしようとも思いましたが、折角なので勉強を兼ねてEXEを直で弄る実装にしようかと思っています。</p>
+
+<p><a href="/blog/2009/02/01/rhaco-how-to-use-rhaco2.html">rhaco2ってどうやって使うの？</a>について、Googleでrhaco2で検索するとなぜか現時点でトップに来てたりしますが、rhaco2は仕様がころころ変わっていたり、開発途中なためすでに内容が過去のものになっています。</p>
+
+<p>なので、最新の内容については、<a href="http://rhaco.org/">rhaco.org</a>とか<a href="http://wikihub.org/wiki/rhaco2-doc">rhaco2 Documents</a>とか<a href="http://lingr.com/room/rhaco_ja">rhaco_ja</a>をご参照ください。</p>
+
+<p>Google経由で訪れていただいた方すいません。</p>
+
+<p>最新を追いきれていません。</p>
+
+<p>そのほか、「HSP3.2プログラミング入門」に<a href="/blog/2008/09/06/hsp-pcbnet2.html">pcbnet2 (改変版)</a>が掲載されています。</p>
+
+<p>これは、何もしていないにも等しいので報告だけ。</p>
+
+<h3 id="1%E5%B9%B4%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A">1年を振り返り</h3>
+
+<p><a href="/blog/2009/08/23/lhaplus-x64-shell-extension.html">Lhaplus x64 shell extension</a>が意外と好評だったようで、統計を取ったら思いのほかDLされていて嬉しい限りです。</p>
+
+<p>今年は、Safari 4祭りに首を突っ込んだり、PC-G850VSを購入したり、OpenHSPのナイトリービルドを始めたり、1ヶ月最低一回ブログ更新・なにか公開を始めたりなどなど色々ありました。</p>
+
+<p>ほかにも、Tumblr始めたり、Twitter始めたりとか有名なWebサービスにも何週かの乗り遅れで乗ってみたりしました。</p>
+
+<p>一年の後半が特に内容が濃かった気がします。</p>
+
+<p>あ、あと、今年はサイト公開5年目でしたね。</p>
+
+<p>以上、今年の総括でした。</p>
+
+<p>来年もよろしく！</p>
+]]></content>
+        </entry>
+    </feed>

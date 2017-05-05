@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/categories/cotton.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:32+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[IRC Channel encode convert plugin]]></title>
+            <link href="http://www.sharkpp.net/blog/2009/04/12/cotton-chenc.html"/>
+            <updated>2009-04-12T23:01:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2009/04/12/cotton-chenc.html</id>
+            <content type="html"><![CDATA[<div><a href="/files/chenc001.zip">DOWNLOAD</a> 2009/04/12
+</div>
+
+<p>Cotton/Cotton++にIRCチャンネルごとの文字コード指定の機能を追加するプラグインです。</p>
+
+<p>同じニックネームでUTF-8のチャンネルとJISのチャンネルで発言を行うといったことが出来るようになります。</p>
+]]></content>
+        </entry>
+    </feed>

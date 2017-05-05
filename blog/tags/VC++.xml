@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/VC%2B%2B.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:50+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Microsoft Visual C++ 2008 Express Edition で64ビット版のプログラムを作る方法]]></title>
+            <link href="http://www.sharkpp.net/blog/2009/04/26/visual-c-2008-express-edition-enable-64-program.html"/>
+            <updated>2009-04-26T18:48:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2009/04/26/visual-c-2008-express-edition-enable-64-program.html</id>
+            <content type="html"><![CDATA[<p>とあるソフトのシェル拡張が64bitに対応しておらず使いづらかったので、誰も作っていないようなので作ってみようかなと思い Visual C++ Express Edition で64ビット版のプログラムを作る方法がないか調べてみました。</p>
+
+<p>すると Visual C++ 2008 Express Edition であれば出来そうなのでやってみました。</p>
+
+<ul>
+<li>準備</li>
+</ul>
+
+<ol>
+<li><a href="http://www.microsoft.com/japan/msdn/vstudio/express/">Microsoft Visual Studio 2008 製品ラインの概要</a></li>
+<li><a href="http://www.microsoft.com/downloads/details.aspx?displaylang=en&amp;FamilyID=f26b1aa4-741a-433a-9be5-fa919850bdbf">Windows SDK for Windows Server 2008 and .NET Framework 3.5</a></li>
+<li><a href="http://jenshuebel.wordpress.com/2009/02/12/visual-c-2008-express-edition-and-64-bit-targets/">Visual C++ 2008 Express Edition And 64-Bit Targets</a> から64ビットプログラムの有効化ツール http://suma.soulogic.com/dl/VCE64BIT.zip</li>
+</ol>
+
+<p>をそれぞれダウンロード</p>
+
+<ul>
+<li>手順</li>
+</ul>
+
+<ol>
+<li>Visual C++ 2008 Express Edition をインストール</li>
+<li>Windows SDK をインストール</li>
+<li>VCE64BIT.zip を展開して動かしているOSにあったバッチファイルを実行</li>
+</ol>
+
+<ul>
+<li>64ビットプラットフォームの有効化</li>
+</ul>
+
+<p>ウィザードから作るとWin32のプログラムがデフォルトで作られるので手動でプラットフォームを追加する必要があります。</p>
+
+<ol>
+<li>メニューから「ビルド」→「構成マネージャ」を開く</li>
+<li>「プラットフォーム」カラムで「新規作成」→「新しいプラットフォーム」から「x64」を選択</li>
+</ol>
+
+<p>これでx64を選択してビルドを行うと64ビット版のアプリケーションが生成されます。</p>
+
+<ul>
+<li>参考</li>
+</ul>
+
+<ol>
+<li><a href="http://jenshuebel.wordpress.com/2009/02/12/visual-c-2008-express-edition-and-64-bit-targets/">Visual C++ 2008 Express Edition And 64-Bit Targets</a></li>
+</ol>
+]]></content>
+        </entry>
+    </feed>

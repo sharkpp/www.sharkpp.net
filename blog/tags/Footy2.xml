@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/Footy2.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:50+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[HSPスクリプトエディタ(Footy2版)のナイトリービルド 2009/04/05]]></title>
+            <link href="http://www.sharkpp.net/blog/2009/04/05/hsed-footy2-nightly-build-20090405.html"/>
+            <updated>2009-04-05T23:13:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2009/04/05/hsed-footy2-nightly-build-20090405.html</id>
+            <content type="html"><![CDATA[<p>HSPスクリプトエディタ(Footy2版)のナイトリービルドです。</p>
+
+<p>取り敢えず使ってみたい人は解凍してHSPと同じフォルダに入れて起動するだけです。</p>
+
+<p>名前は変えてあるので問題は無いと思いますが無保証ってことでよろしくお願いします。</p>
+
+<p><a href="/files/hsed3_footy2_20090405.zip">hsed3&#95;footy2&#95;20090405.zip</a></p>
+
+<p>スタティックリンクにしたのでFooty2.dllは今回から必要なくなりました。</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[HSED3(Footy2版)の印刷機能のテスト]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/09/22/hsed3-footy2-printing-test.html"/>
+            <updated>2008-09-22T01:36:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/09/22/hsed3-footy2-printing-test.html</id>
+            <content type="html"><![CDATA[<p>HSPのスクリプトエディタの印刷機能の機能アップのための修正のテスト実装をしました。</p>
+
+<p>取り敢えず使ってみたい人は解凍してHSPと同じフォルダに入れて起動するだけです。名前は変えてあるので問題は無いと思いますが無保証ってことでよろしくお願いします。</p>
+
+<p><a href="http://dev.onionsoft.net/trac/changeset/174">OpenHSP CHANGESET:174</a></p>
+
+<p><a href="/files/hsed3_footy2_20080922.zip">hsed3&#95;footy2&#95;20080922.zip</a></p>
+
+<p>結構、エラーで落ちたり、行番号付いていなかったり、フォント指定できなかったり、折り返しが出来なかったり、と出来ない事だらけだったのでそんな印刷機能を直してみようと奮闘中。</p>
+
+<p>で、機能として</p>
+
+<ul>
+<li>行番号のON/OFF</li>
+<li>フォントの指定</li>
+<li>折り返し</li>
+<li>印刷中のダイアログの変更</li>
+<li>色分け印刷</li>
+<li>段組</li>
+</ul>
+
+<p>ってぐらいを実装しようかともくろんでいます。</p>
+
+<p>ただ、色分け印刷はエディタ部分のFooty2に機能を追加した方が早いかもとか、段組はやる気あったらで、と最後の二つは実際にやるかは不明。</p>
+]]></content>
+        </entry>
+    </feed>

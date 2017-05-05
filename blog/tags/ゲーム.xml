@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/%E3%82%B2%E3%83%BC%E3%83%A0.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:49+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[HSP プログラムコンテスト 2016 へ応募しました(５年ぶり)]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/10/31/entry-the-HSP-program-contest-2016.html"/>
+            <updated>2016-10-31T01:20:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/10/31/entry-the-HSP-program-contest-2016.html</id>
+            <content type="html"><![CDATA[<p>５年前を最後に、毎年今年は応募するぞー、ぞー、ぞー、で、結局何もできずに歯がゆい思いをしていましたが、今年はなんとか滑り込みで応募できました。</p>
+
+<p><a href="http://dev.onionsoft.net/seed/info.ax?user=74">作者ページ</a> <a href="http://dev.onionsoft.net/seed/info.ax?id=1274">作品ページ</a></p>
+
+<p>マンガ肉もぐもぐ</p>
+
+<p><img src="/images/2016_1031_manga_meet_mogmog_1.gif" alt="マンガ肉もぐもぐ" /></p>
+
+<p>では、続いて「ゲーム紹介」と「操作説明」などどうぞ。</p>
+
+<h2 id="%E3%82%B2%E3%83%BC%E3%83%A0%E7%B4%B9%E4%BB%8B">ゲーム紹介</h2>
+
+<p><img src="/images/2016_1031_manga_meet_mogmog_2.gif" alt="スクショ2" /></p>
+
+<blockquote>
+  <p>あなたは、第13回マンガ肉大食い大会にエントリーしました！
+  制限時間は30秒！
+  マウスの左ボタンを押した状態でぐるぐると動かしてマンガ肉をもぐもぐしましょう♪
+  さらに、手に汗握る実況機能付きでランキング上位者と夢の対決が実現しました。</p>
+</blockquote>
+
+<h2 id="%E6%93%8D%E4%BD%9C%E8%AA%AC%E6%98%8E">操作説明</h2>
+
+<p><img src="/images/2016_1031_manga_meet_mogmog_operating.png" alt="操作説明" /></p>
+
+<ol>
+<li><strong>かの有名な“マンガ肉”。</strong>
+マウスの左ボタンを押したままぐりぐりと消しゴムツールで消すように操作すると、お肉を<a href="http://hsp.tv/make/tamane2d.html">珠音ちゃん</a>が食べます。
+マウスクリック時は赤色で塗りつぶされた円、クリックしていない時は赤色の単なる円でマウスの位置が表示されます。</li>
+<li><strong>今の状態。</strong>
+
+<ul>
+<li>制限時間 30 秒の残りがどのぐらいあるか？</li>
+<li>“マンガ肉”を幾つ食べ終えたか。</li>
+<li>今食べている“マンガ肉”の残りがどのぐらいか。</li>
+</ul></li>
+<li><strong>実況中継</strong>
+リアルタイムで、ランキングに登っているプレーヤとの比較が表示されます。
+<code>←★★★</code> の表示が今のランキングです。</li>
+</ol>
+
+<h2 id="%E8%A3%8F%E8%A9%B1%E7%9A%84%E3%81%AA">裏話的な</h2>
+
+<h3 id="%E6%99%82%E5%88%BB%E5%B7%AE%E5%88%86%E3%81%AE%E5%8F%96%E5%BE%97">時刻差分の取得</h3>
+
+<p>今回、制限時間30秒という差分時間を取るために API を利用しない方法を使っています。</p>
+
+<p>と、得意そうに書こうとしましたが、今調べたら API を利用した方がサイズ的に小さくなるようですね、とほほ。</p>
+
+<p><code>GetTickCount()</code> や <code>timeGetTime()</code> を利用しても 49.7 日問題がありますが、まあそれでも小さそうなので、次回から API を利用するということで。</p>
+
+<h3 id="%E5%AE%9F%E6%B3%81%E3%83%AA%E3%83%97%E3%83%AC%E3%82%A4%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF">実況リプレイの仕組み</h3>
+
+<p>ゲーム画面右上の「実況」の仕組みです。</p>
+
+<p>毎度おなじみ(？) HSPTV のランキング機能を利用(悪用？)し、実現しています。</p>
+
+<blockquote>
+<pre><code>hsptv_up p1,"comment", p2      HSPTVデータ更新
+
+    p1 : スコア値(32bit整数値)
+    "comment" : コメント文字列(256byteまで)
+    p2 : オプション機能値
+</code></pre>
+</blockquote>
+
+<p><a href="http://www.onionsoft.net/hsp/v35/doclib/hsptv_api.txt">HSPTV対応ソフト作成マニュアル（中上級者向け）（hsptv_api.txt）</a> より</p>
+
+<p>より詳しく言えば HSPTV のスコアを更新する <code>hsptv_up</code> 命令の <code>"comment"</code> にリプレイデータを入れています。</p>
+
+<p>収納しているデータは <strong>n個目の“マンガ肉”を食べ終わった時間</strong> です。</p>
+
+<p>例えば、</p>
+
+<table>
+<thead>
+<tr>
+  <th>個数</th>
+  <th align="right">時間(ms)</th>
+  <th>エンコード後</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1 個目</td>
+  <td align="right">1637</td>
+  <td><code>1G</code></td>
+</tr>
+<tr>
+  <td>2 個目</td>
+  <td align="right">7865</td>
+  <td><code>s_</code></td>
+</tr>
+<tr>
+  <td>3 個目</td>
+  <td align="right">18647</td>
+  <td><code>"*C</code></td>
+</tr>
+<tr>
+  <td>4 個目</td>
+  <td align="right">25308</td>
+  <td><code>"q6</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>こんな感じで、 <code>"comment"</code> の内容は <code>1G s_"*C"q6</code> となります。</p>
+
+<p>この方法だと数値の 0 〜 830584 までを三文字に符号化できますが、実際利用しているのは 30000 までです。</p>
+
+<p>符号化(数値→文字列)処理</p>
+
+<pre><code>    n = 1234 : gosub *n2s
+    mes s
+    stop
+*n2s
+    sdim s, 64
+    repeat 3
+        ; 32 ... 126 -&gt; 
+        poke s, 2 - cnt, 32 + n ¥ 94
+        n /= 94
+    loop
+    return
+</code></pre>
+
+<p>復号化(文字列→数値)処理</p>
+
+<pre><code>    s = " -," : gosub *s2n
+    mes n
+    stop
+*s2n
+    n = 0
+    repeat 3
+        ; 32 ... 126
+        n = n * 94 + peek(s, cnt) - 32
+    loop
+    return
+</code></pre>
+
+<p>まあ、実際は一回しか読んでいないので、サブルーティンにせずに、展開して直接埋め込んでいます。</p>
+
+<h3 id="%E3%81%82%E3%81%AE%E3%81%8A%E8%82%89%E3%81%AF%E3%81%A9%E3%81%93%E3%81%8B%E3%82%89%EF%BC%9F">あのお肉はどこから？</h3>
+
+<p>あの見事な“マンガ肉”はどこから来たのでしょう？</p>
+
+<p>答えは <a href="http://hsp.tv/make/tamane2d.html">HSP3オフィシャル2D素材 "珠音（たまね）"</a> の <code>tamadot.bmp</code> からです。</p>
+
+<p>ただし、 <code>tamadot.bmp</code> のお肉は、斜めを向いているので</p>
+
+<p><img src="/images/2016_1031_meet.png" alt="" /> → gsquare → <img src="/images/2016_1031_meet_45rotate.png" alt="" /></p>
+
+<p>と回転させて横向きのお肉にしています。</p>
+
+<p>なお、そのまま回転させるとドットが斜めになってきたないので、かなり大きく拡大してから縮小してそれなりに見えるようにしています。</p>
+
+<p>ゲーム画面上のお肉がドットなのは、元が64ドットなのでしょうがないです。</p>
+
+<h2 id="%E6%9C%80%E5%BE%8C%E3%81%AB">最後に</h2>
+
+<p>「マンガ肉もぐもぐ」を HSPTV で遊んでいただけると嬉しいです。</p>
+
+<p>ゲームの感想を書き込んでもらえると更に嬉しいです。</p>
+
+<p>ゲームへのコメントは <a href="http://dev.onionsoft.net/seed/info.ax?id=1274">作品情報</a> からお願いします。</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[ジグソーパズルを作ってました]]></title>
+            <link href="http://www.sharkpp.net/blog/2010/07/25/make-jigsaw-puzzles-games.html"/>
+            <updated>2010-07-25T23:42:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2010/07/25/make-jigsaw-puzzles-games.html</id>
+            <content type="html"><![CDATA[<p>作っていたソフトの作成を中断し、ここ一ヶ月間パズルゲームを作っていた。</p>
+
+<p>定番のパズルといっても良いあのジグソーパズルだ。</p>
+
+<p><a href="/images/2010_0725_jigsaw.png"><img src="/images/2010_0725_jigsaw_s.jpg" alt="ジグソーパズルbeta" /></a></p>
+
+<p>取り敢えず形になってきたので公開する。</p>
+
+<p>完全にbetaなので注意！</p>
+
+<p>ではどーぞ</p>
+
+<p><a href="/files/2010_0725_jigsaw.zip">DOWNLOAD</a></p>
+
+<p>あっ後、<a href="/blog/2010/05/30/ubuntu-ja-10-04-on-vmware-player-3-memo.html">Ubuntu-ja-10.04をVMware Player 3で動かすときのメモ</a>にコメントをくれた方。</p>
+
+<p>コメントありがとうございます。</p>
+
+<p>忙しくてまだ試せていませんです。</p>
+]]></content>
+        </entry>
+    </feed>

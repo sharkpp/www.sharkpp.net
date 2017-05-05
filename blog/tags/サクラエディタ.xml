@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/%E3%82%B5%E3%82%AF%E3%83%A9%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:49+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[サクラエディタ用テキスト変換拡張パックを公開]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/09/05/release-sakura-editor-plugin-text-convert-extension-pack.html"/>
+            <updated>2015-09-05T14:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/09/05/release-sakura-editor-plugin-text-convert-extension-pack.html</id>
+            <content type="html"><![CDATA[<p>サクラエディタ用のプラグインとして「テキスト変換拡張パック」を作りました。</p>
+
+<p>ダウンロードは <a href="https://github.com/sharkpp/sakura-editor-plugin-text-convert-extension-pack">GitHub ページ</a> からできます。</p>
+
+<p>このプラグインでは選択した文字列に対して</p>
+
+<ul>
+<li>アッパーキャメルケース(UpperCamelCase)に変換</li>
+<li>ローワーキャメルケース(lowerCamelCase)に変換</li>
+<li>スネークケース(snake_case)に変換</li>
+<li>チェインケース(chain-case)に変換</li>
+<li>単語の頭を大文字に変換</li>
+<li>頭を大文字に変換</li>
+<li>頭を小文字に変換</li>
+</ul>
+
+<p>と、このような変換を行った文字列へと置き換えることができます。</p>
+
+<h2 id="%E6%A9%9F%E8%83%BD%E4%B8%80%E8%A6%A7">機能一覧</h2>
+
+<p>現在、このプラグインでは次のことができます。</p>
+
+<h3 id="%E3%82%A2%E3%83%83%E3%83%91%E3%83%BC%E3%82%AD%E3%83%A3%E3%83%A1%E3%83%AB%E3%82%B1%E3%83%BC%E3%82%B9uppercamelcase%E3%81%AB%E5%A4%89%E6%8F%9B">アッパーキャメルケース(UpperCamelCase)に変換</h3>
+
+<p>選択された文字列をアッパーキャメルケースに変換します。</p>
+
+<p>例として <code>upper camel case</code> という文字列を選択していた場合 <code>UpperCamelCase</code> に変換されます。</p>
+
+<h3 id="%E3%83%AD%E3%83%BC%E3%83%AF%E3%83%BC%E3%82%AD%E3%83%A3%E3%83%A1%E3%83%AB%E3%82%B1%E3%83%BC%E3%82%B9lowercamelcase%E3%81%AB%E5%A4%89%E6%8F%9B">ローワーキャメルケース(lowerCamelCase)に変換</h3>
+
+<p>選択された文字列をローワーキャメルケースに変換します。</p>
+
+<p>例として <code>lower camel case</code> という文字列を選択していた場合 <code>lowerCamelCase</code> に変換されます。</p>
+
+<h3 id="%E3%82%B9%E3%83%8D%E3%83%BC%E3%82%AF%E3%82%B1%E3%83%BC%E3%82%B9snake_case%E3%81%AB%E5%A4%89%E6%8F%9B">スネークケース(snake_case)に変換</h3>
+
+<p>選択された文字列をスネークケースに変換します。</p>
+
+<p>例として <code>snake case</code> という文字列を選択していた場合 <code>snake_case</code> と変換されます。</p>
+
+<h3 id="%E3%83%81%E3%82%A7%E3%82%A4%E3%83%B3%E3%82%B1%E3%83%BC%E3%82%B9chain-case%E3%81%AB%E5%A4%89%E6%8F%9B">チェインケース(chain-case)に変換</h3>
+
+<p>選択された文字列をチェインケースに変換します。</p>
+
+<p>例として <code>chain case</code> という文字列を選択していた場合 <code>chain-case</code> と変換されます。</p>
+
+<h3 id="%E5%8D%98%E8%AA%9E%E3%81%AE%E9%A0%AD%E3%82%92%E5%A4%A7%E6%96%87%E5%AD%97%E3%81%AB%E5%A4%89%E6%8F%9B">単語の頭を大文字に変換</h3>
+
+<p>選択された文字列の単語の頭を大文字に変換します。</p>
+
+<p>例として <code>upper camel words</code> という文字列を選択していた場合 <code>Upper Camel Words</code> と変換されます。</p>
+
+<h3 id="%E9%A0%AD%E3%82%92%E5%A4%A7%E6%96%87%E5%AD%97%E3%81%AB%E5%A4%89%E6%8F%9B">頭を大文字に変換</h3>
+
+<p>選択された文字列の頭を大文字に変換します。</p>
+
+<p>例として <code>upper camel first</code> という文字列を選択していた場合 <code>Upper camel first</code> と変換されます。</p>
+
+<h3 id="%E9%A0%AD%E3%82%92%E5%B0%8F%E6%96%87%E5%AD%97%E3%81%AB%E5%A4%89%E6%8F%9B">頭を小文字に変換</h3>
+
+<p>選択された文字列の頭を小文字に変換します。</p>
+
+<p>例として <code>Lower Camel First</code> という文字列を選択していた場合 <code>lower Camel First</code> と変換されます。</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[PHP用強調キーワード・キーワードヘルプファイル]]></title>
+            <link href="http://www.sharkpp.net/blog/2009/03/08/sakura-editor-php-keyword.html"/>
+            <updated>2009-03-08T15:20:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2009/03/08/sakura-editor-php-keyword.html</id>
+            <content type="html"><![CDATA[<p>サクラエディタ用のPHP用強調キーワード・キーワードヘルプファイルです。</p>
+
+<p>最新版は <a href="https://github.com/sharkpp/sakura-editor-keyword-php">GitHub</a> にあります。</p>
+
+<p>2015-09-05 12:00 レポジトリを svn.coderepos.org から github.com に変更したのを反映</p>
+
+<p><a href="https://github.com/sharkpp/sakura-editor-keyword-php/archive/master.zip">DOWNLOAD</a></p>
+]]></content>
+        </entry>
+    </feed>

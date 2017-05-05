@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/Ubuntu.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:50+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Ubuntu-ja-10.04をVMware Player 3で動かすときのメモ]]></title>
+            <link href="http://www.sharkpp.net/blog/2010/05/30/ubuntu-ja-10-04-on-vmware-player-3-memo.html"/>
+            <updated>2010-05-30T18:41:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2010/05/30/ubuntu-ja-10-04-on-vmware-player-3-memo.html</id>
+            <content type="html"><![CDATA[<p>ハードディスクも増設しUbuntu-ja-10.04も出たのでVMware Player 2.5をVMware Player 3.1にアップグレードしてインストールしてみた。</p>
+
+<p><a href="/blog/2009/01/10/ubuntu-ja-8-10-on-vmware-player-2-memo.html">Ubuntu-ja-8.10をVMware Player 2で動かすときのメモ</a>の続編みたいな感じ。</p>
+
+<p>まだ、一部未解決な問題が残っていてまともに使えていない。</p>
+
+<h3 id="ubuntu-10.04%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">Ubuntu 10.04インストール</h3>
+
+<p>isoを指定したらOSを認識し、簡易インストール機能が使用できました。</p>
+
+<p>アカウント名などを指定したら後は自動でらくちん！</p>
+
+<p>UIやキーボードなどが英語になっていたのでそれだけログイン画面で変更しました。</p>
+
+<p><a href="/images/2010_0530_ubuntu_10_04_install.png"><img src="/images/2010_0530_ubuntu_10_04_install_s.jpg" alt="Ubuntu 10.04 インストール画面" /></a></p>
+
+<p><a href="/images/2010_0530_ubuntu_10_04_login.png"><img src="/images/2010_0530_ubuntu_10_04_login_s.jpg" alt="Ubuntu 10.04 ログイン画面" /></a></p>
+
+<h3 id="vmware-tools">VMware Tools</h3>
+
+<p>簡易インストール時に勝手にダウンロード＆インストールされました。</p>
+
+<p>Playerの設定からWindows用などダウンロードが出来て、WMware Playerのインストールフォルダに *.iso で保存されていました。</p>
+
+<h3 id="vmnetcfg.exe">vmnetcfg.exe</h3>
+
+<pre>VMware-player-3.1.0-261024.exe /e hoge
+</pre>
+
+<p>でhoge/network.cabの中にvmnetcfg.exeがある様だけどエラーが出て動かなかった。</p>
+
+<p>プロシージャ エントリ ポイント ??4string@utf@@QAEAAV01@ABV01@@Z がダイナミック リンク ライブラリ vmwarestring.dll から見つかりませんでした。</p>
+
+<p><a href="/images/2010_0530_vmnetcfg_error.png"><img src="/images/2010_0530_vmnetcfg_error_s.jpg" alt="vmnetcfg.exe実行エラー" /></a></p>
+
+<h3 id="%E7%9B%B8%E5%A4%89%E3%82%8F%E3%82%89%E3%81%9A%E3%80%81openoffice.org%E3%81%AF%E8%A6%81%E3%82%89%E3%81%AA%E3%81%84%E3%81%AE%E3%81%A7%E6%B6%88%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F">相変わらず、OpenOffice.orgは要らないので消しました</h3>
+
+<h3 id="root%E3%81%AE%E3%83%91%E3%82%B9%E3%83%AF%E3%83%BC%E3%83%89%E3%81%AE%E8%A8%AD%E5%AE%9A">rootのパスワードの設定</h3>
+
+<pre>sudo passwd root
+</pre>
+
+<h3 id="%E8%B5%B7%E5%8B%95%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E7%B7%A8%E9%9B%86">起動オプションの編集</h3>
+
+<pre>sudo vi /etc/default/grub<br />sudo update-grub
+</pre>
+
+<h3 id="%E3%82%B2%E3%82%B9%E3%83%88os%E3%81%A7%E3%81%AE%E6%99%82%E5%88%BB%E5%90%8C%E6%9C%9F%E3%83%BB%E3%82%AF%E3%83%AD%E3%83%83%E3%82%AF%E3%81%AE%E9%80%B2%E3%81%BF">ゲストOSでの時刻同期・クロックの進み</h3>
+
+<p>相変わらずゲストOSでクロックの進みが速い。</p>
+
+<p>起動オプションを</p>
+
+<p>GRUB&#95;CMDLINE&#95;LINUX="noreplace-paravirt nosmp noapic nolapic clocksource=pit"</p>
+
+<p>とか</p>
+
+<p>GRUB&#95;CMDLINE&#95;LINUX="noreplace-paravirt nosmp noapic nolapic clock=pit"</p>
+
+<p>とかに変更しても変わらず。</p>
+
+<p>Player起動時に、</p>
+
+<p><a href="/images/2010_0530_vmware_player_tsc_notify.png"><img src="/images/2010_0530_vmware_player_tsc_notify_s.jpg" alt="WMware Player 通知メッセージ" /></a></p>
+
+<p>こんなのが表示されたので恐らくクロックの進みが速いのと関係あると思うけど、まだ調査できていない。</p>
+
+<h3 id="%E5%8F%82%E8%80%83">参考</h3>
+
+<p><a href="https://forums.ubuntulinux.jp/viewtopic.php?pid=55804#p55804">Ubuntu日本語フォーラム / 上手に起動できません。</a></p>
+
+<p><a href="http://blog.penpe.net/?eid=1046016">ディストーションが栄養剤　ぺんぺねっと管理人blog | Ubuntu 10.04 の root password パスワード設定方法は？</a></p>
+
+<p><a href="http://blog.mutsuyoshi.net/index.php?itemid=869">vmnetcfg.exeのありか - 明日の備忘録（六ちゃんが綴るメモ）</a></p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Ubuntu-ja-8.10をVMware Player 2で動かすときのメモ]]></title>
+            <link href="http://www.sharkpp.net/blog/2009/01/10/ubuntu-ja-8-10-on-vmware-player-2-memo.html"/>
+            <updated>2009-01-10T17:20:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2009/01/10/ubuntu-ja-8-10-on-vmware-player-2-memo.html</id>
+            <content type="html"><![CDATA[<p>Ubuntu-ja-8.10 on VMware Player 2 で色々はまったのでメモ</p>
+
+<h3 id="openoffice.org%E3%81%AF%E8%A6%81%E3%82%89%E3%81%AA%E3%81%84%E3%81%AE%E3%81%A7%E6%B6%88%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F">OpenOffice.orgは要らないので消しました</h3>
+
+<h3 id="subversion">Subversion</h3>
+
+<ul>
+<li>入っていないので sudo apt-get install subversion でインストール</li>
+<li>エラーが出たらアップデート・マネージャでアップデートしたらうまくいくかも</li>
+</ul>
+
+<h3 id="%E9%9F%B3%E3%82%92%E9%B3%B4%E3%82%89%E3%81%97%E3%81%9F%E3%81%84%E5%A0%B4%E5%90%88%E3%81%AF">音を鳴らしたい場合は</h3>
+
+<pre>sound.present = "TRUE"
+sound.startConnected = "TRUE"
+sound.virtualDev = "es1371"
+sound.fileName = "-1"
+sound.autodetect = "TRUE"
+sound.pciSlotNumber = 18
+</pre>
+
+<p>ここでのポイントはデバイスを"es1371"にすること</p>
+
+<h3 id="%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%81%AFnat%E3%83%A2%E3%83%BC%E3%83%89%E3%81%AB%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F">ネットワークはNATモードにしました</h3>
+
+<pre>ethernet0.connectionType = "nat"
+</pre>
+
+<h3 id="beep%E9%9F%B3%E3%81%8C%E3%81%86%E3%82%8B%E3%81%95%E3%81%84%E5%A0%B4%E5%90%88%E3%81%AF">BEEP音がうるさい場合は</h3>
+
+<pre>mks.noBeep = "TRUE"を*.vmxに追加
+</pre>
+
+<p><a href="http://www.networld.co.jp/vmware/tech/vid022.htm">http://www.networld.co.jp/vmware/tech/vid022.htm</a></p>
+
+<h3 id="%E3%82%BD%E3%83%BC%E3%82%B9%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%AB%E4%B8%AD%E3%81%ABcannot-exec-%5C%60cc1plus%27%E3%81%A8%E3%81%8B%E8%A8%80%E3%82%8F%E3%82%8C%E3%81%9F%E3%82%89">ソースのコンパイル中にcannot exec &#96;cc1plus'とか言われたら</h3>
+
+<ul>
+<li>Synaoticパッケージ・マネージャーでg++をインストール</li>
+<li>VMWare Tools</li>
+<li><a href="http://www.vmware.com/jp/products/server/">VMware Server</a>のlinux版(tar)をダウンロード＆解凍しlinux.isoを探してマウント</li>
+<li>インストールは</li>
+<li>CDの中のVMwareTools-?.tar.gzを</li>
+</ul>
+
+<pre>/var/tmp/に解凍
+cd vmware-tools-distrib
+sudu ./vmware-install.pl
+</pre>
+
+<p>で質問は取り敢えず全部EnterでOK</p>
+
+<p><a href="http://forums.ubuntulinux.jp/viewtopic.php?pid=1913">Ubuntu日本語フォーラム / vmware toolのインストール方法:</a></p>
+
+<p><a href="http://d.hatena.ne.jp/giant_penguin/20081124/1227485111">VMware PlayerにDebian lennyをインストールしたメモ - www tools</a></p>
+
+<h3 id="%E3%81%9D%E3%81%AE%E4%BB%96">その他</h3>
+
+<p><a href="http://d.hatena.ne.jp/prokion/20080312/1223800954">時刻同期メモ</a></p>
+]]></content>
+        </entry>
+    </feed>

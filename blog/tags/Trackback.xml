@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/Trackback.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:50+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Frog CMS用トラックバックプラグインの1.1.0をリリース]]></title>
+            <link href="http://www.sharkpp.net/blog/2009/05/31/frog-cms-trackback-plugin-1-1-0-release.html"/>
+            <updated>2009-05-31T17:15:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2009/05/31/frog-cms-trackback-plugin-1-1-0-release.html</id>
+            <content type="html"><![CDATA[<p>Frog CMS用トラックバックプラグインの1.1.0をリリースしました。</p>
+
+<p>今回はFrog CMS 0.9.5対応などです。</p>
+
+<p>注意点として、Frog CMS 0.9.5 に対応していますが、0.9.4と設定の保存方法が違うのでアップグレードした場合には設定が引き継がれませんので再度設定を行ってください。</p>
+
+<p>ダウンロードは<a href="/blog/2008/09/08/frog-cms-trackback-plugin.html">トラックバックプラグイン</a>からです。</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Frog CMS用トラックバックプラグインの1.0.0をリリース]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/10/15/frog-cms-trackback-plugin-1-0-0-release.html"/>
+            <updated>2008-10-15T00:35:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/10/15/frog-cms-trackback-plugin-1-0-0-release.html</id>
+            <content type="html"><![CDATA[<p>少し遅くなりましたが、Frog CMS用トラックバックプラグインの1.0.0をリリースしました。</p>
+
+<p>機能は予告どおりでトラックバックの承認・排除。削除を管理できるようになりました。</p>
+
+<p>以前公開していたプラグインからデーターベースに保存する内容などが変更されているので、もし入れていた場合はプラグインを一旦無効にしてその後再度有効にしてください。</p>
+
+<p>詳しいヘルプなどはプラグインアーカイブ内のreadme.txtなどに書かれていますのでそちらを参照ください。</p>
+
+<p>ダウンロードは<a href="/blog/2008/09/08/frog-cms-trackback-plugin.html">トラックバックプラグイン</a>からです。</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Frog CMSのトラックバックプラグインに機能を色々実装]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/10/11/trackback-plugin-many-function-implemented.html"/>
+            <updated>2008-10-11T02:21:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/10/11/trackback-plugin-many-function-implemented.html</id>
+            <content type="html"><![CDATA[<p>時間が無くて少しずつしか作れなかったけどFrog CMSのトラックバックプラグインに機能を色々追加。</p>
+
+<p>機能自体はコメントプラグインを参考にしてトラックバックの承認・排除。削除などを実装してみました。</p>
+
+<p>削除時にはモーダルで表示していましたが今風？のlightbox風に確認を出来るようにしています。</p>
+
+<p>数日中には公開できると思います。</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Frog CMSのトラックバックプラグインは取り敢えず完成]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/09/07/trackback-plugin-temporarily-completed.html"/>
+            <updated>2008-09-07T23:17:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/09/07/trackback-plugin-temporarily-completed.html</id>
+            <content type="html"><![CDATA[<p>プラグインはとりあえず完成です。</p>
+
+<p>スパムのブロックとかはないですがそれはそのうち実装かな。</p>
+
+<p>問題となっていたフロントエンドとバックエンドのURLの問題はその場しのぎな方法で回避しました。</p>
+
+<p>あとは</p>
+
+<ul>
+<li>スパムブロック</li>
+<li>管理画面での設定(トラックバックのデフォルトなど)</li>
+</ul>
+
+<p>ぐらいかな？</p>
+
+<h4 id="%E8%BF%BD%E8%A8%98">追記</h4>
+
+<p>トラックバックプラグインを公開しました。</p>
+
+<p>Frog CMS関連のページから<a href="/blog/2008/09/08/frog-cms-trackback-plugin.html">トラックバックプラグイン</a>をダウンロードできます。</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Frog CMSにトラックバックプラグインを実装中 #2]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/09/03/implement-trackback-plugin-for-frog-cms-2.html"/>
+            <updated>2008-09-03T00:39:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/09/03/implement-trackback-plugin-for-frog-cms-2.html</id>
+            <content type="html"><![CDATA[<p>トラックバック送信もうまくいった様だけどリンクされるURLがまずい事に気が付いた。</p>
+
+<p>Frog CMSはバックエンドとフロントエンドでページを扱うクラスなどが違ってフロントエンドで出来る処理がバックエンドで出来ないことがあったりする。</p>
+
+<p>また、その逆もある。</p>
+
+<p>で、一通りソースを見て探してみたけどバックエンド側でフロントエンド側のURLを取得する方法がないみたい。</p>
+
+<p>なので自力でシミュレートするしかないみたい、なんてこったい＿|￣|○</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[トラックバックのテスト]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/09/01/test-of-trackback.html"/>
+            <updated>2008-09-01T00:24:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/09/01/test-of-trackback.html</id>
+            <content type="html"><![CDATA[<p>トラックバックプラグインのテスト</p>
+
+<p>を休眠中のブログを使ってテストしようとしたけど、ホワイトリストに載っていないのを全て弾くみたいでテストできなかった。</p>
+]]></content>
+        </entry>
+    </feed>

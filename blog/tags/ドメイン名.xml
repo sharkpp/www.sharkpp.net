@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E5%90%8D.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:49+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[ファイル拡張子のようなドメインをまとめてみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/04/30/file-extension-domains.html"/>
+            <updated>2016-04-30T17:45:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/04/30/file-extension-domains.html</id>
+            <content type="html"><![CDATA[<p>以前に <a href="http://www.sharkpp.net/blog/2015/09/21/romaji-readable-domains.html">ローマ字として読むことが可能なドメインをまとめてみた</a> として、ローマ字として読めるドメインをまとめてみましたが、ある意味ではそれの第二弾のような内容です。</p>
+
+<p>今回は、ファイルの拡張子、例えば hogehoge.sh でシェルスクリプト、見たいな拡張子が他にもないか調べまとめてみることにしました。</p>
+
+<p>例えば、 <code>very-amazing.mov</code> とか <code>fiddle.py</code> とか <code>fiddle.pl</code> とか <code>fiddle.sh</code> とか <code>nandemo.zip</code> とか  <code>nandemo.cab</code> とか、ぱっと見で何ができるか、わかる気がしませんか？</p>
+
+<p>例によって <a href="http://www.iana.org/domains/root/db">IANA — Root Zone Database</a> をソースとして利用しています。</p>
+
+<p>下の表は <a href="https://docs.google.com/spreadsheets/d/164kFGy6G52qJ6xmqZ8oyxVwc5714mXoWYSohs23WZoo/edit?usp=sharing">ファイル拡張子のようなドメイン - Google スプレッドシート</a> から確認できます。</p>
+
+<h2 id="%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%8B%A1%E5%BC%B5%E5%AD%90%E3%81%AE%E3%82%88%E3%81%86%E3%81%AA-tld-%E3%81%AE%E4%B8%80%E8%A6%A7">ファイル拡張子のような TLD の一覧</h2>
+
+<table class="table table-bordered table-hover table-condensed table-striped" data-sheetrock="https://docs.google.com/spreadsheets/d/164kFGy6G52qJ6xmqZ8oyxVwc5714mXoWYSohs23WZoo/edit#gid=0"></table>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<p>ざっと見たところでは、あるアプリケーションの専用フォーマットに付けられている拡張子が多い気がします。</p>
+
+<p>ただ、その中でも、</p>
+
+<table>
+<thead>
+<tr>
+  <th>ドメイン/拡張子</th>
+  <th>種別</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>.ai</td>
+  <td>Adobe Illustrator File</td>
+</tr>
+<tr>
+  <td>.app</td>
+  <td>Mac OS X Application</td>
+</tr>
+<tr>
+  <td>.as</td>
+  <td>ActionScript File / HSP source File</td>
+</tr>
+<tr>
+  <td>.bz</td>
+  <td>Bzip Compressed File</td>
+</tr>
+<tr>
+  <td>.cab</td>
+  <td>Windows Cabinet File</td>
+</tr>
+<tr>
+  <td>.cc</td>
+  <td>C++ Source Code File</td>
+</tr>
+<tr>
+  <td>.coffee</td>
+  <td>CoffeeScript JavaScript File</td>
+</tr>
+<tr>
+  <td>.java</td>
+  <td>Java Source Code File</td>
+</tr>
+<tr>
+  <td>.md</td>
+  <td>Markdown Documentation File</td>
+</tr>
+<tr>
+  <td>.mobi</td>
+  <td>Mobipocket eBook</td>
+</tr>
+<tr>
+  <td>.mov</td>
+  <td>Apple QuickTime Movie</td>
+</tr>
+<tr>
+  <td>.pl</td>
+  <td>Perl Script</td>
+</tr>
+<tr>
+  <td>.ps</td>
+  <td>PostScript File</td>
+</tr>
+<tr>
+  <td>.py</td>
+  <td>Python Script</td>
+</tr>
+<tr>
+  <td>.sh</td>
+  <td>Bash Shell Script</td>
+</tr>
+<tr>
+  <td>.tk</td>
+  <td>Tk Script</td>
+</tr>
+<tr>
+  <td>.zip</td>
+  <td>Zipped File</td>
+</tr>
+</tbody>
+</table>
+
+<p>辺りが一般的なものっぽいかな？と言う気がします。</p>
+
+<p>まあ、なかなか活用は難しそうですが、この表を見て良いドメインを閃いきサービスを作ったのであれば、こっそりとサービスの極片隅に書いておいてもらえると嬉しいです。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://www.iana.org/domains/root/db">IANA — Root Zone Database</a></li>
+<li><a href="http://fileinfo.com/">FileInfo - The File Extensions Database</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[ローマ字として読むことが可能なドメインをまとめてみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/09/21/romaji-readable-domains.html"/>
+            <updated>2015-09-21T19:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/09/21/romaji-readable-domains.html</id>
+            <content type="html"><![CDATA[<p>よくトップレベルドメイン(TLD)を含めた状態で文字列を表現するドメイン名になっていることがあります。</p>
+
+<p>たとえば、<code>about.me = "About me"</code> や <code>delicio.us = Delicious</code> とかです。
+これ、ローマ字でもできると思いませんか？</p>
+
+<p>なので、ドメインの一覧のリストを作り、その中からローマ字として読めそうな TLD のまとめを作ってみました。</p>
+
+<p>なお、<code>.hitachi</code> など企業が持っている物や、<code>.tokyo</code> とかのように在住者のみを対象としているドメイン、さらには維持費が月額１万を超える物などもあるので、読めたからといって取得し維持できるとは限らないですので参考程度ではありますです。</p>
+
+<p>下の表は <a href="https://docs.google.com/spreadsheets/d/1dKEZFofML-d3EDDZIVOFkxbALKGMConF_RF6eck1eKs/edit?usp=sharing">ローマ字になるドメイン - Google スプレッドシート</a> から確認できます。</p>
+
+<h2 id="%E4%BA%94%E5%8D%81%E9%9F%B3%E3%81%AE%E8%A1%A8%E5%86%85%E3%81%A7%E5%AD%98%E5%9C%A8%E3%81%99%E3%82%8B-tld">五十音の表内で存在する TLD</h2>
+
+<p>五十音に含まれる、１文字もしくは２文字として読むことが可能な TLD を表としてまとめてみました。</p>
+
+<p>存在する文字は TLD として記載してあります。</p>
+
+<table class="table table-bordered table-hover table-condensed table-striped" data-sheetrock="https://docs.google.com/spreadsheets/d/1dKEZFofML-d3EDDZIVOFkxbALKGMConF_RF6eck1eKs/edit#gid=1665663076"></table>
+
+<h2 id="%E3%83%AD%E3%83%BC%E3%83%9E%E5%AD%97%E3%81%A8%E3%81%97%E3%81%A6%E8%AA%AD%E3%82%81%E3%82%8B-tld-%E3%81%AE%E4%B8%80%E8%A6%A7">ローマ字として読める TLD の一覧</h2>
+
+<p><a href="http://www.iana.org/domains/root/db">IANA — Root Zone Database</a> からドメイン名の一覧を作成し、ローマ字として読むことが可能な一覧を作成しました。</p>
+
+<p>なお、企業が保有している、取得資格がない、高額など、様々な理由により、読めるからといって取得できるとは限りませんので悪しからず。</p>
+
+<table class="table table-bordered table-hover table-condensed table-striped" data-sheetrock="https://docs.google.com/spreadsheets/d/1dKEZFofML-d3EDDZIVOFkxbALKGMConF_RF6eck1eKs/edit#gid=344367018"></table>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://www.iana.org/domains/root/db">IANA — Root Zone Database</a></li>
+</ul>
+]]></content>
+        </entry>
+    </feed>

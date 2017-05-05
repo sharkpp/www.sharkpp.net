@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/Snippet.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:49+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Sculpin で投稿カレンダー(年/月)を作る方法]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/02/20/sculpin-tips-year-month-calendar-posts.html"/>
+            <updated>2016-02-20T22:29:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/02/20/sculpin-tips-year-month-calendar-posts.html</id>
+            <content type="html"><![CDATA[<p><a href="http://sculpin.io/">Sculpin</a> で、はてなダイアリー&trade;のような、年/月 カレンダーを表示したいと思ったので作ってみました。</p>
+
+<p><img src="/images/2016_0220_year_month_calendar.png" alt="年/月カレンダー" /></p>
+
+<p>みたいな感じです。</p>
+
+<h2 id="%E3%81%BE%E3%81%9A%E3%81%AF">まずは</h2>
+
+<p>posts へのアクセスが必要になるので、コードを書きこむファイルには</p>
+
+<pre><code class="yaml">use:
+    - posts
+</code></pre>
+
+<p>と、 posts へのアクセスができるように宣言が必要です。</p>
+
+<p></p>
+
+<pre><code class="twig">{% for post in data.posts %}
+   :
+{% endfor %}
+</code></pre>
+
+<p></p>
+
+<p>そうすることで、 <code>data.posts</code> で記事全部にアクセスすることができます。</p>
+
+<h2 id="%E5%AE%9F%E8%A3%85">実装</h2>
+
+<p>わかりやすいように <a href="https://github.com/sharkpp/www.sharkpp.net/commit/f579cde9ea1c630ba9aa18b883ff26baf4d4ef54">commit:f579cde9ea1c630ba9aa18b883ff26baf4d4ef54</a> からコメントを追加したり、削ったりしているけどだいたいこんな感じ。</p>
+
+<p></p>
+
+<pre><code class="twig">{%   set post_ym = post.date|date("Y-m") %}
+{%   set ym_posts = ym_posts|merge({ (post_ym): 1 }) %}
+{# ついでに、記事の最初と最後の日付を覚える #}
+{%   if min_posts is empty or post_ym &lt; min_posts %}{% set min_posts = post_ym %}{% endif %}
+{%   if max_posts is empty or max_posts &lt; post_ym %}{% set max_posts = post_ym %}{% endif %}
+{% endfor %}
+{# カレンダー構築：年×月でループを回し、記事の範囲外の日付は表示しないようにする #}
+{% for y in range((max_posts|slice(0,4)), min_posts|slice(0,4)) %}
+&lt;a href="{{ site.url }}/blog/{{ y }}/"&gt;{{ y }}&lt;/a&gt;
+{%   for m in 1..12 %}
+{%     set ym = "%04d-%02d"|format(y, m) %}
+{%     if min_posts &lt;= ym and ym &lt;= max_posts %}
+{%       if not ym_posts[ym] is empty %}
+| &lt;a href="{{ site.url }}/blog/{{ y }}/{{ "%02d"|format(m) }}/"&gt;{{ "%02d"|format(m) }}&lt;/a&gt;
+{%       else %}
+| &lt;del class="text-muted"&gt;{{ "%02d"|format(m) }}&lt;/del&gt;
+{%       endif %}
+{%     else %}
+| {{ "%02d"|format(m) }}
+{%     endif %}
+{%   endfor %}
+&lt;br /&gt;
+{% endfor %}
+</code></pre>
+
+<p></p>
+
+<p>最終的にこんな表示になりました。</p>
+
+<p><img src="/images/2016_0220_year_month_calendar.png" alt="年/月カレンダー" /></p>
+
+<p>これ自体のコードは <a href="https://github.com/sharkpp/www.sharkpp.net/blob/master/source/_includes/archive_histories.html">www.sharkpp.net/archive_histories.html at master · sharkpp/www.sharkpp.net</a> を参考にしてみてください。</p>
+
+<h2 id="%E3%81%8A%E3%81%BE%E3%81%91">おまけ</h2>
+
+<p>実は、最初に作った<a href="https://github.com/sharkpp/www.sharkpp.net/commit/81f8614d5f4ab8f12035e497a3251d120bc928ff">コード</a>は、あまりにも処理時間がかかり、そもそもホムペが更新できない状態になっていました。
+なので、再度作り直した結果、まあ、とりあえず動くものができた感じ。</p>
+
+<h3 id="%E4%BD%95%E3%81%8C%E5%95%8F%E9%A1%8C%E3%81%A0%E3%81%A3%E3%81%9F%E3%81%8B%EF%BC%9F">何が問題だったか？</h3>
+
+<p>とりあえず、</p>
+
+<p><img src="/images/2016_0220_year_month_calendar_sample.png" alt="年/月カレンダーサンプル" /></p>
+
+<p>みたいな表示のカレンダーを表示したい、といったことを思いついて、実装してみる。</p>
+
+<p>その結果、出来上がったのがこちら。
+だたし、使えない。</p>
+
+<p><a href="https://github.com/sharkpp/www.sharkpp.net/commit/81f8614d5f4ab8f12035e497a3251d120bc928ff">commit:81f8614d5f4ab8f12035e497a3251d120bc928ff</a></p>
+
+<p>コードをここにペタリンコするのは略。</p>
+
+<p>これ、何が問題だったかというと、処理時間が異様に掛かってしまう、この一点が唯一、そして最大の問題でした。</p>
+
+<p>簡単に計算すると、<code>記事数(=250程度) × (ループ１(=250程度) ＋ ループ２(=9年) × ループ３(=12ヶ月) × ループ４(=250程度) ＝ 6812500)</code> で一番内側のループの回数がすごいことになっていたので、それはまあ、遅くなるのも通りだろうと。</p>
+
+<p>というわけで、数日は記事を書いてサーバー上で直接アップデート、をしていました。</p>
+
+<h3 id="%E5%86%8D%E5%AE%9F%E8%A3%85">再実装</h3>
+
+<p>もう一度、Twigの仕様などを調べ、作り直した結果がこれ。</p>
+
+<p><a href="https://github.com/sharkpp/www.sharkpp.net/commit/f579cde9ea1c630ba9aa18b883ff26baf4d4ef54">commit:f579cde9ea1c630ba9aa18b883ff26baf4d4ef54</a></p>
+
+<p>今度は、<code>記事数(=250程度) × (ループ１(=250程度) ＋ ループ２(=9年) × ループ３(=12ヶ月) ＝ 89500)</code> とまだ、多いは多いですが、1/250 には減っています。
+やったね！</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://www.drupal.org/node/2160611">Provide {{ item.item.alt }} Twig syntax for getting data from $item&#091;'#item'&#093;&#091;'alt'&#093; &#091;#2160611&#093; | Drupal.org</a></li>
+<li><a href="http://twig.sensiolabs.org/doc/templates.html#variables">Twig for Template Designers - Documentation - Twig - The flexible, fast, and secure PHP template engine</a></li>
+<li><a href="http://twig.sensiolabs.org/doc/filters/slice.html">slice - Documentation - Twig - The flexible, fast, and secure PHP template engine</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Sculpin で自動的に「続きを見る」リンクを作る方法]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/12/29/sculpin-tips-auto-more-link.html"/>
+            <updated>2015-12-29T23:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/12/29/sculpin-tips-auto-more-link.html</id>
+            <content type="html"><![CDATA[<p>なんか、 <a href="http://sculpin.io/">Sculpin</a> の日本語情報が圧倒的に少ない気がするのでTipsを投下してみます。</p>
+
+<p>このサイトで使っている自動的に「続きを見る」リンク</p>
+
+<p><img src="/images/2015_1229_more_link.png" alt="「続きを見る」リンク" /></p>
+
+<p>のような感じのリンクを作る方法です。</p>
+
+<h2 id="%E6%96%B9%E5%90%91%E6%80%A7">方向性</h2>
+
+<p>方向性としては、</p>
+
+<pre><code class="md">じゅげむと、いろは歌は、、、、
+ほげふが
+
+## じゅげむ
+
+寿限無寿限無、、、
+
+## いろは歌
+
+色はにほへど　散りぬるを 、、、、
+
+</code></pre>
+
+<p>と、</p>
+
+<ol>
+<li>最初のセクション(<code>じゅげむと、いろは歌は、、、、</code>の部分)</li>
+<li>レベル２ヘッダ(<code>じゅげむ</code>の部分)</li>
+<li>セクション(<code>寿限無寿限無、、、</code>の部分)</li>
+<li>以下続き</li>
+</ol>
+
+<p>のような感じの投稿内容から</p>
+
+<pre><code class="html">じゅげむと、いろは歌は、、、、
+ほげふが
+
+&lt;a href="..."&gt;... 続きを見る&lt;/a&gt;
+</code></pre>
+
+<p>のように、最初のセクションを抜き出し、「続きを見る」リンクを作るようにします。</p>
+
+<h2 id="%E6%BA%96%E5%82%99">準備</h2>
+
+<p>うちのホムペは <a href="https://github.com/sculpin/sculpin-blog-skeleton">sculpin/sculpin-blog-skeleton</a> ベースなので、これをベースとして直していく感じになります。</p>
+
+<p>そうでない場合は、適時読み替えてください。</p>
+
+<p>まず Twig で、<code>preg_XXX</code> 系が利用できるようになる拡張をインストールします。</p>
+
+<p>利用するのは、<a href="https://packagist.org/packages/jasny/twig-extensions">jasny/twig-extensions</a> です。</p>
+
+<p><code>app/config/sculpin_services.yml</code> に追記 or なければ作成し、Twig 拡張を利用できるようにします。</p>
+
+<pre><code class="diff">+ services:
++     twig.extension.text:
++         class: Twig_Extensions_Extension_Text
++         tags:
++             - { name: twig.extension }
++     twig.extension.pcre:
++         class: Jasny\Twig\PcreExtension
++         tags:
++             - { name: twig.extension }
+</code></pre>
+
+<p><code>sculpin.json</code> に</p>
+
+<pre><code class="diff">          "components/jquery": "~1.9.1",
+-         "components/highlightjs": "~7.3.0"
++         "components/highlightjs": "~7.3.0",
++         "jasny/twig-extensions": "@dev"
+      },
+      "config": {
+</code></pre>
+
+<p><code>jasny/twig-extensions</code> を追加し</p>
+
+<pre><code>$ php sculpin.phar install
+</code></pre>
+
+<p>のようにしてインストール。</p>
+
+<h2 id="%E4%BD%9C%E6%88%90">作成</h2>
+
+<p>やっていることは驚くほど簡単です。</p>
+
+<p><code>source/index.html</code> がトップページ用のテンプレートですが、</p>
+
+<pre><code class="diff">         &lt;/header&gt;
+          &lt;div&gt;
+-             {{ post.blocks.content|raw }}
++             {{ post.blocks.content|preg_replace('!^(.+?)(&lt;h.*)?$!sm', '$1') | raw }}
++             {% if post.blocks.content|preg_replace('!^(.+?)(&lt;h.*)?$!sm', '$1') != post.blocks.content %}
++                 &amp;hellip;&amp;nbsp;&lt;a href=""&gt;続きを見る&lt;/a&gt;
++             {% endif %}
+          &lt;/div&gt;
+          &lt;hr /&gt;
+</code></pre>
+
+<p>と、このような感じにスケルトンから変更します。</p>
+
+<p>やっていることは、</p>
+
+<ol>
+<li>生成済みコンテンツ(<code>post.blocks.content</code>) に対して、最初のヘッダタグの直前までを抜き出す</li>
+<li>「続きを見る」リンク追加、ただし、コンテンツが省略されていないこと。</li>
+</ol>
+
+<p>と、すごく単純なことです。</p>
+
+<p>これの肝は、最初のセクションにはヘッダタグがない、ということで、これはレベル１のヘッダタグとしてページタイトルが別になるようにしてあるためなので、違う構造であれば試行錯誤は必要ですが、うまいこと正規表現を変えて対応できると思います。</p>
+
+<h2 id="%E7%B5%90%E6%9E%9C">結果</h2>
+
+<p><img src="/images/2015_1229_more_link2.png" alt="「続きを見る」リンク" /></p>
+
+<p>やったね！</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://github.com/sharkpp/www.sharkpp.net/commit/98c87d045e04da9717cd5a30f650aea9dc373096">sharkpp/www.sharkpp.net@98c87d0</a></li>
+<li><a href="http://symfony.com/doc/current/cookbook/templating/twig_extension.html#register-an-extension-as-a-service">How to Write a custom Twig Extension (The Symfony CookBook)</a></li>
+<li><a href="https://github.com/jasny/twig-extensions">jasny/twig-extensions</a></li>
+</ul>
+]]></content>
+        </entry>
+    </feed>

@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/POSIX.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:49+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[日付を文字列にするための書式を比較してみた (php と Ruby 編)]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/05/28/compare-format-for-date-to-string-php-and-ruby.html"/>
+            <updated>2016-05-28T22:50:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/05/28/compare-format-for-date-to-string-php-and-ruby.html</id>
+            <content type="html"><![CDATA[<p>php を使っている時に、日付を書式化する場合、 <code>date()</code> 関数と <code>strftime()</code> 関数があって、どっち使うべきだろうか、とか片方のフォーマットは他方でどれだっけ？とか、まあようするになんでに種類あるんだろう？って思うわけです。</p>
+
+<p>で、対応をまとめてみました。</p>
+
+<p>ほかの言語も調べてみると Ruby の方が色々とフォーマットが追加されてたりするので、比較対象として追加してあります。</p>
+
+<h2 id="%E6%9B%B8%E5%BC%8F%E3%81%AE%E6%AF%94%E8%BC%83">書式の比較</h2>
+
+<p>ざっと確認したところ、大まかに</p>
+
+<ul>
+<li>php の <code>date()</code></li>
+<li>php の <code>strftime()</code> 系 Python や Perl や Linux の <code>strftime()</code> 関数(拡張なし)</li>
+<li>Ruby の <code>Time#strftime()</code> 系 Linux の <code>DATE</code> コマンド や <code>strftime()</code> 関数(拡張あり)</li>
+</ul>
+
+<p>の３種類があるようです。</p>
+
+<p>さてはて php の <code>date()</code> は一体どこから出てきたのでしょうね。</p>
+
+<p>ともかく、 php と Ruby の関数の書式をまとめてみました。</p>
+
+<table>
+<thead>
+<tr>
+  <th align="center">php:strftime</th>
+  <th align="center">php:date</th>
+  <th align="center">ruby:Time#strftime</th>
+  <th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="center">%a</td>
+  <td align="center">D</td>
+  <td align="center">%a</td>
+  <td>短縮された曜日の名前</td>
+</tr>
+<tr>
+  <td align="center">%A</td>
+  <td align="center">l</td>
+  <td align="center">%A</td>
+  <td>完全な曜日の名前</td>
+</tr>
+<tr>
+  <td align="center">%d</td>
+  <td align="center">d</td>
+  <td align="center">%d</td>
+  <td>２桁０埋めの日付</td>
+</tr>
+<tr>
+  <td align="center">%e</td>
+  <td align="center"></td>
+  <td align="center">%e</td>
+  <td>２桁空白埋めの日付</td>
+</tr>
+<tr>
+  <td align="center">%j</td>
+  <td align="center"></td>
+  <td align="center">%j</td>
+  <td>３桁０埋め１開始の年間の通算日</td>
+</tr>
+<tr>
+  <td align="center">%u</td>
+  <td align="center">N</td>
+  <td align="center">%u</td>
+  <td>月曜を１で日曜を７とする曜日</td>
+</tr>
+<tr>
+  <td align="center">%w</td>
+  <td align="center">w</td>
+  <td align="center">%w</td>
+  <td>日曜を０で土曜を６とする曜日</td>
+</tr>
+<tr>
+  <td align="center">%U</td>
+  <td align="center"></td>
+  <td align="center">%U</td>
+  <td>最初の日曜を１開始とする年間の通算週</td>
+</tr>
+<tr>
+  <td align="center">%V</td>
+  <td align="center">W</td>
+  <td align="center">%V</td>
+  <td>最初の月曜を１開始とする年間の通算週、53週目は年をまたがる</td>
+</tr>
+<tr>
+  <td align="center">%W</td>
+  <td align="center"></td>
+  <td align="center">%W</td>
+  <td>最初の月曜を１開始とする年間の通算週</td>
+</tr>
+<tr>
+  <td align="center">%b, %h</td>
+  <td align="center">M</td>
+  <td align="center">%b, %h</td>
+  <td>短縮された月の名前</td>
+</tr>
+<tr>
+  <td align="center">%B</td>
+  <td align="center">F</td>
+  <td align="center">%B</td>
+  <td>完全な月の名前</td>
+</tr>
+<tr>
+  <td align="center">%m</td>
+  <td align="center">m</td>
+  <td align="center">%m</td>
+  <td>２桁０埋めの月</td>
+</tr>
+<tr>
+  <td align="center">%C</td>
+  <td align="center"></td>
+  <td align="center">%C</td>
+  <td>２桁０埋めの世紀</td>
+</tr>
+<tr>
+  <td align="center">%g</td>
+  <td align="center"></td>
+  <td align="center"></td>
+  <td>２桁であらわした年。ISO-8601:1988 標準形式</td>
+</tr>
+<tr>
+  <td align="center">%G</td>
+  <td align="center">o</td>
+  <td align="center"></td>
+  <td>%g の４桁完全版</td>
+</tr>
+<tr>
+  <td align="center">%y</td>
+  <td align="center">y</td>
+  <td align="center">%y</td>
+  <td>２桁０埋めの年のしも２桁</td>
+</tr>
+<tr>
+  <td align="center">%Y</td>
+  <td align="center">Y</td>
+  <td align="center">%Y</td>
+  <td>４桁０埋めの年</td>
+</tr>
+<tr>
+  <td align="center">%H</td>
+  <td align="center">H</td>
+  <td align="center">%H</td>
+  <td>２桁０埋めの24時間制の時間</td>
+</tr>
+<tr>
+  <td align="center">%k</td>
+  <td align="center"></td>
+  <td align="center">%k</td>
+  <td>２桁空白埋めの24時間制の時間</td>
+</tr>
+<tr>
+  <td align="center">%I</td>
+  <td align="center">h</td>
+  <td align="center">%I</td>
+  <td>２桁０埋めの12時間制の時間</td>
+</tr>
+<tr>
+  <td align="center">%l</td>
+  <td align="center"></td>
+  <td align="center">%l</td>
+  <td>２桁空白埋めの12時間制の時間</td>
+</tr>
+<tr>
+  <td align="center">%M</td>
+  <td align="center">i</td>
+  <td align="center">%M</td>
+  <td>２桁０埋めの分</td>
+</tr>
+<tr>
+  <td align="center">%p</td>
+  <td align="center">A</td>
+  <td align="center">%p</td>
+  <td>指定した時刻に応じた大文字の 'AM' あるいは 'PM'</td>
+</tr>
+<tr>
+  <td align="center">%P</td>
+  <td align="center">a</td>
+  <td align="center">%P</td>
+  <td>指定した時刻に応じた小文字の 'am' あるいは 'pm'</td>
+</tr>
+<tr>
+  <td align="center">%r</td>
+  <td align="center"></td>
+  <td align="center">%r</td>
+  <td>"%I:%M:%S %p" と同じ</td>
+</tr>
+<tr>
+  <td align="center">%R</td>
+  <td align="center"></td>
+  <td align="center">%R</td>
+  <td>"%H:%M" と同じ</td>
+</tr>
+<tr>
+  <td align="center">%S</td>
+  <td align="center">s</td>
+  <td align="center">%S</td>
+  <td>２桁０埋めの秒</td>
+</tr>
+<tr>
+  <td align="center">%T, %X</td>
+  <td align="center"></td>
+  <td align="center">%T, %X</td>
+  <td>"%H:%M:%S" と同じ</td>
+</tr>
+<tr>
+  <td align="center">%z</td>
+  <td align="center">O</td>
+  <td align="center">%z</td>
+  <td>タイムゾーン。UTC/GMTからのオフセット</td>
+</tr>
+<tr>
+  <td align="center">%Z</td>
+  <td align="center">T</td>
+  <td align="center">%Z</td>
+  <td>タイムゾーン</td>
+</tr>
+<tr>
+  <td align="center">%c</td>
+  <td align="center"></td>
+  <td align="center">%c</td>
+  <td>日付と時刻</td>
+</tr>
+<tr>
+  <td align="center">%D, %x</td>
+  <td align="center"></td>
+  <td align="center">%D, %x</td>
+  <td>"%m/%d/%y" と同じ</td>
+</tr>
+<tr>
+  <td align="center">%F</td>
+  <td align="center"></td>
+  <td align="center">%F</td>
+  <td>"%Y-%m-%d" と同じ</td>
+</tr>
+<tr>
+  <td align="center">%s</td>
+  <td align="center">U</td>
+  <td align="center">%s</td>
+  <td>Unix エポックからのタイムスタンプ</td>
+</tr>
+<tr>
+  <td align="center">%n</td>
+  <td align="center"></td>
+  <td align="center">%n</td>
+  <td>改行文字 ("\n")</td>
+</tr>
+<tr>
+  <td align="center">%t</td>
+  <td align="center"></td>
+  <td align="center">%t</td>
+  <td>タブ文字 ("\t")</td>
+</tr>
+<tr>
+  <td align="center">%%</td>
+  <td align="center"></td>
+  <td align="center">%%</td>
+  <td>パーセント文字 ("%")</td>
+</tr>
+<tr>
+  <td align="center">%a, %d %b %Y %T %z</td>
+  <td align="center">r</td>
+  <td align="center">%a, %d %b %Y %T %z</td>
+  <td>RFC 2822 フォーマットされた日付</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">j</td>
+  <td align="center">%-e</td>
+  <td>左寄せの日</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">S</td>
+  <td align="center"></td>
+  <td>英語形式の序数を表すサフィックス(stやndなど)</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">z</td>
+  <td align="center"></td>
+  <td>左寄せで０開始の年間の通算日</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">n</td>
+  <td align="center">%-m</td>
+  <td>左寄せの月</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">t</td>
+  <td align="center"></td>
+  <td>指定した月の日数</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">L</td>
+  <td align="center"></td>
+  <td>閏年であるかどうか</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">B</td>
+  <td align="center"></td>
+  <td>Swatch インターネット時間</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">g</td>
+  <td align="center">%-l</td>
+  <td>左寄せの12時間制の時間</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">G</td>
+  <td align="center">%-H</td>
+  <td>左寄せの24時間制の時間</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">u</td>
+  <td align="center">%6N</td>
+  <td>６桁０埋めのマイクロ秒</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">e</td>
+  <td align="center"></td>
+  <td>タイムゾーン識別子</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">I</td>
+  <td align="center"></td>
+  <td>サマータイム中か否か</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">P</td>
+  <td align="center">%:z</td>
+  <td>タイムゾーン。コロンが入ったUTC/GMTからのオフセット</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">Z</td>
+  <td align="center"></td>
+  <td>タイムゾーンのオフセット秒数</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center">c</td>
+  <td align="center">%FT%T%:z</td>
+  <td>ISO 8601 日付</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center"></td>
+  <td align="center">%L, %3N</td>
+  <td>３桁０埋めのミリ秒</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center"></td>
+  <td align="center">%N</td>
+  <td>９桁０埋めのナノ秒</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center"></td>
+  <td align="center">%v</td>
+  <td>VMS形式の日付 (%e-%b-%Y)</td>
+</tr>
+<tr>
+  <td align="center"></td>
+  <td align="center"></td>
+  <td align="center">%::z</td>
+  <td>タイムゾーン。コロンが入った秒まで含むUTCからのオフセット</td>
+</tr>
+</tbody>
+</table>
+
+<p>表にして比較してみると、 php の <code>date()</code> 関数は若干サポートしているフォーマットが少ないですが、逆に特殊な内容をサポートしていたりと、なかなかおもしろいと思います。</p>
+
+<p>両方が合わさると最強ではないかと思わなくもないですが、英字1文字で対応するには厳しい気もしますね。</p>
+
+<p>比較は、手でやるのは面倒だったのでスクリプトを組んで調べましたが、まあ、これぐらいなら手でやっても良かったかもしれません。</p>
+
+<p>ほかの言語を追加で調べる場合には、楽ができそうですが。</p>
+
+<h2 id="%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%81%AE%E5%88%A9%E7%94%A8%E6%96%B9%E6%B3%95">スクリプトの利用方法</h2>
+
+<p>利用方法は下記の</p>
+
+<ul>
+<li><a href="https://gist.github.com/sharkpp/2bdf0b6a70fc08044b01b7089e6ef023">_format-diff.php</a></li>
+<li><a href="https://gist.github.com/sharkpp/84deb455f9e1ffbc50f8cf1d5a0c399b">php-date.php</a></li>
+<li><a href="https://gist.github.com/sharkpp/0426f8dd6650083dc30768fc9f3f3c61">php-strftime.php</a></li>
+<li><a href="https://gist.github.com/sharkpp/7f45f212b1d58609bf7ee19164630452">ruby-Time#strftime.rb</a></li>
+</ul>
+
+<p>を同じところにダウンロードして <code>_format-diff.php</code> を実行するだけです。</p>
+
+<pre><code class="bash">$ wget https://gist.githubusercontent.com/sharkpp/2bdf0b6a70fc08044b01b7089e6ef023/raw/bffcab5b2ac52c5d2878a351f6626cc3a431baf0/
+$ wget https://gist.githubusercontent.com/sharkpp/84deb455f9e1ffbc50f8cf1d5a0c399b/raw/5b8156bb66a21477ea2f6214721f8a7d46082379/
+$ wget https://gist.githubusercontent.com/sharkpp/0426f8dd6650083dc30768fc9f3f3c61/raw/9404cd04f9bde929e0d61c97408f0a89a566a449/
+$ wget https://gist.githubusercontent.com/sharkpp/7f45f212b1d58609bf7ee19164630452/raw/07c5e4093ad8db4af4048639fa7194b732c5387c/
+$
+$ php _format-diff.php
+|php:strftime|php:date|ruby:Time#strftime|説明|
+|:-:|:-:|:-:|-|
+|  %a  |  D  |        %a        ||
+|  %A  |  l  |        %A        ||
+</code></pre>
+
+<h2 id="%E5%AE%9F%E9%9A%9B%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89%E3%81%A1%E3%82%87%E3%81%A3%E3%81%A8%E9%95%B7%E3%81%84">実際のコード(ちょっと長い)</h2>
+
+<script src="https://gist.github.com/sharkpp/2bdf0b6a70fc08044b01b7089e6ef023.js"></script>
+
+<script src="https://gist.github.com/sharkpp/84deb455f9e1ffbc50f8cf1d5a0c399b.js"></script>
+
+<script src="https://gist.github.com/sharkpp/0426f8dd6650083dc30768fc9f3f3c61.js"></script>
+
+<script src="https://gist.github.com/sharkpp/7f45f212b1d58609bf7ee19164630452.js"></script>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://jp2.php.net/manual/ja/function.strftime.php">PHP: strftime - Manual</a></li>
+<li><a href="http://jp2.php.net/manual/ja/function.date.php">PHP: date - Manual</a></li>
+<li><a href="http://docs.ruby-lang.org/ja/2.2.0/method/Time/i/strftime.html">instance method Time#strftime (Ruby 2.2.0)</a></li>
+<li><a href="http://docs.python.jp/2/library/datetime.html#strftime-strptime-behavior">8.1. datetime — 基本的な日付型および時間型 — Python 2.7.x ドキュメント</a></li>
+<li><a href="https://linuxjm.osdn.jp/html/GNU_coreutils/man1/date.1.html">Man page of DATE</a></li>
+<li><a href="http://linuxjm.osdn.jp/html/LDP_man-pages/man3/strftime.3.html">Man page of STRFTIME</a></li>
+<li><a href="http://search.cpan.org/~dexter/POSIX-strftime-GNU-0.02/lib/POSIX/strftime/GNU.pm">POSIX::strftime::GNU - search.cpan.org</a></li>
+<li><a href="http://perldoc.jp/docs/modules/Time-Piece-1.08/Piece.pod#pod20351-12356-26041">Time::Piece - オブジェクト指向な時間オブジェクト - perldoc.jp</a></li>
+</ul>
+]]></content>
+        </entry>
+    </feed>

@@ -1,0 +1,1189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/JavaScript.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:49+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[JSDoc 3 用のプラグインをまとめてみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/08/30/list-of-jsdoc3-plugins.html"/>
+            <updated>2016-08-30T01:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/08/30/list-of-jsdoc3-plugins.html</id>
+            <content type="html"><![CDATA[<p>世の中には「ソースコードが仕様書」という話を聞いたりします。</p>
+
+<p>まあ、ソースコードと仕様書を同期して更新するなんて大変ですよね。</p>
+
+<p>そこで、誰が考えたのか、まさにソースコードから仕様書を作るツールが <a href="http://www.stack.nl/~dimitri/doxygen/">Doxygen</a> や <a href="http://usejsdoc.org/">JSDoc</a> などになります。</p>
+
+<p>先に上がった JSDoc は JavaScript 専用のドキュメント生成ツールですが、どうやらプラグイン機能があるとのことで、標準添付のプラグインの情報すら日本語のものはなさそうだったので簡単に調べてまとめてみました。</p>
+
+<h2 id="%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9">プラグインの使い方</h2>
+
+<p>基本的には <a href="http://usejsdoc.org/about-plugins.html">Use JSDoc: About JSDoc plugins</a> に書かれているように、JSDoc の設定ファイル <code>jsdoc.json</code> に</p>
+
+<pre><code class="JSON">{
+    "plugins": ["plugins/shout"]
+}
+</code></pre>
+
+<p>みたいな感じに書けば利用可能となるようです。</p>
+
+<p>自分で作りたい場合は、同じく  <a href="http://usejsdoc.org/about-plugins.html">Use JSDoc: About JSDoc plugins</a> の <strong>Event Handlers</strong> や <strong>Tag Definitions</strong> などを見ながら作ればいいのではないかと思います。</p>
+
+<h2 id="%E6%A8%99%E6%BA%96%E6%B7%BB%E4%BB%98%E9%9D%9E%E5%AE%9F%E7%94%A8%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3">標準添付(非実用プラグイン)</h2>
+
+<p>標準添付されているプラグインの中には、サンプルや開発用のプラグインも含まれています。</p>
+
+<h3 id="commentconvert.js">commentConvert.js</h3>
+
+<p>beforeParse イベントのサンプルプラグイン。</p>
+
+<p>これは、非実用的なプラグインのようです。</p>
+
+<h3 id="shout.js">shout.js</h3>
+
+<p>newDoclet イベントのサンプルプラグイン。</p>
+
+<p>これは、非実用的なプラグインのようです。</p>
+
+<h3 id="eventdumper.js">eventDumper.js</h3>
+
+<p>コンソールにパーサーイベントに関する情報をダンプするプラグイン。</p>
+
+<p>これは、開発に利用するための非実用的なプラグインのようです。</p>
+
+<h2 id="%E6%A8%99%E6%BA%96%E6%B7%BB%E4%BB%98%E5%AE%9F%E7%94%A8%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3">標準添付(実用プラグイン)</h2>
+
+<p>標準添付された様々な機能を持つプラグイン</p>
+
+<h3 id="commentsonly.js">commentsOnly.js</h3>
+
+<p>JavaScript 以外の言語で書かれたソースに含まれる JSDoc 形式のコメント以外を削除することで、ドキュメント化することができるようになるプラグイン。</p>
+
+<h3 id="escapehtml.js">escapeHtml.js</h3>
+
+<p>ドキュメント中に含まれる HTML タグをエスケープするプラグイン。</p>
+
+<h3 id="markdown.js">markdown.js</h3>
+
+<p>Markdown 記法で書かれたコメント内のテキストを HTML に変換できるようにするプラグイン。</p>
+
+<p><a href="http://usejsdoc.org/plugins-markdown.html">Use JSDoc: Using the Markdown plugin</a> に使い方が載っています。</p>
+
+<h3 id="overloadhelper.js">overloadHelper.js</h3>
+
+<p>自動的にオーバーロード関数やメソッドの長い名前に署名のような文字列を追加するプラグイン。</p>
+
+<h3 id="partial.js">partial.js</h3>
+
+<p><code>@partial FILENAME</code> とすることで、<code>FILENAME</code> をそこに読み込むプラグイン。</p>
+
+<h3 id="railstemplate.js">railsTemplate.js</h3>
+
+<p>.erb ファイル (Rails の HTML テンプレートファイル) から Rails のテンプレートタグを除去するプラグイン。</p>
+
+<h3 id="sourcetag.js">sourcetag.js</h3>
+
+<p><code>@source { "filename": "sourcetag.js", "lineno": 13 }</code> のような感じで、ファイルの現在位置に関するメタ情報を更新できるプラグイン。</p>
+
+<h3 id="summarize.js">summarize.js</h3>
+
+<p>説明が不足している場合に要約を自動生成するプラグイン。</p>
+
+<h3 id="underscore.js">underscore.js</h3>
+
+<p><code>_</code> から始まる JSDoc コメントの全ての属性を private に変更するプラグイン。</p>
+
+<h2 id="npm-%E3%81%AB%E7%99%BB%E9%8C%B2%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%82%82%E3%81%AE">npm に登録されているもの</h2>
+
+<h3 id="ub-jsdoc">ub-jsdoc</h3>
+
+<p>npm ページ：<a href="https://www.npmjs.com/package/ub-jsdoc">ub-jsdoc</a></p>
+
+<p>godoc にインスパアされたテーマ＆プラグイン。</p>
+
+<h3 id="jsdoc-codesnippet">jsdoc-codesnippet</h3>
+
+<p>npm ページ：<a href="https://www.npmjs.com/package/jsdoc-codesnippet">jsdoc-codesnippet</a></p>
+
+<p>名前をつけたコードスニペットをドキュメントに含めることができるようになるプラグイン。</p>
+
+<h3 id="jsdoc-vue">jsdoc-vue</h3>
+
+<p>npm ページ：<a href="https://www.npmjs.com/package/jsdoc-vue">jsdoc-vue</a></p>
+
+<p><code>*.vue</code> ファイル (Vueify 用のファイル) を解析できるようにするプラグイン。</p>
+
+<h3 id="jsdoc-plugins">jsdoc-plugins</h3>
+
+<p>npm ページ：<a href="https://www.npmjs.com/package/jsdoc-plugins">jsdoc-plugins</a></p>
+
+<p>いろんなタグを実装したプラグイン。</p>
+
+<h3 id="jsdoc-babel">jsdoc-babel</h3>
+
+<p>npm ページ：<a href="https://www.npmjs.com/package/jsdoc-babel">jsdoc-babel</a></p>
+
+<p>JavaScript ファイルの解析前に <a href="https://babeljs.io/">Babel</a> で事前処理を行うプラグイン。</p>
+
+<h3 id="jsdoc-riot">jsdoc-riot</h3>
+
+<p>npm ページ：<a href="https://www.npmjs.com/package/jsdoc-riot">jsdoc-riot</a></p>
+
+<p>Riot タグファイルのサポートを追加するプラグイン。</p>
+
+<h3 id="jsdoc-ignore-future">jsdoc-ignore-future</h3>
+
+<p>npm ページ：<a href="https://www.npmjs.com/package/jsdoc-ignore-future">jsdoc-ignore-future</a></p>
+
+<h3 id="jsdoc-escape-at">jsdoc-escape-at</h3>
+
+<p>npm ページ：<a href="https://www.npmjs.com/package/jsdoc-escape-at">jsdoc-escape-at</a></p>
+
+<p>コメント中の @ をエスケープするプラグイン？</p>
+
+<h3 id="jsdoc-plugin-named-defaults">jsdoc-plugin-named-defaults</h3>
+
+<p>npm ページ：<a href="https://www.npmjs.com/package/jsdoc-plugin-named-defaults">jsdoc-plugin-named-defaults</a></p>
+
+<p>引数のデフォルト値をコード中から拾ってくるプラグイン？</p>
+
+<h3 id="jsdoc-jsx">jsdoc-jsx</h3>
+
+<p>npm ページ：<a href="https://www.npmjs.com/package/jsdoc-jsx">jsdoc-jsx</a></p>
+
+<p>(Facebook の) JSX ファイルのサポートを追加するプラグイン。</p>
+
+<h3 id="jsdoc-plugin-strip-outer-iife">jsdoc-plugin-strip-outer-iife</h3>
+
+<p>npm ページ：<a href="https://www.npmjs.com/package/jsdoc-plugin-strip-outer-iife">jsdoc-plugin-strip-outer-iife</a></p>
+
+<p>一番外側の IIFE (Immediately-invoked function expression：即時実行関数式) を除去するプラグイン。</p>
+
+<h3 id="jsdoc-bem">jsdoc-bem</h3>
+
+<p>npm ページ：<a href="https://www.npmjs.com/package/jsdoc-bem">jsdoc-bem</a></p>
+
+<p><a href="https://en.bem.info/methodology/js/">BEM</a> の要素のサポートを追加するプラグイン？</p>
+
+<h3 id="bouquet">bouquet</h3>
+
+<p>npm ページ：<a href="https://www.npmjs.com/package/bouquet">bouquet</a></p>
+
+<p>有用なプラグインを集めたプラグイン。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://usejsdoc.org/about-plugins.html">Use JSDoc: About JSDoc plugins</a></li>
+<li><a href="https://www.npmjs.com/search?q=jsdoc">results for jsdoc</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[JavaScript や CSS の CDN サービスについて調べてみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/03/06/research-of-javascript-and-css-cdn.html"/>
+            <updated>2016-03-06T21:30:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/03/06/research-of-javascript-and-css-cdn.html</id>
+            <content type="html"><![CDATA[<p>jQuery や Bootstrap などの一般的なライブラリを使うときは自分のサイトに設置する以外に、 Content Delivery Network 略して CDN サービスで配信されているものを利用することもあります、というかこのページでも使っています。</p>
+
+<p>ということで、 CDN サービスを調べてみました。</p>
+
+<h2 id="%E5%AF%BE%E8%B1%A1">対象</h2>
+
+<p>一般的な多くのライブラリを配信しているサービス</p>
+
+<ul>
+<li><a href="https://cdnjs.com/">cdnjs.com - The free and open source CDN for web related libraries to speed up your website!</a></li>
+<li><a href="https://www.jsdelivr.com/">jsDelivr - A free super-fast CDN for developers and webmasters</a></li>
+<li><a href="https://developers.google.com/speed/libraries/">Hosted Libraries  |  Hosted Libraries  |  Google Developers</a></li>
+<li><a href="http://www.asp.net/ajax/cdn">Microsoft Ajax Content Delivery Network | The ASP.NET Site</a></li>
+</ul>
+
+<p>と、一部のライブラリの配信に特化しているサービス</p>
+
+<ul>
+<li><a href="https://code.jquery.com/">jQuery CDN</a></li>
+<li><a href="https://www.bootstrapcdn.com/">BootstrapCDN by MaxCDN</a></li>
+</ul>
+
+<p>を調べてみました。</p>
+
+<p>なお、結果は環境やタイミングなどにより変化することがある旨、予めご了承ください。</p>
+
+<h2 id="%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%81%94%E3%81%A8%E3%81%AE%E3%83%AC%E3%82%B9%E3%83%9D%E3%83%B3%E3%82%B9">ライブラリごとのレスポンス</h2>
+
+<p>調査は curl コマンドのレスポンスを <a href="https://gist.github.com/sharkpp/bc3de3bbaa5e99752ca1">research-of-javascript-and-css-cdn.php - Gist</a> のスクリプトで集計しその結果をもとにまとめています。</p>
+
+<p>各表は、50 回の問い合わせを算術平均した結果でソートしてあります。
+また、 <code>loss</code> は、要求でエラーが返ってきていないかの確認のため設けましたが滅多なことではエラーは返ってこないので常に <code>0.0 %</code> となっています。</p>
+
+<p>対象のライブラリは独断と偏見により、</p>
+
+<ul>
+<li><a href="https://jquery.com/">jQuery</a></li>
+<li><a href="https://jqueryui.com/">jQuery UI</a></li>
+<li><a href="https://jquerymobile.com/">jQuery Mobile</a></li>
+<li><a href="https://lodash.com/">lodash</a></li>
+<li><a href="http://snapsvg.io/">Snap.svg</a></li>
+<li><a href="https://d3js.org/">3D.js</a></li>
+<li><a href="http://threejs.org/">three.js</a></li>
+<li><a href="http://getbootstrap.com/">Bootstrap</a></li>
+<li><a href="https://fortawesome.github.io/Font-Awesome/">Font Awesome</a></li>
+<li><a href="https://angularjs.org/">AngularJS</a></li>
+</ul>
+
+<p>を選び調査しました。</p>
+
+<p>それぞれのライブラリは調査時点で各 CDN サービスで選択できる安定版を対象としています。
+なので、一部古いバージョンが混じっていますが間違ってはいません。</p>
+
+<h3 id="jquery">jQuery</h3>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Microsoft Ajax CDN</td>
+  <td align="right">2.2.1</td>
+  <td align="right">63 ms</td>
+  <td align="right">77 ms</td>
+  <td align="right">577 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">Google Hosted Libraries</td>
+  <td align="right">2.2.0</td>
+  <td align="right">216 ms</td>
+  <td align="right">224 ms</td>
+  <td align="right">242 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">2.2.1</td>
+  <td align="right">195 ms</td>
+  <td align="right">233 ms</td>
+  <td align="right">305 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">2.2.1</td>
+  <td align="right">319 ms</td>
+  <td align="right">366 ms</td>
+  <td align="right">476 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jQuery CDN</td>
+  <td align="right">2.2.1</td>
+  <td align="right">878 ms</td>
+  <td align="right">939 ms</td>
+  <td align="right">1008 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="lodash">lodash</h3>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">4.6.1</td>
+  <td align="right">129 ms</td>
+  <td align="right">168 ms</td>
+  <td align="right">196 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">4.6.1</td>
+  <td align="right">338 ms</td>
+  <td align="right">442 ms</td>
+  <td align="right">1006 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="snap.svg">Snap.svg</h3>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">0.4.1</td>
+  <td align="right">200 ms</td>
+  <td align="right">246 ms</td>
+  <td align="right">373 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">0.4.1</td>
+  <td align="right">344 ms</td>
+  <td align="right">386 ms</td>
+  <td align="right">451 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="d3.js">D3.js</h3>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">3.5.16</td>
+  <td align="right">302 ms</td>
+  <td align="right">330 ms</td>
+  <td align="right">419 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">3.5.16</td>
+  <td align="right">344 ms</td>
+  <td align="right">458 ms</td>
+  <td align="right">794 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="three.js">three.js</h3>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Google Hosted Libraries</td>
+  <td align="right">r69</td>
+  <td align="right">251 ms</td>
+  <td align="right">274 ms</td>
+  <td align="right">323 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">r74</td>
+  <td align="right">308 ms</td>
+  <td align="right">583 ms</td>
+  <td align="right">829 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">r74</td>
+  <td align="right">526 ms</td>
+  <td align="right">641 ms</td>
+  <td align="right">860 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="jquery-ui">jQuery UI</h3>
+
+<p>JavaScript</p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Microsoft Ajax CDN</td>
+  <td align="right">1.11.4</td>
+  <td align="right">90 ms</td>
+  <td align="right">104 ms</td>
+  <td align="right">612 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">Google Hosted Libraries</td>
+  <td align="right">1.11.4</td>
+  <td align="right">225 ms</td>
+  <td align="right">235 ms</td>
+  <td align="right">278 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">1.11.4</td>
+  <td align="right">320 ms</td>
+  <td align="right">411 ms</td>
+  <td align="right">606 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">1.11.4</td>
+  <td align="right">384 ms</td>
+  <td align="right">534 ms</td>
+  <td align="right">1003 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jQuery CDN</td>
+  <td align="right">1.11.4</td>
+  <td align="right">1096 ms</td>
+  <td align="right">1194 ms</td>
+  <td align="right">1760 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<p>CSS</p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Microsoft Ajax CDN</td>
+  <td align="right">1.11.4</td>
+  <td align="right">42 ms</td>
+  <td align="right">55 ms</td>
+  <td align="right">557 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">1.11.4</td>
+  <td align="right">155 ms</td>
+  <td align="right">185 ms</td>
+  <td align="right">215 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">Google Hosted Libraries</td>
+  <td align="right">1.11.4</td>
+  <td align="right">179 ms</td>
+  <td align="right">206 ms</td>
+  <td align="right">720 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">1.11.4</td>
+  <td align="right">295 ms</td>
+  <td align="right">347 ms</td>
+  <td align="right">980 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jQuery CDN</td>
+  <td align="right">1.11.4</td>
+  <td align="right">761 ms</td>
+  <td align="right">815 ms</td>
+  <td align="right">895 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="jquery-mobile">jQuery Mobile</h3>
+
+<p>JavaScript</p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Microsoft Ajax CDN</td>
+  <td align="right">1.4.5</td>
+  <td align="right">130 ms</td>
+  <td align="right">153 ms</td>
+  <td align="right">655 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">Google Hosted Libraries</td>
+  <td align="right">1.4.5</td>
+  <td align="right">221 ms</td>
+  <td align="right">234 ms</td>
+  <td align="right">288 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">1.4.5</td>
+  <td align="right">232 ms</td>
+  <td align="right">323 ms</td>
+  <td align="right">2678 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">1.4.5</td>
+  <td align="right">358 ms</td>
+  <td align="right">466 ms</td>
+  <td align="right">917 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jQuery CDN</td>
+  <td align="right">1.4.5</td>
+  <td align="right">1002 ms</td>
+  <td align="right">1141 ms</td>
+  <td align="right">1609 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<p>CSS</p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Microsoft Ajax CDN</td>
+  <td align="right">1.4.5</td>
+  <td align="right">86 ms</td>
+  <td align="right">102 ms</td>
+  <td align="right">606 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">Google Hosted Libraries</td>
+  <td align="right">1.4.5</td>
+  <td align="right">222 ms</td>
+  <td align="right">244 ms</td>
+  <td align="right">755 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">1.4.5</td>
+  <td align="right">232 ms</td>
+  <td align="right">272 ms</td>
+  <td align="right">1549 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">1.4.5</td>
+  <td align="right">360 ms</td>
+  <td align="right">466 ms</td>
+  <td align="right">655 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jQuery CDN</td>
+  <td align="right">1.4.5</td>
+  <td align="right">995 ms</td>
+  <td align="right">1124 ms</td>
+  <td align="right">1244 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="bootstrap">Bootstrap</h3>
+
+<p>CSS</p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Microsoft Ajax CDN</td>
+  <td align="right">3.3.6</td>
+  <td align="right">66 ms</td>
+  <td align="right">86 ms</td>
+  <td align="right">590 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">3.3.6</td>
+  <td align="right">187 ms</td>
+  <td align="right">223 ms</td>
+  <td align="right">761 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">3.3.6</td>
+  <td align="right">338 ms</td>
+  <td align="right">437 ms</td>
+  <td align="right">899 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">BootstrapCDN</td>
+  <td align="right">3.3.6</td>
+  <td align="right">844 ms</td>
+  <td align="right">909 ms</td>
+  <td align="right">1040 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<p>JavaScript</p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Microsoft Ajax CDN</td>
+  <td align="right">3.3.6</td>
+  <td align="right">42 ms</td>
+  <td align="right">55 ms</td>
+  <td align="right">571 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">3.3.6</td>
+  <td align="right">156 ms</td>
+  <td align="right">196 ms</td>
+  <td align="right">475 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">3.3.6</td>
+  <td align="right">307 ms</td>
+  <td align="right">347 ms</td>
+  <td align="right">853 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">BootstrapCDN</td>
+  <td align="right">3.3.6</td>
+  <td align="right">714 ms</td>
+  <td align="right">756 ms</td>
+  <td align="right">809 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="font-awesome">Font Awesome</h3>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Google Hosted Libraries</td>
+  <td align="right">1.4.9</td>
+  <td align="right">232 ms</td>
+  <td align="right">243 ms</td>
+  <td align="right">318 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">1.5.0</td>
+  <td align="right">220 ms</td>
+  <td align="right">330 ms</td>
+  <td align="right">434 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">1.5.0</td>
+  <td align="right">359 ms</td>
+  <td align="right">422 ms</td>
+  <td align="right">544 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="angularjs">AngularJS</h3>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Google Hosted Libraries</td>
+  <td align="right">1.4.9</td>
+  <td align="right">219 ms</td>
+  <td align="right">242 ms</td>
+  <td align="right">743 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">1.5.0</td>
+  <td align="right">223 ms</td>
+  <td align="right">312 ms</td>
+  <td align="right">759 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">1.5.0</td>
+  <td align="right">359 ms</td>
+  <td align="right">465 ms</td>
+  <td align="right">669 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<p>レスポンス速度としては大まかには</p>
+
+<table>
+<thead>
+<tr>
+  <th align="center">#</th>
+  <th>CDN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="center">1</td>
+  <td>Microsoft Ajax CDN</td>
+</tr>
+<tr>
+  <td align="center">2</td>
+  <td>Google Hosted Libraries</td>
+</tr>
+<tr>
+  <td align="center">3</td>
+  <td>jsDelivr</td>
+</tr>
+<tr>
+  <td align="center">4</td>
+  <td>cdnjs</td>
+</tr>
+<tr>
+  <td align="center">5</td>
+  <td>jQuery CDN</td>
+</tr>
+<tr>
+  <td align="center">6</td>
+  <td>BootstrapCDN</td>
+</tr>
+</tbody>
+</table>
+
+<p>の順のような感じです。</p>
+
+<p>配信しているライブラリの数としては</p>
+
+<table>
+<thead>
+<tr>
+  <th>CDN</th>
+  <th align="right">配信数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>cdnjs</td>
+  <td align="right">1835</td>
+</tr>
+<tr>
+  <td>jsDelivr</td>
+  <td align="right">1750</td>
+</tr>
+<tr>
+  <td>Microsoft Ajax CDN</td>
+  <td align="right">20</td>
+</tr>
+<tr>
+  <td>Google Hosted Libraries</td>
+  <td align="right">14</td>
+</tr>
+<tr>
+  <td>jQuery CDN</td>
+  <td align="right">6</td>
+</tr>
+<tr>
+  <td>BootstrapCDN</td>
+  <td align="right">3</td>
+</tr>
+</tbody>
+</table>
+
+<p>と、 cdnjs や jsDelivr が圧倒的に多いですが、 Bootstrap 用のテーマの Bootswatch は BootstrapCDN しか配信していないのでその場合はそれ一択です。
+Google Hosted Libraries の場合は、最新バージョンのライブラリが配信されていないこともあるのでレスポンスはいいですが超憂が必要となります。</p>
+
+<h2 id="%E3%81%8A%E3%81%BE%E3%81%91">おまけ</h2>
+
+<h3 id="%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%84%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%81%8C%E9%85%8D%E4%BF%A1%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%EF%BC%81">使いたいライブラリが配信されていない！</h3>
+
+<p>また、どうしても CDN を利用したい、でもライブラリがマイナーすぎて CDN で配信されていない、という場合は GitHub でライブラリが公開されている場合に限り  <a href="http://rawgit.com/">RawGit</a> を利用することもできます。</p>
+
+<p>まあ、その他の場合は諦めて素直に自分のサーバーのファイルを参照しましょう。</p>
+
+<h3 id="cdn-%E3%81%A7%E9%9A%9C%E5%AE%B3%E3%81%8C%E8%B5%B7%E3%81%8D%E3%81%9F%E3%82%89%EF%BC%9F">CDN で障害が起きたら？</h3>
+
+<p>参照している CDN で障害が起きた場合は、当然ながら、ページのレイアウトが崩れたりしてしまいます。
+基本的にはほとんど問題ないとはいえ、万が一に備えておいて悪くわありません。</p>
+
+<p>方策としては例えば、</p>
+
+<pre><code class="javascript">&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;window.jQuery || document.write('&lt;script src="/assets/jquery/jquery.min.js"&gt;&lt;\/script&gt;')&lt;/script&gt;
+</code></pre>
+
+<p>と、このような感じで、CDN を参照している script タグの直後に、判定式を書いて、読み込めていないようであれば、ローカルを参照することができます。</p>
+
+<p>また、専用のライブラリ <a href="http://fallback.io/">Fallback JS</a> を使ってみるのもいいかもしれません。
+ああ、 当然のことながら Fallback JS を CDN から読んではいけませんよ。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://qiita.com/narikei/items/cffb27b6d5788005d1b0">jsのよく使うホスティングサービス（cdn）まとめ - Qiita</a></li>
+<li><a href="http://www.hirok-k.com/blog/2634.html">ウェブ制作でよく使うjQuery関連のCDNまとめ</a></li>
+<li><a href="http://qiita.com/takanorig/items/89db46120d2ec171e3d8">GitHub上のファイルをCDNとして参照する - Qiita</a></li>
+<li><a href="https://hyper-text.org/archives/2014/07/dont_use_jquery_latest_js.shtml">jQuery 公式 Blog 「jquery-latest.js を使用するのをやめろ」 | WWW WATCH</a></li>
+<li><a href="http://little-braver.com/232/">JavaScriptライブラリーのCDN利用、フォールバック対応しました</a></li>
+<li><a href="http://fdays.blogspot.jp/2013/04/js-cdn-2013.html">floatingdays: JSの CDNの速度比較 （2013年版）</a></li>
+<li><a href="http://www.hongkiat.com/blog/css-javascript-fallback-methods/">10 Useful Fallback Methods For CSS And Javascript - Hongkiat</a></li>
+<li><a href="http://www.buildinsider.net/web/popularjslib/2015">人気上昇中のJavaScriptライブラリを調べてみた【2015年版】 - Build Insider</a></li>
+<li><a href="http://www.buildinsider.net/hub/survey/201504-popularjs">2015年、人気の「JavaScriptライブラリ＆ツール」はどれ？ Angular vs. Reactの行方 - Build Insider</a></li>
+<li><a href="http://please-sleep.cou929.nu/curl-write-out-option.html">curl でレスポンスタイムを計測 - Please Sleep</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[除夜の鐘をブログパーツにしてみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/12/31/joya-no-kane-for-blog-parts.html"/>
+            <updated>2015-12-31T12:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/12/31/joya-no-kane-for-blog-parts.html</id>
+            <content type="html"><![CDATA[<p>この季節の風物詩、「除夜の鐘」がブログパーツになって帰ってきた！</p>
+
+<p>ってな感じの更新を行ったのでその紹介。</p>
+
+<p>HSPDish.js そのままでブログパーツにしたので、この程度なら書き直したほうが早いかも、、、と思わなくもない。</p>
+
+<h2 id="%E7%B0%A1%E5%8D%98%E3%81%AA%E7%B4%B9%E4%BB%8B">簡単な紹介</h2>
+
+<p>除夜の鐘をつくだけのプログラムです。</p>
+
+<p>表示されている鐘をクリックします。</p>
+
+<p>すると、煩悩が「ゴ～ン」という音とともに消えて行くことでしょう。</p>
+
+<h2 id="%E4%BD%BF%E3%81%84%E6%96%B9">使い方</h2>
+
+<p>すぐに表示させる場合は、このような感じ。</p>
+
+<pre><code class="html">&lt;iframe src="https://cdn.rawgit.com/sharkpp/joya_no_kane/v1.0.1/widget.html"
+　　　　　width="128" height="128" frameborder="0" scrolling="no"&gt;&lt;/iframe&gt;
+</code></pre>
+
+<iframe src="https://cdn.rawgit.com/sharkpp/joya_no_kane/v1.0.1/widget.html"
+        width="128" height="128" frameborder="0" scrolling="no"></iframe>
+
+<p><i class="fa fa-external-link-square"></i> <a href="https://rawgit.com/">RawGit</a> を利用しています。</p>
+
+<p><i class="fa fa-exclamation-triangle"></i> ランタイムやリソースを含めたサイズの合計が 1MB 程度あるので注意が必要です。</p>
+
+<h2 id="%E3%81%9D%E3%81%AE%E4%BB%96%E3%83%AA%E3%83%B3%E3%82%AF">その他リンク</h2>
+
+<ul class="fa-ul">
+<li><i class="fa-li fa fa-external-link-square"></i><a href="https://github.com/sharkpp/joya_no_kane">ソースコード</a></li>
+<li><i class="fa-li fa fa-external-link-square"></i><a href="http://sharkpp.github.io/joya_no_kane/">GitHubページ</a></li>
+<li><i class="fa-li fa fa-external-link-square"></i><a href="http://hsproom.me/program/view/?p=146">HSP部屋(β)</a></li>
+<li><i class="fa-li fa fa-download"></i><a href="/files/bells100.zip">Windows版ダウンロード</a></li>
+<li><i class="fa-li fa fa-download"></i><a href="https://github.com/sharkpp/joya_no_kane/zipball/master">HTML/ブログパーツ版ダウンロード</a></li>
+</ul>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://testcording.com/?p=1259">TEST CORDING » GithubからJavaScriptを読み込み時は専用のドメインから！</a></li>
+<li><a href="http://hsproom.me/help/#ブログパーツ">ヘルプ - HSP部屋(β)</a></li>
+<li><a href="http://www.onionsoft.net/hsp/v34/doclib/hsp3dish_js.htm">HSP3Dish WebGL/JavaScript版(hsp3dish.js)プログラミングガイド</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[JavaScript の選択範囲関連のメモ]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/08/29/javascript-memo-selection-object.html"/>
+            <updated>2015-08-29T23:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/08/29/javascript-memo-selection-object.html</id>
+            <content type="html"><![CDATA[<p>以前に作った <a href="https://greasyfork.org/ja/scripts/9647-calculation-of-selection-length">calculation of selection length</a> (ソースは<a href="https://github.com/sharkpp-userscripts/calculation-of-selection-length">GitHub</a>) を作る時に内容は選択された文字列の扱い関連について調べたことをメモメモです。
+Chrome でのみ確認している。</p>
+
+<h2 id="%E9%81%B8%E6%8A%9E%E6%96%87%E5%AD%97%E6%95%B0%E3%82%92%E5%8F%96%E5%BE%97">選択文字数を取得</h2>
+
+<p>選択範囲は <code>document.getSelection()</code> または <code>window.getSelection()</code> で取得できる。</p>
+
+<p>取得できるのは <code>Selection</code> オブジェクトなので、</p>
+
+<pre><code class="bash">var selectionLen = String(document.getSelection()).length;
+</code></pre>
+
+<p>の用な感じで <code>String</code> に変換してから取得する。</p>
+
+<h2 id="%E9%81%B8%E6%8A%9E%E3%81%AE%E5%A4%89%E6%9B%B4%E3%82%92%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%A7%E5%8F%96%E5%BE%97">選択の変更をイベントで取得</h2>
+
+<p>どうやら標準ではないっぽいけど <code>onselectionchange</code> というイベントがあるみたい。</p>
+
+<pre><code class="bash">document.addEventListener("selectionchange", function(e){ console.log(e); }, false);
+</code></pre>
+
+<h2 id="%E9%81%B8%E6%8A%9E%E7%AF%84%E5%9B%B2%E3%81%AE%E7%B5%B6%E5%AF%BE%E4%BD%8D%E7%BD%AE%E3%82%92%E5%8F%96%E5%BE%97">選択範囲の絶対位置を取得</h2>
+
+<p>絶対位置を取得は、</p>
+
+<pre><code class="bash">var getSelectionBoundingRect = function() {
+  var rect = { left: 0, top: 0, right: 0, bottom: 0 };
+  var selAll = document.getSelection();
+  for (var i = 0; i &lt; selAll.rangeCount; ++i) {
+    var rect_ = selAll.getRangeAt(i).getBoundingClientRect();
+    if (rect_.left  &lt; rect.left)    rect.left   = rect_.left;
+    if (rect_.top   &lt; rect.top)     rect.top    = rect_.top;
+    if (rect.right  &lt; rect_.right)  rect.right  = rect_.right;
+    if (rect.bottom &lt; rect_.bottom) rect.bottom = rect_.bottom;
+  }
+  rect.width  = rect.right - rect.left;
+  rect.height = rect.bottom - rect.top;
+  rect.left  += window.pageXOffset;
+  rect.top   += window.pageYOffset;
+  rect.right += window.pageXOffset;
+  rect.bottom+= window.pageYOffset;
+  return selAll.rangeCount ? rect : null;
+};
+</code></pre>
+
+<p>こんな感じ。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://www.nishishi.com/javascript/2013/get-selection-length.html">範囲選択されている文字列を得る - JavaScript TIPSふぁくとりー</a></li>
+<li><a href="https://developer.mozilla.org/ja/docs/Web/API/Selection">selection - Web API インターフェイス | MDN</a></li>
+<li><a href="http://help.dottoro.com/ljixpxji.php">onselectionchange event | selectionchange event JavaScript</a></li>
+<li><a href="http://gifnksm.hatenablog.jp/entry/20101007/1286419969">TextNodeにも使えるgetBoundingClientRect - gifnksmの雑多なメモ</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[SNSの共有ボタンを設置できる jQuery (他も含む) プラグインをまとめてみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/06/14/collection-of-social-share-button-plugin.html"/>
+            <updated>2015-06-14T16:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/06/14/collection-of-social-share-button-plugin.html</id>
+            <content type="html"><![CDATA[<p>記事ページに Twitter とか Facebook とかの共有ボタンを設置したいなぁと思い、 AddThis で試しに追加してみると、、、なんと言うことでしょう、 AdBlock でボタンが消えてしまうではないですかorz</p>
+
+<p>ということで、公式のコードをぺたりんこするか jQuery などのプラグインで設置するかを悩み、また、ボタンのデザインをカスタマイズできないかと jQuery を使って設置できるプラグインを調べてまとめてみました。</p>
+
+<p>基本的には jQuery をキーワードに調べたので jQuery のプラグインですが、それ以外にも引っかかったので一応は乗せてあります。</p>
+
+<p><a href="https://docs.google.com/spreadsheets/d/1_tXrnlwV5Vbql-5yEgcPZ3q7PcIlV6DxHD4BJLExUgc/edit?usp=sharing">Social Share Button Plugin - Google スプレッドシート</a></p>
+
+<h2 id="%E3%82%81%E3%81%A8%E3%82%81">めとめ</h2>
+
+<p>ざっくりとした感じとしては、日本のサービスはやっぱりあまりサポートされていないなぁということ。</p>
+
+<p>Hatena Bookmark とかほとんどサポートされていませんでした。</p>
+
+<p>あと、 StumbleUpon って知らなかったのですが人気があるんでしょうか？</p>
+
+<p>ちなみに、 <code>btn</code> はボタンの設置が出来る、 <code>cnt</code> はカウンターの表示あり、です。</p>
+
+<table class="table table-bordered table-hover table-condensed table-striped" data-sheetrock="https://docs.google.com/spreadsheets/d/1_tXrnlwV5Vbql-5yEgcPZ3q7PcIlV6DxHD4BJLExUgc/edit#gid=0"></table>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://www.sitepoint.com/10-social-sharing-jquery-plugins-missed/">10 Social Sharing jQuery Plugins You May Have Missed</a></li>
+<li><a href="http://jquery-plugins.net/tag/social-share-button">social share button | jQuery Plugins</a></li>
+<li><a href="http://www.jqueryrain.com/demo/jquery-social-share-plugin/">35+ jQuery Social Share Plugin with Example</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Tumblr. extend shortcut key 作りました]]></title>
+            <link href="http://www.sharkpp.net/blog/2014/11/23/released-tumblr-extend-shortcut-key.html"/>
+            <updated>2014-11-23T17:51:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2014/11/23/released-tumblr-extend-shortcut-key.html</id>
+            <content type="html"><![CDATA[<p><a href="https://www.tumblr.com/">Tumblr.</a>™のダッシュボードで使用できるショートカットキーを追加するスクリプトを作りました。</p>
+
+<p>レポジトリは <a href="https://github.com/sharkpp-userscripts/tumblr-extend-shortcut-key">sharkpp-userscripts/tumblr-extend-shortcut-key</a> です。</p>
+
+<p>userscripts.org がいつの間にか死んでいたので <a href="https://greasyfork.org/ja/users/5799-sharkpp">GreasyFork</a> を移転先にしてぼちぼちと再アップロードをしていきたいと思い、ユーザースクリプトの置き場を github に <a href="https://github.com/sharkpp-userscripts">sharkpp UserScripts</a> として作りました。</p>
+
+<p>とりあえず、リハビリをかねて新しく作ったスクリプトは GreasyFork の <a href="https://greasyfork.org/ja/scripts/6588-tumblr-extend-shortcut-key">Tumblr. extend shortcut key</a> からインストールできます。</p>
+
+<h2 id="%E6%A9%9F%E8%83%BD%E3%81%AE%E7%B4%B9%E4%BB%8B">機能の紹介</h2>
+
+<p>機能的な部分を、、、まあ、何が出来るかってと、 <code>alt + E</code> とかをリブログのポップアップ画面時にも出来るようにとか、ブログをショートカットキーで選択できるようにとか、そんな感じです。</p>
+
+<h3 id="%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC%E3%81%AE%E4%B8%80%E8%A6%A7">ショートカットキーの一覧</h3>
+
+<table>
+<thead>
+<tr>
+  <th>ショートカットキー</th>
+  <th>機能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><tt>alt + [数字キー]</tt></td>
+  <td>ブログを選択</td>
+</tr>
+<tr>
+  <td><tt>alt + R</tt></td>
+  <td>今すぐ投稿(リブログ)</td>
+</tr>
+<tr>
+  <td><tt>alt + E</tt></td>
+  <td>予約投稿に追加</td>
+</tr>
+<tr>
+  <td><tt>alt + D</tt></td>
+  <td>下書きに追加</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="%E3%83%96%E3%83%AD%E3%82%B0%E3%81%AE%E9%81%B8%E6%8A%9E">ブログの選択</h3>
+
+<p>ブログが複数有る場合に <code>alt + [数字キー]</code> で、<code>[数字キー]</code> で指定したブログに切り替えることができます。</p>
+
+<p>ブログが数字キーのどれに割り当てられているか？は、リストを表示することでショートカットキーが末尾に表示されるのため確認することが出来ます。</p>
+
+<p><img src="/images/2014_1123_blog-select.png" alt="ブログの選択" /></p>
+
+<h2 id="%E6%8A%95%E7%A8%BF%E6%8C%87%E7%A4%BA">投稿指示</h2>
+
+<p>投稿指示は、「今すぐ投稿」と「予約投稿に追加」と「下書きに追加」に、それぞれショートカットキーが新たに割り当てられています。</p>
+
+<p>ブログの選択と同じように、リストを表示することでショートカットキーの確認が出来ます。</p>
+
+<p><img src="/images/2014_1123_reblog-button.png" alt="リブログボタン" /></p>
+]]></content>
+        </entry>
+    </feed>

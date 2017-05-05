@@ -1,0 +1,1515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/Sculpin.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:49+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Sculpin の Bundle をまとめてみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/09/03/list-of-sculpin-bundles.html"/>
+            <updated>2016-09-03T13:20:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/09/03/list-of-sculpin-bundles.html</id>
+            <content type="html"><![CDATA[<p>PHP 製の静的サイトジェネレータ <a href="https://sculpin.io/">Sculpin</a> へ導入することで機能を拡張するパッケージを Bundle と呼んでいますが、それを公式のドキュメントを参考に</p>
+
+<ul>
+<li>コンバータ</li>
+<li>ジェネレータ</li>
+<li>テーマ</li>
+<li>その他</li>
+</ul>
+
+<p>の 4 つのカテゴリへと Bundle を分類し、簡単な説明などをつけてまとめてみました。</p>
+
+<p>こうしてまとめて見るために、いろいろググってみますが、日本語で書かれた Sculpin の情報というのは少ないですね。</p>
+
+<p>今現在公開されているものを列挙していますが、最新の Sculpin に対応していないなど、もしかしたら利用できない Bundle があるかもしれないので、ご注意ください。</p>
+
+<h2 id="%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%BF">コンバータ</h2>
+
+<p><a href="https://sculpin.io/documentation/converters/">Converters - Sculpin</a> に書かれているように、何か、これは標準では Markdown で書式化された投稿ページを HTML へと変換する Bundle をここで列挙しています。</p>
+
+<h3 id="sculpin-league%2Fcommonmark-bundle">Sculpin league/commonmark bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/bcremer/sculpin-commonmark-bundle">bcremer/sculpin-commonmark-bundle</a></p>
+
+<p><a href="http://commonmark.org/">CommonMark</a> 記法で書かれた投稿をパースすることができるようにするバンドル。</p>
+
+<h3 id="sculpin-parsedown">Sculpin Parsedown</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/mavimo/sculpin-parsedown">mavimo/sculpin-parsedown</a></p>
+
+<p>標準の Markdown パーサーを置き換え、<code>sculpin generate</code> のパフォーマンスを上げることができるバンドル。</p>
+
+<p>Sculpin 本体にパッチを当てる必要があるようなので、導入の難易度は高めのようです。</p>
+
+<h3 id="sculpin-mthaml-bundle">Sculpin MtHaml Bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/fervo/sculpin-mthaml-bundle">fervo/sculpin-mthaml-bundle</a></p>
+
+<p>投稿を <a href="https://en.wikipedia.org/wiki/Microsoft_Assistance_Markup_Language">MAML</a> で作成できるようになるバンドル。</p>
+
+<h3 id="sculpin-restructuredtext-bundle">Sculpin reStructuredText Bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/rjkip/sculpin-rst-bundle">rjkip/sculpin-rst-bundle</a></p>
+
+<p>投稿を <a href="https://ja.wikipedia.org/wiki/ReStructuredText">ReStructuredText(reST)</a> で作成できるようになるバンドル。</p>
+
+<h2 id="%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF">ジェネレータ</h2>
+
+<p>投稿を列挙し特殊なページを作成したり、投稿内で利用できるタグクラウドなどのブロックを生成できる Bundle をここで列挙しています。</p>
+
+<h3 id="sculpin-less-bundle">Sculpin less bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/bcremer/sculpin-less-bundle">bcremer/sculpin-less-bundle</a></p>
+
+<p><code>sculpin generate</code> 実行時に <code>*.less</code> を LESS でプリプロセスし <code>*.css</code> を作成することができるようにするバンドル。</p>
+
+<h3 id="sculpin-redirect-bundle">Sculpin Redirect Bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/mavimo/sculpin-redirect-bundle">mavimo/sculpin-redirect-bundle</a></p>
+
+<p>投稿に別名を追加し、追加したパスから元のページへのリダイレクトを作成することができるようにするバンドル。</p>
+
+<p>「<a href="/blog/2016/06/12/using-sculpin-redirect-bundle.html">Sculpin でリダイレクトページを生成する Sculpin Redirect Bundle を使ってみた</a>」 で紹介と使い方を記事にしています。</p>
+
+<h3 id="sculpin-multilingual-bundle">Sculpin Multilingual Bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/rocketage/sculpin-multilingual-bundle">rocketage/sculpin-multilingual-bundle</a></p>
+
+<p>複数の言語用のサイトをサブドメインとして提供している場合にリソースを共通化できるようにすることができるバンドル。</p>
+
+<p>これは、 <code>ja.example.net</code> と <code>en.example.net</code> で利用するリソースを共通化し、<code>sculpin generate</code> 時に、各言語用のサイトそれぞれへとコピーできるようになるようです。</p>
+
+<h3 id="sculpin-related-posts-bundle">Sculpin Related Posts Bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/tsphethean/sculpin-related-posts-bundle">tsphethean/sculpin-related-posts-bundle</a></p>
+
+<p>記事と共通するタグを持つページの一覧を作成することができるようになるバンドル。</p>
+
+<p>レイアウトに、適当なテンプレートを記述することで、記事に関連するページとして表示することができるようです。</p>
+
+<h3 id="wjzijderveld%2Fsculpin-related-content-bundle">wjzijderveld/sculpin-related-content-bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/wjzijderveld/sculpin-related-content-bundle">wjzijderveld/sculpin-related-content-bundle</a></p>
+
+<p>記事と関連するタグを持つページの一覧を作成することができるようになるバンドル。</p>
+
+<p>レイアウトに、適当なテンプレートを記述することで、記事に関連するページとして表示することができるようです。</p>
+
+<h3 id="jbouzekri%2Fsculpin-tag-cloud-bundle">jbouzekri/sculpin-tag-cloud-bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/jbouzekri/sculpin-tag-cloud-bundle">jbouzekri/sculpin-tag-cloud-bundle</a></p>
+
+<p><a href="https://ja.wikipedia.org/wiki/%E3%82%BF%E3%82%B0%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89">タグクラウド</a>を作成することができるようになるバンドル。</p>
+
+<p>作者のページで実際に利用されているようです　つ <a href="http://blog.bouzekri.net/">Blog de Jonathan Bouzekri</a></p>
+
+<h3 id="beryllium%2Ficelus">beryllium/icelus</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/beryllium/icelus">beryllium/icelus</a></p>
+
+<p>所定の書き方をすることで <code>sculpin generate</code> 時に画像のサムネイルを生成することができるようになるバンドル。</p>
+
+<p>「<a href="/blog/2015/11/02/using-sculpin-thumbnail-generator-icelus.html">Sculpin でサムネイルを自動生成する Icelus Bundle を使ってみた</a>」 で紹介と使い方を記事にしています。</p>
+
+<h3 id="sculpin-projects-bundle">Sculpin Projects Bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/mavimo/sculpin-projects-bundle">mavimo/sculpin-projects-bundle</a></p>
+
+<p>所定のフォルダにまとめられたファイルからプロジェクトの一覧を作成するバンドル。</p>
+
+<p>こんな感じに作成されるようです　つ <a href="http://web.archive.org/web/20140815024704/http://mavimo.org/projects.html">Projects - Mavimo</a></p>
+
+<h3 id="sculpin-oembed-bundle">Sculpin oEmbed bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/bangpound/sculpin-oembed-bundle">bangpound/sculpin-oembed-bundle</a></p>
+
+<p><a href="http://oembed.com/">oEmbed</a> をサポートした URL を指定することで簡単に埋め込み用のコードを生成し、投稿に埋め込むことができるようになるバンドル。</p>
+
+<h3 id="jbouzekri%2Fsculpin-date-navigation-bundle">jbouzekri/sculpin-date-navigation-bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/jbouzekri/sculpin-date-navigation-bundle">jbouzekri/sculpin-date-navigation-bundle</a></p>
+
+<p>投稿の日時ごとのインデックスページとそのリンクを生成することができるようになるバンドル。</p>
+
+<h3 id="jbouzekri%2Fsculpin-search-bundle">jbouzekri/sculpin-search-bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/jbouzekri/sculpin-search-bundle">jbouzekri/sculpin-search-bundle</a></p>
+
+<p>投稿から予めインデックスを生成し、投稿内を <a href="https://github.com/linkedin/indextank-engine">IndexTank</a> を利用し検索することができるようになるバンドル。</p>
+
+<h3 id="ramsey%2Fsculpin-codeblock">ramsey/sculpin-codeblock</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/ramsey/sculpin-codeblock">ramsey/sculpin-codeblock</a></p>
+
+<p><a href="https://github.com/ramsey/twig-codeblock">ramsey/twig-codeblock</a> で拡張される <code>codeblock/endcodeblock</code> タグを利用することができるようになるバンドル。</p>
+
+<h3 id="sculpin-pages-bundle">Sculpin Pages Bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/fab/sculpin-pages-bundle">fab/sculpin-pages-bundle</a></p>
+
+<p>現在表示しているページをハイライトしているようなメニューを作ることができるようになるバンドル。</p>
+
+<p>bootstrap の navbar の active / 非active みたいな表示ができるようになる。</p>
+
+<p>利用例 つ <a href="https://github.com/FiacreGH/librairie-sycomore.ch/blob/master/source/_views/page.twig">librairie-sycomore.ch/page.twig at master · FiacreGH/librairie-sycomore.ch</a></p>
+
+<h3 id="sharkpp%2Fsculpin-calendarian-bundle">sharkpp/sculpin-calendarian-bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/sharkpp/sculpin-calendarian-bundle">sharkpp/sculpin-calendarian-bundle</a></p>
+
+<p>投稿の日付ごとにインデックスページを作ることができるようになるバンドル。</p>
+
+<p>拙作。</p>
+
+<p><a href="/blog/2015/08/09/create-sculpin-blog-archive-date-directory-bundle.html">Sculpin でブログアーカイブの日付ごとにポストをまとめたページを作るバンドルを作ってみた</a> で使い方を記事にしています。</p>
+
+<h3 id="wyrihaximus%2Fhtml-compress-sculpin">wyrihaximus/html-compress-sculpin</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/wyrihaximus/html-compress-sculpin">wyrihaximus/html-compress-sculpin</a></p>
+
+<p><code>sculpin generate</code> で生成される HTML ファイルを minify することができるようになるバンドル。</p>
+
+<p>Bundle と言って良いのかわからないですが、設定すると HTML を minify して圧縮してくれるようです。</p>
+
+<h2 id="%E3%83%86%E3%83%BC%E3%83%9E">テーマ</h2>
+
+<p>Sculpin 用のテーマをここでは列挙しています。</p>
+
+<p><a href="https://packagist.org/packages/sculpin/sculpin-theme-composer-plugin">sculpin-theme-composer-plugin</a> を利用すれば、 <code>composer.json</code> でテーマを管理できるようになる、ようです。</p>
+
+<p>なお、 Sculpin のテーマ機能自体は <a href="https://sculpin.io/documentation/themes/">Themes - Sculpin</a> に</p>
+
+<blockquote>
+  <p>WARNING
+  Theme support for Sculpin is still highly experimental. It has been stable in its current form since early 2014 but be aware that the theme API may change drastically sometime later this year.</p>
+</blockquote>
+
+<p>訳すと</p>
+
+<blockquote>
+  <p>警告
+  Sculpin のためのテーマのサポートはまだ非常に実験的なものです。これは初期の2014年以来現在の形で安定していますが、テーマ API は今年後半(※)にいつか大幅に変更される可能性があることに注意してください。</p>
+</blockquote>
+
+<p>訳注：2015年後半のこと つ <a href="https://github.com/sculpin/sculpin.io/commit/23f4d2f778c8ca9ef4070dac0041420bedb58ee9#diff-4a6302f145e637d38195213cf4295609">Warn people about changes to themes.</a></p>
+
+<p>と書かれているので、利用できなくなっている可能性があります。</p>
+
+<h3 id="slate-is-theme-for-github-pages-or-your-sculpin-site.">Slate is theme for GitHub Pages or your Sculpin site.</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/nedmas/slate">nedmas/slate</a></p>
+
+<p>Sculpin 用の <a href="https://github.com/jasoncostello/slate">Slate</a> テーマ。</p>
+
+<p>Slate はこんな感じのページのようです　つ <a href="http://jasoncostello.github.io/slate/">Slate : A responsive theme for GitHub Pages</a></p>
+
+<h3 id="minimal-mistakes-theme-for-sculpin-static-site-generator.">Minimal Mistakes theme for Sculpin static site generator.</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/chrisnharvey/minimal-mistakes">chrisnharvey/minimal-mistakes</a></p>
+
+<p>Sculpin 用の <a href="https://github.com/mmistakes/minimal-mistakes">Minimal Mistakes</a> テーマ。</p>
+
+<h3 id="a-bootstrap-3-blog-theme-for-sculpin">A Bootstrap 3 Blog Theme for Sculpin</h3>
+
+<p>ダウンロード：<a href="https://github.com/sculpin/bootstrap-3-blog-theme">sculpin/bootstrap-3-blog-theme</a></p>
+
+<p>Sculpin 用の Bootstrap 3 テーマ。</p>
+
+<h3 id="porting-of-sticko-theme-for-sculpin">Porting of Sticko theme for Sculpin</h3>
+
+<p>ダウンロード：<a href="https://github.com/mavimo/sculpin-theme-sticko">mavimo/sculpin-theme-sticko</a></p>
+
+<p>Sculpin 用の Sticko テーマ。</p>
+
+<h2 id="%E3%81%9D%E3%81%AE%E4%BB%96">その他</h2>
+
+<p>Sculpin cli を拡張するなど、前 3 つ以外に分類される Bundle をここで列挙しています。</p>
+
+<h3 id="sculpin%2Fsculpin-theme-composer-plugin">sculpin/sculpin-theme-composer-plugin</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/sculpin/sculpin-theme-composer-plugin">sculpin/sculpin-theme-composer-plugin</a></p>
+
+<p>Sculpin のテーマを Composer で管理できるようにするバンドル。</p>
+
+<p>README がないので使い方が分かりにくいですが、 <code>composer.json</code> に、Sculpin のテーマを書いておくと、インストール時にテーマを既定のテーマフォルダにコピーし、アンインストール時に削除してくれるようです。</p>
+
+<h3 id="sculpin-editor-bundle">Sculpin Editor Bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/mavimo/sculpin-editor-bundle">mavimo/sculpin-editor-bundle</a></p>
+
+<p><code>sculpin editor:create</code> コマンドを Sculpin へし、投稿の新規作成を容易にするバンドル。</p>
+
+<h3 id="opdavies%2Fsculpin-content-generator-bundle">opdavies/sculpin-content-generator-bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/opdavies/sculpin-content-generator-bundle">opdavies/sculpin-content-generator-bundle</a></p>
+
+<p><code>sculpin content:new:post</code> コマンドを追加し、容易に新しい投稿を作成できるようにするバンドル。</p>
+
+<h3 id="petemc%2Fsculpin-gulp-bundle">petemc/sculpin-gulp-bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/petemc/sculpin-gulp-bundle">petemc/sculpin-gulp-bundle</a></p>
+
+<p><code>sculpin generate</code> 時に、同時に <a href="http://gulpjs.com/">Gulp</a> を実行することができるようになるバンドル。</p>
+
+<h3 id="dragonmantank%2Ffillet-sculpin-bundle">dragonmantank/fillet-sculpin-bundle</h3>
+
+<p>ダウンロード：<a href="https://packagist.org/packages/dragonmantank/fillet-sculpin-bundle">dragonmantank/fillet-sculpin-bundle</a></p>
+
+<p><a href="https://packagist.org/packages/dragonmantank/fillet">Fillet</a> と連携し、CMS から Sculpin への変換をサポートするバンドル。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://packagist.org/search/?q=sculpin">search of "sculpin" - Packagist</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Sculpin でリダイレクトページを生成する Sculpin Redirect Bundle を使ってみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/06/12/using-sculpin-redirect-bundle.html"/>
+            <updated>2016-06-12T13:01:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/06/12/using-sculpin-redirect-bundle.html</id>
+            <content type="html"><![CDATA[<p>GitHub Pages にホムペを移行させようと考えていたけど、 <a href="https://help.github.com/articles/redirects-on-github-pages/">Redirects on GitHub Pages</a> を見ると</p>
+
+<blockquote>
+  <p>For the security of our users, GitHub Pages does not support customer server configuration files such as .htaccess or .conf.
+  訳：ユーザーの皆様の安全のために、GitHub Pages は、.htaccess ファイルや .conf のような顧客のサーバ設定ファイルをサポートしていません。</p>
+</blockquote>
+
+<p>って記載があるので、ページのリダイレクトを GitHub Pages ではできないのかって思ってたけど、すぐ後に</p>
+
+<blockquote>
+  <p>using the <a href="https://github.com/jekyll/jekyll-redirect-from">Jekyll Redirect From plugin</a>, you can automatically redirect visitors to the updated URL.
+  訳：<a href="https://github.com/jekyll/jekyll-redirect-from">Jekyll Redirect From プラグイン</a>を使用して、更新された URL への訪問者を自動的にリダイレクトすることができます。</p>
+</blockquote>
+
+<p>と、書いてあったので Jekyll は出来ていいな〜と、使いたいのは Sculpin なんだけどなぁって考えて…… そうだ！なければ作ればいいじゃん！</p>
+
+<p>と、その前に、<a href="https://packagist.org/">Packagist</a> で <a href="https://packagist.org/search/?tags=sculpin">#sculpin</a> を探してみたところ、ちょうど良さそうなの <a href="https://packagist.org/packages/mavimo/sculpin-redirect-bundle">mavimo/sculpin-redirect-bundle - Packagist</a>
+ があったので使ってみました。</p>
+
+<h2 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール</h2>
+
+<p>内容的には Bundle の README を見れば OK です。</p>
+
+<p><code>sculpin.json</code> にパッケージを追加。</p>
+
+<pre><code class="diff">     "require": {
++        "mavimo/sculpin-redirect-bundle": "@dev"
+     },
+</code></pre>
+
+<p>次に <code>sculpin update</code> をします。
+次の手順を先に行うと実行できると言えばできるのですが、 Bundle のクラスがないよ！って怒られるので先に更新をします。</p>
+
+<pre><code class="bash">$ php sculpin update
+Loading composer repositories with package information
+      :
+Compiling component files
+</code></pre>
+
+<p><code>app/SculpinKernel.php</code> にパッケージのクラスを追加。</p>
+
+<pre><code class="diff">     protected function getAdditionalSculpinBundles()
+     {
+         return array(
++           'Mavimo\Sculpin\Bundle\RedirectBundle\SculpinRedirectBundle'
+         );
+     }
+ }
+</code></pre>
+
+<p class="alert alert-info" role="alert">ファイルが存在しない場合は、 <a href="https://github.com/beryllium/icelus#installation">beryllium/icelus § Installation</a> や <a href="https://sculpin.io/documentation/extending-sculpin/configuration/">Configuration — Sculpin</a> を参考にして <code>app/SculpinKernel.php</code> を作ってください。
+</p>
+
+<p>次にリダイレクト用のページの元となるテンプレート <code>source/_layouts/redirect.html</code> を作ります。
+作る内容は Bundle の README のままでもいいですし、リダイレクト先を <code>{{ site.url }}{{ page.destination.url }}</code> としてもいいでしょう。</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+{% spaceless %}
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="content-type" content="text/html; charset=utf-8" /&gt;
+    &lt;meta http-equiv="refresh" content="0;url={{ page.destination.url }}" /&gt;
+  &lt;/head&gt;
+&lt;/html&gt;
+{% endspaceless %}
+</code></pre>
+
+<p>そして、これで、準備は完了です。</p>
+
+<p>余談として、 <code>redirect.html</code> を作る場所が README には <code>Then create a redirect.html file in your theme</code> としか書かれていないので、最初 <code>source</code> 直下にファイルを置いてテストしていたところ生成されず小一時間ほど頭を悩ましました。
+ページ生成時時には、ログが大量に流れていくのですが、</p>
+
+<pre><code class="bash">$ php sculpin.phar generate
+Detected new or updated files
+Generating: 100% (80 sources / 0.01 seconds)
+Converting:  71% [ Twig_Error_Loader: Template "redirect" is not defined (Sculpin\Bundle\TwigBundle\FlexibleExtensionFilesystemLoader: Template "redirect" is not defined.). ]
+              :
+</code></pre>
+
+<p>と、このようなログが出ていたので、拡張子を変えてみたり、いろいろ変えてみた結果、もしかして！と思い <code>source/_layouts/redirect.html</code> にファイルを作ると思った通りに動作するようになったのでした。</p>
+
+<h2 id="%E5%88%A9%E7%94%A8%E6%96%B9%E6%B3%95">利用方法</h2>
+
+<p>こちらも基本的には Bundle の README に書かれている通りです。</p>
+
+<p>それぞれのページ用のファイルの先頭部分、ページタイトルや日時が書かれている部分に転送元のパスを列挙するだけで OK です。</p>
+
+<p>例として <code>main.html</code> が転送先とします。</p>
+
+<pre><code class="yaml">          :
+redirect:
+    - alias-path.html
+    - old-path.html
+
+---
+        :
+</code></pre>
+
+<p>と、このような感じで書くと <code>alias-path.html</code> と <code>old-path.html</code> が生成されて、そのアドレスにアクセスされると <code>main.html</code> へと転送されます。</p>
+
+<p>例えば <a href="https://github.com/sharkpp/travis-ci-pull-test/commit/8888448e41b1439570011158c2be2396f4afbab3#diff-8b370a9f2d572cc50d203266c8281d58">commit 8888448e41b1439570011158c2be2396f4afbab3</a> のように追加すると <a href="http://sharkpp.github.io/travis-ci-pull-test/old-path.html">/old-path.html</a> からアクセスすると <a href="http://sharkpp.github.io/travis-ci-pull-test/blog/2013/02/04/highlight/">/blog/2013/02/04/highlight/</a> へと転送されます。</p>
+
+<h2 id="%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88-redirect.html-%E3%81%A7%E5%88%A9%E7%94%A8%E3%81%A7%E3%81%8D%E3%82%8B%E5%A4%89%E6%95%B0">テンプレート redirect.html で利用できる変数</h2>
+
+<table>
+<thead>
+<tr>
+  <th>変数名</th>
+  <th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>page.destination</code></td>
+  <td>リダイレクト先の <code>page</code> の内容</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://packagist.org/packages/mavimo/sculpin-redirect-bundle">mavimo/sculpin-redirect-bundle - Packagist</a></li>
+<li><a href="https://github.com/mavimo/sculpin-redirect-bundle/blob/master/RedirectGenerator.php">sculpin-redirect-bundle/RedirectGenerator.php at master · mavimo/sculpin-redirect-bundle</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Sculpin で投稿カレンダー(年/月)を作る方法]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/02/20/sculpin-tips-year-month-calendar-posts.html"/>
+            <updated>2016-02-20T22:29:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/02/20/sculpin-tips-year-month-calendar-posts.html</id>
+            <content type="html"><![CDATA[<p><a href="http://sculpin.io/">Sculpin</a> で、はてなダイアリー&trade;のような、年/月 カレンダーを表示したいと思ったので作ってみました。</p>
+
+<p><img src="/images/2016_0220_year_month_calendar.png" alt="年/月カレンダー" /></p>
+
+<p>みたいな感じです。</p>
+
+<h2 id="%E3%81%BE%E3%81%9A%E3%81%AF">まずは</h2>
+
+<p>posts へのアクセスが必要になるので、コードを書きこむファイルには</p>
+
+<pre><code class="yaml">use:
+    - posts
+</code></pre>
+
+<p>と、 posts へのアクセスができるように宣言が必要です。</p>
+
+<p></p>
+
+<pre><code class="twig">{% for post in data.posts %}
+   :
+{% endfor %}
+</code></pre>
+
+<p></p>
+
+<p>そうすることで、 <code>data.posts</code> で記事全部にアクセスすることができます。</p>
+
+<h2 id="%E5%AE%9F%E8%A3%85">実装</h2>
+
+<p>わかりやすいように <a href="https://github.com/sharkpp/www.sharkpp.net/commit/f579cde9ea1c630ba9aa18b883ff26baf4d4ef54">commit:f579cde9ea1c630ba9aa18b883ff26baf4d4ef54</a> からコメントを追加したり、削ったりしているけどだいたいこんな感じ。</p>
+
+<p></p>
+
+<pre><code class="twig">{%   set post_ym = post.date|date("Y-m") %}
+{%   set ym_posts = ym_posts|merge({ (post_ym): 1 }) %}
+{# ついでに、記事の最初と最後の日付を覚える #}
+{%   if min_posts is empty or post_ym &lt; min_posts %}{% set min_posts = post_ym %}{% endif %}
+{%   if max_posts is empty or max_posts &lt; post_ym %}{% set max_posts = post_ym %}{% endif %}
+{% endfor %}
+{# カレンダー構築：年×月でループを回し、記事の範囲外の日付は表示しないようにする #}
+{% for y in range((max_posts|slice(0,4)), min_posts|slice(0,4)) %}
+&lt;a href="{{ site.url }}/blog/{{ y }}/"&gt;{{ y }}&lt;/a&gt;
+{%   for m in 1..12 %}
+{%     set ym = "%04d-%02d"|format(y, m) %}
+{%     if min_posts &lt;= ym and ym &lt;= max_posts %}
+{%       if not ym_posts[ym] is empty %}
+| &lt;a href="{{ site.url }}/blog/{{ y }}/{{ "%02d"|format(m) }}/"&gt;{{ "%02d"|format(m) }}&lt;/a&gt;
+{%       else %}
+| &lt;del class="text-muted"&gt;{{ "%02d"|format(m) }}&lt;/del&gt;
+{%       endif %}
+{%     else %}
+| {{ "%02d"|format(m) }}
+{%     endif %}
+{%   endfor %}
+&lt;br /&gt;
+{% endfor %}
+</code></pre>
+
+<p></p>
+
+<p>最終的にこんな表示になりました。</p>
+
+<p><img src="/images/2016_0220_year_month_calendar.png" alt="年/月カレンダー" /></p>
+
+<p>これ自体のコードは <a href="https://github.com/sharkpp/www.sharkpp.net/blob/master/source/_includes/archive_histories.html">www.sharkpp.net/archive_histories.html at master · sharkpp/www.sharkpp.net</a> を参考にしてみてください。</p>
+
+<h2 id="%E3%81%8A%E3%81%BE%E3%81%91">おまけ</h2>
+
+<p>実は、最初に作った<a href="https://github.com/sharkpp/www.sharkpp.net/commit/81f8614d5f4ab8f12035e497a3251d120bc928ff">コード</a>は、あまりにも処理時間がかかり、そもそもホムペが更新できない状態になっていました。
+なので、再度作り直した結果、まあ、とりあえず動くものができた感じ。</p>
+
+<h3 id="%E4%BD%95%E3%81%8C%E5%95%8F%E9%A1%8C%E3%81%A0%E3%81%A3%E3%81%9F%E3%81%8B%EF%BC%9F">何が問題だったか？</h3>
+
+<p>とりあえず、</p>
+
+<p><img src="/images/2016_0220_year_month_calendar_sample.png" alt="年/月カレンダーサンプル" /></p>
+
+<p>みたいな表示のカレンダーを表示したい、といったことを思いついて、実装してみる。</p>
+
+<p>その結果、出来上がったのがこちら。
+だたし、使えない。</p>
+
+<p><a href="https://github.com/sharkpp/www.sharkpp.net/commit/81f8614d5f4ab8f12035e497a3251d120bc928ff">commit:81f8614d5f4ab8f12035e497a3251d120bc928ff</a></p>
+
+<p>コードをここにペタリンコするのは略。</p>
+
+<p>これ、何が問題だったかというと、処理時間が異様に掛かってしまう、この一点が唯一、そして最大の問題でした。</p>
+
+<p>簡単に計算すると、<code>記事数(=250程度) × (ループ１(=250程度) ＋ ループ２(=9年) × ループ３(=12ヶ月) × ループ４(=250程度) ＝ 6812500)</code> で一番内側のループの回数がすごいことになっていたので、それはまあ、遅くなるのも通りだろうと。</p>
+
+<p>というわけで、数日は記事を書いてサーバー上で直接アップデート、をしていました。</p>
+
+<h3 id="%E5%86%8D%E5%AE%9F%E8%A3%85">再実装</h3>
+
+<p>もう一度、Twigの仕様などを調べ、作り直した結果がこれ。</p>
+
+<p><a href="https://github.com/sharkpp/www.sharkpp.net/commit/f579cde9ea1c630ba9aa18b883ff26baf4d4ef54">commit:f579cde9ea1c630ba9aa18b883ff26baf4d4ef54</a></p>
+
+<p>今度は、<code>記事数(=250程度) × (ループ１(=250程度) ＋ ループ２(=9年) × ループ３(=12ヶ月) ＝ 89500)</code> とまだ、多いは多いですが、1/250 には減っています。
+やったね！</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://www.drupal.org/node/2160611">Provide {{ item.item.alt }} Twig syntax for getting data from $item&#091;'#item'&#093;&#091;'alt'&#093; &#091;#2160611&#093; | Drupal.org</a></li>
+<li><a href="http://twig.sensiolabs.org/doc/templates.html#variables">Twig for Template Designers - Documentation - Twig - The flexible, fast, and secure PHP template engine</a></li>
+<li><a href="http://twig.sensiolabs.org/doc/filters/slice.html">slice - Documentation - Twig - The flexible, fast, and secure PHP template engine</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Sculpin で自動的に「続きを見る」リンクを作る方法]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/12/29/sculpin-tips-auto-more-link.html"/>
+            <updated>2015-12-29T23:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/12/29/sculpin-tips-auto-more-link.html</id>
+            <content type="html"><![CDATA[<p>なんか、 <a href="http://sculpin.io/">Sculpin</a> の日本語情報が圧倒的に少ない気がするのでTipsを投下してみます。</p>
+
+<p>このサイトで使っている自動的に「続きを見る」リンク</p>
+
+<p><img src="/images/2015_1229_more_link.png" alt="「続きを見る」リンク" /></p>
+
+<p>のような感じのリンクを作る方法です。</p>
+
+<h2 id="%E6%96%B9%E5%90%91%E6%80%A7">方向性</h2>
+
+<p>方向性としては、</p>
+
+<pre><code class="md">じゅげむと、いろは歌は、、、、
+ほげふが
+
+## じゅげむ
+
+寿限無寿限無、、、
+
+## いろは歌
+
+色はにほへど　散りぬるを 、、、、
+
+</code></pre>
+
+<p>と、</p>
+
+<ol>
+<li>最初のセクション(<code>じゅげむと、いろは歌は、、、、</code>の部分)</li>
+<li>レベル２ヘッダ(<code>じゅげむ</code>の部分)</li>
+<li>セクション(<code>寿限無寿限無、、、</code>の部分)</li>
+<li>以下続き</li>
+</ol>
+
+<p>のような感じの投稿内容から</p>
+
+<pre><code class="html">じゅげむと、いろは歌は、、、、
+ほげふが
+
+&lt;a href="..."&gt;... 続きを見る&lt;/a&gt;
+</code></pre>
+
+<p>のように、最初のセクションを抜き出し、「続きを見る」リンクを作るようにします。</p>
+
+<h2 id="%E6%BA%96%E5%82%99">準備</h2>
+
+<p>うちのホムペは <a href="https://github.com/sculpin/sculpin-blog-skeleton">sculpin/sculpin-blog-skeleton</a> ベースなので、これをベースとして直していく感じになります。</p>
+
+<p>そうでない場合は、適時読み替えてください。</p>
+
+<p>まず Twig で、<code>preg_XXX</code> 系が利用できるようになる拡張をインストールします。</p>
+
+<p>利用するのは、<a href="https://packagist.org/packages/jasny/twig-extensions">jasny/twig-extensions</a> です。</p>
+
+<p><code>app/config/sculpin_services.yml</code> に追記 or なければ作成し、Twig 拡張を利用できるようにします。</p>
+
+<pre><code class="diff">+ services:
++     twig.extension.text:
++         class: Twig_Extensions_Extension_Text
++         tags:
++             - { name: twig.extension }
++     twig.extension.pcre:
++         class: Jasny\Twig\PcreExtension
++         tags:
++             - { name: twig.extension }
+</code></pre>
+
+<p><code>sculpin.json</code> に</p>
+
+<pre><code class="diff">          "components/jquery": "~1.9.1",
+-         "components/highlightjs": "~7.3.0"
++         "components/highlightjs": "~7.3.0",
++         "jasny/twig-extensions": "@dev"
+      },
+      "config": {
+</code></pre>
+
+<p><code>jasny/twig-extensions</code> を追加し</p>
+
+<pre><code>$ php sculpin.phar install
+</code></pre>
+
+<p>のようにしてインストール。</p>
+
+<h2 id="%E4%BD%9C%E6%88%90">作成</h2>
+
+<p>やっていることは驚くほど簡単です。</p>
+
+<p><code>source/index.html</code> がトップページ用のテンプレートですが、</p>
+
+<pre><code class="diff">         &lt;/header&gt;
+          &lt;div&gt;
+-             {{ post.blocks.content|raw }}
++             {{ post.blocks.content|preg_replace('!^(.+?)(&lt;h.*)?$!sm', '$1') | raw }}
++             {% if post.blocks.content|preg_replace('!^(.+?)(&lt;h.*)?$!sm', '$1') != post.blocks.content %}
++                 &amp;hellip;&amp;nbsp;&lt;a href=""&gt;続きを見る&lt;/a&gt;
++             {% endif %}
+          &lt;/div&gt;
+          &lt;hr /&gt;
+</code></pre>
+
+<p>と、このような感じにスケルトンから変更します。</p>
+
+<p>やっていることは、</p>
+
+<ol>
+<li>生成済みコンテンツ(<code>post.blocks.content</code>) に対して、最初のヘッダタグの直前までを抜き出す</li>
+<li>「続きを見る」リンク追加、ただし、コンテンツが省略されていないこと。</li>
+</ol>
+
+<p>と、すごく単純なことです。</p>
+
+<p>これの肝は、最初のセクションにはヘッダタグがない、ということで、これはレベル１のヘッダタグとしてページタイトルが別になるようにしてあるためなので、違う構造であれば試行錯誤は必要ですが、うまいこと正規表現を変えて対応できると思います。</p>
+
+<h2 id="%E7%B5%90%E6%9E%9C">結果</h2>
+
+<p><img src="/images/2015_1229_more_link2.png" alt="「続きを見る」リンク" /></p>
+
+<p>やったね！</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://github.com/sharkpp/www.sharkpp.net/commit/98c87d045e04da9717cd5a30f650aea9dc373096">sharkpp/www.sharkpp.net@98c87d0</a></li>
+<li><a href="http://symfony.com/doc/current/cookbook/templating/twig_extension.html#register-an-extension-as-a-service">How to Write a custom Twig Extension (The Symfony CookBook)</a></li>
+<li><a href="https://github.com/jasny/twig-extensions">jasny/twig-extensions</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Sculpin でサムネイルを自動生成する Icelus Bundle を使ってみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/11/02/using-sculpin-thumbnail-generator-icelus.html"/>
+            <updated>2015-11-02T12:50:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/11/02/using-sculpin-thumbnail-generator-icelus.html</id>
+            <content type="html"><![CDATA[<p>Sculpin でページ生成時にサムネイルを作る Bundle 無いかなぁ？</p>
+
+<p>無いなら作ろうかなぁ〜って思って <a href="https://packagist.org/">Packagist</a> を探してみたらそれらしいのを見つけたので試してみた。</p>
+
+<p>見つけたのは <a href="https://packagist.org/packages/beryllium/icelus">beryllium/icelus - Packagist</a> です。</p>
+
+<blockquote>
+  <p>Thumbnail generator for Sculpin-based websites</p>
+</blockquote>
+
+<p>と書いてありました。</p>
+
+<h2 id="%E3%81%A8%E3%82%8A%E3%81%82%E3%81%88%E3%81%9A%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B">とりあえず使ってみる</h2>
+
+<p>完全な差分は <a href="https://github.com/sharkpp/www.sharkpp.net/commit/68efa31f1f13a8db8ab45dd5d1cbfb019fffa316">IcelusBundle を追加してサムネイルを自動で生成するように変更 · sharkpp/www.sharkpp.net@68efa31</a> です。</p>
+
+<h3 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール</h3>
+
+<p><code>sculpin.json</code> にパッケージを追加。</p>
+
+<pre><code class="diff">         "components/jquery": "~1.9.1",
+         "components/highlightjs": "~7.3.0",
+         "jasny/twig-extensions": "@dev",
+-        "sharkpp/sculpin-calendarian-bundle": "dev-master"
++        "sharkpp/sculpin-calendarian-bundle": "dev-master",
++        "beryllium/icelus": "*"
+     },
+     "autoload": {
+         "psr-0": {
+</code></pre>
+
+<p>そして、おもむろに <code>sculpin.phar update</code> を実行。</p>
+
+<pre><code class="bash">$ php sculpin.phar update
+Loading composer repositories with package information
+Updating dependencies
+  - Installing imanee/imanee (1.2.2)
+    Downloading: 100%         
+
+  - Installing beryllium/icelus (1.0.0)
+    Downloading: 100%         
+
+Writing lock file
+Generating autoload files
+Compiling component files
+</code></pre>
+
+<p><code>app/SculpinKernel.php</code> にパッケージのクラスを追加。</p>
+
+<pre><code class="diff">     protected function getAdditionalSculpinBundles()
+     {
+         return array(
+-           'Sharkpp\Sculpin\Bundle\CalendarianBundle\SculpinCalendarianBundle'
++           'Sharkpp\Sculpin\Bundle\CalendarianBundle\SculpinCalendarianBundle',
++           'Beryllium\Icelus\IcelusBundle',
+         );
+     }
+ }
+</code></pre>
+
+<p class="alert alert-info" role="alert">ファイルが存在しない場合は、 <a href="https://github.com/beryllium/icelus#installation">beryllium/icelus § Installation</a> や <a href="https://sculpin.io/documentation/extending-sculpin/configuration/">Configuration — Sculpin</a> を参考にして <code>app/SculpinKernel.php</code> を作ってください。
+</p>
+
+<h2 id="%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B">使ってみる</h2>
+
+<p>の前に、どうやら Markdown Converter と相性というか、タイミングが悪いみたいで、</p>
+
+<pre><code class="markdown">![64 x 64]({{ thumbnail('/images/noname/196x196.png', 64, 64) }})
+</code></pre>
+
+<p>と記述すると、</p>
+
+<pre><code class="md">![64 x 64](/_thumbs/b0d061130443fcd10d882073d6ef32f0-64x64.png)
+</code></pre>
+
+<p>と、このように惜しい感じになるので</p>
+
+<pre><code class="html">&lt;img src="{{ thumbnail('/images/noname/196x196.png', 64, 64) }}" alt="64 x 64"&gt;
+</code></pre>
+
+<p>と、HTMLのタグで直接記述しないとダメなようです。</p>
+
+<h3 id="%E5%85%83%E7%94%BB%E5%83%8F">元画像</h3>
+
+<p><img src="/images/noname/196x196.png" alt="196 x 196" /></p>
+
+<h3 id="64px-%E3%81%AE%E3%82%B5%E3%83%A0%E3%83%8D%E3%82%A4%E3%83%AB">64px のサムネイル</h3>
+
+<p><img src="/_thumbs/b0d061130443fcd10d882073d6ef32f0-64x64.png" alt="64 x 64"></p>
+
+<pre><code class="html">&lt;img src="{{ thumbnail('/images/noname/196x196.png', 64, 64) }}" alt="64 x 64"&gt;
+</code></pre>
+
+<h3 id="16px-%E3%81%AE%E3%82%B5%E3%83%A0%E3%83%8D%E3%82%A4%E3%83%AB">16px のサムネイル</h3>
+
+<p><img src="/_thumbs/b0d061130443fcd10d882073d6ef32f0-16x16.png" alt="16 x 16"></p>
+
+<pre><code class="html">&lt;img src="{{ thumbnail('/images/noname/196x196.png', 16, 16) }}" alt="16 x 16"&gt;
+</code></pre>
+
+<h3 id="%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AE%E3%83%9F%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">ドキュメントのミスについて</h3>
+
+<p>あと、最初に使い方を<a href="https://github.com/beryllium/icelus/blob/484174cc735c0589ffe77d94f165e9f6c9f3c726/README.md#usage">ドキュメント</a>で見たところ、</p>
+
+<pre><code class="hmtl">&lt;a href="image.jpg"&gt;&lt;img src="{% thumbnail('image.jpg', 100, 100) %}"&gt;&lt;/a&gt;
+</code></pre>
+
+<p>と記述してあったので素直にその通り書いて、実行したところ、</p>
+
+<pre><code class="bash">             :
+Generating: 100% (1079 sources / 0.17 seconds)
+Converting:  14% [ Twig_Error_Syntax: Unexpected tag name "thumbnail" (expecting closing tag for the "for" tag defined near line 7) in "FileSource:FilesystemDataSource:~/git/test/source:test.html" at line 14 ]
+ [ Twig_Error_Syntax: Unexpected tag name "thumbnail" (expecting closing tag for the "for" tag defined near line 7) in "FileSource:FilesystemDataSource:~/git/test/source:test.html" at line 14 ]
+100% (1722 sources / 7.49 seconds)
+             :
+</code></pre>
+
+<p>とエラーが出たので、</p>
+
+<p>しばらく、これ実は使えない？とか、設定が足らない？とか思いながらしばらく試してみて、ふと</p>
+
+<pre><code class="hmtl">&lt;a href="image.jpg"&gt;&lt;img src="{{ thumbnail('image.jpg', 100, 100) }}"&gt;&lt;/a&gt;
+</code></pre>
+
+<p>と書かないとダメなのではと思い試してみたところ、うまく動きました。</p>
+
+<p>これは、 もう Pull Request するしかないと思ってサクッと <a href="https://github.com/beryllium/icelus/pull/1">PR</a> しました。</p>
+
+<h3 id="%E8%A8%AD%E5%AE%9A%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">設定について</h3>
+
+<p><a href="https://github.com/beryllium/icelus/blob/484174cc735c0589ffe77d94f165e9f6c9f3c726/DependencyInjection/Configuration.php">icelus/DependencyInjection/Configuration.php</a> とかを見ると設定で出力先などが変更できそうな気がしましたが、、、</p>
+
+<p>他のソースを見ると使っている形跡がなく、そもそもドキュメントにも記載がないのできっと作りかけなのでしょう。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://packagist.org/packages/beryllium/icelus">beryllium/icelus - Packagist</a></li>
+<li><a href="https://github.com/beryllium/icelus">beryllium/icelus</a></li>
+<li><a href="http://twig.sensiolabs.org/doc/templates.html">Twig for Template Designers - Documentation - Twig - The flexible, fast, and secure PHP template engine</a></li>
+<li><a href="https://sculpin.io/documentation/generators/">Generators — Sculpin — PHP Static Site Generator</a></li>
+<li><a href="https://sculpin.io/documentation/extending-sculpin/configuration/">Configuration — Sculpin — PHP Static Site Generator</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Sculpin でブログアーカイブの日付ごとにポストをまとめたページを作るバンドルを作ってみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/08/09/create-sculpin-blog-archive-date-directory-bundle.html"/>
+            <updated>2015-08-09T22:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/08/09/create-sculpin-blog-archive-date-directory-bundle.html</id>
+            <content type="html"><![CDATA[<p><a href="https://sculpin.io/">Sculpin</a> でブログアーカイブの日付ごとにポストをまとめたページを作るバンドルを作ってみました。</p>
+
+<ul>
+<li><a href="https://github.com/sharkpp/sculpin-calendarian-bundle">sharkpp/sculpin-calendarian-bundle - GitHub</a></li>
+<li><a href="https://packagist.org/packages/sharkpp/sculpin-calendarian-bundle">sharkpp/sculpin-calendarian-bundle - Packagist</a></li>
+</ul>
+
+<p>とりあえずは、 generator として指定されたディレクトリ以下にインデックスページをどかどかっと作成します。</p>
+
+<p>ようするに、 <a href="http://www.sharkpp.net/blog/2015/">http://www.sharkpp.net/blog/2015/</a> とかで、この例だと 2015 年に投稿された記事の一覧が列挙されるページを作ることが出来ます。</p>
+
+<h2 id="%E3%81%BE%E3%81%9A%E5%A7%8B%E3%82%81%E3%81%AB">まず始めに</h2>
+
+<p>Sculpin でブログとかを作ると、記事の日付で URL を掘り下げて作ってくれたりするのですが、残念なことに、 Wordpress などでもよくあるような、年月日ごとに記事を列挙したページを作る機能がありませんでした。</p>
+
+<p>で、無ければ作ろう！と思い立ったはいいけど、進捗は思わしくなく、、、ってところで最終的に３時間程度で動く物が出来たのでもにょる所。</p>
+
+<p>それはともかく、公式のドキュメントを見たり、<a href="https://symfony.com/">Symfony</a> のドキュメントを見たり、 Sculpin のソースを見たりと、なんとか形に出来ました。</p>
+
+<h2 id="sculpin-%E3%82%92%E6%8B%A1%E5%BC%B5%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E5%BF%83%E5%BE%97">Sculpin を拡張するための心得</h2>
+
+<ol>
+<li>公式ドキュメントの "<a href="https://sculpin.io/documentation/extending-sculpin">Extending Sculpin</a>" を熟読しよう！</li>
+<li>Symfony2 のドキュメント "<a href="http://docs.symfony.gr.jp/symfony2/cookbook/bundles/best_practices.html">バンドルの構造とベストプラクティス</a>"、"<a href="http://docs.symfony.gr.jp/symfony2/cookbook/bundles/extension.html">セマンティックコンフィギュレーションを通してバンドルを設定する方法</a>" を熟読しよう！</li>
+<li><a href="https://github.com/mavimo/sculpin-redirect-bundle">mavimo/sculpin-redirect-bundle</a> を熟読しよう！</li>
+<li>Sculpin の <a href="https://github.com/sculpin/sculpin/">ソース</a> を熟読しよう！</li>
+</ol>
+
+<p>で、なんとなくは作れる気がします。</p>
+
+<h2 id="packagist-%E3%81%AB%E5%85%AC%E9%96%8B%E3%81%97%E3%82%88%E3%81%86%EF%BC%81">Packagist に公開しよう！</h2>
+
+<p>Composer で簡単に使えるようにするに、 Packagist に登録してみます。</p>
+
+<p>というか、登録せずに <code>composer.json</code> 書いて <code>php composer.phar install</code> したら</p>
+
+<pre><code class="bash">$ php sculpin.phar update
+Loading composer repositories with package information
+Updating dependencies
+Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - The requested package sharkpp/sculpin-calendarian-bundle could not be found in any version, there may be a typo in the package name.
+
+Potential causes:
+ - A typo in the package name
+ - The package is not available in a stable-enough version according to your minimum-stability setting
+   see &lt;https://groups.google.com/d/topic/composer-dev/_g3ASeIFlrc/discussion&gt; for more details.
+
+Read &lt;http://getcomposer.org/doc/articles/troubleshooting.md&gt; for further common problems.
+</code></pre>
+
+<p>って言われてもにょる。</p>
+
+<p>ってことで、</p>
+
+<ol>
+<li>パッケージ用の composer.json を書きましょう！</li>
+<li>Packagist への登録時に怒られるので、レポジトリ名は小文字で！</li>
+<li>Packagist 登録時には Git or Svn or Hg の公開レポジトリ URL が必要になるので、今回は GitHub に登録！</li>
+<li>Packagist に登録です！</li>
+</ol>
+
+<p>ってことで、GitHub の <a href="https://github.com/sharkpp/sculpin-calendarian-bundle">sharkpp/sculpin-calendarian-bundle</a> で公開し、 Packagist の <a href="https://packagist.org/packages/sharkpp/sculpin-calendarian-bundle">sharkpp/sculpin-calendarian-bundle</a> でパッケージを登録しました。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://docs.symfony.gr.jp/symfony2/book/service_container.html">サービスコンテナ | Symfony2日本語ドキュメント</a></li>
+<li><a href="http://docs.symfony.gr.jp/symfony2/cookbook/bundles/extension.html">セマンティックコンフィギュレーションを通してバンドルを設定する方法 | Symfony2日本語ドキュメント</a></li>
+<li><a href="http://docs.symfony.gr.jp/symfony2/cookbook/bundles/best_practices.html">バンドルの構造とベストプラクティス | Symfony2日本語ドキュメント</a></li>
+<li><a href="https://github.com/sculpin/sculpin/blob/master/src/Sculpin/Bundle/PaginationBundle/PaginationGenerator.php">sculpin/PaginationGenerator.php at master · sculpin/sculpin · GitHub</a></li>
+<li><a href="https://sculpin.io/documentation/extending-sculpin/configuration/">Configuration — Sculpin — PHP Static Site Generator</a></li>
+<li><a href="https://github.com/mavimo/sculpin-redirect-bundle">mavimo/sculpin-redirect-bundle · GitHub</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Sculpin でホムペを再構築したときのメモ]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/06/28/site-reboot-by-sculpin.html"/>
+            <updated>2015-06-28T18:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/06/28/site-reboot-by-sculpin.html</id>
+            <content type="html"><![CDATA[<p><a href="https://sculpin.io/">Sculpin</a> でホムペを再構築してからだいたい一ヶ月ぐらい経ちました。</p>
+
+<p>元のページは、 Markdown で作ったり はてな記法で書いてたり色々あったので全ページをクロールしてダウンロードした .html から .md への変換スクリプトを書きページを再構成しました。</p>
+
+<p>手順としては</p>
+
+<ol>
+<li>全ページをクロール</li>
+<li>.html をスクリプトで .md に変換＆リンクを再構成(実際の変換スクリプトは <a href="https://github.com/sharkpp/www.sharkpp.net/blob/master/convert">www.sharkpp.net/convert/ - GitHub</a> を参照)</li>
+<li>Sculpin で構築しやすいように再構成</li>
+<li>Github へ push したら自動で更新する仕組みを実装( <a href="/blog/2015/05/31/how-to-build-libxml2-on-xrea-com-for-sculpin.html">Sculpin を実行するために xrea.com 上で libxml2 を構築する方法</a> や <a href="https://github.com/sharkpp/www.sharkpp.net/blob/master/site">www.sharkpp.net/site - GitHub</a> を参照)</li>
+<li>公開</li>
+</ol>
+
+<p>という感じです。</p>
+
+<p>いろいろ自分好みなページを作る中で Sculpin の挙動を調べたメモを記録として残しておきます。</p>
+
+<h2 id="%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%83%A9%E3%82%A4%E3%83%B3">コマンドライン</h2>
+
+<h3 id="%E6%A7%8B%E7%AF%89">構築</h3>
+
+<pre><code class="bash">$ php sculpin.phar generate
+</code></pre>
+
+<p>または</p>
+
+<pre><code class="bash">$ php sculpin.phar generate --env=prod
+</code></pre>
+
+<h3 id="%E6%A7%8B%E7%AF%89%EF%BC%86%E3%83%86%E3%82%B9%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E8%B5%B7%E5%8B%95">構築＆テストサーバー起動</h3>
+
+<pre><code class="bash">$ php sculpin.phar generate --watch --server
+</code></pre>
+
+<h2 id="sculpin-%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%A7%E3%81%8D%E3%82%8B%E5%A4%89%E6%95%B0">Sculpin で使用できる変数</h2>
+
+<h3 id="%E3%83%9A%E3%83%BC%E3%82%B8%E5%86%85%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%A7%E3%81%8D%E3%82%8B%E5%A4%89%E6%95%B0">ページ内で使用できる変数</h3>
+
+<table>
+<thead>
+<tr>
+  <th>変数名</th>
+  <th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>site</td>
+  <td><code>sculpin_site.yml</code> の値</td>
+</tr>
+<tr>
+  <td>page</td>
+  <td>ページ自体</td>
+</tr>
+<tr>
+  <td>formatter</td>
+  <td>テンプレートエンジン名( <code>twig</code> など)</td>
+</tr>
+<tr>
+  <td>converters</td>
+  <td>？</td>
+</tr>
+<tr>
+  <td>relative_root_url</td>
+  <td>ページ自体から見たルートへの相対パス</td>
+</tr>
+<tr>
+  <td>data</td>
+  <td><code>Frontmatter</code> (各ページ先頭での指示) で宣言されたコンテンツ</td>
+</tr>
+<tr>
+  <td>layout</td>
+  <td>レイアウト名</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="site-%E5%A4%89%E6%95%B0">site 変数</h3>
+
+<p><code>app/config/sculpin_site.yml</code> で指定した値が設定されます。</p>
+
+<table>
+<thead>
+<tr>
+  <th>キー</th>
+  <th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>.posts</td>
+  <td><code>use: ["posts"]</code></td>
+</tr>
+<tr>
+  <td>.subtitle</td>
+  <td><code>app/config/sculpin_site.yml</code> で指定した値</td>
+</tr>
+<tr>
+  <td>.url</td>
+  <td>サイトのURL。引数 <code>--url</code> で指定した値。</td>
+</tr>
+<tr>
+  <td>.author</td>
+  <td><code>app/config/sculpin_site.yml</code> で指定した値</td>
+</tr>
+<tr>
+  <td>.env</td>
+  <td>引数 <code>--env</code> で指定した値。<code>dev</code> など</td>
+</tr>
+<tr>
+  <td>.calculated_date</td>
+  <td>ページの生成日時</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="page-%E5%A4%89%E6%95%B0">page 変数</h3>
+
+<p>ページ自体の情報を参照できる変数。</p>
+
+<pre><code class="yaml">---
+title: "Sculpin でホムペを再構築"
+date: 2015-06-28 18:00
+tags: [雑記,php,xrea.com,Sculpin]
+categories: [ブログ]
+user_data: [hoge,fuga]
+
+---
+
+</code></pre>
+
+<p>の <code>user_data</code> の用な感じで自由に値を指定することも出来ます。</p>
+
+<p><code>post.data</code> と <code>data</code> は同じ内容を参照しているようです。</p>
+
+<h3 id="data-%E5%A4%89%E6%95%B0">data 変数</h3>
+
+<p><code>Frontmatter</code> (各ページ先頭での指示) で <code>use: XXX</code> として宣言されたコンテンツが読み込まれます。</p>
+
+<h2 id="tips%E7%9A%84%E3%81%AA%E3%82%81%E3%82%82">Tips的なめも</h2>
+
+<h3 id="%E3%83%96%E3%83%AD%E3%82%B0%E3%83%9A%E3%83%BC%E3%82%B8%E6%84%8F%E5%A4%96%E3%82%92%E5%8F%82%E7%85%A7%E3%81%99%E3%82%8B%E5%A4%89%E6%95%B0%E3%82%84%E6%96%B9%E6%B3%95%E3%81%AF%E7%84%A1%E3%81%84">ブログページ意外を参照する変数や方法は無い</h3>
+
+<p>Sculpin 自体には <code>SculpinPostsBundle</code> から生成される <code>blogs/YYYY/MM/DD/XXXX</code> を参照するような感じで、ブログページ以外の単体ページを参照する仕組みは標準ではなさそうです。
+ただ、拡張として内部の情報を参照する形で作れば出来そうな感じではあるようです。</p>
+
+<h3 id=".htaccess-%E8%87%AA%E4%BD%93%E3%82%92%E3%82%B3%E3%83%94%E3%83%BC%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AF%E5%87%BA%E6%9D%A5%E3%81%AA%E3%81%84">.htaccess 自体をコピーすることは出来ない</h3>
+
+<p>あれっと思いましたが、
+<a href="https://github.com/sculpin/sculpin/issues/121">Is it expected behavior that .htaccess file is not carried over from source dir to destination? - Issue #121 - sculpin/sculpin</a> を見ると <code>.htaccess</code> 自体をページ生成時にコピーすることは出来ない様です。
+が、ちょっと考えると <code>htaccess.twig</code> というファイルを作り</p>
+
+<pre><code>---
+permalink: .htaccess
+---
+# hoge fuga
+</code></pre>
+
+<p>とすればいいようです。</p>
+
+<h3 id="%E8%A8%98%E4%BA%8B%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E5%BC%B5%E3%82%8B%E3%81%AB%E3%81%AF%E3%83%A1%E3%82%BF%E6%83%85%E5%A0%B1%E3%81%8C%E5%BF%85%E8%A6%81">記事へのリンクを張るにはメタ情報が必要</h3>
+
+<p>ヘッダとして</p>
+
+<pre><code class="markdown"># Sculpin でホムペを再構築
+</code></pre>
+
+<p>の様にしても記事へのリンクが張られなかった。
+タグ情報とかも結局入れるのでこのような形にする</p>
+
+<pre><code class="markdown">---
+title: "Sculpin でホムペを再構築"
+
+---
+</code></pre>
+
+<h3 id="%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%E3%81%AF%E3%83%80%E3%83%96%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%A7%E5%9B%B2%E3%81%86%E3%81%B9%E3%81%97">タイトルはダブルコーテーションで囲うべし</h3>
+
+<p>タイトルの頭に記号が含まれると</p>
+
+<pre><code class="bash">$ php sculpin.phar generate --watch --server
+     ! FileSource:FilesystemDataSource:.../source:_posts/2013-01-24-user-jp-follow-up.md Reference "-user.jp(?ユーザのためのハブサイト)のその後を追跡調査" does not exist at line 0. !
+    Detected new or updated files
+    Generating: 100% (215 sources / 0.04 seconds)
+               :
+</code></pre>
+
+<p>の様に処理できない場合がある模様。
+なので、ダブルコーテーションで囲うことでこの問題を回避出来る。</p>
+
+<h3 id="%E3%83%87%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E3%81%A7%E5%85%A8%E3%81%A6%E3%81%AE%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E6%8B%A1%E5%BC%B5%E5%AD%90%E3%82%92%E4%BB%98%E3%81%91%E3%82%8B%E3%81%AB%E3%81%AF%EF%BC%9F">デフォルトで全てのページに拡張子を付けるには？</h3>
+
+<p>設定を下記のようにする。</p>
+
+<pre><code class="yaml"># app/config/sculpin_kernel.yml
+sculpin:
+    permalink: :basename.html
+
+</code></pre>
+
+<p>ただし、ページネーションやページ内に埋め込まれているリンクは別個修正する必要がある。</p>
+
+<h3 id="twig-extensions-%E3%82%92%E4%BD%BF%E3%81%86%E6%96%B9%E6%B3%95">Twig Extensions を使う方法</h3>
+
+<p><a href="http://twig.sensiolabs.org/doc/extensions/text.html">truncate</a> などを使用するために必要な <a href="http://twig.sensiolabs.org/doc/extensions/index.html">Twig Extensions</a> は <code>sculpin.phar</code> 自体には組み込まれていますが、デフォルトでは無効となっていてそのままでは利用できないようです。</p>
+
+<p>利用するには <code>app/config/sculpin_services.yml</code> を作り設定を行う必要があります。</p>
+
+<p><code>sculpin_services.yml</code> の利用方法は <a href="https://sculpin.io/documentation/bundles/SculpinPostsBundle/">SculpinPostsBundle — Sculpin — PHP Static Site Generator</a> あたりに書いてありますが、残念ながらドキュメントからのリンクが張られていないようです。</p>
+
+<p>また、残念なことに <code>sculpin_services_{ENV}.yml</code> の用な感じで環境ごとに拡張の有効/無効を切り替えて使用することは出来ないようです。</p>
+
+<pre><code class="yaml"># app/config/sculpin_services.yml
+services:
+    twig.extension.text:
+        class: Twig_Extensions_Extension_Text
+        tags:
+            - { name: twig.extension }
+</code></pre>
+
+<p>と、このようなファイルを作ることで</p>
+
+<pre><code class="html">&lt;div&gt;{{ post.contents | truncate }}&lt;/div&gt;
+</code></pre>
+
+<p>このように使用することが可能になります。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://sculpin.io/documentation/">Documentation — Sculpin — PHP Static Site Generator</a></li>
+<li><a href="http://blog.a-way-out.net/blog/2013/10/11/how-to-use-sculpin/">PHPで静的サイトを簡単に作成できるSculpin — A Day in Serenity (Reloaded) — PHP, FuelPHP, Linux or something</a></li>
+<li><a href="https://github.com/dragonmantank/solarized-sculpin">dragonmantank/solarized-sculpin</a></li>
+<li><a href="https://github.com/GhislainPhu/ghislainphu.fr/blob/29ff7d704dab9df39d586b7781c47955019c0864/app/config/sculpin_kernel.yml">ghislainphu.fr/sculpin_kernel.yml at 29ff7d704dab9df39d586b7781c47955019c0864 - GhislainPhu/ghislainphu.fr</a></li>
+<li><a href="http://twig.sensiolabs.org/doc/filters/index.html">Filters - Documentation - Twig - The flexible, fast, and secure PHP template engine</a></li>
+<li><a href="http://akasingo.com/483">Twig: 連想配列の連結</a></li>
+<li><a href="https://adamcod.es/2014/02/07/getting-started-with-sculpin.html">Getting Started With Sculpin - adamcod.es</a></li>
+<li><a href="https://github.com/andrewshell/blog.andrewshell.org">andrewshell/blog.andrewshell.org</a></li>
+<li><a href="https://sculpin.io/documentation/bundles/SculpinPostsBundle/">SculpinPostsBundle — Sculpin — PHP Static Site Generator</a></li>
+<li><a href="https://github.com/sculpin/sculpin/issues/121">Is it expected behavior that .htaccess file is not carried over from source dir to destination? - Issue #121 - sculpin/sculpin</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Sculpin を実行するために xrea.com 上で libxml2 を構築する方法]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/05/31/how-to-build-libxml2-on-xrea-com-for-sculpin.html"/>
+            <updated>2015-05-31T21:30:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/05/31/how-to-build-libxml2-on-xrea-com-for-sculpin.html</id>
+            <content type="html"><![CDATA[<p>Sculpin を xrea.com で動かそうとしたら、</p>
+
+<pre><code class="bash"># php55cli sculpin.phar self-update
+
+  [Symfony\Component\DependencyInjection\Exception\InvalidArgumentException]
+  Unable to parse file "phar:///virtual/XXXXXX/sculpin.phar/src/Sculpin/Bundle/
+  StandaloneBundle/DependencyInjection/../Resources/config/services.xml".
+
+  [InvalidArgumentException]
+  [ERROR 3070] complex type 'container': The content model is not determinist.
+   (in file:////tmp/sf2aedR4G - line 20, column 0)
+</code></pre>
+
+<p>って言われた。</p>
+
+<p>で、調べてみると <code>libxml</code> のバージョンによる問題っぽい感じ。</p>
+
+<pre><code class="bash"># ls -l /usr/lib/libxml*
+lrwxrwxrwx  1 root root      17 2006-07-24 11:38 /usr/lib/libxml2.so.2 -&gt; libxml2.so.2.6.20
+-rwxr-xr-x  1 root root 1223256 2005-09-10 01:31 /usr/lib/libxml2.so.2.6.20
+</code></pre>
+
+<p>なので <code>libxml</code> をビルドしてみることにした。</p>
+
+<p>s152.xrea.com サーバーで作業したので他のサーバーだとスペックが違うかもですが失敗も含め作業をメモしています。</p>
+
+<p>作業記録を兼ね失敗したことなども含め書いてあるので色々長いため、結論だけ知りたい場合は <a href="/blog/2015/05/31/how-to-build-libxml2-on-xrea-com-for-sculpin.html#%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a> まですっ飛ばすことをお勧めします。</p>
+
+<h2 id="libxml-%E3%82%92%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%EF%BC%86%E3%83%93%E3%83%AB%E3%83%89%E2%86%92%E5%A4%B1%E6%95%97">libxml をダウンロード＆ビルド→失敗</h2>
+
+<p>とりあえず <code>libxml</code> を <a href="https://git.gnome.org/browse/libxml2/">libxml2 - XML parser and markup toolkit</a> からダウンロードして解凍。</p>
+
+<pre><code class="bash"># pwd
+~
+# mkdir build
+# cd build
+# curl -kLO https://git.gnome.org/browse/libxml2/snapshot/libxml2-2.9.2.tar.xz
+# tar xf libxml2-2.9.2.tar.xz
+# cd libxml2-2.9.2
+</code></pre>
+
+<p><code>configure</code> が無いので <code>automake</code> で <code>configure</code> を作ってみる、、、がうまく行かなかった。</p>
+
+<pre><code class="bash"># pwd
+~/build/libxml2-2.9.2
+# ls -l configure.ac
+-rw-r--r--  1 XXXXXX XXXXXX 44763 2014-10-16 16:40 configure.ac
+# aclocal
+/usr/share/aclocal/progsreiserfs.m4:13: warning: underquoted definition of AC_CHECK_LIBREISERFS
+  run info '(automake)Extending aclocal'
+  or see http://sources.redhat.com/automake/automake.html#Extending-aclocal
+/usr/local/share/aclocal/libmcrypt.m4:17: warning: underquoted definition of AM_PATH_LIBMCRYPT
+configure.ac:2: error: Autoconf version 2.63 or higher is required
+configure.ac:2: the top level
+autom4te: /usr/bin/m4 failed with exit status: 63
+aclocal: autom4te failed with exit status: 63
+</code></pre>
+
+<p><a href="https://bugs.archlinux.org/task/20172#comments">FS#20172 : [progsreiserfs] underquoted definition of AC_CHECK_LIBREISERFS</a> を見てファイルをコピーし、修正してみるも</p>
+
+<pre><code class="bash"># pwd
+~/build/libxml2-2.9.2
+# cp -pr /usr/share/aclocal/ ../aclocal
+# vi ../aclocal/progsreiserfs.m4
+# diff /usr/share/aclocal/progsreiserfs.m4 ../aclocal/progsreiserfs.m4
+13c13
+&lt; AC_DEFUN(AC_CHECK_LIBREISERFS,
+---
+&gt; AC_DEFUN([AC_CHECK_LIBREISERFS],
+# aclocal --acdir=../aclocal
+/usr/local/share/aclocal/libmcrypt.m4:17: warning: underquoted definition of AM_PATH_LIBMCRYPT
+  run info '(automake)Extending aclocal'
+  or see http://sources.redhat.com/automake/automake.html#Extending-aclocal
+aclocal:configure.ac:52: warning: macro `AM_INIT_AUTOMAKE' not found in library
+aclocal:configure.ac:89: warning: macro `AM_CONDITIONAL' not found in library
+aclocal:configure.ac:216: warning: macro `AM_CONDITIONAL' not found in library
+aclocal:configure.ac:901: warning: macro `AM_CONDITIONAL' not found in library
+aclocal:configure.ac:1015: warning: macro `AM_CONDITIONAL' not found in library
+aclocal:configure.ac:1105: warning: macro `AM_CONDITIONAL' not found in library
+aclocal:configure.ac:1229: warning: macro `AM_CONDITIONAL' not found in library
+configure.ac:2: error: Autoconf version 2.63 or higher is required
+configure.ac:2: the top level
+autom4te: /usr/bin/m4 failed with exit status: 63
+aclocal: autom4te failed with exit status: 63
+</code></pre>
+
+<p>別のエラーが出てしまい、なおかつ、参照先のパスが変更できなかった。</p>
+
+<h2 id="automake-%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89%E2%86%92%E5%A4%B1%E6%95%97">automake のビルド→失敗</h2>
+
+<p>それならば、ということで今度は <code>automake</code> をビルドしてみることにした。</p>
+
+<p>とりあえず、 <a href="http://ftp.gnu.org/gnu/automake/?C=M;O=D">GNU Project Archives</a> からダウンロード＆解凍。</p>
+
+<pre><code class="bash"># cd ..
+# pwd
+~/build
+# curl -kLO http://ftp.gnu.org/gnu/automake/automake-1.15.tar.xz
+# tar xf automake-1.15.tar.xz
+# cd automake-1.15
+</code></pre>
+
+<p>そして <code>configure</code> をしてみると、、、</p>
+
+<pre><code class="bash"># ./configure  --prefix=$HOME/usr/automake
+checking whether make supports nested variables... yes
+checking build system type... i686-pc-linux-gnu
+checking host system type... i686-pc-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether ln -s works... yes
+checking for perl... /usr/local/bin/perl
+checking for tex... no
+checking for yacc... yacc
+checking for lex... lex
+checking whether autoconf is installed... yes
+checking whether autoconf works... yes
+checking whether autoconf is recent enough... no
+configure: error: Autoconf 2.65 or better is required.
+</code></pre>
+
+<p>！！！ <code>Autoconf 2.65 or better is required.</code> なん、、、だと？</p>
+
+<p>ぐぬぬ</p>
+
+<h2 id="autoconf-2.65-%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89%E2%86%92%E5%A4%B1%E6%95%97">Autoconf 2.65 のビルド→失敗</h2>
+
+<pre><code class="bash"># cd ..
+# pwd
+~/build
+# curl -OL http://ftpmirror.gnu.org/autoconf/autoconf-2.69.tar.gz
+# tar xzf autoconf-2.69.tar.gz
+# cd autoconf-2.69
+# ./configure --prefix=$HOME/usr/autoconf
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking build system type... i686-pc-linux-gnu
+checking host system type... i686-pc-linux-gnu
+configure: autobuild project... GNU Autoconf
+configure: autobuild revision... 2.69
+configure: autobuild hostname... s152
+configure: autobuild timestamp... 20150530T042915Z
+checking whether /bin/sh -n is known to work... yes
+checking for characters that cannot appear in file names... none
+checking whether directories can have trailing spaces... yes
+checking for expr... /usr/bin/expr
+checking for GNU M4 that supports accurate traces... configure: error: no acceptable m4 could be found in $PATH.
+GNU M4 1.4.6 or later is required; 1.4.16 or newer is recommended.
+GNU M4 1.4.15 uses a buggy replacement strstr on some systems.
+Glibc 2.9 - 2.12 and GNU M4 1.4.11 - 1.4.15 have another strstr bug.
+</code></pre>
+
+<p>ぐぬぬ</p>
+
+<h2 id="m4-1.4.17-%E3%82%92%E3%83%93%E3%83%AB%E3%83%89%EF%BC%86%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E2%86%92%E6%88%90%E5%8A%9F">m4 1.4.17 をビルド＆インストール→成功</h2>
+
+<pre><code class="bash"># cd ..
+# pwd
+~/build
+# curl -OL http://ftp.gnu.org/gnu/m4/m4-1.4.17.tar.xz
+# tar xf m4-1.4.17.tar.xz
+# cd m4-1.4.17
+# ./configure --prefix=$HOME/usr/m4
+# make
+# make install
+</code></pre>
+
+<h2 id="autoconf-2.65-%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89%EF%BC%86%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E2%86%92%E6%88%90%E5%8A%9F">Autoconf 2.65 のビルド＆インストール→成功</h2>
+
+<pre><code class="bash"># cd ../autoconf-2.69
+# pwd
+~/build/autoconf-2.69
+# PATH=$HOME/usr/m4/bin:$PATH ./configure --prefix=$HOME/usr/autoconf
+# PATH=$HOME/usr/m4/bin:$PATH make
+# PATH=$HOME/usr/m4/bin:$PATH make install
+</code></pre>
+
+<h2 id="automake-1.15-%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89%EF%BC%86%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E2%86%92%E6%88%90%E5%8A%9F">Automake 1.15 のビルド＆インストール→成功</h2>
+
+<pre><code class="bash"># cd ../automake-1.15
+# pwd
+~/build/automake-1.15
+# PATH=$HOME/usr/autoconf/bin:$PATH ./configure --prefix=$HOME/usr/automake
+# PATH=$HOME/usr/autoconf/bin:$PATH make
+# PATH=$HOME/usr/autoconf/bin:$PATH make install
+</code></pre>
+
+<h2 id="libxml-%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89%E2%86%92%E5%A4%B1%E6%95%97">libxml のビルド→失敗</h2>
+
+<pre><code class="bash"># cd ../libxml2-2.9.2
+# pwd
+~/build/libxml2-2.9.2
+# mkdir m4
+# PATH=$HOME/usr/autoconf/bin:$HOME/usr/m4/bin:$HOME/usr/automake/bin:$PATH aclocal
+# PATH=$HOME/usr/autoconf/bin:$HOME/usr/m4/bin:$HOME/usr/automake/bin:$PATH autoheader
+# PATH=$HOME/usr/autoconf/bin:$HOME/usr/m4/bin:$HOME/usr/automake/bin:$PATH automake
+configure.ac:52: warning: AM_INIT_AUTOMAKE: two- and three-arguments forms are deprecated.  For more info, see:
+configure.ac:52: http://www.gnu.org/software/automake/manual/automake.html#Modernize-AM_005fINIT_005fAUTOMAKE-invocation
+Makefile.am:22: error: Libtool library used but 'LIBTOOL' is undefined
+Makefile.am:22:   The usual way to define 'LIBTOOL' is to add 'LT_INIT'
+Makefile.am:22:   to 'configure.ac' and run 'aclocal' and 'autoconf' again.
+Makefile.am:22:   If 'LT_INIT' is in 'configure.ac', make sure
+Makefile.am:22:   its definition is in aclocal's search path.
+                         :
+    # PATH=$HOME/usr/autoconf/bin:$HOME/usr/m4/bin:$HOME/usr/automake/bin:$PATH autoscan
+    # PATH=$HOME/usr/autoconf/bin:$HOME/usr/m4/bin:$HOME/usr/automake/bin:$PATH autoconf
+    # PATH=$HOME/usr/automake/share/automake-1.15/:$PATH ./configure --prefix=$HOME/usr/libxml
+</code></pre>
+
+<p>なんか LibTool も居るみたい。</p>
+
+<h2 id="libtool-2.4.6-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%EF%BC%86%E3%83%93%E3%83%AB%E3%83%89%E2%86%92%E6%88%90%E5%8A%9F">LibTool 2.4.6 のインストール＆ビルド→成功</h2>
+
+<pre><code class="bash"># cd ..
+# pwd
+~/build
+# curl -OL http://ftp.gnu.org/gnu/libtool/libtool-2.4.6.tar.xz
+# tar xf libtool-2.4.6.tar.xz
+# cd libtool-2.4.6
+# PATH=$HOME/usr/m4/bin:$PATH ./configure --prefix=$HOME/usr/libtool
+# make
+# make install
+</code></pre>
+
+<h2 id="3-%E5%BA%A6%E7%9B%AE%E3%81%AE%E6%AD%A3%E7%9B%B4%E3%81%AA-libxml-%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89%EF%BC%86%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E2%86%92%E6%88%90%E5%8A%9F">3 度目の正直な libxml のビルド＆インストール→成功</h2>
+
+<pre><code class="bash"># cd ../libxml2-2.9.2
+# pwd
+~/build/libxml2-2.9.2
+# PATH=$HOME/usr/libtool/bin:$PATH libtoolize
+# PATH=$HOME/usr/autoconf/bin:$HOME/usr/m4/bin:$HOME/usr/automake/bin:$PATH aclocal
+# PATH=$HOME/usr/autoconf/bin:$HOME/usr/m4/bin:$HOME/usr/automake/bin:$PATH autoheader
+# PATH=$HOME/usr/autoconf/bin:$HOME/usr/m4/bin:$HOME/usr/automake/bin:$PATH automake --add-missing
+# PATH=$HOME/usr/autoconf/bin:$HOME/usr/m4/bin:$HOME/usr/automake/bin:$PATH autoconf
+# PATH=$HOME/usr/automake/share/automake-1.15/:$PATH ./configure --prefix=$HOME/usr/libxml --without-python
+                           :
+Checking lzma
+./configure: line 13094: syntax error near unexpected token `LZMA,liblzma,'
+./configure: line 13094: `    PKG_CHECK_MODULES(LZMA,liblzma,'
+</code></pre>
+
+<p>と <code>configure</code> 時にエラーが出るので少し修正。</p>
+
+<pre><code class="bash"># cp configure configure.old 
+# vi configure
+# diff configure.old configure
+13094,13096c13094,13096
+&lt;     PKG_CHECK_MODULES(LZMA,liblzma,
+&lt;         have_liblzma=yes,
+&lt;         have_liblzma=no)
+---
+&gt;     #PKG_CHECK_MODULES(LZMA,liblzma,
+&gt;     #    have_liblzma=yes,
+&gt;     #    have_liblzma=no)
+# PATH=$HOME/usr/automake/share/automake-1.15/:$PATH ./configure --prefix=$HOME/usr/libxml --without-python
+# make
+# make install
+</code></pre>
+
+<p>ちなみに <code>--without-python</code> オプションを指定しないと、システムディレクトリにインストール使用としてエラーが出てしまいます。
+インストール先のディレクトリを指定してもいいけど、まあ要らないので省いています。</p>
+
+<h2 id="sculpin-%E3%81%AE%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D">Sculpin の動作確認</h2>
+
+<pre><code class="bash"># LD_PRELOAD=~/usr/libxml/lib/libxml2.so php55cli sculpin.phar
+Sculpin version 2.0.x-dev (v2.0.0-46-g0862cc9) - app/dev/debug
+
+Usage:
+ [options] command [arguments]
+               :
+theme
+ theme:list        List currently installed themes.
+</code></pre>
+
+<p>と、うまく動くようになりました。</p>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<p>とりあえず、依存関係は</p>
+
+<pre><code class="mermaid">graph LR
+    libtool  --&gt; m4
+    libxml   --&gt; m4
+    libxml   --&gt; libtool
+    libxml   --&gt; automake
+    libxml   --&gt; autoconf
+    automake --&gt; autoconf
+</code></pre>
+
+<p>とこのようになっていました。</p>
+
+<p>ビルドは、</p>
+
+<ol>
+<li>m4</li>
+<li>libtool</li>
+<li>autoconf</li>
+<li>automake</li>
+<li>libxml</li>
+</ol>
+
+<p>の順でビルドしていくのが良いと思います。</p>
+
+<p>実際のコマンドラインは、</p>
+
+<p>まず、 <code>libxml</code> のビルドに必要なツール類のビルドを、</p>
+
+<pre><code class="bash"># mkdir -p build $HOME/usr/buildtools
+# cd build
+# for I in http://ftp.gnu.org/gnu/m4/m4-1.4.17.tar.xz http://ftp.gnu.org/gnu/libtool/libtool-2.4.6.tar.xz http://ftpmirror.gnu.org/autoconf/autoconf-2.69.tar.gz http://ftp.gnu.org/gnu/automake/automake-1.15.tar.xz ; do curl -LO $I ; done
+# for I in m4-1.4.17 libtool-2.4.6 autoconf-2.69 automake-1.15 ; do tar xf $I.tar.* ; pushd $I ; PATH=$HOME/usr/buildtools/bin:$PATH ./configure --prefix=$HOME/usr/buildtools ; PATH=$HOME/usr/buildtools/bin:$PATH make ; PATH=$HOME/usr/buildtools/bin:$PATH make install ; popd ; done
+</code></pre>
+
+<p>と、こんな感じで、 <code>$HOME/usr/buildtools</code> の下にインストールを行い、</p>
+
+<pre><code class="bash"># curl -kLO https://git.gnome.org/browse/libxml2/snapshot/libxml2-2.9.2.tar.xz
+# tar xf libxml2-2.9.2.tar.xz
+# pushd libxml2-2.9.2
+# for I in libtoolize aclocal autoheader "automake --add-missing" autoconf ; do PATH=$HOME/usr/buildtools/bin:$PATH $I ; done
+# sed -e 's/PKG_CHECK_MODULES(LZMA/#\0/g' -e 's/^        have_liblzma=/#\0/g' configure &gt; configure~ ; mv -f configure~ configure ; chmod +x configure
+# for I in "./configure --prefix=$HOME/usr/libxml --without-python" make "make install" ; do PATH=$HOME/usr/buildtools/bin:$HOME/usr/buildtools/share/automake-1.15/:$PATH $I ; done
+# popd
+</code></pre>
+
+<p>以上の感じで <code>libxml</code> をビルドすることが出来ると思います。</p>
+
+<pre><code class="bash"># ls -l ~/usr/libxml/*
+~/usr/libxml/bin:
+total 156
+-rwxr-xr-x  1 guest users   1684 2015-05-31 21:16 xml2-config
+-rwxr-xr-x  1 guest users  27475 2015-05-31 21:16 xmlcatalog
+-rwxr-xr-x  1 guest users 124327 2015-05-31 21:16 xmllint
+
+~/usr/libxml/include:
+total 0
+drwxr-xr-x  3 guest users 72 2015-05-31 21:16 libxml2
+
+~/usr/libxml/lib:
+total 7139
+drwxr-xr-x  3 guest users      72 2015-05-31 21:16 cmake
+-rw-r--r--  1 guest users 4103164 2015-05-31 21:16 libxml2.a
+-rwxr-xr-x  1 guest users     975 2015-05-31 21:16 libxml2.la
+lrwxrwxrwx  1 guest users      16 2015-05-31 21:16 libxml2.so -&gt; libxml2.so.2.9.2
+lrwxrwxrwx  1 guest users      16 2015-05-31 21:16 libxml2.so.2 -&gt; libxml2.so.2.9.2
+-rwxr-xr-x  1 guest users 3188079 2015-05-31 21:16 libxml2.so.2.9.2
+drwxr-xr-x  2 guest users      80 2015-05-31 21:16 pkgconfig
+-rw-r--r--  1 guest users     254 2015-05-31 21:16 xml2Conf.sh
+
+~/usr/libxml/share:
+total 0
+drwxr-xr-x  2 guest users 80 2015-05-31 21:16 aclocal
+drwxr-xr-x  3 guest users 80 2015-05-31 21:16 doc
+drwxr-xr-x  3 guest users 72 2015-05-31 21:16 gtk-doc
+drwxr-xr-x  4 guest users 96 2015-05-31 21:16 man
+</code></pre>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://qiita.com/ikedahidenori/items/8e533a9c168e269c4191">CORESERVERにgitをインストールする - Qiita</a></li>
+<li><a href="https://git.gnome.org/browse/libxml2/">libxml2 - XML parser and markup toolkit</a></li>
+<li><a href="http://www.xmlsoft.org/FAQ.html">FAQ</a></li>
+<li><a href="http://nopipi.hatenablog.com/entry/2013/01/14/025509">configureの作り方(autotoolsの使い方） - メモ。。メモ。。</a></li>
+<li><a href="https://bugs.archlinux.org/task/20172#comments">FS#20172 : [progsreiserfs] underquoted definition of AC_CHECK_LIBREISERFS</a></li>
+<li><a href="http://stackoverflow.com/questions/16612791/automake-demands-autoconf-2-65-or-better-and-yet-i-already-have-autoconf-2-69">Automake demands "Autoconf 2.65 or better" and yet I already have Autoconf 2.69 installed - Stack Overflow</a></li>
+<li><a href="https://github.com/dirkvdb/ffmpegthumbnailer/issues/37">aclocal: couldn't open directory `m4': No such file or directory · Issue #37 · dirkvdb/ffmpegthumbnailer</a></li>
+<li><a href="http://stackoverflow.com/questions/18978252/error-libtool-library-used-but-libtool-is-undefined#answer-18980043">c - error: Libtool library used but 'LIBTOOL' is undefined - Stack Overflow</a></li>
+</ul>
+]]></content>
+        </entry>
+    </feed>

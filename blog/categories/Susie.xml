@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/categories/Susie.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:32+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Project-μ Bitmap to DIB Filter]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/21/susie-ifktmkr.html"/>
+            <updated>2008-07-21T00:14:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/21/susie-ifktmkr.html</id>
+            <content type="html"><![CDATA[<div><a href="/files/ifktm001.lzh">DOWNLOAD</a> 2004/02/24
+</div>
+
+<div><p>
+Project-μ形式の BMPファイルを読み込む機能を追加するプラグインです
+</p>
+<p>
+<strong>対応形式</strong>
+</p>
+<ul>
+<li>
+北麻鞍博士の憂鬱 -体験版-
+</li>
+</ul>
+</div>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[D-Angel Archive extract plug-in]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/21/susie-axdangel.html"/>
+            <updated>2008-07-21T00:13:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/21/susie-axdangel.html</id>
+            <content type="html"><![CDATA[<div><a href="/files/axda003.lzh">DOWNLOAD</a> 2004/02/24
+</div>
+
+<div><p>
+D-Angel 形式のアーカイブファイルを読み込む機能を追加するプラグインです
+</p>
+<p>
+<strong>対応形式</strong>
+</p>
+<ul>
+<li>
+告白の甘い罠 -体験版-
+</li>
+<li>
+気になるルームメイト -体験版-
+</li>
+<li>
+黒薔薇は夜に咲く -DL用体験版-
+</li>
+</ul>
+</div>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Adv&#039;s extract plug-in]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/21/susie-axadvs.html"/>
+            <updated>2008-07-21T00:13:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/21/susie-axadvs.html</id>
+            <content type="html"><![CDATA[<div><a href="/files/axadv001.lzh">DOWNLOAD</a> 2004/02/24
+</div>
+
+<div><p>
+RYO 氏のアドベンチャーゲーム製作支援ソフト『Adv'S』のアーカイブファイルを読み込む機能を追加するプラグインです
+</p>
+<p>
+<strong>対応形式</strong>
+</p>
+<ul>
+<li>
+Ａｄｖ’Ｓ Ver.2.12 アーカイバ
+</li>
+<li>
+Ａｄｖ’Ｓ Ver.2.13 アーカイバ
+</li>
+</ul>
+</div>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[KiSS CEL to DIB Filter]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/21/susie-ifcel.html"/>
+            <updated>2008-07-21T00:12:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/21/susie-ifcel.html</id>
+            <content type="html"><![CDATA[<div><a href="/files/ifcl003a.lzh">DOWNLOAD</a> 2004/02/24
+</div>
+
+<div><p>
+KISSのCELファイルを読み込む機能を追加するプラグインです
+</p>
+<p>
+<strong>対応形式</strong>
+</p>
+<ul>
+<li>
+標準CELファイル(16色、256色)
+</li>
+<li>
+CKISS CELファイル(フルカラー)<br />模様との半透明合成も出来ます。<br />(読み込めないファイルや透明部分が変になる物もあるかもしれません)
+</li>
+<li>
+書庫内でもグレーカラーと標準１６色パレットを使い強制的に表示<br />(一様、確認できる程度のものですが...)
+</li>
+</ul>
+</div>
+]]></content>
+        </entry>
+    </feed>

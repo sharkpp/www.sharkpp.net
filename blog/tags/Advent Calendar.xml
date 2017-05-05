@@ -1,0 +1,2204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/Advent%20Calendar.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:49+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Hot Soup Processor Advent Calendar 2016 まとめ]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/12/25/hsp-advent-calendar-2016-25th-day.html"/>
+            <updated>2016-12-25T15:40:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/12/25/hsp-advent-calendar-2016-25th-day.html</id>
+            <content type="html"><![CDATA[<p>こんにちは、こんばんは。</p>
+
+<p><a href="http://qiita.com/advent-calendar/2016/hsp">Hot Soup Processor Advent Calendar 2016</a> の 最終日を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p>
+
+<p>まず始めに、呼びかけに応え Hot Soup Processor Advent Calendar 2016 へご参加いただいた11名の皆様に深く感謝を。</p>
+
+<p>今回、多分 HSP 史上初の Advent Calendar を開催して見ましたが、それのまとめ的なものを最後に投稿してみようかと思います。</p>
+
+<h2 id="%E6%8A%95%E7%A8%BF%E3%81%95%E3%82%8C%E3%81%9F%E8%A8%98%E4%BA%8B%E3%81%AE%E4%B8%80%E8%A6%A7">投稿された記事の一覧</h2>
+
+<table>
+<thead>
+<tr>
+  <th>日付</th>
+  <th>執筆者</th>
+  <th>記事</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>12/01</td>
+  <td><a href="http://qiita.com/sharkpp">sharkpp</a></td>
+  <td><a href="http://www.sharkpp.net/blog/2016/12/01/hsp-advent-calendar-2016-1st-day.html">macOS と Wine で作る HSP 3 の開発環境</a></td>
+</tr>
+<tr>
+  <td>12/02</td>
+  <td><a href="http://qiita.com/mjhd-devlion">mjhd-devlion</a></td>
+  <td><a href="http://qiita.com/mjhd-devlion/items/375ea9894294919380fd">Linux・MacでVimでHSP開発</a></td>
+</tr>
+<tr>
+  <td>12/03</td>
+  <td><a href="http://qiita.com/ptr-yudai">ptr-yudai</a></td>
+  <td><a href="http://qiita.com/ptr-yudai/items/3b834cd1765adb17ba96">HSP3のチート対策いろいろ -メモリハック編-</a></td>
+</tr>
+<tr>
+  <td>12/04</td>
+  <td><a href="http://qiita.com/theoldmoon0602">theoldmoon0602</a></td>
+  <td><a href="http://furutsuki.hatenablog.com/entry/2016/12/03/231056">hsp初心者なのでゲーム作った</a></td>
+</tr>
+<tr>
+  <td>12/05</td>
+  <td><a href="http://qiita.com/exrd">exrd</a></td>
+  <td><a href="http://qiita.com/exrd/items/8bc0be17a15ff77d3754">HSPで8パズルを高速に解くまで</a></td>
+</tr>
+<tr>
+  <td>12/06</td>
+  <td><a href="http://qiita.com/skymonsters_Ks">skymonsters_Ks</a></td>
+  <td><a href="http://uchitsukushi2.hatenablog.jp/entry/advent-calendar-2016-hsp-06">Notepad++でHSPスクリプトを編集・実行できるようにする</a></td>
+</tr>
+<tr>
+  <td>12/07</td>
+  <td><a href="http://qiita.com/y_tack">y_tack</a></td>
+  <td><a href="http://qiita.com/y_tack/items/b31b039ba236d962cf32">えたーなってる中のHSP製インタプリタについてとか</a></td>
+</tr>
+<tr>
+  <td>12/08</td>
+  <td><a href="http://qiita.com/zerogen_gre">zerogen_gre</a></td>
+  <td><a href="http://hspcube.blogspot.jp/2016/12/hsp.html">HSPでマップ表示</a></td>
+</tr>
+<tr>
+  <td>12/09</td>
+  <td><a href="http://qiita.com/hato">hato</a></td>
+  <td><a href="http://qiita.com/hato/items/7b720e87a408a6ab147a">HSPTV部門でのstart.ax削減術</a></td>
+</tr>
+<tr>
+  <td>12/10</td>
+  <td><a href="http://qiita.com/YSRKEN">YSRKEN</a></td>
+  <td><a href="http://qiita.com/YSRKEN/items/c3a69959c88cc56785a1">HSPで画像処理する際の覚書</a></td>
+</tr>
+<tr>
+  <td>12/11</td>
+  <td><a href="http://qiita.com/ptr-yudai">ptr-yudai</a></td>
+  <td><a href="http://qiita.com/ptr-yudai/items/d1583e3206eca1637fea">HSPのチート対策いろいろ -セーブデータ編-</a></td>
+</tr>
+<tr>
+  <td>12/12</td>
+  <td><a href="http://qiita.com/hato">hato</a></td>
+  <td><a href="http://qiita.com/hato/items/0d509766e62817da413c">HSPTV部門でのランキング機能活用術</a></td>
+</tr>
+<tr>
+  <td>12/13</td>
+  <td><a href="http://qiita.com/Jbox_sandbag">Jbox_sandbag</a></td>
+  <td><a href="http://hspboxinggame.blogspot.jp/2013/03/o2.html">O2システムの思い出</a></td>
+</tr>
+<tr>
+  <td>12/14</td>
+  <td><a href="http://qiita.com/kureikei">kureikei</a></td>
+  <td><a href="http://pronama.azurewebsites.net/2016/12/14/hsp3dish/">HSP3Dish で iOS アプリ開発を体験！</a></td>
+</tr>
+<tr>
+  <td>12/16</td>
+  <td><a href="http://qiita.com/skymonsters_Ks">skymonsters_Ks</a></td>
+  <td><a href="http://qiita.com/skymonsters_Ks/items/ad28c7a21ea55d2bbed8">HSPプログラムコンテストを振り返る</a></td>
+</tr>
+<tr>
+  <td>12/25</td>
+  <td><a href="http://qiita.com/sharkpp">sharkpp</a></td>
+  <td><a href="http://www.sharkpp.net/blog/2016-12-25-hsp-advent-calendar-2016-25th-day.html">Hot Soup Processor Advent Calendar 2016 まとめ</a></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="%E7%B5%90%E6%9E%9C">結果</h2>
+
+<p><code>執筆率 = 16 / 25 = 64%</code></p>
+
+<p>どのぐらいの日付が記事で埋まっているかの割合です。</p>
+
+<p>やはり、投稿募集の開始時期も直前だったことや、日付を詰めてもらった影響か最終週が丸々抜けてしまったのが響いているようですね。</p>
+
+<p>ただ、半分は超えたので、来年はもう少し記事を書いてもらえるように根回しとかもしてみようかと思います。</p>
+
+<p>まあ、来年も自分が主催？するならばですけど。</p>
+
+<p><code>参加率 = 12 / 25 = 48%</code></p>
+
+<p>これは、どのぐらいの人が記事を投稿しているかの割合です。</p>
+
+<p>空きがあったので、ツイートした所、何人かの人は２回目の投稿をしていただいたようで、実際の投稿よりも参加人数は少なっています。</p>
+
+<p><code>参加率 = 12 / 16 = 75%</code></p>
+
+<p>これは、投稿済みの記事に対してどのぐらいの人が記事を投稿しているかの割合です。</p>
+
+<p>一人、一投稿であれば <code>100%</code> で、一人で Advent Calendar な場合は <code>4%</code> になります。</p>
+
+<h2 id="%E6%8A%95%E7%A8%BF%E3%81%95%E3%82%8C%E3%81%9F%E8%A8%98%E4%BA%8B%E3%81%AE%E5%88%86%E9%A1%9E">投稿された記事の分類</h2>
+
+<p><strong>独断と偏見で</strong>カテゴライズ</p>
+
+<table>
+<thead>
+<tr>
+  <th>カテゴリ</th>
+  <th>1</th>
+  <th>2</th>
+  <th>3</th>
+  <th>4</th>
+  <th>5</th>
+  <th>6</th>
+  <th>7</th>
+  <th>8</th>
+  <th>9</th>
+  <th>10</th>
+  <th>11</th>
+  <th>12</th>
+  <th>13</th>
+  <th>14</th>
+  <th>16</th>
+  <th>25</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>環境構築</td>
+  <td>★</td>
+  <td>★</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>★</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>初心者向け</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>★</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>★</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>HSP プログラムコンテスト</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>★</td>
+  <td></td>
+  <td></td>
+  <td>★</td>
+  <td></td>
+  <td></td>
+  <td>★</td>
+  <td></td>
+</tr>
+<tr>
+  <td>HSP Dish</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>★</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>macOS</td>
+  <td>★</td>
+  <td>★</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>★</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>チート対策</td>
+  <td></td>
+  <td></td>
+  <td>★</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>★</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>アルゴリズム</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>★</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>★</td>
+  <td></td>
+  <td>★</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>その他</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>★</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>★</td>
+  <td></td>
+  <td>★</td>
+  <td>★</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="%E6%B3%A8%E7%9B%AE%E8%A8%98%E4%BA%8B">注目記事</h2>
+
+<p><strong>独断と偏見により</strong>、今回の Advent Calendar での注目記事を選びました。</p>
+
+<p>あっ、紹介の順番がイコールで順位ということではありません。</p>
+
+<ul>
+<li><p>10日目の記事「<a href="http://qiita.com/YSRKEN/items/c3a69959c88cc56785a1">HSPで画像処理する際の覚書</a>」</p>
+
+<p>画像処理に関して、標準命令での操作やArtlet2D、HSPCVごとの動作の違い、動作速度などをソースコードを交えながら詳細に解説する記事となっています。</p>
+
+<p>VRAM操作は、ある意味、初心者から中級者への壁の一つかなとも思います。
+まあ、手入れイヤーな操作が必要なのはどうなんだと思わなくもないですが、どうなんでしょうね。
+HSPCVといえば実装がされたHSP公開数日後(もしかしたら翌日かも)に、それを使った顔認識を作っり、どこかに公開したような記憶がありますが、さてどこへ行ったんだろう。</p></li>
+<li><p>11日目の記事「<a href="http://qiita.com/ptr-yudai/items/d1583e3206eca1637fea">HSPのチート対策いろいろ -セーブデータ編-</a>」</p>
+
+<p>ゲームを作る場合に気になる所である、セーブデータの保護の方法の一案をソースコードを交えながら解説してくれる記事となっています。</p>
+
+<p>初めてスコア改ざん検知機能を持ったHSPのゲームを見たのは <a href="http://www.vector.co.jp/soft/win95/game/se093109.html">GEO SHOOTERS</a>でしたね。
+ゲームで遊びつつ、セーブデータの解析をしたりとなかなか無茶なことをしていました。</p></li>
+<li><p>16日の記事「<a href="http://qiita.com/skymonsters_Ks/items/ad28c7a21ea55d2bbed8">HSPプログラムコンテストを振り返る - Qiita</a>」</p>
+
+<p>今年も含めた、HSPプログラムコンテストの歴史を、参加作品数の統計や考察を交え振り返る記事となっています。</p>
+
+<p>参加作品数のグラフを見るとだんだんと下降気味なのが残念ですね。
+近年は洗練された作品も多いですが、上位入賞者も若干固定化されてきている感じで、新しい風がもっと吹いて欲しいなと思ったり、その辺りも少し残念かなと思わなくもないです。
+あくまで印象ですが。</p></li>
+</ul>
+
+<p>それ以外の記事も、HSPの魅力を教えてくれたり、またHSPのこれまでの歩みを教えてくれる良い記事だと思いました。</p>
+
+<h2 id="%E6%9C%80%E5%BE%8C%E3%81%AB">最後に</h2>
+
+<p>改めて、<a href="http://qiita.com/advent-calendar/2016/hsp">Hot Soup Processor Advent Calendar 2016</a> にご参加いただきました皆様、そして記事を呼んでくださいました読者の方々に感謝を。</p>
+
+<p><strong>メリークリスマス！</strong></p>
+
+<hr />
+
+<p>この投稿は <strong><a href="http://qiita.com/advent-calendar/2016/hsp">Hot Soup Processor Advent Calendar 2016</a></strong> の <strong>25日目</strong>の記事です。</p>
+
+<ul>
+<li>16日目の記事: <a href="http://qiita.com/skymonsters_Ks/items/ad28c7a21ea55d2bbed8">HSPプログラムコンテストを振り返る</a></li>
+</ul>
+
+<hr />
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[QMacCocoaViewContainer を使ってみる]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/12/10/qt-advent-calendar-2016-10th-day.html"/>
+            <updated>2016-12-10T17:25:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/12/10/qt-advent-calendar-2016-10th-day.html</id>
+            <content type="html"><![CDATA[<p>こんにちは、こんばんは。</p>
+
+<p><a href="http://qiita.com/advent-calendar/2016/qt">Qt Advent Calendar 2016</a> の 10日目を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p>
+
+<p>今回は <a href="http://doc.qt.io/qt-5/qmaccocoaviewcontainer.html">QMacCocoaViewContainer</a> Class を触ってみようかと思います。</p>
+
+<p>題して「QMacCocoaViewContainer を使ってみる」です。</p>
+
+<h2 id="%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">はじめに</h2>
+
+<p>これは、 Qt で macOS Sierra の <a href="https://developer.apple.com/reference/appkit/nstouchbar">Touch Bar</a> を使ってみようとして挫折したあれこれのから生まれた記事であります。</p>
+
+<p>公式の方では <a href="https://bugreports.qt.io/browse/QTBUG-56908">[QTBUG-56908] Support NSTouchBar on latest MacBook Pro - Qt Bug Tracker</a> で 5.9 を目標に実装が提案？されているようです。</p>
+
+<p>まあ、とりあえず Touch Bar の事は忘れましょう。</p>
+
+<h2 id="%E7%92%B0%E5%A2%83">環境</h2>
+
+<table>
+<thead>
+<tr>
+  <th>項目</th>
+  <th>値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>OS</td>
+  <td>macOS Sierra 10.12.1 (16B2659)</td>
+</tr>
+<tr>
+  <td>Qt</td>
+  <td>5.7.0</td>
+</tr>
+<tr>
+  <td>Qt Creator</td>
+  <td>4.1.0</td>
+</tr>
+</tbody>
+</table>
+
+<p>この記事では Qt Creator でコードを書いていきます。</p>
+
+<h2 id="%E7%9B%AE%E6%A8%99%E3%81%AA%E3%81%A9">目標など</h2>
+
+<p>今回は <a href="https://developer.apple.com/reference/appkit/nsbutton">NSButton</a> を Qt のウインドウ上に表示してクリックをハンドリングするまでがこの記事の内容になります。</p>
+
+<p>とりあえず作るクラスの階層です。</p>
+
+<pre><code>CocoaButton -- QPushButton を派生
+  +-- CocoaButtonWrapper -- NSButton の参照を所有
+        +-- CocoaButtonProxy -- NSButton のクリックを CocoaButtonWrapper に送る
+</code></pre>
+
+<p><code>CocoaButton</code> が Qt のウィジェットとして利用できるようにするクラスで、そのほかに <code>CocoaButtonWrapper</code> や <code>CocoaButtonProxy</code> があります。</p>
+
+<h2 id="%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E4%BD%9C%E3%82%8B">プロジェクトを作る</h2>
+
+<p>まず適当なプロジェクトを作り、<code>NSButton</code> ボタン用のクラスを追加します。</p>
+
+<p><a href="http://doc.qt.io/qt-5/ios-support.html#using-objective-c-code-in-qt-applications">Using Objective-C Code in Qt Applications</a> に書かれているように <code>OBJECTIVE_SOURCES</code> に <code>.mm</code> ファイルを追加しますが、「クラスの定義」でソースファイル名の拡張子を <code>.mm</code> に変更した場合は自動で設定してくれるようです。</p>
+
+<p><a href="/images/2016_1210_qtcreator_newclass.png"><img src="/_thumbs/9821c8921f122c38b6db04654a1b4bba-384x384.png" alt="Qt Creator"></a></p>
+
+<p>また、 <code>NSButton</code> などを利用するので .pro に AppKit をリンクするように <code>LIBS</code> に追加します。</p>
+
+<pre><code class="diff"><br />  FORMS    += mainwindow.ui
++ 
++ OBJECTIVE_SOURCES += \
++     cocoabutton.mm
++ 
++ macx: LIBS += -framework AppKit
+</code></pre>
+
+<p>こんな感じです。</p>
+
+<p>完全な内容は <a href="https://github.com/sharkpp/MacCocoaWithQtSample/blob/master/MacCocoaWithQtSample.pro">MacCocoaWithQtSample.pro</a> を見てみてください。</p>
+
+<h2 id="cocoabutton-%E3%81%AE%E5%AE%9F%E8%A3%85">CocoaButton の実装</h2>
+
+<p>追加したファイルにクラスの実装をしていきます。</p>
+
+<p><a href="https://github.com/sharkpp/MacCocoaWithQtSample/blob/master/cocoabutton.mm">cocoabutton.mm</a> に <code>CocoaButton</code> を実装してきます。</p>
+
+<p>Qt Cretor のデザイナでボタンを設置したいがために <code>moveEvent</code> や <code>resizeEvent</code> を実装します。</p>
+
+<pre><code class="cpp">void CocoaButton::moveEvent(QMoveEvent *event)
+{
+    NSRect frame;
+    frame = [m_wrpper-&gt;m_refButton frame];
+    frame.origin.x = event-&gt;pos().x();
+    frame.origin.y = event-&gt;pos().y();
+    [m_wrpper-&gt;m_refButton setFrame:frame];
+}
+
+void CocoaButton::resizeEvent(QResizeEvent *event)
+{
+    NSRect frame;
+    frame = [m_wrpper-&gt;m_refButton frame];
+    frame.size.width = event-&gt;size().width();
+    frame.size.height = event-&gt;size().height();
+    [m_wrpper-&gt;m_refButton setFrame:frame];
+}
+</code></pre>
+
+<p><code>setText</code> でボタンのキャプションを変えれるようにしておきます。</p>
+
+<pre><code class="cpp">void CocoaButton::setText(const QString &amp;text)
+{
+    [m_wrpper-&gt;m_refButton setTitle: text.toNSString()];
+}
+</code></pre>
+
+<p>あとは、</p>
+
+<pre><code class="cpp">    CocoaButtonProxy *proxy = [[CocoaButtonProxy alloc] init:this];
+    [m_refButton setTarget:proxy];
+    [m_refButton setAction:@selector(clicked:)];
+</code></pre>
+
+<p>みたいな形で Objective-C で実装された target と action を登録して</p>
+
+<pre><code class="objectivec">- (IBAction)clicked:(id)sender
+{
+    proxyDest-&gt;handleClicked();
+}
+</code></pre>
+
+<p>とすれば、クリックで C++ で実装されたメソッドが呼び出せます。</p>
+
+<p>最後に <code>CocoaButtonProxy</code> から <code>CocoaButton</code> そしてその上位へとシグナルを飛ばすようにすれば、</p>
+
+<pre><code class="cpp">connect(ui-&gt;buttonCocoa, SIGNAL(clicked()), this, SLOT(onCocoaButtonClick()));
+</code></pre>
+
+<p>このような形でシグナルを受け取ることができます。</p>
+
+<p><a href="/images/2016_1210_sample_ss.png"><img src="/_thumbs/199fc30fdfe0a59ceab9e8c4e83bc0e6-384x384.png" alt="Qt Creator"></a></p>
+
+<p>実際に動かすとこんな感じです。</p>
+
+<h2 id="%E6%88%90%E6%9E%9C%E7%89%A9">成果物</h2>
+
+<p><a href="https://github.com/sharkpp/MacCocoaWithQtSample">sharkpp/MacCocoaWithQtSample</a> に今回の記事の完全なソースを置いておきます。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://doc.qt.io/qt-5/qmaccocoaviewcontainer.html">QMacCocoaViewContainer Class | Qt Widgets 5.7</a></li>
+<li><a href="https://bugreports.qt.io/browse/QTBUG-40583">[QTBUG-40583] Unable to use QMacCocoaViewContainer - Qt Bug Tracker</a></li>
+<li><a href="https://github.com/vasi/vdfuse/blob/master/include/VBox/VBoxCocoa.h">vdfuse/VBoxCocoa.h at master - vasi/vdfuse</a></li>
+</ul>
+
+<h2 id="%E6%9C%80%E5%BE%8C%E3%81%AB">最後に</h2>
+
+<p>今回は、<a href="https://developer.apple.com/reference/appkit/nstouchbar">Touch Bar</a> を Qt から使ってみたい、から始まり結果、かなりスケールダウンした記事となりましたが、それもこれも、初めてさわる Objective-C が原因でしたが、今回いろいろ調べてなんとなくわかってきたので Touch Bar の方も何かしらためせるといいなと思っています。</p>
+
+<p>それでは、また。</p>
+
+<p>明日は <a href="https://twitter.com/nekomatu">@nekomatu</a> さんによる「<a href="http://nekomatu.blogspot.jp/2016/12/develop-qtapp-with-qtcreator-on-buildroot.html">BuildrootとQtCreatorを使ってQtアプリを開発する方法</a>」です。
+お楽しみに。</p>
+
+<hr />
+
+<p>この投稿は <strong><a href="http://qiita.com/advent-calendar/2016/qt">Qt Advent Calendar 2016</a></strong> の <strong>10日目</strong>の記事です。</p>
+
+<ul>
+<li>９日目の記事: <a href="http://qiita.com/hermit4/items/6282640a7fe4dbcdec43">スレッドの同期について学ぼう(その１）</a></li>
+<li>11日目の記事: <a href="http://nekomatu.blogspot.jp/2016/12/develop-qtapp-with-qtcreator-on-buildroot.html">BuildrootとQtCreatorを使ってQtアプリを開発する方法</a></li>
+</ul>
+
+<hr />
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[macOS と Wine で作る HSP 3 の開発環境]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/12/01/hsp-advent-calendar-2016-1st-day.html"/>
+            <updated>2016-12-01T01:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/12/01/hsp-advent-calendar-2016-1st-day.html</id>
+            <content type="html"><![CDATA[<p>こんにちは、こんばんは。</p>
+
+<p><a href="http://qiita.com/advent-calendar/2016/hsp">Hot Soup Processor Advent Calendar 2016</a> の 初日を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p>
+
+<p>この記事は、macOS 上で、どうしても HSP 3 のアプリを開発したい、iOS アプリのデプロイ時だけではなく HSPDish での開発時も macOS で行いたい、そういった人が、HSP 3 の開発環境を手に入れるまでの手順です。</p>
+
+<p>題して「macOS と Wine で作る HSP 3 の開発環境」です。</p>
+
+<h2 id="%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%AA%E3%82%8B%E3%81%93%E3%81%A8">できるようになること</h2>
+
+<p>この記事に書かれていることを一通り行うと</p>
+
+<ul>
+<li>macOS で HSPDish 用のソースがコンパイルができる</li>
+<li>hgimg3 が動作する</li>
+</ul>
+
+<p>が、できるようになります。</p>
+
+<p>今回は諦めること。</p>
+
+<ul>
+<li>hgimg4 が動作する
+Wine にパッチを当てないとダメっぽいので、どうしてもやりたい場合は <a href="/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html">Wine を使って Mac OS X で HSP と hgimg4 を動かしてみた</a> を見ながら試してみてください。</li>
+<li>オフラインでの HSP Document Library の動作
+IE コンポーネントがうまく動作しない模様なので</li>
+</ul>
+
+<p>この記事を読みにあたっては、最低限 macOS のシェルが触れることが必要とされています。</p>
+
+<h2 id="%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">はじめに</h2>
+
+<p>まずはじめに、必要なソフトウェアの一覧です。</p>
+
+<ul>
+<li><a href="http://hsp.tv/">HSP 3</a> -- これがないと始まりませんよね？</li>
+<li><a href="https://www.winehq.org/">Wine</a> -- macOSでWindowsの実行ファイルを起動させるために必要です</li>
+</ul>
+
+<h2 id="wine">Wine</h2>
+
+<p>今回は、安定版ではなく開発版の Wine を利用します。</p>
+
+<p>基本的には、安定版も手順は変わらないと思います。</p>
+
+<p>macOS 用の Wine は <a href="https://dl.winehq.org/wine-builds/macosx/download.html">https://dl.winehq.org/wine-builds/macosx/download.html</a> からダウンロードして、と行きたいのですが、どうやら現時点での最新の 1.9.23 から遡ること 1.9.9 まで、HSP が利用している API がうまく動いてくれないようなのです。</p>
+
+<p>上記バージョンで動作させると</p>
+
+<p><a href="/images/2016_1201_hsp3_throw_error_with_lastest_wine.png"><img src="/_thumbs/4d2bdb380dd65586fc0f3cb359b39d34-384x384.png" alt="最新のWineでHSPを実行するとエラーが出る"></a></p>
+
+<p>のような感じで画像読み込み時にエラーが出ます。</p>
+
+<p>なので、</p>
+
+<p><a href="/images/2016_1201_wine_mac_archive_link.png"><img src="/_thumbs/30fb512f557aef34bf097ac8406e2232-384x384.png" alt="Wine の過去にリリースされたファイルの一覧ページへ"></a> 
+<a href="/images/2016_1201_wine_mac_find_package.png"><img src="/_thumbs/2f5dc8ee3deb899b4dc0c02eef5d9dfd-384x384.png" alt="Wine 1.9.8 のパッケージを探す"></a></p>
+
+<p>このように辿り、<a href="https://dl.winehq.org/wine-builds/macosx/i686/">Index of /wine-builds/macosx/i686</a> から <code>winehq-staging-1.9.8.pkg</code> をダウンロードしインストールしていきます。</p>
+
+<h3 id="wine-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">Wine のインストール</h3>
+
+<p><a href="/images/2016_1201_wine_install_wizard_page_1.png"><img src="/_thumbs/20843081dfc77af1871777b78752172a-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 01"></a> 
+<a href="/images/2016_1201_wine_install_wizard_page_2.png"><img src="/_thumbs/62a72b0957ba33d2e9e25450fb2ea423-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 02"></a> 
+<a href="/images/2016_1201_wine_install_wizard_page_3.png"><img src="/_thumbs/5e8f072785fd5473d8d0df3e73dc8b72-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 03"></a> 
+<a href="/images/2016_1201_wine_install_wizard_page_4.png"><img src="/_thumbs/1e26bc8228b6c2373e2c5e130df4c8d3-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 04"></a> 
+<a href="/images/2016_1201_wine_install_wizard_page_5.png"><img src="/_thumbs/9f7937bfe8b23939169398ca9e5a3444-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 05"></a> 
+<a href="/images/2016_1201_wine_install_wizard_page_6.png"><img src="/_thumbs/8414c79a227cf3eb3201af1d62deb5e7-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 06"></a> 
+<a href="/images/2016_1201_wine_install_wizard_page_7.png"><img src="/_thumbs/736c27a4bedefc9fb27a6d7916b82439-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 07"></a></p>
+
+<p>インストールウィザードでは特に選択を変更する部分はありません。</p>
+
+<p><a href="/images/2016_1201_wine_in_applications.png"><img src="/_thumbs/13e5b4843ca08e1bfbc39f907258f113-384x384.png" alt="アプリケーションにインストールされたWine"></a></p>
+
+<p>インストールが完了すると、アプリケーションに追加されます。</p>
+
+<p><a href="/images/2016_1201_wine_console.png"><img src="/_thumbs/8ed440fda3dd2fc4dfae39accc32d45c-384x384.png" alt="Wineコンソール"></a></p>
+
+<p>アプリケーションから <code>Wine Staging</code> を選び、ターミナルを起動します。
+ターミナルから</p>
+
+<pre><code>$ winecfg
+</code></pre>
+
+<p>と入力し実行すると、 <code>winecfg</code> が起動する前に、Wine の動作環境の作成が行われます。</p>
+
+<p><a href="/images/2016_1201_wine_mono_install_select.png"><img src="/_thumbs/b6a8591a422d0597a5380158439bc59b-384x384.png" alt="Wine環境構築中のWine-Monoインストール確認"></a></p>
+
+<p>途中、 Wine-Mono をインストールするかどうか聞かれますが、これはどちらを選んでも問題ないです。</p>
+
+<p><code>winecfg</code> が起動したら、特に設定を変更することがない場合はそっと閉じます。</p>
+
+<p>次は、日本語の表示ができるように設定を変更します。</p>
+
+<p>設定しないと</p>
+
+<p><a href="/images/2016_0326_hsp_install_wizard_tofu.png"><img src="/_thumbs/e2f456d9675823508a2d47ecb49a0bca-256x256.png" alt="HSP インストールウィザード 豆腐"></a></p>
+
+<p>こんな感じになります。</p>
+
+<p>所謂、豆腐ですね。</p>
+
+<h3 id="wine-%E3%81%AB%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%AE%E8%A1%A8%E7%A4%BA%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%81%AA%E3%81%A9%E3%82%92%E8%A1%8C%E3%81%86">Wine に日本語の表示のための設定などを行う</h3>
+
+<p><a href="http://www.geocities.jp/ipa_mona/">IPAモナーフォント</a> のページから <a href="http://www.geocities.jp/ipa_mona/opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8.tar.gz">opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8.tar.gz</a> をダウンロードし <code>~/.wine/drive_c/windows/Fonts/</code> へ放り込みます。</p>
+
+<p>コマンドラインだけでやるなら</p>
+
+<pre><code class="bash">$ wget http://www.geocities.jp/ipa_mona/opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8.tar.gz
+$ tar xzf opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8.tar.gz
+$ mv opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8/fonts/ipa*.ttf ~/.wine/drive_c/windows/Fonts/
+$ rm -rf opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8
+</code></pre>
+
+<p>こんな感じです。</p>
+
+<p>次に、<code>MS Gothic</code> などのフォントを別のフォント(ここでは IPA モナー フォント)のエリアスとする設定をします。</p>
+
+<pre><code class="ini">REGEDIT4
+
+[HKEY_CURRENT_USER¥Software¥Wine¥Fonts¥Replacements]
+"MS Gothic"="IPA モナー ゴシック"
+"MS Mincho"="IPA モナー 明朝"
+"MS PGothic"="IPA モナー Pゴシック"
+"MS PMincho"="IPA モナー P明朝"
+"MS UI Gothic"="IPA モナー UIゴシック"
+"ＭＳ ゴシック"="IPA モナー ゴシック"
+"ＭＳ 明朝"="IPA モナー 明朝"
+"ＭＳ Ｐゴシック"="IPA モナー Pゴシック"
+"ＭＳ Ｐ明朝"="IPA モナー P明朝"
+</code></pre>
+
+<p>を <strong>Shift_JIS</strong> で！ <code>wine-font-replace-mona.reg</code> として保存しレジストリを更新します。</p>
+
+<p>コピペも面倒な場合は、 <a href="/files/2016_0326_wine-font-replace-mona.reg">wine-font-replace-mona.reg</a> をダウンロードしてください。</p>
+
+<pre><code class="bash">$ wine regedit wine-font-replace-mona.reg
+</code></pre>
+
+<p><a href="https://www.google.com/get/noto/">Google Noto Fonts</a> でも問題ないですが、このフォントには明朝がないので注意です。</p>
+
+<p>Google Noto Fonts を利用する場合は、こんな感じです。</p>
+
+<p><a href="https://www.google.com/get/noto/">Google Noto Fonts</a> から <code>Noto Sans CJK JP</code> をダウンロードし利用します。</p>
+
+<pre><code class="bash">$ wget https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip
+$ unzip NotoSansCJKjp-hinted.zip
+$ mv *.otf ~/.wine/drive_c/windows/Fonts/
+$ rm -f NotoSansCJKjp-hinted.zip LICENSE_OFL.txt
+</code></pre>
+
+<p>レジストリに設定する内容は、例えば</p>
+
+<pre><code class="ini">REGEDIT4
+
+[HKEY_CURRENT_USER¥Software¥Wine¥Fonts¥Replacements]
+"MS Gothic"="Noto Sans Mono CJK JP Regular"
+"MS Mincho"="Noto Sans Mono CJK JP Regular"
+"MS PGothic"="Noto Sans CJK JP Medium"
+"MS PMincho"="Noto Sans CJK JP Medium"
+"MS UI Gothic"="Noto Sans CJK JP Medium"
+"ＭＳ ゴシック"="Noto Sans Mono CJK JP Regular"
+"ＭＳ 明朝"="Noto Sans Mono CJK JP Regular"
+"ＭＳ Ｐゴシック"="Noto Sans CJK JP Medium"
+"ＭＳ Ｐ明朝"="Noto Sans CJK JP Medium"
+</code></pre>
+
+<p>こんな感じです。</p>
+
+<p>最後に、フォントのスムース処理の設定を行います。</p>
+
+<pre><code class="registory">REGEDIT4
+
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"FontSmoothing"="1"
+"FontSmoothingGamma"=dword:00000578
+"FontSmoothingOrientation"=dword:00000001
+"FontSmoothingType"=dword:00000002
+</code></pre>
+
+<p>を同じく <strong>Shift_JIS</strong> で！ <code>wine-font-smoothing-rgb.reg</code> として保存しレジストリを更新します。</p>
+
+<p>コピペがやっぱり面倒な場合は、 <a href="/files/2016_0326_wine-font-smoothing-rgb.reg">wine-font-smoothing-rgb.reg</a> をダウンロードしてください。</p>
+
+<pre><code>$ wine regedit wine-font-smoothing-rgb.reg
+</code></pre>
+
+<h2 id="hsp">HSP</h2>
+
+<p>ここでは、現時点での最新の安定版 HSP 3.4 を利用します。</p>
+
+<p>なぜ Wine は開発版を使うんだというツッコミはなしです。</p>
+
+<p><a href="http://hsp.tv/make/downlist.html">http://hsp.tv/make/downlist.html</a> から HSP 3.4 をダウンロードしてください。</p>
+
+<p><a href="/images/2016_1201_hsp3_download.png"><img src="/_thumbs/f8bde4f60f8a4926975e8b4997c59f9c-384x384.png" alt="hsp.tv"></a> 
+<a href="/images/2016_1201_hsp3_download_list_page.png"><img src="/_thumbs/0a55fd8f63615f92762cb454ff1d8c36-384x384.png" alt="hsp.tv HSPダウンロードページ"></a></p>
+
+<h3 id="hsp-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">HSP のインストール</h3>
+
+<p>ダウンロードした <code>hsp34.exe</code> をダブルクリックし、インストーラを起動します。</p>
+
+<p>途中の「デスクトップ上にアイコンを作成する」や「拡張子の関連付けを行う」はチェックを外しておきましょう。</p>
+
+<p>それ以外のインストール先などは、お好みで。</p>
+
+<p><a href="/images/2016_1201_hsp_install_wizard_page_1.png"><img src="/_thumbs/d6d8ca748755902b7f4fb2a783238025-128x128.png" alt="HSP 3.4 インストールウィザード ページ 01"></a> 
+<a href="/images/2016_1201_hsp_install_wizard_page_2.png"><img src="/_thumbs/8c10c7f04723aef7551c2a9f20b5b697-128x128.png" alt="HSP 3.4 インストールウィザード ページ 02"></a> 
+<a href="/images/2016_1201_hsp_install_wizard_page_3.png"><img src="/_thumbs/71954faafec64ecdefcbceb9c4e2251c-128x128.png" alt="HSP 3.4 インストールウィザード ページ 03"></a> 
+<a href="/images/2016_1201_hsp_install_wizard_page_4.png"><img src="/_thumbs/95c9d676804dff72d93fbdacc0c2bc27-128x128.png" alt="HSP 3.4 インストールウィザード ページ 04"></a> 
+<a href="/images/2016_1201_hsp_install_wizard_page_5.png"><img src="/_thumbs/8a10d80408688d9d8638ea7bb00d8110-128x128.png" alt="HSP 3.4 インストールウィザード ページ 05"></a> 
+<a href="/images/2016_1201_hsp_install_wizard_page_6.png"><img src="/_thumbs/106dd846e3dfd7ca39ed4f4e27152818-128x128.png" alt="HSP 3.4 インストールウィザード ページ 06"></a> 
+<a href="/images/2016_1201_hsp_install_wizard_page_7.png"><img src="/_thumbs/13a0fac17951990a9d55355605bc729b-128x128.png" alt="HSP 3.4 インストールウィザード ページ 07"></a></p>
+
+<p>インストールが完了したら、デモアプリが起動します。</p>
+
+<p><a href="/images/2016_1201_hsp_demo.png"><img src="/_thumbs/0b46aff93b34371fc3fbfc981f123232-384x384.png" alt="HSPのデモアプリ"></a></p>
+
+<p>エラーもなく起動していれば OK です。</p>
+
+<p>Wine で <code>WINEPREFIX</code> を利用し環境を切り替えていなければ、 <code>~/.wine/drive_c/hsp34</code> にインストールされていると思います。</p>
+
+<pre><code class="bash">$ wine c:\\hsp34\\hsed3.exe
+</code></pre>
+
+<p>スクリプトエディタの実行ファイルを起動すると、Windwos と同じようにエディタが起動すると思います。</p>
+
+<p><a href="/images/2016_1201_hsp_script_edtor.png"><img src="/_thumbs/97b79398c171fb59a71f4749777b06e1-384x384.png" alt="HSPの標準エディタ"></a></p>
+
+<p>ついでにアシスタントも起動しているので、必要なければ設定から起動しないようにしておきましょう。</p>
+
+<p><a href="/images/2016_1201_hsp_script_edtor_disable_auto_run_assistant.png"><img src="/_thumbs/4bf083e788d1bfeb05b06096b3a2ff06-384x384.png" alt="HSPの標準エディタの設定を変更"></a></p>
+
+<p>この時点で、HSPDishのプログラムもコンパイルできるようになっていると思います。</p>
+
+<p><a href="/images/2016_1201_hspdish_sample.png"><img src="/_thumbs/b8fde9d75e7d5f5ef6ba9a6325616c8b-384x384.png" alt="HSPDishのサンプル"></a></p>
+
+<p>hgimg4 を利用する場合は、もう少し手間がかかります。</p>
+
+<p>ということで、時間切れ。</p>
+
+<p>ここまで読んでいただきありがとうございます。</p>
+
+<p>次は <a href="https://twitter.com/mjhd_devlion">@mjhd_devlion</a> さんの <a href="http://qiita.com/mjhd-devlion/items/375ea9894294919380fd">Linux・MacでVimでHSP開発</a> です。</p>
+
+<h2 id="%E3%82%84%E3%82%8A%E6%AE%8B%E3%81%97%E3%81%9F%E3%81%93%E3%81%A8">やり残したこと</h2>
+
+<p>残念ながら、今回は諸事情でできなかったことがあります。</p>
+
+<ul>
+<li>Wine 最新版で動作しない
+
+<ul>
+<li>これは、Wine側の問題ではないかと思うので、少し調べてみたいと思います。</li>
+</ul></li>
+<li>HSP Help Library が動作しない
+
+<ul>
+<li>Wine に IE をインストールするのは難しいようなので諦めたほうがいいかも。</li>
+<li>公式で動作していたものはいつの間にかサーバーエラーとなるようなので <a href="https://twitter.com/mjhd_devlion">@mjhd_devlion</a> さんの <a href="http://ohdl.hsproom.me/">ohdl.hsproom.me</a> で確認するのがいいと思います。</li>
+<li>Wine-Gecko なる IE 互換のアプリがあるようなのですが、はたして。</li>
+</ul></li>
+<li>hgimg4 が動作しない。
+
+<ul>
+<li><a href="/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html">Wine を使って Mac OS X で HSP と hgimg4 を動かしてみた</a> を見ながら頑張りましょう。</li>
+</ul></li>
+<li>iOS のアプリを実際に作れるまでの流れ
+
+<ul>
+<li>これも、いろいろ調べながら試してみたいです。</li>
+</ul></li>
+</ul>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html">Wine を使って Mac OS X で HSP と hgimg4 を動かしてみた</a></li>
+<li><a href="https://wiki.winehq.org/MacOSX">MacOSX - WineHQ Wiki</a></li>
+<li><a href="http://oxynotes.com/?p=10293">Google Fontsの日本語フォント「Noto Fonts」の使い方 | OXY NOTES</a></li>
+<li><a href="http://www.geocities.jp/ipa_mona/">IPAモナーフォント</a></li>
+<li><a href="https://technet.microsoft.com/en-us/library/cc978612.aspx">FontSmoothing</a></li>
+<li><a href="http://d.hatena.ne.jp/kakurasan/20090107/p1">Wine 1.1.12におけるフォントのサブピクセルレンダリングについて - 試験運用中なLinux備忘録</a></li>
+</ul>
+
+<hr />
+
+<p>この投稿は <strong><a href="http://qiita.com/advent-calendar/2016/hsp">Hot Soup Processor Advent Calendar 2016</a></strong> の <strong>1日目</strong>の記事です。</p>
+
+<ul>
+<li>2日目の記事: <a href="http://qiita.com/mjhd-devlion/items/375ea9894294919380fd">Linux・MacでVimでHSP開発</a></li>
+</ul>
+
+<hr />
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[HSP の Advent Calendar を作ってみたよ]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/11/28/advent-calendar-for-hsp-2016.html"/>
+            <updated>2016-11-28T13:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/11/28/advent-calendar-for-hsp-2016.html</id>
+            <content type="html"><![CDATA[<p>みなさま、今年も Advent Calendar の季節がやってきました。
+本来はキリスト教のお祭りであるところのクリスマスまでの日数を、わくわくしながら一日一日を指折り数える行事だったようですが、最近はクリスマスまでの毎日をあるテーマに沿ってやってみよう、みたいなイベントになっているようです。
+これに関していえば、まあ世界中でそんな感じのようなので、別に日本人が節操なし、とかそういう類ではないと思います、はい。</p>
+
+<p>前置きが長くなりましたが、 Hot Soup Processor をテーマにした Advent Calendar を Qiita のサービスを利用して作りました。</p>
+
+<p><a href="http://qiita.com/advent-calendar/2016/hsp">Hot Soup Processor Advent Calendar 2016 - Qiita</a></p>
+
+<p>公式BBSスレッド「<a href="http://hsp.tv/play/pforum.php?mode=all&amp;num=77390">HSPのAdvent Calendarを作りました</a>」</p>
+
+<p>ので、皆様奮ってご参加いただければと思います。</p>
+
+<h2 id="%E3%83%8D%E3%82%BF">ネタ</h2>
+
+<p>BBSのスレッドにも例として書きましたが、</p>
+
+<ul>
+<li>「HSPDishでのiOSアプリ開発入門：環境構築編」</li>
+<li>「サクラエディタでHSPの開発環境を作る方法」</li>
+<li>「macOSで構築するHSP開発環境」</li>
+<li>「blenderとHSP3+hgimg4で作る3Dゲーム入門」</li>
+<li>「HSPプログラムコンテスト HSPTV部門 最後のあがき」</li>
+<li>「OpenHSP探検の手引き」</li>
+<li>「HSPプログラムコンテスト統計 2016年版」</li>
+<li>「５分で出来るHSP3入門」</li>
+<li>「HSPDishで作るAndroidアプリのはまりどころ」</li>
+</ul>
+
+<p>などで、ほかの人とかぶらないように適当に書こうかと思います。</p>
+
+<h2 id="%E7%B5%8C%E7%B7%AF">経緯</h2>
+
+<p>経緯というほど大した話ではないです。</p>
+
+<p>これは、さること昨年の 11月29日  のこと</p>
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/hsp3?src=hash">#hsp3</a> で Advent Calendar 作ったら誰か書くかなぁ？ (自分が書くと入っていない)</p>&mdash; さめたすたす (@sharkpp) <a href="https://twitter.com/sharkpp/status/670970594578456576">2015年11月29日</a></blockquote>
+
+<p>と、つぶやきつつも、結局のところ何もしなかったのでちょっと後悔していたので、今年は行動に起こしてみることにしたという訳です。</p>
+
+<p>まあ、遡ると 2012年11月21日 にも</p>
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">なんか所々でアドベントカレンダーやってるけど、HSPではやらないのだろうか？ <a href="https://twitter.com/hashtag/hsp3?src=hash">#hsp3</a></p>&mdash; さめたすたす (@sharkpp) <a href="https://twitter.com/sharkpp/status/271094265105506304">2012年11月21日</a></blockquote>
+
+<p>みたいなことをつぶやいていたようですが。</p>
+
+<p>あ、あと、公式BBSのスレッド、本文は直したのですが、タイトルの方に年を付けるの忘れてましたorz</p>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[NestedSets Model を使って FuelPHP 用コメントボックスパッケージを作った話]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/12/05/fuelphp-advent-calender-2015-5th.html"/>
+            <updated>2015-12-05T01:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/12/05/fuelphp-advent-calender-2015-5th.html</id>
+            <content type="html"><![CDATA[<p>こんにちは、こんばんは、昨日に引き続き <a href="http://qiita.com/advent-calendar/2015/fuelphp">FuelPHP Advent Calendar 2015</a> の 5 日目を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p>
+
+<p>今回は、一番最後に追加された <a href="http://fuelphp.com/docs/packages/orm/model/nestedset.html">NestedSets Model</a> (日本語訳は <a href="http://fuelphp.jp/docs/1.8/packages/orm/model/nestedset.html">NestedSets Model @ fuelphp.jp</a> を参照) を使って <a href="https://disqus.com/">Disqus</a> や <a href="https://developers.facebook.com/docs/plugins/comments">Facebook Comments</a> のようなものを貼り付けられる FuelPHP パッケージを作ってみた話をしようかと思います。</p>
+
+<p>実際のパッケージは <a href="https://github.com/sharkpp/fuel-commentbox">sharkpp/fuel-commentbox</a> からダウンロードできます。</p>
+
+<p><a href="/images/2015_1205_fuel_5th_example.png"><img src="/_thumbs/2cfb4ea909d3694cb9ebc8bc118c223e-512x512.png" alt="画面例"></a></p>
+
+<p>こんな画面になります。</p>
+
+<h2 id="nestedsets-model-%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9">NestedSets Model の使い方</h2>
+
+<p>使い方を、、、と言いつつ、実際は公式ドキュメントの <a href="http://fuelphp.com/docs/packages/orm/model/nestedset.html">NestedSets Model</a> (日本語訳は <a href="http://fuelphp.jp/docs/1.8/packages/orm/model/nestedset.html">NestedSets Model @ fuelphp.jp</a> を参照) を参照すれば簡単に使えてしまうぐらいに整っていると思います。</p>
+
+<p>基本的な機能は <code>\Orm\Model_Nestedset</code> からの派生としてモデルクラスを作れば特に考えることもなく用意されたものを使うことができます。</p>
+
+<p><code>model/commentbox.php</code></p>
+
+<pre><code class="php">namespace Commentbox;
+
+class Model_Commentbox extends \Orm\Model_Nestedset
+{
+    protected static $_properties = array(
+</code></pre>
+
+<p>のような感じです。</p>
+
+<p><a href="http://fuelphp.jp/docs/1.8/packages/oil/generate.html#/model_nestedset">oil generate</a> のドキュメントを参照すると</p>
+
+<pre><code class="bash">$ php oil g model post title:varchar[50] body:text user_id:int --nestedset
+</code></pre>
+
+<p>と、実は、このような感じでスケルトンを作ることもできるため、ドキュメントを見ながら必要なフィールドを用意したりマイグレーションコードを用意したりする必要もなく、簡単に機能の実装に入ることができます。</p>
+
+<p><a href="https://github.com/sharkpp/fuel-commentbox/commit/a2222480c0151b9f9a68f5e1336d2f4b50360343#diff-5d2aaa6da1e3955b9a2582f5894e5d8e">multi tree に必要なフィールドを追加 · sharkpp/fuel-commentbox@a222248</a></p>
+
+<pre><code class="diff"> @@ -8,6 +8,7 @@ class Model_Commentbox extends \Orm\Model_Nestedset
+        'id',
+        'left_id',
+        'right_id',
++       'tree_id',
+        'comment_key',
+        'user_id',
+        'name',
+ @@ -30,6 +31,9 @@ class Model_Commentbox extends \Orm\Model_Nestedset
+    );
+
+    protected static $_tree = array(
++       'left_field' =&gt; 'left_id',
++       'right_field' =&gt; 'right_id',
++       'tree_field' =&gt; 'tree_id',
+        'title_field' =&gt; 'comment_key',
+    );
+
+</code></pre>
+
+<p>と、このように、 <code>tree_id</code> を追加することで、</p>
+
+<ul>
+<li>唯一の親を持つツリーで管理する</li>
+<li>複数の親を持つツリーで管理する</li>
+</ul>
+
+<p>か、を選べるようになっています。</p>
+
+<p>コメントや掲示板、などは「複数の親を持つツリーで管理する」方が管理しやすいのではないかと自分は思います。</p>
+
+<p>なので、追加するには先にルートを作っておいたほうが管理がしやすいので</p>
+
+<p><code>classes/model/commentbox.php</code></p>
+
+<pre><code class="php">    public static function get_parent($comment_key, $create = false)
+    {
+        $root = self::get_item($comment_key);
+        if (null != $root ||
+            ! $create)
+        {
+            return $root;
+        }
+        $root = new static();
+        $root-&gt;comment_key = $comment_key;
+        $root-&gt;user_id = -1;
+        $root-&gt;name = '';
+        $root-&gt;email = '';
+        $root-&gt;website = '';
+        $root-&gt;body = '';
+        $root-&gt;save();
+        return $root;
+    }
+</code></pre>
+
+<p>のように、ルートノード取得時に、存在しなければルートノードを作成するメソッドを作り、扱いやすくしています。</p>
+
+<p>子を追加するときは</p>
+
+<pre><code class="php">                    }
+
+                    $model-&gt;child($parent)-&gt;save();
+                }
+</code></pre>
+
+<p>のような感じです。</p>
+
+<p>ツリーの扱いとしては、例えば、</p>
+
+<p><code>classes/commentbox.php</code></p>
+
+<pre><code class="php">        $form = $this-&gt;fieldset();
+        $root = Model_Commentbox::get_parent($this-&gt;comment_key);
+        $tree = $root ? $root-&gt;dump_tree() : array();
+        $user_page_empty
+</code></pre>
+
+<p>このように <code>dump_tree()</code> 関数を使うことで指定のアイテムを含めた下位のツリーを丸ごと取ることができます。</p>
+
+<p>ドキュメントではこの他にも、ツリーを移動するためのメソッドが多数用意されています。</p>
+
+<p>また、通常のモデルのように</p>
+
+<p><code>classes/commentbox.php</code></p>
+
+<pre><code class="php">                { // 投稿処理
+                    // キーとなるハッシュを生成
+                    for ($comment_key = \Str::random('alnum', 32);
+                         Model_Commentbox::query()
+                            -&gt;where('comment_key', $comment_key)
+                            -&gt;count();
+                         $comment_key = \Str::random('alnum', 32))
+                        continue;
+</code></pre>
+
+<p>と <code>query()</code> メソッドを使い個別に条件を追加して検索することもできます。</p>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<ul>
+<li>oil コマンドでスケルトンを作ることができるので素早く実装に進むことができる。</li>
+<li>２種類の管理の仕方、「唯一の親を持つツリーで管理する」か「複数の親を持つツリーで管理する」があり、フィールドの有無でどちらか選ぶことができる。</li>
+<li>通常のモデルクラスと同じように条件を指定し検索することができる。</li>
+<li>多彩なツリーの移動メソッドがあらかじめ用意されている。</li>
+</ul>
+
+<p>と、このような感じなのでサクサクと実装できるのではないかと思います。</p>
+
+<p>ぜひ使って見てください。</p>
+
+<p>以上、<a href="https://twitter.com/sharkpp">@sharkpp</a> がお送りいたしました。</p>
+
+<p>この文章は <a href="https://creativecommons.org/licenses/by/4.0/legalcode.ja">クリエイティブ・コモンズ 表示 4.0 国際</a> ライセンス、コードスニペットは <a href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license">MIT ライセンス</a> の下に提供されています。</p>
+
+<h2 id="%E3%81%8A%E3%81%BE%E3%81%91">おまけ</h2>
+
+<p>コメントに張り付くアイコンの表示としては <a href="http://ja.gravatar.com/">Gravatar</a> が有名ですが、探してみるとマイナー気味ですがおもしろそーなサービスが他にもあったのでこのパッケージでは選んで使えるようにしてあります。</p>
+
+<p><a href="http://ja.gravatar.com/">Gravatar</a> は</p>
+
+<p><img src="/images/2015_1205_fuel_5th_avatar_example_gravatar.png" alt="avatar example gravatar" /></p>
+
+<p>こんな感じの表示になります。</p>
+
+<p>その２は、<a href="http://robohash.org/">RoboHash</a> というサービスで、アイコンがいろんなタイプのロボットで表示され、背景も何種類か選ぶことができます。</p>
+
+<p><img src="/images/2015_1205_fuel_5th_avatar_example_robohash.png" alt="avatar example robohash" /></p>
+
+<p>こんな感じの表示になります。</p>
+
+<p>その３は、<a href="http://avatars.adorable.io/">Adorable Avatars!</a> というサービスで、とぼけた？ような顔のアイコンを作ってくれます。
+ただ、このサービスはアイコンの種類が少ないのか意外とアイコンが被ってしまうことが多い気がします。</p>
+
+<p><img src="/images/2015_1205_fuel_5th_avatar_example_adorable.png" alt="avatar example adorable" /></p>
+
+<p>こんな感じの表示になります。</p>
+
+<p><a href="https://github.com/sharkpp/fuel-commentbox/blob/master/classes/util/avatar.php">Avatar</a> というクラスを作りまとめて管理しているので他にも同じようなサービスが見つかったら簡単に追加できるようにしてあるので誰か使って欲しいなぁ、なんて。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://fennec.hatenablog.com/entry/2012/12/12/031408">fuel-nestedsetsを試す。 - 備忘録的な @7wk</a></li>
+<li><a href="http://fennec.hatenablog.com/entry/2012/12/12/231456">fuel-nestedsetsを試す。の続き。 - 備忘録的な @7wk</a></li>
+<li><a href="http://fuelphp.jp/docs/1.8/packages/orm/model/nestedset.html">NestedSets Model @ fuelphp.jp</a></li>
+</ul>
+
+<hr>
+
+<p>この投稿は <strong><a href="http://qiita.com/advent-calendar/2015/fuelphp">FuelPHP Advent Calendar 2015</a></strong> の <strong>5日目</strong>の記事です。</p>
+
+<ul>
+<li>4日目の記事: <a href="http://www.sharkpp.net/blog/2015/12/04/fuelphp-advent-calender-2015-4th.html">Markdown Wiki を通して Model_Temporal の使い方を覚えよう</a></li>
+<li>6日目の記事: <a href="http://qiita.com/wata/items/22bf3ad75a854aa8f119">DBUnit拡張を使ったFuelPHPのテストを考える</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Markdown Wiki を通して Temporal Model の使い方を覚えよう]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/12/04/fuelphp-advent-calender-2015-4th.html"/>
+            <updated>2015-12-04T02:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/12/04/fuelphp-advent-calender-2015-4th.html</id>
+            <content type="html"><![CDATA[<p>こんにちは、こんばんは、<a href="http://qiita.com/advent-calendar/2015/fuelphp">FuelPHP Advent Calendar 2015</a> の 4 日目を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p>
+
+<p>今回は Temporal Model を使って Markdown で記述できる簡易 Wiki を作ってみることにします。</p>
+
+<p>題して「Markdown Wiki を通して Temporal Model の使い方を覚えよう」です。</p>
+
+<p>完成品は <a href="https://github.com/sharkpp/md-micro-wiki">md-micro-wiki @ github.com</a> にコミットし <a href="https://www.vagrantup.com/">Vagrant</a> を使って簡単に試せるようにしてあります。</p>
+
+<h2 id="%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">はじめに</h2>
+
+<p>Markdwon で記述できる簡単な Wiki の作成を通して <a href="http://fuelphp.com/docs/packages/orm/model/temporal.html">Temporal Model</a> (日本語訳は <a href="http://fuelphp.jp/docs/1.8/packages/orm/model/temporal.html">Temporal Model @ fuelphp.jp</a> を参照) の使い方を説明してみようと思います。</p>
+
+<p>作るものの要件として</p>
+
+<ul>
+<li>FuelPHP 1.7.3 を使用</li>
+<li>履歴が残せる簡易な Wiki アプリ</li>
+<li>Model_Temporal クラスを使用</li>
+<li>Markdown で本文を記述</li>
+<li>ログイン管理は長くなるので省略</li>
+</ul>
+
+<p>を簡単に決め作ってみました。</p>
+
+<p>また、なるべく Oil コマンドの Generate 機能でスケルトンを作り実装の速度を上げてみたいと思います。</p>
+
+<h2 id="%E7%92%B0%E5%A2%83%E3%81%AE%E6%BA%96%E5%82%99">環境の準備</h2>
+
+<p>データベースは FuelPHP の開発環境デフォルトの</p>
+
+<table>
+<thead>
+<tr>
+  <th>項目名</th>
+  <th>値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>データベース名</td>
+  <td>fuel_dev</td>
+</tr>
+<tr>
+  <td>ユーザー名</td>
+  <td>root</td>
+</tr>
+<tr>
+  <td>パスワード</td>
+  <td>root</td>
+</tr>
+</tbody>
+</table>
+
+<p>とします。</p>
+
+<h2 id="fuelphp-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">FuelPHP のインストール</h2>
+
+<p><a href="http://fuelphp.com/docs/installation/instructions.html">Instruction</a> (日本語訳は <a href="http://fuelphp.jp/docs/1.8/installation/instructions.html">インストール方法 @ fuelphp.jp</a> を参照) を確認しながら、 Composer を使い、サクッとインストールします。</p>
+
+<p>この時、PHP のタイムゾーンを設定しておかないとエラーが発生してインストール処理が中断するので注意です。</p>
+
+<pre><code>$ composer create-project fuel/fuel:dev-1.7/master --prefer-dist md-micro-wiki
+</code></pre>
+
+<p>Welcome ページもいらないので削除します。</p>
+
+<pre><code>$ cd md-micro-wiki
+$ rm -rf fuel/app/{classes/{controller/welcome.php,presenter/welcome/},views/welcome/}
+$ touch fuel/app/classes/presenter/.gitkeep
+</code></pre>
+
+<p>この状態でアクセすると 404 ページの表示になります。</p>
+
+<p><img src="/images/2015_1204_fuel_4th_404.png" alt="FuelPHP 404 page" /></p>
+
+<h2 id="%E5%AE%9F%E8%A3%85">実装</h2>
+
+<h3 id="%E3%83%A2%E3%83%87%E3%83%AB%E3%82%84%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%81%AA%E3%81%A9%E3%81%AE%E3%82%B9%E3%82%B1%E3%83%AB%E3%83%88%E3%83%B3%E3%82%92%E8%BF%BD%E5%8A%A0">モデルやコントローラなどのスケルトンを追加</h3>
+
+<p><a href="http://fuelphp.com/docs/packages/orm/intro.html">Introduction - Orm Package</a> (日本語訳は <a href="http://fuelphp.jp/docs/1.8/packages/orm/intro.html">はじめに - Orm パッケージ @ fuelphp.jp</a> を参照) を参考にORM パッケージを有効化します。</p>
+
+<p><code>fuel/app/config/config.php</code></p>
+
+<pre><code class="diff">@@ -256,7 +256,7 @@
+    /**************************************************************************/
+    /* Always Load                                                            */
+    /**************************************************************************/
+-   // 'always_load'  =&gt; array(
++   'always_load'  =&gt; array(
+
+        /**
+         * These packages are loaded on Fuel's startup.
+@@ -269,9 +269,9 @@
+         *     array('auth' =&gt; PKGPATH.'auth/')
+         * );
+         */
+-       // 'packages'  =&gt; array(
+-       //  //'orm',
+-       // ),
++       'packages'  =&gt; array(
++           'orm',
++       ),
+
+        /**
+         * These modules are always loaded on Fuel's startup. You can specify them
+@@ -307,6 +307,6 @@
+         * If you don't want the lang in a group use null as groupname.
+         */
+        // 'language'  =&gt; array(),
+-   // ),
++   ),
+
+ );
+</code></pre>
+
+<p>Oil コマンドの Generate 機能を使い、モデルやコントローラ、ビューのスケルトンを作ります。</p>
+
+<pre><code class="bash">$ php oil g controller page list view revision edit delete
+$ php oil g model page title:string body:text body_html:text brief:string --temporal
+</code></pre>
+
+<p><a href="http://fuelphp.com/docs/packages/oil/generate.html#/model_temporal">Generate - Oil Package</a> (日本語訳は <a href="http://fuelphp.jp/docs/1.8/packages/oil/generate.html#/model_temporal">Generate - Oil パッケージ @ fuelphp.jp</a> を参照) の注意に書かれているように、マイグレーションコードを修正し主キーを設定します。</p>
+
+<p><code>fuel/app/migrations/001_create_pages.php</code></p>
+
+<pre><code class="diff">            'body_html' =&gt; array('type' =&gt; 'text'),
+            'brief' =&gt; array('constraint' =&gt; 255, 'type' =&gt; 'varchar'),
+
+-       ), array('id'));
++       ), array('id', 'temporal_start', 'temporal_end'));
+    }
+
+    public function down()
+</code></pre>
+
+<p>マイグレーションを実行しテーブルを作成します。</p>
+
+<pre><code>$ php oil r migrate
+</code></pre>
+
+<h3 id="%E3%82%B3%E3%83%BC%E3%83%89%E3%82%92%E8%BF%BD%E5%8A%A0">コードを追加</h3>
+
+<p>ここから若干巻きで進めます。</p>
+
+<ol>
+<li>ルーティング、モデル、ビューテンプレートの実装</li>
+<li>ページ編集画面の実装</li>
+<li>ページ表示画面の実装</li>
+<li>ページ一覧表示画面の実装</li>
+<li>ページ編集履歴の実装</li>
+<li>ページ削除画面の実装</li>
+</ol>
+
+<p>の順番で実装を行います。</p>
+
+<p>ルーティングをごそっと変えて、ページの表示、編集、履歴表示、削除、ができるようにします。</p>
+
+<p><code>fuel/app/config/routes.php</code></p>
+
+<pre><code class="diff"> &lt;?php
+ return array(
+-   '_root_'  =&gt; 'welcome/index',  // The default route
+-   '_404_'   =&gt; 'welcome/404',    // The main 404 route
+-   
+-   'hello(/:name)?' =&gt; array('welcome/hello', 'name' =&gt; 'hello'),
++   '_root_' =&gt; 'page/view',
++   '(create|edit|revision|list)' =&gt; 'page/$1',
++   'revision/(:num)' =&gt; 'page/view//$1',
++   '(:segment)/(create|edit|revision|delete)' =&gt; 'page/$2/$1',
++   '(:segment)/revision/(:num)' =&gt; 'page/view/$1/$2',
++   '(:segment)' =&gt; 'page/view/$1',
+ );
+</code></pre>
+
+<p>Markdown から HTML への変換処理メソッドやオブザーバー、バリデーション、ページタイトルからレコードを探すメソッドなどを実装します。</p>
+
+<p>ページタイトルのカラムを今回は主キーとしていないため、ページタイトルから特定のリビジョンを示すレコードを探すには、</p>
+
+<ol>
+<li>ページタイトルで引っかかる最新のレコードを取得する。</li>
+<li>レコードから <code>id</code> を取得し、リビジョンを指定し検索。</li>
+</ol>
+
+<p>と、2 回のクエリを発行しないとダメなようです。</p>
+
+<p><code>fuel/app/classes/model/page.php</code></p>
+
+<pre><code class="diff"><br />    protected static $_table_name = 'pages';
+
++   protected static $_observers = array('Orm\\Observer_Self' =&gt; array(
++    'events' =&gt; array('before_save')
++   ));
++   
++   public function _event_before_save()
++   {
++       $this-&gt;body_html = self::parse_markdown($this-&gt;body);
++   }
++
++   public static function parse_markdown($text)
++   {
++       $text = preg_replace('!\[\]\((.+?)\)!', '[$1]($1)', $text);
++       return Markdown::parse(Security::xss_clean($text));
++   }
++
++   public static function validate($factory)
++   {
++       $val = Validation::forge($factory);
++       $val-&gt;add_field('title', 'Title', 'max_length[255]|valid_string[specials,dashes]');
++       $val-&gt;add_field('body', 'Body', 'required');
++       $val-&gt;add_field('brief', 'Brief', 'max_length[255]');
++
++       return $val;
++   }
++
++   public static function get_by_title($title, $timestamp = null)
++   {
++       $page = self::find('first',
++                                           array(
++                                               'where' =&gt; array( array('title', $title) )
++                       ));
++
++       if ( $page &amp;&amp; $timestamp)
++       {
++           $page = self::find_revision($page-&gt;id, $timestamp);
++       }
++
++       return $page;
++   }
++
++   public static function enum_revisions_by_title($title)
++   {
++       if ( (! $page = self::get_by_title($title)) ||
++                (! $revisions = self::find_revisions_between($page-&gt;id)) )
++       {
++           return null;
++       }
++       return array_reverse($revisions);
++   }
++
+ }
+</code></pre>
+
+<h3 id="%E3%83%93%E3%83%A5%E3%83%BC%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E4%BF%AE%E6%AD%A3">ビューテンプレートを修正</h3>
+
+<p><code>fuel/app/views/template.php</code></p>
+
+<pre><code class="diff">@@ -11,6 +11,20 @@
+ &lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="col-md-12"&gt;
++&lt;?php $action = preg_match('!/(edit|revision|delete)(/[0-9]+)?!', '/' . Uri::string(), $match) ? $match[1] : ''; ?&gt;
++           &lt;div class="pull-right"&gt;
++               &lt;?php echo Html::anchor('', 'Top'); ?&gt;
++               |
++               &lt;?php echo Html::anchor('list', 'List'); ?&gt;
++               ||
++               &lt;?php echo '' == $action || 'list' == Uri::string() ? 'Read' : Html::anchor($name, 'Read'); ?&gt;
++               |
++               &lt;?php echo '' != $action || 'list' == Uri::string() ? 'Edit' : Html::anchor($name . '/edit', 'Edit'); ?&gt;
++               |
++               &lt;?php echo ('revision' == $action &amp;&amp; !isset($match[2])) || ('revision' != $action &amp;&amp; '' != $action) || 'list' == Uri::string() ? 'Revision' : Html::anchor($name . '/revision', 'Revision'); ?&gt;
++               |
++               &lt;?php echo '' != $action || '' == Uri::string() || 'list' == Uri::string() ? 'Delete' : Html::anchor($name . '/delete', 'Delete'); ?&gt;
++           &lt;/div&gt;
+            &lt;h1&gt;&lt;?php echo $title; ?&gt;&lt;/h1&gt;
+            &lt;hr&gt;
+ &lt;?php if (Session::get_flash('success')): ?&gt;
+@@ -29,9 +43,15 @@
+                &lt;/p&gt;
+            &lt;/div&gt;
+ &lt;?php endif; ?&gt;
++&lt;?php if ('revision' == $action &amp;&amp; isset($match[2])): ?&gt;
++           &lt;div class="alert alert-warning"&gt;
++               &lt;p&gt;This is an &lt;?php echo Html::anchor($name . '/revision', 'old revision'); ?&gt; of this page.&lt;/p&gt;
++           &lt;/div&gt;
++&lt;?php endif; ?&gt;
+        &lt;/div&gt;
+        &lt;div class="col-md-12"&gt;
+ &lt;?php echo $content; ?&gt;
++           &lt;hr&gt;
+        &lt;/div&gt;
+        &lt;footer&gt;
+            &lt;p class="pull-right"&gt;Page rendered in {exec_time}s using {mem_usage}mb of memory.&lt;/p&gt;
+</code></pre>
+
+<h3 id="%E3%83%9A%E3%83%BC%E3%82%B8%E8%A1%A8%E7%A4%BA%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85">ページ表示用のコントローラメソッドとビュー実装</h3>
+
+<p>実装すると作成 or 編集したページが表示できるようになります。</p>
+
+<p><code>fuel/app/classes/controller/page.php</code></p>
+
+<pre><code class="diff">-   public function action_view()
++   public function action_view($name = '', $timestamp = null)
+    {
+-       $data["subnav"] = array('view'=&gt; 'active' );
+-       $this-&gt;template-&gt;title = 'Page &amp;raquo; View';
+-       $this-&gt;template-&gt;content = View::forge('pa/view', $data);
++       if ( ! $page = Model_Page::get_by_title($name, $timestamp) ) {
++           if ( $timestamp) {
++               throw new HttpNotFoundException;
++           }
++           Response::redirect($name . '/edit');
++       }
++
++       $this-&gt;template-&gt;title = (empty($name) ? '(top)' : $name);
++       $this-&gt;template-&gt;name = $name;
++       $this-&gt;template-&gt;content = View::forge('page/view')
++                                   -&gt;set_safe('page', $page);
+    }
+</code></pre>
+
+<p><code>fuel/app/views/page/view.php</code></p>
+
+<pre><code class="php">&lt;?php echo $page-&gt;body_html; ?&gt;&lt;/p&gt;
+</code></pre>
+
+<h3 id="%E3%83%9A%E3%83%BC%E3%82%B8%E7%B7%A8%E9%9B%86%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85">ページ編集用のコントローラメソッドとビュー実装</h3>
+
+<p>実装すると、ページの編集ができるようになります。</p>
+
+<p><a href="/images/2015_1204_fuel_4th_editing.png"><img src="/_thumbs/32e1813e0bc4e7a012b748c5263e4779-256x256.png" alt="編集中"></a></p>
+
+<p>またプレビュー機能も同時に実装しています。</p>
+
+<p><a href="/images/2015_1204_fuel_4th_editing_preview.png"><img src="/_thumbs/6f633f1b809c34d8892cbbc7187817d7-256x256.png" alt="編集中のプレビュー"></a></p>
+
+<p><code>fuel/app/classes/controller/page.php</code></p>
+
+<pre><code class="diff">-   public function action_edit()
++   
++   public function action_edit($name = '')
+    {
+-       $data["subnav"] = array('edit'=&gt; 'active' );
+-       $this-&gt;template-&gt;title = 'Page &amp;raquo; Edit';
+-       $this-&gt;template-&gt;content = View::forge('pa/edit', $data);
++       $page = Model_Page::get_by_title($name);
++       $new_page = ! $page;
++
++       if (Input::method() == 'POST') {
++           $val = Model_Page::validate($new_page ? 'create' : 'edit');
++           if ($val-&gt;run(array('title' =&gt; $name))) {
++               $page = $page ?: Model_Page::forge();
++               $page-&gt;title = $val-&gt;validated('title');
++               $page-&gt;body  = $val-&gt;validated('body');
++               $page-&gt;brief = $val-&gt;validated('brief');
++               if (!Input::post('preview')) {
++                   if ($page-&gt;save()) {
++                       Session::set_flash('success', $new_page ? 'Added page.' : 'Updated page.');
++                       Response::redirect($name);
++                   }
++                   else {
++                       Session::set_flash('error', $new_page ? 'Could not save page.' : 'Could not update page.');
++                   }
++               }
++           }
++           else {
++               Session::set_flash('error', $val-&gt;error());
++           }
++           $this-&gt;template-&gt;set_global('body_html', Model_Page::parse_markdown(Input::post('body')), false);
++       }
++       else if ($page) {
++           $page-&gt;brief = '';
++       }
++
++       $this-&gt;template-&gt;set_global('page', $page, false);
++
++       $this-&gt;template-&gt;title = ($new_page ? 'Creating ' : 'Editing ') . (empty($name) ? '(top)' : $name);
++       $this-&gt;template-&gt;name = $name;
++       $this-&gt;template-&gt;content = View::forge('page/edit');
+    }
+</code></pre>
+
+<p><code>fuel/app/views/page/edit.php</code></p>
+
+<pre><code class="php">&lt;?php if (isset($body_html)): ?&gt;
+&lt;div class="alert alert-info"&gt;
+    &lt;p&gt;This is only a preview; your changes have not yet been saved! → &lt;a href="#form"&gt;Go to editing area&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;?php echo $body_html; ?&gt;
+&lt;hr&gt;
+&lt;?php endif ?&gt;
+&lt;?php echo Form::open(array("class"=&gt;"form-horizontal")); ?&gt;
+
+    &lt;fieldset id="form"&gt;
+        &lt;div class="form-group"&gt;
+            &lt;?php echo Form::label('Body', 'body', array('class'=&gt;'control-label')); ?&gt;
+
+                &lt;?php echo Form::textarea('body', Input::post('body', isset($page) ? $page-&gt;body : ''), array('class' =&gt; 'col-md-8 form-control', 'rows' =&gt; 8, 'placeholder'=&gt;'Body')); ?&gt;
+
+        &lt;/div&gt;
+        &lt;div class="form-group"&gt;
+            &lt;?php echo Form::label('Brief', 'brief', array('class'=&gt;'control-label')); ?&gt;
+
+                &lt;?php echo Form::input('brief', Input::post('brief', isset($page) ? $page-&gt;brief : ''), array('class' =&gt; 'col-md-4 form-control', 'placeholder'=&gt;'Brief')); ?&gt;
+
+        &lt;/div&gt;
+        &lt;div class="form-group"&gt;
+            &lt;?php echo Form::submit('submit', 'Save', array('class' =&gt; 'btn btn-primary')); ?&gt;
+            &lt;?php echo Form::submit('preview', 'Preview', array('class' =&gt; 'btn btn-normal')); ?&gt;
+            &lt;?php echo Html::anchor(isset($page) ? $page-&gt;title : '', 'Cancel', array('class' =&gt; 'btn btn-normal')); ?&gt;
+        &lt;/div&gt;
+    &lt;/fieldset&gt;
+&lt;?php echo Form::close(); ?&gt;
+</code></pre>
+
+<h3 id="%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7%E8%A1%A8%E7%A4%BA%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85">ページ一覧表示用のコントローラメソッドとビュー実装</h3>
+
+<p>実装すると追加したページの一覧が、</p>
+
+<p><a href="/images/2015_1204_fuel_4th_page_list.png"><img src="/_thumbs/e85a6468e24b04b7fb73195c6775a7b8-256x256.png" alt="リスト表示"></a></p>
+
+<p>と、このような感じで表示できるようになります。</p>
+
+<p><code>fuel/app/classes/controller/page.php</code></p>
+
+<pre><code class="diff">    public function action_list()
+    {
+-       $data["subnav"] = array('list'=&gt; 'active' );
+-       $this-&gt;template-&gt;title = 'Page &amp;raquo; List';
+-       $this-&gt;template-&gt;content = View::forge('pa/list', $data);
++       $data['pages'] = Model_Page::find('all');
++
++       $this-&gt;template-&gt;title = 'List of all pages';
++       $this-&gt;template-&gt;content = View::forge('page/list', $data);
+    }
+</code></pre>
+
+<p><code>fuel/app/views/page/list.php</code></p>
+
+<pre><code class="php">&lt;div class="row"&gt;
+  &lt;div class="col-md-6"&gt;
+    &lt;ul&gt;
+&lt;?php for ($i = 0, $num = count($pages), $page = current($pages); $page; $i++, $page = next($pages)): ?&gt;
+      &lt;li&gt;&lt;?php echo Html::anchor($page-&gt;title, empty($page-&gt;title) ? '(top)' : $page-&gt;title); ?&gt;&lt;/li&gt;
+&lt;?php if (intval(($num-1)/2) == $i): ?&gt;
+        &lt;/ul&gt;&lt;/div&gt;&lt;div class="col-md-6"&gt;&lt;ul&gt;
+&lt;?php endif; ?&gt;
+&lt;?php endfor; ?&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3 id="%E3%83%9A%E3%83%BC%E3%82%B8%E5%B1%A5%E6%AD%B4%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85">ページ履歴用のコントローラメソッドとビュー実装</h3>
+
+<p>実装するとページの編集履歴が</p>
+
+<p><a href="/images/2015_1204_fuel_4th_revision.png"><img src="/_thumbs/ccc99f4b994b0f8ff4c582dee40eb0c4-256x256.png" alt="履歴"></a></p>
+
+<p>と、このような感じで表示できるようになります。</p>
+
+<p>各リビジョンは日付が該当リビジョンの内容を表示するためのリンクとなっています。</p>
+
+<p><code>fuel/app/classes/controller/page.php</code></p>
+
+<pre><code class="diff">-   public function action_revision()
++   public function action_revision($name = '')
+    {
+-       $data["subnav"] = array('revision'=&gt; 'active' );
+-       $this-&gt;template-&gt;title = 'Page &amp;raquo; Revision';
+-       $this-&gt;template-&gt;content = View::forge('pa/revision', $data);
++       if ( ! $data['revisions'] = Model_Page::enum_revisions_by_title($name) ) {
++           throw new HttpNotFoundException;
++       }
++
++       $this-&gt;template-&gt;title = 'Revision of ' . (empty($name) ? '(top)' : $name);
++       $this-&gt;template-&gt;name = $name;
++       $this-&gt;template-&gt;content = View::forge('page/revision', $data);
+    }
+</code></pre>
+
+<p><code>fuel/app/views/page/revision.php</code></p>
+
+<pre><code class="php">&lt;table&gt;
+&lt;?php $i = 0; foreach ($revisions as $revision): ?&gt;
+  &lt;tr&gt;
+&lt;?php if (0 == $i): ?&gt;
+  &lt;td&gt;&lt;?php echo Html::anchor($revision-&gt;title, Date::forge($revision-&gt;temporal_start)-&gt;format("%Y-%m-%d %H:%M:%S")); ?&gt;&lt;/td&gt;
+&lt;?php else: ?&gt;
+  &lt;td&gt;&lt;?php echo Html::anchor($revision-&gt;title . '/revision/' . $revision-&gt;temporal_start, Date::forge($revision-&gt;temporal_start)-&gt;format("%Y-%m-%d %H:%M:%S")); ?&gt;&lt;/td&gt;
+&lt;?php endif; ?&gt;
+    &lt;td&gt;&lt;?php echo empty($revision-&gt;brief) ? '' : '(' . $revision-&gt;brief . ')'; ?&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;?php $i++; endforeach; ?&gt;
+&lt;/table&gt;
+</code></pre>
+
+<h3 id="%E3%83%9A%E3%83%BC%E3%82%B8%E5%89%8A%E9%99%A4%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85">ページ削除用のコントローラメソッドとビュー実装</h3>
+
+<p>実装すると削除処理ができるようになります。</p>
+
+<p><a href="/images/2015_1204_fuel_4th_delete.png"><img src="/_thumbs/2cdf9085abd8d7791b23c8d9ba986fc3-256x256.png" alt="削除"></a></p>
+
+<p><code>fuel/app/classes/controller/page.php</code></p>
+
+<pre><code class="diff">-   public function action_delete()
++   public function action_delete($name)
+    {
+-       $data["subnav"] = array('delete'=&gt; 'active' );
+-       $this-&gt;template-&gt;title = 'Page &amp;raquo; Delete';
+-       $this-&gt;template-&gt;content = View::forge('pa/delete', $data);
++       if ( ! $data['page'] = Model_Page::get_by_title($name) ) {
++           throw new HttpNotFoundException;
++       }
++
++       if (Input::post('submit')) {
++           if ($data['page']-&gt;purge()) {
++               Session::set_flash('success', 'Deleted page');
++               Response::redirect('');
++           }
++           else {
++               Session::set_flash('error', 'Could not delete page');
++           }
++       }
++
++       $this-&gt;template-&gt;title = $name;
++       $this-&gt;template-&gt;name = $name;
++       $this-&gt;template-&gt;content = View::forge('page/delete', $data);
+    }
+</code></pre>
+
+<p><code>fuel/app/views/page/delete.php</code></p>
+
+<pre><code class="php">&lt;p&gt;Are you sure you want to delete &lt;?php echo $page-&gt;title; ?&gt; ?&lt;/p&gt;
+&lt;?php echo Form::open(array("class"=&gt;"form-horizontal")); ?&gt;
+  &lt;?php echo Form::submit('submit', 'Yes, Delete', array('class' =&gt; 'btn btn-danger')); ?&gt;
+  &lt;?php echo Html::anchor(isset($page) ? $page-&gt;title : '', 'Cancel', array('class' =&gt; 'btn btn-normal')); ?&gt;
+&lt;?php echo Form::close(); ?&gt;
+</code></pre>
+
+<h2 id="wiki-%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9">Wiki の使い方</h2>
+
+<p>基本的な動作として、ページがない場合は新規作成画面に移動します。</p>
+
+<p>そのため、初期状態でトップページにアクセスするとトップページの作成画面に移動します。</p>
+
+<p>書式は <a href="https://michelf.ca/projects/php-markdown/">PHP Markdown</a> のドキュメントが参考になります。</p>
+
+<p>加えて、リンクのテキストを</p>
+
+<pre><code class="markdown">[](テスト)
+</code></pre>
+
+<p>のような感じに省略した場合、</p>
+
+<pre><code class="markdown">[テスト](テスト)
+</code></pre>
+
+<p>の形式に直されます。</p>
+
+<p>また、このような形で各ページに対してリンクを貼ることができます。</p>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<p>駆け足でしたが、 Temporal Model を使って簡単に Markdown で編集できる Wiki を作ることができました。</p>
+
+<p>とりあえず、今回わかったことをまとめると</p>
+
+<ul>
+<li><code>php oil g model XXX ... --temporal</code> で Temporal Model のスケルトンが簡単に生成できる、がマイグレーションコードに手を入れる必要あり。</li>
+<li>主キー以外のカラムから特定リビジョンを取得するには 2 回のデータベースクエリ発行が必要。</li>
+<li>単純なモデルクラスに少し足した感じなので簡単に扱うことができる</li>
+</ul>
+
+<p>と、若干の考慮する点などがありますが、 Temporal Model は履歴管理を実装として含んでいるためユーザーが複雑なクエリを構築することなく、単純なモデルクラスのような感じで扱うことができます。</p>
+
+<p>ぜひ使って見てください。</p>
+
+<p>以上、<a href="https://twitter.com/sharkpp">@sharkpp</a> がお送りいたしました。</p>
+
+<p>この文章は <a href="https://creativecommons.org/licenses/by/4.0/legalcode.ja">クリエイティブ・コモンズ 表示 4.0 国際</a> ライセンス、コードスニペットは <a href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license">MIT ライセンス</a> の下に提供されています。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://fuelphp.jp/docs/1.8/packages/orm/model/temporal.html">Temporal Model - Orm パッケージ - FuelPHP ドキュメント</a></li>
+<li><a href="https://www.mediawiki.org/wiki/Manual:Database_layout/ja">Manual:データベースのレイアウト - MediaWiki</a></li>
+<li><a href="http://www.slideshare.net/takyam1213/temporal-model-takyam">What's Temporal model FuelPHP東京勉強会03</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/Help:%E4%BB%A5%E5%89%8D%E3%81%AE%E7%89%88%E3%81%AB%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E6%88%BB%E3%81%99%E6%96%B9%E6%B3%95">Help:以前の版にページを戻す方法 - Wikipedia</a></li>
+<li><a href="https://michelf.ca/projects/php-markdown/">PHP Markdown</a></li>
+</ul>
+
+<hr>
+
+<p>この投稿は <strong><a href="http://qiita.com/advent-calendar/2015/fuelphp">FuelPHP Advent Calendar 2015</a></strong> の <strong>4日目</strong>の記事です。</p>
+
+<ul>
+<li>3日目の記事: <a href="http://qiita.com/ken880guchi/items/300b16b8b8473c3b45a9">FuelPHP で TODO アプリケーションを作ってみた。</a></li>
+<li>5日目の記事: <a href="http://www.sharkpp.net/blog/2015/12/05/fuelphp-advent-calender-2015-5th.html">NestedSets Model を使って FuelPHP 用コメントボックスパッケージを作った話</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Request_Curlにまつわるエトセトラ]]></title>
+            <link href="http://www.sharkpp.net/blog/2013/12/14/fuelphp-advent-calendar-2013-14th-day.html"/>
+            <updated>2013-12-14T22:26:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2013/12/14/fuelphp-advent-calendar-2013-14th-day.html</id>
+            <content type="html"><![CDATA[<p><a href="http://atnd.org/events/45096">FuelPHP Advent Calendar 2013</a> 14日目。</p>
+
+<p><a href="https://twitter.com/sharkpp">@sharkpp</a>です。</p>
+
+<p>昨日は <a href="https://twitter.com/soudai1025">@soudai1025</a> さんの「<a href="http://soudai1025.blogspot.com/2013/12/fuelphp-datatables.html">FuelPHP（TwitterBootstrap3）でJQueryのプラグインのdataTablesを使う</a>」でした</p>
+
+<p>2回目の FuelPHP Advent Calendar 2013 登場となります。</p>
+
+<h2 id="request_curl-%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99%E3%81%8B%EF%BC%9F">Request_Curl 使っていますか？</h2>
+
+<p>さて、<a href="http://fuelphp.jp/docs/1.7/classes/request/curl.html">Request_Curl</a> 使ってますか？</p>
+
+<p>えっ？ <a href="https://github.com/guzzle/guzzle">Guzzle</a> のが便利だからそっち使ってるですって？</p>
+
+<p>まあ、そう言わずに Request_Curl は標準で含まれているので使ってみませんか？</p>
+
+<p>簡単な使い方：</p>
+
+<pre><code>$url = 'http://www.example.net/';
+$curl = \Request::forge($url, 'curl');
+$curl-&gt;execute();
+$response = $curl-&gt;response();
+echo $response-&gt;body;
+</code></pre>
+
+<p>ね！簡単でしょ？</p>
+
+<h2 id="get%2Fpost%E6%99%82%E3%81%AE%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E6%8C%87%E5%AE%9A">GET/POST時のパラメータ指定</h2>
+
+<p>GET/POST時のパラメータの指定は通常であれば、</p>
+
+<pre><code>$param['user'] = 'john';
+$param['data'] = 'test';
+$curl-&gt;set_params($param);
+</code></pre>
+
+<p>で問題ありません。</p>
+
+<p>が、<code>http://www.example.net/?user=john&amp;user=smith</code> のように同じキーが複数存在する場合は先の方法ではうまくいきません。 そもそも、そんな指定はありえない？いえいえ、実際にこのような指定をするアプリケーションがありました。</p>
+
+<p>そんな場合は、</p>
+
+<pre><code>// Copyright (c) 2013 sharkpp
+// This function is released under the MIT License.
+// http://opensource.org/licenses/mit-license.php
+function build_query($data) {
+  array_walk($data, function(&amp;$value, $key){
+      is_array($value) ?: $value = array($value);
+      $value = array_map(function($value){ return urlencode($value); }, $value);
+      $value = implode('&amp;'.$key.'=', $value);
+      $value = $key.'='.$value;
+    });
+  return implode('&amp;', $data);
+}
+</code></pre>
+
+<p>のようなクエリ文字列の構築関数を使って</p>
+
+<pre><code>$param['user'] = array('john', 'smith');
+$curl-&gt;set_params(build_query($param));
+</code></pre>
+
+<p>とすればOKです。</p>
+
+<p>実はドキュメントに書かれていないですが、<code>Request_Curl::set_params()</code> の引数に文字列を渡すとクエリ文字列としてそのまま使ってくれます。</p>
+
+<h2 id="cookie-%E3%81%AF%E3%81%8A%E3%81%84%E3%81%97%E3%81%84%EF%BC%9F">Cookie はおいしい？</h2>
+
+<p>Cookie の与え方も簡単です。</p>
+
+<pre><code>// Copyright (c) 2013 sharkpp
+// This function is released under the MIT License.
+// http://opensource.org/licenses/mit-license.php
+protected static function build_cookie($data) {
+    if (is_array($data)) {
+        $cookie = '';
+        foreach ($data as $key =&gt; $value) {
+            $cookie[] = $key.'='.urlencode($value);
+        }
+        if (count($cookie) &gt; 0) {
+            return trim(implode('; ', $cookie));
+        }
+    }
+    return false;
+}
+</code></pre>
+
+<p>こんな関数を用意して</p>
+
+<pre><code>$cookie['hoge'] = 'test';
+$cookie['fuga'] = '1234';
+$curl-&gt;set_option(CURLOPT_COOKIE, build_cookie($cookie));
+</code></pre>
+
+<p>とすればOKです。</p>
+
+<h2 id="php-%E3%81%95%E3%82%93%E3%81%A7%E3%81%99%E3%81%8B%EF%BC%9F%E3%81%84%E3%81%88%E3%81%84%E3%81%88-ie11-%E3%81%A7%E3%81%99">PHP さんですか？いえいえ IE11 です</h2>
+
+<p>User Agent 略して UA の偽装ももちろんできます。</p>
+
+<pre><code>$UA = 'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; Touch; rv:11.0) like Gecko';
+$header['User-Agent']= $UA;
+foreach ($header as $key =&gt; $value) { $curl-&gt;set_header($key, $value); }
+</code></pre>
+
+<p>ちなみに、ヘッダの複数指定は出来ないようなので <code>foreach</code> で連想配列を処理して登録しています。 一回ずつ<code>Request_Curl::set_header()</code> を呼び出してもいいですが <code>foreach</code> の方が見やすい気がします。</p>
+
+<h2 id="ssl%E3%81%8C%E6%A4%9C%E8%A8%BC%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%EF%BC%9F%E5%A4%A7%E4%B8%88%E5%A4%AB%E3%81%A0%E3%80%81%E5%95%8F%E9%A1%8C%E3%81%AA%E3%81%84">SSLが検証できない？大丈夫だ、問題ない</h2>
+
+<p>まったくもって大丈夫じゃないですが、、、そんな時もあります。</p>
+
+<p>https なサーバーに対してアクセスする場合に、どうにもエラーが出てうまくいかない場合があります。</p>
+
+<p>本来は無効にすべきではないのですが、SSLの証明書の検証を無効にすることも出来ます。</p>
+
+<pre><code>$curl-&gt;set_option(CURLOPT_SSL_VERIFYPEER, false);
+</code></pre>
+
+<p>本来は</p>
+
+<pre><code>$curl-&gt;set_option(CURLOPT_CAINFO, 'path/to/cacert.pem');
+</code></pre>
+
+<p>のような感じで検証用のファイルを指定するようですがうまくいきませんでした。</p>
+
+<h2 id="%E3%81%82%E3%82%8C%EF%BC%9F">あれ？</h2>
+
+<p>あれ？ちょっと <code>Request_Curl::set_option()</code> がいっぱい出てくるのだけれど、、、</p>
+
+<p>あ、気が付かれましたか。 名前の通りと言ったところではあるのですが、 <code>curl_*</code> のラッパーになっているため、 <a href="http://jp2.php.net/curl_setopt">PHP: curl_setopt - Manual</a> 辺りを見ながら <code>Request_Curl::set_option()</code> に引数を与えてあげれば色々な事が出来ます。</p>
+
+<p>クラス内部で色々やっているのですべてのオプションが確実に指定できるとは限らないですがある程度は自由に出来るようです。</p>
+
+<p>と言うことで、 <code>Request_Curl</code> クラスの紹介でした。</p>
+
+<p>明日は <a href="https://twitter.com/Tukimikage">@Tukimikage</a> さんの「<a href="http://think-sv.net/blog/?p=1290">続・Cloudn_PaaSでFuelPHPを動かしてみた</a>」です。お楽しみに！</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[FuelPHPをphar化してポータブルに！]]></title>
+            <link href="http://www.sharkpp.net/blog/2013/12/01/fuelphp-advent-calendar-2013-1st-day.html"/>
+            <updated>2013-12-01T14:57:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2013/12/01/fuelphp-advent-calendar-2013-1st-day.html</id>
+            <content type="html"><![CDATA[<p><a href="http://atnd.org/events/45096">FuelPHP Advent Calendar 2013</a> 1日目の参加記事です。</p>
+
+<p>初めましての方もご存知の方も、よろしくお願いします。</p>
+
+<p><a href="https://twitter.com/sharkpp">@sharkpp</a>です。</p>
+
+<p>さて、昨年の12月1日はアドベント(待降節)ではありませんでしたが、安心してください、今年は12月1日からアドベントは始まります。</p>
+
+<p>とりあえず、初日なので軽い内容でいきたいと思います。</p>
+
+<p>内容は、FuelPHP を phar(PHP Archive) で１ファイルにしてウェブサーバーで動かしてみよう、です。</p>
+
+<p>子ネタをやりつつ phar の紹介も兼ねています。</p>
+
+<p>環境としては、</p>
+
+<ul>
+<li>PHP 5.3 以上</li>
+<li>FuelPHP 1.7</li>
+<li>Apache on CentOS or Windows</li>
+</ul>
+
+<p>を想定しています。</p>
+
+<h2 id="pharphp-archive%E3%81%A3%E3%81%A6%E3%81%94%E5%AD%98%E7%9F%A5%E3%81%A7%E3%81%99%E3%81%8B%EF%BC%9F">phar(PHP Archive)ってご存知ですか？</h2>
+
+<p>まず、大前提。</p>
+
+<p><a href="http://jp2.php.net/manual/ja/intro.phar.php">PHP: 導入 - Manual</a>によると、</p>
+
+<blockquote>
+  <p>phar 拡張モジュールは、PHP アプリケーション全体をひとつの "phar" (PHP Archive) ファイルにまとめてしまい、配布やインストールを容易にするためのものです。</p>
+</blockquote>
+
+<p>となっています。</p>
+
+<p>実際に使われている例としては、</p>
+
+<ul>
+<li><a href="http://getcomposer.org/">composer.phar</a> パッケージ管理ツール</li>
+<li><a href="https://github.com/fabpot/goutte">goutte.phar</a> スクレイピングライブラリ</li>
+<li><a href="https://github.com/guzzle/guzzle">guzzle.phar</a> HTTPクライアントライブラリ</li>
+<li><a href="http://pear2.php.net/PEAR2_Pyrus">pyrus.phar</a> PEAR2</li>
+</ul>
+
+<p>などがあります。</p>
+
+<p>例として上げた中でも composer は FuelPHP を使っている方であれば</p>
+
+<pre><code>$ php composer.phar update
+</code></pre>
+
+<p>と、このような形で触ったことがあると思います。</p>
+
+<h2 id="fuelphp-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">FuelPHP をインストール</h2>
+
+<p>Pharクラスの中でも、今回は <a href="http://jp2.php.net/manual/ja/phar.webphar.php">Phar::webPhar</a> を使います。</p>
+
+<p>まずは、FuelPHPを適当なフォルダに配置します。</p>
+
+<p>詳しい手順は<a href="http://fuelphp.jp/docs/1.7/">FuelPHP ドキュメント</a>に書かれているので参考にしてください。</p>
+
+<p>ここでは、<code>~/fuelphp-1.7</code> に配置されるものとします。</p>
+
+<pre><code>$ curl get.fuelphp.com/oil | sh
+$ cd ~
+$ oil create fuelphp-1.7
+</code></pre>
+
+<p>もしくは、</p>
+
+<pre><code>$ wget http://fuelphp.com/files/download/25 -O fuelphp.zip
+$ unzip fuelphp.zip
+</code></pre>
+
+<p>とすることで、git がインストールされていない場合は fuelphp.com からダウンロードして展開ができます。</p>
+
+<p>次に</p>
+
+<pre><code>$ cd fuelphp-1.7
+$ php composer.phar self-update
+$ php composer.phar update
+</code></pre>
+
+<p>として、composer自身のアップデートとパッケージを更新します。</p>
+
+<p>これで、Apacheなどのウェブサーバー上に公開するとWelcome画面が表示されるはずです。</p>
+
+<h2 id="fuelphp%E3%82%92phar%E3%81%A71%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AB%E3%81%BE%E3%81%A8%E3%82%81%E3%82%8B">FuelPHPをPharで1ファイルにまとめる</h2>
+
+<p>まず、そのままでは1ファイルにまとめても動かないのでいくつかソースを変更する必要があります。</p>
+
+<p>残念なことに core の中も変更する必要がありました。</p>
+
+<p>インストール直後のページを表示できるようにするために変更するファイルは</p>
+
+<ul>
+<li><code>public/index.php</code></li>
+<li><code>fuel/app/config/config.php</code></li>
+<li><code>fuel/app/config/asset.php</code> ※ fuel/core/config/asset.php からコピー</li>
+<li><code>fuel/core/bootstrap.php</code></li>
+<li><code>fuel/core/classes/file/area.php</code></li>
+</ul>
+
+<p>の 5 個のファイルです。</p>
+
+<p>実際のアプリケーションの場合は先に挙げたファイル以外にも変更が必要になると思います。</p>
+
+<p>変更のポイントは、</p>
+
+<ul>
+<li>phar 内からの realpath が常に空文字で返ってくるのでダミー関数に置き換え</li>
+<li>Windows であっても パスの区切りは <code>'/'</code> とする</li>
+<li>パスに含まれる親ディレクトリへの移動などを削除し正規化</li>
+<li>ログやキャッシュの保存先が .phar 外を示すようにする</li>
+</ul>
+
+<p>と、主に、ファイルパスに関する物が主となります。</p>
+
+<p>まず、<code>public/index.php</code> の変更部分です。</p>
+
+<p>パスを正規化する <code>canonicalizePath</code> 関数と <code>realpath</code> 関数のダミーとして <code>realpat_</code> 関数を定義しています。</p>
+
+<pre><code> error_reporting(-1);
+ ini_set('display_errors', 1);
+
+ +function canonicalizePath($path) {
+ +    $path = 0===strpos($path,'phar://')?'phar://'.preg_replace('!//!', '/', substr($path,7))
+ +                                       :preg_replace('!//!', '/', $path);
+ +    do {
+ +        $tmp  = $path;
+ +        $path = preg_replace('!/[^/]+/\.\./!', '/', $tmp);
+ +    } while ($tmp != $path);
+ +    return rtrim($path, '/');
+ +}
+ +
+ +function realpat_($path) {
+ +    return canonicalizePath(str_replace(array('/', '\\'), '/', $path));
+ +}
+</code></pre>
+
+<p>あとは、<code>realpath</code> 関数の代わりに <code>realpat_</code> 関数を使うようにし、パスの区切りも <code>'/'</code> に変更しています。</p>
+
+<pre><code>-define('DOCROOT', __DIR__.DIRECTORY_SEPARATOR);
++define('DOCROOT', realpat_(__DIR__.'/'));
+</code></pre>
+
+<p>　</p>
+
+<pre><code>-define('APPPATH', realpath(__DIR__.'/../fuel/app/').DIRECTORY_SEPARATOR);
++define('APPPATH', realpat_(__DIR__.'/../fuel/app/').'/');
+</code></pre>
+
+<p>　</p>
+
+<pre><code>-define('PKGPATH', realpath(__DIR__.'/../fuel/packages/').DIRECTORY_SEPARATOR);
++define('PKGPATH', realpat_(__DIR__.'/../fuel/packages/').'/');
+</code></pre>
+
+<p>　</p>
+
+<pre><code>-define('COREPATH', realpath(__DIR__.'/../fuel/core/').DIRECTORY_SEPARATOR);
++define('COREPATH', realpat_(__DIR__.'/../fuel/core/').'/');
+</code></pre>
+
+<p><code>fuel/app/config/config.php</code> の変更部分です。 .phar 内には書き込めないので .phar と同じ場所の <code>writable</code> ディレクトリを示すように変更しています。</p>
+
+<p><strong>保存先は公開ディレクトリ外を示すべきなので、さらに一つ上などに示すようにするのが本来は良いでしょう。</strong></p>
+
+<pre><code>-    // 'cache_dir'       =&gt; APPPATH.'cache/',
++    'cache_dir'       =&gt; canonicalizePath(str_replace('phar://', '', APPPATH).'../../../writable/cache/'),
+</code></pre>
+
+<p>　</p>
+
+<pre><code>-    // 'log_path'         =&gt; APPPATH.'logs/',
++    'log_path'         =&gt; canonicalizePath(str_replace('phar://', '', APPPATH).'../../../writable/logs/'),
+</code></pre>
+
+<p><code>fuel/app/config/asset.php</code> の変更部分です。 <code>fuel/core/config/asset.php</code> をコピーして使うのでそのファイルとの比較になります。 一部、三項演算を使っていますが phar でまとめない場合にもそのまま動くようにとの苦肉の策です。</p>
+
+<pre><code>-    'paths' =&gt; array('assets/'),
++    'paths' =&gt; array(DOCROOT . 'assets/'),
+</code></pre>
+
+<p>　</p>
+
+<pre><code>-    'url' =&gt; Config::get('base_url'),
++    'url' =&gt; Config::get('base_url').(0===strpos(__DIR__,'phar://')?'index.phar/':''),
+</code></pre>
+
+<p>　</p>
+
+<pre><code>-    'add_mtime' =&gt; true,
++    'add_mtime' =&gt; false,
+</code></pre>
+
+<p><code>fuel/core/bootstrap.php</code> の変更部分です。 パスの区切りの変更と関数の置き換えです。</p>
+
+<pre><code>-define('DS', DIRECTORY_SEPARATOR);
++define('DS', '/');
+
+-defined('VENDORPATH') or define('VENDORPATH', realpath(COREPATH.'..'.DS.'vendor').DS);
++defined('VENDORPATH') or define('VENDORPATH', realpat_(COREPATH.'..'.DS.'vendor').DS);
+</code></pre>
+
+<p>最後、<code>fuel/core/classes/file/area.php</code> の変更部分です。</p>
+
+<pre><code>         {
+-            $this-&gt;basedir = realpath($this-&gt;basedir) ?: $this-&gt;basedir;
++            $this-&gt;basedir = realpat_($this-&gt;basedir) ?: $this-&gt;basedir;
+         }
+</code></pre>
+
+<p>　</p>
+
+<pre><code>         {
+-            $pathinfo['dirname'] = realpath($pathinfo['dirname']);
++            $pathinfo['dirname'] = realpat_($pathinfo['dirname']);
+         }
+         else
+         {
+             // attempt to get the realpath(), otherwise just use path with any double dots taken out when basedir is set (for security)
+-            $pathinfo['dirname'] = ( ! empty($this-&gt;basedir) ? realpath($this-&gt;basedir.DS.$pathinfo['dirname']) : realpath($pathinfo['dirname']) )
++            $pathinfo['dirname'] = ( ! empty($this-&gt;basedir) ? realpat_($this-&gt;basedir.DS.$pathinfo['dirname']) : realpat_($pathinfo['dirname']) )
+                     ?: ( ! empty($this-&gt;basedir) ? $this-&gt;basedir.DS.str_replace('..', '', $pathinfo['dirname']) : $pathinfo['dirname']);
+</code></pre>
+
+<p>一つ一つ編集するのが大変であれば <a href="https://gist.github.com/sharkpp/7716098">Gist</a> に差分をアップしたので</p>
+
+<pre><code>$ cd fuelphp-1.7
+$ wget -q https://gist.github.com/sharkpp/7716098/raw -O - | patch -u -p0
+</code></pre>
+
+<p>とすることで変更を適用することができます。</p>
+
+<p>次は、phar の生成スクリプトです。</p>
+
+<pre><code>&lt;?php
+/*
+ * Copyright (c) 2013 sharkpp
+ * This software is released under the MIT License.
+ * http://opensource.org/licenses/mit-license.php
+ */
+// 確実に削除 
+@unlink('index.phar');
+// phar書庫作成のためクラスを生成 
+$phar = new Phar(__DIR__ . '/index.phar', 0, 'index.phar');
+// fuelphp17 ディレクトリ丸ごと固める 
+$phar-&gt;buildFromDirectory(__DIR__ . '/fuelphp-1.7/');
+// gzipで圧縮
+//$phar-&gt;compressFiles(Phar::GZ); // ※ css などがうまく取り出せない
+// 起動スタブを設定 
+$phar-&gt;setStub(&lt;&lt;&lt;'EOD'
+&lt;?php
+    function phar_rewrites($path) {
+        if (0 === strpos($path,'/assets/'))
+            return '/public' . $path;     // assets だけはパスを変更 
+        return '/public/index.php'.$path; // あとはすべてindexに渡す 
+    }
+    Phar::interceptFileFuncs();
+    Phar::webPhar('index.phar', 'public/index.php', '', array(), 'phar_rewrites');
+    __HALT_COMPILER(); ?&gt;
+EOD
+);
+</code></pre>
+
+<p>FuelPHP をインストールした fuelphp-1.7 ディレクトリの上にファイルを保存してください。</p>
+
+<p>こちらも <a href="https://gist.github.com/sharkpp/7716423">Gist</a> にアップしてあるので、</p>
+
+<pre><code>$ cd ~
+$ wget -q https://gist.github.com/sharkpp/7716423/raw/mkphar.php
+</code></pre>
+
+<p>として、ローカルに保存できます。</p>
+
+<p>準備ができたら</p>
+
+<pre><code>$ php mkphar.php
+</code></pre>
+
+<p>と入力して、index.phar を作成すると、70MBぐらいのファイルが出来上がります。</p>
+
+<p>ドキュメントや .git などが含まれているので巨大になってしまいました。</p>
+
+<p><strong>ちなみに、Pharクラスでアーカイブを作成するには設定を変える必要があるかもしれません。</strong></p>
+
+<p>具体的には、<code>php.ini</code> の <code>Phar</code> セクション内で <code>phar.readonly = Off</code> と設定されている必要があります。</p>
+
+<h2 id="%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%A7%E7%A2%BA%E8%AA%8D">ブラウザで確認</h2>
+
+<p>ここまでできたら index.phar をウェブサーバーの公開フォルダに置きましょう。</p>
+
+<p>と、その前に、 AddType で .phar を php で実行できるように <code>.htaccess</code> を設置しましょう。</p>
+
+<pre><code>Options +FollowSymLinks
+DirectoryIndex index.phar
+AddType application/x-httpd-php .phar
+
+&lt;IfModule mod_rewrite.c&gt;
+    RewriteEngine on
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    &lt;IfModule mod_fcgid.c&gt;
+        RewriteRule ^(.*)$ index.phar?/$1 [QSA,L]
+    &lt;/IfModule&gt;
+    &lt;IfModule !mod_fcgid.c&gt;
+        &lt;IfModule mod_php5.c&gt;
+            RewriteRule ^(.*)$ index.phar/$1 [L]
+        &lt;/IfModule&gt;
+        &lt;IfModule !mod_php5.c&gt;
+            RewriteRule ^(.*)$ index.phar?/$1 [QSA,L]
+        &lt;/IfModule&gt;
+    &lt;/IfModule&gt;
+&lt;/IfModule&gt;
+</code></pre>
+
+<p>こちらも例によって <a href="https://gist.github.com/sharkpp/7718075">Gist</a> にアップしてあるので、</p>
+
+<pre><code>$ wget -q https://gist.github.com/sharkpp/7718075/raw/.htaccess
+</code></pre>
+
+<p>で取得できます。</p>
+
+<p>例えば、ローカルホストでウェブサーバーを動かしていてドキュメントルートに先の .htaccess と共に置いたのであれば、</p>
+
+<pre><code>http://127.0.0.1/
+</code></pre>
+
+<p>にブラウザでアクセスすると Welcome 画面が表示されます。</p>
+
+<pre><code>http://127.0.0.1/hello
+</code></pre>
+
+<p>にアクセスすると hello と表示されます。</p>
+
+<pre><code>http://127.0.0.1/xxxx
+</code></pre>
+
+<p>エラーページも表示できます。</p>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<p>お遊びのつもりで手を出してみたら、かなり時間をかけないとうまくいかなかったりで当てが外れてちょっとションボリ。</p>
+
+<p>実際問題として core の修正が必要となるので実用性となると皆無だと思います。</p>
+
+<p>ただ、１ファイルでウェブサーバーにアプリが公開できるのは、うまく作れば面白いことが出来るのではないかとの期待が持てそうな機能でした。</p>
+
+<p>明日は <a href="https://twitter.com/kenji_s">@kenji_s</a> さんの「<a href="http://blog.a-way-out.net/blog/2013/12/02/quick-mastering-fuelphp/">FuelPHPの開発環境を20分で構築する（Vagrant編）</a>」です。お楽しみに！</p>
+]]></content>
+        </entry>
+    </feed>

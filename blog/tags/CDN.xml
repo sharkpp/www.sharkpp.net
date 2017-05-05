@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/CDN.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:49+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[JavaScript や CSS の CDN サービスについて調べてみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/03/06/research-of-javascript-and-css-cdn.html"/>
+            <updated>2016-03-06T21:30:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/03/06/research-of-javascript-and-css-cdn.html</id>
+            <content type="html"><![CDATA[<p>jQuery や Bootstrap などの一般的なライブラリを使うときは自分のサイトに設置する以外に、 Content Delivery Network 略して CDN サービスで配信されているものを利用することもあります、というかこのページでも使っています。</p>
+
+<p>ということで、 CDN サービスを調べてみました。</p>
+
+<h2 id="%E5%AF%BE%E8%B1%A1">対象</h2>
+
+<p>一般的な多くのライブラリを配信しているサービス</p>
+
+<ul>
+<li><a href="https://cdnjs.com/">cdnjs.com - The free and open source CDN for web related libraries to speed up your website!</a></li>
+<li><a href="https://www.jsdelivr.com/">jsDelivr - A free super-fast CDN for developers and webmasters</a></li>
+<li><a href="https://developers.google.com/speed/libraries/">Hosted Libraries  |  Hosted Libraries  |  Google Developers</a></li>
+<li><a href="http://www.asp.net/ajax/cdn">Microsoft Ajax Content Delivery Network | The ASP.NET Site</a></li>
+</ul>
+
+<p>と、一部のライブラリの配信に特化しているサービス</p>
+
+<ul>
+<li><a href="https://code.jquery.com/">jQuery CDN</a></li>
+<li><a href="https://www.bootstrapcdn.com/">BootstrapCDN by MaxCDN</a></li>
+</ul>
+
+<p>を調べてみました。</p>
+
+<p>なお、結果は環境やタイミングなどにより変化することがある旨、予めご了承ください。</p>
+
+<h2 id="%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%81%94%E3%81%A8%E3%81%AE%E3%83%AC%E3%82%B9%E3%83%9D%E3%83%B3%E3%82%B9">ライブラリごとのレスポンス</h2>
+
+<p>調査は curl コマンドのレスポンスを <a href="https://gist.github.com/sharkpp/bc3de3bbaa5e99752ca1">research-of-javascript-and-css-cdn.php - Gist</a> のスクリプトで集計しその結果をもとにまとめています。</p>
+
+<p>各表は、50 回の問い合わせを算術平均した結果でソートしてあります。
+また、 <code>loss</code> は、要求でエラーが返ってきていないかの確認のため設けましたが滅多なことではエラーは返ってこないので常に <code>0.0 %</code> となっています。</p>
+
+<p>対象のライブラリは独断と偏見により、</p>
+
+<ul>
+<li><a href="https://jquery.com/">jQuery</a></li>
+<li><a href="https://jqueryui.com/">jQuery UI</a></li>
+<li><a href="https://jquerymobile.com/">jQuery Mobile</a></li>
+<li><a href="https://lodash.com/">lodash</a></li>
+<li><a href="http://snapsvg.io/">Snap.svg</a></li>
+<li><a href="https://d3js.org/">3D.js</a></li>
+<li><a href="http://threejs.org/">three.js</a></li>
+<li><a href="http://getbootstrap.com/">Bootstrap</a></li>
+<li><a href="https://fortawesome.github.io/Font-Awesome/">Font Awesome</a></li>
+<li><a href="https://angularjs.org/">AngularJS</a></li>
+</ul>
+
+<p>を選び調査しました。</p>
+
+<p>それぞれのライブラリは調査時点で各 CDN サービスで選択できる安定版を対象としています。
+なので、一部古いバージョンが混じっていますが間違ってはいません。</p>
+
+<h3 id="jquery">jQuery</h3>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Microsoft Ajax CDN</td>
+  <td align="right">2.2.1</td>
+  <td align="right">63 ms</td>
+  <td align="right">77 ms</td>
+  <td align="right">577 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">Google Hosted Libraries</td>
+  <td align="right">2.2.0</td>
+  <td align="right">216 ms</td>
+  <td align="right">224 ms</td>
+  <td align="right">242 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">2.2.1</td>
+  <td align="right">195 ms</td>
+  <td align="right">233 ms</td>
+  <td align="right">305 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">2.2.1</td>
+  <td align="right">319 ms</td>
+  <td align="right">366 ms</td>
+  <td align="right">476 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jQuery CDN</td>
+  <td align="right">2.2.1</td>
+  <td align="right">878 ms</td>
+  <td align="right">939 ms</td>
+  <td align="right">1008 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="lodash">lodash</h3>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">4.6.1</td>
+  <td align="right">129 ms</td>
+  <td align="right">168 ms</td>
+  <td align="right">196 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">4.6.1</td>
+  <td align="right">338 ms</td>
+  <td align="right">442 ms</td>
+  <td align="right">1006 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="snap.svg">Snap.svg</h3>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">0.4.1</td>
+  <td align="right">200 ms</td>
+  <td align="right">246 ms</td>
+  <td align="right">373 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">0.4.1</td>
+  <td align="right">344 ms</td>
+  <td align="right">386 ms</td>
+  <td align="right">451 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="d3.js">D3.js</h3>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">3.5.16</td>
+  <td align="right">302 ms</td>
+  <td align="right">330 ms</td>
+  <td align="right">419 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">3.5.16</td>
+  <td align="right">344 ms</td>
+  <td align="right">458 ms</td>
+  <td align="right">794 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="three.js">three.js</h3>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Google Hosted Libraries</td>
+  <td align="right">r69</td>
+  <td align="right">251 ms</td>
+  <td align="right">274 ms</td>
+  <td align="right">323 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">r74</td>
+  <td align="right">308 ms</td>
+  <td align="right">583 ms</td>
+  <td align="right">829 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">r74</td>
+  <td align="right">526 ms</td>
+  <td align="right">641 ms</td>
+  <td align="right">860 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="jquery-ui">jQuery UI</h3>
+
+<p>JavaScript</p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Microsoft Ajax CDN</td>
+  <td align="right">1.11.4</td>
+  <td align="right">90 ms</td>
+  <td align="right">104 ms</td>
+  <td align="right">612 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">Google Hosted Libraries</td>
+  <td align="right">1.11.4</td>
+  <td align="right">225 ms</td>
+  <td align="right">235 ms</td>
+  <td align="right">278 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">1.11.4</td>
+  <td align="right">320 ms</td>
+  <td align="right">411 ms</td>
+  <td align="right">606 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">1.11.4</td>
+  <td align="right">384 ms</td>
+  <td align="right">534 ms</td>
+  <td align="right">1003 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jQuery CDN</td>
+  <td align="right">1.11.4</td>
+  <td align="right">1096 ms</td>
+  <td align="right">1194 ms</td>
+  <td align="right">1760 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<p>CSS</p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Microsoft Ajax CDN</td>
+  <td align="right">1.11.4</td>
+  <td align="right">42 ms</td>
+  <td align="right">55 ms</td>
+  <td align="right">557 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">1.11.4</td>
+  <td align="right">155 ms</td>
+  <td align="right">185 ms</td>
+  <td align="right">215 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">Google Hosted Libraries</td>
+  <td align="right">1.11.4</td>
+  <td align="right">179 ms</td>
+  <td align="right">206 ms</td>
+  <td align="right">720 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">1.11.4</td>
+  <td align="right">295 ms</td>
+  <td align="right">347 ms</td>
+  <td align="right">980 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jQuery CDN</td>
+  <td align="right">1.11.4</td>
+  <td align="right">761 ms</td>
+  <td align="right">815 ms</td>
+  <td align="right">895 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="jquery-mobile">jQuery Mobile</h3>
+
+<p>JavaScript</p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Microsoft Ajax CDN</td>
+  <td align="right">1.4.5</td>
+  <td align="right">130 ms</td>
+  <td align="right">153 ms</td>
+  <td align="right">655 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">Google Hosted Libraries</td>
+  <td align="right">1.4.5</td>
+  <td align="right">221 ms</td>
+  <td align="right">234 ms</td>
+  <td align="right">288 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">1.4.5</td>
+  <td align="right">232 ms</td>
+  <td align="right">323 ms</td>
+  <td align="right">2678 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">1.4.5</td>
+  <td align="right">358 ms</td>
+  <td align="right">466 ms</td>
+  <td align="right">917 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jQuery CDN</td>
+  <td align="right">1.4.5</td>
+  <td align="right">1002 ms</td>
+  <td align="right">1141 ms</td>
+  <td align="right">1609 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<p>CSS</p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Microsoft Ajax CDN</td>
+  <td align="right">1.4.5</td>
+  <td align="right">86 ms</td>
+  <td align="right">102 ms</td>
+  <td align="right">606 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">Google Hosted Libraries</td>
+  <td align="right">1.4.5</td>
+  <td align="right">222 ms</td>
+  <td align="right">244 ms</td>
+  <td align="right">755 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">1.4.5</td>
+  <td align="right">232 ms</td>
+  <td align="right">272 ms</td>
+  <td align="right">1549 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">1.4.5</td>
+  <td align="right">360 ms</td>
+  <td align="right">466 ms</td>
+  <td align="right">655 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jQuery CDN</td>
+  <td align="right">1.4.5</td>
+  <td align="right">995 ms</td>
+  <td align="right">1124 ms</td>
+  <td align="right">1244 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="bootstrap">Bootstrap</h3>
+
+<p>CSS</p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Microsoft Ajax CDN</td>
+  <td align="right">3.3.6</td>
+  <td align="right">66 ms</td>
+  <td align="right">86 ms</td>
+  <td align="right">590 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">3.3.6</td>
+  <td align="right">187 ms</td>
+  <td align="right">223 ms</td>
+  <td align="right">761 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">3.3.6</td>
+  <td align="right">338 ms</td>
+  <td align="right">437 ms</td>
+  <td align="right">899 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">BootstrapCDN</td>
+  <td align="right">3.3.6</td>
+  <td align="right">844 ms</td>
+  <td align="right">909 ms</td>
+  <td align="right">1040 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<p>JavaScript</p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Microsoft Ajax CDN</td>
+  <td align="right">3.3.6</td>
+  <td align="right">42 ms</td>
+  <td align="right">55 ms</td>
+  <td align="right">571 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">3.3.6</td>
+  <td align="right">156 ms</td>
+  <td align="right">196 ms</td>
+  <td align="right">475 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">3.3.6</td>
+  <td align="right">307 ms</td>
+  <td align="right">347 ms</td>
+  <td align="right">853 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">BootstrapCDN</td>
+  <td align="right">3.3.6</td>
+  <td align="right">714 ms</td>
+  <td align="right">756 ms</td>
+  <td align="right">809 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="font-awesome">Font Awesome</h3>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Google Hosted Libraries</td>
+  <td align="right">1.4.9</td>
+  <td align="right">232 ms</td>
+  <td align="right">243 ms</td>
+  <td align="right">318 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">1.5.0</td>
+  <td align="right">220 ms</td>
+  <td align="right">330 ms</td>
+  <td align="right">434 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">1.5.0</td>
+  <td align="right">359 ms</td>
+  <td align="right">422 ms</td>
+  <td align="right">544 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="angularjs">AngularJS</h3>
+
+<table>
+<thead>
+<tr>
+  <th align="left">CDN</th>
+  <th align="right">Ver</th>
+  <th align="right">min</th>
+  <th align="right">ave.</th>
+  <th align="right">max</th>
+  <th align="right">loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Google Hosted Libraries</td>
+  <td align="right">1.4.9</td>
+  <td align="right">219 ms</td>
+  <td align="right">242 ms</td>
+  <td align="right">743 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">jsDelivr</td>
+  <td align="right">1.5.0</td>
+  <td align="right">223 ms</td>
+  <td align="right">312 ms</td>
+  <td align="right">759 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+<tr>
+  <td align="left">cdnjs</td>
+  <td align="right">1.5.0</td>
+  <td align="right">359 ms</td>
+  <td align="right">465 ms</td>
+  <td align="right">669 ms</td>
+  <td align="right">0.0 %</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<p>レスポンス速度としては大まかには</p>
+
+<table>
+<thead>
+<tr>
+  <th align="center">#</th>
+  <th>CDN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="center">1</td>
+  <td>Microsoft Ajax CDN</td>
+</tr>
+<tr>
+  <td align="center">2</td>
+  <td>Google Hosted Libraries</td>
+</tr>
+<tr>
+  <td align="center">3</td>
+  <td>jsDelivr</td>
+</tr>
+<tr>
+  <td align="center">4</td>
+  <td>cdnjs</td>
+</tr>
+<tr>
+  <td align="center">5</td>
+  <td>jQuery CDN</td>
+</tr>
+<tr>
+  <td align="center">6</td>
+  <td>BootstrapCDN</td>
+</tr>
+</tbody>
+</table>
+
+<p>の順のような感じです。</p>
+
+<p>配信しているライブラリの数としては</p>
+
+<table>
+<thead>
+<tr>
+  <th>CDN</th>
+  <th align="right">配信数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>cdnjs</td>
+  <td align="right">1835</td>
+</tr>
+<tr>
+  <td>jsDelivr</td>
+  <td align="right">1750</td>
+</tr>
+<tr>
+  <td>Microsoft Ajax CDN</td>
+  <td align="right">20</td>
+</tr>
+<tr>
+  <td>Google Hosted Libraries</td>
+  <td align="right">14</td>
+</tr>
+<tr>
+  <td>jQuery CDN</td>
+  <td align="right">6</td>
+</tr>
+<tr>
+  <td>BootstrapCDN</td>
+  <td align="right">3</td>
+</tr>
+</tbody>
+</table>
+
+<p>と、 cdnjs や jsDelivr が圧倒的に多いですが、 Bootstrap 用のテーマの Bootswatch は BootstrapCDN しか配信していないのでその場合はそれ一択です。
+Google Hosted Libraries の場合は、最新バージョンのライブラリが配信されていないこともあるのでレスポンスはいいですが超憂が必要となります。</p>
+
+<h2 id="%E3%81%8A%E3%81%BE%E3%81%91">おまけ</h2>
+
+<h3 id="%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%84%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%81%8C%E9%85%8D%E4%BF%A1%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%EF%BC%81">使いたいライブラリが配信されていない！</h3>
+
+<p>また、どうしても CDN を利用したい、でもライブラリがマイナーすぎて CDN で配信されていない、という場合は GitHub でライブラリが公開されている場合に限り  <a href="http://rawgit.com/">RawGit</a> を利用することもできます。</p>
+
+<p>まあ、その他の場合は諦めて素直に自分のサーバーのファイルを参照しましょう。</p>
+
+<h3 id="cdn-%E3%81%A7%E9%9A%9C%E5%AE%B3%E3%81%8C%E8%B5%B7%E3%81%8D%E3%81%9F%E3%82%89%EF%BC%9F">CDN で障害が起きたら？</h3>
+
+<p>参照している CDN で障害が起きた場合は、当然ながら、ページのレイアウトが崩れたりしてしまいます。
+基本的にはほとんど問題ないとはいえ、万が一に備えておいて悪くわありません。</p>
+
+<p>方策としては例えば、</p>
+
+<pre><code class="javascript">&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;window.jQuery || document.write('&lt;script src="/assets/jquery/jquery.min.js"&gt;&lt;\/script&gt;')&lt;/script&gt;
+</code></pre>
+
+<p>と、このような感じで、CDN を参照している script タグの直後に、判定式を書いて、読み込めていないようであれば、ローカルを参照することができます。</p>
+
+<p>また、専用のライブラリ <a href="http://fallback.io/">Fallback JS</a> を使ってみるのもいいかもしれません。
+ああ、 当然のことながら Fallback JS を CDN から読んではいけませんよ。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://qiita.com/narikei/items/cffb27b6d5788005d1b0">jsのよく使うホスティングサービス（cdn）まとめ - Qiita</a></li>
+<li><a href="http://www.hirok-k.com/blog/2634.html">ウェブ制作でよく使うjQuery関連のCDNまとめ</a></li>
+<li><a href="http://qiita.com/takanorig/items/89db46120d2ec171e3d8">GitHub上のファイルをCDNとして参照する - Qiita</a></li>
+<li><a href="https://hyper-text.org/archives/2014/07/dont_use_jquery_latest_js.shtml">jQuery 公式 Blog 「jquery-latest.js を使用するのをやめろ」 | WWW WATCH</a></li>
+<li><a href="http://little-braver.com/232/">JavaScriptライブラリーのCDN利用、フォールバック対応しました</a></li>
+<li><a href="http://fdays.blogspot.jp/2013/04/js-cdn-2013.html">floatingdays: JSの CDNの速度比較 （2013年版）</a></li>
+<li><a href="http://www.hongkiat.com/blog/css-javascript-fallback-methods/">10 Useful Fallback Methods For CSS And Javascript - Hongkiat</a></li>
+<li><a href="http://www.buildinsider.net/web/popularjslib/2015">人気上昇中のJavaScriptライブラリを調べてみた【2015年版】 - Build Insider</a></li>
+<li><a href="http://www.buildinsider.net/hub/survey/201504-popularjs">2015年、人気の「JavaScriptライブラリ＆ツール」はどれ？ Angular vs. Reactの行方 - Build Insider</a></li>
+<li><a href="http://please-sleep.cou929.nu/curl-write-out-option.html">curl でレスポンスタイムを計測 - Please Sleep</a></li>
+</ul>
+]]></content>
+        </entry>
+    </feed>

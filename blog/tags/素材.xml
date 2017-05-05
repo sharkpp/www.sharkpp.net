@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/%E7%B4%A0%E6%9D%90.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:50+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[魔法陣を作ってみた(その3)]]></title>
+            <link href="http://www.sharkpp.net/blog/2011/05/01/making-of-magic-circle-3.html"/>
+            <updated>2011-05-01T00:27:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2011/05/01/making-of-magic-circle-3.html</id>
+            <content type="html"><![CDATA[<p>最近、魔法陣を描くのが楽しくてしょうがない。</p>
+
+<p>なんていうか、一言で言うと血湧き肉躍る感じ。</p>
+
+<p>コード書くのも楽しいけど、絵描くのも楽しい...</p>
+
+<p>てことで、いままでこんなんを描いていましたってところで、一覧を作った。</p>
+
+<p><a href="/graffiti">落書き</a></p>
+
+<p>あと、休眠状態だったpixivアカウントに投稿してます。</p>
+
+<p>つ<a href="http://www.pixiv.net/member.php?id=1547498">「sharkpp」のイラスト</a></p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[魔法陣を作ってみた(その2)]]></title>
+            <link href="http://www.sharkpp.net/blog/2011/04/17/making-of-magic-circle-2.html"/>
+            <updated>2011-04-17T12:52:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2011/04/17/making-of-magic-circle-2.html</id>
+            <content type="html"><![CDATA[<p>夜中に魔法陣を作り始めてしまった。</p>
+
+<p><a href="/images/2011_0417_magic_circle2_512x512.png"><img src="/images/2011_0417_magic_circle2_128x128.png" alt="魔法陣2" /></a></p>
+
+<p><a href="/images/2011_0417_magic_circle3_512x512.png"><img src="/images/2011_0417_magic_circle3_128x128.png" alt="魔法陣3" /></a></p>
+
+<p>魔法陣中のルーン文字は<a href="http://www.vector.co.jp/soft/data/writing/se210523.html">Rune Font</a>を使用しています。</p>
+
+<p>細かい字はTungaフォントを使っています。</p>
+
+<p>画像は煮るなり焼くなりご自由に...</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[魔法陣を作ってみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2010/05/17/making-of-magic-circle.html"/>
+            <updated>2010-05-17T00:52:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2010/05/17/making-of-magic-circle.html</id>
+            <content type="html"><![CDATA[<p><a href="http://www.nicovideo.jp/watch/sm1197275">妖精さん好きな私が魔法陣を描いてみた β</a>このあたりに触発されて魔法陣なんぞをInkscapeで描いてみるがまったく話にならないorz。</p>
+
+<p><a href="/images/2010_0517_magic_circle_512x512.png"><img src="/images/2010_0517_magic_circle_128x128.png" alt="SysColor魔法陣" /></a></p>
+
+<p>魔法陣中のルーン文字は<a href="http://www.vector.co.jp/soft/data/writing/se210523.html">Rune Font</a>を使用しています。</p>
+
+<p>画像は煮るなり焼くなりご自由に...</p>
+]]></content>
+        </entry>
+    </feed>

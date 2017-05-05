@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/JSDoc.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:49+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[JSDoc 3 用のプラグインをまとめてみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/08/30/list-of-jsdoc3-plugins.html"/>
+            <updated>2016-08-30T01:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/08/30/list-of-jsdoc3-plugins.html</id>
+            <content type="html"><![CDATA[<p>世の中には「ソースコードが仕様書」という話を聞いたりします。</p>
+
+<p>まあ、ソースコードと仕様書を同期して更新するなんて大変ですよね。</p>
+
+<p>そこで、誰が考えたのか、まさにソースコードから仕様書を作るツールが <a href="http://www.stack.nl/~dimitri/doxygen/">Doxygen</a> や <a href="http://usejsdoc.org/">JSDoc</a> などになります。</p>
+
+<p>先に上がった JSDoc は JavaScript 専用のドキュメント生成ツールですが、どうやらプラグイン機能があるとのことで、標準添付のプラグインの情報すら日本語のものはなさそうだったので簡単に調べてまとめてみました。</p>
+
+<h2 id="%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9">プラグインの使い方</h2>
+
+<p>基本的には <a href="http://usejsdoc.org/about-plugins.html">Use JSDoc: About JSDoc plugins</a> に書かれているように、JSDoc の設定ファイル <code>jsdoc.json</code> に</p>
+
+<pre><code class="JSON">{
+    "plugins": ["plugins/shout"]
+}
+</code></pre>
+
+<p>みたいな感じに書けば利用可能となるようです。</p>
+
+<p>自分で作りたい場合は、同じく  <a href="http://usejsdoc.org/about-plugins.html">Use JSDoc: About JSDoc plugins</a> の <strong>Event Handlers</strong> や <strong>Tag Definitions</strong> などを見ながら作ればいいのではないかと思います。</p>
+
+<h2 id="%E6%A8%99%E6%BA%96%E6%B7%BB%E4%BB%98%E9%9D%9E%E5%AE%9F%E7%94%A8%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3">標準添付(非実用プラグイン)</h2>
+
+<p>標準添付されているプラグインの中には、サンプルや開発用のプラグインも含まれています。</p>
+
+<h3 id="commentconvert.js">commentConvert.js</h3>
+
+<p>beforeParse イベントのサンプルプラグイン。</p>
+
+<p>これは、非実用的なプラグインのようです。</p>
+
+<h3 id="shout.js">shout.js</h3>
+
+<p>newDoclet イベントのサンプルプラグイン。</p>
+
+<p>これは、非実用的なプラグインのようです。</p>
+
+<h3 id="eventdumper.js">eventDumper.js</h3>
+
+<p>コンソールにパーサーイベントに関する情報をダンプするプラグイン。</p>
+
+<p>これは、開発に利用するための非実用的なプラグインのようです。</p>
+
+<h2 id="%E6%A8%99%E6%BA%96%E6%B7%BB%E4%BB%98%E5%AE%9F%E7%94%A8%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3">標準添付(実用プラグイン)</h2>
+
+<p>標準添付された様々な機能を持つプラグイン</p>
+
+<h3 id="commentsonly.js">commentsOnly.js</h3>
+
+<p>JavaScript 以外の言語で書かれたソースに含まれる JSDoc 形式のコメント以外を削除することで、ドキュメント化することができるようになるプラグイン。</p>
+
+<h3 id="escapehtml.js">escapeHtml.js</h3>
+
+<p>ドキュメント中に含まれる HTML タグをエスケープするプラグイン。</p>
+
+<h3 id="markdown.js">markdown.js</h3>
+
+<p>Markdown 記法で書かれたコメント内のテキストを HTML に変換できるようにするプラグイン。</p>
+
+<p><a href="http://usejsdoc.org/plugins-markdown.html">Use JSDoc: Using the Markdown plugin</a> に使い方が載っています。</p>
+
+<h3 id="overloadhelper.js">overloadHelper.js</h3>
+
+<p>自動的にオーバーロード関数やメソッドの長い名前に署名のような文字列を追加するプラグイン。</p>
+
+<h3 id="partial.js">partial.js</h3>
+
+<p><code>@partial FILENAME</code> とすることで、<code>FILENAME</code> をそこに読み込むプラグイン。</p>
+
+<h3 id="railstemplate.js">railsTemplate.js</h3>
+
+<p>.erb ファイル (Rails の HTML テンプレートファイル) から Rails のテンプレートタグを除去するプラグイン。</p>
+
+<h3 id="sourcetag.js">sourcetag.js</h3>
+
+<p><code>@source { "filename": "sourcetag.js", "lineno": 13 }</code> のような感じで、ファイルの現在位置に関するメタ情報を更新できるプラグイン。</p>
+
+<h3 id="summarize.js">summarize.js</h3>
+
+<p>説明が不足している場合に要約を自動生成するプラグイン。</p>
+
+<h3 id="underscore.js">underscore.js</h3>
+
+<p><code>_</code> から始まる JSDoc コメントの全ての属性を private に変更するプラグイン。</p>
+
+<h2 id="npm-%E3%81%AB%E7%99%BB%E9%8C%B2%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%82%82%E3%81%AE">npm に登録されているもの</h2>
+
+<h3 id="ub-jsdoc">ub-jsdoc</h3>
+
+<p>npm ページ：<a href="https://www.npmjs.com/package/ub-jsdoc">ub-jsdoc</a></p>
+
+<p>godoc にインスパアされたテーマ＆プラグイン。</p>
+
+<h3 id="jsdoc-codesnippet">jsdoc-codesnippet</h3>
+
+<p>npm ページ：<a href="https://www.npmjs.com/package/jsdoc-codesnippet">jsdoc-codesnippet</a></p>
+
+<p>名前をつけたコードスニペットをドキュメントに含めることができるようになるプラグイン。</p>
+
+<h3 id="jsdoc-vue">jsdoc-vue</h3>
+
+<p>npm ページ：<a href="https://www.npmjs.com/package/jsdoc-vue">jsdoc-vue</a></p>
+
+<p><code>*.vue</code> ファイル (Vueify 用のファイル) を解析できるようにするプラグイン。</p>
+
+<h3 id="jsdoc-plugins">jsdoc-plugins</h3>
+
+<p>npm ページ：<a href="https://www.npmjs.com/package/jsdoc-plugins">jsdoc-plugins</a></p>
+
+<p>いろんなタグを実装したプラグイン。</p>
+
+<h3 id="jsdoc-babel">jsdoc-babel</h3>
+
+<p>npm ページ：<a href="https://www.npmjs.com/package/jsdoc-babel">jsdoc-babel</a></p>
+
+<p>JavaScript ファイルの解析前に <a href="https://babeljs.io/">Babel</a> で事前処理を行うプラグイン。</p>
+
+<h3 id="jsdoc-riot">jsdoc-riot</h3>
+
+<p>npm ページ：<a href="https://www.npmjs.com/package/jsdoc-riot">jsdoc-riot</a></p>
+
+<p>Riot タグファイルのサポートを追加するプラグイン。</p>
+
+<h3 id="jsdoc-ignore-future">jsdoc-ignore-future</h3>
+
+<p>npm ページ：<a href="https://www.npmjs.com/package/jsdoc-ignore-future">jsdoc-ignore-future</a></p>
+
+<h3 id="jsdoc-escape-at">jsdoc-escape-at</h3>
+
+<p>npm ページ：<a href="https://www.npmjs.com/package/jsdoc-escape-at">jsdoc-escape-at</a></p>
+
+<p>コメント中の @ をエスケープするプラグイン？</p>
+
+<h3 id="jsdoc-plugin-named-defaults">jsdoc-plugin-named-defaults</h3>
+
+<p>npm ページ：<a href="https://www.npmjs.com/package/jsdoc-plugin-named-defaults">jsdoc-plugin-named-defaults</a></p>
+
+<p>引数のデフォルト値をコード中から拾ってくるプラグイン？</p>
+
+<h3 id="jsdoc-jsx">jsdoc-jsx</h3>
+
+<p>npm ページ：<a href="https://www.npmjs.com/package/jsdoc-jsx">jsdoc-jsx</a></p>
+
+<p>(Facebook の) JSX ファイルのサポートを追加するプラグイン。</p>
+
+<h3 id="jsdoc-plugin-strip-outer-iife">jsdoc-plugin-strip-outer-iife</h3>
+
+<p>npm ページ：<a href="https://www.npmjs.com/package/jsdoc-plugin-strip-outer-iife">jsdoc-plugin-strip-outer-iife</a></p>
+
+<p>一番外側の IIFE (Immediately-invoked function expression：即時実行関数式) を除去するプラグイン。</p>
+
+<h3 id="jsdoc-bem">jsdoc-bem</h3>
+
+<p>npm ページ：<a href="https://www.npmjs.com/package/jsdoc-bem">jsdoc-bem</a></p>
+
+<p><a href="https://en.bem.info/methodology/js/">BEM</a> の要素のサポートを追加するプラグイン？</p>
+
+<h3 id="bouquet">bouquet</h3>
+
+<p>npm ページ：<a href="https://www.npmjs.com/package/bouquet">bouquet</a></p>
+
+<p>有用なプラグインを集めたプラグイン。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://usejsdoc.org/about-plugins.html">Use JSDoc: About JSDoc plugins</a></li>
+<li><a href="https://www.npmjs.com/search?q=jsdoc">results for jsdoc</a></li>
+</ul>
+]]></content>
+        </entry>
+    </feed>

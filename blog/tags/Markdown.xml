@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/Markdown.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:49+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[PHP で日本語を含む HTML から Markdown に変換する方法]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/07/05/how-to-japanese-html-to-markdown-in-php.html"/>
+            <updated>2015-07-05T12:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/07/05/how-to-japanese-html-to-markdown-in-php.html</id>
+            <content type="html"><![CDATA[<p>ホムペを再構築するにあたり<a href="/blog/2015/06/28/site-reboot-by-sculpin.html">Sculpin でホムペを再構築したときのメモ</a>でもサラッと書いたけど“.html をスクリプトで .md に変換＆リンクを再構成”というのが割と厄介だった。</p>
+
+<p>PHP で Markdown 記法から HTML への変換を行うライブラリ/パッケージは多数見つかるが、その逆の HTML から Markdown 記法への変換を行う物は数えるほどしかありませんでした。</p>
+
+<p>ざっと探した感じでは</p>
+
+<ul>
+<li><a href="https://github.com/nickcernis/html-to-markdown">nickcernis/html-to-markdown</a></li>
+<li><a href="https://github.com/Elephant418/Markdownify">Elephant418/Markdownify</a></li>
+</ul>
+
+<p>ぐらいのようです。</p>
+
+<p>結局、１番目の <code>html-to-markdown</code> は思ったように動いてくれなかったので、２つ目の <code>Markdownify</code> を使うようにしたのですがこちらも癖があって意図通りに動かすのは大変でした。</p>
+
+<h2 id="%E6%BA%96%E5%82%99">準備</h2>
+
+<p>とりあえず、ライブラリを使えるように準備をします。</p>
+
+<p><strong>composer.json</strong></p>
+
+<pre><code class="json">{
+    "require": {
+        "pixel418/markdownify": "2.1.*"
+    }
+}
+</code></pre>
+
+<p>と、先の内容で Composer の設定ファイルを作り、</p>
+
+<pre><code class="bash">$ php -r "readfile('https://getcomposer.org/installer');" | php
+$ php composer.phar install
+</code></pre>
+
+<p>Composer のインストール＆ライブラリのインストール。</p>
+
+<p>コレだけで</p>
+
+<pre><code class="php">&lt;?php
+
+require_once(dirname(__FILE__) . '/vendor/autoload.php');
+
+</code></pre>
+
+<p>とすると使えるようになります。</p>
+
+<p><code>Composer</code> 便利！</p>
+
+<h2 id="%E5%AE%9F%E9%9A%9B%E3%81%AB%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B">実際に使ってみる</h2>
+
+<pre><code class="php">&lt;?php
+
+require_once(dirname(__FILE__) . '/vendor/autoload.php');
+
+$html=&lt;&lt;&lt;'EOD'
+&lt;h1&gt;てすとヘッダレベル１&lt;/h1&gt;
+&lt;p&gt;ぱらぐらふ1234&lt;/p&gt;
+&lt;p&gt;ABCDE色々いろいろ&lt;/p&gt;
+EOD;
+
+$md = new Markdownify\Converter();
+$markdown = $md-&gt;parseString($html . PHP_EOL);
+unset($md);
+
+echo $markdown . PHP_EOL;
+</code></pre>
+
+<p>こんな感じの内容でテストしてみましょう。</p>
+
+<pre><code class="markdown"># てすとヘッダレベル１
+
+ぱらぐらふ1234
+
+ABCDE色? いろいろ
+</code></pre>
+
+<p>とりあえず変換できて、、い、、る？</p>
+
+<p><code>ABCDE色々いろいろ</code> が <code>ABCDE色? いろいろ</code> と文字化けてしまっています。</p>
+
+<p>今回、ここが手子摺ったっ部分です。</p>
+
+<h2 id="markdonify-%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9">Markdonify の使い方</h2>
+
+<p>簡単な使い方</p>
+
+<pre><code class="php">    $md = new Markdownify\Converter(/* パラメータ */);
+    $markdown = $md-&gt;parseString($html . PHP_EOL);
+    unset($md);
+</code></pre>
+
+<p>たったコレだけです！</p>
+
+<h3 id="%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF">パラメータ</h3>
+
+<p><code>Markdownify\Converter</code> クラスのコンストラクタで <code>Markdownify\Converter($linkPosition = self::LINK_AFTER_CONTENT, $bodyWidth = MDFY_BODYWIDTH, $keepHTML = MDFY_KEEPHTML)</code> のようにパラメータを与えられるようになっています。</p>
+
+<table>
+<thead>
+<tr>
+  <th>引数名</th>
+  <th>デフォルト値</th>
+  <th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>$linkPosition</code></td>
+  <td><code>LINK_AFTER_CONTENT</code></td>
+  <td>リンクの位置を定義。<br/><code>Markdownify\Converter::LINK_AFTER_CONTENT</code> の場合は末尾にまとめる。<br/><code>Markdownify\Converter::LINK_AFTER_PARAGRAPH</code> の場合は段落ごとにまとめる。<br/><code>Markdownify\Converter::LINK_IN_PARAGRAPH</code> の場合はその場で定義。</td>
+</tr>
+<tr>
+  <td><code>$bodyWidth</code></td>
+  <td><code>false</code></td>
+  <td>出力を所定の幅で折り返すかどうか。 <code>false</code> もしくは 26 以上の値。</td>
+</tr>
+<tr>
+  <td><code>$keepHTML</code></td>
+  <td><code>true</code></td>
+  <td>markdown へ変換できない HTMLを維持するか、それを破棄するかどうか。</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="%24linkposition-%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF">$linkPosition パラメータ</h3>
+
+<p>リンクの位置を定義するパラメータです。</p>
+
+<p>共通のコードをベースにパラメータを変えて結果を比較してみます。</p>
+
+<pre><code class="php">&lt;?php
+require_once(dirname(__FILE__) . '/vendor/autoload.php');
+
+$html=&lt;&lt;&lt;'EOD'
+&lt;h1&gt;てすとヘッダレベル１&lt;/h1&gt;
+&lt;p&gt;ぱらぐらふ&lt;a href="http://example.net/~hoge/"&gt;xxxx&lt;/a&gt;1234&lt;/p&gt;
+&lt;p&gt;ABCDE&lt;a href="http://example.net/~fuga/"&gt;aaaa&lt;/a&gt;いろいろ&lt;/p&gt;
+&lt;p&gt;いろいろABCDE&lt;/p&gt;
+&lt;h2&gt;てすとヘッダレベル２&lt;/h2&gt;
+&lt;p&gt;パラグラフ1234&lt;/p&gt;
+&lt;p&gt;いろいろ&lt;a href="http://example.net/~foo/"&gt;bbbb&lt;/a&gt;ABCDE&lt;/p&gt;
+&lt;h2&gt;てすとヘッダレベル２&lt;/h2&gt;
+&lt;p&gt;いろいろABCDE&lt;/p&gt;
+EOD;
+
+$md = new Markdownify\Converter(/* $linkPosition パラメータ */);
+echo $md-&gt;parseString($html).PHP_EOL;
+</code></pre>
+
+<p>このコードの <code>/* $linkPosition パラメータ */</code> の部分を <code>Markdownify\Converter::LINK_AFTER_CONTENT</code> や <code>Markdownify\Converter::LINK_AFTER_PARAGRAPH</code> に変えた結果を乗せます。</p>
+
+<h4 id="link_after_content">LINK_AFTER_CONTENT</h4>
+
+<p>の結果は</p>
+
+<pre><code class="markdown"># てすとヘッダレベル１
+
+ぱらぐらふ[xxxx][1]＆[xxx2][2]1234
+
+ABCDE[aaaa][3]いろいろ
+
+いろいろABCDE
+
+## てすとヘッダレベル２
+
+パラグラフ1234
+
+いろいろ[bbbb][4]ABCDE
+
+## てすとヘッダレベル２
+
+いろいろABCDE
+
+ [1]: http://example.net/~hoge/
+ [2]: http://example.net/~hoge2/
+ [3]: http://example.net/~fuga/
+ [4]: http://example.net/~foo/
+</code></pre>
+
+<p>のように、末尾にリンクがまとめて出力されます。</p>
+
+<h4 id="link_after_paragraph">LINK_AFTER_PARAGRAPH</h4>
+
+<p>の結果は</p>
+
+<pre><code class="markdown"># てすとヘッダレベル１
+
+ぱらぐらふ[xxxx][1]＆[xxx2][2]1234
+
+ [1]: http://example.net/~hoge/
+ [2]: http://example.net/~hoge2/
+
+ABCDE[aaaa][3]いろいろ
+
+ [3]: http://example.net/~fuga/
+
+いろいろABCDE
+
+## てすとヘッダレベル２
+
+パラグラフ1234
+
+いろいろ[bbbb][4]ABCDE
+
+ [4]: http://example.net/~foo/
+
+## てすとヘッダレベル２
+
+いろいろABCDE
+</code></pre>
+
+<p>のように、段落ごとににリンクがまとめて出力されます。</p>
+
+<h4 id="link_in_paragraph">LINK_IN_PARAGRAPH</h4>
+
+<p>の結果は</p>
+
+<pre><code class="markdown"># てすとヘッダレベル１
+
+ぱらぐらふ[xxxx](http://example.net/~hoge/)＆[xxx2](http://example.net/~hoge2/)1234
+
+ABCDE[aaaa](http://example.net/~fuga/)いろいろ
+
+いろいろABCDE
+
+## てすとヘッダレベル２
+
+パラグラフ1234
+
+いろいろ[bbbb](http://example.net/~foo/)ABCDE
+
+## てすとヘッダレベル２
+
+いろいろABCDE
+</code></pre>
+
+<p>のように、リンクはその場で出力されます。</p>
+
+<p>手で記述する場合に近いと思います。</p>
+
+<h3 id="%24bodywidth">$bodyWidth</h3>
+
+<p>出力を所定の幅で折り返すかどうかを指定するパラメータです。
+ソースを確認すると <code>false</code> もしくは 26 以上の値が有効なようです。</p>
+
+<p>また、日本語の文字列は容易に文字化けます。</p>
+
+<pre><code class="php">&lt;?php
+require_once(dirname(__FILE__) . '/vendor/autoload.php');
+
+$html=&lt;&lt;&lt;'EOD'
+&lt;p&gt;government of the people, by the people, for the people&lt;/p&gt;
+EOD;
+
+$md = new Markdownify\Converter(Markdownify\Converter::LINK_AFTER_CONTENT, false);
+echo $md-&gt;parseString($html).PHP_EOL;
+</code></pre>
+
+<p>だと、</p>
+
+<pre><code class="markdown"># government of the people, by the people, for the people
+
+government of the people, by the people, for the people
+</code></pre>
+
+<p>こうなりますが、 30 を指定すると</p>
+
+<pre><code class="php"># government of the people, by
+the people, for the people
+
+government of the people, by
+the people, for the people
+</code></pre>
+
+<p>このようになります。</p>
+
+<p>、、、長いヘッダも折り返されてしまうのでちょっと困りますね。</p>
+
+<p>あまりにも長い内容が無い限り、このパラメータは <code>false</code> で問題ないと思います。</p>
+
+<h3 id="%24keephtml">$keepHTML</h3>
+
+<p>markdown に変換できないタグを残す(<code>true</code>)か残さない(<code>false</code>)かを指定するパラメータです。</p>
+
+<pre><code class="php">&lt;?php
+require_once(dirname(__FILE__) . '/vendor/autoload.php');
+
+$html=&lt;&lt;&lt;'EOD'
+&lt;h1&gt;ほげ&lt;/h1&gt;
+&lt;p&gt;ふがふがふが &lt;table&gt;&lt;tr&gt;&lt;td&gt;a&lt;/td&gt;&lt;td&gt;b&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt; &lt;/p&gt;
+EOD;
+
+$md = new Markdownify\Converter(Markdownify\Converter::LINK_AFTER_CONTENT, false, true);
+echo $md-&gt;parseString($html).PHP_EOL;
+</code></pre>
+
+<p>この結果</p>
+
+<pre><code class="markdown"># ほげ
+
+ふがふがふが 
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      a
+    &lt;/td&gt;
+
+    &lt;td&gt;
+      b
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+
+<p>となりますが、<code>false</code> を指定すると</p>
+
+<pre><code class="markdown"># ほげ
+
+ふがふがふが 
+
+a
+
+b
+</code></pre>
+
+<p>こうなります。</p>
+
+<p>中身のコンテンツはそのまま残るので<code>table</code>タグ等は意図せぬ結果になってしまうかもしれません。</p>
+
+<h2 id="markdonify-%E3%82%92%E4%BD%BF%E3%81%86%E3%81%A8%E3%81%8D%E3%81%AE%E6%B3%A8%E6%84%8F%E7%82%B9">Markdonify を使うときの注意点</h2>
+
+<ul>
+<li>そのまま使うと日本語文字が化ける場合がある
+解決方法は次の項で</li>
+<li><code>parseString</code> を２回以上呼び出すと結果がおかしくなる
+毎回 <code>unset</code> することで解決</li>
+</ul>
+
+<h2 id="%E6%97%A5%E6%9C%AC%E8%AA%9E%E6%96%87%E3%81%AE%E6%96%87%E5%AD%97%E5%8C%96%E3%81%91%E3%81%AE%E8%A7%A3%E6%B1%BA%E7%AD%96">日本語文の文字化けの解決策</h2>
+
+<p>いろいろ試行錯誤はすっ飛ばしますが解決策はこれです。</p>
+
+<pre><code class="php">&lt;?php
+
+require_once(dirname(__FILE__) . '/vendor/autoload.php');
+
+function text2entities($text)
+{
+  return preg_replace_callback('/./u', function($m){
+        $s = $m[0];
+        $len = strlen($s);
+        switch ($len) {
+        case 1: return $s;
+        case 2: return '&amp;#'.(((ord($s[0])&amp;0x1F)&lt;&lt;6)|(ord($s[1])&amp;0x3F)).';';
+        case 3: return '&amp;#'.(((ord($s[0])&amp;0xF)&lt;&lt;12)|((ord($s[1])&amp;0x3F)&lt;&lt;6)|(ord($s[2])&amp;0x3F)).';';
+        case 4: return '&amp;#'.(((ord($s[0])&amp;0x7)&lt;&lt;18)|((ord($s[1])&amp;0x3F)&lt;&lt;12)|((ord($s[2])&amp;0x3F)&lt;&lt;6)
+                             |(ord($s[3])&amp;0x3F)).';';
+        case 5: return '&amp;#'.(((ord($s[0])&amp;0x3)&lt;&lt;24)|((ord($s[1])&amp;0x3F)&lt;&lt;18)|((ord($s[2])&amp;0x3F)&lt;&lt;12)
+                            |((ord($s[3])&amp;0x3F)&lt;&lt;6)|(ord($s[4])&amp;0x3F)).';';
+        case 6: return '&amp;#'.(((ord($s[0])&amp;0x1)&lt;&lt;30)|((ord($s[1])&amp;0x3F)&lt;&lt;24)|((ord($s[2])&amp;0x3F)&lt;&lt;18)
+                            |((ord($s[3])&amp;0x3F)&lt;&lt;12)|((ord($s[4])&amp;0x3F)&lt;&lt;6)|(ord($s[5])&amp;0x3F)).';';
+        }
+        return $s;
+      }, $text);
+}
+
+function entities2text($text)
+{
+  return
+    preg_replace_callback('/&amp;#([0-9]+);/u', function($m){
+        $u = intval($m[1]);
+             if (0x00000000 &lt;= $u &amp;&amp; $u &lt;= 0x0000007F) { return chr($u); }
+        else if (0x00000080 &lt;= $u &amp;&amp; $u &lt;= 0x000007FF) { return chr(0xC0|($u&gt;&gt;6)).chr(0x80|($u&amp;0x3F)); }
+        else if (0x00000800 &lt;= $u &amp;&amp; $u &lt;= 0x0000FFFF)
+             { return chr(0xE0|($u&gt;&gt;12)).chr(0x80|(($u&gt;&gt;6)&amp;0x3F)).chr(0x80|($u&amp;0x3F)); }
+        else if (0x00010000 &lt;= $u &amp;&amp; $u &lt;= 0x001FFFFF)
+             { return chr(0xF0|($u&gt;&gt;18)).chr(0x80|(($u&gt;&gt;12)&amp;0x3F)).chr(0x80|(($u&gt;&gt;6)&amp;0x3F))
+                     .chr(0x80|($u&amp;0x3F)); }
+        else if (0x00200000 &lt;= $u &amp;&amp; $u &lt;= 0x03FFFFFF)
+             { return chr(0xF8|($u&gt;&gt;24)).chr(0x80|(($u&gt;&gt;18)&amp;0x3F)).chr(0x80|(($u&gt;&gt;12)&amp;0x3F))
+                     .chr(0x80|(($u&gt;&gt;6)&amp;0x3F)).chr(0x80|($u&amp;0x3F)); }
+        else if (0x04000000 &lt;= $u &amp;&amp; $u &lt;= 0x04000000)
+             { return chr(0xFC|($u&gt;&gt;30)).chr(0x80|(($u&gt;&gt;24)&amp;0x3F)).chr(0x80|(($u&gt;&gt;18)&amp;0x3F))
+                     .chr(0x80|(($u&gt;&gt;12)&amp;0x3F)).chr(0x80|(($u&gt;&gt;6)&amp;0x3F)).chr(0x80|($u&amp;0x3F)); }
+        return $s;
+      }, $text);
+}
+
+$html=&lt;&lt;&lt;'EOD'
+&lt;h1&gt;てすとヘッダレベル１&lt;/h1&gt;
+&lt;p&gt;ぱらぐらふ1234&lt;p/&gt;
+&lt;p&gt;ABCDE色々いろいろ&lt;p/&gt;
+EOD;
+
+$md = new Markdownify\Converter();
+$markdown = entities2text( $md-&gt;parseString( text2entities( $html ) . PHP_EOL) );
+unset($md);
+
+
+echo $markdown . PHP_EOL;
+</code></pre>
+
+<p>結局のところ、 <code>々</code> などの文字を <code>&amp;#12293;</code> のような数値文字参照に一旦変換し、 Makrdown に変換後にもとに戻すようにしました。</p>
+
+<p>おそらくは、ライブラリの中の文字読み取り処理が ASCII 文字のみ処理することを前提として組んであるのでうまく行かないのではないかと予想できるのですが、変換を間に挟むことでとりあえずうまく動いてしまったので深くは辿ってはいません。</p>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<p>とりあえず、まとめとして、 php を使い日本語を含む HTML を Markdown に変換するには、数値文字参照に変換した後 <a href="https://github.com/Elephant418/Markdownify">Markdownify</a> を使い、元に戻すことで出来る！</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx">Introduction - Composer</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/%E6%96%87%E5%AD%97%E5%8F%82%E7%85%A7">文字参照 - Wikipedia</a></li>
+<li><a href="https://github.com/Elephant418/Markdownify">Elephant418/Markdownify</a></li>
+</ul>
+]]></content>
+        </entry>
+    </feed>

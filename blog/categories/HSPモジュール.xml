@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/categories/HSP%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:32+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[クールなメニュー表示モジュール]]></title>
+            <link href="http://www.sharkpp.net/blog/2011/06/29/hsp-cool-menu.html"/>
+            <updated>2011-06-29T01:08:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2011/06/29/hsp-cool-menu.html</id>
+            <content type="html"><![CDATA[<p>何を言っているのか分からない名前が付いていますがスクリーンショットを見てもらえば一目瞭然かと思います。</p>
+
+<p>MS Office等でよく見かけるアイコン付き＆影付きメニューをHSPのモジュールで実装しました。</p>
+
+<p>中身的には以前HSP開発Wikiに投稿した内容をベースに機能を追加したものです。</p>
+
+<p>MITライセンスとしておきます。</p>
+
+<p>システムメニューのクール化？もサンプルとしては付いていますが、タスクバー上のメニューがおかしかったりするので機能としては完成していません。</p>
+
+<p><img src="/images/2011_0629_coolmenu.png" alt="クールなメニュー表示モジュールSS" /></p>
+
+<p><a href="/files/20110530_0034_coolmenu.zip">モジュール本体＆サンプル</a></p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[point指定font命令モジュール]]></title>
+            <link href="http://www.sharkpp.net/blog/2011/06/29/hsp-point-size-font.html"/>
+            <updated>2011-06-29T00:57:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2011/06/29/hsp-point-size-font.html</id>
+            <content type="html"><![CDATA[<p>HSP標準のfont命令はピクセル指定のようなので、ポイント指定でフォントを生成するモジュールを作りました。</p>
+
+<p>待ったく何の役に立つのやら....</p>
+
+<p>MITライセンスとしておきます。</p>
+
+<p><img src="/images/2011_0629_pt_font.png" alt="point指定font命令モジュールSS" /></p>
+
+<p><a href="/files/pt_font.as">モジュール本体＆サンプル</a></p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[現在位置取得モジュール]]></title>
+            <link href="http://www.sharkpp.net/blog/2011/06/29/hsp-location-module.html"/>
+            <updated>2011-06-29T00:43:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2011/06/29/hsp-location-module.html</id>
+            <content type="html"><![CDATA[<p>何に役立つか分からないHSP用モジュールを作っちゃったので公開します。</p>
+
+<p>仕組みとしては、googleのページを自力で解析して表示しているだけなので、いつまで使えるかはgoogle次第な無責任モジュールです。</p>
+
+<p><a href="/images/2011_0629_mod_get_location.png"><img src="/images/2011_0629_mod_get_location.jpg" alt="現在位置取得モジュールSS" /></a></p>
+
+<p><a href="/files/mod_get_location.as">モジュール本体</a></p>
+
+<p><a href="/files/mod_get_location_sample.hsp">サンプル</a></p>
+]]></content>
+        </entry>
+    </feed>

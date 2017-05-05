@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/Xbyak.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:50+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Xbyakのサンプルや使っているソフトなどのまとめ]]></title>
+            <link href="http://www.sharkpp.net/blog/2012/03/15/list-of-xbyak-sample-and-using-software.html"/>
+            <updated>2012-03-15T23:31:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2012/03/15/list-of-xbyak-sample-and-using-software.html</id>
+            <content type="html"><![CDATA[<p>ふと思いついてC++のテンプレートを使ったJITライブラリの<a href="http://herumi.in.coocan.jp/soft/xbyak.html">Xbyak</a>のサンプルや使っているソフトなどを列挙してみた。</p>
+
+<p>思いのほか少なかったのでびっくり。 ただ、有名どころのPCSX2が使っていたのは驚いた。</p>
+
+<h2 id="%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB">サンプル</h2>
+
+<ul>
+<li><a href="http://labs.cybozu.co.jp/blog/nakatani/2008/07/uri_template_c_xbyak_jit.html">URI Template の C++ 実装 (Xbyak による JIT 版ほか)</a></li>
+<li><a href="https://gist.github.com/1225880">JIT ? Gist</a></li>
+<li><a href="https://gist.github.com/1225997">make thunk with JIT wrapper ? Gist</a></li>
+<li><a href="https://gist.github.com/1273062">サンクでthiscallをcdeclに変換 ? Gist</a></li>
+<li><a href="http://www.enoie.net/blog/2010/10/directwrite%E3%82%92%E3%81%84%E3%81%98%E3%82%8B1/">DirectWriteをいじる(1) | S.F.Page</a></li>
+<li><a href="http://coderepos.org/share/browser/lang/cplusplus/i3/src/mol/include/mol/gui-windows?rev=16146">/lang/cplusplus/i3/src/mol/include/mol/gui-windows ? CodeRepos::Share ? Trac</a></li>
+</ul>
+
+<h2 id="pcsx2">PCSX2</h2>
+
+<ul>
+<li><a href="http://pcsx2.net/">PCSX2 - Playstation 2 Emulator</a></li>
+<li><a href="https://sourceforge.net/projects/valdanx/">ValDanX - modified emulator Pcsx2</a></li>
+</ul>
+
+<h2 id="aviutl%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3">AviUtlプラグイン</h2>
+
+<ul>
+<li><a href="http://typezero.ddo.jp/auf/">AviUtlプラグイン＠零 / アンシャープマスク</a></li>
+</ul>
+
+<h2 id="%E3%81%9D%E3%81%AE%E4%BB%96sse5%E5%AF%BE%E5%BF%9C%E8%BF%BD%E5%8A%A0%EF%BC%9F">その他<del>(SSE5対応追加？)</del></h2>
+
+<ul>
+<li><a href="http://code.google.com/p/mod-xbyak/">mod-xbyak - Unofficial Xbyak - Google Project Hosting</a></li>
+</ul>
+]]></content>
+        </entry>
+    </feed>

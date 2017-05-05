@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/categories/%E3%82%BD%E3%83%95%E3%83%88.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:32+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[除夜の鐘]]></title>
+            <link href="http://www.sharkpp.net/blog/2011/01/01/joya-no-kane.html"/>
+            <updated>2011-01-01T02:32:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2011/01/01/joya-no-kane.html</id>
+            <content type="html"><![CDATA[<h3 id="%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E">ソフトの説明</h3>
+
+<p><img src="/images/2011_0101_joya_no_kane.jpg" alt="画面" /></p>
+
+<p>このソフトは除夜の鐘をPCでつくためのソフトです。</p>
+
+<h3 id="%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89">ダウンロード</h3>
+
+<p><a href="/files/bells100.zip" title="bells100.zip">DOWNLOAD</a></p>
+
+<h3 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール</h3>
+
+<ul>
+<li>フォルダに解凍して、実行するだけです。</li>
+</ul>
+
+<h3 id="%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">アンインストール</h3>
+
+<ul>
+<li>解凍して出来たファイルを削除するだけです。</li>
+<li>レジストリは一切使用しておりません。</li>
+</ul>
+
+<h3 id="%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D%E7%92%B0%E5%A2%83">動作確認環境</h3>
+
+<p>PC　: 自作PC</p>
+
+<p>OS　: Windows XP Professional x64 Edition Version 5.20.3790 SP2</p>
+
+<p>以上の環境で動作を確認しました。</p>
+
+<h3 id="%E6%9B%B4%E6%96%B0%E5%B1%A5%E6%AD%B4">更新履歴</h3>
+
+<ul>
+<li>1.0.0.0 2011-01-01　初版</li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Lhaplus x64 shell extension]]></title>
+            <link href="http://www.sharkpp.net/blog/2009/08/23/lhaplus-x64-shell-extension.html"/>
+            <updated>2009-08-23T16:31:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2009/08/23/lhaplus-x64-shell-extension.html</id>
+            <content type="html"><![CDATA[<p><div class="alert alert-danger alert-dismissible" role="alert">
+  <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
+  <dl style="margin-bottom: 0; margin-left: 35px;">
+    <dt>2015-06-02 追記</dt>
+    <dd>Lhaplus Version 1.70 以降のバージョンで公式に 64bit な Windows でのコンテキストメニュー表示がサポートされました。
+    非公式なこのシェル拡張をアンインストールし Lhaplus をアップデートすることをお勧めします。</dd>
+  </dl>
+</div>
+</p>
+
+<h3 id="%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E">ソフトの説明</h3>
+
+<p>DLLなし圧縮・解凍ソフト <a href="http://hoehoe.com/">Lhaplus</a> の 64bit版Windows用シェル拡張です。</p>
+
+<p>Lhaplus標準のシェル拡張では32bit版Windows用しか対応しておらず、残念な思いをしていたので作りました。</p>
+
+<h3 id="%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89">ダウンロード</h3>
+
+<p><a href="/files/LplsShlx64-v1.0.1.0.zip" title="LplsShlx64-v1.0.1.0.zip">DOWNLOAD</a></p>
+
+<h3 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール</h3>
+
+<ul>
+<li>任意のフォルダに解凍して install.cmd を実行してください。</li>
+<li>※Lhaplusのインストール先はレジストリから取得します。</li>
+<li>※インストール時には管理者権限が必要です。<br />
+　Windows Vista 以降の場合、右クリックメニューの「管理者として実行」から実行してください。</li>
+<li>※アップデートを行う場合は、一旦アンインストール後、DLLなどを削除した後に行ってください。<br />
+　アンインストールを行わずにアップデートすると、DLLのコピーに失敗します。</li>
+</ul>
+
+<h3 id="%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">アンインストール</h3>
+
+<ul>
+<li>uninstall.cmd を実行しDLLなどを再起動後に削除してください。</li>
+<li>※アンインストール時には管理者権限が必要です。<br />
+　Windows Vista 以降の場合、右クリックメニューの「管理者として実行」から実行してください。</li>
+</ul>
+
+<h3 id="%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D%E7%92%B0%E5%A2%83">動作確認環境</h3>
+
+<p>PC　: 自作PC</p>
+
+<p>OS　: Windows XP Professional x64 Edition Version 5.20.3790 SP2</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Windows 7 Ulitimate x64 Edition Version 6.1.7100 RC1</p>
+
+<p>App : Lhaplus 1.57</p>
+
+<p>以上の環境で動作を確認しました。</p>
+
+<h3 id="%E6%9B%B4%E6%96%B0%E5%B1%A5%E6%AD%B4">更新履歴</h3>
+
+<ul>
+<li>1.0.0.0 2009-08-23　ほしい機能が実装できたのでリリース</li>
+<li>1.0.1.0 2009-11-25　フォルダツリー/ナビゲーションウィンドウを表示している場合にメニュー項目が表示されていなかった問題を修正</li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[PuTTY command line interface proxy for TeraTerm]]></title>
+            <link href="http://www.sharkpp.net/blog/2009/07/24/puttydummy.html"/>
+            <updated>2009-07-24T01:04:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2009/07/24/puttydummy.html</id>
+            <content type="html"><![CDATA[<h3 id="%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E">ソフトの説明</h3>
+
+<p><a href="http://winscp.net/">WinSCP</a>のPuTTY呼び出しボタンで<a href="http://ttssh2.sourceforge.jp/">TeraTerm</a>を呼び出せるようにする、中継アプリです。</p>
+
+<h3 id="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</h3>
+
+<p><a href="/files/PuTTYdummy-v0.1.0.1.zip" title="PuTTYdummy-v0.1.0.1.zip">DOWNLOAD</a></p>
+
+<h3 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール</h3>
+
+<ul>
+<li>TeraTermのインストール先フォルダに入れてください。</li>
+<li>WinSCPの「環境設定」→「統合」→「アプリケーション」のPuTTYのパスにこのアプリを指定してください。<br />
+TeraTermをデフォルトでインストールしている場合は、"C:\Program Files\teraterm\PuTTYdummy.exe" となると思います。</li>
+</ul>
+
+<h3 id="%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">アンインストール</h3>
+
+<ul>
+<li>WinSCPの設定をリセットし、PuTTYdummy.exeを削除してください。</li>
+</ul>
+
+<h3 id="%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D%E7%92%B0%E5%A2%83">動作確認環境</h3>
+
+<p>PC　: 自作PC</p>
+
+<p>OS　: Microsoft Windows XP(x64) Version 5.20.3790 SP2</p>
+
+<p>Appl: WinSCP 4.1.9 / TeraTerm 4.63</p>
+
+<p>以上の環境で動作を確認しました。</p>
+
+<h3 id="%E6%9B%B4%E6%96%B0%E5%B1%A5%E6%AD%B4">更新履歴</h3>
+
+<ul>
+<li>0.1.0.0 2009-07-24　ほしい機能が実装できたのでリリース</li>
+<li>0.1.0.1 2009-07-25　バージョンリソース追加・UPXで圧縮</li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[IRC Channel encode convert plugin]]></title>
+            <link href="http://www.sharkpp.net/blog/2009/04/12/cotton-chenc.html"/>
+            <updated>2009-04-12T23:01:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2009/04/12/cotton-chenc.html</id>
+            <content type="html"><![CDATA[<div><a href="/files/chenc001.zip">DOWNLOAD</a> 2009/04/12
+</div>
+
+<p>Cotton/Cotton++にIRCチャンネルごとの文字コード指定の機能を追加するプラグインです。</p>
+
+<p>同じニックネームでUTF-8のチャンネルとJISのチャンネルで発言を行うといったことが出来るようになります。</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Project-μ Bitmap to DIB Filter]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/21/susie-ifktmkr.html"/>
+            <updated>2008-07-21T00:14:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/21/susie-ifktmkr.html</id>
+            <content type="html"><![CDATA[<div><a href="/files/ifktm001.lzh">DOWNLOAD</a> 2004/02/24
+</div>
+
+<div><p>
+Project-μ形式の BMPファイルを読み込む機能を追加するプラグインです
+</p>
+<p>
+<strong>対応形式</strong>
+</p>
+<ul>
+<li>
+北麻鞍博士の憂鬱 -体験版-
+</li>
+</ul>
+</div>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[KiSS CEL Export Library]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/21/abc-exkiss.html"/>
+            <updated>2008-07-21T00:14:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/21/abc-exkiss.html</id>
+            <content type="html"><![CDATA[<div><a href="/files/exks001c.lzh">DOWNLOAD</a> 2004/02/24
+</div>
+
+<div><p>
+A to B Converter で KISSの CELファイルの出力機能を追加するプラグインです。
+</p>
+<ul>
+<li>
+標準CELファイル(16色、256色)を出力できます
+</li>
+<li>
+KiSS パレットを出力できます(256×1×24bitColor の画像から)
+</li>
+</ul>
+</div>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[D-Angel Archive extract plug-in]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/21/susie-axdangel.html"/>
+            <updated>2008-07-21T00:13:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/21/susie-axdangel.html</id>
+            <content type="html"><![CDATA[<div><a href="/files/axda003.lzh">DOWNLOAD</a> 2004/02/24
+</div>
+
+<div><p>
+D-Angel 形式のアーカイブファイルを読み込む機能を追加するプラグインです
+</p>
+<p>
+<strong>対応形式</strong>
+</p>
+<ul>
+<li>
+告白の甘い罠 -体験版-
+</li>
+<li>
+気になるルームメイト -体験版-
+</li>
+<li>
+黒薔薇は夜に咲く -DL用体験版-
+</li>
+</ul>
+</div>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Adv&#039;s extract plug-in]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/21/susie-axadvs.html"/>
+            <updated>2008-07-21T00:13:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/21/susie-axadvs.html</id>
+            <content type="html"><![CDATA[<div><a href="/files/axadv001.lzh">DOWNLOAD</a> 2004/02/24
+</div>
+
+<div><p>
+RYO 氏のアドベンチャーゲーム製作支援ソフト『Adv'S』のアーカイブファイルを読み込む機能を追加するプラグインです
+</p>
+<p>
+<strong>対応形式</strong>
+</p>
+<ul>
+<li>
+Ａｄｖ’Ｓ Ver.2.12 アーカイバ
+</li>
+<li>
+Ａｄｖ’Ｓ Ver.2.13 アーカイバ
+</li>
+</ul>
+</div>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[KiSS CEL to DIB Filter]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/21/susie-ifcel.html"/>
+            <updated>2008-07-21T00:12:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/21/susie-ifcel.html</id>
+            <content type="html"><![CDATA[<div><a href="/files/ifcl003a.lzh">DOWNLOAD</a> 2004/02/24
+</div>
+
+<div><p>
+KISSのCELファイルを読み込む機能を追加するプラグインです
+</p>
+<p>
+<strong>対応形式</strong>
+</p>
+<ul>
+<li>
+標準CELファイル(16色、256色)
+</li>
+<li>
+CKISS CELファイル(フルカラー)<br />模様との半透明合成も出来ます。<br />(読み込めないファイルや透明部分が変になる物もあるかもしれません)
+</li>
+<li>
+書庫内でもグレーカラーと標準１６色パレットを使い強制的に表示<br />(一様、確認できる程度のものですが...)
+</li>
+</ul>
+</div>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[TeraPad Temporary Tool]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/07/21/terapad-tptemp.html"/>
+            <updated>2008-07-21T00:11:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/07/21/terapad-tptemp.html</id>
+            <content type="html"><![CDATA[<h2 id="%E8%A9%B3%E7%B4%B0">詳細</h2>
+
+<h2 id="%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E">ソフトの説明</h2>
+
+<p>TeraPadで現在編集中のファイルをテンポラリファイルに保存し、指定されたコマンドを実行するソフトです。</p>
+
+<p>ちなみに、これだけでは何も出来ませんのであしからず。</p>
+
+<h2 id="%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">使用方法</h2>
+
+<p>TpJumpをTeraPadへ登録する時のツール設定項目です。</p>
+
+<table summary="設定項目"><tr>
+<th>
+名前
+</th>
+<td>
+(お好みで)
+</td>
+</tr>
+<tr>
+<th>
+実行ファイル
+</th>
+<td>
+C:\TeraPad\tool\TpTemp.exe<br /><br /> ※実行ファイルのパスは解凍したフォルダを指定してください。<br /> 例. C:\Program Files\TeraPad\tool\TpTemp に解凍したとすると<br /> 　<span style="text-decoration: underline">C:\TeraPad\tool</span>\TpTemp.exe<br /> 　この部分↑に解凍したフォルダを指定します。<br /> 　C:\Program Files\TeraPad\tool\TpTemp\TpTemp.exe<br />
+</td>
+</tr>
+<tr>
+<th>
+コマンドラインパラメータ
+</th>
+<td>
+下記「オプションなど」を参照してください
+</td>
+</tr>
+<tr>
+<th>
+作業フォルダ
+</th>
+<td>
+(空欄)
+</td>
+</tr>
+<tr>
+<th>
+ファイルの上書き保存
+</th>
+<td>
+"上書き保存しない" 推奨
+</td>
+</tr>
+<tr>
+<td colspan="2">
+その他のオプションについてはお好みで設定してください。
+</td>
+</tr>
+</table>
+
+<p><strong>オプションなど</strong></p>
+
+<pre>TpTemp.exe [/n[:]テンポラリ名] [/y] [実行コマンド]
+/n[:]テンポラリ名
+テンポラリの名前を固定する場合に指定しますが、同じファイルがあった場合には実行できません。
+ここに指定できるのはテンポラリのファイル名のみです。
+テンポラリは現在編集中のファイルのあるフォルダに作られます。
+未保存の場合には、TpTempのあるフォルダに作られます。
+/y
+テンポラリファイル名と同じファイルがあっても上書きの確認をせずにファイルを作ります。
+<span>注意! ファイルの指定を間違えると大切なファイルが失われる場合があります。</span>
+実行コマンド
+テンポラリファイルを渡し実行するコマンド
+何もしない場合は実行コマンドの最後にテンポラリファイル名が追加されます。
+/*/ が実行コマンドの中に入っている場合はテンポラリファイル名と置き換えられます。
+例.
+　TpTemp.exe notepad.exe
+　　編集中の内容をテンポラリに保存し、
+　　"notepad.exe テンポラリファイル名" として実行します。
+</pre>
+
+<h2 id="%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85">注意事項</h2>
+
+<p><span>注意! ファイルの指定を間違えると大切なファイルが失われる場合があります。
+</span></p>
+
+<h2 id="%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83">動作環境</h2>
+
+<p>Windows 2000で動作確認済み</p>
+
+<p>Windows 95/98/Me, Windows XP でも動作するはず</p>
+
+<p>TeraPad が必要です。</p>
+
+<h2 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%EF%BC%86%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール＆アンインストール</h2>
+
+<p><strong>インストール</strong></p>
+
+<p>適当なフォルダに解凍して、実行するだけです。</p>
+
+<p>なお、実行時に自動的に Machines フォルダがソフトと同じフォルダにできます。</p>
+
+<p><strong>アンインストール</strong></p>
+
+<p>解凍して出来たフォルダごと削除するだけです。レジストリは一切使用しておりません。</p>
+
+<h2 id="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</h2>
+
+<p><a href="http://www.vector.co.jp/soft/win95/writing/se356123.html" title="tptemp002.lzh">DOWNLOAD</a></p>
+
+<h2 id="%E5%B1%A5%E6%AD%B4">履歴</h2>
+
+<dl>
+<dt>2005/01/23<br />(01/29公開)</dt>
+<dd>[Ver.0.01]<br />某氏に「言い出しっぺの方が作るべきですよね?」と囁かれ作ってみる</dd>
+
+<dt>2005/02/05<br />(02/10公開)</dt>
+<dd>[Ver.0.02]<br />テンポラリの保存フォルダを変更<br />ファイル内容の最後の1バイトが欠ける不具合修正</dd>
+</dl>
+]]></content>
+        </entry>
+    </feed>

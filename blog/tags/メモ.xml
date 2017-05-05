@@ -1,0 +1,1370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/%E3%83%A1%E3%83%A2.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:49+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Wine を使って Mac OS X で HSP と hgimg4 を動かしてみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html"/>
+            <updated>2016-03-26T23:43:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html</id>
+            <content type="html"><![CDATA[<p>HSP をどうしても Mac OS X で動かしたい！</p>
+
+<p>まあ、とりあえず Wine 使っておけばいいよね！</p>
+
+<p>よしよし動いた、って hgimg4 が動かないじゃないか！むきー</p>
+
+<p>と、言う所から</p>
+
+<p><a href="/images/2016_0326_hgimg4_test9.png"><img src="/_thumbs/605ffbef1139b6b8bc46f69d73d86b6b-512x512.png" alt="hgimg4 サンプル test9"></a></p>
+
+<p>このように、hgimg4 のサンプルが動くようにするための方法です。</p>
+
+<h2 id="wine-%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%92%B0%E5%A2%83%E3%82%92%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B">Wine の日本語環境を設定する</h2>
+
+<p>まず Wine で UI などに日本語を表示させる為の設定を行います。</p>
+
+<p>設定をしないと</p>
+
+<p><a href="/images/2016_0326_hsp_install_wizard_tofu.png"><img src="/_thumbs/e2f456d9675823508a2d47ecb49a0bca-256x256.png" alt="HSP インストールウィザード 豆腐"></a></p>
+
+<p>こんな感じに、全部が全部では無いですが豆腐になります。</p>
+
+<p>最初に HSP のインストール前にいろいろ設定を行うために Wine の環境を作ります。</p>
+
+<p>標準では <code>~/.wine</code> に環境が作られます。</p>
+
+<pre><code>$ wine xxx
+</code></pre>
+
+<p>「xxx.exe が見つから無い」と言われても無視してください。ワザとです。</p>
+
+<p>別の場所に専用の環境を作る場合は</p>
+
+<pre><code>$ WINEPREFIX=~/wine-hgimg4-test wine xxx
+</code></pre>
+
+<p>と <code>WINEPREFIX</code> 環境変数を指定します。</p>
+
+<p>以降では <code>~/wine-hgimg4-test</code> を環境として使用します。</p>
+
+<p>日本語のフォントは  <a href="http://www.geocities.jp/ipa_mona/">IPAモナーフォント</a> をインストールし、利用します。</p>
+
+<p>まずは、フォントをインストールします。</p>
+
+<pre><code class="bash">$ wget http://www.geocities.jp/ipa_mona/opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8.tar.gz
+$ tar xzf opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8.tar.gz
+$ mv opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8/fonts/ipa*.ttf ~/wine-hgimg4-test/drive_c/windows/Fonts/
+$ rm -rf opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8
+</code></pre>
+
+<p>次に、<code>MS Gothic</code> などのフォントを別のフォント(ここでは IPA モナー フォント)のエリアスとする設定をします。</p>
+
+<pre><code>REGEDIT4
+
+[HKEY_CURRENT_USER¥Software¥Wine¥Fonts¥Replacements]
+"MS Gothic"="IPA モナー ゴシック"
+"MS Mincho"="IPA モナー 明朝"
+"MS PGothic"="IPA モナー Pゴシック"
+"MS PMincho"="IPA モナー P明朝"
+"MS UI Gothic"="IPA モナー UIゴシック"
+"ＭＳ ゴシック"="IPA モナー ゴシック"
+"ＭＳ 明朝"="IPA モナー 明朝"
+"ＭＳ Ｐゴシック"="IPA モナー Pゴシック"
+"ＭＳ Ｐ明朝"="IPA モナー P明朝"
+</code></pre>
+
+<p>を <strong>Shift_JIS</strong> で！ <code>wine-font-replace-mona.reg</code> として保存しレジストリを更新します。</p>
+
+<p>コピペも面倒な場合は、 <a href="/files/2016_0326_wine-font-replace-mona.reg">wine-font-replace-mona.reg</a> をダウンロードしてください。</p>
+
+<pre><code class="bash">$ WINEPREFIX=~/wine-hgimg4-test wine regedit wine-font-replace-mona.reg
+</code></pre>
+
+<p>最後に、フォントのスムース処理の設定を行います。</p>
+
+<pre><code class="registory">REGEDIT4
+
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"FontSmoothing"="1"
+"FontSmoothingGamma"=dword:00000578
+"FontSmoothingOrientation"=dword:00000001
+"FontSmoothingType"=dword:00000002
+</code></pre>
+
+<p>を同じく <strong>Shift_JIS</strong> で！ <code>wine-font-smoothing-rgb.reg</code> として保存しレジストリを更新します。</p>
+
+<p>コピペがやっぱり面倒な場合は、 <a href="/files/2016_0326_wine-font-smoothing-rgb.reg">wine-font-smoothing-rgb.reg</a> をダウンロードしてください。</p>
+
+<pre><code>$ WINEPREFIX=~/wine-hgimg4-test wine regedit wine-font-smoothing-rgb.reg
+</code></pre>
+
+<h2 id="hsp-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">HSP のインストール</h2>
+
+<p><a href="http://hsp.tv/make/downlist.html">HSPダウンロード</a> から HSP 3.4 をダウンロードします。</p>
+
+<p>※ <a href="http://www.onionsoft.net/wp/archives/1642">HSP3.5β3を公開しました - おにたま(オニオンソフト)のおぼえがき</a> から HSP 3.5b3 をダウンロードしてもいいですが、こちらはインストーラ版では無いので注意です。</p>
+
+<p>コマンドでダウンロードする場合はこんな感じです。</p>
+
+<pre><code>$ wget http://www.onionsoft.net/hsp/file/hsp34.exe
+</code></pre>
+
+<p>そして、インストールします。</p>
+
+<pre><code class="bash">$ WINEPREFIX=~/wine-hgimg4-test wine hsp34.exe
+</code></pre>
+
+<p>途中の「デスクトップ上にアイコンを作成する」や「拡張子の関連付けを行う」はチェックを外しておきましょう。</p>
+
+<p><a href="/images/2016_0326_hsp_install_wizard_page_1.png"><img src="/_thumbs/9b93c326efb30e0e081f852fdc82f27c-128x128.png" alt="HSP インストールウィザード ページ 01"></a> 
+<a href="/images/2016_0326_hsp_install_wizard_page_2.png"><img src="/_thumbs/944bfa26b702b628fdd4d800bba14dc3-128x128.png" alt="HSP インストールウィザード ページ 02"></a> 
+<a href="/images/2016_0326_hsp_install_wizard_page_3.png"><img src="/_thumbs/f5959a28a94fe43e70c5d52368920698-128x128.png" alt="HSP インストールウィザード ページ 03"></a> 
+<a href="/images/2016_0326_hsp_install_wizard_page_4.png"><img src="/_thumbs/78106ccd5918ab9c41b399079e5b3cf1-128x128.png" alt="HSP インストールウィザード ページ 04"></a> 
+<a href="/images/2016_0326_hsp_install_wizard_page_5.png"><img src="/_thumbs/e330caa9317c918cd8008d4e63cc8ca3-128x128.png" alt="HSP インストールウィザード ページ 05"></a> 
+<a href="/images/2016_0326_hsp_install_wizard_page_6.png"><img src="/_thumbs/88933c9aab67553abd0bc21af909a3a9-128x128.png" alt="HSP インストールウィザード ページ 06"></a> 
+<a href="/images/2016_0326_hsp_install_wizard_page_7.png"><img src="/_thumbs/69dfcfea98e8cc10ce874d787a6c0174-128x128.png" alt="HSP インストールウィザード ページ 07"></a></p>
+
+<p>こんな感じにセットアップウィザードを行うと、</p>
+
+<p><a href="/images/2016_0326_hsp_demo.png"><img src="/_thumbs/0442cc0847c8faec0fefeb50c18da5a9-384x384.png" alt="HSPデモ"></a></p>
+
+<p>とりあえず、 Wine で HSP が動くようになります。</p>
+
+<pre><code class="bash">$ WINEPREFIX=~/wine-hgimg4-test wine c:\\hsp34\\hsed3.exe
+</code></pre>
+
+<p>とすると HSPスクリプトエディタ も起動します。</p>
+
+<p><a href="/images/2016_0326_hsp_script_editor_with_assistant.png"><img src="/_thumbs/9ebdeb5fd154ee9b2ce9200d5f1c98fe-384x384.png" alt="HSP スクリプトエディタ＆アシスタント"></a></p>
+
+<h2 id="osx-%E4%B8%8A%E3%81%AE-wine-%E3%81%A7-hgimg3-%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99">OSX 上の Wine で hgimg3 を動かす</h2>
+
+<p>HSPスクリプトエディタ で <code>sample\\hgimg3\\tamane4.hsp</code> を開きます。</p>
+
+<pre><code class="bash">$ WINEPREFIX=~/wine-hgimg4-test wine c:\\hsp34\\hsed3.exe "sample\\hgimg3\\tamane4.hsp"
+</code></pre>
+
+<p><a href="/images/2016_0326_hgimg3_tamane_source.png"><img src="/_thumbs/7cc244fde01011f836fc6ec65c444a7a-384x384.png" alt="hgimg3 珠音 ソース"></a></p>
+
+<p>そして、おもむろに <kbd>F5</kbd> を押下、</p>
+
+<p><a href="/images/2016_0326_hgimg3_tamane_running.png"><img src="/_thumbs/1e9426ea187d90bd2febb15569bc3c60-384x384.png" alt="hgimg3 珠音"></a></p>
+
+<p>はい、無事にSDサイズの<ruby>珠音<rp>(</rp><rt>たまね</rt><rp>)</rp></ruby>ちゃんが表示されました。</p>
+
+<h2 id="osx-%E4%B8%8A%E3%81%AE-wine-%E3%81%A7-hgimg4-%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99">OSX 上の Wine で hgimg4 を動かす</h2>
+
+<p>HSPスクリプトエディタ で <code>sample\\hgimg4\\tamane1.hsp</code> を開きます。</p>
+
+<pre><code class="bash">$ WINEPREFIX=~/wine-hgimg4-test wine c:\\hsp34\\hsed3.exe "sample\\hgimg4\\tamane1.hsp"
+</code></pre>
+
+<p><a href="/images/2016_0326_hgimg4_tamane_source.png"><img src="/_thumbs/ff0fd23abc5d83baa50d638b36b744cf-384x384.png" alt="hgimg4 珠音 ソース"></a></p>
+
+<p>そして、おもむろに <kbd>F5</kbd> を押下、</p>
+
+<p><a href="/images/2016_0326_hgimg4_tamane_running_failed.png"><img src="/_thumbs/8930f39e1744af1691e5f13b93140428-384x384.png" alt="hgimg4 珠音 失敗"></a></p>
+
+<p><span style="font-family: IPAMonaPGothic,'ＭＳ Ｐゴシック',sans-serif;font-size:16px;">(´・ω・`)</sapn></p>
+
+<p>ここで諦めずに頑張る自分。</p>
+
+<p>Wine のビルド方法は <a href="/blog/2016/01/31/building-wine-on-mac-osx.html">Mac OS X での Wine のビルドの仕方</a>
+ の記事を参照のこと。</p>
+
+<p>そして、Wine 1.9.6 からの変更が、<a href="https://github.com/sharkpp/wine/commit/6a876fd9a51d5c6ce54c1a6facf9b59561f62ecd">どーん</a></p>
+
+<pre><code class="diff">$ git diff 6bc0ce26a853b51f11958545bfa5570bdcb1cf01 6a876fd9a51d5c6ce54c1a6facf9b59561f62ecd
+diff --git a/dlls/winemac.drv/opengl.c b/dlls/winemac.drv/opengl.c
+index ab79a82..c1492f7 100644
+--- a/dlls/winemac.drv/opengl.c
++++ b/dlls/winemac.drv/opengl.c
+@@ -2387,6 +2387,13 @@ static struct wgl_context *macdrv_wglCreateContextAttribsARB(HDC hdc,
+         }
+     }
+
++    if (3 == major &amp;&amp; minor &lt;= 1) { // force down OpenGL version
++        major   = 2;
++        minor   = 1;
++        flags  &amp;= ~WGL_CONTEXT_FORWARD_COMPATIBLE_BIT_ARB;
++        profile&amp;= ~WGL_CONTEXT_CORE_PROFILE_BIT_ARB;
++    }
++
+     if ((major == 3 &amp;&amp; (minor == 2 || minor == 3)) ||
+         (major == 4 &amp;&amp; (minor == 0 || minor == 1)))
+     {
+</code></pre>
+
+<p>ビルドが、ばーん</p>
+
+<pre><code class="bash">$ make
+   :
+Wine build complete.
+</code></pre>
+
+<p>最後に <code>sample\\hgimg4\\tamane1.hsp</code> を開き、</p>
+
+<pre><code class="bash">$ WINEPREFIX=~/wine-hgimg4-test ./wine c:\\hsp34\\hsed3.exe "sample\\hgimg4\\tamane1.hsp"
+</code></pre>
+
+<p>そして、おもむろに <kbd>F5</kbd> を押下、</p>
+
+<p><a href="/images/2016_0326_hgimg4_tamane_running.png"><img src="/_thumbs/7095b1a5c9519d4d7402612142b8c1b6-384x384.png" alt="hgimg4 珠音"></a></p>
+
+<p>おおおおー</p>
+
+<p>やったね、無事に<ruby>珠音<rp>(</rp><rt>たまね</rt><rp>)</rp></ruby>ちゃんが表示されました。</p>
+
+<h2 id="%E6%8A%80%E8%A1%93%E7%9A%84%E3%81%AA%E3%81%93%E3%81%A8%E3%82%92%E3%81%99%E3%81%93%E3%81%97">技術的なことをすこし</h2>
+
+<p>今回やったことは、 OpenGL 3.1 を要求された場合に OpenGL 2.1 に強制的に変えることをしています。</p>
+
+<p>いろいろ調べたところ、OS X の OpenGL サポートがちょっと残念なことになっているようで、<a href="https://developer.apple.com/opengl/capabilities/GLInfo_1090.html">OS X 10.9 OpenGL Information - OpenGL - Apple Developer</a> の辺りを見ると</p>
+
+<table>
+<thead>
+<tr>
+  <th>Profile</th>
+  <th>Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Legacy</td>
+  <td>2.1</td>
+</tr>
+<tr>
+  <td>Core</td>
+  <td>3.3 - 4.1</td>
+</tr>
+</tbody>
+</table>
+
+<p>となっていて、OpenGL 3.1 なんてサポートして無いよ！って怒られて実行できなかったようです。</p>
+
+<p>単純に Core プロファイルで動くようにして今度はシェーダーでバージョンが違うと怒られたのでどうしたものかと悩んでいましたが、 hgimg4 の 3D エンジンであるところの <a href="http://www.gameplay3d.io/">GamePlay 2D/3D</a> は OS X もサポートしているらしいのでビルドしてみて試したところ、あれ？ OpenGL 2.1 で動いているぞ！ってことで、今回の対応になったわけです。</p>
+
+<p>ただ、OpenGL 3.1 で使えるシェーダーの機能を使っている場合は Windows と動きが違う可能性があるので確認は必要になると思います。</p>
+
+<h2 id="%E3%81%8A%E3%81%BE%E3%81%91">おまけ</h2>
+
+<p>hgimg4 の他のサンプルや、 HSPプログラムコンテスト 2015 で hgimg4 を利用したプログラムを探し動かしてみました。</p>
+
+<p><a href="/images/2016_0326_hgimg4_test1.png"><img src="/_thumbs/9909f635e32ecccd3d061bd49f5718cc-256x256.png" alt="hgimg4 サンプル test1"></a>
+<a href="/images/2016_0326_hgimg4_test2.png"><img src="/_thumbs/6225a1255e77e5d0d46b35b487e5397c-256x256.png" alt="hgimg4 サンプル test2"></a>
+<a href="/images/2016_0326_hgimg4_test3.png"><img src="/_thumbs/75789f539377222aba6535d5e37b00ad-256x256.png" alt="hgimg4 サンプル test3"></a>
+<a href="/images/2016_0326_hgimg4_test4.png"><img src="/_thumbs/06caf84bc1fb78e628676a0a75c4ca71-256x256.png" alt="hgimg4 サンプル test4"></a>
+<a href="/images/2016_0326_hgimg4_test5.png"><img src="/_thumbs/b2f896301fb8295cfc6a63134c8860fa-256x256.png" alt="hgimg4 サンプル test5"></a>
+<a href="/images/2016_0326_hgimg4_test6.png"><img src="/_thumbs/0ee1b30a809c80b7272297875d9288b2-256x256.png" alt="hgimg4 サンプル test6"></a>
+<a href="/images/2016_0326_hgimg4_test7.png"><img src="/_thumbs/fb8331afdbe5be612ce12d5b6e084058-256x256.png" alt="hgimg4 サンプル test7"></a>
+<a href="/images/2016_0326_hgimg4_test8.png"><img src="/_thumbs/7721eeef26d9c47dceab361c3bf05b55-256x256.png" alt="hgimg4 サンプル test8"></a>
+<a href="/images/2016_0326_hgimg4_test9.png"><img src="/_thumbs/605ffbef1139b6b8bc46f69d73d86b6b-256x256.png" alt="hgimg4 サンプル test9"></a>
+<a href="/images/2016_0326_hgimg4_test10.png"><img src="/_thumbs/96a44b6e76b6511e3f1b069f3f0457f8-256x256.png" alt="hgimg4 サンプル test10"></a>
+<a href="/images/2016_0326_hgimg4_test11.png"><img src="/_thumbs/820f347f4df1ae5f73069937720df6f8-256x256.png" alt="hgimg4 サンプル test11"></a>
+<a href="/images/2016_0326_hgimg4_test12.png"><img src="/_thumbs/8e056d3f9c8cfc709817396d5b66e0a4-256x256.png" alt="hgimg4 サンプル test12"></a>
+<a href="/images/2016_0326_hgimg4_test13.png"><img src="/_thumbs/a84bf8234192e3ff26852dbfc6623d41-256x256.png" alt="hgimg4 サンプル test13"></a>
+<a href="/images/2016_0326_hgimg4_block3.png"><img src="/_thumbs/ad5e652367972a2d7884af6008565618-256x256.png" alt="hgimg4 サンプル block3"></a></p>
+
+<p><a href="http://dev.onionsoft.net/seed/info.ax?id=1077">ヨミチハコワイ</a>
+(c) 法貴 優雅（MYAOSOFT）/ <a href="https://twitter.com/MYAOSOFT">@MYAOSOFT</a></p>
+
+<p><a href="/images/2016_0326_hsp_contest_2015_no1077_ss_01.png"><img src="/_thumbs/c6a5cc7b92acf6127054f3edbe0f6867-256x256.png" alt="ヨミチハコワイ 01"></a>
+<a href="/images/2016_0326_hsp_contest_2015_no1077_ss_02.png"><img src="/_thumbs/85b6912a8e8af5d7b013385f29a8878c-256x256.png" alt="ヨミチハコワイ 02"></a>
+<a href="/images/2016_0326_hsp_contest_2015_no1077_ss_03.png"><img src="/_thumbs/2b49015e278dcc10bab77fe863dadd26-256x256.png" alt="ヨミチハコワイ 03"></a></p>
+
+<p><a href="http://dev.onionsoft.net/seed/info.ax?id=1084">R-sim++</a>
+(c) hashikemu / <a href="https://twitter.com/kemuduino">@hashikemu</a></p>
+
+<p><a href="/images/2016_0326_hsp_contest_2015_no1084_ss_01.png"><img src="/_thumbs/5e254af57f6df3f1a0e6636aef19175d-256x256.png" alt="R-sim++ 01"></a>
+<a href="/images/2016_0326_hsp_contest_2015_no1084_ss_02.png"><img src="/_thumbs/cabc8d6a7d789a12153a0c6e4b8d25d2-256x256.png" alt="R-sim++ 02"></a>
+<a href="/images/2016_0326_hsp_contest_2015_no1084_ss_03.png"><img src="/_thumbs/1b694ea19f12b779d33fcdafd81f58cd-256x256.png" alt="R-sim++ 03"></a></p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://cozyattic.wordpress.com/2015/02/16/homebrew%E3%81%A7wine%E3%82%92%E4%BD%BF%E3%81%86/">【微妙】HomebrewでWineを使う | cozy attic</a></li>
+<li><a href="http://kakurasan.blogspot.jp/2015/06/manage-winapps-using-wineprefixes.html">Wine環境(WINEPREFIX)を分けてWindowsアプリを上手に管理する - kakurasan</a></li>
+<li><a href="http://www.geocities.jp/ipa_mona/">IPAモナーフォント</a></li>
+<li><a href="https://technet.microsoft.com/en-us/library/cc978612.aspx">FontSmoothing</a></li>
+<li><a href="http://d.hatena.ne.jp/kakurasan/20090107/p1">Wine 1.1.12におけるフォントのサブピクセルレンダリングについて - 試験運用中なLinux備忘録</a>
+<a href="https://developer.apple.com/opengl/capabilities/GLInfo_1090.html">OS X 10.9 OpenGL Information - OpenGL - Apple Developer</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[git メモ：コミット済みの電子メールの変更と履歴の復旧]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/03/19/git-memo-change-committed-email-and-history-repair.html"/>
+            <updated>2016-03-19T00:47:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/03/19/git-memo-change-committed-email-and-history-repair.html</id>
+            <content type="html"><![CDATA[<p>commit 時のメールアドレスが間違っていたのを気がついたので調べて直したのはしばらく前のこと。</p>
+
+<p>リモートのレポジトリががっつり更新されていたのでじゃあマージしてみるか、と思ってマージしてみたら、、、</p>
+
+<p>コンフリクトがドバッと出て大変なことになりました、をなんとか直したメモ。</p>
+
+<h2 id="%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%82%92%E9%96%93%E9%81%95%E3%81%A3%E3%81%9F%EF%BC%81">メールアドレスを間違った！</h2>
+
+<pre><code class="bash">$ git filter-branch --commit-filter '
+        if [ "$GIT_AUTHOR_EMAIL" = "john.doe@localhost" ];
+        then
+                GIT_AUTHOR_NAME="John Doe";
+                GIT_AUTHOR_EMAIL="john.doe@example.com";
+                git commit-tree "$@";
+        else
+                git commit-tree "$@";
+        fi' HEAD
+</code></pre>
+
+<p>みたいな感じで治せます。</p>
+
+<p>が、これをやると、一つ前のコミットはもちろんのこと最初のコミットまでドバッとハッシュが変わります。</p>
+
+<p>なので、はい、大変なことになりました。</p>
+
+<h2 id="pull-%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F%E3%81%A8%E3%81%93%E3%82%8D%EF%BC%81%EF%BC%9F">pull してみたところ！？</h2>
+
+<p>リモートの変更を取り込むために、 <code>git pull</code> してみたところ</p>
+
+<pre><code class="bash">$ git pull origin master
+From git://source.winehq.org/git/wine
+ * branch            master     -&gt; FETCH_HEAD
+Auto-merging tools/wrc/wrc.c
+CONFLICT (add/add): Merge conflict in tools/wrc/wrc.c
+Auto-merging tools/winemaker/winemaker.man.in
+CONFLICT (add/add): Merge conflict in tools/winemaker/winemaker.man.in
+               :
+</code></pre>
+
+<p>コンフリクトしました、、、、それは見事に。</p>
+
+<p>そもそもの話、ブランチに直接マージするな、という話もなきにしもあらず、は置いておく。</p>
+
+<h2 id="%E3%81%AA%E3%82%93%E3%81%A8%E3%81%8B%E5%BE%A9%E6%97%A7%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B">なんとか復旧してみる</h2>
+
+<p>なんともならなかったので、ブランチを作り直してパッチを当てようと思ったけど、変更箇所のコミットのみを適用できるのであれば、その方がいいので探てみるとできそうだったのでやってみた。</p>
+
+<p>やり方は、 master にリモートの変更を pull し、ブランチを作り、変更を適用。</p>
+
+<pre><code class="bash">$ git checkout master
+$ git pull origin master
+$ git checkout -b 新しいブランチ名
+$ git cherry-pick 範囲の最初のハッシュ^..範囲の終わりのハッシュ
+</code></pre>
+
+<p>こんな感じ。</p>
+
+<h2 id="%E3%83%9E%E3%83%BC%E3%82%B8%E3%81%AE%E7%A2%BA%E8%AA%8D">マージの確認</h2>
+
+<p>さて、どうやらまたリモートで変更があったようです。</p>
+
+<p>実際にマージ作業の確認をしてみましょう。</p>
+
+<pre><code>$ git checkout master
+$ git pull origin master
+$ git checkout トピックブランチ名
+$ git merge master
+Auto-merging dlls/opengl32/wgl.c
+Auto-merging dlls/opengl32/opengl_norm.c
+               :
+</code></pre>
+
+<p>はい、問題なくマージできたようです。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://git-scm.com/book/ja/v1/Git-%E3%81%AE%E3%81%95%E3%81%BE%E3%81%96%E3%81%BE%E3%81%AA%E3%83%84%E3%83%BC%E3%83%AB-%E6%AD%B4%E5%8F%B2%E3%81%AE%E6%9B%B8%E3%81%8D%E6%8F%9B%E3%81%88">Git - 歴史の書き換え</a></li>
+<li><a href="http://www.shigemk2.com/entry/20130115/1358244775">複数のコミットを同時にcherry-pickする - by shigemk2</a></li>
+<li><a href="http://qiita.com/sasaplus1/items/434e51fba528b0e8853d">cherry-pickでリビジョンの範囲を指定する - Qiita</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[git メモ：ローカルとリモートのブランチ名を変更する]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/02/11/git-memo-rename-branches-local-and-remote.html"/>
+            <updated>2016-02-11T17:35:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/02/11/git-memo-rename-branches-local-and-remote.html</id>
+            <content type="html"><![CDATA[<p>git のブランチ名を変えたい場合のやりかたメモ。</p>
+
+<p>ある所に</p>
+
+<ol>
+<li>master から別のブランチ名にブランチを切りました</li>
+<li>特定フォルダだけ必要なので subtree (<code>git subtree push --prefix public/ . sub-branch</code>) で push しています。</li>
+<li>でも、よく考えたら一手間かかるし、もういっそのこと構造を変更しそのまま master ブランチを名前変えて使えばイイじゃん</li>
+</ol>
+
+<p>と考えた男がいました。</p>
+
+<h2 id="%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6">前提条件</h2>
+
+<p>ということで、まずは条件を設定。</p>
+
+<table>
+<thead>
+<tr>
+  <th>ローカル</th>
+  <th>リモート</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>master</td>
+  <td>master</td>
+</tr>
+<tr>
+  <td>gh-pages</td>
+  <td>gh-pages</td>
+</tr>
+</tbody>
+</table>
+
+<p>と設定します。</p>
+
+<pre><code class="bash">$ git branch --all
+  gh-pages
+* master
+  remotes/origin/gh-pages
+  remotes/origin/master
+</code></pre>
+
+<p>こんな感じです。</p>
+
+<p>これを、</p>
+
+<table>
+<thead>
+<tr>
+  <th>ローカル</th>
+  <th>リモート</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>gh-pages ※旧master</td>
+  <td>gh-pages ※旧master</td>
+</tr>
+</tbody>
+</table>
+
+<p>こうじゃ</p>
+
+<h2 id="%E3%82%84%E3%82%8A%E6%96%B9">やり方</h2>
+
+<p>まずは、現状確認</p>
+
+<pre><code class="bash">$ git checkout master
+$ git branch --all
+  gh-pages
+* master
+  remotes/origin/gh-pages
+  remotes/origin/master
+</code></pre>
+
+<p>おもむろに、いらない子、今の <code>gh-pages</code> ブランチをローカルとリモート両方で削除。</p>
+
+<pre><code class="bash">$ git push origin :gh-pages
+To https://github.com/hsp-users-jp/hsp-users.jp.git
+ - [deleted]         gh-pages
+$ git branch -m gh-pages
+</code></pre>
+
+<p><code>gh-pages</code> のみの変更はないので大丈夫。
+傷は浅いぞ。</p>
+
+<p><strong>もし、<code>gh-pages</code> 側で変更している場合は、忘れずに <code>master</code> にマージをしましょう。</strong></p>
+
+<p>もう一度確認</p>
+
+<pre><code class="bash">$ git branch --all
+* master
+  remotes/origin/master
+</code></pre>
+
+<p>はい、いらない子は削除される運命だったのです。</p>
+
+<p>次に、ローカルのブランチ名を変更します。
+別のブランチで操作している場合は、<code>git branch -m OLD_BRANCH NEW_BRANCH</code> で操作します。</p>
+
+<pre><code class="bash">$ git branch -m gh-pages
+$ git branch --all
+* gh-pages
+  remotes/origin/master
+</code></pre>
+
+<p>そして、ローカルの変更をリモートに送ります。</p>
+
+<pre><code class="bash">$ git push origin gh-pages
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/hsp-users-jp/hsp-users.jp.git
+ * [new branch]      gh-pages -&gt; gh-pages
+$ git branch --all
+* gh-pages
+  remotes/origin/gh-pages
+  remotes/origin/master
+</code></pre>
+
+<p>最後に、リモートの <code>master</code> ブランチを削除して完了です。</p>
+
+<pre><code class="bash">$ git push origin :master
+To https://github.com/hsp-users-jp/hsp-users.jp.git
+ - [deleted]         master
+</code></pre>
+
+<p>確認すると</p>
+
+<pre><code class="bash">$ git branch --all
+* gh-pages
+  remotes/origin/gh-pages
+</code></pre>
+
+<p>はい、できていますね。</p>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<p>変更先のブランチを削除。
+ただし、該当ブランチでの作業がないこと。</p>
+
+<pre><code class="bash">$ git branch -D gh-pages
+$ git push origin :gh-pages
+</code></pre>
+
+<p>ローカルとリモート両方のブランチ名を変更。</p>
+
+<pre><code class="bash">$ git checkout master
+$ git branch -m gh-pages
+$ git push origin gh-pages
+$ git push origin :master
+</code></pre>
+
+<p>こんな感じです。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://qiita.com/iorionda/items/c7e0aca399371068a9b8">Git で不要になったローカルブランチ・リモートブランチを削除する方法 - Qiita</a></li>
+<li><a href="http://qiita.com/kon_yu/items/e9ebd7f778df430a4223">Gitのリモートリポジトリの名前を付け替える　〜Railsのアップグレードを例にして〜 - Qiita</a></li>
+<li><a href="http://qiita.com/suin/items/96c110b218d919168d64">git: ローカルのブランチ名を変更したい - Qiita</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Mac OS X での Wine のビルドの仕方]]></title>
+            <link href="http://www.sharkpp.net/blog/2016/01/31/building-wine-on-mac-osx.html"/>
+            <updated>2016-01-31T12:30:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2016/01/31/building-wine-on-mac-osx.html</id>
+            <content type="html"><![CDATA[<p>Mac で Wine を使うには、まあ普通に公式の <a href="https://wiki.winehq.org/MacOSX">MacOSX</a> からビルド済みバイナリをインストールしたほうが早いのだけれど、どうしてもソースからビルドしないといけない場合のビルドの仕方をメモ。</p>
+
+<p>環境は</p>
+
+<ul>
+<li>Mac OS X 10.10.5</li>
+<li>Xcode 7.2 Build version 7C68</li>
+<li>Homebrew 0.9.5 (git revision 4b1da8; last commit 2016-01-30)</li>
+<li>Wine 1.9.2</li>
+</ul>
+
+<p>まずは結論から、<a href="https://wiki.winehq.org/MacOSX">MacOSX</a> のページに書かれていることをそのままやれば、問題なくビルドが通りました。</p>
+
+<p>最初、途中の手順を抜かしてしまいうまくいかなくて、<a href="https://wiki.winehq.org/MacOSX/Building#Build_Wine_the_Scripted_Way">Build Wine the Scripted Way</a> に書かれているスクリプトを試してみたけど、結果から言うと、そのスクリプトは埋め込まれている内容が古いのと途中で失敗したので使わないほうが吉、のようです。
+あと、Google code にホスティングされているのでもはや更新されない、ってのもある。</p>
+
+<h2 id="%E3%83%93%E3%83%AB%E3%83%89%E6%96%B9%E6%B3%95">ビルド方法</h2>
+
+<p>Xcode と XQuartz がインストール済みの場合は</p>
+
+<pre><code class="bash">$ brew install --only-dependencies --devel wine
+$ wget http://dl.winehq.org/wine/source/1.9/wine-1.9.2.tar.bz2
+$ tar xf wine-1.9.2.tar.bz2
+$ cd wine-1.9.2
+$ ./configure CC="clang" CXX="clang++" CFLAGS="-std=gnu89 -g"
+$ make
+</code></pre>
+
+<p>と、こんな感じで、30分から40分ぐらいでビルドができます。</p>
+
+<p>では、順番に</p>
+
+<h3 id="1.-xcode-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">1. Xcode をインストール</h3>
+
+<p>まずはこれがないと始まらない</p>
+
+<h3 id="2.-homebrew-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%EF%BC%86%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88">2. Homebrew をインストール＆アップデート</h3>
+
+<p>Homebrew をインストールします。</p>
+
+<p>すでにインストール済みの場合、<code>brew update</code> で更新しておいたほうがいいと思います。</p>
+
+<p>そうしないと</p>
+
+<pre><code class="bash">$ brew install --only-dependencies --devel wine
+                  :
+==&gt; Installing wine dependency: libpng
+==&gt; Downloading https://downloads.sf.net/project/libpng/libpng16/1.6.16/libpng-1.6.16.tar.xz
+
+curl: (22) The requested URL returned error: 404 Not Found
+Error: Failed to download resource "libpng"
+Download failed: https://downloads.sf.net/project/libpng/libpng16/1.6.16/libpng-1.6.16.tar.xz
+</code></pre>
+
+<p>みたいな感じになることがあります。</p>
+
+<h3 id="3.-xquartz-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">3. XQuartz をインストール</h3>
+
+<p><a href="http://www.xquartz.org/">XQuartz</a> からパッケージをダウンロードしてインストールすればいいと思う。</p>
+
+<p>Homebrew の場合は</p>
+
+<pre><code class="bash">$ brew install caskroom/cask/xquartz
+</code></pre>
+
+<p>でインストールできる。</p>
+
+<p>なんかおかしかったら再インストールをすれば直る、って書いてある。</p>
+
+<h3 id="4.-%E4%BE%9D%E5%AD%98%E9%96%A2%E4%BF%82%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">4. 依存関係をインストール</h3>
+
+<p><a href="https://wiki.winehq.org/MacOSX/Building#Dependencies">Dependencies</a> に書かれている通りにやればOK。</p>
+
+<p>例によって Homebrew の場合は <code>brew install --only-dependencies --devel wine</code> でOK。</p>
+
+<pre><code class="bash">$ brew install --only-dependencies --devel wine
+==&gt; Installing dependencies for wine: libtasn1, gmp, nettle, gnutls, libpng, freetype, jpeg, libtool, libusb, libusb-compat, font
+==&gt; Installing wine dependency: libtasn1
+           :
+</code></pre>
+
+<h3 id="5.-wine-%E3%81%AE%E3%82%BD%E3%83%BC%E3%82%B9%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%A8%E5%B1%95%E9%96%8B">5. Wine のソースのダウンロードと展開</h3>
+
+<p><a href="https://www.winehq.org/announce/1.9.2">Wine Announcement</a> のリンクから tar ball の URL をコピーしてソースをダウンロード。</p>
+
+<p>(なんか、ゲートウエイの調子が悪い時があるようなので、リトライするかミラーからダウンロードしたほうがいいかもしれない)</p>
+
+<p>そして、ダウンロードしたファイルを</p>
+
+<pre><code class="bash">$ wget http://dl.winehq.org/wine/source/1.9/wine-1.9.2.tar.bz2
+$ tar xf wine-1.9.2.tar.bz2
+$ cd wine-1.9.2
+</code></pre>
+
+<p>このように展開する。</p>
+
+<h3 id="6.-%E3%82%B3%E3%83%B3%E3%83%95%E3%82%A3%E3%82%B0%EF%BC%86%E3%83%93%E3%83%AB%E3%83%89">6. コンフィグ＆ビルド</h3>
+
+<p>やり方は <a href="https://wiki.winehq.org/MacOSX/Building#Building_from_Source">Building from Source</a> の通りに <code>./configure CC="clang" CXX="clang++" CFLAGS="-std=gnu89 -g" ; make</code> するだけ。</p>
+
+<pre><code class="bash">$ ./configure CC="clang" CXX="clang++" CFLAGS="-std=gnu89 -g"
+checking build system type... x86_64-apple-darwin14.5.0
+checking host system type... x86_64-apple-darwin14.5.0
+                   :
+
+configure: Finished.  Do 'make' to compile Wine.
+
+$ make
+clang -m32 -c -o ffs.o ffs.c -I. -I../../include ...
+                   :
+Wine build complete.
+</code></pre>
+
+<h3 id="7.-%E3%83%93%E3%83%AB%E3%83%89%E3%81%97%E3%81%9F-wine-%E3%81%AE%E5%AE%9F%E8%A1%8C">7. ビルドした Wine の実行</h3>
+
+<p>ドキュメントにも書いてありますが <code>make install</code> は<strong>せず</strong>に、ビルドした場所で実行します。</p>
+
+<p><code>$ ./wine explorer.exe</code></p>
+
+<p>のような感じ。</p>
+
+<p>すでにパッケージなどで Wine をインストールしている場合は、</p>
+
+<pre><code class="bash">$ WINEPREFIX=`pwd`/wine-env ./wine explorer.exe
+wine: created the configuration directory '~/wine-1.9.2/wine-env'
+                   :
+wine: configuration in '~/wine-1.9.2/wine-env' has been updated
+</code></pre>
+
+<p>のような感じで独自の環境を作ったほうがいいかもしれない。</p>
+
+<p>なお、 X11/XQuartz 関連でエラーが出た場合は <code>DYLD_FALLBACK_LIBRARY_PATH="${DYLD_FALLBACK_LIBRARY_PATH}:/usr/X11/lib" wine program_name.exe</code> のような感じで回避できるようです。</p>
+
+<h2 id="%E3%81%8A%E3%81%BE%E3%81%91%EF%BC%9A%E3%82%BD%E3%83%BC%E3%82%B9%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E6%A4%9C%E8%A8%BC">おまけ：ソースファイルの検証</h2>
+
+<p>きっと、ほとんどの場合は、tar ball をダウンロードしてそのまま使うと思うけど、シグネチャも公開されているので、せっかくだからダウンロードしたファイルの検証をしてみる。</p>
+
+<p>検証には GnuPG を使います。</p>
+
+<pre><code class="bash">$ gpg
+-bash: gpg: command not found
+$ brew install gpg
+==&gt; Downloading https://homebrew.bintray.com/bottles/gnupg-1.4.20.yosemite.bottle.tar.gz
+######################################################################## 100.0%
+==&gt; Pouring gnupg-1.4.20.yosemite.bottle.tar.gz
+*  /usr/local/Cellar/gnupg/1.4.20: 53 files, 5.4M
+</code></pre>
+
+<p>が、インストールされていなかったので Homebrew でサクッとインストール。</p>
+
+<pre><code class="bash">$ wget http://dl.winehq.org/wine/source/1.9/wine-1.9.2.tar.bz2.sign
+</code></pre>
+
+<p>シグネチャを <a href="http://dl.winehq.org/wine/source/1.9/">Index of /wine/source/1.9</a> から探し、ダウンロードして検証。</p>
+
+<pre><code class="bash">$ gpg --verify wine-1.9.2.tar.bz2.sign
+gpg: assuming signed data in `wine-1.9.2.tar.bz2'
+gpg: Signature made Fri Jan 22 23:29:08 2016 JST using RSA key ID AF17519D
+gpg: Can't check signature: public key not found
+</code></pre>
+
+<p>公開鍵がない！って怒られる。</p>
+
+<p>Wine のメーリングリストの <a href="https://www.winehq.org/pipermail/wine-users/2007-July/027429.html">[Wine] Using .sign PGP/GnuPGP/gpg</a> のポストによると、どうやら <code>"Alexandre Julliard &lt;julliard at winehq.org&gt;"</code> さんの鍵で署名してあるらしいので探してインポートする。</p>
+
+<p><code>using RSA key ID AF17519D</code> って書かれているのでそれを探せばいいか、と思ったけどファイルの検証をするのにシグネチャの情報を信じてはダメですよね。</p>
+
+<p>公式ページのどこかに、署名はどのキーでしてあるとか書いていないのだろうか？</p>
+
+<pre><code class="bash">$ gpg --search-keys "julliard@winehq.org"
+gpg: searching for "julliard@winehq.org" from hkp server keys.gnupg.net
+(1) Alexandre Julliard &lt;julliard@winehq.org&gt;
+      4096 bit RSA key AF17519D, created: 2015-11-03
+(2) Alexandre Julliard &lt;julliard@winehq.org&gt;
+      1024 bit DSA key B9461DD7, created: 2004-10-07
+Keys 1-2 of 2 for "julliard@winehq.org".  Enter number(s), N)ext, or Q)uit &gt; q
+$ gpg --recv-keys AF17519D
+gpg: requesting key AF17519D from hkp server keys.gnupg.net
+gpg: key AF17519D: public key "Alexandre Julliard &lt;julliard@winehq.org&gt;" imported
+gpg: no ultimately trusted keys found
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+</code></pre>
+
+<p>鍵の種類が２種類あるらしいので新しいほうの <code>4096 bit RSA key</code> の <code>AF17519D</code> を選択してインポートする。</p>
+
+<p>そして検証。</p>
+
+<pre><code class="bash">$ gpg --verify wine-1.9.2.tar.bz2.sign
+gpg: assuming signed data in `wine-1.9.2.tar.bz2'
+gpg: Signature made Fri Jan 22 23:29:08 2016 JST using RSA key ID AF17519D
+gpg: Good signature from "Alexandre Julliard &lt;julliard@winehq.org&gt;"
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: DA23 579A 74D4 AD9A F9D3  F945 CEFA C8EA AF17 519D
+</code></pre>
+
+<p><code>Good signature</code> と表示されればOKです。
+何かおかしければ、<code>BAD signature</code> と表示されます。</p>
+
+<p>ということで、まとめると</p>
+
+<pre><code class="bash">$ gpg --recv-keys AF17519D
+$ wget http://dl.winehq.org/wine/source/1.9/wine-1.9.2.tar.bz2
+$ wget http://dl.winehq.org/wine/source/1.9/wine-1.9.2.tar.bz2.sign
+$ gpg --verify wine-1.9.2.tar.bz2.sign 2&gt;&amp;1 | grep "Good signature"
+gpg: Good signature from "Alexandre Julliard &lt;julliard@winehq.org&gt;"
+</code></pre>
+
+<p>こんな感じです。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://wiki.winehq.org/MacOSX/Building">MacOSX/Building - WineHQ Wiki</a></li>
+<li><a href="http://qiita.com/tyfkda/items/565cd067a11419650323">Xcodeのコマンドラインツールのバージョン確認 - Qiita</a></li>
+<li><a href="http://kakurasan.blogspot.jp/2015/06/manage-winapps-using-wineprefixes.html">Wine環境(WINEPREFIX)を分けてWindowsアプリを上手に管理する - kakurasan</a></li>
+<li><a href="http://dl.winehq.org/wine/source/1.9/">Index of /wine/source/1.9</a></li>
+<li><a href="https://www.winehq.org/pipermail/wine-users/2007-July/027429.html">[Wine] Using .sign PGP/GnuPGP/gpg</a></li>
+<li><a href="http://pooh.gr.jp/?p=301">GPGで署名確認 | POOH.GR.JP</a></li>
+<li><a href="https://help.ubuntu.com/community/VerifyIsoHowto">VerifyIsoHowto - Community Help Wiki</a></li>
+<li><a href="http://keyserver.ubuntu.com/pks/lookup?op=vindex&amp;search=julliard%40winehq.org&amp;fingerprint=on">Search results for 'winehq org julliard'</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[FuelPHP ドキュメント翻訳のための git メモ]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/11/03/git-memo-for-fuel-docs-trans.html"/>
+            <updated>2015-11-03T08:54:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/11/03/git-memo-for-fuel-docs-trans.html</id>
+            <content type="html"><![CDATA[<p><a href="/blog/2013/06/01/first-github-fork-and-fuelphp-docs-jp.html">初めてのForkとFuelPHP 1.6 翻訳ウィーク参加</a> で git の操作方法をメモってたけど色々おかしかったので新たにメモ。</p>
+
+<p>それ以外にも関連する事柄をメモ。</p>
+
+<h2 id="%E6%9C%AA%E7%BF%BB%E8%A8%B3%E3%81%AE%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%E3%82%92%E6%8E%A2%E3%81%99">未翻訳のドキュメントを探す</h2>
+
+<pre><code class="bash">$ grep -RE " [a-zA-Z]+\.\s*$" * | grep -v "MIT license"
+</code></pre>
+
+<p>や</p>
+
+<pre><code class="bash">$ grep -RE " you " *
+</code></pre>
+
+<p>とすることでなんとなく探せます。</p>
+
+<p>なんとなくですが。</p>
+
+<h2 id="%E8%A6%AA%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%8B%E3%82%89%E3%83%9E%E3%83%BC%E3%82%B8">親リポジトリからマージ</h2>
+
+<p>親リポジトリは</p>
+
+<pre><code class="bash">$ git remote set-url upstream &lt;URL&gt;
+</code></pre>
+
+<p>で指定しておき</p>
+
+<pre><code class="bash">$ git remote -v
+</code></pre>
+
+<p>で現状を確認できる。</p>
+
+<p>そして、</p>
+
+<pre><code class="bash">$ git pull upstream &lt;BRANCH_NAME&gt;
+</code></pre>
+
+<p>でマージする。</p>
+
+<p>さらに、自分の GitHub に pull アンド push でマージ。</p>
+
+<pre><code class="bash">$ git push origin 1.8/develop_japanese
+$ git pull origin 1.8/develop_japanese
+</code></pre>
+
+<p>ブランチを切って作業していればマージも自動で終わるはず。</p>
+
+<p>upstream から pull した後で↓の</p>
+
+<p><img src="/images/2015_1103_github_desktop_sync_button.png" alt="GitHub Desktop Sync Button" /></p>
+
+<p>GitHub Desktop の Sync ボタンでも自分のレポジトリにマージできるので普段はそっちの方が簡単。</p>
+
+<h2 id="%E3%83%9E%E3%83%BC%E3%82%B8%E6%B8%88%E3%81%BF%E3%81%AE%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81%E3%82%92%E6%8E%A2%E3%81%99">マージ済みのブランチを探す</h2>
+
+<pre><code class="bash">git branch -r --list --merged | grep -vE "((upstream|NEKOGET)/|origin/[0-9]+)"
+</code></pre>
+
+<h2 id="pr%E3%81%97%E3%81%9F%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81%E3%81%AE%E5%89%8A%E9%99%A4">PRしたブランチの削除</h2>
+
+<p>GitHub の Pull Request ページから</p>
+
+<p><img src="/images/2015_1103_delete_branch.png" alt="Delete branch" /></p>
+
+<p>のようにブランチを削除したりできる。</p>
+
+<p>が、コマンドラインで処理をすることもできます。</p>
+
+<p>ローカルのブランチを削除するにはこう↓</p>
+
+<pre><code class="bash">git branch -d &lt;branchname&gt;
+</code></pre>
+
+<p>リモートのブランチを削除するにはこう↓</p>
+
+<pre><code class="bash">git push origin :&lt;branchname&gt;
+</code></pre>
+
+<h2 id="omg%21-%E9%96%93%E9%81%95%E3%81%A3%E3%81%9F%E5%90%8D%E5%89%8D%E3%81%A7%E9%96%93%E9%81%95%E3%81%A3%E3%81%9F%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%82%92%E6%9B%B8%E3%81%84%E3%81%A6%E3%82%B3%E3%83%9F%E3%83%83%E3%83%88%E3%81%97%E3%81%A6%E3%81%BE%E3%81%A3%E3%81%9F">OMG! 間違った名前で間違ったメッセージを書いてコミットしてまった</h2>
+
+<p>一連の流れはこう↓</p>
+
+<pre><code class="bash">$ git branch -m &lt;OLD_BRANCH_NAME&gt; &lt;NEW_BRANCH_NAME&gt;
+$ git checkout &lt;OLD_BRANCH_NAME&gt;
+$ git push origin :&lt;OLD_BRANCH_NAME&gt;
+$ git branch --unset-upstream
+$ git commit --amend -m "&lt;NEW_COMMIT_LOG&gt;"
+$ git push origin &lt;NEW_BRANCH_NAME&gt;
+</code></pre>
+
+<p>個別解説。</p>
+
+<p>直前のコミットログを修正するにはこう↓</p>
+
+<pre><code class="bash">$ git commit --amend -m "&lt;NEW_COMMIT_LOG&gt;"
+</code></pre>
+
+<p>ローカルのブランチ名を変更するにはこう↓</p>
+
+<pre><code class="bash">$ git branch -m &lt;OLD_BRANCH_NAME&gt; &lt;NEW_BRANCH_NAME&gt;
+</code></pre>
+
+<p>ローカルと同じ名前のリモートブランチを削除した場合に注意されることがあるので関連付け？を解除するには切り替えたブランチ上でこう↓</p>
+
+<pre><code class="bash">$ git branch --unset-upstream
+</code></pre>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://d.hatena.ne.jp/hnw/20110528">GitHubへpull requestする際のベストプラクティス - hnwの日記</a></li>
+<li><a href="http://qiita.com/makoto_kw/items/c825e17e2a577bb83e19">Gitで使われていないリモートブランチの整理 - Qiita</a></li>
+<li><a href="http://qiita.com/kon_yu/items/e9ebd7f778df430a4223">GitHub - Gitのリモートリポジトリの名前を付け替える　〜Railsのアップグレードを例にして〜 - Qiita</a></li>
+<li><a href="http://tobysoft.net/wiki/index.php?git%2F%A5%B3%A5%DF%A5%C3%A5%C8%A5%ED%A5%B0%A4%F2%BD%A4%C0%B5%A4%B9%A4%EB%CA%FD%CB%A1#q9692e83">git/コミットログを修正する方法 - TOBY SOFT wiki</a></li>
+<li><a href="http://dqn.sakusakutto.jp/2011/10/git_push_origin_master.html">Git超入門："git push origin master"の"push"と"origin"と"master"の意味がわからないあなたへ · DQNEO起業日記</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Mac で rbenv を使って複数バージョンの Ruby を管理するためのメモ]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/10/25/ruby-rbenv-on-mac-osx-memo.html"/>
+            <updated>2015-10-25T12:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/10/25/ruby-rbenv-on-mac-osx-memo.html</id>
+            <content type="html"><![CDATA[<h2 id="%E6%A6%82%E8%A6%81">概要</h2>
+
+<p>ちょっと、いろいろなバージョンの Ruby を使用しないといけない状況に陥ったので rbenv での ruby のバージョンを管理をする方法のメモ。
+環境は、 Mac を使用しているので Homebrew を使って rbenv をインストールしています。</p>
+
+<p>以前に <a href="/blog/2014/04/15/ruby-1-9-3-install-for-mac-10-8.html">Mac OS X 10.8 に Ruby 1.9.3 をインストールする方法</a> で rvm を使ってインストールしていましたが、ごっそりアインインストールをしています。</p>
+
+<h2 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール</h2>
+
+<p>まず rbenv と ruby-build をインストール</p>
+
+<pre><code class="bash">$ brew install rbenv ruby-build
+</code></pre>
+
+<p>パスを通す＆設定反映</p>
+
+<pre><code class="bash">$ echo 'eval "$(rbenv init -)"' &amp;gt;&amp;gt; ~/.bash_profile
+$ source ~/.bash_profile
+$ rbenv rehash
+</code></pre>
+
+<p>インストール可能なバージョンを調べるには</p>
+
+<pre><code class="bash">$ rbenv install -l
+</code></pre>
+
+<p>で確認できますが、 JRuby とかいろいろ出てくるので</p>
+
+<pre><code class="bash">$ rbenv install -l | grep -E "\s+[0-9]"
+</code></pre>
+
+<p>のようにしたほうが多少探しやすくなるかも。</p>
+
+<p>とりあえず Ruby 1.9 と 2.2 をインストール</p>
+
+<pre><code class="bash">$ rbenv install $(rbenv install -l |grep -E "^\s+1.9" | tail -n 1)
+Cloning https://github.com/ruby/ruby.git...
+Installing ruby-1.9.3-p551...
+Installed ruby-1.9.3-p551 to ~/.rbenv/versions/1.9.3-p551
+
+$ rbenv install $(rbenv install -l |grep -E "^\s+2.2" | tail -n 1)
+Cloning https://github.com/ruby/ruby.git...
+Installing ruby-2.2.1-dev...
+Installed ruby-2.2.1 to ~/.rbenv/versions/2.2.1
+</code></pre>
+
+<p>システム全体で使用する Ruby を最新バージョンに切り替えるs</p>
+
+<pre><code class="bash">$ rbenv global $(rbenv versions | sed -e "s/\*/ /g" | sort -n | tail -n 1 | cut -d " " -f 3)
+</code></pre>
+
+<h2 id="%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">アンインストール</h2>
+
+<p>アンインストールも簡単、インストールしたフォルダ自体を削除するか聞かれるので、まぁ基本は <code>y</code> 一択だと思われる</p>
+
+<pre><code class="bash">$ rbenv uninstall 1.9.3-p551
+rbenv: remove ~/.rbenv/versions/1.9.3-p551? y
+</code></pre>
+
+<p>ただし、選択している Ruby をアンインストールした場合、選択し直さないといけない</p>
+
+<pre><code class="bash">$ rbenv versions
+rbenv: version `1.9.3-p551' is not installed
+  system
+  2.2.1
+</code></pre>
+
+<h2 id="%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E7%AE%A1%E7%90%86">バージョン管理</h2>
+
+<p>システムにインストールされている Ruby のバージョンを確認するには</p>
+
+<pre><code class="bash">$ rbenv versions
+  system
+  1.9.3-p551
+* 2.2.1 (set by ~/test/.ruby-version)
+</code></pre>
+
+<p>です。</p>
+
+<p><code>*</code> マークが付いているバージョンが現在選択されている Ruby のバージョンで、バージョンの後ろについている <code>set by XXXX</code> は、<code>.ruby-version</code> ファイルによってローカルでは、このバージョンが指定されています、ということです。</p>
+
+<p>この状態でバージョンを確認すると</p>
+
+<pre><code class="bash">$ ruby -v
+ruby 2.2.1p85 (2015-02-26 revision 49769) [x86_64-darwin13.4.0]
+</code></pre>
+
+<p>となります。</p>
+
+<p>あるプロジェクトがシステムで使用しているバージョンと違うバージョンの Ruby を必要としているなら</p>
+
+<pre><code class="bash">$ rbenv local 1.9.3-p551
+</code></pre>
+
+<p>このようにします。</p>
+
+<p>すると</p>
+
+<pre><code class="bash">$ ruby -v
+ruby 1.9.3p551 (2014-11-13 revision 48407) [x86_64-darwin13.4.0]
+</code></pre>
+
+<p>となります。</p>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<p>インストール可能な一覧を取得</p>
+
+<pre><code class="bash">$ rbenv install -l | grep -E "\s+[0-9]"
+</code></pre>
+
+<p>Ruby をインストール</p>
+
+<pre><code class="bash">$ rbenv install バージョン
+</code></pre>
+
+<p>Ruby をアンインストール</p>
+
+<pre><code class="bash">$ rbenv uninstall バージョン
+</code></pre>
+
+<p>インストールされている Ruby のバージョンの一覧を表示</p>
+
+<pre><code class="bash">$ rbenv list
+</code></pre>
+
+<p>システムで使用する Ruby のバージョンを変更</p>
+
+<pre><code class="bash">$ rbenv global バージョン
+</code></pre>
+
+<p>ローカル(カレントディレクトリ以下)で使用する Ruby のバージョンを変更</p>
+
+<pre><code class="bash">$ rbenv local バージョン
+</code></pre>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://qiita.com/semind/items/f8f647e757842f08b9ec">Mac - homebrewでバージョンを指定してインストールする - Qiita</a></li>
+<li><a href="http://qiita.com/dandy-z/items/578169e04acc475c39b5">Ruby 1.9と2.0, Rails3とRails4を切り替える - Qiita</a></li>
+<li><a href="http://blog.livedoor.jp/noanoa07/archives/1897747.html">noanoa 日々の日記 : Ruby 2.0.0 を Homebrew + rbenv で OS X Mountain Lion にインストール</a></li>
+<li><a href="http://nwpct1.hatenablog.com/entry/2014/03/20/173740">MacPortsからHomeBrewに乗換え&amp;Python開発環境構築 - c-bata web</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[JavaScript の選択範囲関連のメモ]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/08/29/javascript-memo-selection-object.html"/>
+            <updated>2015-08-29T23:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/08/29/javascript-memo-selection-object.html</id>
+            <content type="html"><![CDATA[<p>以前に作った <a href="https://greasyfork.org/ja/scripts/9647-calculation-of-selection-length">calculation of selection length</a> (ソースは<a href="https://github.com/sharkpp-userscripts/calculation-of-selection-length">GitHub</a>) を作る時に内容は選択された文字列の扱い関連について調べたことをメモメモです。
+Chrome でのみ確認している。</p>
+
+<h2 id="%E9%81%B8%E6%8A%9E%E6%96%87%E5%AD%97%E6%95%B0%E3%82%92%E5%8F%96%E5%BE%97">選択文字数を取得</h2>
+
+<p>選択範囲は <code>document.getSelection()</code> または <code>window.getSelection()</code> で取得できる。</p>
+
+<p>取得できるのは <code>Selection</code> オブジェクトなので、</p>
+
+<pre><code class="bash">var selectionLen = String(document.getSelection()).length;
+</code></pre>
+
+<p>の用な感じで <code>String</code> に変換してから取得する。</p>
+
+<h2 id="%E9%81%B8%E6%8A%9E%E3%81%AE%E5%A4%89%E6%9B%B4%E3%82%92%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%A7%E5%8F%96%E5%BE%97">選択の変更をイベントで取得</h2>
+
+<p>どうやら標準ではないっぽいけど <code>onselectionchange</code> というイベントがあるみたい。</p>
+
+<pre><code class="bash">document.addEventListener("selectionchange", function(e){ console.log(e); }, false);
+</code></pre>
+
+<h2 id="%E9%81%B8%E6%8A%9E%E7%AF%84%E5%9B%B2%E3%81%AE%E7%B5%B6%E5%AF%BE%E4%BD%8D%E7%BD%AE%E3%82%92%E5%8F%96%E5%BE%97">選択範囲の絶対位置を取得</h2>
+
+<p>絶対位置を取得は、</p>
+
+<pre><code class="bash">var getSelectionBoundingRect = function() {
+  var rect = { left: 0, top: 0, right: 0, bottom: 0 };
+  var selAll = document.getSelection();
+  for (var i = 0; i &lt; selAll.rangeCount; ++i) {
+    var rect_ = selAll.getRangeAt(i).getBoundingClientRect();
+    if (rect_.left  &lt; rect.left)    rect.left   = rect_.left;
+    if (rect_.top   &lt; rect.top)     rect.top    = rect_.top;
+    if (rect.right  &lt; rect_.right)  rect.right  = rect_.right;
+    if (rect.bottom &lt; rect_.bottom) rect.bottom = rect_.bottom;
+  }
+  rect.width  = rect.right - rect.left;
+  rect.height = rect.bottom - rect.top;
+  rect.left  += window.pageXOffset;
+  rect.top   += window.pageYOffset;
+  rect.right += window.pageXOffset;
+  rect.bottom+= window.pageYOffset;
+  return selAll.rangeCount ? rect : null;
+};
+</code></pre>
+
+<p>こんな感じ。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://www.nishishi.com/javascript/2013/get-selection-length.html">範囲選択されている文字列を得る - JavaScript TIPSふぁくとりー</a></li>
+<li><a href="https://developer.mozilla.org/ja/docs/Web/API/Selection">selection - Web API インターフェイス | MDN</a></li>
+<li><a href="http://help.dottoro.com/ljixpxji.php">onselectionchange event | selectionchange event JavaScript</a></li>
+<li><a href="http://gifnksm.hatenablog.jp/entry/20101007/1286419969">TextNodeにも使えるgetBoundingClientRect - gifnksmの雑多なメモ</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[FuelPHPのメモ]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/08/23/fuelphp-memo.html"/>
+            <updated>2015-08-23T18:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/08/23/fuelphp-memo.html</id>
+            <content type="html"><![CDATA[<p>落ち葉拾い的な？</p>
+
+<p>SSDの肥やしになっていたのをサルベージしてきました。</p>
+
+<p>FuelPHP を使っている中で気がついたことのメモです。</p>
+
+<h2 id="orm%5Cmodel_temporal-%E3%82%92%E4%BD%BF%E3%81%86%E3%81%A8%E3%81%8D%E3%81%AE%E6%B3%A8%E6%84%8F%E7%82%B9">Orm\Model_Temporal を使うときの注意点</h2>
+
+<p><a href="http://fuelphp.com/docs/packages/orm/intro.html">Orm パッケージ</a>の <a href="http://fuelphp.com/docs/packages/orm/model/temporal.html">Model_Temporal</a> という、データを履歴管理するのに便利そうなモデルが FuelPHP 1.6 以降で実装されています。</p>
+
+<p>このモデルを使っているときにちょっと気がついたことがあるのでメモしておきます。</p>
+
+<p>とりあえず、モデルは次のような感じで用意します。
+<code>mysql_timestamp</code> に <code>true</code> と指定しているのが <a href="http://fuelphp.com/docs/packages/orm/model/temporal.html">Temporal Model - Orm Package - FuelPHP Documentation</a> の例と違うところですが、 <code>false</code> でも同じ問題が起きます。 <strong>要確認</strong></p>
+
+<pre><code class="php">// app/classes/model/mytemporal.php
+class Model_MyTemporal extends Orm\Model_Temporal
+{
+    protected static $_primary_key = array('id', 'temporal_start', 'temporal_end');
+    protected static $_temporal = array(
+        'start_column' =&gt; 'temporal_start',
+        'end_column' =&gt; 'temporal_end',
+        'mysql_timestamp' =&gt; true, // ここを true に
+    );
+}
+</code></pre>
+
+<p>テストで↓のようなのを実行します。</p>
+
+<pre><code class="php">// app/tests/model/mytemporal.php
+
+$model = new Model_MyTemporal();
+$model-&gt;save();
+</code></pre>
+
+<p>そして実行</p>
+
+<pre><code class="bash">[root@localhost test_temporal_model]# oil t --group=App
+Tests Running...This may take a few moments.
+PHPUnit 3.7.31 by Sebastian Bergmann.
+
+Configuration read from /var/www/html/test_temporal_model/fuel/core/phpunit.xml
+
+.
+
+Time: 68 ms, Memory: 22.50Mb
+
+OK (1 test, 5 assertions)
+</code></pre>
+
+<p>日付を 2040/1/1 00:00 にしてみると、、、</p>
+
+<p>下は失敗、、、、</p>
+
+<pre><code class="bash">[root@localhost test_temporal_model]# date 010100002040
+2040年  1月  1日 日曜日 00:00:00 JST
+[root@localhost test_temporal_model]# oil t --group=App
+Tests Running...This may take a few moments.
+PHPUnit 3.7.31 by Sebastian Bergmann.
+
+Configuration read from /var/www/html/test_temporal_model/fuel/core/phpunit.xml
+
+E
+
+Time: 12 ms, Memory: 20.50Mb
+
+There was 1 error:
+
+1) Test_Model_MyTemporal::test_save_and_between
+PDOException: SQLSTATE[HY000]: General error: 2013 Lost connection to MySQL server during query
+
+/var/www/html/test_temporal_model/fuel/core/classes/database/pdo/connection.php:150
+/var/www/html/test_temporal_model/fuel/core/classes/database/pdo/connection.php:113
+/var/www/html/test_temporal_model/fuel/core/classes/database/pdo/connection.php:167
+/var/www/html/test_temporal_model/fuel/core/classes/database/query.php:287
+/var/www/html/test_temporal_model/fuel/core/classes/dbutil.php:621
+/var/www/html/test_temporal_model/fuel/core/classes/migrate.php:595
+/var/www/html/test_temporal_model/fuel/core/classes/migrate.php:74
+/var/www/html/test_temporal_model/fuel/core/classes/autoloader.php:364
+/var/www/html/test_temporal_model/fuel/core/classes/autoloader.php:247
+/var/www/html/test_temporal_model/fuel/app/tests/model/mytemporal.php:12
+
+FAILURES!
+Tests: 1, Assertions: 0, Errors: 1.
+[root@localhost test_temporal_model]# 
+</code></pre>
+
+<p>まあ、詳しくは調べていないですが、どうやら MySQL で 32ビットで日付を扱っているためのようです。</p>
+
+<p><a href="http://tech-blog.tsukaby.com/archives/179">MySQLの日付型の扱い方や機能をまとめてみました | つかびーの技術日記</a> などを見ると DATETIME 型を使うといいようですね。</p>
+
+<h2 id="opauth-%E3%82%AF%E3%83%A9%E3%82%B9-%E3%83%A1%E3%83%A2">Opauth クラス メモ</h2>
+
+<ul>
+<li>Opauth::forge() ではプロバイダのIdは大文字小文字区別して、一致しないと、 <strong><code>Unsupported or undefined Opauth strategy - XXXXX</code></strong> と例外が発行される、基本小文字？</li>
+<li><strong><code>Authentication error: the callback returned an error auth response</code></strong> とログイン時に出た場合、Webサーバーを再起動すれば直る、、、かも(なんかセッションが残ってるか、期限が切れてるけどリセットできてない？)</li>
+<li>設定の <code>opauth.auto_registration</code> を true にしておけば、ユーザー名とメールアドレスがあれば、初めての認証時に自動でユーザー登録してログインできる(Twitterはメールアドレスが取得できないので無理そう)</li>
+<li>ログイン中にOauthでアカウントと関連付けると、既に別のアカウントで関連づけていても関連付けが変更される(A ユーザーに Twitter の @hoge を関連づけた後、 B ユーザーでログイン中に @hoge に関連づけると、関連づけされているユーザーが A あら B に変更されてしまう、 <code>login_or_register()</code> の戻り値は <code>'linked'</code>)</li>
+<li>関連付けの解除は存在しないので、解除したい場合は <code>_providers</code> から <code>parent_id</code> と <code>provider</code> で探して削除する</li>
+</ul>
+
+<h2 id="ormauth-%E3%82%AF%E3%83%A9%E3%82%B9-%E3%83%A1%E3%83%A2">Ormauth クラス メモ</h2>
+
+<ul>
+<li><code>Auth::member()</code> は <code>Auth::member($group, $user)</code> ではなく <code>Auth::member($group, 'Ormgroup', $user)</code> っぽい(それでも欲しかった情報が取得できなかったけど)</li>
+</ul>
+
+<h2 id="orm-%E3%82%AF%E3%83%A9%E3%82%B9-%E3%83%A1%E3%83%A2">Orm クラス メモ</h2>
+
+<ul>
+<li><code>Model_SoftDelete</code> は <code>Model_XXX::query()</code> からは 論理削除が出来ないので <code>Model_XXX::find()</code> で探してから削除する</li>
+<li><code>Model_SoftDelete</code> は <code>Model_XXX::find('all'</code>) では削除が呼び出せないので foreach でまわして処理する</li>
+<li><code>Model_Temporal::query()</code> で検索すると全ての履歴が範囲に含まれてしまうので、自分で <code>where('temporal_start', '&lt;=', $timestamp)-&gt;where('temporal_end', '&gt;=', $timestamp)</code> として制限を掛けないと最新の履歴のみが取得できない</li>
+<li><code>hoge IN SUBQUERY</code> なサブクエリを使うときには <code>-&gt;where('id', 'in', DB::expr('('.$subQuery-&gt;get_query(true).')'))</code> とすれば一応使える</li>
+<li><code>Model_Soft::disable_filter()</code> は <code>Model_Soft::query()</code> の前で使用しないと効果がない。</li>
+<li><code>$this-&gt;_is_new</code> を <code>true</code> にした場合、 <code>_original_relations</code> もクリア(リレーションごとに空に)しないと new したときと同じ動作にならない。</li>
+<li><code>Model_Huga::query()-&gt;related('hoge')-&gt;where('hoge.id', '!=', null)-&gt;get_one()</code> すると結果がおかしくなることがあるので <code>Model_Huga::query()-&gt;related('hoge')-&gt;where('hoge.id', '!=', null)-&gt;limit_row(1)-&gt;get()</code> とする(参考：<a href="http://stackoverflow.com/questions/13399884/fuelphp-orm-related-limit-ignored">php - Fuelphp ORM related limit ignored - Stack Overflow</a>)</li>
+</ul>
+
+<h2 id="file-%E3%82%AF%E3%83%A9%E3%82%B9-%E3%83%A1%E3%83%A2">File クラス メモ</h2>
+
+<ul>
+<li><code>$area-&gt;read_dir()</code> では <code>File_Handler_Directory</code> が返されるのでこのオブジェクトのインターフェースを通してディレクトリ内のファイルの一覧を取得することはできない。</li>
+</ul>
+
+<h2 id="%E3%81%9D%E3%81%AE%E4%BB%96-%E3%83%A1%E3%83%A2">その他 メモ</h2>
+
+<ul>
+<li><code>oil t</code> など CLI インターフェースでは Asset は使えないので <code>Config::set('assets.fail_silently', true);</code> しておくとエラーが出ない(暫定)</li>
+<li><code>DomainException: Form instance already exists, cannot be recreated. Use instance() instead of forge() to retrieve the existing instance.</code> って言われたらリクエスト内で <code>::forge('hoge')</code> の <code>hoge</code> が同じ物が居るってこと</li>
+</ul>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<p>とりあえず、フレームワークを触るとドキュメントに載っていないことが色々でてくるのはしょうがないのかなぁと思います。</p>
+
+<p>まぁ、そのうち、整理してまとめたいなぁとは思いますが、きっと手つかずのままになるの未来予想が出来てしまいます。</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Titanium Mobileのメモ(その１)]]></title>
+            <link href="http://www.sharkpp.net/blog/2012/09/30/titanium-mobile-memo-1.html"/>
+            <updated>2012-09-30T23:05:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2012/09/30/titanium-mobile-memo-1.html</id>
+            <content type="html"><![CDATA[<p>とある理由で急遽Androidのアプリを作る必要に迫られ前から興味があっTItanium Mobileに手を出した次第。</p>
+
+<p>作る過程で調べたことを色々メモ。</p>
+
+<ul>
+<li>Android/iOS で修正無しに移植できるわけじゃない模様、そんなのがやりたければPhoneGapを使えばいいよってことのようだ。</li>
+<li>iOSで使えてAndroidで使えないUIの部品やその逆が結構ある</li>
+<li>.jss (.jsの.css的なもの)は腐ってる</li>
+<li>プロパティーに指定できる値とかはリファレンスを見よう <a href="http://docs.appcelerator.com/titanium/2.1/index.html">Appcelerator Titanium Mobile</a></li>
+<li>Ti.UI.createLabel() のオプションに em などを単位として使うとエラーになる、そしていきなり落ちる。</li>
+<li>Ti.App.Properties.setInt() と Ti.UI.Android.openPreferences() はあわせて使えない、設定画面では文字列のみが扱える。で使うとエラーになりやっぱりいきなり落ちる。</li>
+<li>Androidでは、Ti.UI.Button などの上に 別のオブジェクトを重ねられない。</li>
+</ul>
+
+<p>などなど、とりあえずざっと覚えているのはこんな感じ。</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Ubuntu-ja-10.04をVMware Player 3で動かすときのメモ]]></title>
+            <link href="http://www.sharkpp.net/blog/2010/05/30/ubuntu-ja-10-04-on-vmware-player-3-memo.html"/>
+            <updated>2010-05-30T18:41:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2010/05/30/ubuntu-ja-10-04-on-vmware-player-3-memo.html</id>
+            <content type="html"><![CDATA[<p>ハードディスクも増設しUbuntu-ja-10.04も出たのでVMware Player 2.5をVMware Player 3.1にアップグレードしてインストールしてみた。</p>
+
+<p><a href="/blog/2009/01/10/ubuntu-ja-8-10-on-vmware-player-2-memo.html">Ubuntu-ja-8.10をVMware Player 2で動かすときのメモ</a>の続編みたいな感じ。</p>
+
+<p>まだ、一部未解決な問題が残っていてまともに使えていない。</p>
+
+<h3 id="ubuntu-10.04%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">Ubuntu 10.04インストール</h3>
+
+<p>isoを指定したらOSを認識し、簡易インストール機能が使用できました。</p>
+
+<p>アカウント名などを指定したら後は自動でらくちん！</p>
+
+<p>UIやキーボードなどが英語になっていたのでそれだけログイン画面で変更しました。</p>
+
+<p><a href="/images/2010_0530_ubuntu_10_04_install.png"><img src="/images/2010_0530_ubuntu_10_04_install_s.jpg" alt="Ubuntu 10.04 インストール画面" /></a></p>
+
+<p><a href="/images/2010_0530_ubuntu_10_04_login.png"><img src="/images/2010_0530_ubuntu_10_04_login_s.jpg" alt="Ubuntu 10.04 ログイン画面" /></a></p>
+
+<h3 id="vmware-tools">VMware Tools</h3>
+
+<p>簡易インストール時に勝手にダウンロード＆インストールされました。</p>
+
+<p>Playerの設定からWindows用などダウンロードが出来て、WMware Playerのインストールフォルダに *.iso で保存されていました。</p>
+
+<h3 id="vmnetcfg.exe">vmnetcfg.exe</h3>
+
+<pre>VMware-player-3.1.0-261024.exe /e hoge
+</pre>
+
+<p>でhoge/network.cabの中にvmnetcfg.exeがある様だけどエラーが出て動かなかった。</p>
+
+<p>プロシージャ エントリ ポイント ??4string@utf@@QAEAAV01@ABV01@@Z がダイナミック リンク ライブラリ vmwarestring.dll から見つかりませんでした。</p>
+
+<p><a href="/images/2010_0530_vmnetcfg_error.png"><img src="/images/2010_0530_vmnetcfg_error_s.jpg" alt="vmnetcfg.exe実行エラー" /></a></p>
+
+<h3 id="%E7%9B%B8%E5%A4%89%E3%82%8F%E3%82%89%E3%81%9A%E3%80%81openoffice.org%E3%81%AF%E8%A6%81%E3%82%89%E3%81%AA%E3%81%84%E3%81%AE%E3%81%A7%E6%B6%88%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F">相変わらず、OpenOffice.orgは要らないので消しました</h3>
+
+<h3 id="root%E3%81%AE%E3%83%91%E3%82%B9%E3%83%AF%E3%83%BC%E3%83%89%E3%81%AE%E8%A8%AD%E5%AE%9A">rootのパスワードの設定</h3>
+
+<pre>sudo passwd root
+</pre>
+
+<h3 id="%E8%B5%B7%E5%8B%95%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E7%B7%A8%E9%9B%86">起動オプションの編集</h3>
+
+<pre>sudo vi /etc/default/grub<br />sudo update-grub
+</pre>
+
+<h3 id="%E3%82%B2%E3%82%B9%E3%83%88os%E3%81%A7%E3%81%AE%E6%99%82%E5%88%BB%E5%90%8C%E6%9C%9F%E3%83%BB%E3%82%AF%E3%83%AD%E3%83%83%E3%82%AF%E3%81%AE%E9%80%B2%E3%81%BF">ゲストOSでの時刻同期・クロックの進み</h3>
+
+<p>相変わらずゲストOSでクロックの進みが速い。</p>
+
+<p>起動オプションを</p>
+
+<p>GRUB&#95;CMDLINE&#95;LINUX="noreplace-paravirt nosmp noapic nolapic clocksource=pit"</p>
+
+<p>とか</p>
+
+<p>GRUB&#95;CMDLINE&#95;LINUX="noreplace-paravirt nosmp noapic nolapic clock=pit"</p>
+
+<p>とかに変更しても変わらず。</p>
+
+<p>Player起動時に、</p>
+
+<p><a href="/images/2010_0530_vmware_player_tsc_notify.png"><img src="/images/2010_0530_vmware_player_tsc_notify_s.jpg" alt="WMware Player 通知メッセージ" /></a></p>
+
+<p>こんなのが表示されたので恐らくクロックの進みが速いのと関係あると思うけど、まだ調査できていない。</p>
+
+<h3 id="%E5%8F%82%E8%80%83">参考</h3>
+
+<p><a href="https://forums.ubuntulinux.jp/viewtopic.php?pid=55804#p55804">Ubuntu日本語フォーラム / 上手に起動できません。</a></p>
+
+<p><a href="http://blog.penpe.net/?eid=1046016">ディストーションが栄養剤　ぺんぺねっと管理人blog | Ubuntu 10.04 の root password パスワード設定方法は？</a></p>
+
+<p><a href="http://blog.mutsuyoshi.net/index.php?itemid=869">vmnetcfg.exeのありか - 明日の備忘録（六ちゃんが綴るメモ）</a></p>
+]]></content>
+        </entry>
+    </feed>

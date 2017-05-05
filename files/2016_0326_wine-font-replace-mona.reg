@@ -1,0 +1,12 @@
+REGEDIT4
+
+[HKEY_CURRENT_USER\Software\Wine\Fonts\Replacements]
+"MS Gothic"="IPA モナー ゴシック"
+"MS Mincho"="IPA モナー 明朝"
+"MS PGothic"="IPA モナー Pゴシック"
+"MS PMincho"="IPA モナー P明朝"
+"MS UI Gothic"="IPA モナー UIゴシック"
+"ＭＳ ゴシック"="IPA モナー ゴシック"
+"ＭＳ 明朝"="IPA モナー 明朝"
+"ＭＳ Ｐゴシック"="IPA モナー Pゴシック"
+"ＭＳ Ｐ明朝"="IPA モナー P明朝" 

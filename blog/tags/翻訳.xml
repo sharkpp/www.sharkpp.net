@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/%E7%BF%BB%E8%A8%B3.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:49+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[FuelPHP ドキュメント翻訳のための git メモ]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/11/03/git-memo-for-fuel-docs-trans.html"/>
+            <updated>2015-11-03T08:54:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/11/03/git-memo-for-fuel-docs-trans.html</id>
+            <content type="html"><![CDATA[<p><a href="/blog/2013/06/01/first-github-fork-and-fuelphp-docs-jp.html">初めてのForkとFuelPHP 1.6 翻訳ウィーク参加</a> で git の操作方法をメモってたけど色々おかしかったので新たにメモ。</p>
+
+<p>それ以外にも関連する事柄をメモ。</p>
+
+<h2 id="%E6%9C%AA%E7%BF%BB%E8%A8%B3%E3%81%AE%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%E3%82%92%E6%8E%A2%E3%81%99">未翻訳のドキュメントを探す</h2>
+
+<pre><code class="bash">$ grep -RE " [a-zA-Z]+\.\s*$" * | grep -v "MIT license"
+</code></pre>
+
+<p>や</p>
+
+<pre><code class="bash">$ grep -RE " you " *
+</code></pre>
+
+<p>とすることでなんとなく探せます。</p>
+
+<p>なんとなくですが。</p>
+
+<h2 id="%E8%A6%AA%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%8B%E3%82%89%E3%83%9E%E3%83%BC%E3%82%B8">親リポジトリからマージ</h2>
+
+<p>親リポジトリは</p>
+
+<pre><code class="bash">$ git remote set-url upstream &lt;URL&gt;
+</code></pre>
+
+<p>で指定しておき</p>
+
+<pre><code class="bash">$ git remote -v
+</code></pre>
+
+<p>で現状を確認できる。</p>
+
+<p>そして、</p>
+
+<pre><code class="bash">$ git pull upstream &lt;BRANCH_NAME&gt;
+</code></pre>
+
+<p>でマージする。</p>
+
+<p>さらに、自分の GitHub に pull アンド push でマージ。</p>
+
+<pre><code class="bash">$ git push origin 1.8/develop_japanese
+$ git pull origin 1.8/develop_japanese
+</code></pre>
+
+<p>ブランチを切って作業していればマージも自動で終わるはず。</p>
+
+<p>upstream から pull した後で↓の</p>
+
+<p><img src="/images/2015_1103_github_desktop_sync_button.png" alt="GitHub Desktop Sync Button" /></p>
+
+<p>GitHub Desktop の Sync ボタンでも自分のレポジトリにマージできるので普段はそっちの方が簡単。</p>
+
+<h2 id="%E3%83%9E%E3%83%BC%E3%82%B8%E6%B8%88%E3%81%BF%E3%81%AE%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81%E3%82%92%E6%8E%A2%E3%81%99">マージ済みのブランチを探す</h2>
+
+<pre><code class="bash">git branch -r --list --merged | grep -vE "((upstream|NEKOGET)/|origin/[0-9]+)"
+</code></pre>
+
+<h2 id="pr%E3%81%97%E3%81%9F%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81%E3%81%AE%E5%89%8A%E9%99%A4">PRしたブランチの削除</h2>
+
+<p>GitHub の Pull Request ページから</p>
+
+<p><img src="/images/2015_1103_delete_branch.png" alt="Delete branch" /></p>
+
+<p>のようにブランチを削除したりできる。</p>
+
+<p>が、コマンドラインで処理をすることもできます。</p>
+
+<p>ローカルのブランチを削除するにはこう↓</p>
+
+<pre><code class="bash">git branch -d &lt;branchname&gt;
+</code></pre>
+
+<p>リモートのブランチを削除するにはこう↓</p>
+
+<pre><code class="bash">git push origin :&lt;branchname&gt;
+</code></pre>
+
+<h2 id="omg%21-%E9%96%93%E9%81%95%E3%81%A3%E3%81%9F%E5%90%8D%E5%89%8D%E3%81%A7%E9%96%93%E9%81%95%E3%81%A3%E3%81%9F%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%82%92%E6%9B%B8%E3%81%84%E3%81%A6%E3%82%B3%E3%83%9F%E3%83%83%E3%83%88%E3%81%97%E3%81%A6%E3%81%BE%E3%81%A3%E3%81%9F">OMG! 間違った名前で間違ったメッセージを書いてコミットしてまった</h2>
+
+<p>一連の流れはこう↓</p>
+
+<pre><code class="bash">$ git branch -m &lt;OLD_BRANCH_NAME&gt; &lt;NEW_BRANCH_NAME&gt;
+$ git checkout &lt;OLD_BRANCH_NAME&gt;
+$ git push origin :&lt;OLD_BRANCH_NAME&gt;
+$ git branch --unset-upstream
+$ git commit --amend -m "&lt;NEW_COMMIT_LOG&gt;"
+$ git push origin &lt;NEW_BRANCH_NAME&gt;
+</code></pre>
+
+<p>個別解説。</p>
+
+<p>直前のコミットログを修正するにはこう↓</p>
+
+<pre><code class="bash">$ git commit --amend -m "&lt;NEW_COMMIT_LOG&gt;"
+</code></pre>
+
+<p>ローカルのブランチ名を変更するにはこう↓</p>
+
+<pre><code class="bash">$ git branch -m &lt;OLD_BRANCH_NAME&gt; &lt;NEW_BRANCH_NAME&gt;
+</code></pre>
+
+<p>ローカルと同じ名前のリモートブランチを削除した場合に注意されることがあるので関連付け？を解除するには切り替えたブランチ上でこう↓</p>
+
+<pre><code class="bash">$ git branch --unset-upstream
+</code></pre>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://d.hatena.ne.jp/hnw/20110528">GitHubへpull requestする際のベストプラクティス - hnwの日記</a></li>
+<li><a href="http://qiita.com/makoto_kw/items/c825e17e2a577bb83e19">Gitで使われていないリモートブランチの整理 - Qiita</a></li>
+<li><a href="http://qiita.com/kon_yu/items/e9ebd7f778df430a4223">GitHub - Gitのリモートリポジトリの名前を付け替える　〜Railsのアップグレードを例にして〜 - Qiita</a></li>
+<li><a href="http://tobysoft.net/wiki/index.php?git%2F%A5%B3%A5%DF%A5%C3%A5%C8%A5%ED%A5%B0%A4%F2%BD%A4%C0%B5%A4%B9%A4%EB%CA%FD%CB%A1#q9692e83">git/コミットログを修正する方法 - TOBY SOFT wiki</a></li>
+<li><a href="http://dqn.sakusakutto.jp/2011/10/git_push_origin_master.html">Git超入門："git push origin master"の"push"と"origin"と"master"の意味がわからないあなたへ · DQNEO起業日記</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[ひとり FuelPHP ドキュメント翻訳月間 お疲れ様でした]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/06/22/fuelphp-documents-translation-month-alone.html"/>
+            <updated>2015-06-22T00:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/06/22/fuelphp-documents-translation-month-alone.html</id>
+            <content type="html"><![CDATA[<p>３月と４月はひとり FuelPHP ドキュメント翻訳月間な感じでした。</p>
+
+<p>、、、ってのを 4 月頭に公開しようとしたらホムペ吹っ飛んでて公開できなかったので今頃公開しますよってことで。</p>
+
+<p>(自惚れでなければ)つられて？何人かの人も翻訳に参加してくれているのでなんかうれしかったです。</p>
+
+<p>翻訳ウィークって訳じゃないからもうちょっとまとめて Pull Request しても良かったのかなぁ？っと思ったり思わなかったり、、、。</p>
+
+<p>ドキュメントを順番に見ていって翻訳していったので、後どのぐらい残っているのだろう？って感じでしたが、 <a href="https://docs.google.com/spreadsheets/d/1x9nSkaeoRwQg0_OuamLJ4NUnAIT3UNL_VY9Hv5jf-co">FuelPHP翻訳状況 1.5～1.8 - Google スプレッドシート</a> で確認するとだんだんと減ってくのがわかりなかなか楽しく頑張れました。</p>
+
+<h3 id="%E3%81%BE%E3%81%A0%E3%82%82%E3%81%86%E3%81%A1%E3%82%87%E3%81%A3%E3%81%A8%E3%81%A0%E3%81%91%E7%B6%9A%E3%81%8F%E3%82%93%E3%81%98%E3%82%83">まだもうちょっとだけ続くんじゃ</h3>
+
+<p>あと個人的に気になる部分としては、</p>
+
+<ol>
+<li>未翻訳部分の翻訳
+
+<ul>
+<li>これは当然、100%網羅を目指します！</li>
+</ul></li>
+<li>訳文の統一
+
+<ul>
+<li>翻訳時期とか訳した人により単語や訳文が違っている箇所がちらほら見受けられました。</li>
+</ul></li>
+<li>おかしな訳文の修正
+
+<ul>
+<li>例えば、てにおはがおかしいとか</li>
+<li>意味がよくわからない箇所とか</li>
+</ul></li>
+</ol>
+
+<p>辺りかなぁと思うのだけれども、ちょっと時間が取れなくなってむむむ、な感じ。</p>
+
+<p>2 は、該当表記を表にまとめた方が良いと思いますし、 3 はちょっと自分の能力を超えている部分があるのでお手伝いが欲しいですね。
+というか、網羅したら、表にまとめて <a href="https://groups.google.com/forum/#!forum/fuelphp_jp">fuelphp.jp - Google グループ</a> 投げようかと考え中。</p>
+
+<h3 id="%E3%83%AA%E3%82%B6%E3%83%AB%E3%83%88">リザルト</h3>
+
+<p>最後に、結果を。</p>
+
+<p>結果的に、 2015-03-09 から 2015-04-27 までの約 2 ヶ月間、翻訳していた訳ですねぇ。</p>
+
+<p>いままでの人生で、こんなに Pull Request したことがあっただろうか？いやない！(反語)</p>
+
+<ul>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/610">Pull Request #610 目次が開かなくなってたのを修正</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/611">Pull Request #611 toc 翻訳</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/612">Pull Request #612 コアクラスの拡張を翻訳</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/613">Pull Request #613 チュートリアルの注意文を翻訳</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/614">Pull Request #614 general/environments.html を翻訳</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/615">Pull Request #615 packages/oil/{generate,intro}.html 翻訳</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/616">Pull Request #616 packages/email/introduction.html 翻訳</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/617">Pull Request #617 packages/orm/*.html 翻訳など</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/618">Pull Request #618 訳語統一</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/620">Pull Request #620 crypt クラス関連を翻訳</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/621">Pull Request #621 classes/config.html を翻訳</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/622">Pull Request #622 classes/cache/*.html 翻訳</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/624">Pull Request #624 classes/crypt/*.html の翻訳完了</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/626">Pull Request #626 classes/database/*.html 翻訳完了</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/627">Pull Request #627 classes/fieldset/fieldset.html を翻訳中</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/629">Pull Request #629 classes/fieldset/fieldset.html を翻訳中</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/631">Pull Request #631 packages/orm/observers/included.html を翻訳中</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/632">Pull Request #632 packages/auth/examples/auth.html の未翻訳部分を翻訳</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/634">Pull Request #634 packages/orm/observers/included.html を翻訳中</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/635">Pull Request #635 packages/orm/observers/included.html 翻訳</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/636">Pull Request #636 classes/fieldset/fieldset.html を翻訳</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/637">Pull Request #637 メソッド一覧キャプション翻訳</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/638">Pull Request #638 htmlタグの言語がjpではなかったのを修正</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/639">Pull Request #639 classes/fieldset/field.html を翻訳</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/640">Pull Request #640 "for chaining" の訳を統一</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/647">Pull Request #647 classes/html.html の翻訳と整形</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/648">Pull Request #648 classes/file/*.html を翻訳</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/650">Pull Request #650 classes/inflector.html を翻訳</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/651">Pull Request #651 classes/presenter.html の未翻訳部分を翻訳</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/652">Pull Request #652 classes/input.html の未翻訳部分を翻訳</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/653">Pull Request #653 classes/mongo/introduction.html の未翻訳部分を翻訳</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/658">Pull Request #658 classes/router.html の訳文の統一と未翻訳部分を翻訳</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/660">Pull Request #660 classes/request/*.html 翻訳</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/661">Pull Request #661 classes/module.html を翻訳</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/662">Pull Request #662 packages/orm/observers/included.html の未翻訳部分を翻訳</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/663">Pull Request #663 classes/session/*.html の整形と翻訳</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/664">Pull Request #664 classes/session/config.html を翻訳中</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/665">Pull Request #665 classes/session/config.html を翻訳中</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/667">Pull Request #667 classes/session/config.html の翻訳中</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/668">Pull Request #668 classes/session/config.html を翻訳完了</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/669">Pull Request #669 classes/session/advanced.html 翻訳完了</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/673">Pull Request #673 訳文を他と統一</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/674">Pull Request #674 classes/theme/methods.html 翻訳完了</a></li>
+<li><a href="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/676">Pull Request #676 packages/orm/model/nestedset.html 翻訳中</a></li>
+</ul>
+
+<p>３月と４月は頑張った！うんっ！</p>
+
+<p>最後に、 <a href="https://twitter.com/nekoget">@NEKOGET</a> さん、マージお疲れさまでした。</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[初めてのForkとFuelPHP 1.6 翻訳ウィーク参加(追記あり)]]></title>
+            <link href="http://www.sharkpp.net/blog/2013/06/01/first-github-fork-and-fuelphp-docs-jp.html"/>
+            <updated>2013-06-01T00:24:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2013/06/01/first-github-fork-and-fuelphp-docs-jp.html</id>
+            <content type="html"><![CDATA[<p><div class="alert alert-danger alert-dismissible" role="alert">
+  <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
+  <dl style="margin-bottom: 0; margin-left: 35px;">
+    <dt>2015-11-03 追記</dt>
+    <dd>不適切な内容が書かれているため参考程度に止めてください。
+<a href="/blog/2015/11/03/git-memo-for-fuel-docs-trans.html">FuelPHP ドキュメント翻訳のための git メモ</a> で新たにメモされた内容をご覧ください。</dd>
+  </dl>
+</div>
+</p>
+
+<p>FuelPHP 1.6 が公開されたのを記念？してまた <a href="http://atnd.org/events/39849">FuelPHP 1.6 翻訳ウィーク : ATND</a> が行なわれるとのことなので参加してみました。</p>
+
+<p>とりあえず、<a href="http://pneskin2.nekoget.com/press/?p=1044">FuelPHP ドキュメント翻訳へのお誘い</a>とか<a href="http://d.hatena.ne.jp/Kenji_s/20130117/edit_fuel_docs">FuelPHP の日本語ドキュメントを 5分で修正する</a>を参考に自分はgithubのクライアントを基本に翻訳してみることにしました。</p>
+
+<p>さあ、とりあえず翻訳できたし、とりあえずコミットしてみるかってんでコミットしてみたらここで事件発生！ なんか全行削除されて全行追加された感じになっていました。</p>
+
+<p><a href="/images/2013_0601_line_end_fail.png"><img src="/images/2013_0601_line_end_fail_s.png" alt="全行変更あり" /></a></p>
+
+<p>※そのままgithubにまでコミットしてしまい大変になったのはまた別の話。</p>
+
+<p>で、ピンときて元を確認してみると案の定、改行コードがCrLfではなくLfだった。</p>
+
+<p><a href="/images/2013_0601_github_client_setting.png"><img src="/images/2013_0601_github_client_setting_s.png" alt="githubクライアント設定" /></a></p>
+
+<p>設定を確認すると .gitattributes で指定できるっぽいけど、、、余計なファイルを入れたくないなーと思って探してみたらどうも git コマンドで設定ができるっぽい。</p>
+
+<p>見つけたページ <a href="https://help.github.com/articles/dealing-with-line-endings">Dealing with line endings - GitHub Help</a> を参考に Git Shell 起動して</p>
+
+<pre><code>git config --global core.autocrlf false
+</code></pre>
+
+<p>としてやると改行コードが勝手に変わるのが直った。</p>
+
+<p>デフォルトが改行コードを変更するようになってるなんてヒドイorz</p>
+
+<blockquote class="twitter-tweet" lang="ja"><p>初めてのPR <a href="https://t.co/glnaIRBvE2" title="https://github.com/NEKOGET/FuelPHP_docs_jp/pull/280">github.com/NEKOGET/FuelPH…</a> <a href="http://t.co/HFy9inhvgx" title="http://atnd.org/events/39849">atnd.org/events/39849</a> <a href="https://twitter.com/search/%23fueldocsja">#fueldocsja</a></p>&mdash; さめたすたす?(^o^)／さん (@sharkpp) <a href="https://twitter.com/sharkpp/status/339041311573286913">2013年5月27日</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>で、いろいろ翻訳して Pull Request をしてみてさあマージされたと思って、、、あれ？更新を取り込むにはどうしたら？と思ったので試行錯誤をしてフォーク元から変更を取り込みました。</p>
+
+<p>試行錯誤した後で<a href="http://d.hatena.ne.jp/hnw/20110528">GitHubへpull requestする際のベストプラクティス - hnwの日記</a>などを見つけてorz状態になったけどとりあえず後で考えるようにした。</p>
+
+<p>なので以下に書かれているのは良くない方法ではあると思うので参考にしてはいけないのです。</p>
+
+<p>とりあえず、githubクライアントでcloneするとう upstream って名前はあるけどURLが指定されていないようです。</p>
+
+<pre><code>$ git remote -v
+origin  https://github.com/sharkpp/FuelPHP_docs_jp.git (fetch)
+origin  https://github.com/sharkpp/FuelPHP_docs_jp.git (push)
+upstream
+</code></pre>
+
+<p>で、URLを指定します。</p>
+
+<pre><code>$ git remote set-url upstream https://github.com/NEKOGET/FuelPHP_docs_jp
+</code></pre>
+
+<p>ここからは行儀が良くないやり方。 Pull Request で余計な変更が含まれたりしてしまいます。</p>
+
+<p>フォーク元から変更を取り込みます。 --rebase を付けるのがポイントのようです。</p>
+
+<pre><code>$ git pull --rebase upstream 1.6/develop_japanese
+From https://github.com/NEKOGET/FuelPHP_docs_jp
+ * branch            1.6/develop_japanese -&gt; FETCH_HEAD
+First, rewinding head to replay your work on top of it...
+</code></pre>
+
+<p>そして、変更をプッシュ。</p>
+
+<pre><code>$ git push -f origin 1.6/develop_japanese
+Counting objects: 222, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (140/140), done.
+Writing objects: 100% (185/185), 27.32 KiB, done.
+Total 185 (delta 127), reused 77 (delta 45)
+To https://github.com/sharkpp/FuelPHP_docs_jp.git
+ + d1c090c...214104c 1.6/develop_japanese -&gt; 1.6/develop_japanese (forced update)
+</code></pre>
+
+<p>あとは、思うように翻訳して、githubクライアント上で commit ＆ sync 。 そして、github上で Pull Request です。</p>
+
+<p>git fetch とか git merge とかやってみたけどひどいことになりながら↑のやり方にたどり着きました。</p>
+
+<p>まあ、もっとましなやり方を覚えないと、ですが、、、、順番になれていきたいです。</p>
+
+<p>参考：</p>
+
+<ul>
+<li><a href="https://help.github.com/articles/syncing-a-fork">Syncing a fork - GitHub Help</a></li>
+<li><a href="http://d.hatena.ne.jp/wats/20100915/1284478558">gitのoriginのurlを変更する。 - 僕の今さら日記</a></li>
+<li><a href="http://processwire.com/talk/topic/1565-github-for-windows/">Github for Windows - Tutorials - ProcessWire Support Forums</a></li>
+</ul>
+]]></content>
+        </entry>
+    </feed>

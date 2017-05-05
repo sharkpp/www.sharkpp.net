@@ -1,0 +1,1410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/categories/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:32+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[PasteBin/Snippet系サービスまとめ]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/06/06/pastebin-snippet-web-service-list.html"/>
+            <updated>2015-06-06T07:51:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/06/06/pastebin-snippet-web-service-list.html</id>
+            <content type="html"><![CDATA[<p>以前にTwitterでつぶやいた <a href="https://docs.google.com/spreadsheets/d/1TNov1uXtnPERVAFiUvkzvJ5BfZfghO2A_h2rwgY9qNg/edit?usp=sharing">pastebin/Snippet系サービスまとめ</a> をここでもメモ</p>
+
+<p>テキスト系は色々ありますが RUN CODE が出来るプログラミング系は数えるほどしか無い印象。</p>
+
+<p>他に見つかったら順次アプデということで。</p>
+
+<h2 id="%E3%81%BA%E3%81%9F%E3%81%A3%E3%81%A8">ぺたっと</h2>
+
+<table class="table table-bordered table-hover table-condensed table-striped" data-sheetrock="https://docs.google.com/spreadsheets/d/1TNov1uXtnPERVAFiUvkzvJ5BfZfghO2A_h2rwgY9qNg/edit#gid=0"></table>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[oAuth 認証を提供しているサービスをまとめてみました]]></title>
+            <link href="http://www.sharkpp.net/blog/2014/03/30/oauth-providers-list.html"/>
+            <updated>2014-03-30T23:35:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2014/03/30/oauth-providers-list.html</id>
+            <content type="html"><![CDATA[<p>oAuth 認証を提供しているサービスをまとめてみました。</p>
+
+<p>どちらかというと Opauth で使えそうなサービス一覧、が正しいのかもしれません。</p>
+
+<p>ついでに、ステータスやアプリケーションの登録を行うためのサイトも全てではないですが調べてあります。</p>
+
+<p>一覧は <a href="http://opauth.org/">Opauth ? Multi-provider authentication framework for PHP</a> や <a href="https://packagist.org/packages/opauth/">Packagist</a> などを参考にしています。</p>
+
+<table><tr>
+<th align="center">
+Opauth
+</th>
+<th align="left">
+プロバイダ
+</th>
+<th align="center">
+oAuth
+</th>
+<th align="left">
+開発サイト(アプリ登録など)
+</th>
+<th align="left">
+ステータスの確認ページ
+</th>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/asana">○</a>
+</td>
+<td align="left">
+<a href="https://asana.com/">Asana</a>
+</td>
+<td align="center">
+<a href="http://tools.ietf.org/html/draft-ietf-oauth-v2-31">2.0 draft 31</a>
+</td>
+<td align="left">
+<a href="http://developer.asana.com/documentation/#AsanaConnect">API Documentation at Asana Developers</a>
+</td>
+<td align="left">
+<a href="https://asana.com/status">Asana - Status</a>
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/bitbucket">○</a>
+</td>
+<td align="left">
+<a href="https://bitbucket.org/">Bitbucket</a>
+</td>
+<td align="center">
+1.0a
+</td>
+<td align="left">
+<a href="https://confluence.atlassian.com/display/BITBUCKET/OAuth+on+Bitbucket">Atlassian Documentation</a>
+</td>
+<td align="left">
+<a href="http://status.bitbucket.org/">Atlassian Bitbucket Status</a>
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://github.com/rasa/opauth-disqus">○</a>
+</td>
+<td align="left">
+<a href="http://disqus.com/">Disqus</a>
+</td>
+<td align="center">
+<a href="http://tools.ietf.org/html/draft-ietf-oauth-v2-30">2.0 draft 30</a>
+</td>
+<td align="left">
+<a href="http://disqus.com/api/docs/auth/">Authentication - API - Disqus</a>
+</td>
+<td align="left">
+<a href="http://status.disqus.com/">Disqus Status</a>
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://github.com/arbales/opauth-do">○</a>
+</td>
+<td align="left">
+<a href="http://www.do.com/">Do</a>
+</td>
+<td align="center">
+</td>
+<td align="left">
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/evernote">○</a>
+</td>
+<td align="left">
+<a href="http://evernote.com/">Evernote</a>
+</td>
+<td align="center">
+1.0a
+</td>
+<td align="left">
+<a href="http://dev.evernote.com/intl/jp/appcenter/">Evernote Developers</a>
+</td>
+<td align="left">
+<a href="http://status.evernote.com/">Evernote Status | Evernote Corporation</a>
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/facebook">○</a>
+</td>
+<td align="left">
+<a href="https://www.facebook.com/">Facebook</a>
+</td>
+<td align="center">
+2.0
+</td>
+<td align="left">
+<a href="https://developers.facebook.com/apps/">Apps - Facebook Developers</a>
+</td>
+<td align="left">
+<a href="https://developers.facebook.com/status/">プラットフォームの現在の状態</a>
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/flickr">○</a>
+</td>
+<td align="left">
+<a href="https://www.flickr.com/">Flickr</a>
+</td>
+<td align="center">
+1.0a
+</td>
+<td align="left">
+<a href="http://www.flickr.com/services/api/auth.oauth.html">Flickr Services</a>
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/frype">○</a>
+</td>
+<td align="left">
+<a href="http://www.frype.com/">Frype</a>
+</td>
+<td align="center">
+</td>
+<td align="left">
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/foursquare">○</a>
+</td>
+<td align="left">
+<a href="https://ja.foursquare.com/?">Foursquare</a>
+</td>
+<td align="center">
+</td>
+<td align="left">
+<a href="https://developer.foursquare.com/overview/auth#registration">foursquare for Developers</a>
+</td>
+<td align="left">
+<a href="http://status.foursquare.com/">Foursquare Status</a>
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/github">○</a>
+</td>
+<td align="left">
+<a href="https://github.com/">GitHub</a>
+</td>
+<td align="center">
+</td>
+<td align="left">
+<a href="https://github.com/settings/applications/new">New OAuth Application</a>
+</td>
+<td align="left">
+<a href="https://status.github.com/">GitHub System Status</a>
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/google">○</a>
+</td>
+<td align="left">
+<a href="https://www.google.com/">Google</a>
+</td>
+<td align="center">
+2.0
+</td>
+<td align="left">
+<a href="https://console.developers.google.com/">Google Cloud Console</a>
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+×
+</td>
+<td align="left">
+<a href="http://gree.jp/">GREE</a>
+</td>
+<td align="center">
+1.0
+</td>
+<td align="left">
+<a href="https://docs.developer.gree.net/ja/globaltechnicalspecs/oauth">GREE Developer Center</a>
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/instagram">○</a>
+</td>
+<td align="left">
+<a href="http://instagram.com/">Instagram</a>
+</td>
+<td align="center">
+2.0
+</td>
+<td align="left">
+<a href="http://instagram.com/developer/register/">Instagram開発者ドキュメント</a>
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/linkedin">○</a>
+</td>
+<td align="left">
+<a href="https://www.linkedin.com/">LinkedIn</a>
+</td>
+<td align="center">
+2.0
+</td>
+<td align="left">
+<a href="https://www.linkedin.com/secure/developer">LinkedIn Developer Network</a>
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/live">○</a>
+</td>
+<td align="left">
+<a href="https://www.live.com">Windows Live</a>
+</td>
+<td align="center">
+2.0
+</td>
+<td align="left">
+<a href="https://account.live.com/developers/applications">Live</a>
+</td>
+<td align="left">
+<a href="https://status.live.com">Service Status - Microsoft services</a>
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/mailru">○</a>
+</td>
+<td align="left">
+<a href="http://mail.ru/">Mail.Ru</a>
+</td>
+<td align="center">
+</td>
+<td align="left">
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/meetup">○</a>
+</td>
+<td align="left">
+<a href="http://www.meetup.com/">Meetup</a>
+</td>
+<td align="center">
+2.0
+</td>
+<td align="left">
+<a href="https://secure.meetup.com/meetup_api/oauth_consumers/create">Your OAuth Consumers - Meetup</a>
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/mixi">○</a>
+</td>
+<td align="left">
+<a href="https://mixi.jp/">mixi</a>
+</td>
+<td align="center">
+2.0
+</td>
+<td align="left">
+<a href="https://sap.mixi.jp/home.pl">mixi</a>
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/openid">○</a>
+</td>
+<td align="left">
+OpenID
+</td>
+<td align="center">
+</td>
+<td align="left">
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/paypal">○</a>
+</td>
+<td align="left">
+<a href="https://www.paypal.com/">PayPal</a>
+</td>
+<td align="center">
+</td>
+<td align="left">
+<a href="https://developer.paypal.com/webapps/developer/applications">PayPal Developer</a>
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/probook">○</a>
+</td>
+<td align="left">
+<a href="http://probook.bg/">Probook</a>
+</td>
+<td align="center">
+2.0
+</td>
+<td align="left">
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+×
+</td>
+<td align="left">
+<a href="https://www.tumblr.com/">Tumblr</a>
+</td>
+<td align="center">
+1.0a
+</td>
+<td align="left">
+<a href="https://www.tumblr.com/oauth/apps">Tumblr</a>
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/sinaweibo">○</a>
+</td>
+<td align="left">
+<a href="http://weibo.com/">Sina Weibo (新浪微博)</a>
+</td>
+<td align="center">
+</td>
+<td align="left">
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/thecity">○</a>
+</td>
+<td align="left">
+<a href="http://www.onthecity.org/">The City</a>
+</td>
+<td align="center">
+2.0
+</td>
+<td align="left">
+<a href="https://api.onthecity.org/docs/apps">The City ? API Docs</a>
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/twitter">○</a>
+</td>
+<td align="left">
+<a href="https://twitter.com/">Twitter</a>
+</td>
+<td align="center">
+2.0
+</td>
+<td align="left">
+<a href="https://dev.twitter.com/">Twitter Developers</a>
+</td>
+<td align="left">
+<a href="https://dev.twitter.com/status">API Status | Twitter Developers</a>
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/vkontakte">○</a>
+</td>
+<td align="left">
+<a href="https://vk.com/">VKontakte</a>
+</td>
+<td align="center">
+2.0
+</td>
+<td align="left">
+<a href="http://vk.com/developers.php">Developers｜VK</a>
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+×
+</td>
+<td align="left">
+<a href="https://www.yahoo.com">Yahoo</a>
+</td>
+<td align="center">
+</td>
+<td align="left">
+<a href="http://developer.yahoo.com/oauth/">Yahoo! Developer Network</a>
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/yahoojp">○</a>
+</td>
+<td align="left">
+<a href="http://www.yahoo.co.jp/">Yahoo! Japan</a>
+</td>
+<td align="center">
+2.0
+</td>
+<td align="left">
+<a href="https://e.developer.yahoo.co.jp/dashboard/">アプリケーションの管理</a>
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://packagist.org/packages/opauth/yandex">○</a>
+</td>
+<td align="left">
+<a href="http://www.yandex.ru/">yandex</a>
+</td>
+<td align="center">
+</td>
+<td align="left">
+</td>
+<td align="left">
+</td>
+</tr>
+<tr>
+<td align="center">
+×
+</td>
+<td align="left">
+<a href="http://www.hatena.ne.jp/">はてな</a>
+</td>
+<td align="center">
+</td>
+<td align="left">
+<a href="http://developer.hatena.ne.jp/ja/documents/auth/apis/oauth/consumer">Hatena Developer Center</a>
+</td>
+<td align="left">
+なし
+</td>
+</tr>
+<tr>
+<td align="center">
+×
+</td>
+<td align="left">
+<a href="http://www.rakuten.co.jp/">楽天</a>
+</td>
+<td align="center">
+</td>
+<td align="left">
+<a href="https://webservice.rakuten.co.jp/document/oauth">楽天ウェブサービス(RAKUTEN WEBSERVICE)</a>
+</td>
+<td align="left">
+<a href="https://webservice.rakuten.co.jp/status">楽天ウェブサービス: APIモニター</a>
+</td>
+</tr>
+</table>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[*-users.jp(?ユーザのためのハブサイト)のその後を追跡調査(2013-12-29版)]]></title>
+            <link href="http://www.sharkpp.net/blog/2013/12/29/user-jp-follow-up2.html"/>
+            <updated>2013-12-29T14:46:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2013/12/29/user-jp-follow-up2.html</id>
+            <content type="html"><![CDATA[<p><a href="/blog/2013/01/24/user-jp-follow-up.html">*-user.jp(?ユーザのためのハブサイト)のその後を追跡調査</a>の追跡調査をしてみました。</p>
+
+<p>まあ、何がきっかけって hsp-users.jp がスパムサイトに使われていたのがドメイン切れしたっぽいので取得してみたのと他どうなっているかな？って思ったので確認してみました。</p>
+
+<p>色々探し回って前回対象になっていないところも下記参考リンクを元に追加しました。</p>
+
+<p>ちなみに、再登録したとかで登録日が変わっていたりするので一概には言えないですが、、、大体、2008-05-20から半年程度ぐらいが当時の流行に乗って作られたサイトのようですね。</p>
+
+<hr />
+
+<h3 id="2014-01-11-%E8%BF%BD%E8%A8%98">2014-01-11 追記</h3>
+
+<p>qt-users.jp を追加したのとタイトルなどが user.jp になってたのを修正しました。</p>
+
+<hr />
+
+<h2 id="%E8%AA%BF%E6%9F%BB%E7%B5%90%E6%9E%9C">調査結果</h2>
+
+<p>例によって、状態→ドメイン名順、でソートしてあります。</p>
+
+<p>列挙した55サイト中、32ものサイトが現状ではドメイン切れや別サイトに変わっていました。 前回からも、3サイトがドメイン切れなどに変わっています。</p>
+
+<p>java-users.jp とか oracle-users.jp は昔からあったようなので調査から除外すべきかもと思いましたが参考までに乗せておくことにしました。</p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">ドメイン</th>
+  <th align="left">サイトタイトル</th>
+  <th align="left">状態(2013-01-24)</th>
+  <th align="left">状態(2013-12-29)</th>
+  <th align="left">登録者</th>
+  <th align="left">登録日</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">air-users.jp</td>
+  <td align="left">日本の AIR ユーザのためのハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">エアーユーザーズ</td>
+  <td align="left">2008-05-21</td>
+</tr>
+<tr>
+  <td align="left">arc-users.jp</td>
+  <td align="left">日本の Arc ユーザのためのハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">松村竜次</td>
+  <td align="left">2008-05-22</td>
+</tr>
+<tr>
+  <td align="left">as-users.jp</td>
+  <td align="left">日本の ActionScript ユーザのためのハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">新藤　愛大</td>
+  <td align="left">2008-05-20</td>
+</tr>
+<tr>
+  <td align="left">cakephp-users.jp</td>
+  <td align="left">日本のcakePHP ユーザのためのハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">長瀬　幸雄</td>
+  <td align="left">2009-09-09</td>
+</tr>
+<tr>
+  <td align="left">csharp-users.jp</td>
+  <td align="left">日本 C# ユーザー会</td>
+  <td align="left">※未調査</td>
+  <td align="left"></td>
+  <td align="left">岩永信之</td>
+  <td align="left">2009-03-16</td>
+</tr>
+<tr>
+  <td align="left">emacs-users.jp</td>
+  <td align="left"><del>日本の Emacs ユーザのためのハブサイト</del><br/>Emacsつかおうゼ！</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">30days-night.jp</td>
+  <td align="left">2011-07-01</td>
+</tr>
+<tr>
+  <td align="left">erlang-users.jp</td>
+  <td align="left">日本のErlang/OTPユーザーのためのハブサイト</td>
+  <td align="left">※未調査</td>
+  <td align="left"></td>
+  <td align="left">Tsukasa Hamano</td>
+  <td align="left">2008-06-18</td>
+</tr>
+<tr>
+  <td align="left">hsp-users.jp</td>
+  <td align="left">日本のHSPユーザのためのハブサイト</td>
+  <td align="left">乗っ取られ(健康食品)</td>
+  <td align="left"></td>
+  <td align="left">sharkpp</td>
+  <td align="left">2013-12-12</td>
+</tr>
+<tr>
+  <td align="left">www.java-users.jp</td>
+  <td align="left">日本 Java ユーザグループ</td>
+  <td align="left">※未調査</td>
+  <td align="left"></td>
+  <td align="left">稚内北星学園大学</td>
+  <td align="left">2006-11-30</td>
+</tr>
+<tr>
+  <td align="left">joomla-users.jp</td>
+  <td align="left">日本の Joomla! ユーザのためのハブサイト</td>
+  <td align="left">※未調査</td>
+  <td align="left"></td>
+  <td align="left">新川 隆司</td>
+  <td align="left">2008-07-01</td>
+</tr>
+<tr>
+  <td align="left">js-users.jp</td>
+  <td align="left">日本の JavaScript ユーザのためのハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">(株)ユビキタスエンターテインメント</td>
+  <td align="left">2008-05-21</td>
+</tr>
+<tr>
+  <td align="left">mercurial-users.jp</td>
+  <td align="left">Mercurial ユーザの為のハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">飯野 卓見</td>
+  <td align="left">2011-11-14</td>
+</tr>
+<tr>
+  <td align="left">opera-users.jp</td>
+  <td align="left">日本のOperaユーザのためのハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">横澤 拓弥</td>
+  <td align="left">2008-05-21</td>
+</tr>
+<tr>
+  <td align="left">www.oracle-users.jp</td>
+  <td align="left">オラクル(Oracle/Oracle11g)ユーザーズガイド  データベースユーザのための情報コンテンツ</td>
+  <td align="left">※未調査</td>
+  <td align="left"></td>
+  <td align="left">株式会社サイバネティック</td>
+  <td align="left">2013-08-27</td>
+</tr>
+<tr>
+  <td align="left">perl-users.jp</td>
+  <td align="left">日本のPerlユーザのためのハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">ヤッポー</td>
+  <td align="left">2008-05-20</td>
+</tr>
+<tr>
+  <td align="left">php-users.jp</td>
+  <td align="left">日本のPHPユーザのためのハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">田口元</td>
+  <td align="left">2008-05-20</td>
+</tr>
+<tr>
+  <td align="left">qt-users.jp</td>
+  <td align="left">日本 Qt ユーザー会 - Japan Qt Users' Group</td>
+  <td align="left">※未調査</td>
+  <td align="left"></td>
+  <td align="left">橋本 賢弥</td>
+  <td align="left">2012-10-22</td>
+</tr>
+<tr>
+  <td align="left">sb-users.jp</td>
+  <td align="left">日本の Serene Bach / sb ユーザのためのハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">ライズ</td>
+  <td align="left">2009-05-02</td>
+</tr>
+<tr>
+  <td align="left">scheme-users.jp</td>
+  <td align="left">日本の Scheme ユーザのためのハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">m-oz.com</td>
+  <td align="left">2008-05-25</td>
+</tr>
+<tr>
+  <td align="left">skk-users.jp</td>
+  <td align="left">日本のSKKユーザのためのハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">宇佐美 健太</td>
+  <td align="left">2013-01-18</td>
+</tr>
+<tr>
+  <td align="left">www.smalltalk-users.jp</td>
+  <td align="left">日本のSmalltalkユーザのためのハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">合同会社ソフトウメヤ</td>
+  <td align="left">2008-07-06</td>
+</tr>
+<tr>
+  <td align="left">tenga-users.jp</td>
+  <td align="left">日本の TENGA ユーザのためのハブサイト</td>
+  <td align="left">※未調査</td>
+  <td align="left"></td>
+  <td align="left">Hamachiya Corp.</td>
+  <td align="left">2008-05-25</td>
+</tr>
+<tr>
+  <td align="left">vim-users.jp</td>
+  <td align="left">日本の Vim ユーザのためのハブサイト</td>
+  <td align="left"></td>
+  <td align="left"></td>
+  <td align="left">田中康太郎</td>
+  <td align="left">2008-05-24</td>
+</tr>
+<tr>
+  <td align="left">apogee-users.jp</td>
+  <td align="left">Apogee User Group</td>
+  <td align="left">※未調査</td>
+  <td align="left">サイトダウン</td>
+  <td align="left">株式会社ゼオ</td>
+  <td align="left">2002-11-11</td>
+</tr>
+<tr>
+  <td align="left">hauhau-users.jp</td>
+  <td align="left">日本の はうはう ユーザのためのハブサイト</td>
+  <td align="left">※未調査</td>
+  <td align="left">サイトダウン</td>
+  <td align="left">沢渡真雪</td>
+  <td align="left">2008-05-23</td>
+</tr>
+<tr>
+  <td align="left">nakano-users.jp</td>
+  <td align="left">中野人のためのハブサイト</td>
+  <td align="left">※未調査</td>
+  <td align="left">サイトダウン</td>
+  <td align="left"></td>
+  <td align="left">2010-11-01</td>
+</tr>
+<tr>
+  <td align="left">php5-users.jp</td>
+  <td align="left">日本の PHP5 ユーザのためのハブサイト</td>
+  <td align="left">※未調査</td>
+  <td align="left">サイトダウン</td>
+  <td align="left">--</td>
+  <td align="left">2010-11-01</td>
+</tr>
+<tr>
+  <td align="left">python-users.jp</td>
+  <td align="left">日本のPythonユーザのためのハブサイト</td>
+  <td align="left">乗っ取られ(レーシック)</td>
+  <td align="left">サイトダウン</td>
+  <td align="left">野本孝彦</td>
+  <td align="left">2013-08-06</td>
+</tr>
+<tr>
+  <td align="left">cf-users.jp</td>
+  <td align="left">日本の ColdFusion ユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">chumby-users.jp</td>
+  <td align="left">日本のChumbyユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">edgenow-users.jp</td>
+  <td align="left">日本のEDGE Now!ユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">eroge-users.jp</td>
+  <td align="left">日本のエロゲーユーザのためのハブサイト</td>
+  <td align="left">※未調査</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">ethna-users.jp</td>
+  <td align="left">日本のEthnaユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">git-users.jp</td>
+  <td align="left">日本の Git ユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">haxe-users.jp</td>
+  <td align="left">日本の haXe ユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">io-users.jp</td>
+  <td align="left">日本の Io ユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">mac-users.jp</td>
+  <td align="left">日本の Mac ユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">mobile-users.jp</td>
+  <td align="left">日本のモバイルサイト開発者のためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">munou-users.jp</td>
+  <td align="left">日本の 人工無脳 ユーザのためのハブサイト</td>
+  <td align="left">乗っ取られ(脱毛)</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">nucleus-users.jp</td>
+  <td align="left">日本のNucleusユーザのためのハブサイト</td>
+  <td align="left">乗っ取られ(ダイエット)</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">okinawa-web-users.jp</td>
+  <td align="left">沖縄のWebユーザのためのハブサイト</td>
+  <td align="left">※未調査</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">pdf-users.jp</td>
+  <td align="left">日本の PDF ユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">pyobjc-users.jp</td>
+  <td align="left">日本の PyObjC ユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">rails-users.jp</td>
+  <td align="left">日本の Rails ユーザのためのハブサイト</td>
+  <td align="left">乗っ取られ(中古車)</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">sql-users.jp</td>
+  <td align="left">日本の SQL ユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">users-users.jp</td>
+  <td align="left">IT系ハブサイトのハブサイト</td>
+  <td align="left">※未調査</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">windows-users.jp</td>
+  <td align="left"></td>
+  <td align="left">※未調査</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">wp-users.jp</td>
+  <td align="left">日本の WordPress ユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">www.awk-users.jp</td>
+  <td align="left">日本の AWK ユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">xen-users.jp</td>
+  <td align="left">日本の Xen ユーザのためのハブサイト</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left">ドメイン切れ</td>
+  <td align="left"></td>
+  <td align="left"></td>
+</tr>
+<tr>
+  <td align="left">courier-users.jp</td>
+  <td align="left">日本 Courier ユーザ会 (JCUG; Japan Courier Users Group)</td>
+  <td align="left">※未調査</td>
+  <td align="left">ゴルフSEO</td>
+  <td align="left">藤田 誠</td>
+  <td align="left">2008-02-07</td>
+</tr>
+<tr>
+  <td align="left">firefox-users.jp</td>
+  <td align="left">日本のFirefoxユーザのためのハブサイト</td>
+  <td align="left">サイトダウン</td>
+  <td align="left">ドメインSEO？</td>
+  <td align="left">リンククラブ</td>
+  <td align="left">2008-05-27</td>
+</tr>
+<tr>
+  <td align="left">ruby-users.jp</td>
+  <td align="left">日本のRubyユーザのためのハブサイト</td>
+  <td align="left">乗っ取られ(エステ)</td>
+  <td align="left">乗っ取られ(エステ)</td>
+  <td align="left">松井 一</td>
+  <td align="left">2011-07-01</td>
+</tr>
+<tr>
+  <td align="left">seasar-users.jp</td>
+  <td align="left">Seasar User's PortalSite</td>
+  <td align="left">※未調査</td>
+  <td align="left">乗っ取られ(石鹸)</td>
+  <td align="left">小林　直矢</td>
+  <td align="left">2011-04-03</td>
+</tr>
+<tr>
+  <td align="left">zf-users.jp</td>
+  <td align="left">日本の ZendFramework ユーザのためのハブサイト</td>
+  <td align="left">乗っ取られ(資格取得)</td>
+  <td align="left">乗っ取られ(資格取得)</td>
+  <td align="left">間々田　敬子</td>
+  <td align="left">2010-07-01</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://d.hatena.ne.jp/Watson/20080521/1211302951">xxxx-users.jp - Watsonのメモ</a></li>
+<li><a href="http://blog.ptlabo.net/index.php?id=11060004">*-users.jp :: てくてく糸巻き</a></li>
+<li><a href="http://loumo.jp/wp/archive/20080522201610/">http://loumo.jp/wp/archive/20080522201610/</a></li>
+<li><a href="http://d.hatena.ne.jp/boscono/20080526/p1">http://d.hatena.ne.jp/boscono/20080526/p1</a></li>
+<li><a href="http://d.hatena.ne.jp/dreamfire/20110201/users_jp">今こそ「*-users.jp」再まとめ - いつも先延ばし。</a></li>
+<li><a href="http://scheme-users.jp/links.html">Scheme リンク集 - Scheme-users.jp</a></li>
+<li><a href="http://zapanet.info/blog/item/1293">*-users.jpを作って思ったこと、期待していること</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[*-user.jp(?ユーザのためのハブサイト)のその後を追跡調査]]></title>
+            <link href="http://www.sharkpp.net/blog/2013/01/24/user-jp-follow-up.html"/>
+            <updated>2013-01-24T01:48:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2013/01/24/user-jp-follow-up.html</id>
+            <content type="html"><![CDATA[<p>ふと、hsp-user.jp がドメイン切れ→乗っ取られで健康食品のページになって久しいなと思い出して、他のサイトたちはどうなっているんだろうと調べてみました。</p>
+
+<p>とりあえず、技術系の *-users.jp に絞って列挙してみました。</p>
+
+<h3 id="2013-02-05-%E8%BF%BD%E8%A8%98">2013-02-05 追記</h3>
+
+<p>本来の目的が分かりにくいのでタイトルを「-user.jpのその後を追跡調査」から「-user.jp(?ユーザのためのハブサイト)のその後を追跡調査」と変更しました。</p>
+
+<p>目的としては、perl-user.jp から始まった、「?ユーザのためのハブサイト」系でちらほら別のページになっていたりアクセスできなくなっているのに気が付いて結局実際どのぐらい残念な状態になっているのか興味があったので調べてみた次第です。</p>
+
+<p>結果は、ひどい有様。</p>
+
+<p>列挙した38サイト中、23ものサイトが現状ではドメイン切れや別サイトに変わっていました。</p>
+
+<p>予想ではドメイン切れは少ないと思ったのですがドメインの更新料が高くて手放してしまったのでしょうか？</p>
+
+<p>アクセスできるページもトップページのみだったり更新がされていなかったりと活用されていないところもちらほら見受けられます。</p>
+
+<p>洒落で取っては見たけど結局うまく活用できず、、、ってパターンが多いかもです。</p>
+
+<table></tr>
+<th>
+ドメイン名
+</th>
+<th>
+サイト名
+</th>
+<th>
+状態(2013-01-24)
+</th></tr> </tr>
+<td>
+AIR-users.jp
+</td>
+<td>
+日本の AIR ユーザのためのハブサイト
+</td>
+<td>
+</td></tr> </tr>
+<td>
+AS-users.jp
+</td>
+<td>
+日本の ActionScript ユーザのためのハブサイト
+</td>
+<td>
+</td></tr> </tr>
+<td>
+Arc-users.jp
+</td>
+<td>
+日本の Arc ユーザのためのハブサイト
+</td>
+<td>
+</td></tr> </tr>
+<td>
+Mercurial-users.jp
+</td>
+<td>
+Mercurial ユーザの為のハブサイト
+</td>
+<td>
+</td></tr> </tr>
+<td>
+Opera-users.jp
+</td>
+<td>
+<del>日本のOperaユーザのためのハブサイト</del> Opera-users.jp
+</td>
+<td>
+</td></tr> </tr>
+<td>
+PHP-users.jp
+</td>
+<td>
+日本のPHPユーザのためのハブサイト
+</td>
+<td>
+</td></tr> </tr>
+<td>
+Perl-users.jp
+</td>
+<td>
+日本のPerlユーザのためのハブサイト
+</td>
+<td>
+</td></tr> </tr>
+<td>
+Scheme-users.jp
+</td>
+<td>
+日本の Scheme ユーザのためのハブサイト
+</td>
+<td>
+</td></tr> </tr>
+<td>
+cakephp-users.jp
+</td>
+<td>
+日本のcakePHP ユーザのためのハブサイト
+</td>
+<td>
+</td></tr> </tr>
+<td>
+emacs-users.jp
+</td>
+<td>
+<del>日本の Emacs ユーザのためのハブサイト</del> Emacsつかおうゼ！
+</td>
+<td>
+</td></tr> </tr>
+<td>
+js-users.jp
+</td>
+<td>
+日本の JavaScript ユーザのためのハブサイト
+</td>
+<td>
+</td></tr> </tr>
+<td>
+sb-users.jp
+</td>
+<td>
+日本の Serene Bach / sb ユーザのためのハブサイト
+</td>
+<td>
+</td></tr> </tr>
+<td>
+skk-users.jp
+</td>
+<td>
+日本のSKKユーザのためのハブサイト
+</td>
+<td>
+</td></tr> </tr>
+<td>
+vim-users.jp
+</td>
+<td>
+日本の Vim ユーザのためのハブサイト
+</td>
+<td>
+</td></tr> </tr>
+<td>
+www.smalltalk-users.jp
+</td>
+<td>
+日本のSmalltalkユーザのためのハブサイト
+</td>
+<td>
+</td></tr> </tr>
+<td>
+Firefox-users.jp
+</td>
+<td>
+日本のFirefoxユーザのためのハブサイト
+</td>
+<td>
+サイトダウン
+</td></tr> </tr>
+<td>
+CF-users.jp
+</td>
+<td>
+日本の ColdFusion ユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+Chumby-users.jp
+</td>
+<td>
+日本のChumbyユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+Ethna-users.jp
+</td>
+<td>
+日本のEthnaユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+Mobile-users.jp
+</td>
+<td>
+日本のモバイルサイト開発者のためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+SQL-users.jp
+</td>
+<td>
+日本の SQL ユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+WP-users.jp
+</td>
+<td>
+日本の WordPress ユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+edgenow-users.jp
+</td>
+<td>
+日本のEDGE Now!ユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+git-users.jp
+</td>
+<td>
+日本の Git ユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+haxe-users.jp
+</td>
+<td>
+日本の haXe ユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+io-users.jp
+</td>
+<td>
+日本の Io ユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+mac-users.jp
+</td>
+<td>
+日本の Mac ユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+pdf-users.jp
+</td>
+<td>
+日本の PDF ユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+pyobjc-users.jp
+</td>
+<td>
+日本の PyObjC ユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+www.awk-users.jp
+</td>
+<td>
+日本の AWK ユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+xen-users.jp
+</td>
+<td>
+日本の Xen ユーザのためのハブサイト
+</td>
+<td>
+ドメイン切れ
+</td></tr> </tr>
+<td>
+HSP-users.jp
+</td>
+<td>
+日本のHSPユーザのためのハブサイト
+</td>
+<td>
+乗っ取られ(健康食品)
+</td></tr> </tr>
+<td>
+Rails-users.jp
+</td>
+<td>
+日本の Rails ユーザのためのハブサイト
+</td>
+<td>
+乗っ取られ(中古車)
+</td></tr> </tr>
+<td>
+Ruby-users.jp
+</td>
+<td>
+日本のRubyユーザのためのハブサイト
+</td>
+<td>
+乗っ取られ(エステ)
+</td></tr> </tr>
+<td>
+munou-users.jp
+</td>
+<td>
+日本の 人工無脳 ユーザのためのハブサイト
+</td>
+<td>
+乗っ取られ(脱毛)
+</td></tr> </tr>
+<td>
+nucleus-users.jp
+</td>
+<td>
+日本のNucleusユーザのためのハブサイト
+</td>
+<td>
+乗っ取られ(ダイエット)
+</td></tr> </tr>
+<td>
+python-users.jp
+</td>
+<td>
+日本のPythonユーザのためのハブサイト
+</td>
+<td>
+乗っ取られ(レーシック)
+</td></tr> </tr>
+<td>
+zf-users.jp
+</td>
+<td>
+日本の ZendFramework ユーザのためのハブサイト
+</td>
+<td>
+乗っ取られ(資格取得)
+</td></tr>
+</table>
+]]></content>
+        </entry>
+    </feed>

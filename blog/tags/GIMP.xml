@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/GIMP.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:49+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[新たなマスコット爆誕とfaviconの更新]]></title>
+            <link href="http://www.sharkpp.net/blog/2015/06/07/revelation-new-mascot-and-update-favicon.html"/>
+            <updated>2015-06-07T20:45:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2015/06/07/revelation-new-mascot-and-update-favicon.html</id>
+            <content type="html"><![CDATA[<p>favicon 関係が <a href="https://sculpin.io/mascot/">Jackson</a> のままだったのは <a href="https://sculpin.io/">Sculpin</a> のブログスケルトンをベースに変更していったのが原因な訳で。</p>
+
+<p>置き換えようにも置き換えるための画像が無くてそのままにしていたのだけど、 Inkscape でごにょごにょしてそれらしいのをでっち上げました。</p>
+
+<h2 id="%E6%96%B0%E3%81%97%E3%81%84-favicon-%E3%81%AE%E5%AD%90">新しい favicon の子</h2>
+
+<p>新しい favicon の子です。</p>
+
+<p>ホオジロザメをイメージしてみたのだけれども今イチそうは見えない謎生物が爆誕しました。</p>
+
+<p><a href="/images/noname/1024x1024.png"><img src="/images/noname/128x128.png" alt="favicon" /></a></p>
+
+<p>SVG は つ <a href="/images/noname/favicon.svg">favicon.svg</a></p>
+
+<p>ライセンスは CC BY 4.0 でお願いします。</p>
+]]></content>
+        </entry>
+    </feed>

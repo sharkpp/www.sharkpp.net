@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/categories/HSP.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:32+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[クールなメニュー表示モジュール]]></title>
+            <link href="http://www.sharkpp.net/blog/2011/06/29/hsp-cool-menu.html"/>
+            <updated>2011-06-29T01:08:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2011/06/29/hsp-cool-menu.html</id>
+            <content type="html"><![CDATA[<p>何を言っているのか分からない名前が付いていますがスクリーンショットを見てもらえば一目瞭然かと思います。</p>
+
+<p>MS Office等でよく見かけるアイコン付き＆影付きメニューをHSPのモジュールで実装しました。</p>
+
+<p>中身的には以前HSP開発Wikiに投稿した内容をベースに機能を追加したものです。</p>
+
+<p>MITライセンスとしておきます。</p>
+
+<p>システムメニューのクール化？もサンプルとしては付いていますが、タスクバー上のメニューがおかしかったりするので機能としては完成していません。</p>
+
+<p><img src="/images/2011_0629_coolmenu.png" alt="クールなメニュー表示モジュールSS" /></p>
+
+<p><a href="/files/20110530_0034_coolmenu.zip">モジュール本体＆サンプル</a></p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[point指定font命令モジュール]]></title>
+            <link href="http://www.sharkpp.net/blog/2011/06/29/hsp-point-size-font.html"/>
+            <updated>2011-06-29T00:57:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2011/06/29/hsp-point-size-font.html</id>
+            <content type="html"><![CDATA[<p>HSP標準のfont命令はピクセル指定のようなので、ポイント指定でフォントを生成するモジュールを作りました。</p>
+
+<p>待ったく何の役に立つのやら....</p>
+
+<p>MITライセンスとしておきます。</p>
+
+<p><img src="/images/2011_0629_pt_font.png" alt="point指定font命令モジュールSS" /></p>
+
+<p><a href="/files/pt_font.as">モジュール本体＆サンプル</a></p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[現在位置取得モジュール]]></title>
+            <link href="http://www.sharkpp.net/blog/2011/06/29/hsp-location-module.html"/>
+            <updated>2011-06-29T00:43:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2011/06/29/hsp-location-module.html</id>
+            <content type="html"><![CDATA[<p>何に役立つか分からないHSP用モジュールを作っちゃったので公開します。</p>
+
+<p>仕組みとしては、googleのページを自力で解析して表示しているだけなので、いつまで使えるかはgoogle次第な無責任モジュールです。</p>
+
+<p><a href="/images/2011_0629_mod_get_location.png"><img src="/images/2011_0629_mod_get_location.jpg" alt="現在位置取得モジュールSS" /></a></p>
+
+<p><a href="/files/mod_get_location.as">モジュール本体</a></p>
+
+<p><a href="/files/mod_get_location_sample.hsp">サンプル</a></p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[HSPプログラムコンテスト統計]]></title>
+            <link href="http://www.sharkpp.net/blog/2010/12/12/HSP-program-contest-summary.html"/>
+            <updated>2010-12-12T22:22:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2010/12/12/HSP-program-contest-summary.html</id>
+            <content type="html"><![CDATA[<p>| 開催年 | 作者数 | エントリー<br />
+数 | 公開数 | 一般 | HSPTV<br />
+ショート | 一次審査 | 最終選考<br />
+[辞退] | 作品<br />
+/ページ |
+| ------------------------ | ------------------------ | --------------------------------------------------- | ------------------------ | ---------------- | ---------------------------------------- | -------------------------------- | ----------------------------------------------------- | -------------------------------------------- |
+| 2003                     | 417                      | 579                                                 | 567                      | 278              | 289                                      | 71(26)                           | 34(12)[?]                                             | 50                                           |
+| 2004                     | 350                      | 507                                                 | 471                      | 296              | 175                                      | 98(30)                           | 65(20)[0]                                             | 50                                           |
+| 2005                     | 317                      | 472                                                 | 444                      | 264              | 180                                      | 125(48)                          | 73(22)[0]                                             | 50                                           |
+| 2006                     | 290                      | 435                                                 | 403                      | 273              | 130                                      | 131(38)                          | 121(26)[2]                                            | 50                                           |
+| 2007                     | 280                      | 419                                                 | 379                      | 272              | 107                                      | 105(24)                          | 75(21)[0]                                             | 50                                           |
+| 2008                     | 217                      | 294                                                 | 280                      | 196              | 84                                       | 117(32)                          | 75(19)[0]                                             | 50                                           |
+| 2009                     | 204                      | 283                                                 | 270                      | 196              | 74                                       | 132(34)                          | 92(25)[0]                                             | 40                                           |
+| 2010                     | 190(214)                 | 282                                                 | 267                      | 187              | 80                                       | 138(38)                          | 73(20)[1]                                             | 30                                           |
+| 2011                     | 194(224)                 | 292                                                 | 285                      | 232              | 53                                       | 142(24)                          | 81(11)[0]                                             | 30                                           |</p>
+
+<p>※ショート部門は、2006年からHSPTV部門に変更されています。</p>
+
+<p>※エントリー数は作品番号の最大値、公開数は実際に公開されている作品数です。</p>
+
+<p>※作者数はユニークな名前の個数でカウントしています。作品登録時の入力ミス、表記ゆれ、同名などの理由により多少値が正確ではありません。</p>
+
+<p>※作者数のカッコ内は作者番号の最大値です。</p>
+
+<p>※最終選考の辞退数は結果の総括部分で言及のある作品数から実際にリストとして公開されている個数との差です。</p>
+
+<p>※一次審査、最終選考のカッコ内は、HSPTV/ショート部門の作品数です。</p>
+
+<p>※重複して入賞している作品はカウントしていません。</p>
+
+<p><strong>※このリストの正確性について保障しませんが間違いなどの指摘は歓迎します。</strong></p>
+
+<h4 id="%E6%9B%B4%E6%96%B0%E5%B1%A5%E6%AD%B4">更新履歴</h4>
+
+<ul>
+<li>2010-12-12 公開</li>
+<li>2011-11-26 プログラムコンテスト2011の途中経過を更新</li>
+<li>2011-12-31 プログラムコンテスト2011の集計結果を更新、集計結果の誤り(2004年分)を修正</li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[”yabuinu” 難読化＆独自スクランブル ツール for HSP 3.x]]></title>
+            <link href="http://www.sharkpp.net/blog/2009/09/30/hsp-yabuinu.html"/>
+            <updated>2009-09-30T00:05:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2009/09/30/hsp-yabuinu.html</id>
+            <content type="html"><![CDATA[<h3 id="%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E">ソフトの説明</h3>
+
+<p>HSP3用のオブジェクト難読化＆独自スクランブルツールです。</p>
+
+<p>オブジェクトファイルに難読化処理を行い、かつEXEの埋め込みデータに対して独自のスクランブル処理を行うことで、逆コンパイルおよび埋め込みデータの抽出を困難にします。</p>
+
+<p>スクランブル機能は、既存の埋め込みデータの抽出ツールの無効化を目的としています。</p>
+
+<p>難読化機能は、逆コンパイルを行ったときに完全なソースの復元を困難にし機密情報の流出を防ぐことを目的としています。</p>
+
+<p>ただし、困難になるだけなので完全に不可能にすることは原理上絶対に出来ません。(最低でもHSPランタイムがコードを実行できる状態にはなっている必要があります。)</p>
+
+<p>また、副次的効果としてオブジェクトのサイズが小さくなる場合があります。</p>
+
+<h3 id="%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89">ダウンロード</h3>
+
+<p><a href="http:/hsp/tool/yabuinu-0.0.1.0.zip" title="yabuinu-0.0.1.0.zip">DOWNLOAD</a></p>
+
+<h3 id="%E5%AE%9F%E8%A3%85%E6%B8%88%E3%81%BF%E6%A9%9F%E8%83%BD">実装済み機能</h3>
+
+<h4 id="%E9%9B%A3%E8%AA%AD%E5%8C%96%E3%83%AB%E3%83%BC%E3%83%81%E3%83%B3">難読化ルーチン</h4>
+
+<ul>
+<li>ダミー命令挿入</li>
+<li>新規命令名・新規関数名のデータセグメントからの削除</li>
+</ul>
+
+<p>※場合によってはこれらの機能が働かないかもしれません。</p>
+
+<h4 id="%E3%82%B9%E3%82%AF%E3%83%A9%E3%83%B3%E3%83%96%E3%83%A9">スクランブラ</h4>
+
+<ul>
+<li>Camelliaによるスクランブル処理。</li>
+</ul>
+
+<p>※yabuinu.hrt を使用時のみ処理が行われます。</p>
+
+<h3 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール</h3>
+
+<ul>
+<li>HSPのインストールフォルダに存在する、hspcmp.dllの名前をhspcmp_org.dllに変更後、ファイルをコピーしてください。</li>
+</ul>
+
+<h3 id="%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">アンインストール</h3>
+
+<ul>
+<li>インストールしたファイルを削除し、hspcmp_org.dllをhspcmp.dllに名前を変えるだけです。レジストリは一切使用しておりません。</li>
+</ul>
+
+<h3 id="%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D%E7%92%B0%E5%A2%83">動作確認環境</h3>
+
+<p>　自作PC Windows XP x64 SP2 上の HSP 3.1 で動作確認しました。</p>
+
+<p>　Windows 2000/XP/Vista で動くと思います。</p>
+
+<h3 id="%E6%9B%B4%E6%96%B0%E5%B1%A5%E6%AD%B4">更新履歴</h3>
+
+<ul>
+<li>0.0.1.0 2009-09-30　とりあえず3.1用が実装できたので公開</li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[ナイトリービルド]]></title>
+            <link href="http://www.sharkpp.net/blog/2009/06/14/openhsp-nightly.html"/>
+            <updated>2009-06-14T22:26:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2009/06/14/openhsp-nightly.html</id>
+            <content type="html"><![CDATA[<ul>
+<li><a href="/files/OpenHSP_20090627_r330.zip" title="OpenHSP_20090627_r330.zip">OpenHSP&#95;20090627&#95;r330.zip</a> (3866 KB)</li>
+<li><a href="/files/OpenHSP_20090729_r342.zip" title="OpenHSP_20090729_r342.zip">OpenHSP&#95;20090729&#95;r342.zip</a> (4489 KB)</li>
+<li><a href="/files/OpenHSP_20090805_r352.zip" title="OpenHSP_20090805_r352.zip">OpenHSP&#95;20090805&#95;r352.zip</a> (4490 KB)</li>
+<li><a href="/files/OpenHSP_20091024_r359.zip" title="OpenHSP_20091024_r359.zip">OpenHSP&#95;20091024&#95;r359.zip</a> (4490 KB)</li>
+<li><a href="/files/OpenHSP_20100130_r366.zip" title="OpenHSP_20100130_r366.zip">OpenHSP&#95;20100130&#95;r366.zip</a> (4504 KB)</li>
+<li><a href="/files/OpenHSP_20100205_r367.zip" title="OpenHSP_20100205_r367.zip">OpenHSP&#95;20100205&#95;r367.zip</a> (4504 KB)</li>
+<li><a href="/files/OpenHSP_20100220_r373.zip" title="OpenHSP_20100220_r373.zip">OpenHSP&#95;20100220&#95;r373.zip</a> (4711 KB)</li>
+<li><a href="/files/OpenHSP_20100228_r375.zip" title="OpenHSP_20100228_r375.zip">OpenHSP&#95;20100228&#95;r375.zip</a> (4978 KB)</li>
+<li><a href="/files/OpenHSP_20100314_r377.zip" title="OpenHSP_20100314_r377.zip">OpenHSP&#95;20100314&#95;r377.zip</a> (4978 KB)</li>
+<li><a href="/files/OpenHSP_20100321_r380.zip" title="OpenHSP_20100321_r380.zip">OpenHSP&#95;20100321&#95;r380.zip</a> (4979 KB)</li>
+<li><a href="/files/OpenHSP_20100402_r381.zip" title="OpenHSP_20100402_r381.zip">OpenHSP&#95;20100402&#95;r381.zip</a> (4979 KB)</li>
+<li><a href="/files/OpenHSP_20100426_r382.zip" title="OpenHSP_20100426_r382.zip">OpenHSP&#95;20100426&#95;r382.zip</a> (4971 KB)</li>
+<li><a href="/files/OpenHSP_20100430_r383.zip" title="OpenHSP_20100430_r383.zip">OpenHSP&#95;20100430&#95;r383.zip</a> (4972 KB)</li>
+<li><a href="/files/OpenHSP_20100501_r384.zip" title="OpenHSP_20100501_r384.zip">OpenHSP&#95;20100501&#95;r384.zip</a> (4972 KB)</li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[PCB Software製プラグインの再配布]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/09/06/pcbsoft.html"/>
+            <updated>2008-09-06T01:52:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/09/06/pcbsoft.html</id>
+            <content type="html"><![CDATA[<p>PCB Software(高橋 周平)さんが店じまいしてしまったので公開していたプラグインやツールの再配布を行っています。</p>
+
+<p>再配布しているファイルは公開当時の内容のままです。</p>
+
+<p>また最終版のソース・サンプルから独自に<a href="/blog/2008/08/20/hsp-pcbnet2-sample-hsp3-fix.html">pcbnet2のサンプルのHSP3対応</a>や<a href="/blog/2008/09/06/hsp-pcbnet2.html">pcbnet2のバグの修正</a>などもこのサイトで行っています。</p>
+
+<ul>
+<li><a href="/files/pcbnet2_final.zip" title="pcbnet2">pcbnet ver.final</a></li>
+<li><a href="/files/pcbnet_final.zip" title="pcbnet">pcbnet2 ver.final</a></li>
+<li><a href="/files/hspsockA_final.zip" title="hspsockA">hspsockA ver. final</a></li>
+<li><a href="/files/hst_final.zip" title="hspsockA">Hot Soup Taster ver. final</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[pcbnet2 改変版]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/09/06/hsp-pcbnet2.html"/>
+            <updated>2008-09-06T01:42:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/09/06/hsp-pcbnet2.html</id>
+            <content type="html"><![CDATA[<p>PCB Software(高橋 周平)さん作のpcbnet2の再配布およびバグ修正などをしています。</p>
+
+<h2 id="%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89">ダウンロード</h2>
+
+<ul>
+<li><a href="/files/pcbnet2_unofficial_20080906.zip">DOWNLOAD</a></li>
+<li><a href="/files/pcbnet2_final.zip">pcbnet2 ver.final</a>(オリジナル最終バージョン)</li>
+</ul>
+
+<h2 id="%E5%B1%A5%E6%AD%B4">履歴</h2>
+
+<dl>
+<dt>2008/09/06</dt>
+<dd>公開<br />md5関数でハッシュ値の算出を継続して行うと値がおかしかった問題を修正</dd>
+</dl>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[pcbnet2 付属サンプルのHSP3対応修正]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/08/20/hsp-pcbnet2-sample-hsp3-fix.html"/>
+            <updated>2008-08-20T23:54:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/08/20/hsp-pcbnet2-sample-hsp3-fix.html</id>
+            <content type="html"><![CDATA[<h2 id="%E8%AA%AC%E6%98%8E">説明</h2>
+
+<p>pcbnet2に付属のサンプルはHSP2の書式で書かれているのでこれをHSP3で実行できるように修正を行いました。</p>
+
+<h2 id="%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89">ダウンロード</h2>
+
+<p><a href="/files/pcbnet2_sample_hsp3_fix_20080821.zip">DOWNLOAD</a></p>
+
+<h2 id="%E5%B1%A5%E6%AD%B4">履歴</h2>
+
+<dl>
+<dt>2008/08/21</dt>
+<dd>公開</dd>
+</dl>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[hsp3obfus - HSP3オブジェクト難読化ツール]]></title>
+            <link href="http://www.sharkpp.net/blog/2008/08/15/hsp-hsp3obfus.html"/>
+            <updated>2008-08-15T01:16:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2008/08/15/hsp-hsp3obfus.html</id>
+            <content type="html"><![CDATA[<h2 id="%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E">ソフトの説明</h2>
+
+<p>HSP 3.1用のオブジェクト難読化ツールです。</p>
+
+<p>逆コンパイルを行ったときに完全なソースの復元を困難にし機密情報の流出を防ぐことを目的としています。</p>
+
+<p>ただし、困難になるだけなので完全に不可能にすることは原理上絶対に出来ません。(最低でもHSPランタイムがコードを実行できる状態にはなっている必要があります。)</p>
+
+<p>また、副次的効果としてオブジェクトのサイズが小さくなる場合があります。</p>
+
+<h2 id="%E5%AE%9F%E8%A3%85%E6%B8%88%E3%81%BF%E6%A9%9F%E8%83%BD">実装済み機能</h2>
+
+<ul>
+<li>ダミー命令挿入</li>
+<li>新規命令名・新規関数名のデータセグメントからの削除</li>
+</ul>
+
+<p>※場合によってはこれらの機能が働かないかもしれません。</p>
+
+<h2 id="%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">使用方法</h2>
+
+<p>スクリプトエディタ上から、</p>
+
+<ul>
+<li>EXEファイルの作成</li>
+<li>実行ファイル自動作成</li>
+<li>STARTUP.AXファイル作成</li>
+</ul>
+
+<p>を行ったときに難読化処理を行います。</p>
+
+<h2 id="%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83">動作環境</h2>
+
+<p>HSP 3.1 以降</p>
+
+<p>Windows 2000以降</p>
+
+<h2 id="%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89">ダウンロード</h2>
+
+<p><a href="/files/hsp3obfus101.zip">DOWNLOAD</a></p>
+
+<h2 id="%E5%B1%A5%E6%AD%B4">履歴</h2>
+
+<dl>
+<dt>2007/09/04</dt>
+<dd>２種類の難読化処理を実装<br />hsp-dev ML内で公開</dd>
+
+<dt>2008/08/17</dt>
+<dd>公開<br />hspcmp.dllを置き換えるとPeasエディタが強制終了していた問題を修正</dd>
+</dl>
+]]></content>
+        </entry>
+    </feed>

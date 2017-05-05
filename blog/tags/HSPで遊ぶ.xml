@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/HSP%E3%81%A7%E9%81%8A%E3%81%B6.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2017-05-05T08:00:50+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[木目パターンの生成: HSPで遊ぶ 其の１]]></title>
+            <link href="http://www.sharkpp.net/blog/2009/10/11/hsp-sample-wood-pattern.html"/>
+            <updated>2009-10-11T22:48:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2009/10/11/hsp-sample-wood-pattern.html</id>
+            <content type="html"><![CDATA[<p>今回はHSPのスクリプトです。</p>
+
+<p>あるソフトで使いたかったので試しに作ってみたら意外とそれらしいのができました。</p>
+
+<pre>hsvcolor 26,49,246
+boxf
+sx = ginfo_winx
+sy = ginfo_winy
+repeat 256
+hsvcolor 26,49,246+rnd(20)-10
+y=rnd(sy)
+y1=y+rnd(30)-15
+y2=y+rnd(30)-15
+repeat 1+rnd(3)
+line 0,y1+cnt,sx,y2+cnt
+loop
+loop
+</pre>
+
+<p>こんなのが出来ます。</p>
+
+<p><a href="/images/2009_1011_wood_pattern.jpg"><img src="/images/2009_1011_wood_pattern.png" alt="2009_1011_wood_pattern.png" /></a></p>
+
+<p>これだからプログラムはいいですね</p>
+]]></content>
+        </entry>
+    </feed>
