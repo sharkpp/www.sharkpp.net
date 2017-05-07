@@ -1,7 +1,5 @@
 # www.sharkpp.net
 
-Commit log was "{DEPLOY_MSG}".
-
 Processing completed {BUILD_FILES} files in {BUILD_SEC} seconds.
 
 Build completed on {BUILD_DATE}.
