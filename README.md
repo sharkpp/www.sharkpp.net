@@ -46,7 +46,7 @@ Create new blog page to `source/_posts/2015-05-30-[STUB].md`
 
 ## License
 
-&copy; 2004-2015 sharkpp
+&copy; 2004-2017 sharkpp
 
 This page is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
 
