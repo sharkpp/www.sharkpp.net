@@ -195,8 +195,6 @@ exec_deploy () {
     exit 0
   fi
   PHP=php
-  #check_php
-  #check_libxml
   # install Component from Composer and Bower
   _composer exist || _composer self-install
   _composer self-update
@@ -223,10 +221,22 @@ exec_deploy () {
     rm -rf output_prod/*
   fi
   # production generate
+  PRIOD_BEGIN0=$(php -r 'echo microtime(true);')
+  PRIOD_BEGIN=$(php -r 'echo microtime(true);')
   _sculpin generate --env=prod
-  # deploy
+  PRIOD_END=$(php -r 'echo microtime(true);')
+  # deploy message
   DEPLOY_MSG=$(git log --pretty=format:"Deploy from https://github.com/${TRAVIS_REPO_SLUG}/commit/%H : %s" -1)
+  # create README.md
   pushd output_prod
+  cat ../README-generated-template.md \
+    | sed -e "s/{DATE}/$(date +"%Y")/g" \
+          -e "s/{DEPLOY_MSG}/$DEPLOY_MSG/g" \
+          -e "s/{BUILD_DATE}/$(date +'%Y-%m-%d %H:%M:%S')/g" \
+          -e "s/{BUILD_FILES}/$(find . -type f|wc -l)/g" \
+          -e "s/{BUILD_SEC}/$(echo $PRIOD_END-$PRIOD_BEGIN*2+$PRIOD_BEGIN0)|bc)/g" \
+    > README.md
+  # deploy
   git add . -A
   echo $DEPLOY_MSG | git commit -F -
   git push --quiet origin $DEPLOY_BRANCH
@@ -311,4 +321,3 @@ case "$1" in
   "u"          ) exec_update ;;
   *            ) exec_usage ;;
 esac
-echo @@@=$?
