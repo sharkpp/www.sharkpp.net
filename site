@@ -230,8 +230,8 @@ exec_deploy () {
   # create README.md
   pushd output_prod
   cat ../README-generated-template.md \
-    | sed -e "s/{DATE}/$(date +"%Y")/g" \
-          -e "s/{DEPLOY_MSG}/$DEPLOY_MSG/g" \
+    | sed -e "s/{DATE}/$(date +'%Y')/g" \
+          -e "s/{DEPLOY_MSG}/$(git log --pretty=format:'%s' -1)/g" \
           -e "s/{BUILD_DATE}/$(date +'%Y-%m-%d %H:%M:%S')/g" \
           -e "s/{BUILD_FILES}/$(find . -type f|wc -l)/g" \
           -e "s/{BUILD_SEC}/$(echo $PRIOD_END-$PRIOD_BEGIN*2+$PRIOD_BEGIN0)|bc)/g" \
