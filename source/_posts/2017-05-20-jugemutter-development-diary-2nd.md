@@ -1,6 +1,7 @@
 ---
 title: "じゅげむったーの開発日記 その２"
 date: 2017-05-20 17:04
+update: 2017-05-20 21:29
 tags: [Qt, Twitter, OAuth, C++, cpp, 勉強会, 開発日記, じゅげむったー]
 categories: [ブログ]
 
@@ -11,6 +12,8 @@ categories: [ブログ]
 今月も、長文投稿専用Twitterクライアントの開発の続きをしました。
 
 レポジトリは ... [sharkpp/Jugemutter: 長文投稿専用クライアント「じゅげむったー」](https://github.com/sharkpp/Jugemutter) です。
+
+![画面](/images/2017_0520_jugemutter.png)
 
 ## はじめに
 
