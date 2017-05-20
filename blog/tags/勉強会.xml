@@ -3,11 +3,18 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-05-20T01:53:54+00:00</updated>
+    <updated>2017-05-20T08:07:45+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[じゅげむったーの開発日記 その２]]></title>
+            <link href="http://www.sharkpp.net/blog/2017/05/20/jugemutter-development-diary-2nd.html"/>
+            <updated>2017-05-20T17:04:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2017/05/20/jugemutter-development-diary-2nd.html</id>
+            <content type="html"><![CDATA[]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[じゅげむったー(仮)の開発日記 その１]]></title>
             <link href="http://www.sharkpp.net/blog/2017/04/16/jugemutter-development-diary-1st.html"/>
@@ -1707,86 +1714,6 @@ OpenGL の統合、 8 bit alpha/grayscale サポート、 exif rotate</li>
 <h2 id="%E6%87%87%E8%A6%AA%E4%BC%9A">懇親会</h2>
 
 <p>手羽先＆ピザ 美味しかったです。</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Qt勉強会 #2 @Tokyo に参加しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2013/08/11/qt-2-tokyo.html"/>
-            <updated>2013-08-11T09:19:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2013/08/11/qt-2-tokyo.html</id>
-            <content type="html"><![CDATA[<p><a href="http://qt-users.doorkeeper.jp/events/5014">Qt 勉強会 #2 @Tokyo</a></p>
-
-<p><a href="http://www.ustream.tv/channel/qt-%E9%96%A2%E6%9D%B1%E5%8B%89%E5%BC%B7%E4%BC%9A">Ustream</a></p>
-
-<p>参加して来ました。</p>
-
-<p>暑い中、都庁から歩いてきたので辛かったorz</p>
-
-<h3 id="%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B">自己紹介</h3>
-
-<p>みんなで自己紹介</p>
-
-<h3 id="%E3%81%BC%E3%81%8F%E3%81%8Cqml%E6%9C%AC%E3%82%92%E6%9B%B8%E3%81%84%E3%81%9F%E3%82%8F%E3%81%91">ぼくがQML本を書いたわけ</h3>
-
-<p><a href="https://twitter.com/IoriAYANE">@IoriAYANE</a></p>
-
-<p>「こんなにQMLたのしいよ」を伝えたい！</p>
-
-<p>でも、日本語の資料が少ない→じゃあ書くしかない！</p>
-
-<p>100%趣味で書かれた本です！</p>
-
-<h3 id="qt%E3%81%A7irc%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F">QtでIRCクライアント作ってみた</h3>
-
-<p><a href="https://twitter.com/luyikei">@luyikei</a></p>
-
-<p>ライブコーディング！</p>
-
-<p>QTcpSocketで簡単に作れる！</p>
-
-<p>プライベートメッセージや日本語もやらないと！</p>
-
-<h3 id="qt%E3%81%A7leapmotion%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F">QtでLeapMotionを使ってみた</h3>
-
-<p><a href="https://twitter.com/task_jp">@task_jp</a></p>
-
-<p>Qt Quick 用のプラグインを作ってみた。</p>
-
-<p>LeapMotionのAPIをラップしたQtのAPIを作ってQtQuick側に公開</p>
-
-<p><a href="git://git.qtquick.me/qmlplugins/qtleap">QtLeap ソース</a></p>
-
-<p>面白い使い方募集中！とのこと</p>
-
-<p>↑LeapMotionほしい！</p>
-
-<h3 id="%E3%82%B1%E3%83%BC%E3%82%AD%E5%85%A5%E5%88%80%EF%BC%86%E3%82%82%E3%81%90%E3%82%82%E3%81%90%E2%99%AA">ケーキ入刀＆もぐもぐ♪</h3>
-
-<p><a href="http://instagram.com/p/c0nZP_Pb5e/">QtQuick本まさかの再現度</a></p>
-
-<h3 id="%E3%81%B2%E3%81%9F%E3%81%99%E3%82%89%E3%82%82%E3%81%8F%E3%82%82%E3%81%8F">ひたすらもくもく</h3>
-
-<p>hspideのバグ修正！</p>
-
-<p>Macのgitで日本語ファイルを扱うとなんか動作がおかしい？</p>
-
-<h3 id="ubuntu-weekly-recipe">Ubuntu Weekly Recipe</h3>
-
-<p><a href="http://gihyo.jp/admin/serial/01/ubuntu-recipe/0284">第284回　クロスプラットフォームなアプリケーション開発フレームワークQtでプログラミングをはじめる</a> 書いてます</p>
-
-<p>＆</p>
-
-<p>メーリングリストをよろしく</p>
-
-<h3 id="osc-tokyo-2013%2Ffall-%E7%94%B3%E3%81%97%E8%BE%BC%E3%81%BF%E7%9B%B8%E8%AB%87">OSC Tokyo 2013/Fall 申し込み相談</h3>
-
-<p><a href="http://www.ospn.jp/osc2013-fall/">オープンソースカンファレンス2013 Tokyo/Fall - オープンソースの文化祭！</a></p>
-
-<p>@luyikei さんが申し込みの準備。 内容はメーリングリストでも流される予定</p>
-
-<h3 id="%E6%87%87%E8%A6%AA%E4%BC%9A">懇親会</h3>
-
-<p>お酒うまうまです</p>
 ]]></content>
         </entry>
     </feed>

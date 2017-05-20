@@ -3,11 +3,18 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/atom.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-05-20T01:53:35+00:00</updated>
+    <updated>2017-05-20T08:07:28+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[じゅげむったーの開発日記 その２]]></title>
+            <link href="http://www.sharkpp.net/blog/2017/05/20/jugemutter-development-diary-2nd.html"/>
+            <updated>2017-05-20T17:04:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2017/05/20/jugemutter-development-diary-2nd.html</id>
+            <content type="html"><![CDATA[]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[macOS 上に Homebrew を利用して Inkscape をインストールする]]></title>
             <link href="http://www.sharkpp.net/blog/2017/04/30/Install-inkscape-using-homebrew-on-macos.html"/>
@@ -1372,185 +1379,6 @@ HSPCVといえば実装がされたHSP公開数日後(もしかしたら翌日�
 
 <ul>
 <li>16日目の記事: <a href="http://qiita.com/skymonsters_Ks/items/ad28c7a21ea55d2bbed8">HSPプログラムコンテストを振り返る</a></li>
-</ul>
-
-<hr />
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[QMacCocoaViewContainer を使ってみる]]></title>
-            <link href="http://www.sharkpp.net/blog/2016/12/10/qt-advent-calendar-2016-10th-day.html"/>
-            <updated>2016-12-10T17:25:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2016/12/10/qt-advent-calendar-2016-10th-day.html</id>
-            <content type="html"><![CDATA[<p>こんにちは、こんばんは。</p>
-
-<p><a href="http://qiita.com/advent-calendar/2016/qt">Qt Advent Calendar 2016</a> の 10日目を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p>
-
-<p>今回は <a href="http://doc.qt.io/qt-5/qmaccocoaviewcontainer.html">QMacCocoaViewContainer</a> Class を触ってみようかと思います。</p>
-
-<p>題して「QMacCocoaViewContainer を使ってみる」です。</p>
-
-<h2 id="%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">はじめに</h2>
-
-<p>これは、 Qt で macOS Sierra の <a href="https://developer.apple.com/reference/appkit/nstouchbar">Touch Bar</a> を使ってみようとして挫折したあれこれのから生まれた記事であります。</p>
-
-<p>公式の方では <a href="https://bugreports.qt.io/browse/QTBUG-56908">[QTBUG-56908] Support NSTouchBar on latest MacBook Pro - Qt Bug Tracker</a> で 5.9 を目標に実装が提案？されているようです。</p>
-
-<p>まあ、とりあえず Touch Bar の事は忘れましょう。</p>
-
-<h2 id="%E7%92%B0%E5%A2%83">環境</h2>
-
-<table>
-<thead>
-<tr>
-  <th>項目</th>
-  <th>値</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>OS</td>
-  <td>macOS Sierra 10.12.1 (16B2659)</td>
-</tr>
-<tr>
-  <td>Qt</td>
-  <td>5.7.0</td>
-</tr>
-<tr>
-  <td>Qt Creator</td>
-  <td>4.1.0</td>
-</tr>
-</tbody>
-</table>
-
-<p>この記事では Qt Creator でコードを書いていきます。</p>
-
-<h2 id="%E7%9B%AE%E6%A8%99%E3%81%AA%E3%81%A9">目標など</h2>
-
-<p>今回は <a href="https://developer.apple.com/reference/appkit/nsbutton">NSButton</a> を Qt のウインドウ上に表示してクリックをハンドリングするまでがこの記事の内容になります。</p>
-
-<p>とりあえず作るクラスの階層です。</p>
-
-<pre><code>CocoaButton -- QPushButton を派生
-  +-- CocoaButtonWrapper -- NSButton の参照を所有
-        +-- CocoaButtonProxy -- NSButton のクリックを CocoaButtonWrapper に送る
-</code></pre>
-
-<p><code>CocoaButton</code> が Qt のウィジェットとして利用できるようにするクラスで、そのほかに <code>CocoaButtonWrapper</code> や <code>CocoaButtonProxy</code> があります。</p>
-
-<h2 id="%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E4%BD%9C%E3%82%8B">プロジェクトを作る</h2>
-
-<p>まず適当なプロジェクトを作り、<code>NSButton</code> ボタン用のクラスを追加します。</p>
-
-<p><a href="http://doc.qt.io/qt-5/ios-support.html#using-objective-c-code-in-qt-applications">Using Objective-C Code in Qt Applications</a> に書かれているように <code>OBJECTIVE_SOURCES</code> に <code>.mm</code> ファイルを追加しますが、「クラスの定義」でソースファイル名の拡張子を <code>.mm</code> に変更した場合は自動で設定してくれるようです。</p>
-
-<p><a href="/images/2016_1210_qtcreator_newclass.png"><img src="/_thumbs/9821c8921f122c38b6db04654a1b4bba-384x384.png" alt="Qt Creator"></a></p>
-
-<p>また、 <code>NSButton</code> などを利用するので .pro に AppKit をリンクするように <code>LIBS</code> に追加します。</p>
-
-<pre><code class="diff"><br />  FORMS    += mainwindow.ui
-+ 
-+ OBJECTIVE_SOURCES += \
-+     cocoabutton.mm
-+ 
-+ macx: LIBS += -framework AppKit
-</code></pre>
-
-<p>こんな感じです。</p>
-
-<p>完全な内容は <a href="https://github.com/sharkpp/MacCocoaWithQtSample/blob/master/MacCocoaWithQtSample.pro">MacCocoaWithQtSample.pro</a> を見てみてください。</p>
-
-<h2 id="cocoabutton-%E3%81%AE%E5%AE%9F%E8%A3%85">CocoaButton の実装</h2>
-
-<p>追加したファイルにクラスの実装をしていきます。</p>
-
-<p><a href="https://github.com/sharkpp/MacCocoaWithQtSample/blob/master/cocoabutton.mm">cocoabutton.mm</a> に <code>CocoaButton</code> を実装してきます。</p>
-
-<p>Qt Cretor のデザイナでボタンを設置したいがために <code>moveEvent</code> や <code>resizeEvent</code> を実装します。</p>
-
-<pre><code class="cpp">void CocoaButton::moveEvent(QMoveEvent *event)
-{
-    NSRect frame;
-    frame = [m_wrpper-&gt;m_refButton frame];
-    frame.origin.x = event-&gt;pos().x();
-    frame.origin.y = event-&gt;pos().y();
-    [m_wrpper-&gt;m_refButton setFrame:frame];
-}
-
-void CocoaButton::resizeEvent(QResizeEvent *event)
-{
-    NSRect frame;
-    frame = [m_wrpper-&gt;m_refButton frame];
-    frame.size.width = event-&gt;size().width();
-    frame.size.height = event-&gt;size().height();
-    [m_wrpper-&gt;m_refButton setFrame:frame];
-}
-</code></pre>
-
-<p><code>setText</code> でボタンのキャプションを変えれるようにしておきます。</p>
-
-<pre><code class="cpp">void CocoaButton::setText(const QString &amp;text)
-{
-    [m_wrpper-&gt;m_refButton setTitle: text.toNSString()];
-}
-</code></pre>
-
-<p>あとは、</p>
-
-<pre><code class="cpp">    CocoaButtonProxy *proxy = [[CocoaButtonProxy alloc] init:this];
-    [m_refButton setTarget:proxy];
-    [m_refButton setAction:@selector(clicked:)];
-</code></pre>
-
-<p>みたいな形で Objective-C で実装された target と action を登録して</p>
-
-<pre><code class="objectivec">- (IBAction)clicked:(id)sender
-{
-    proxyDest-&gt;handleClicked();
-}
-</code></pre>
-
-<p>とすれば、クリックで C++ で実装されたメソッドが呼び出せます。</p>
-
-<p>最後に <code>CocoaButtonProxy</code> から <code>CocoaButton</code> そしてその上位へとシグナルを飛ばすようにすれば、</p>
-
-<pre><code class="cpp">connect(ui-&gt;buttonCocoa, SIGNAL(clicked()), this, SLOT(onCocoaButtonClick()));
-</code></pre>
-
-<p>このような形でシグナルを受け取ることができます。</p>
-
-<p><a href="/images/2016_1210_sample_ss.png"><img src="/_thumbs/199fc30fdfe0a59ceab9e8c4e83bc0e6-384x384.png" alt="Qt Creator"></a></p>
-
-<p>実際に動かすとこんな感じです。</p>
-
-<h2 id="%E6%88%90%E6%9E%9C%E7%89%A9">成果物</h2>
-
-<p><a href="https://github.com/sharkpp/MacCocoaWithQtSample">sharkpp/MacCocoaWithQtSample</a> に今回の記事の完全なソースを置いておきます。</p>
-
-<h2 id="%E5%8F%82%E8%80%83">参考</h2>
-
-<ul>
-<li><a href="http://doc.qt.io/qt-5/qmaccocoaviewcontainer.html">QMacCocoaViewContainer Class | Qt Widgets 5.7</a></li>
-<li><a href="https://bugreports.qt.io/browse/QTBUG-40583">[QTBUG-40583] Unable to use QMacCocoaViewContainer - Qt Bug Tracker</a></li>
-<li><a href="https://github.com/vasi/vdfuse/blob/master/include/VBox/VBoxCocoa.h">vdfuse/VBoxCocoa.h at master - vasi/vdfuse</a></li>
-</ul>
-
-<h2 id="%E6%9C%80%E5%BE%8C%E3%81%AB">最後に</h2>
-
-<p>今回は、<a href="https://developer.apple.com/reference/appkit/nstouchbar">Touch Bar</a> を Qt から使ってみたい、から始まり結果、かなりスケールダウンした記事となりましたが、それもこれも、初めてさわる Objective-C が原因でしたが、今回いろいろ調べてなんとなくわかってきたので Touch Bar の方も何かしらためせるといいなと思っています。</p>
-
-<p>それでは、また。</p>
-
-<p>明日は <a href="https://twitter.com/nekomatu">@nekomatu</a> さんによる「<a href="http://nekomatu.blogspot.jp/2016/12/develop-qtapp-with-qtcreator-on-buildroot.html">BuildrootとQtCreatorを使ってQtアプリを開発する方法</a>」です。
-お楽しみに。</p>
-
-<hr />
-
-<p>この投稿は <strong><a href="http://qiita.com/advent-calendar/2016/qt">Qt Advent Calendar 2016</a></strong> の <strong>10日目</strong>の記事です。</p>
-
-<ul>
-<li>９日目の記事: <a href="http://qiita.com/hermit4/items/6282640a7fe4dbcdec43">スレッドの同期について学ぼう(その１）</a></li>
-<li>11日目の記事: <a href="http://nekomatu.blogspot.jp/2016/12/develop-qtapp-with-qtcreator-on-buildroot.html">BuildrootとQtCreatorを使ってQtアプリを開発する方法</a></li>
 </ul>
 
 <hr />
