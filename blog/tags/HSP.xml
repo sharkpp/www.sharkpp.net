@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/HSP.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-05-20T14:33:50+00:00</updated>
+    <updated>2017-05-20T14:43:02+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -423,34 +423,34 @@ IE コンポーネントがうまく動作しない模様なので</li>
 
 <p>上記バージョンで動作させると</p>
 
-<p><a href="/images/2016_1201_hsp3_throw_error_with_lastest_wine.png"><img src="/_thumbs/4d2bdb380dd65586fc0f3cb359b39d34-384x384.png" alt="最新のWineでHSPを実行するとエラーが出る"></a></p>
+<p><a href="/images/2016_1201_hsp3_throw_error_with_lastest_wine.png"><img src="/thumbs/4d2bdb380dd65586fc0f3cb359b39d34-384x384.png" alt="最新のWineでHSPを実行するとエラーが出る"></a></p>
 
 <p>のような感じで画像読み込み時にエラーが出ます。</p>
 
 <p>なので、</p>
 
-<p><a href="/images/2016_1201_wine_mac_archive_link.png"><img src="/_thumbs/30fb512f557aef34bf097ac8406e2232-384x384.png" alt="Wine の過去にリリースされたファイルの一覧ページへ"></a> 
-<a href="/images/2016_1201_wine_mac_find_package.png"><img src="/_thumbs/2f5dc8ee3deb899b4dc0c02eef5d9dfd-384x384.png" alt="Wine 1.9.8 のパッケージを探す"></a></p>
+<p><a href="/images/2016_1201_wine_mac_archive_link.png"><img src="/thumbs/30fb512f557aef34bf097ac8406e2232-384x384.png" alt="Wine の過去にリリースされたファイルの一覧ページへ"></a> 
+<a href="/images/2016_1201_wine_mac_find_package.png"><img src="/thumbs/2f5dc8ee3deb899b4dc0c02eef5d9dfd-384x384.png" alt="Wine 1.9.8 のパッケージを探す"></a></p>
 
 <p>このように辿り、<a href="https://dl.winehq.org/wine-builds/macosx/i686/">Index of /wine-builds/macosx/i686</a> から <code>winehq-staging-1.9.8.pkg</code> をダウンロードしインストールしていきます。</p>
 
 <h3 id="wine-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">Wine のインストール</h3>
 
-<p><a href="/images/2016_1201_wine_install_wizard_page_1.png"><img src="/_thumbs/20843081dfc77af1871777b78752172a-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 01"></a> 
-<a href="/images/2016_1201_wine_install_wizard_page_2.png"><img src="/_thumbs/62a72b0957ba33d2e9e25450fb2ea423-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 02"></a> 
-<a href="/images/2016_1201_wine_install_wizard_page_3.png"><img src="/_thumbs/5e8f072785fd5473d8d0df3e73dc8b72-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 03"></a> 
-<a href="/images/2016_1201_wine_install_wizard_page_4.png"><img src="/_thumbs/1e26bc8228b6c2373e2c5e130df4c8d3-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 04"></a> 
-<a href="/images/2016_1201_wine_install_wizard_page_5.png"><img src="/_thumbs/9f7937bfe8b23939169398ca9e5a3444-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 05"></a> 
-<a href="/images/2016_1201_wine_install_wizard_page_6.png"><img src="/_thumbs/8414c79a227cf3eb3201af1d62deb5e7-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 06"></a> 
-<a href="/images/2016_1201_wine_install_wizard_page_7.png"><img src="/_thumbs/736c27a4bedefc9fb27a6d7916b82439-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 07"></a></p>
+<p><a href="/images/2016_1201_wine_install_wizard_page_1.png"><img src="/thumbs/20843081dfc77af1871777b78752172a-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 01"></a> 
+<a href="/images/2016_1201_wine_install_wizard_page_2.png"><img src="/thumbs/62a72b0957ba33d2e9e25450fb2ea423-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 02"></a> 
+<a href="/images/2016_1201_wine_install_wizard_page_3.png"><img src="/thumbs/5e8f072785fd5473d8d0df3e73dc8b72-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 03"></a> 
+<a href="/images/2016_1201_wine_install_wizard_page_4.png"><img src="/thumbs/1e26bc8228b6c2373e2c5e130df4c8d3-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 04"></a> 
+<a href="/images/2016_1201_wine_install_wizard_page_5.png"><img src="/thumbs/9f7937bfe8b23939169398ca9e5a3444-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 05"></a> 
+<a href="/images/2016_1201_wine_install_wizard_page_6.png"><img src="/thumbs/8414c79a227cf3eb3201af1d62deb5e7-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 06"></a> 
+<a href="/images/2016_1201_wine_install_wizard_page_7.png"><img src="/thumbs/736c27a4bedefc9fb27a6d7916b82439-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 07"></a></p>
 
 <p>インストールウィザードでは特に選択を変更する部分はありません。</p>
 
-<p><a href="/images/2016_1201_wine_in_applications.png"><img src="/_thumbs/13e5b4843ca08e1bfbc39f907258f113-384x384.png" alt="アプリケーションにインストールされたWine"></a></p>
+<p><a href="/images/2016_1201_wine_in_applications.png"><img src="/thumbs/13e5b4843ca08e1bfbc39f907258f113-384x384.png" alt="アプリケーションにインストールされたWine"></a></p>
 
 <p>インストールが完了すると、アプリケーションに追加されます。</p>
 
-<p><a href="/images/2016_1201_wine_console.png"><img src="/_thumbs/8ed440fda3dd2fc4dfae39accc32d45c-384x384.png" alt="Wineコンソール"></a></p>
+<p><a href="/images/2016_1201_wine_console.png"><img src="/thumbs/8ed440fda3dd2fc4dfae39accc32d45c-384x384.png" alt="Wineコンソール"></a></p>
 
 <p>アプリケーションから <code>Wine Staging</code> を選び、ターミナルを起動します。
 ターミナルから</p>
@@ -460,7 +460,7 @@ IE コンポーネントがうまく動作しない模様なので</li>
 
 <p>と入力し実行すると、 <code>winecfg</code> が起動する前に、Wine の動作環境の作成が行われます。</p>
 
-<p><a href="/images/2016_1201_wine_mono_install_select.png"><img src="/_thumbs/b6a8591a422d0597a5380158439bc59b-384x384.png" alt="Wine環境構築中のWine-Monoインストール確認"></a></p>
+<p><a href="/images/2016_1201_wine_mono_install_select.png"><img src="/thumbs/b6a8591a422d0597a5380158439bc59b-384x384.png" alt="Wine環境構築中のWine-Monoインストール確認"></a></p>
 
 <p>途中、 Wine-Mono をインストールするかどうか聞かれますが、これはどちらを選んでも問題ないです。</p>
 
@@ -470,7 +470,7 @@ IE コンポーネントがうまく動作しない模様なので</li>
 
 <p>設定しないと</p>
 
-<p><a href="/images/2016_0326_hsp_install_wizard_tofu.png"><img src="/_thumbs/e2f456d9675823508a2d47ecb49a0bca-256x256.png" alt="HSP インストールウィザード 豆腐"></a></p>
+<p><a href="/images/2016_0326_hsp_install_wizard_tofu.png"><img src="/thumbs/e2f456d9675823508a2d47ecb49a0bca-256x256.png" alt="HSP インストールウィザード 豆腐"></a></p>
 
 <p>こんな感じになります。</p>
 
@@ -569,8 +569,8 @@ $ rm -f NotoSansCJKjp-hinted.zip LICENSE_OFL.txt
 
 <p><a href="http://hsp.tv/make/downlist.html">http://hsp.tv/make/downlist.html</a> から HSP 3.4 をダウンロードしてください。</p>
 
-<p><a href="/images/2016_1201_hsp3_download.png"><img src="/_thumbs/f8bde4f60f8a4926975e8b4997c59f9c-384x384.png" alt="hsp.tv"></a> 
-<a href="/images/2016_1201_hsp3_download_list_page.png"><img src="/_thumbs/0a55fd8f63615f92762cb454ff1d8c36-384x384.png" alt="hsp.tv HSPダウンロードページ"></a></p>
+<p><a href="/images/2016_1201_hsp3_download.png"><img src="/thumbs/f8bde4f60f8a4926975e8b4997c59f9c-384x384.png" alt="hsp.tv"></a> 
+<a href="/images/2016_1201_hsp3_download_list_page.png"><img src="/thumbs/0a55fd8f63615f92762cb454ff1d8c36-384x384.png" alt="hsp.tv HSPダウンロードページ"></a></p>
 
 <h3 id="hsp-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">HSP のインストール</h3>
 
@@ -580,17 +580,17 @@ $ rm -f NotoSansCJKjp-hinted.zip LICENSE_OFL.txt
 
 <p>それ以外のインストール先などは、お好みで。</p>
 
-<p><a href="/images/2016_1201_hsp_install_wizard_page_1.png"><img src="/_thumbs/d6d8ca748755902b7f4fb2a783238025-128x128.png" alt="HSP 3.4 インストールウィザード ページ 01"></a> 
-<a href="/images/2016_1201_hsp_install_wizard_page_2.png"><img src="/_thumbs/8c10c7f04723aef7551c2a9f20b5b697-128x128.png" alt="HSP 3.4 インストールウィザード ページ 02"></a> 
-<a href="/images/2016_1201_hsp_install_wizard_page_3.png"><img src="/_thumbs/71954faafec64ecdefcbceb9c4e2251c-128x128.png" alt="HSP 3.4 インストールウィザード ページ 03"></a> 
-<a href="/images/2016_1201_hsp_install_wizard_page_4.png"><img src="/_thumbs/95c9d676804dff72d93fbdacc0c2bc27-128x128.png" alt="HSP 3.4 インストールウィザード ページ 04"></a> 
-<a href="/images/2016_1201_hsp_install_wizard_page_5.png"><img src="/_thumbs/8a10d80408688d9d8638ea7bb00d8110-128x128.png" alt="HSP 3.4 インストールウィザード ページ 05"></a> 
-<a href="/images/2016_1201_hsp_install_wizard_page_6.png"><img src="/_thumbs/106dd846e3dfd7ca39ed4f4e27152818-128x128.png" alt="HSP 3.4 インストールウィザード ページ 06"></a> 
-<a href="/images/2016_1201_hsp_install_wizard_page_7.png"><img src="/_thumbs/13a0fac17951990a9d55355605bc729b-128x128.png" alt="HSP 3.4 インストールウィザード ページ 07"></a></p>
+<p><a href="/images/2016_1201_hsp_install_wizard_page_1.png"><img src="/thumbs/d6d8ca748755902b7f4fb2a783238025-128x128.png" alt="HSP 3.4 インストールウィザード ページ 01"></a> 
+<a href="/images/2016_1201_hsp_install_wizard_page_2.png"><img src="/thumbs/8c10c7f04723aef7551c2a9f20b5b697-128x128.png" alt="HSP 3.4 インストールウィザード ページ 02"></a> 
+<a href="/images/2016_1201_hsp_install_wizard_page_3.png"><img src="/thumbs/71954faafec64ecdefcbceb9c4e2251c-128x128.png" alt="HSP 3.4 インストールウィザード ページ 03"></a> 
+<a href="/images/2016_1201_hsp_install_wizard_page_4.png"><img src="/thumbs/95c9d676804dff72d93fbdacc0c2bc27-128x128.png" alt="HSP 3.4 インストールウィザード ページ 04"></a> 
+<a href="/images/2016_1201_hsp_install_wizard_page_5.png"><img src="/thumbs/8a10d80408688d9d8638ea7bb00d8110-128x128.png" alt="HSP 3.4 インストールウィザード ページ 05"></a> 
+<a href="/images/2016_1201_hsp_install_wizard_page_6.png"><img src="/thumbs/106dd846e3dfd7ca39ed4f4e27152818-128x128.png" alt="HSP 3.4 インストールウィザード ページ 06"></a> 
+<a href="/images/2016_1201_hsp_install_wizard_page_7.png"><img src="/thumbs/13a0fac17951990a9d55355605bc729b-128x128.png" alt="HSP 3.4 インストールウィザード ページ 07"></a></p>
 
 <p>インストールが完了したら、デモアプリが起動します。</p>
 
-<p><a href="/images/2016_1201_hsp_demo.png"><img src="/_thumbs/0b46aff93b34371fc3fbfc981f123232-384x384.png" alt="HSPのデモアプリ"></a></p>
+<p><a href="/images/2016_1201_hsp_demo.png"><img src="/thumbs/0b46aff93b34371fc3fbfc981f123232-384x384.png" alt="HSPのデモアプリ"></a></p>
 
 <p>エラーもなく起動していれば OK です。</p>
 
@@ -601,15 +601,15 @@ $ rm -f NotoSansCJKjp-hinted.zip LICENSE_OFL.txt
 
 <p>スクリプトエディタの実行ファイルを起動すると、Windwos と同じようにエディタが起動すると思います。</p>
 
-<p><a href="/images/2016_1201_hsp_script_edtor.png"><img src="/_thumbs/97b79398c171fb59a71f4749777b06e1-384x384.png" alt="HSPの標準エディタ"></a></p>
+<p><a href="/images/2016_1201_hsp_script_edtor.png"><img src="/thumbs/97b79398c171fb59a71f4749777b06e1-384x384.png" alt="HSPの標準エディタ"></a></p>
 
 <p>ついでにアシスタントも起動しているので、必要なければ設定から起動しないようにしておきましょう。</p>
 
-<p><a href="/images/2016_1201_hsp_script_edtor_disable_auto_run_assistant.png"><img src="/_thumbs/4bf083e788d1bfeb05b06096b3a2ff06-384x384.png" alt="HSPの標準エディタの設定を変更"></a></p>
+<p><a href="/images/2016_1201_hsp_script_edtor_disable_auto_run_assistant.png"><img src="/thumbs/4bf083e788d1bfeb05b06096b3a2ff06-384x384.png" alt="HSPの標準エディタの設定を変更"></a></p>
 
 <p>この時点で、HSPDishのプログラムもコンパイルできるようになっていると思います。</p>
 
-<p><a href="/images/2016_1201_hspdish_sample.png"><img src="/_thumbs/b8fde9d75e7d5f5ef6ba9a6325616c8b-384x384.png" alt="HSPDishのサンプル"></a></p>
+<p><a href="/images/2016_1201_hspdish_sample.png"><img src="/thumbs/b8fde9d75e7d5f5ef6ba9a6325616c8b-384x384.png" alt="HSPDishのサンプル"></a></p>
 
 <p>hgimg4 を利用する場合は、もう少し手間がかかります。</p>
 
@@ -908,7 +908,7 @@ $ rm -f NotoSansCJKjp-hinted.zip LICENSE_OFL.txt
 
 <p><small>実際に公開されてから、この記事が書かれるまで一月以上経っていることは、内緒だよ！</small></p>
 
-<p><a href="/images/2016_0401_hsp_users_jp.png"><img src="/_thumbs/bf408036a14636515e7d7e7d3f7339c2-256x256.png" alt="hsp-users.jp"></a></p>
+<p><a href="/images/2016_0401_hsp_users_jp.png"><img src="/thumbs/bf408036a14636515e7d7e7d3f7339c2-256x256.png" alt="hsp-users.jp"></a></p>
 
 <p><a href="http://hsp-users.jp/">hsp-users.jp - 日本のHSPユーザのためのハブサイト</a></p>
 
@@ -938,7 +938,7 @@ $ rm -f NotoSansCJKjp-hinted.zip LICENSE_OFL.txt
 
 <p>と、言う所から</p>
 
-<p><a href="/images/2016_0326_hgimg4_test9.png"><img src="/_thumbs/605ffbef1139b6b8bc46f69d73d86b6b-512x512.png" alt="hgimg4 サンプル test9"></a></p>
+<p><a href="/images/2016_0326_hgimg4_test9.png"><img src="/thumbs/605ffbef1139b6b8bc46f69d73d86b6b-512x512.png" alt="hgimg4 サンプル test9"></a></p>
 
 <p>このように、hgimg4 のサンプルが動くようにするための方法です。</p>
 
@@ -948,7 +948,7 @@ $ rm -f NotoSansCJKjp-hinted.zip LICENSE_OFL.txt
 
 <p>設定をしないと</p>
 
-<p><a href="/images/2016_0326_hsp_install_wizard_tofu.png"><img src="/_thumbs/e2f456d9675823508a2d47ecb49a0bca-256x256.png" alt="HSP インストールウィザード 豆腐"></a></p>
+<p><a href="/images/2016_0326_hsp_install_wizard_tofu.png"><img src="/thumbs/e2f456d9675823508a2d47ecb49a0bca-256x256.png" alt="HSP インストールウィザード 豆腐"></a></p>
 
 <p>こんな感じに、全部が全部では無いですが豆腐になります。</p>
 
@@ -1039,17 +1039,17 @@ $ rm -rf opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8
 
 <p>途中の「デスクトップ上にアイコンを作成する」や「拡張子の関連付けを行う」はチェックを外しておきましょう。</p>
 
-<p><a href="/images/2016_0326_hsp_install_wizard_page_1.png"><img src="/_thumbs/9b93c326efb30e0e081f852fdc82f27c-128x128.png" alt="HSP インストールウィザード ページ 01"></a> 
-<a href="/images/2016_0326_hsp_install_wizard_page_2.png"><img src="/_thumbs/944bfa26b702b628fdd4d800bba14dc3-128x128.png" alt="HSP インストールウィザード ページ 02"></a> 
-<a href="/images/2016_0326_hsp_install_wizard_page_3.png"><img src="/_thumbs/f5959a28a94fe43e70c5d52368920698-128x128.png" alt="HSP インストールウィザード ページ 03"></a> 
-<a href="/images/2016_0326_hsp_install_wizard_page_4.png"><img src="/_thumbs/78106ccd5918ab9c41b399079e5b3cf1-128x128.png" alt="HSP インストールウィザード ページ 04"></a> 
-<a href="/images/2016_0326_hsp_install_wizard_page_5.png"><img src="/_thumbs/e330caa9317c918cd8008d4e63cc8ca3-128x128.png" alt="HSP インストールウィザード ページ 05"></a> 
-<a href="/images/2016_0326_hsp_install_wizard_page_6.png"><img src="/_thumbs/88933c9aab67553abd0bc21af909a3a9-128x128.png" alt="HSP インストールウィザード ページ 06"></a> 
-<a href="/images/2016_0326_hsp_install_wizard_page_7.png"><img src="/_thumbs/69dfcfea98e8cc10ce874d787a6c0174-128x128.png" alt="HSP インストールウィザード ページ 07"></a></p>
+<p><a href="/images/2016_0326_hsp_install_wizard_page_1.png"><img src="/thumbs/9b93c326efb30e0e081f852fdc82f27c-128x128.png" alt="HSP インストールウィザード ページ 01"></a> 
+<a href="/images/2016_0326_hsp_install_wizard_page_2.png"><img src="/thumbs/944bfa26b702b628fdd4d800bba14dc3-128x128.png" alt="HSP インストールウィザード ページ 02"></a> 
+<a href="/images/2016_0326_hsp_install_wizard_page_3.png"><img src="/thumbs/f5959a28a94fe43e70c5d52368920698-128x128.png" alt="HSP インストールウィザード ページ 03"></a> 
+<a href="/images/2016_0326_hsp_install_wizard_page_4.png"><img src="/thumbs/78106ccd5918ab9c41b399079e5b3cf1-128x128.png" alt="HSP インストールウィザード ページ 04"></a> 
+<a href="/images/2016_0326_hsp_install_wizard_page_5.png"><img src="/thumbs/e330caa9317c918cd8008d4e63cc8ca3-128x128.png" alt="HSP インストールウィザード ページ 05"></a> 
+<a href="/images/2016_0326_hsp_install_wizard_page_6.png"><img src="/thumbs/88933c9aab67553abd0bc21af909a3a9-128x128.png" alt="HSP インストールウィザード ページ 06"></a> 
+<a href="/images/2016_0326_hsp_install_wizard_page_7.png"><img src="/thumbs/69dfcfea98e8cc10ce874d787a6c0174-128x128.png" alt="HSP インストールウィザード ページ 07"></a></p>
 
 <p>こんな感じにセットアップウィザードを行うと、</p>
 
-<p><a href="/images/2016_0326_hsp_demo.png"><img src="/_thumbs/0442cc0847c8faec0fefeb50c18da5a9-384x384.png" alt="HSPデモ"></a></p>
+<p><a href="/images/2016_0326_hsp_demo.png"><img src="/thumbs/0442cc0847c8faec0fefeb50c18da5a9-384x384.png" alt="HSPデモ"></a></p>
 
 <p>とりあえず、 Wine で HSP が動くようになります。</p>
 
@@ -1058,7 +1058,7 @@ $ rm -rf opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8
 
 <p>とすると HSPスクリプトエディタ も起動します。</p>
 
-<p><a href="/images/2016_0326_hsp_script_editor_with_assistant.png"><img src="/_thumbs/9ebdeb5fd154ee9b2ce9200d5f1c98fe-384x384.png" alt="HSP スクリプトエディタ＆アシスタント"></a></p>
+<p><a href="/images/2016_0326_hsp_script_editor_with_assistant.png"><img src="/thumbs/9ebdeb5fd154ee9b2ce9200d5f1c98fe-384x384.png" alt="HSP スクリプトエディタ＆アシスタント"></a></p>
 
 <h2 id="osx-%E4%B8%8A%E3%81%AE-wine-%E3%81%A7-hgimg3-%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99">OSX 上の Wine で hgimg3 を動かす</h2>
 
@@ -1067,11 +1067,11 @@ $ rm -rf opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8
 <pre><code class="bash">$ WINEPREFIX=~/wine-hgimg4-test wine c:\\hsp34\\hsed3.exe "sample\\hgimg3\\tamane4.hsp"
 </code></pre>
 
-<p><a href="/images/2016_0326_hgimg3_tamane_source.png"><img src="/_thumbs/7cc244fde01011f836fc6ec65c444a7a-384x384.png" alt="hgimg3 珠音 ソース"></a></p>
+<p><a href="/images/2016_0326_hgimg3_tamane_source.png"><img src="/thumbs/7cc244fde01011f836fc6ec65c444a7a-384x384.png" alt="hgimg3 珠音 ソース"></a></p>
 
 <p>そして、おもむろに <kbd>F5</kbd> を押下、</p>
 
-<p><a href="/images/2016_0326_hgimg3_tamane_running.png"><img src="/_thumbs/1e9426ea187d90bd2febb15569bc3c60-384x384.png" alt="hgimg3 珠音"></a></p>
+<p><a href="/images/2016_0326_hgimg3_tamane_running.png"><img src="/thumbs/1e9426ea187d90bd2febb15569bc3c60-384x384.png" alt="hgimg3 珠音"></a></p>
 
 <p>はい、無事にSDサイズの<ruby>珠音<rp>(</rp><rt>たまね</rt><rp>)</rp></ruby>ちゃんが表示されました。</p>
 
@@ -1082,11 +1082,11 @@ $ rm -rf opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8
 <pre><code class="bash">$ WINEPREFIX=~/wine-hgimg4-test wine c:\\hsp34\\hsed3.exe "sample\\hgimg4\\tamane1.hsp"
 </code></pre>
 
-<p><a href="/images/2016_0326_hgimg4_tamane_source.png"><img src="/_thumbs/ff0fd23abc5d83baa50d638b36b744cf-384x384.png" alt="hgimg4 珠音 ソース"></a></p>
+<p><a href="/images/2016_0326_hgimg4_tamane_source.png"><img src="/thumbs/ff0fd23abc5d83baa50d638b36b744cf-384x384.png" alt="hgimg4 珠音 ソース"></a></p>
 
 <p>そして、おもむろに <kbd>F5</kbd> を押下、</p>
 
-<p><a href="/images/2016_0326_hgimg4_tamane_running_failed.png"><img src="/_thumbs/8930f39e1744af1691e5f13b93140428-384x384.png" alt="hgimg4 珠音 失敗"></a></p>
+<p><a href="/images/2016_0326_hgimg4_tamane_running_failed.png"><img src="/thumbs/8930f39e1744af1691e5f13b93140428-384x384.png" alt="hgimg4 珠音 失敗"></a></p>
 
 <p><span style="font-family: IPAMonaPGothic,'ＭＳ Ｐゴシック',sans-serif;font-size:16px;">(´・ω・`)</sapn></p>
 
@@ -1132,7 +1132,7 @@ Wine build complete.
 
 <p>そして、おもむろに <kbd>F5</kbd> を押下、</p>
 
-<p><a href="/images/2016_0326_hgimg4_tamane_running.png"><img src="/_thumbs/7095b1a5c9519d4d7402612142b8c1b6-384x384.png" alt="hgimg4 珠音"></a></p>
+<p><a href="/images/2016_0326_hgimg4_tamane_running.png"><img src="/thumbs/7095b1a5c9519d4d7402612142b8c1b6-384x384.png" alt="hgimg4 珠音"></a></p>
 
 <p>おおおおー</p>
 
@@ -1173,34 +1173,34 @@ Wine build complete.
 
 <p>hgimg4 の他のサンプルや、 HSPプログラムコンテスト 2015 で hgimg4 を利用したプログラムを探し動かしてみました。</p>
 
-<p><a href="/images/2016_0326_hgimg4_test1.png"><img src="/_thumbs/9909f635e32ecccd3d061bd49f5718cc-256x256.png" alt="hgimg4 サンプル test1"></a>
-<a href="/images/2016_0326_hgimg4_test2.png"><img src="/_thumbs/6225a1255e77e5d0d46b35b487e5397c-256x256.png" alt="hgimg4 サンプル test2"></a>
-<a href="/images/2016_0326_hgimg4_test3.png"><img src="/_thumbs/75789f539377222aba6535d5e37b00ad-256x256.png" alt="hgimg4 サンプル test3"></a>
-<a href="/images/2016_0326_hgimg4_test4.png"><img src="/_thumbs/06caf84bc1fb78e628676a0a75c4ca71-256x256.png" alt="hgimg4 サンプル test4"></a>
-<a href="/images/2016_0326_hgimg4_test5.png"><img src="/_thumbs/b2f896301fb8295cfc6a63134c8860fa-256x256.png" alt="hgimg4 サンプル test5"></a>
-<a href="/images/2016_0326_hgimg4_test6.png"><img src="/_thumbs/0ee1b30a809c80b7272297875d9288b2-256x256.png" alt="hgimg4 サンプル test6"></a>
-<a href="/images/2016_0326_hgimg4_test7.png"><img src="/_thumbs/fb8331afdbe5be612ce12d5b6e084058-256x256.png" alt="hgimg4 サンプル test7"></a>
-<a href="/images/2016_0326_hgimg4_test8.png"><img src="/_thumbs/7721eeef26d9c47dceab361c3bf05b55-256x256.png" alt="hgimg4 サンプル test8"></a>
-<a href="/images/2016_0326_hgimg4_test9.png"><img src="/_thumbs/605ffbef1139b6b8bc46f69d73d86b6b-256x256.png" alt="hgimg4 サンプル test9"></a>
-<a href="/images/2016_0326_hgimg4_test10.png"><img src="/_thumbs/96a44b6e76b6511e3f1b069f3f0457f8-256x256.png" alt="hgimg4 サンプル test10"></a>
-<a href="/images/2016_0326_hgimg4_test11.png"><img src="/_thumbs/820f347f4df1ae5f73069937720df6f8-256x256.png" alt="hgimg4 サンプル test11"></a>
-<a href="/images/2016_0326_hgimg4_test12.png"><img src="/_thumbs/8e056d3f9c8cfc709817396d5b66e0a4-256x256.png" alt="hgimg4 サンプル test12"></a>
-<a href="/images/2016_0326_hgimg4_test13.png"><img src="/_thumbs/a84bf8234192e3ff26852dbfc6623d41-256x256.png" alt="hgimg4 サンプル test13"></a>
-<a href="/images/2016_0326_hgimg4_block3.png"><img src="/_thumbs/ad5e652367972a2d7884af6008565618-256x256.png" alt="hgimg4 サンプル block3"></a></p>
+<p><a href="/images/2016_0326_hgimg4_test1.png"><img src="/thumbs/9909f635e32ecccd3d061bd49f5718cc-256x256.png" alt="hgimg4 サンプル test1"></a>
+<a href="/images/2016_0326_hgimg4_test2.png"><img src="/thumbs/6225a1255e77e5d0d46b35b487e5397c-256x256.png" alt="hgimg4 サンプル test2"></a>
+<a href="/images/2016_0326_hgimg4_test3.png"><img src="/thumbs/75789f539377222aba6535d5e37b00ad-256x256.png" alt="hgimg4 サンプル test3"></a>
+<a href="/images/2016_0326_hgimg4_test4.png"><img src="/thumbs/06caf84bc1fb78e628676a0a75c4ca71-256x256.png" alt="hgimg4 サンプル test4"></a>
+<a href="/images/2016_0326_hgimg4_test5.png"><img src="/thumbs/b2f896301fb8295cfc6a63134c8860fa-256x256.png" alt="hgimg4 サンプル test5"></a>
+<a href="/images/2016_0326_hgimg4_test6.png"><img src="/thumbs/0ee1b30a809c80b7272297875d9288b2-256x256.png" alt="hgimg4 サンプル test6"></a>
+<a href="/images/2016_0326_hgimg4_test7.png"><img src="/thumbs/fb8331afdbe5be612ce12d5b6e084058-256x256.png" alt="hgimg4 サンプル test7"></a>
+<a href="/images/2016_0326_hgimg4_test8.png"><img src="/thumbs/7721eeef26d9c47dceab361c3bf05b55-256x256.png" alt="hgimg4 サンプル test8"></a>
+<a href="/images/2016_0326_hgimg4_test9.png"><img src="/thumbs/605ffbef1139b6b8bc46f69d73d86b6b-256x256.png" alt="hgimg4 サンプル test9"></a>
+<a href="/images/2016_0326_hgimg4_test10.png"><img src="/thumbs/96a44b6e76b6511e3f1b069f3f0457f8-256x256.png" alt="hgimg4 サンプル test10"></a>
+<a href="/images/2016_0326_hgimg4_test11.png"><img src="/thumbs/820f347f4df1ae5f73069937720df6f8-256x256.png" alt="hgimg4 サンプル test11"></a>
+<a href="/images/2016_0326_hgimg4_test12.png"><img src="/thumbs/8e056d3f9c8cfc709817396d5b66e0a4-256x256.png" alt="hgimg4 サンプル test12"></a>
+<a href="/images/2016_0326_hgimg4_test13.png"><img src="/thumbs/a84bf8234192e3ff26852dbfc6623d41-256x256.png" alt="hgimg4 サンプル test13"></a>
+<a href="/images/2016_0326_hgimg4_block3.png"><img src="/thumbs/ad5e652367972a2d7884af6008565618-256x256.png" alt="hgimg4 サンプル block3"></a></p>
 
 <p><a href="http://dev.onionsoft.net/seed/info.ax?id=1077">ヨミチハコワイ</a>
 (c) 法貴 優雅（MYAOSOFT）/ <a href="https://twitter.com/MYAOSOFT">@MYAOSOFT</a></p>
 
-<p><a href="/images/2016_0326_hsp_contest_2015_no1077_ss_01.png"><img src="/_thumbs/c6a5cc7b92acf6127054f3edbe0f6867-256x256.png" alt="ヨミチハコワイ 01"></a>
-<a href="/images/2016_0326_hsp_contest_2015_no1077_ss_02.png"><img src="/_thumbs/85b6912a8e8af5d7b013385f29a8878c-256x256.png" alt="ヨミチハコワイ 02"></a>
-<a href="/images/2016_0326_hsp_contest_2015_no1077_ss_03.png"><img src="/_thumbs/2b49015e278dcc10bab77fe863dadd26-256x256.png" alt="ヨミチハコワイ 03"></a></p>
+<p><a href="/images/2016_0326_hsp_contest_2015_no1077_ss_01.png"><img src="/thumbs/c6a5cc7b92acf6127054f3edbe0f6867-256x256.png" alt="ヨミチハコワイ 01"></a>
+<a href="/images/2016_0326_hsp_contest_2015_no1077_ss_02.png"><img src="/thumbs/85b6912a8e8af5d7b013385f29a8878c-256x256.png" alt="ヨミチハコワイ 02"></a>
+<a href="/images/2016_0326_hsp_contest_2015_no1077_ss_03.png"><img src="/thumbs/2b49015e278dcc10bab77fe863dadd26-256x256.png" alt="ヨミチハコワイ 03"></a></p>
 
 <p><a href="http://dev.onionsoft.net/seed/info.ax?id=1084">R-sim++</a>
 (c) hashikemu / <a href="https://twitter.com/kemuduino">@hashikemu</a></p>
 
-<p><a href="/images/2016_0326_hsp_contest_2015_no1084_ss_01.png"><img src="/_thumbs/5e254af57f6df3f1a0e6636aef19175d-256x256.png" alt="R-sim++ 01"></a>
-<a href="/images/2016_0326_hsp_contest_2015_no1084_ss_02.png"><img src="/_thumbs/cabc8d6a7d789a12153a0c6e4b8d25d2-256x256.png" alt="R-sim++ 02"></a>
-<a href="/images/2016_0326_hsp_contest_2015_no1084_ss_03.png"><img src="/_thumbs/1b694ea19f12b779d33fcdafd81f58cd-256x256.png" alt="R-sim++ 03"></a></p>
+<p><a href="/images/2016_0326_hsp_contest_2015_no1084_ss_01.png"><img src="/thumbs/5e254af57f6df3f1a0e6636aef19175d-256x256.png" alt="R-sim++ 01"></a>
+<a href="/images/2016_0326_hsp_contest_2015_no1084_ss_02.png"><img src="/thumbs/cabc8d6a7d789a12153a0c6e4b8d25d2-256x256.png" alt="R-sim++ 02"></a>
+<a href="/images/2016_0326_hsp_contest_2015_no1084_ss_03.png"><img src="/thumbs/1b694ea19f12b779d33fcdafd81f58cd-256x256.png" alt="R-sim++ 03"></a></p>
 
 <h2 id="%E5%8F%82%E8%80%83">参考</h2>
 

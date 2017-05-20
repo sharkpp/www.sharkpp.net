@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/Advent%20Calendar.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-05-20T14:33:50+00:00</updated>
+    <updated>2017-05-20T14:43:02+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -436,7 +436,7 @@ HSPCVといえば実装がされたHSP公開数日後(もしかしたら翌日�
 
 <p><a href="http://doc.qt.io/qt-5/ios-support.html#using-objective-c-code-in-qt-applications">Using Objective-C Code in Qt Applications</a> に書かれているように <code>OBJECTIVE_SOURCES</code> に <code>.mm</code> ファイルを追加しますが、「クラスの定義」でソースファイル名の拡張子を <code>.mm</code> に変更した場合は自動で設定してくれるようです。</p>
 
-<p><a href="/images/2016_1210_qtcreator_newclass.png"><img src="/_thumbs/9821c8921f122c38b6db04654a1b4bba-384x384.png" alt="Qt Creator"></a></p>
+<p><a href="/images/2016_1210_qtcreator_newclass.png"><img src="/thumbs/9821c8921f122c38b6db04654a1b4bba-384x384.png" alt="Qt Creator"></a></p>
 
 <p>また、 <code>NSButton</code> などを利用するので .pro に AppKit をリンクするように <code>LIBS</code> に追加します。</p>
 
@@ -511,7 +511,7 @@ void CocoaButton::resizeEvent(QResizeEvent *event)
 
 <p>このような形でシグナルを受け取ることができます。</p>
 
-<p><a href="/images/2016_1210_sample_ss.png"><img src="/_thumbs/199fc30fdfe0a59ceab9e8c4e83bc0e6-384x384.png" alt="Qt Creator"></a></p>
+<p><a href="/images/2016_1210_sample_ss.png"><img src="/thumbs/199fc30fdfe0a59ceab9e8c4e83bc0e6-384x384.png" alt="Qt Creator"></a></p>
 
 <p>実際に動かすとこんな感じです。</p>
 
@@ -602,34 +602,34 @@ IE コンポーネントがうまく動作しない模様なので</li>
 
 <p>上記バージョンで動作させると</p>
 
-<p><a href="/images/2016_1201_hsp3_throw_error_with_lastest_wine.png"><img src="/_thumbs/4d2bdb380dd65586fc0f3cb359b39d34-384x384.png" alt="最新のWineでHSPを実行するとエラーが出る"></a></p>
+<p><a href="/images/2016_1201_hsp3_throw_error_with_lastest_wine.png"><img src="/thumbs/4d2bdb380dd65586fc0f3cb359b39d34-384x384.png" alt="最新のWineでHSPを実行するとエラーが出る"></a></p>
 
 <p>のような感じで画像読み込み時にエラーが出ます。</p>
 
 <p>なので、</p>
 
-<p><a href="/images/2016_1201_wine_mac_archive_link.png"><img src="/_thumbs/30fb512f557aef34bf097ac8406e2232-384x384.png" alt="Wine の過去にリリースされたファイルの一覧ページへ"></a> 
-<a href="/images/2016_1201_wine_mac_find_package.png"><img src="/_thumbs/2f5dc8ee3deb899b4dc0c02eef5d9dfd-384x384.png" alt="Wine 1.9.8 のパッケージを探す"></a></p>
+<p><a href="/images/2016_1201_wine_mac_archive_link.png"><img src="/thumbs/30fb512f557aef34bf097ac8406e2232-384x384.png" alt="Wine の過去にリリースされたファイルの一覧ページへ"></a> 
+<a href="/images/2016_1201_wine_mac_find_package.png"><img src="/thumbs/2f5dc8ee3deb899b4dc0c02eef5d9dfd-384x384.png" alt="Wine 1.9.8 のパッケージを探す"></a></p>
 
 <p>このように辿り、<a href="https://dl.winehq.org/wine-builds/macosx/i686/">Index of /wine-builds/macosx/i686</a> から <code>winehq-staging-1.9.8.pkg</code> をダウンロードしインストールしていきます。</p>
 
 <h3 id="wine-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">Wine のインストール</h3>
 
-<p><a href="/images/2016_1201_wine_install_wizard_page_1.png"><img src="/_thumbs/20843081dfc77af1871777b78752172a-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 01"></a> 
-<a href="/images/2016_1201_wine_install_wizard_page_2.png"><img src="/_thumbs/62a72b0957ba33d2e9e25450fb2ea423-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 02"></a> 
-<a href="/images/2016_1201_wine_install_wizard_page_3.png"><img src="/_thumbs/5e8f072785fd5473d8d0df3e73dc8b72-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 03"></a> 
-<a href="/images/2016_1201_wine_install_wizard_page_4.png"><img src="/_thumbs/1e26bc8228b6c2373e2c5e130df4c8d3-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 04"></a> 
-<a href="/images/2016_1201_wine_install_wizard_page_5.png"><img src="/_thumbs/9f7937bfe8b23939169398ca9e5a3444-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 05"></a> 
-<a href="/images/2016_1201_wine_install_wizard_page_6.png"><img src="/_thumbs/8414c79a227cf3eb3201af1d62deb5e7-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 06"></a> 
-<a href="/images/2016_1201_wine_install_wizard_page_7.png"><img src="/_thumbs/736c27a4bedefc9fb27a6d7916b82439-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 07"></a></p>
+<p><a href="/images/2016_1201_wine_install_wizard_page_1.png"><img src="/thumbs/20843081dfc77af1871777b78752172a-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 01"></a> 
+<a href="/images/2016_1201_wine_install_wizard_page_2.png"><img src="/thumbs/62a72b0957ba33d2e9e25450fb2ea423-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 02"></a> 
+<a href="/images/2016_1201_wine_install_wizard_page_3.png"><img src="/thumbs/5e8f072785fd5473d8d0df3e73dc8b72-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 03"></a> 
+<a href="/images/2016_1201_wine_install_wizard_page_4.png"><img src="/thumbs/1e26bc8228b6c2373e2c5e130df4c8d3-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 04"></a> 
+<a href="/images/2016_1201_wine_install_wizard_page_5.png"><img src="/thumbs/9f7937bfe8b23939169398ca9e5a3444-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 05"></a> 
+<a href="/images/2016_1201_wine_install_wizard_page_6.png"><img src="/thumbs/8414c79a227cf3eb3201af1d62deb5e7-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 06"></a> 
+<a href="/images/2016_1201_wine_install_wizard_page_7.png"><img src="/thumbs/736c27a4bedefc9fb27a6d7916b82439-128x128.png" alt="Wine 1.9.8 インストールウィザード ページ 07"></a></p>
 
 <p>インストールウィザードでは特に選択を変更する部分はありません。</p>
 
-<p><a href="/images/2016_1201_wine_in_applications.png"><img src="/_thumbs/13e5b4843ca08e1bfbc39f907258f113-384x384.png" alt="アプリケーションにインストールされたWine"></a></p>
+<p><a href="/images/2016_1201_wine_in_applications.png"><img src="/thumbs/13e5b4843ca08e1bfbc39f907258f113-384x384.png" alt="アプリケーションにインストールされたWine"></a></p>
 
 <p>インストールが完了すると、アプリケーションに追加されます。</p>
 
-<p><a href="/images/2016_1201_wine_console.png"><img src="/_thumbs/8ed440fda3dd2fc4dfae39accc32d45c-384x384.png" alt="Wineコンソール"></a></p>
+<p><a href="/images/2016_1201_wine_console.png"><img src="/thumbs/8ed440fda3dd2fc4dfae39accc32d45c-384x384.png" alt="Wineコンソール"></a></p>
 
 <p>アプリケーションから <code>Wine Staging</code> を選び、ターミナルを起動します。
 ターミナルから</p>
@@ -639,7 +639,7 @@ IE コンポーネントがうまく動作しない模様なので</li>
 
 <p>と入力し実行すると、 <code>winecfg</code> が起動する前に、Wine の動作環境の作成が行われます。</p>
 
-<p><a href="/images/2016_1201_wine_mono_install_select.png"><img src="/_thumbs/b6a8591a422d0597a5380158439bc59b-384x384.png" alt="Wine環境構築中のWine-Monoインストール確認"></a></p>
+<p><a href="/images/2016_1201_wine_mono_install_select.png"><img src="/thumbs/b6a8591a422d0597a5380158439bc59b-384x384.png" alt="Wine環境構築中のWine-Monoインストール確認"></a></p>
 
 <p>途中、 Wine-Mono をインストールするかどうか聞かれますが、これはどちらを選んでも問題ないです。</p>
 
@@ -649,7 +649,7 @@ IE コンポーネントがうまく動作しない模様なので</li>
 
 <p>設定しないと</p>
 
-<p><a href="/images/2016_0326_hsp_install_wizard_tofu.png"><img src="/_thumbs/e2f456d9675823508a2d47ecb49a0bca-256x256.png" alt="HSP インストールウィザード 豆腐"></a></p>
+<p><a href="/images/2016_0326_hsp_install_wizard_tofu.png"><img src="/thumbs/e2f456d9675823508a2d47ecb49a0bca-256x256.png" alt="HSP インストールウィザード 豆腐"></a></p>
 
 <p>こんな感じになります。</p>
 
@@ -748,8 +748,8 @@ $ rm -f NotoSansCJKjp-hinted.zip LICENSE_OFL.txt
 
 <p><a href="http://hsp.tv/make/downlist.html">http://hsp.tv/make/downlist.html</a> から HSP 3.4 をダウンロードしてください。</p>
 
-<p><a href="/images/2016_1201_hsp3_download.png"><img src="/_thumbs/f8bde4f60f8a4926975e8b4997c59f9c-384x384.png" alt="hsp.tv"></a> 
-<a href="/images/2016_1201_hsp3_download_list_page.png"><img src="/_thumbs/0a55fd8f63615f92762cb454ff1d8c36-384x384.png" alt="hsp.tv HSPダウンロードページ"></a></p>
+<p><a href="/images/2016_1201_hsp3_download.png"><img src="/thumbs/f8bde4f60f8a4926975e8b4997c59f9c-384x384.png" alt="hsp.tv"></a> 
+<a href="/images/2016_1201_hsp3_download_list_page.png"><img src="/thumbs/0a55fd8f63615f92762cb454ff1d8c36-384x384.png" alt="hsp.tv HSPダウンロードページ"></a></p>
 
 <h3 id="hsp-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">HSP のインストール</h3>
 
@@ -759,17 +759,17 @@ $ rm -f NotoSansCJKjp-hinted.zip LICENSE_OFL.txt
 
 <p>それ以外のインストール先などは、お好みで。</p>
 
-<p><a href="/images/2016_1201_hsp_install_wizard_page_1.png"><img src="/_thumbs/d6d8ca748755902b7f4fb2a783238025-128x128.png" alt="HSP 3.4 インストールウィザード ページ 01"></a> 
-<a href="/images/2016_1201_hsp_install_wizard_page_2.png"><img src="/_thumbs/8c10c7f04723aef7551c2a9f20b5b697-128x128.png" alt="HSP 3.4 インストールウィザード ページ 02"></a> 
-<a href="/images/2016_1201_hsp_install_wizard_page_3.png"><img src="/_thumbs/71954faafec64ecdefcbceb9c4e2251c-128x128.png" alt="HSP 3.4 インストールウィザード ページ 03"></a> 
-<a href="/images/2016_1201_hsp_install_wizard_page_4.png"><img src="/_thumbs/95c9d676804dff72d93fbdacc0c2bc27-128x128.png" alt="HSP 3.4 インストールウィザード ページ 04"></a> 
-<a href="/images/2016_1201_hsp_install_wizard_page_5.png"><img src="/_thumbs/8a10d80408688d9d8638ea7bb00d8110-128x128.png" alt="HSP 3.4 インストールウィザード ページ 05"></a> 
-<a href="/images/2016_1201_hsp_install_wizard_page_6.png"><img src="/_thumbs/106dd846e3dfd7ca39ed4f4e27152818-128x128.png" alt="HSP 3.4 インストールウィザード ページ 06"></a> 
-<a href="/images/2016_1201_hsp_install_wizard_page_7.png"><img src="/_thumbs/13a0fac17951990a9d55355605bc729b-128x128.png" alt="HSP 3.4 インストールウィザード ページ 07"></a></p>
+<p><a href="/images/2016_1201_hsp_install_wizard_page_1.png"><img src="/thumbs/d6d8ca748755902b7f4fb2a783238025-128x128.png" alt="HSP 3.4 インストールウィザード ページ 01"></a> 
+<a href="/images/2016_1201_hsp_install_wizard_page_2.png"><img src="/thumbs/8c10c7f04723aef7551c2a9f20b5b697-128x128.png" alt="HSP 3.4 インストールウィザード ページ 02"></a> 
+<a href="/images/2016_1201_hsp_install_wizard_page_3.png"><img src="/thumbs/71954faafec64ecdefcbceb9c4e2251c-128x128.png" alt="HSP 3.4 インストールウィザード ページ 03"></a> 
+<a href="/images/2016_1201_hsp_install_wizard_page_4.png"><img src="/thumbs/95c9d676804dff72d93fbdacc0c2bc27-128x128.png" alt="HSP 3.4 インストールウィザード ページ 04"></a> 
+<a href="/images/2016_1201_hsp_install_wizard_page_5.png"><img src="/thumbs/8a10d80408688d9d8638ea7bb00d8110-128x128.png" alt="HSP 3.4 インストールウィザード ページ 05"></a> 
+<a href="/images/2016_1201_hsp_install_wizard_page_6.png"><img src="/thumbs/106dd846e3dfd7ca39ed4f4e27152818-128x128.png" alt="HSP 3.4 インストールウィザード ページ 06"></a> 
+<a href="/images/2016_1201_hsp_install_wizard_page_7.png"><img src="/thumbs/13a0fac17951990a9d55355605bc729b-128x128.png" alt="HSP 3.4 インストールウィザード ページ 07"></a></p>
 
 <p>インストールが完了したら、デモアプリが起動します。</p>
 
-<p><a href="/images/2016_1201_hsp_demo.png"><img src="/_thumbs/0b46aff93b34371fc3fbfc981f123232-384x384.png" alt="HSPのデモアプリ"></a></p>
+<p><a href="/images/2016_1201_hsp_demo.png"><img src="/thumbs/0b46aff93b34371fc3fbfc981f123232-384x384.png" alt="HSPのデモアプリ"></a></p>
 
 <p>エラーもなく起動していれば OK です。</p>
 
@@ -780,15 +780,15 @@ $ rm -f NotoSansCJKjp-hinted.zip LICENSE_OFL.txt
 
 <p>スクリプトエディタの実行ファイルを起動すると、Windwos と同じようにエディタが起動すると思います。</p>
 
-<p><a href="/images/2016_1201_hsp_script_edtor.png"><img src="/_thumbs/97b79398c171fb59a71f4749777b06e1-384x384.png" alt="HSPの標準エディタ"></a></p>
+<p><a href="/images/2016_1201_hsp_script_edtor.png"><img src="/thumbs/97b79398c171fb59a71f4749777b06e1-384x384.png" alt="HSPの標準エディタ"></a></p>
 
 <p>ついでにアシスタントも起動しているので、必要なければ設定から起動しないようにしておきましょう。</p>
 
-<p><a href="/images/2016_1201_hsp_script_edtor_disable_auto_run_assistant.png"><img src="/_thumbs/4bf083e788d1bfeb05b06096b3a2ff06-384x384.png" alt="HSPの標準エディタの設定を変更"></a></p>
+<p><a href="/images/2016_1201_hsp_script_edtor_disable_auto_run_assistant.png"><img src="/thumbs/4bf083e788d1bfeb05b06096b3a2ff06-384x384.png" alt="HSPの標準エディタの設定を変更"></a></p>
 
 <p>この時点で、HSPDishのプログラムもコンパイルできるようになっていると思います。</p>
 
-<p><a href="/images/2016_1201_hspdish_sample.png"><img src="/_thumbs/b8fde9d75e7d5f5ef6ba9a6325616c8b-384x384.png" alt="HSPDishのサンプル"></a></p>
+<p><a href="/images/2016_1201_hspdish_sample.png"><img src="/thumbs/b8fde9d75e7d5f5ef6ba9a6325616c8b-384x384.png" alt="HSPDishのサンプル"></a></p>
 
 <p>hgimg4 を利用する場合は、もう少し手間がかかります。</p>
 
@@ -916,7 +916,7 @@ $ rm -f NotoSansCJKjp-hinted.zip LICENSE_OFL.txt
 
 <p>実際のパッケージは <a href="https://github.com/sharkpp/fuel-commentbox">sharkpp/fuel-commentbox</a> からダウンロードできます。</p>
 
-<p><a href="/images/2015_1205_fuel_5th_example.png"><img src="/_thumbs/2cfb4ea909d3694cb9ebc8bc118c223e-512x512.png" alt="画面例"></a></p>
+<p><a href="/images/2015_1205_fuel_5th_example.png"><img src="/thumbs/2cfb4ea909d3694cb9ebc8bc118c223e-512x512.png" alt="画面例"></a></p>
 
 <p>こんな画面になります。</p>
 
@@ -1428,11 +1428,11 @@ $ php oil g model page title:string body:text body_html:text brief:string --temp
 
 <p>実装すると、ページの編集ができるようになります。</p>
 
-<p><a href="/images/2015_1204_fuel_4th_editing.png"><img src="/_thumbs/32e1813e0bc4e7a012b748c5263e4779-256x256.png" alt="編集中"></a></p>
+<p><a href="/images/2015_1204_fuel_4th_editing.png"><img src="/thumbs/32e1813e0bc4e7a012b748c5263e4779-256x256.png" alt="編集中"></a></p>
 
 <p>またプレビュー機能も同時に実装しています。</p>
 
-<p><a href="/images/2015_1204_fuel_4th_editing_preview.png"><img src="/_thumbs/6f633f1b809c34d8892cbbc7187817d7-256x256.png" alt="編集中のプレビュー"></a></p>
+<p><a href="/images/2015_1204_fuel_4th_editing_preview.png"><img src="/thumbs/6f633f1b809c34d8892cbbc7187817d7-256x256.png" alt="編集中のプレビュー"></a></p>
 
 <p><code>fuel/app/classes/controller/page.php</code></p>
 
@@ -1517,7 +1517,7 @@ $ php oil g model page title:string body:text body_html:text brief:string --temp
 
 <p>実装すると追加したページの一覧が、</p>
 
-<p><a href="/images/2015_1204_fuel_4th_page_list.png"><img src="/_thumbs/e85a6468e24b04b7fb73195c6775a7b8-256x256.png" alt="リスト表示"></a></p>
+<p><a href="/images/2015_1204_fuel_4th_page_list.png"><img src="/thumbs/e85a6468e24b04b7fb73195c6775a7b8-256x256.png" alt="リスト表示"></a></p>
 
 <p>と、このような感じで表示できるようになります。</p>
 
@@ -1555,7 +1555,7 @@ $ php oil g model page title:string body:text body_html:text brief:string --temp
 
 <p>実装するとページの編集履歴が</p>
 
-<p><a href="/images/2015_1204_fuel_4th_revision.png"><img src="/_thumbs/ccc99f4b994b0f8ff4c582dee40eb0c4-256x256.png" alt="履歴"></a></p>
+<p><a href="/images/2015_1204_fuel_4th_revision.png"><img src="/thumbs/ccc99f4b994b0f8ff4c582dee40eb0c4-256x256.png" alt="履歴"></a></p>
 
 <p>と、このような感じで表示できるようになります。</p>
 
@@ -1599,7 +1599,7 @@ $ php oil g model page title:string body:text body_html:text brief:string --temp
 
 <p>実装すると削除処理ができるようになります。</p>
 
-<p><a href="/images/2015_1204_fuel_4th_delete.png"><img src="/_thumbs/2cdf9085abd8d7791b23c8d9ba986fc3-256x256.png" alt="削除"></a></p>
+<p><a href="/images/2015_1204_fuel_4th_delete.png"><img src="/thumbs/2cdf9085abd8d7791b23c8d9ba986fc3-256x256.png" alt="削除"></a></p>
 
 <p><code>fuel/app/classes/controller/page.php</code></p>
 

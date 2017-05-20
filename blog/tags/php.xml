@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/php.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-05-20T14:33:50+00:00</updated>
+    <updated>2017-05-20T14:43:02+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -38,21 +38,21 @@
 
 <p>まずは <a href="https://console.developers.google.com/">Google API Console</a> へアクセスし、プロジェクトを作成します。</p>
 
-<p><a href="/images/2016_0922_gsapi_01_api_console.png"><img src="/_thumbs/b4ed5f9cdcb99ba5dd3e7320ef6d2dee-512x512.png" alt="API Console"></a></p>
+<p><a href="/images/2016_0922_gsapi_01_api_console.png"><img src="/thumbs/b4ed5f9cdcb99ba5dd3e7320ef6d2dee-512x512.png" alt="API Console"></a></p>
 
 <p>初めて Google API Console へアクセスの場合は、プロジェクトが作成されていないので、どん！と、「プロジェクトの作成」ボタンが表示されます。</p>
 
-<p><a href="/images/2016_0922_gsapi_02_add_project_from_menu.png"><img src="/_thumbs/6f5470aa8cba6258db79fe1e27302f5b-512x512.png" alt="メニューからのプロジェクトの追加"></a></p>
+<p><a href="/images/2016_0922_gsapi_02_add_project_from_menu.png"><img src="/thumbs/6f5470aa8cba6258db79fe1e27302f5b-512x512.png" alt="メニューからのプロジェクトの追加"></a></p>
 
 <p>すでに別のプロジェクトがある場合は、そのまま使うか、メニューから「プロジェクトを作成」を選んでください。</p>
 
-<p><a href="/images/2016_0922_gsapi_03_add_project_wizard.png"><img src="/_thumbs/ed6917ddbf28b5689d3237936dff2362-512x512.png" alt="プロジェクトの追加のウィザード"></a></p>
+<p><a href="/images/2016_0922_gsapi_03_add_project_wizard.png"><img src="/thumbs/ed6917ddbf28b5689d3237936dff2362-512x512.png" alt="プロジェクトの追加のウィザード"></a></p>
 
 <p>プロジェクト名などを設定し、「作成」ボタンを押下するとプロジェクトが作成されます。</p>
 
 <h3 id="%E8%AA%8D%E8%A8%BC%E6%83%85%E5%A0%B1%E3%82%92%E4%BD%9C%E6%88%90">認証情報を作成</h3>
 
-<p><a href="/images/2016_0922_gsapi_04_add_auth_select_type.png"><img src="/_thumbs/0796ae157cf798dec123b3f6d93f913f-512x512.png" alt="認証情報の種類の選択肢"></a></p>
+<p><a href="/images/2016_0922_gsapi_04_add_auth_select_type.png"><img src="/thumbs/0796ae157cf798dec123b3f6d93f913f-512x512.png" alt="認証情報の種類の選択肢"></a></p>
 
 <p>左側のナビメニューから「認証情報」を選択し、「認証情報の作成」を選ぶと、作成する認証情報の種別が表示されます。</p>
 
@@ -88,7 +88,7 @@
 <p>その他の種別でのアクセス方法は、<a href="https://developers.google.com/sheets/quickstart/php">PHP Quickstart  |  Sheets API  |  Google Developers</a> や <a href="https://developers.google.com/api-client-library/php/">API Client Library for PHP (Beta)  |  Google Developers</a>
  などを参考にしてみてください。</p>
 
-<p><a href="/images/2016_0922_gsapi_05_add_auth_select_account_type.png"><img src="/_thumbs/7128de0de57e7f3b016e1775f7af4545-512x512.png" alt="サービスアカウントの種類の選択肢"></a></p>
+<p><a href="/images/2016_0922_gsapi_05_add_auth_select_account_type.png"><img src="/thumbs/7128de0de57e7f3b016e1775f7af4545-512x512.png" alt="サービスアカウントの種類の選択肢"></a></p>
 
 <p>サービスアカウントの種類は、</p>
 
@@ -99,11 +99,11 @@
 
 <p>の二種類が今のところ最初から用意されているようです。</p>
 
-<p><a href="/images/2016_0922_gsapi_06_add_auth_select_account_type.png"><img src="/_thumbs/e692f89fec3de8c21fc0b299ee1e81f3-512x512.png" alt="サービスアカウントの種類の選択"></a></p>
+<p><a href="/images/2016_0922_gsapi_06_add_auth_select_account_type.png"><img src="/thumbs/e692f89fec3de8c21fc0b299ee1e81f3-512x512.png" alt="サービスアカウントの種類の選択"></a></p>
 
 <p>今回選ぶのは「App Engine default service account」で、キーのタイプは「JSON」です。</p>
 
-<p><a href="/images/2016_0922_gsapi_07_auth_key_downloaded.png"><img src="/_thumbs/b895feb479f467a128587579783c8fb2-512x512.png" alt="認証情報のダウンロード"></a></p>
+<p><a href="/images/2016_0922_gsapi_07_auth_key_downloaded.png"><img src="/thumbs/b895feb479f467a128587579783c8fb2-512x512.png" alt="認証情報のダウンロード"></a></p>
 
 <p>作成すると、キーがダウンロードされるので大切に保管しましょう。</p>
 
@@ -117,19 +117,19 @@
 
 <p>API を経由してスプレッドシートへアクセスできるように共有を作成します。</p>
 
-<p><a href="/images/2016_0922_gsapi_08_spreadsheet_share_for_api.png"><img src="/_thumbs/260e5b9fc8ffe8879eeceefd83ef7314-512x512.png" alt="API 用にスプレッドシートを共有"></a></p>
+<p><a href="/images/2016_0922_gsapi_08_spreadsheet_share_for_api.png"><img src="/thumbs/260e5b9fc8ffe8879eeceefd83ef7314-512x512.png" alt="API 用にスプレッドシートを共有"></a></p>
 
 <p>書き込みしないのであれば、「閲覧者」でも問題ないかもしれませんが、試していません。</p>
 
-<p><a href="/images/2016_0922_gsapi_09_service_account_key_email.png"><img src="/_thumbs/7f521331334e9d8c580987e042ed8727-512x512.png" alt="サービスアカウントキーの電子メール"></a></p>
+<p><a href="/images/2016_0922_gsapi_09_service_account_key_email.png"><img src="/thumbs/7f521331334e9d8c580987e042ed8727-512x512.png" alt="サービスアカウントキーの電子メール"></a></p>
 
 <p>この時、設定するメールアドレスは、<a href="https://console.developers.google.com/iam-admin/serviceaccounts/">IAM と管理</a> の「サービスアカウント」メニューから取得できます。</p>
 
-<p><a href="/images/2016_0922_gsapi_10_service_account_key_email_from_json.png"><img src="/_thumbs/093622c2b71fb2037c0be98cf5518e9b-512x512.png" alt="認証情報 JSON に書かれたサービスアカウントキーの電子メール"></a></p>
+<p><a href="/images/2016_0922_gsapi_10_service_account_key_email_from_json.png"><img src="/thumbs/093622c2b71fb2037c0be98cf5518e9b-512x512.png" alt="認証情報 JSON に書かれたサービスアカウントキーの電子メール"></a></p>
 
 <p>ダウンロードした、秘密鍵を含むキーファイルにも書かれているので、JSON を開いた中の <code>client_email</code> からも取得できます。</p>
 
-<p><a href="/images/2016_0922_gsapi_11_service_account_keys_list.png"><img src="/_thumbs/7bc0205120c10ee549155f9cccc10081-512x512.png" alt="サービスアカウントの一覧"></a></p>
+<p><a href="/images/2016_0922_gsapi_11_service_account_keys_list.png"><img src="/thumbs/7bc0205120c10ee549155f9cccc10081-512x512.png" alt="サービスアカウントの一覧"></a></p>
 
 <p>API Console の「認証情報」メニューを選び「サービス アカウントの管理」のリンクから飛ぶことができます。</p>
 
@@ -167,13 +167,13 @@
 
 <p>と、「API が有効になっていないなどで、操作ができなかったよ」と書かれています。</p>
 
-<p><a href="/images/2016_0922_gsapi_12_spreadsheet_api_enable.png"><img src="/_thumbs/fb0a318c501a66421493d2bc091c9014-512x512.png" alt="Sheats API を有効に"></a></p>
+<p><a href="/images/2016_0922_gsapi_12_spreadsheet_api_enable.png"><img src="/thumbs/fb0a318c501a66421493d2bc091c9014-512x512.png" alt="Sheats API を有効に"></a></p>
 
 <p>なので、指示に従い <a href="https://console.developers.google.com/apis/api/sheets.googleapis.com/overview">Google Sheets API - API Manager</a> から API を有効にします。</p>
 
 <h2 id="%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89">サンプルコード</h2>
 
-<p><a href="/images/2016_0922_gsapi_13_spreadsheet_read_area.png"><img src="/_thumbs/c1b6ec67fc2b678be4035bffb1863cd9-512x512.png" alt="スプレッドシートの読み取りエリア"></a></p>
+<p><a href="/images/2016_0922_gsapi_13_spreadsheet_read_area.png"><img src="/thumbs/c1b6ec67fc2b678be4035bffb1863cd9-512x512.png" alt="スプレッドシートの読み取りエリア"></a></p>
 
 <p>B2:B3 に 値を書き込み、 A1:D5 までを取得するという、簡単なサンプルコードです。</p>
 
@@ -1469,7 +1469,7 @@ $ php _format-diff.php
 
 <p>実際のパッケージは <a href="https://github.com/sharkpp/fuel-commentbox">sharkpp/fuel-commentbox</a> からダウンロードできます。</p>
 
-<p><a href="/images/2015_1205_fuel_5th_example.png"><img src="/_thumbs/2cfb4ea909d3694cb9ebc8bc118c223e-512x512.png" alt="画面例"></a></p>
+<p><a href="/images/2015_1205_fuel_5th_example.png"><img src="/thumbs/2cfb4ea909d3694cb9ebc8bc118c223e-512x512.png" alt="画面例"></a></p>
 
 <p>こんな画面になります。</p>
 
@@ -1981,11 +1981,11 @@ $ php oil g model page title:string body:text body_html:text brief:string --temp
 
 <p>実装すると、ページの編集ができるようになります。</p>
 
-<p><a href="/images/2015_1204_fuel_4th_editing.png"><img src="/_thumbs/32e1813e0bc4e7a012b748c5263e4779-256x256.png" alt="編集中"></a></p>
+<p><a href="/images/2015_1204_fuel_4th_editing.png"><img src="/thumbs/32e1813e0bc4e7a012b748c5263e4779-256x256.png" alt="編集中"></a></p>
 
 <p>またプレビュー機能も同時に実装しています。</p>
 
-<p><a href="/images/2015_1204_fuel_4th_editing_preview.png"><img src="/_thumbs/6f633f1b809c34d8892cbbc7187817d7-256x256.png" alt="編集中のプレビュー"></a></p>
+<p><a href="/images/2015_1204_fuel_4th_editing_preview.png"><img src="/thumbs/6f633f1b809c34d8892cbbc7187817d7-256x256.png" alt="編集中のプレビュー"></a></p>
 
 <p><code>fuel/app/classes/controller/page.php</code></p>
 
@@ -2070,7 +2070,7 @@ $ php oil g model page title:string body:text body_html:text brief:string --temp
 
 <p>実装すると追加したページの一覧が、</p>
 
-<p><a href="/images/2015_1204_fuel_4th_page_list.png"><img src="/_thumbs/e85a6468e24b04b7fb73195c6775a7b8-256x256.png" alt="リスト表示"></a></p>
+<p><a href="/images/2015_1204_fuel_4th_page_list.png"><img src="/thumbs/e85a6468e24b04b7fb73195c6775a7b8-256x256.png" alt="リスト表示"></a></p>
 
 <p>と、このような感じで表示できるようになります。</p>
 
@@ -2108,7 +2108,7 @@ $ php oil g model page title:string body:text body_html:text brief:string --temp
 
 <p>実装するとページの編集履歴が</p>
 
-<p><a href="/images/2015_1204_fuel_4th_revision.png"><img src="/_thumbs/ccc99f4b994b0f8ff4c582dee40eb0c4-256x256.png" alt="履歴"></a></p>
+<p><a href="/images/2015_1204_fuel_4th_revision.png"><img src="/thumbs/ccc99f4b994b0f8ff4c582dee40eb0c4-256x256.png" alt="履歴"></a></p>
 
 <p>と、このような感じで表示できるようになります。</p>
 
@@ -2152,7 +2152,7 @@ $ php oil g model page title:string body:text body_html:text brief:string --temp
 
 <p>実装すると削除処理ができるようになります。</p>
 
-<p><a href="/images/2015_1204_fuel_4th_delete.png"><img src="/_thumbs/2cdf9085abd8d7791b23c8d9ba986fc3-256x256.png" alt="削除"></a></p>
+<p><a href="/images/2015_1204_fuel_4th_delete.png"><img src="/thumbs/2cdf9085abd8d7791b23c8d9ba986fc3-256x256.png" alt="削除"></a></p>
 
 <p><code>fuel/app/classes/controller/page.php</code></p>
 
@@ -2469,14 +2469,14 @@ Compiling component files
 
 <h3 id="64px-%E3%81%AE%E3%82%B5%E3%83%A0%E3%83%8D%E3%82%A4%E3%83%AB">64px のサムネイル</h3>
 
-<p><img src="/_thumbs/b0d061130443fcd10d882073d6ef32f0-64x64.png" alt="64 x 64"></p>
+<p><img src="/thumbs/b0d061130443fcd10d882073d6ef32f0-64x64.png" alt="64 x 64"></p>
 
 <pre><code class="html">&lt;img src="{{ thumbnail('/images/noname/196x196.png', 64, 64) }}" alt="64 x 64"&gt;
 </code></pre>
 
 <h3 id="16px-%E3%81%AE%E3%82%B5%E3%83%A0%E3%83%8D%E3%82%A4%E3%83%AB">16px のサムネイル</h3>
 
-<p><img src="/_thumbs/b0d061130443fcd10d882073d6ef32f0-16x16.png" alt="16 x 16"></p>
+<p><img src="/thumbs/b0d061130443fcd10d882073d6ef32f0-16x16.png" alt="16 x 16"></p>
 
 <pre><code class="html">&lt;img src="{{ thumbnail('/images/noname/196x196.png', 16, 16) }}" alt="16 x 16"&gt;
 </code></pre>

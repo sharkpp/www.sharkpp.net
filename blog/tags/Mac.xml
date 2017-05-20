@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/Mac.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-05-20T14:33:50+00:00</updated>
+    <updated>2017-05-20T14:43:02+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -15,7 +15,7 @@
             <id>http://www.sharkpp.net/blog/2017/04/30/Install-inkscape-using-homebrew-on-macos.html</id>
             <content type="html"><![CDATA[<p>開発中のアプリのアイコンを作成するために <a href="https://inkscape.org/ja/">Inkscape</a> が必要だったのですが、先日に Inkscape と <a href="https://www.xquartz.org/">XQuartz</a> をアップデートしてから何が悪いのか起動しなくて難儀していたところで、解決方法を見つけたのでその方法の記録です。</p>
 
-<p><img src="/_thumbs/632bbe45529a94416b0f7e519f24e6bf-384x384.png" alt="Inkscape 0.92.1 version"></p>
+<p><img src="/thumbs/632bbe45529a94416b0f7e519f24e6bf-384x384.png" alt="Inkscape 0.92.1 version"></p>
 
 <h2 id="%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">はじめに</h2>
 
@@ -120,7 +120,7 @@ remote: Counting objects: 5, done.
 
 <p>インストールした Inkscape のバージョンはこんな感じ。</p>
 
-<p><a href="/images/2017_0430_inkscape_version.png"><img src="/_thumbs/632bbe45529a94416b0f7e519f24e6bf-384x384.png" alt="Inkscape 0.92.1 version"></a></p>
+<p><a href="/images/2017_0430_inkscape_version.png"><img src="/thumbs/632bbe45529a94416b0f7e519f24e6bf-384x384.png" alt="Inkscape 0.92.1 version"></a></p>
 
 <p>お疲れ様でした、と言いたいところですが、残念ながらこの状態では Launchpad に登録されていないので、もう一手間かける必要があります。</p>
 
@@ -226,7 +226,7 @@ end tell
 
 <p>と、言う所から</p>
 
-<p><a href="/images/2016_0326_hgimg4_test9.png"><img src="/_thumbs/605ffbef1139b6b8bc46f69d73d86b6b-512x512.png" alt="hgimg4 サンプル test9"></a></p>
+<p><a href="/images/2016_0326_hgimg4_test9.png"><img src="/thumbs/605ffbef1139b6b8bc46f69d73d86b6b-512x512.png" alt="hgimg4 サンプル test9"></a></p>
 
 <p>このように、hgimg4 のサンプルが動くようにするための方法です。</p>
 
@@ -236,7 +236,7 @@ end tell
 
 <p>設定をしないと</p>
 
-<p><a href="/images/2016_0326_hsp_install_wizard_tofu.png"><img src="/_thumbs/e2f456d9675823508a2d47ecb49a0bca-256x256.png" alt="HSP インストールウィザード 豆腐"></a></p>
+<p><a href="/images/2016_0326_hsp_install_wizard_tofu.png"><img src="/thumbs/e2f456d9675823508a2d47ecb49a0bca-256x256.png" alt="HSP インストールウィザード 豆腐"></a></p>
 
 <p>こんな感じに、全部が全部では無いですが豆腐になります。</p>
 
@@ -327,17 +327,17 @@ $ rm -rf opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8
 
 <p>途中の「デスクトップ上にアイコンを作成する」や「拡張子の関連付けを行う」はチェックを外しておきましょう。</p>
 
-<p><a href="/images/2016_0326_hsp_install_wizard_page_1.png"><img src="/_thumbs/9b93c326efb30e0e081f852fdc82f27c-128x128.png" alt="HSP インストールウィザード ページ 01"></a> 
-<a href="/images/2016_0326_hsp_install_wizard_page_2.png"><img src="/_thumbs/944bfa26b702b628fdd4d800bba14dc3-128x128.png" alt="HSP インストールウィザード ページ 02"></a> 
-<a href="/images/2016_0326_hsp_install_wizard_page_3.png"><img src="/_thumbs/f5959a28a94fe43e70c5d52368920698-128x128.png" alt="HSP インストールウィザード ページ 03"></a> 
-<a href="/images/2016_0326_hsp_install_wizard_page_4.png"><img src="/_thumbs/78106ccd5918ab9c41b399079e5b3cf1-128x128.png" alt="HSP インストールウィザード ページ 04"></a> 
-<a href="/images/2016_0326_hsp_install_wizard_page_5.png"><img src="/_thumbs/e330caa9317c918cd8008d4e63cc8ca3-128x128.png" alt="HSP インストールウィザード ページ 05"></a> 
-<a href="/images/2016_0326_hsp_install_wizard_page_6.png"><img src="/_thumbs/88933c9aab67553abd0bc21af909a3a9-128x128.png" alt="HSP インストールウィザード ページ 06"></a> 
-<a href="/images/2016_0326_hsp_install_wizard_page_7.png"><img src="/_thumbs/69dfcfea98e8cc10ce874d787a6c0174-128x128.png" alt="HSP インストールウィザード ページ 07"></a></p>
+<p><a href="/images/2016_0326_hsp_install_wizard_page_1.png"><img src="/thumbs/9b93c326efb30e0e081f852fdc82f27c-128x128.png" alt="HSP インストールウィザード ページ 01"></a> 
+<a href="/images/2016_0326_hsp_install_wizard_page_2.png"><img src="/thumbs/944bfa26b702b628fdd4d800bba14dc3-128x128.png" alt="HSP インストールウィザード ページ 02"></a> 
+<a href="/images/2016_0326_hsp_install_wizard_page_3.png"><img src="/thumbs/f5959a28a94fe43e70c5d52368920698-128x128.png" alt="HSP インストールウィザード ページ 03"></a> 
+<a href="/images/2016_0326_hsp_install_wizard_page_4.png"><img src="/thumbs/78106ccd5918ab9c41b399079e5b3cf1-128x128.png" alt="HSP インストールウィザード ページ 04"></a> 
+<a href="/images/2016_0326_hsp_install_wizard_page_5.png"><img src="/thumbs/e330caa9317c918cd8008d4e63cc8ca3-128x128.png" alt="HSP インストールウィザード ページ 05"></a> 
+<a href="/images/2016_0326_hsp_install_wizard_page_6.png"><img src="/thumbs/88933c9aab67553abd0bc21af909a3a9-128x128.png" alt="HSP インストールウィザード ページ 06"></a> 
+<a href="/images/2016_0326_hsp_install_wizard_page_7.png"><img src="/thumbs/69dfcfea98e8cc10ce874d787a6c0174-128x128.png" alt="HSP インストールウィザード ページ 07"></a></p>
 
 <p>こんな感じにセットアップウィザードを行うと、</p>
 
-<p><a href="/images/2016_0326_hsp_demo.png"><img src="/_thumbs/0442cc0847c8faec0fefeb50c18da5a9-384x384.png" alt="HSPデモ"></a></p>
+<p><a href="/images/2016_0326_hsp_demo.png"><img src="/thumbs/0442cc0847c8faec0fefeb50c18da5a9-384x384.png" alt="HSPデモ"></a></p>
 
 <p>とりあえず、 Wine で HSP が動くようになります。</p>
 
@@ -346,7 +346,7 @@ $ rm -rf opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8
 
 <p>とすると HSPスクリプトエディタ も起動します。</p>
 
-<p><a href="/images/2016_0326_hsp_script_editor_with_assistant.png"><img src="/_thumbs/9ebdeb5fd154ee9b2ce9200d5f1c98fe-384x384.png" alt="HSP スクリプトエディタ＆アシスタント"></a></p>
+<p><a href="/images/2016_0326_hsp_script_editor_with_assistant.png"><img src="/thumbs/9ebdeb5fd154ee9b2ce9200d5f1c98fe-384x384.png" alt="HSP スクリプトエディタ＆アシスタント"></a></p>
 
 <h2 id="osx-%E4%B8%8A%E3%81%AE-wine-%E3%81%A7-hgimg3-%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99">OSX 上の Wine で hgimg3 を動かす</h2>
 
@@ -355,11 +355,11 @@ $ rm -rf opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8
 <pre><code class="bash">$ WINEPREFIX=~/wine-hgimg4-test wine c:\\hsp34\\hsed3.exe "sample\\hgimg3\\tamane4.hsp"
 </code></pre>
 
-<p><a href="/images/2016_0326_hgimg3_tamane_source.png"><img src="/_thumbs/7cc244fde01011f836fc6ec65c444a7a-384x384.png" alt="hgimg3 珠音 ソース"></a></p>
+<p><a href="/images/2016_0326_hgimg3_tamane_source.png"><img src="/thumbs/7cc244fde01011f836fc6ec65c444a7a-384x384.png" alt="hgimg3 珠音 ソース"></a></p>
 
 <p>そして、おもむろに <kbd>F5</kbd> を押下、</p>
 
-<p><a href="/images/2016_0326_hgimg3_tamane_running.png"><img src="/_thumbs/1e9426ea187d90bd2febb15569bc3c60-384x384.png" alt="hgimg3 珠音"></a></p>
+<p><a href="/images/2016_0326_hgimg3_tamane_running.png"><img src="/thumbs/1e9426ea187d90bd2febb15569bc3c60-384x384.png" alt="hgimg3 珠音"></a></p>
 
 <p>はい、無事にSDサイズの<ruby>珠音<rp>(</rp><rt>たまね</rt><rp>)</rp></ruby>ちゃんが表示されました。</p>
 
@@ -370,11 +370,11 @@ $ rm -rf opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8
 <pre><code class="bash">$ WINEPREFIX=~/wine-hgimg4-test wine c:\\hsp34\\hsed3.exe "sample\\hgimg4\\tamane1.hsp"
 </code></pre>
 
-<p><a href="/images/2016_0326_hgimg4_tamane_source.png"><img src="/_thumbs/ff0fd23abc5d83baa50d638b36b744cf-384x384.png" alt="hgimg4 珠音 ソース"></a></p>
+<p><a href="/images/2016_0326_hgimg4_tamane_source.png"><img src="/thumbs/ff0fd23abc5d83baa50d638b36b744cf-384x384.png" alt="hgimg4 珠音 ソース"></a></p>
 
 <p>そして、おもむろに <kbd>F5</kbd> を押下、</p>
 
-<p><a href="/images/2016_0326_hgimg4_tamane_running_failed.png"><img src="/_thumbs/8930f39e1744af1691e5f13b93140428-384x384.png" alt="hgimg4 珠音 失敗"></a></p>
+<p><a href="/images/2016_0326_hgimg4_tamane_running_failed.png"><img src="/thumbs/8930f39e1744af1691e5f13b93140428-384x384.png" alt="hgimg4 珠音 失敗"></a></p>
 
 <p><span style="font-family: IPAMonaPGothic,'ＭＳ Ｐゴシック',sans-serif;font-size:16px;">(´・ω・`)</sapn></p>
 
@@ -420,7 +420,7 @@ Wine build complete.
 
 <p>そして、おもむろに <kbd>F5</kbd> を押下、</p>
 
-<p><a href="/images/2016_0326_hgimg4_tamane_running.png"><img src="/_thumbs/7095b1a5c9519d4d7402612142b8c1b6-384x384.png" alt="hgimg4 珠音"></a></p>
+<p><a href="/images/2016_0326_hgimg4_tamane_running.png"><img src="/thumbs/7095b1a5c9519d4d7402612142b8c1b6-384x384.png" alt="hgimg4 珠音"></a></p>
 
 <p>おおおおー</p>
 
@@ -461,34 +461,34 @@ Wine build complete.
 
 <p>hgimg4 の他のサンプルや、 HSPプログラムコンテスト 2015 で hgimg4 を利用したプログラムを探し動かしてみました。</p>
 
-<p><a href="/images/2016_0326_hgimg4_test1.png"><img src="/_thumbs/9909f635e32ecccd3d061bd49f5718cc-256x256.png" alt="hgimg4 サンプル test1"></a>
-<a href="/images/2016_0326_hgimg4_test2.png"><img src="/_thumbs/6225a1255e77e5d0d46b35b487e5397c-256x256.png" alt="hgimg4 サンプル test2"></a>
-<a href="/images/2016_0326_hgimg4_test3.png"><img src="/_thumbs/75789f539377222aba6535d5e37b00ad-256x256.png" alt="hgimg4 サンプル test3"></a>
-<a href="/images/2016_0326_hgimg4_test4.png"><img src="/_thumbs/06caf84bc1fb78e628676a0a75c4ca71-256x256.png" alt="hgimg4 サンプル test4"></a>
-<a href="/images/2016_0326_hgimg4_test5.png"><img src="/_thumbs/b2f896301fb8295cfc6a63134c8860fa-256x256.png" alt="hgimg4 サンプル test5"></a>
-<a href="/images/2016_0326_hgimg4_test6.png"><img src="/_thumbs/0ee1b30a809c80b7272297875d9288b2-256x256.png" alt="hgimg4 サンプル test6"></a>
-<a href="/images/2016_0326_hgimg4_test7.png"><img src="/_thumbs/fb8331afdbe5be612ce12d5b6e084058-256x256.png" alt="hgimg4 サンプル test7"></a>
-<a href="/images/2016_0326_hgimg4_test8.png"><img src="/_thumbs/7721eeef26d9c47dceab361c3bf05b55-256x256.png" alt="hgimg4 サンプル test8"></a>
-<a href="/images/2016_0326_hgimg4_test9.png"><img src="/_thumbs/605ffbef1139b6b8bc46f69d73d86b6b-256x256.png" alt="hgimg4 サンプル test9"></a>
-<a href="/images/2016_0326_hgimg4_test10.png"><img src="/_thumbs/96a44b6e76b6511e3f1b069f3f0457f8-256x256.png" alt="hgimg4 サンプル test10"></a>
-<a href="/images/2016_0326_hgimg4_test11.png"><img src="/_thumbs/820f347f4df1ae5f73069937720df6f8-256x256.png" alt="hgimg4 サンプル test11"></a>
-<a href="/images/2016_0326_hgimg4_test12.png"><img src="/_thumbs/8e056d3f9c8cfc709817396d5b66e0a4-256x256.png" alt="hgimg4 サンプル test12"></a>
-<a href="/images/2016_0326_hgimg4_test13.png"><img src="/_thumbs/a84bf8234192e3ff26852dbfc6623d41-256x256.png" alt="hgimg4 サンプル test13"></a>
-<a href="/images/2016_0326_hgimg4_block3.png"><img src="/_thumbs/ad5e652367972a2d7884af6008565618-256x256.png" alt="hgimg4 サンプル block3"></a></p>
+<p><a href="/images/2016_0326_hgimg4_test1.png"><img src="/thumbs/9909f635e32ecccd3d061bd49f5718cc-256x256.png" alt="hgimg4 サンプル test1"></a>
+<a href="/images/2016_0326_hgimg4_test2.png"><img src="/thumbs/6225a1255e77e5d0d46b35b487e5397c-256x256.png" alt="hgimg4 サンプル test2"></a>
+<a href="/images/2016_0326_hgimg4_test3.png"><img src="/thumbs/75789f539377222aba6535d5e37b00ad-256x256.png" alt="hgimg4 サンプル test3"></a>
+<a href="/images/2016_0326_hgimg4_test4.png"><img src="/thumbs/06caf84bc1fb78e628676a0a75c4ca71-256x256.png" alt="hgimg4 サンプル test4"></a>
+<a href="/images/2016_0326_hgimg4_test5.png"><img src="/thumbs/b2f896301fb8295cfc6a63134c8860fa-256x256.png" alt="hgimg4 サンプル test5"></a>
+<a href="/images/2016_0326_hgimg4_test6.png"><img src="/thumbs/0ee1b30a809c80b7272297875d9288b2-256x256.png" alt="hgimg4 サンプル test6"></a>
+<a href="/images/2016_0326_hgimg4_test7.png"><img src="/thumbs/fb8331afdbe5be612ce12d5b6e084058-256x256.png" alt="hgimg4 サンプル test7"></a>
+<a href="/images/2016_0326_hgimg4_test8.png"><img src="/thumbs/7721eeef26d9c47dceab361c3bf05b55-256x256.png" alt="hgimg4 サンプル test8"></a>
+<a href="/images/2016_0326_hgimg4_test9.png"><img src="/thumbs/605ffbef1139b6b8bc46f69d73d86b6b-256x256.png" alt="hgimg4 サンプル test9"></a>
+<a href="/images/2016_0326_hgimg4_test10.png"><img src="/thumbs/96a44b6e76b6511e3f1b069f3f0457f8-256x256.png" alt="hgimg4 サンプル test10"></a>
+<a href="/images/2016_0326_hgimg4_test11.png"><img src="/thumbs/820f347f4df1ae5f73069937720df6f8-256x256.png" alt="hgimg4 サンプル test11"></a>
+<a href="/images/2016_0326_hgimg4_test12.png"><img src="/thumbs/8e056d3f9c8cfc709817396d5b66e0a4-256x256.png" alt="hgimg4 サンプル test12"></a>
+<a href="/images/2016_0326_hgimg4_test13.png"><img src="/thumbs/a84bf8234192e3ff26852dbfc6623d41-256x256.png" alt="hgimg4 サンプル test13"></a>
+<a href="/images/2016_0326_hgimg4_block3.png"><img src="/thumbs/ad5e652367972a2d7884af6008565618-256x256.png" alt="hgimg4 サンプル block3"></a></p>
 
 <p><a href="http://dev.onionsoft.net/seed/info.ax?id=1077">ヨミチハコワイ</a>
 (c) 法貴 優雅（MYAOSOFT）/ <a href="https://twitter.com/MYAOSOFT">@MYAOSOFT</a></p>
 
-<p><a href="/images/2016_0326_hsp_contest_2015_no1077_ss_01.png"><img src="/_thumbs/c6a5cc7b92acf6127054f3edbe0f6867-256x256.png" alt="ヨミチハコワイ 01"></a>
-<a href="/images/2016_0326_hsp_contest_2015_no1077_ss_02.png"><img src="/_thumbs/85b6912a8e8af5d7b013385f29a8878c-256x256.png" alt="ヨミチハコワイ 02"></a>
-<a href="/images/2016_0326_hsp_contest_2015_no1077_ss_03.png"><img src="/_thumbs/2b49015e278dcc10bab77fe863dadd26-256x256.png" alt="ヨミチハコワイ 03"></a></p>
+<p><a href="/images/2016_0326_hsp_contest_2015_no1077_ss_01.png"><img src="/thumbs/c6a5cc7b92acf6127054f3edbe0f6867-256x256.png" alt="ヨミチハコワイ 01"></a>
+<a href="/images/2016_0326_hsp_contest_2015_no1077_ss_02.png"><img src="/thumbs/85b6912a8e8af5d7b013385f29a8878c-256x256.png" alt="ヨミチハコワイ 02"></a>
+<a href="/images/2016_0326_hsp_contest_2015_no1077_ss_03.png"><img src="/thumbs/2b49015e278dcc10bab77fe863dadd26-256x256.png" alt="ヨミチハコワイ 03"></a></p>
 
 <p><a href="http://dev.onionsoft.net/seed/info.ax?id=1084">R-sim++</a>
 (c) hashikemu / <a href="https://twitter.com/kemuduino">@hashikemu</a></p>
 
-<p><a href="/images/2016_0326_hsp_contest_2015_no1084_ss_01.png"><img src="/_thumbs/5e254af57f6df3f1a0e6636aef19175d-256x256.png" alt="R-sim++ 01"></a>
-<a href="/images/2016_0326_hsp_contest_2015_no1084_ss_02.png"><img src="/_thumbs/cabc8d6a7d789a12153a0c6e4b8d25d2-256x256.png" alt="R-sim++ 02"></a>
-<a href="/images/2016_0326_hsp_contest_2015_no1084_ss_03.png"><img src="/_thumbs/1b694ea19f12b779d33fcdafd81f58cd-256x256.png" alt="R-sim++ 03"></a></p>
+<p><a href="/images/2016_0326_hsp_contest_2015_no1084_ss_01.png"><img src="/thumbs/5e254af57f6df3f1a0e6636aef19175d-256x256.png" alt="R-sim++ 01"></a>
+<a href="/images/2016_0326_hsp_contest_2015_no1084_ss_02.png"><img src="/thumbs/cabc8d6a7d789a12153a0c6e4b8d25d2-256x256.png" alt="R-sim++ 02"></a>
+<a href="/images/2016_0326_hsp_contest_2015_no1084_ss_03.png"><img src="/thumbs/1b694ea19f12b779d33fcdafd81f58cd-256x256.png" alt="R-sim++ 03"></a></p>
 
 <h2 id="%E5%8F%82%E8%80%83">参考</h2>
 

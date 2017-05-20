@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/Sculpin.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-05-20T14:33:50+00:00</updated>
+    <updated>2017-05-20T14:43:02+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -743,14 +743,14 @@ Compiling component files
 
 <h3 id="64px-%E3%81%AE%E3%82%B5%E3%83%A0%E3%83%8D%E3%82%A4%E3%83%AB">64px のサムネイル</h3>
 
-<p><img src="/_thumbs/b0d061130443fcd10d882073d6ef32f0-64x64.png" alt="64 x 64"></p>
+<p><img src="/thumbs/b0d061130443fcd10d882073d6ef32f0-64x64.png" alt="64 x 64"></p>
 
 <pre><code class="html">&lt;img src="{{ thumbnail('/images/noname/196x196.png', 64, 64) }}" alt="64 x 64"&gt;
 </code></pre>
 
 <h3 id="16px-%E3%81%AE%E3%82%B5%E3%83%A0%E3%83%8D%E3%82%A4%E3%83%AB">16px のサムネイル</h3>
 
-<p><img src="/_thumbs/b0d061130443fcd10d882073d6ef32f0-16x16.png" alt="16 x 16"></p>
+<p><img src="/thumbs/b0d061130443fcd10d882073d6ef32f0-16x16.png" alt="16 x 16"></p>
 
 <pre><code class="html">&lt;img src="{{ thumbnail('/images/noname/196x196.png', 16, 16) }}" alt="16 x 16"&gt;
 </code></pre>
