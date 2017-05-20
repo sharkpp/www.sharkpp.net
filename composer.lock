@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b2418f279f330143bec03649c2da626c",
+    "content-hash": "b8fe0542f83bf17d3d0f187520f6d8c0",
     "packages": [
         {
             "name": "beelab/bowerphp",
@@ -82,16 +82,16 @@
         },
         {
             "name": "beryllium/icelus",
-            "version": "1.0.1",
+            "version": "dev-impl_config_read",
             "source": {
                 "type": "git",
-                "url": "https://github.com/beryllium/icelus.git",
-                "reference": "25c58d05202f99e1f591426287262d644a9449c9"
+                "url": "https://github.com/sharkpp/icelus.git",
+                "reference": "756cb8219d9f049a47349a841ddbd9235cfee6bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/beryllium/icelus/zipball/25c58d05202f99e1f591426287262d644a9449c9",
-                "reference": "25c58d05202f99e1f591426287262d644a9449c9",
+                "url": "https://api.github.com/repos/sharkpp/icelus/zipball/756cb8219d9f049a47349a841ddbd9235cfee6bc",
+                "reference": "756cb8219d9f049a47349a841ddbd9235cfee6bc",
                 "shasum": ""
             },
             "require": {
@@ -112,7 +112,6 @@
                     "Beryllium\\Icelus\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -126,12 +125,15 @@
             "description": "Thumbnail generator for Sculpin-based websites",
             "homepage": "http://whateverthing.com",
             "keywords": [
-                "Thumbnails",
                 "images",
                 "sculpin",
-                "sculpin-plugin"
+                "sculpin-plugin",
+                "thumbnails"
             ],
-            "time": "2015-12-12T01:01:50+00:00"
+            "support": {
+                "source": "https://github.com/sharkpp/icelus/tree/impl_config_read"
+            },
+            "time": "2017-05-20 14:15:19"
         },
         {
             "name": "components/bootstrap",
@@ -3450,6 +3452,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "beelab/bowerphp": 20,
+        "beryllium/icelus": 20,
         "dflydev/embedded-composer": 20,
         "jasny/twig-extensions": 20,
         "sculpin/sculpin": 20,
