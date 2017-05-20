@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/C%2B%2B.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-05-20T08:15:04+00:00</updated>
+    <updated>2017-05-20T12:37:10+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -18,6 +18,8 @@
 <p>今月も、長文投稿専用Twitterクライアントの開発の続きをしました。</p>
 
 <p>レポジトリは ... <a href="https://github.com/sharkpp/Jugemutter">sharkpp/Jugemutter: 長文投稿専用クライアント「じゅげむったー」</a> です。</p>
+
+<p><img src="/images/2017_0520_jugemutter.png" alt="画面" /></p>
 
 <h2 id="%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">はじめに</h2>
 
