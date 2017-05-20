@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-05-20T08:07:29+00:00</updated>
+    <updated>2017-05-20T08:14:48+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -13,7 +13,42 @@
             <link href="http://www.sharkpp.net/blog/2017/05/20/jugemutter-development-diary-2nd.html"/>
             <updated>2017-05-20T17:04:00+00:00</updated>
             <id>http://www.sharkpp.net/blog/2017/05/20/jugemutter-development-diary-2nd.html</id>
-            <content type="html"><![CDATA[]]></content>
+            <content type="html"><![CDATA[<p>さて、先月に引き続いて今月も参加した <a href="https://qt-users.connpass.com/event/57080/">Qt 勉強会 @ Nagoya No8(17.05) - connpass</a> のまとめ。</p>
+
+<p>今月も、長文投稿専用Twitterクライアントの開発の続きをしました。</p>
+
+<p>レポジトリは ... <a href="https://github.com/sharkpp/Jugemutter">sharkpp/Jugemutter: 長文投稿専用クライアント「じゅげむったー」</a> です。</p>
+
+<h2 id="%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">はじめに</h2>
+
+<p>今日は、会場にほぼ時間ぴったりで到着(どうやら参加者中、最後だった模様)。</p>
+
+<p>反時計回りで、本日のやることを宣言。</p>
+
+<p>自分は、「じゅげむったー」の続き。</p>
+
+<h2 id="%E3%82%84%E3%81%A3%E3%81%9F%E3%81%93%E3%81%A8">やったこと</h2>
+
+<p>アカウント周りの管理処理の実装を組んだ。</p>
+
+<p>とりあえず、アカウントの管理がUIが主だったのを別のクラスで管理するようにして、それの変更でUIが変わるように変更をした。</p>
+
+<p>いつのまにか、投稿ができなくなってたので、ソースを追ったら、今表示しているビューに対してドキュメントが設定されてなかった様子。</p>
+
+<p>なので、ビューにドキュメントを設定する処理を実装するが、完了にはもう少し時間が足らなかった。</p>
+
+<p>暗号化処理、Qt標準でないのでどうしたものか？
+<a href="https://github.com/roop/qblowfish">roop/qblowfish</a> とか <a href="https://github.com/xcoder123/QBlowfish">xcoder123/QBlowfish</a> とか使おうかな？
+でも、<a href="https://ja.wikipedia.org/wiki/Twofish">Twofish</a> よりも設計年代が古いので Twofish のラッパーを作ったほうがいいのかも？</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://github.com/roop/qblowfish">roop/qblowfish: An implementation of the Blowfish encryption algorithm in Qt.</a></li>
+<li><a href="https://github.com/xcoder123/QBlowfish">xcoder123/QBlowfish: Simple blowfish encryption implementation in Qt with QByteArray support</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/Twofish">Twofish - Wikipedia</a></li>
+</ul>
+]]></content>
         </entry>
             <entry>
             <title type="html"><![CDATA[macOS 上に Homebrew を利用して Inkscape をインストールする]]></title>
