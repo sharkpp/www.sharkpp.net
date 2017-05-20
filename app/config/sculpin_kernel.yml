@@ -13,3 +13,8 @@ sculpin_content_types:
         taxonomies:
             - tags
             - categories
+
+icelus:
+    prefix: '/thumbs'
+#   output_dir:
+

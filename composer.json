@@ -8,9 +8,15 @@
             "homepage": "http://www.sharkpp.net/"
         }
     ],
+    "repositories": [
+      {
+        "type": "vcs",
+        "url": "https://github.com/sharkpp/icelus"
+      }
+    ],
     "require": {
         "beelab/bowerphp": "1.0.*@dev",
-        "beryllium/icelus": "*",
+        "beryllium/icelus": "dev-impl_config_read",
         "components/bootstrap": "~3.3.4",
         "components/font-awesome": "4.*",
         "components/highlightjs": "~7.3.0",
