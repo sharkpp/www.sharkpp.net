@@ -1,0 +1,17 @@
+
+#packopt name		"sample_dirinfo"
+#packopt runtime	"hsp3c.hrt"
+
+screen 0, 640, 480
+title "dirinfo() sample"
+
+sdim buff, 1024*1024
+
+repeat $70, $10000
+	if "" = dirinfo(cnt) : continue
+	buff += strf("dirinfo(0x%05X)=", cnt) + dirinfo(cnt) + "\n"
+loop
+
+font msgothic, 12
+objmode 2
+mesbox buff, ginfo_winx, ginfo_winy, 4

@@ -1,0 +1,622 @@
+;-------------------------------------------------------------------------------
+; mistake.hsp - HSP Program Contest 2011 HSPTV class entries.
+;-------------------------------------------------------------------------------
+;
+; Copyright(c) 2011 sharkpp All rights reserved.
+;
+; The MIT License
+;
+; Permission is hereby granted, free of charge, to any person obtaining a copy
+; of this software and associated documentation files (the "Software"), to deal
+; in the Software without restriction, including without limitation the rights
+; to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+; copies of the Software, and to permit persons to whom the Software is
+; furnished to do so, subject to the following conditions:
+;
+; The above copyright notice and this permission notice shall be included in
+; all copies or substantial portions of the Software.
+;
+; THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+; IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+; FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+; AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+; LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+; OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+; THE SOFTWARE.
+;
+;-------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------
+; 画面を所狭しと動いている女の子のうち違う動きをしている子を探しましょう。
+; 違う動きをしている子を見つけたらクリック！
+; 制限時間は約20秒です！
+; TIMEのバーが残り時間！
+; ただし、間違った子をクリックすると残り時間がどんどん減るので注意！
+; WANTEDの数だけ間違いがあります。
+; 間違ってクリックしたら１回のみ簡単に右クリックでUNDOできます。
+;-------------------------------------------------------------------------------
+
+;=================================================
+; オブジェクトサイズ圧縮用サポートマクロ
+;=================================================
+
+; if 0 == (expr) :
+#define _ifn				on
+; max(a, b)
+#define ctype maxf(%1,%2)	limitf(%1,%2,2147483647)
+; v = 0
+#define let0(%1)			dim %1
+; v = 1 ※初回 or dimで初期化直後のみ有効
+#define let1(%1)			%1++
+; v = 0.0
+#define let0d(%1)			dimtype %1, 3
+
+;=================================================
+
+#packopt name "mistake" 
+#pack "hsptv_img.bmp"
+
+#define ENABLE_HSPTV
+;#define MAKE_EXE
+
+; HSPTV機能を使う
+#ifdef ENABLE_HSPTV
+ ; monoさん作の hsptvext.hsp をデバッグでは使う
+ #ifdef MAKE_EXE
+  #define HSPTV_OFFLINE
+ #else
+  #ifdef _DEBUG
+   #define HSPTV_OFFLINE
+  #endif
+ #endif
+ #ifdef HSPTV_OFFLINE
+  #addition "hsptvext.hsp"
+  #define ranking data_@m0 ; 内部変数を直接使っているのでゴニョゴニョ
+  ; ファイルが見つからない場合は定数も宣言されないので公式のHSPTVを使うためにもろもろの状態をリセット
+  #ifndef HSPTVEXT_HSP_INCLUDED
+   #undef HSPTV_OFFLINE
+   #undef ranking
+  #endif
+ #endif
+ ; リリース or ファイルが無い場合は公式のHSPTV機能を使う
+ #ifndef HSPTV_OFFLINE
+  #runtime "hsptv"
+  #regcmd 18
+  #cmd hsptv_send $00
+  #define hsptv_init			sdim ranking : hsptv_send ranking, MINUS_ONE
+  #define hsptv_up(%1,%2="")	hsptv_send ranking, score, %2
+ #endif
+#endif
+
+;=================================================
+
+#const WID_IMAGE  1
+#const WID_BLACK  2
+#const WID_BUFFER 3
+
+#const FRAME_MAX	10
+
+#const HIT_LOOSE	5 ; どのぐらい前のフレーム位置までをクリック判定処理するか？
+
+#const WAIT_TICK    40
+#const PENALTY_TICK WAIT_TICK * 5
+#const TIME_MAX     20000
+
+#const WANTED_CHAR_STEP 3 ; キャラ数の1/nを違う動きをするキャラに割り当てるか
+#const INITAL_CHAR_NUM  WANTED_CHAR_STEP
+
+#const CHAR_NUM_STEP 2
+
+#const CHAR_TIP_SIZE		32
+#const CHAR_TIP_SIZE_HALF	CHAR_TIP_SIZE/2
+
+	; オブジェクトサイズ縮小のための定数
+	MINUS_ONE-- ; MINUS_ONE = -1
+	HALF_DOT = 0.5
+#define	PLEASE_CLICK_HERE "please click here"
+	
+	; フォント
+#define TITLE_FONT   "MS Serif";"Courier" ;"Symbol"
+#define MESSAGE_FONT "Courier";"Courier";"Impact"
+	SYSTEM_FONT = "Small Fonts" ; "Arial"
+
+;-------------------------------------------------
+; ゲーム初期化
+;-------------------------------------------------
+
+#ifdef MAKE_EXE
+	title "mistake"
+#endif
+
+	randomize
+
+#ifdef ENABLE_HSPTV
+	; HSPTV機能を初期化
+	hsptv_init
+#endif
+
+	; キャラクタ画像読み込み
+#ifdef MAKE_EXE
+	celload "hsptv_img.bmp", WID_IMAGE
+#else
+	celload dir_exe+"\\hsptv\\hsptv_img.bmp", WID_IMAGE
+#endif
+	; 選択用のキャラクタを生成
+	gsel WID_IMAGE
+	boxf 0, 256, 512, 320
+	gmode 4, 512, 64, 128
+	pos 0, 256
+	gcopy WID_IMAGE, 0, 192
+
+	; 黒画面初期化
+	buffer WID_BLACK, 640, 480
+	boxf
+	
+	; 一時描画用画面初期化
+	buffer WID_BUFFER, 640, 480
+
+	gsel
+	celdiv WID_IMAGE, 64, 64, 32, 32
+
+	; BGM生成
+#const BGM_DATA_LEN   32768/2
+#const BGM_FILE_SIZE  44+BGM_DATA_LEN
+#const BGM_FILE_SIZE4 BGM_FILE_SIZE/4
+	;         --------------------------------++++++++++++++++++++++++++++++++
+	melody = "B@B@B@B@@BB@@@B@H@A@H@A@@BA@@@A@@@H@@@D@@@B@@@A@@H@@@D@@@B@@@A@@"
+	q = 523.251130601199970
+	repeat 15
+		q(cnt+1) = q.cnt / 1.059463094359295
+	loop
+	dim w, BGM_FILE_SIZE4
+	w = $46464952,$D824,$45564157,$20746D66,16,65537,11025,11025,$80001,$61746164,BGM_DATA_LEN
+	repeat BGM_DATA_LEN
+		n = cnt \ 2048
+		o = 1.0 - 0.00048828125 * n
+		p = 0.000569903429223 * n
+		let0d d
+		let0  c
+		m = cnt / 2048 * 4
+		repeat 16
+			m1= m + cnt / 4
+			g = (peek(melody,m1)>>(cnt&3))&1
+			q1= sin(p * q(cnt))
+			d+= q1*g*o
+			c+= g
+			g = (peek(melody,m1+32)>>(cnt&3))&1
+			d+= limitf(q1*99999,MINUS_ONE,1)*g*o/2
+			c+= g
+		loop
+		poke w, 44 + cnt, int((d/(c+(c<1))/3+1)*128)
+	loop
+	memfile w,0,BGM_FILE_SIZE
+	mmload "MEM:.wav",1,1
+	mmplay 1
+
+	; 音楽あり
+	let1 music
+
+;-------------------------------------------------
+; タイトル画面初期化
+;-------------------------------------------------
+*title_init
+
+	CHAR_MAX = 20
+	gosub *wanted_setup
+
+	let0 ranking_frame
+	let0 ranking_offset
+
+;-------------------------------------------------
+; タイトル画面メインループ
+;-------------------------------------------------
+*title_main
+
+	let0 key ; キー入力を誤って判定しないように
+	
+	; 背景描画
+	gosub *draw_background
+	; キャラクタ描画
+	gosub *draw_char
+	;
+	gmode 3, 480, 480, 128
+	pos 0, 0
+	gcopy WID_BLACK
+	;
+	gsel WID_BUFFER
+	color
+	boxf
+	; ランキング表示
+#ifdef ENABLE_HSPTV
+	; 1 フレーム 40ms
+	; 1 フェーズ 125フレーム
+	; 内訳
+	;    0 ～  99 フレーム：ランキング表示
+	;  100 ～ 124 フレーム：クリアエフェクト
+#const FRAME_IN_PHASE				125
+#const CLEAR_EFFECT_FRAME           10
+#const CLEAR_EFFECT_FRAME2			CLEAR_EFFECT_FRAME - 2
+#const CLEAR_EFFECT_TIMING_FRAME	FRAME_IN_PHASE - CLEAR_EFFECT_FRAME
+#const LAST_FRAME					FRAME_IN_PHASE - 1
+
+#const RANKING_FONT_SIZE  20
+#const RANKING_FONT_STYLE 1
+	postfix = "stndrdth"
+	notesel ranking
+	let0 n
+	font SYSTEM_FONT, RANKING_FONT_SIZE, RANKING_FONT_STYLE
+	repeat 60
+;		pos limit((100 - ranking_frame) * 20, -1000, 0) - (100 <= ranking_frame) * (n - ranking_offset) * 20, (n - ranking_offset) * 20
+		n_ = n - ranking_offset
+		y = limit(n_ * RANKING_FONT_SIZE - double((CLEAR_EFFECT_TIMING_FRAME <= ranking_frame && 0 <= n_) * n_ * (ranking_frame - CLEAR_EFFECT_TIMING_FRAME) * RANKING_FONT_SIZE) / CLEAR_EFFECT_FRAME2, 0, 999)
+		sdim tmp
+		sdim score
+		sdim name
+		let0 n_
+		if cnt < 30 {
+			noteget score, cnt * 3
+			noteget name,  cnt * 3 + 1
+			if 0 + score {
+				n++
+				let1 n_
+				score += "pt"
+			}
+		} else {
+			n++
+			let1 n_
+		}
+		if n_ && ranking_offset < n && n <= ranking_offset + 10 {
+			pos 0, 640 : mes score : mesx = ginfo_mesx
+			color 160, 160, 160
+			repeat 2
+				pos   1 - cnt,        y : mes strf("%2d%s", n, strmid(postfix, limit((n - 1) \ 20, 0, 3) * 2, 2))
+				pos 150 - cnt - mesx, y : mes score
+				pos 160 - cnt,        y : mes name
+				hsvcolor n * 160 / 30, 255, 255
+				y--
+			loop
+		}
+	loop
+#endif
+	gsel
+	gmode 2, 480, 480
+#const RANKING_POS_X 80
+#const RANKING_POS_Y 480 - 20 * 10 - 20
+	pos RANKING_POS_X, RANKING_POS_Y
+	gcopy WID_BUFFER
+	;
+	color 255, 255, 255
+	font TITLE_FONT, 128
+	pos 64, 25 : mes "mistake"
+	;
+	gosub *put_please_click_here
+	redraw
+
+	stick key
+
+	await WAIT_TICK
+	
+	ranking_frame++
+	if FRAME_IN_PHASE <= ranking_frame {
+		ranking_offset += 10
+		ranking_offset \= 30
+		let0 ranking_frame
+	}
+
+	; BGM on/off チェック
+	gosub *check_speaker_click
+	_ifn stat goto *title_main
+
+	_ifn 0 != (key & 256) && mousex < 480 goto *title_main
+
+;-------------------------------------------------
+; ゲーム初期化
+;-------------------------------------------------
+
+	; 初回のみ
+	let0 score
+	CHAR_MAX = INITAL_CHAR_NUM
+	let0 char_num_step_value
+
+*game_init
+
+	gosub *wanted_setup
+
+	last_sel = MINUS_ONE
+	dim wanted, 2
+
+	let0 time
+
+;-------------------------------------------------
+; ゲームメインループ
+;-------------------------------------------------
+*main
+
+	stick key
+
+	gosub *draw
+
+	; UNDO処理
+	if 0 <= last_sel && 0 != (key & 512) { ; 右クリックで１回のみUNDO
+		chr_sel(last_sel) ^= 8
+		wanted(last_sel >= WANTED_CHAR_NUM) += chr_sel(last_sel) / 4 - 1
+		last_sel = MINUS_ONE
+	}
+
+	; 
+	_ifn WANTED_CHAR_NUM != wanted || 0 != wanted(1) goto *game_clear
+
+	await WAIT_TICK
+	time += WAIT_TICK
+
+	; BGM on/off チェック
+	gosub *check_speaker_click
+
+	_ifn TIME_MAX <= time goto *main
+
+;-------------------------------------------------
+; ゲームオーバー
+;-------------------------------------------------
+
+	msg = "GAME OVER"
+	gosub *put_message
+
+	; スコア送信
+#ifdef ENABLE_HSPTV
+	if score : hsptv_up score, ""
+#endif
+
+	goto *title_init
+
+;-------------------------------------------------
+; ゲームクリア＆レベルアップ
+;-------------------------------------------------
+*game_clear
+
+	msg = "COMPLETE!"
+	gosub *put_message
+
+	score += int(double(wanted) * (TIME_MAX - time) / 750 + HALF_DOT)
+	char_num_step_value++
+	char_num_step_value \= CHAR_NUM_STEP
+	CHAR_MAX += 0 == char_num_step_value
+
+	goto *game_init
+
+;-------------------------------------------------
+; ゲーム画面描画
+;-------------------------------------------------
+*draw
+	; 背景描画
+	gosub *draw_background
+	; タイトル
+#const TITLE_POS_X	480+16
+#const TITLE_POS_Y	16
+	font TITLE_FONT, 36
+	pos TITLE_POS_X, TITLE_POS_Y
+	mes "mistake"
+	; 得点
+#const SCORE_POS_X	480+16/2
+#const SCORE_POS_Y	80
+	font SYSTEM_FONT, 18
+	pos SCORE_POS_X, SCORE_POS_Y
+	mes strf("SCORE: %dpt", score)
+	; 間違い残り
+#const WANTED_POS_X	480+16
+#const WANTED_POS_Y	180
+	pos WANTED_POS_X, WANTED_POS_Y : mes "WANTED"
+	repeat WANTED_CHAR_NUM
+		pos 512 + cnt \ 4 * 32, 220 + cnt / 4 * 48
+		celput WID_IMAGE, 24 + chr_sel(cnt) + time / 25 \ 2, HALF_DOT, HALF_DOT, 0
+	loop
+	; 残り時間
+#const TIME_CAPTION_POS_X	480+16
+#const TIME_CAPTION_POS_Y	120
+#const TIME_BAR_POS_X		480+16
+#const TIME_BAR_POS_Y		145
+#const TIME_BAR_POS_X2		640-16
+#const TIME_BAR_POS_Y2		TIME_BAR_POS_Y+8
+#const TIME_BAR_WIDTH		TIME_BAR_POS_X2 - TIME_BAR_POS_X
+	pos TIME_CAPTION_POS_X, TIME_CAPTION_POS_Y
+	mes "TIME"
+	color 0, 96, 0 ; 暗い緑
+	boxf TIME_BAR_POS_X, TIME_BAR_POS_Y, TIME_BAR_POS_X2, TIME_BAR_POS_Y2
+	color 0, 192, 0 ; 明るい緑
+	boxf TIME_BAR_POS_X, TIME_BAR_POS_Y, TIME_BAR_POS_X + TIME_BAR_WIDTH * time / TIME_MAX, TIME_BAR_POS_Y2
+	; キャラクタ描画
+	gosub *draw_char
+	redraw
+	return
+
+;-------------------------------------------------
+; Game over/Completeメッセージ描画
+;-------------------------------------------------
+*put_message
+	let0 key ; 再度クリック判定をしてしまうのでクリア
+	gosub *draw
+	; 背景を暗く
+	gmode 3, 480, 480, 96
+	pos 0, 0
+	gcopy WID_BLACK
+	; メッセージ描画
+	color 255,255,255
+	font MESSAGE_FONT, 80
+#const WAIT_MESSAGE_POS_X	32
+#const WAIT_MESSAGE_POS_Y	480/2-96
+	pos WAIT_MESSAGE_POS_X, WAIT_MESSAGE_POS_Y
+	mes msg
+	; クリックして！メッセージを描画
+	gosub *put_please_click_here
+	; クリック待ちループ
+*put_message_wait_click
+	wait 1
+	stick key
+	_ifn key & 256 goto *put_message_wait_click
+	return
+*put_please_click_here
+	font SYSTEM_FONT, 32
+	pos 128
+	mes PLEASE_CLICK_HERE
+	return
+
+;-------------------------------------------------
+; ゲーム初期化
+;-------------------------------------------------
+*wanted_setup
+
+	MOVE_MAX = (4 + (CHAR_MAX / 4)) & $7FFFFFFE
+
+	MOVE_MAX_half = MOVE_MAX / 2
+
+	WANTED_CHAR_NUM = CHAR_MAX / WANTED_CHAR_STEP
+
+	; 移動パターン初期化
+	dim move,  MOVE_MAX, 2
+	repeat 2 : type = cnt
+		memset move(0, type), $FF, MOVE_MAX * 4
+		repeat MOVE_MAX_half
+			move(cnt, type) = rnd(4)
+*retry0
+			n = rnd(MOVE_MAX_half) + MOVE_MAX_half
+			_ifn move(n, type) < 0 goto *retry0
+			move(n, type) = move(cnt, type) ^ 1
+		loop
+	loop
+
+	; 正常パターンと異常パターンが同じ場合をチェックし、
+	; 同じ場合は作り直す
+	let0 n
+	repeat MOVE_MAX
+		n += (1 << move(cnt, 0)) - (1 << move(cnt, 1))
+	loop
+	_ifn n goto *wanted_setup
+
+	; キャラクタ位置などを初期化
+	dim chr_px, HIT_LOOSE, CHAR_MAX
+	dim chr_py, HIT_LOOSE, CHAR_MAX
+#const sizeof_chr_pxy 4 * HIT_LOOSE
+	memset chr_px, 255, sizeof_chr_pxy * CHAR_MAX
+	memset chr_py, 255, sizeof_chr_pxy * CHAR_MAX
+	repeat CHAR_MAX
+#const CHAR_MOVE_AREA        480-CHAR_TIP_SIZE
+#const CHAR_MOVE_AREA_LEFT   CHAR_TIP_SIZE_HALF
+#const CHAR_MOVE_AREA_TOP    CHAR_TIP_SIZE_HALF
+#const CHAR_MOVE_AREA_RIGHT  480-CHAR_TIP_SIZE_HALF
+#const CHAR_MOVE_AREA_BOTTOM 480-CHAR_TIP_SIZE_HALF
+		type = cnt >= WANTED_CHAR_NUM
+		chr_index(cnt) = rnd(MOVE_MAX)
+		chr_frame(cnt) = rnd(FRAME_MAX)
+		chr_sel(cnt)   = 0
+*retry
+		index_ = chr_index(cnt)
+		frame_ = chr_frame(cnt)
+		dir_   = move(index_, type)
+		px_    = rnd(CHAR_MOVE_AREA)+CHAR_TIP_SIZE_HALF
+		py_    = rnd(CHAR_MOVE_AREA)+CHAR_TIP_SIZE_HALF
+		chr_px(0,cnt) = px_
+		chr_py(0,cnt) = py_
+		chr_dir(cnt)  = dir_
+		let0 out
+		repeat MOVE_MAX * FRAME_MAX
+			if 0 == frame_ {
+				dir_ = move(index_, type)
+				index_++ : index_ \= MOVE_MAX
+			}
+			n   = (dir_ \ 2 * 2 - 1) * 5
+			px_ -= n * (2 <=dir_)
+			py_ -= n * (dir_ < 2)
+			frame_++ : frame_ \= 10
+			out |= px_ < CHAR_MOVE_AREA_LEFT || py_ < CHAR_MOVE_AREA_TOP || CHAR_MOVE_AREA_RIGHT <= px_ || CHAR_MOVE_AREA_BOTTOM <= py_
+		loop
+		if out : goto *retry
+	loop
+
+	return
+
+;-------------------------------------------------
+; 背景描画
+;-------------------------------------------------
+*draw_background
+	redraw 0
+	; 画面クリア
+	color 64,255,64 : boxf
+	; 背景描画
+#const BG_CELL_POS_X 16+44
+#const BG_CELL_POS_Y 16
+	gmode 4, 0, 0, 160
+	pos 0, 0
+	celput WID_IMAGE, BG_CELL_POS_X, BG_CELL_POS_Y, 16
+	gmode 2
+	; 
+	color
+	boxf 480, 0, 640, 480
+	color 255,255,255
+	; 音楽あり/なし
+#const SPEAKER_SIZE         48
+#const SPEAKER_SIZE_HALF    SPEAKER_SIZE / 2
+#const SPEAKER_POS_CENTER_X 480 + 48 + SPEAKER_SIZE_HALF
+#const SPEAKER_POS_CENTER_Y 480 - 64 + SPEAKER_SIZE_HALF
+#const SPEAKER_POS_X SPEAKER_POS_CENTER_X - SPEAKER_SIZE_HALF
+#const SPEAKER_POS_Y SPEAKER_POS_CENTER_Y - SPEAKER_SIZE_HALF
+	font "Webdings", SPEAKER_SIZE
+	pos SPEAKER_POS_X, SPEAKER_POS_Y
+	mes strf("%c", $56 - music)
+	;
+	return
+
+;-------------------------------------------------
+; キャラクタ描画
+;-------------------------------------------------
+*draw_char
+	color
+	repeat CHAR_MAX
+		type = cnt >= WANTED_CHAR_NUM
+		dup sel,   chr_sel(cnt)
+		dup frame, chr_frame(cnt)
+		dup dir,   chr_dir(cnt)
+		dup index, chr_index(cnt)
+		dup px,    chr_px(0, cnt)
+		dup py,    chr_py(0, cnt)
+		if 0 == frame {
+			dir = move(index, type)
+			index++ : index \= MOVE_MAX
+		}
+		; 過去の移動位置を更新
+#const chr_pxy_shift_len 4 * (HIT_LOOSE - 1)
+		memcpy px, px, chr_pxy_shift_len, 4
+		memcpy py, py, chr_pxy_shift_len, 4
+		;
+		id = 24 + dir * 2 + frame \ 2
+		n   = (dir \ 2 * 2 - 1) * 5
+		px -= n * (2 <=dir)
+		py -= n * (dir < 2)
+		frame++ : frame \= FRAME_MAX
+		; 選択判定
+		if key & 256 { ; 左クリックでキャラクタ矩形判定を行い選択反転
+			let0 n
+			repeat HIT_LOOSE
+				n |= abs(px(cnt) - mousex) < 16 && abs(py(cnt) - mousey) < 16
+			loop
+			sel_ = sel
+			sel ^= n * 8
+			if sel != sel_ {
+				last_sel = cnt
+				wanted(type) += sel / 4 - 1
+				; ミスしたら残り時間が減る
+				time += (0 == type * sel_) * PENALTY_TICK
+			}
+		}
+		; 描画
+		pos px, py
+		celput WID_IMAGE, id + sel, HALF_DOT, HALF_DOT, 0
+	loop
+	return
+
+*check_speaker_click
+	if 0 != (key & 256) && abs(mousex - SPEAKER_POS_CENTER_X) < SPEAKER_SIZE_HALF && abs(mousey - SPEAKER_POS_CENTER_Y) < SPEAKER_SIZE_HALF {
+		music ^= 1
+		if music : mmplay 1 : else : mmstop
+		return 0
+	}
+	return 1
+

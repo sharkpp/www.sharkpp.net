@@ -1,0 +1,91 @@
+
+#packopt name		"sample_Cursor"
+#packopt runtime	"hsp3c.hrt"
+;#packopt hide 1
+
+#uselib "user32"
+#cfunc LoadImage	"LoadImageA"	int,sptr,int,int,int,int
+#func DrawIcon		"DrawIcon"		int,int,int,int
+
+#uselib "gdi32"
+#func DeleteObject	"DeleteObject"	int
+
+#define IMAGE_CURSOR        2
+
+#define LR_COLOR            0x0002
+#define LR_VGACOLOR         0x0080
+#define LR_SHARED           0x8000
+
+#define OCR_ARROW			32512
+#define OCR_IBEAM			32513
+#define OCR_WAIT			32514
+#define OCR_CROSS			32515
+#define OCR_UPARROW			32516
+#define OCR_SIZE			32640	/* OBSOLETE: use OCR_SIZEALL */
+#define OCR_ICON			32641	/* OBSOLETE: use OCR_ARROW */
+#define OCR_SIZENWSE		32642
+#define OCR_SIZENESW		32643
+#define OCR_SIZEWE			32644
+#define OCR_SIZENS			32645
+#define OCR_SIZEALL			32646
+#define OCR_NO				32648	/*not in win3.1 */
+#define OCR_HAND			32649
+#define OCR_APPSTARTING		32650	/*not in win3.1 */
+#define OCR_HELP			32651
+
+#define BOX_X	72
+#define BOX_Y	48
+
+	sdim cursor_tag, 64, 1
+	dim  cursor_id,      1
+
+	cursor_tag(0)	= "OCR_ARROW",		"OCR_IBEAM",	"OCR_WAIT",		"OCR_CROSS",	"OCR_UPARROW"
+	cursor_tag(5)	= "OCR_SIZENWSE",	"OCR_SIZENESW",	"OCR_SIZEWE",	"OCR_SIZENS",	"OCR_SIZEALL"
+	cursor_tag(10)	= "OCR_NO",			"OCR_HAND",		"OCR_APPSTARTING","OCR_HELP",	"32652"
+	cursor_tag(15)	= "32653",			"32654",		"32655",		"32656",		"32657"
+	cursor_tag(20)	= "32658",			"32659",		"32660",		"32661",		"32662"
+	cursor_tag(25)	= "32663"
+
+	cursor_id(0)	= OCR_ARROW,		OCR_IBEAM,		OCR_WAIT,		OCR_CROSS,		OCR_UPARROW
+	cursor_id(5)	= OCR_SIZENWSE,		OCR_SIZENESW,	OCR_SIZEWE,		OCR_SIZENS,		OCR_SIZEALL
+	cursor_id(10)	= OCR_NO,			OCR_HAND,		OCR_APPSTARTING,OCR_HELP,		32652
+	cursor_id(15)	= 32653,			32654,			32655,			32656,			32657
+	cursor_id(20)	= 32658,			32659,			32660,			32661,			32662
+	cursor_id(25)	= 32663
+
+	gsel 0, 2
+
+	width BOX_X * 5, BOX_Y * (length(cursor_id) + 4) / 5
+	title "LoadCursor sample"
+
+	onkey goto *OnKeyPress
+
+	font msgothic, 12
+	
+	redraw 0
+	
+	repeat length(cursor_id)
+		x = cnt \ 5 * BOX_X + 1
+		y = cnt / 5 * BOX_Y  + 1
+		hCursor = LoadImage(0, cursor_id(cnt), 2, 0, 0, LR_SHARED);LR_COLOR|LR_VGACOLOR)
+		logmes ""+hCursor
+		color 204, 204, 204
+		boxf x + 16, y, x + 16 + 32, y + 32
+		DrawIcon hdc, x + 16, y, hCursor
+		DeleteObject hCursor
+		pos ginfo_winx, ginfo_winy
+		mes cursor_tag(cnt)
+		color 0, 0, 0
+		pos x + (BOX_X - ginfo_mesx) / 2, y + 32 + 2
+		mes cursor_tag(cnt)
+	loop
+	redraw 1
+
+	gsel 0, 2
+
+	stop
+
+*OnKeyPress
+	if 27 = iparam : end
+	stop
+

@@ -1,0 +1,512 @@
+;-------------------------------------------------------------------------------
+; jigsaw_puzzle.hsp - HSP Program Contest 2010 HSPTV class entries.
+;-------------------------------------------------------------------------------
+;
+; Copyright(c) 2010 sharkpp All rights reserved.
+;
+; The MIT License
+;
+; Permission is hereby granted, free of charge, to any person obtaining a copy
+; of this software and associated documentation files (the "Software"), to deal
+; in the Software without restriction, including without limitation the rights
+; to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+; copies of the Software, and to permit persons to whom the Software is
+; furnished to do so, subject to the following conditions:
+;
+; The above copyright notice and this permission notice shall be included in
+; all copies or substantial portions of the Software.
+;
+; THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+; IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+; FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+; AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+; LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+; OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+; THE SOFTWARE.
+;
+;-------------------------------------------------------------------------------
+
+#cmpopt ppout 1
+#packopt name "jigsaw"
+
+#uselib "gdi32"
+#func SelectObject "SelectObject" int,int
+#func ExtFloodFill "ExtFloodFill" int,int,int,int,int
+#enum FLOODFILLBORDER  = 0
+#enum FLOODFILLSURFACE = 1
+
+#define paint_border(%1,%2,%3) 								\
+	mref bmscr, 67 : 										\
+	SelectObject hdc, bmscr.36 : old_brush = stat : 		\
+	ExtFloodFill hdc, %1, %2, %3, FLOODFILLBORDER : 		\
+	SelectObject hdc, old_brush
+
+#define paint_black_border(%1,%2) 	paint_border %1, %2, 0x000000
+
+#enum WID_MAIN = 0
+#enum WID__
+#enum WID_HIT_MAP
+#enum WID_WORK
+#enum WID_PICTURE
+#enum WID_PIECE_WORK1
+#enum WID_PIECE_WORK2
+#enum WID_PIECE_WORK3
+#enum WID_PIECE_WORK4
+
+#if 0
+#undef buffer
+#define buffer screen
+#endif
+
+#const CAMPUS_WIDTH		400
+#const CAMPUS_HEIGHT	(CAMPUS_WIDTH * 3 / 4)
+#const CAMPUS_OFFSETH	(640 - CAMPUS_WIDTH) / 2
+#const CAMPUS_OFFSETV	(480 - CAMPUS_HEIGHT) / 2
+#const double CAMPUS_WIDTH_D	CAMPUS_WIDTH
+#const double CAMPUS_HEIGHT_D	CAMPUS_HEIGHT
+
+#const WINDOW_WIDTH		640
+#const WINDOW_HEIGHT	480
+#const WINDOW_WIDTH_HALF	WINDOW_WIDTH  / 2
+#const WINDOW_HEIGHT_HALF	WINDOW_HEIGHT / 2
+
+#define COLOR_BLACK				; タダの黒色
+#define COLOR_WHITE				255,255,255 ; タダの白
+#define COLOR_TRANS				255,255,254	; 透過色
+#define COLOR_CANVAS_BORDER		128,128,128	; キャンバスの枠色
+
+; パズルピースの枠色
+#const PIECE_BORDER_COLOR_R	204
+#const PIECE_BORDER_COLOR_G	204
+#const PIECE_BORDER_COLOR_B	204
+#const PIECE_BORDER_COLOR_RGB	(PIECE_BORDER_COLOR_R << 16)|(PIECE_BORDER_COLOR_G << 8)|PIECE_BORDER_COLOR_B
+
+	randomize
+
+	; 画像の読み込みエラー無視
+	onerror gosub *errskip
+
+;-----------------------------------------------------------
+; 初期化
+
+	buffer WID_HIT_MAP, WINDOW_WIDTH, WINDOW_HEIGHT
+
+	; 画像読み込み or ホワイトパズル
+	buffer WID_WORK, CAMPUS_WIDTH, CAMPUS_HEIGHT
+#ifdef _debug
+	exist dir_cmdline
+	if 0 < strsize {
+		picload dir_cmdline
+	} else {
+		picload "test.jpg"
+	}
+#else
+	dialog , 16
+	picload refstr
+#endif
+	picx = ginfo_winx
+	picy = ginfo_winy
+
+	scale = CAMPUS_WIDTH_D / picx
+	if picy < picx {
+		scale = CAMPUS_HEIGHT_D / picy
+	}
+	buffer WID_PICTURE, scale * picx, scale * picy
+	wx = ginfo_winx ; ※少し下でも使用している
+	wy = ginfo_winy ; ※少し下でも使用している
+	gzoom wx, wy, WID_WORK, 0, 0, picx, picy, 1
+
+	gsel
+
+*title_init
+	
+;-----------------------------------------------------------
+; タイトル画面
+
+#const MENU_CENTER_X	WINDOW_WIDTH  / 2
+#const MENU_CENTER_Y	WINDOW_HEIGHT / 2
+#const MENU_LEFT		107;WINDOW_WIDTH  * 1 / 6 ; ※勝手に実数になるため
+#const MENU_TOP			WINDOW_HEIGHT * 1 / 6
+#const MENU_RIGHT		533;WINDOW_WIDTH  * 5 / 6 ; ※勝手に実数になるため
+#const MENU_BOTTOM		WINDOW_HEIGHT * 5 / 6
+
+#define MENU_POS_X_DEF \
+	MENU_CENTER_X, 0,             MENU_LEFT,   MENU_CENTER_X, \
+	MENU_CENTER_X, MENU_CENTER_X, MENU_RIGHT,  WINDOW_WIDTH, \
+	MENU_CENTER_X, MENU_CENTER_X, MENU_LEFT,   0, \
+	MENU_CENTER_X, WINDOW_WIDTH,  MENU_RIGHT,  MENU_CENTER_X
+#define MENU_POS_Y_DEF \
+	MENU_CENTER_Y, MENU_CENTER_Y, MENU_TOP,    0, \
+	MENU_CENTER_Y, 0,             MENU_TOP,    MENU_CENTER_Y, \
+	MENU_CENTER_Y, WINDOW_HEIGHT, MENU_BOTTOM, MENU_CENTER_Y, \
+	MENU_CENTER_Y, MENU_CENTER_Y, MENU_BOTTOM, WINDOW_HEIGHT  
+
+#const MENU_CAPTION_FONT_SIZE			64
+#const MENU_CAPTION_FONT_STYLE			1 | 16 ; 太字+アンチエリアス
+#const MENU_CAPTION_MARGIN_HORIZON		WINDOW_WIDTH  / 2
+#const MENU_CAPTION_MARGIN_VERTICAL		WINDOW_HEIGHT / 2
+#const MENU_CAPTION_OFFSET_HORIZON		WINDOW_WIDTH  / 32
+#const MENU_CAPTION_OFFSET_VERTICAL		WINDOW_HEIGHT / 4 - MENU_CAPTION_FONT_SIZE / 2
+
+	color COLOR_BLACK
+	boxf
+
+	menu_pos_xy = MENU_POS_X_DEF, MENU_POS_Y_DEF
+
+	font "Arial", MENU_CAPTION_FONT_SIZE, MENU_CAPTION_FONT_STYLE
+
+	type = "  EASYNORMAL  HARD EXTRA"
+
+;-----------------------------------------------------------
+; タイトル画面メインループ
+
+*title_main
+
+	menu_sel = mousex / WINDOW_WIDTH_HALF + mousey / WINDOW_HEIGHT_HALF * 2
+
+	if menu_sel != menu_sel_old {
+		dim menu_n ; ※0クリア
+		menu_sel_old = menu_sel
+	}
+	if menu_n < 15 {
+		menu_n++
+	}
+
+	redraw 0
+	repeat 4
+		dim menu_color, 4
+		if menu_sel == cnt {
+		;	menu_color = 0x111111 * menu_n
+			menu_color = 0x111108 * menu_n
+		}
+		dup menu_pos_x, menu_pos_xy(cnt * 4)
+		dup menu_pos_y, menu_pos_xy(cnt * 4 + 16)
+		gsquare gsquare_grad, menu_pos_x, menu_pos_y, menu_color
+		color COLOR_WHITE
+		pos cnt \ 2 * MENU_CAPTION_MARGIN_HORIZON + MENU_CAPTION_OFFSET_HORIZON, cnt / 2 * MENU_CAPTION_MARGIN_VERTICAL + MENU_CAPTION_OFFSET_VERTICAL
+		mes strmid(type, 6 * cnt, 6)
+	loop
+	redraw
+
+	wait 1
+
+	stick k, 256
+	on k >> 8 & 1 goto *title_main
+
+;-----------------------------------------------------------
+; ゲーム画面
+
+*init
+
+	; パズルピース数
+#ifdef _debug
+	piece_num_x = 4, 4, 4, 4
+	piece_num_y = 3, 3, 3, 3
+#else
+	piece_num_x = 4, 7, 9, 12
+	piece_num_y = 3, 5, 7,  9
+#endif
+
+	piece_xnum    = piece_num_x(menu_sel)
+	piece_ynum    = piece_num_y(menu_sel)
+	piece_xynum   = piece_xnum * piece_ynum
+	piece_xynum_m1= piece_xynum - 1
+	piece_xnum1   = piece_xnum + 1
+	piece_ynum1   = piece_ynum + 1
+
+	; パズルピースの基準カーブポイント
+	piece_base_x = 0, 6, 6, 5, 5, 9, 9, 8, 8,14
+	piece_base_y = 0, 0, 2, 2, 5, 5, 2, 2, 0, 0
+#const piece_base_num		10
+#const piece_base_num_m1	piece_base_num - 1
+#const piece_base_num2		piece_base_num * 2
+#const piece_base_max		14
+
+	piece_base_num2_x_piece_xnum1 = piece_base_num2 * piece_xnum1
+	n = piece_base_num2_x_piece_xnum1 * piece_ynum1
+	dim piece_border_v, n ; piece_base_num, 2, piece_xnum + 1, piece_ynum ; 垂直枠
+	dim piece_border_h, n ; piece_base_num, 2, piece_xnum, piece_ynum + 1 ; 水平枠
+
+	dim piece_pos_x, piece_xynum	; パズルピースのX位置(ドット単位)
+	dim piece_pos_y, piece_xynum	; パズルピースのX位置(ドット単位)
+	dim piece_order, piece_xynum	; パズルピースの描画順
+	dim piece_wid,   piece_xynum	; パズルピースのウインドウセレクタ情報
+
+	scale = wy / piece_ynum
+	if wx * piece_ynum < wy * piece_xnum {
+		scale = wx / piece_xnum
+	}
+	scale_half     = scale / 2
+	scale_double   = scale * 2
+	w = piece_xnum * scale
+	h = piece_ynum * scale
+
+	offseth = (WINDOW_WIDTH  - w) / 2
+	offsetv = (WINDOW_HEIGHT - h) / 2
+	offseth_w = offseth + w
+	offsetv_h = offsetv + h
+
+
+	piece_complete_rest = piece_xynum
+
+	repeat piece_xynum
+		piece_pos_x(cnt) = rnd(WINDOW_WIDTH  - scale)
+		piece_pos_y(cnt) = rnd(WINDOW_HEIGHT - scale)
+		piece_order(cnt) = cnt
+		piece_wid(cnt)   = WID_PIECE_WORK1 + cnt / piece_ynum \ 2 * 2 + cnt \ piece_ynum \ 2
+	loop
+
+	buffer WID_WORK, scale_double, scale_double
+
+	; パズルピース初期化
+	repeat piece_xnum1 : x = cnt
+		repeat piece_ynum1 ;: y = cnt
+#define _y cnt
+			index1 = (_y * piece_xnum1 + x) * piece_base_num2
+			index2 = index1 + piece_base_num
+			flag = rnd(2) * 2 - 1 ; ※本当は垂直・水平それぞれでランダムにしたかった
+			px =  x * scale
+			py = _y * scale
+			repeat piece_base_num
+				ppx = piece_base_x(cnt) * scale / piece_base_max
+				ppy = piece_base_y(cnt) * scale / piece_base_max * flag
+				gosub *random : piece_border_v(index1 + cnt) = px + ppy + stat
+				gosub *random : piece_border_v(index2 + cnt) = py + ppx + stat
+				gosub *random : piece_border_h(index1 + cnt) = px + ppx + stat
+				gosub *random : piece_border_h(index2 + cnt) = py + ppy + stat
+			loop
+			if 0 <  x &&  x < piece_xnum : gosub *random : px += stat / 2
+			if 0 < _y && _y < piece_ynum : gosub *random : py += stat / 2
+			piece_border_v(index1) = px
+			piece_border_v(index2) = py
+			piece_border_h(index1) = px
+			piece_border_h(index2) = py
+			if _y {
+				piece_border_v(piece_base_num_m1 + index1 - piece_base_num2_x_piece_xnum1) = px
+				piece_border_v(piece_base_num_m1 + index2 - piece_base_num2_x_piece_xnum1) = py
+			}
+			if x {
+#const piece_base_num2_m1	piece_base_num_m1 - piece_base_num2
+#const piece_base_num2_m1_	-piece_base_num2_m1
+				piece_border_h(index1 - piece_base_num2_m1_) = px
+				piece_border_h(index2 - piece_base_num2_m1_) = py
+			}
+#undef _y
+		loop
+	loop
+
+	repeat 4, WID_PIECE_WORK1
+		buffer cnt, WINDOW_WIDTH, WINDOW_HEIGHT
+		boxf
+	loop
+
+	; ピース描画
+	repeat piece_xynum
+		x = cnt / piece_ynum
+		y = cnt \ piece_ynum
+		gsel piece_wid(cnt)
+		; パズルピースの枠描画
+		xx = x
+		yy = y
+		color PIECE_BORDER_COLOR_R, PIECE_BORDER_COLOR_G, PIECE_BORDER_COLOR_B
+		repeat 4 ; 上下左右の枠分
+			if cnt < 2 {
+				dup piece_border, piece_border_v
+				expr = x
+				if cnt {
+					xx++
+					expr = xx < piece_xnum
+				}
+			} else {
+				dup piece_border, piece_border_h
+				xx   = x
+				expr = y
+				if 3 == cnt {
+					yy++
+					expr = yy < piece_ynum
+				}
+			}
+			n = (yy * piece_xnum1 + xx) * piece_base_num2
+			repeat piece_base_num
+				px(cnt) = scale_half + piece_border(n)
+				py(cnt) = scale_half + piece_border(n + piece_base_num)
+				n++
+			loop
+			if expr {
+	; パズルピースをスプライン曲線で描画
+	ox = px
+	oy = py
+	pset ox, oy
+; http://www1.u-netsurf.ne.jp/~future/HTML/bspline.html
+; ---------------------------------------
+#const double step_ (1.0 + piece_base_num_m1) / 100
+	step = step_
+;	t    = -1.0
+	dimtype t, 3 ; なんか0の方がいいかも
+*@
+; ---------------------------------------
+		dimtype x_, 3 ; ※0クリア
+		dimtype y_, 3 ; ※0クリア
+#const draw_curve_loop_num	piece_base_num_m1 + 2 + 2 + 1
+		repeat draw_curve_loop_num, -2
+			k  = limit(cnt, 0, piece_base_num_m1)
+			tt = absf(t - cnt)
+			if 2 <= tt : continue
+#const double _2_3   4.0 / 6.0
+			cn = tt * tt * tt / 2 - tt * tt + _2_3
+			if 1 <= tt {
+				tt-= 2
+				cn = tt * tt * tt / -6
+			}
+			x_ += cn * px(k)
+			y_ += cn * py(k)
+		loop
+		line ox, oy, x_, y_
+		ox = x_
+		oy = y_
+; ---------------------------------------
+	t += step
+#const piece_base_num_m1_1 piece_base_num_m1 + 1
+	on step + piece_base_num_m1_1 <= t goto *@b
+; ---------------------------------------
+	pset px(piece_base_num_m1), py(piece_base_num_m1)
+				continue
+			}
+			line px, py, px(piece_base_num_m1), py(piece_base_num_m1)
+		loop
+	loop
+
+	repeat 4, WID_PIECE_WORK1
+		gsel cnt
+		color COLOR_TRANS
+		paint_border 0, 0, PIECE_BORDER_COLOR_RGB
+	loop
+
+	gsel
+	gosub *draw_piece
+
+;-----------------------------------------------------------
+; ゲーム画面メインループ
+
+*main
+	wait 1
+
+	stick k, 256
+	if k & 256 {
+		x = mousex
+		y = mousey
+		gsel WID_HIT_MAP
+		pget x, y
+		n = ginfo_r
+		gsel
+		if 0 == drag_start && n < piece_xynum { ; ドラッグ開始
+			drag_start++
+			drag_from_n  = n
+			drag_from_px = piece_pos_x(drag_from_n) - mousex
+			drag_from_py = piece_pos_y(drag_from_n) - mousey
+			; 現在位置が正解の位置だったらだったらカウントアップ
+			gosub *is_piece_home_pos
+			piece_complete_rest += stat
+			; ドラッグ対象を最前面に移動
+			repeat piece_xynum
+				if drag_from_n == piece_order(cnt) {
+					n = cnt * 4
+					memcpy piece_order, piece_order, 4 * piece_xynum_m1 - n, n, n + 4
+					piece_order(piece_xynum_m1) = drag_from_n
+				}
+			loop
+		}
+	} else:if drag_start { ; ドラッグ終了
+		dim drag_start ; ※0クリア
+		; 現在位置が正解の位置だったらだったらカウントダウン
+		; 0になったら終了
+		gosub *is_piece_home_pos
+		piece_complete_rest -= stat
+		if 0 == piece_complete_rest {
+			; 完成
+			; フェードインで元絵を表示
+			repeat 16
+				pos offseth, offsetv
+				gmode 3,,,cnt * cnt
+				gcopy WID_PICTURE, 0, 0, w, h
+				wait 5
+			loop
+			wait 150
+			menu_sel++
+			on 3 < menu_sel goto *init, *title_init
+		}
+	}
+
+	if drag_start { ; ドラッグ中
+		x  = drag_from_px + mousex + scale_half
+		y  = drag_from_py + mousey + scale_half
+		x_ = offseth + (x - offseth) / scale * scale + scale_half
+		y_ = offsetv + (y - offsetv) / scale * scale + scale_half
+		if offseth <= x && x < offseth_w && offsetv <= y && y < offsetv_h && abs(x_ - x) < 12 && abs(y_ - y) < 12 {
+			x = x_
+			y = y_
+		}
+		piece_pos_x(drag_from_n) = x - scale_half
+		piece_pos_y(drag_from_n) = y - scale_half
+		gosub *draw_piece
+	}
+
+	goto *main
+
+; 指定座標がパズルピースの正解位置か
+*is_piece_home_pos
+#define is_piece_home_pos_expr \
+		piece_pos_x(drag_from_n) == offseth + (drag_from_n / piece_ynum) * scale && \
+		piece_pos_y(drag_from_n) == offsetv + (drag_from_n \ piece_ynum) * scale
+	return is_piece_home_pos_expr
+
+*draw_piece
+	redraw 0
+	color COLOR_BLACK
+	boxf
+	color COLOR_CANVAS_BORDER
+	boxf offseth, offsetv, offseth_w, offsetv_h
+	color COLOR_BLACK
+	boxf offseth + 1, offsetv + 1, offseth_w - 1, offsetv_h - 1
+
+	gsel WID_HIT_MAP
+	color 255 : boxf ; 当たり判定用の色とと被らない様に
+
+	repeat piece_xynum
+		n = piece_order(cnt)
+		px = n / piece_ynum * scale
+		py = n \ piece_ynum * scale
+		; 当たり判定用のピースを描画
+		gsel WID_WORK
+		color n : boxf
+		wid = WID_HIT_MAP
+		gosub *gcopy_piece
+		; ピースを描画
+		gsel WID_WORK
+		color COLOR_TRANS : boxf
+		gmode 3,,,255
+		gcopy WID_PICTURE, px - scale_half, py - scale_half, scale_double, scale_double
+		dim wid ;wid = WID_MAIN
+		gosub *gcopy_piece
+	loop
+
+;	gsel
+	redraw
+
+*errskip
+	return
+
+*gcopy_piece
+	gmode 2
+	gcopy piece_wid(n), px, py, scale_double, scale_double
+	;
+	gsel wid
+	color COLOR_TRANS
+	gmode 4,,,256
+	pos piece_pos_x(n) - scale_half, piece_pos_y(n) - scale_half
+	gcopy WID_WORK, 0, 0, scale_double, scale_double
+	return
+
+*random
+	return rnd(scale / 10) - scale / 20
+
