@@ -8,10 +8,6 @@ categories: [ブログ]
 
 さて、先月に引き続いて今月も参加した [Qt 勉強会 @ Nagoya No8(17.05) - connpass](https://qt-users.connpass.com/event/57080/) のまとめ。
 
-{#
-つぶやきは [Qt勉強会 Tokyo #46 + Nagoya # 7 つぶやきまとめ - Togetterまとめ](https://togetter.com/li/1101299) でまとめられています。
-#}
-
 今月も、長文投稿専用Twitterクライアントの開発の続きをしました。
 
 レポジトリは ... [sharkpp/Jugemutter: 長文投稿専用クライアント「じゅげむったー」](https://github.com/sharkpp/Jugemutter) です。
