@@ -1,0 +1,64 @@
+// UWSC とりゲーム 自動ショットスクリプト by Shark++ Software
+//  実行条件
+//   とりゲーム が起動していること
+//   ゲーム画面に移っていること
+//  終了条件
+//   とりゲームがアクティブではなくなったとき
+
+// 設定
+
+	// キー間隔
+	waittime = 0.01
+
+//
+	tori_id = GetID("とりゲーム", "CncMainClassTh")
+	Ifb -1 = tori_id Then
+		MsgBox("とりゲームを起動してください")
+		ExitExit
+	EndIf
+
+	// キーの DOWN → UP の間隔(ms)
+	// 0.01 : とりショット
+	// 0.50 : とりカッター
+	// 0.90 : とりバルカン
+	// 1.30 : とりナパーム
+	// 2.50 : とりメビーム
+	Select SlctBox(SLCT_CMB, 0, "とりゲーム 自動ショットスクリプト", _
+			"とりショット", "とりカッター", "とりバルカン", "とりナパーム", "とりメビーム")
+		Case SLCT_1
+			// とりショット
+			downtime = 0.01
+		Case SLCT_2
+			// とりカッター
+			downtime = 0.50
+		Case SLCT_3
+			// とりバルカン
+			downtime = 0.90
+		Case SLCT_4
+			// とりナパーム
+			downtime = 1.30
+		Case SLCT_5
+			// とりメビーム
+			downtime = 2.50
+	SelEnd
+
+	// ゲームをアクティブにする
+	CtrlWin(tori_id, ACTIVATE)
+	Sleep(0.5)
+
+	// アクティブではなくなるまでキーを送り続ける
+	While Status(tori_id, ST_ACTIVE)
+		vKeyClick(VK_Z, downtime)
+		Sleep(waittime)
+	Wend
+
+// Kbd(vKeyCode, CLICK) では反応しないゲームにキーを送る
+//  (アクティブになっていること)
+Procedure vKeyClick(vKeyCode, KeyDownWaitTime)
+	Kbd(vKeyCode, DOWN)
+	Sleep(KeyDownWaitTime)
+	Kbd(vKeyCode, UP)
+	Sleep(0.05)
+Fend
+
+// EOF

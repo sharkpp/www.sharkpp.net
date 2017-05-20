@@ -1,0 +1,131 @@
+100#include "rand.h"
+110#include "inkey.h"
+120#define m 65535
+130#define wx (30)
+140#define wy 48
+150#define bmx 5
+160#define bp bps[n]
+170#define bly 8
+180struct {int x,y,ox,oy
+  ,px,py,f;}bps[bmx];int
+   bs=3,bx,bc=1,ix,iy,fi
+  =0,sc=0;
+190wait(int w){for(;w>=0
+  ;w--);}
+200int ball(int n){
+210int i,j=0,k=0,x,y;if(
+  n<0||n>=bmx||!bp.f)ret
+  urn 0;
+220bp.ox=bp.x;bp.oy=bp.y
+  ;bp.x+=bp.px;bp.y+=bp.
+  py;x=bp.x-1;y=bp.y-1;f
+  or(i=1;i<8;i+=2)k=poin
+  t(x+i%3,y+i/3),j|=(k!=
+  0)<<(i>>1)|(k<0||(i==5
+  &&x+2>wx-1))<<((i>>1)+
+  4);
+230if((j&1)!=0||(j&8)!=0
+  )bp.py*=-1;if((j&2)!=0
+  ||(j&4)!=0)bp.px*=-1;p
+  reset(bp.ox,bp.oy);pse
+  t(bp.x,bp.y,0);return 
+  j;}
+240int block(int x,int y
+  ){
+250if(!point(x,y)&&!poin
+  t(x+1,y))return 0;line
+  (x,y,x+2,y,1,m,0);if(!
+  fi)ix=x+1,iy=y+5;retur
+  n 1;}
+260int cb(int y1,int y2)
+  {int i,j=0,x,y,dx=wx/3
+  ;
+270for(i=y1*dx;i<y2*dx;i
+  ++){x=i%dx*3;y=i/dx;j+
+  =(((point(x,y)^1)+(poi
+  nt(x+1,y)^1)+(point(x+
+  2,y)^1))>1);}return j;
+  }
+280item(){
+290char *is[5]={"<<->>",
+  ">>-<<"," \xed UP","SC
+  ORE+"};int n,r;
+300r=rnd%4;gotoxy(10,3);
+  printf("%s  ",is[r]);
+310switch(r){case 0:bs++
+  ;if(bx-bs<0)bx++;if(bx
+  +bs>=wx)bx--;break;cas
+  e 1:if(bs>1)bs--;line(
+  0,wy-5,wx-1,wy-5,1,m,0
+  );break;case 3:sc+=bc*
+  50;gotoxy(15,2);printf
+  ("%5i",sc);break;case 
+  2:
+320for(n=0;n<bmx;n++)if(
+  !bp.f){if(bp.y<=wy-5)b
+  p.y-=5;bp.f=1;bp.py=-1
+  ;bc++;break;}if(n>=bmx
+  )gotoxy(10,3),puts("  
+     ");break;
+330}}
+340main(){int n,i,j,c,bl
+  =0;char *cp="BLOCK BRE
+  AK ";
+350line(-1,-1,wx,wy,0,m,
+  1);line(0,5,wx-1,4+bly
+  ,0,m,2);
+360for(i=0;i<12;i++){if(
+  inkey()==32){srand(i+1
+  );break;}gotoxy(9+i,0)
+  ;printf("\10 %c%c",cp[
+  i],cp[i+1]);wait(300);
+  }gotoxy(9,0);puts(cp);
+  puts("\n\t\t SCORE:   
+   0");
+370for(n=0;n<bmx;n++)bp.
+  f=0,bp.x=bp.ox=wx/2,bp
+  .y=bp.oy=wy-6-n*2,bp.p
+  x=rnd%2*2-1,bp.py=-1;b
+  x=wx/2;bps[0].f=1;
+380while(1){c=inkey();
+390line(bx-bs,wy-5,bx+bs
+  ,wy-5,1,m,0);if(c==0x1
+  d)bx-=2;if(c==0x1c)bx+
+  =2;if(bx-bs<0)bx=bs;if
+  (bx+bs>wx-1)bx=wx-bs-1
+  ;line(bx-bs,wy-5,bx+bs
+  ,wy-5,0,m,0);
+400if(tolower(c)=='p'){g
+  otoxy(10,4);puts(">PAU
+  SED<");while(inkey()!=
+  8);gotoxy(10,4);puts("
+          ");}
+410for(n=0;n<bmx;n++){i=
+  ball(n);i=(i>>4)^(i&15
+  );if(bp.f&&bp.y>=wy-5)
+  bp.f=0,bc--,preset(bp.
+  x,bp.y);
+420if(i&&bp.f&&bp.y<wy-6
+  ){j=0;if(i&1)j+=block(
+  bp.x/3*3,bp.y-1);if(i&
+  8)j+=block(bp.x/3*3,bp
+  .y+1);if(i&2)j+=block(
+  (bp.x-1)/3*3,bp.y);if(
+  i&4)j+=block((bp.x+1)/
+  3*3,bp.y);bl+=j;sc+=j*
+  j*5;gotoxy(15,2);print
+  f("%5i",sc);if(j>0&&rn
+  d%05==0&&!fi)fi=1;}}
+430if(fi&&iy<wy){preset(
+  ix,iy);iy++;pset(ix,iy
+  ,0);if(iy==wy-5&&ix>=b
+  x-bs&&ix<=bx+bs)item()
+  ,fi=0;}
+440if(bl>=wx/3*bly){bl=c
+  b(5,5+bly);if(bl>=wx/3
+  *bly){gotoxy(15,2);pri
+  ntf("%5i\n\n\n",sc+bl*
+  100);break;}}if(bc<=0)
+  {gotoxy(10,4);puts("GA
+  ME OVER!");break;}
+450}}

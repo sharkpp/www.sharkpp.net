@@ -1,0 +1,459 @@
+;-------------------------------------------------------------------------------
+; 8bit.hsp - HSP Program Contest 2011 HSPTV class entries.
+;-------------------------------------------------------------------------------
+;
+; Copyright(c) 2011 sharkpp All rights reserved.
+;
+; The MIT License
+;
+; Permission is hereby granted, free of charge, to any person obtaining a copy
+; of this software and associated documentation files (the "Software"), to deal
+; in the Software without restriction, including without limitation the rights
+; to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+; copies of the Software, and to permit persons to whom the Software is
+; furnished to do so, subject to the following conditions:
+;
+; The above copyright notice and this permission notice shall be included in
+; all copies or substantial portions of the Software.
+;
+; THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+; IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+; FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+; AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+; LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+; OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+; THE SOFTWARE.
+;
+;-------------------------------------------------------------------------------
+
+#define ENABLE_HSPTV
+
+#ifdef ENABLE_HSPTV
+;#include "hsptv.as"
+#runtime "hsptv"
+#regcmd 18
+#cmd hsptv_send $00
+#endif
+
+; 参考 
+;  MIA's HomePage
+;  http://taillove.jp/mia/soft/arc/anoseq.hsp
+
+#uselib "winmm"
+#func global waveOutOpen			"waveOutOpen" var,sptr,var,nullptr,nullptr,nullptr 
+#func global waveOutPrepareHeader 	"waveOutPrepareHeader" sptr,var,sptr
+#func global waveOutWrite			"waveOutWrite" sptr,var,sptr
+
+#const  TONE_NUM			16 ; マトリックスの横方向
+#const  TONE_MATRIX_NUM		16 * 16
+
+#const  WAVE_RING_NUM		4
+#define WAVE_LENGTH  		2048
+#define WAVE_BLOCK_ALIGN	1
+;#define WAVE_BLOCK_ALIGN	2
+#const  WAVE_LENGTH_BYTE	WAVE_LENGTH * WAVE_BLOCK_ALIGN
+#const  WAVE_LENGTH_n		WAVE_LENGTH_BYTE * WAVE_RING_NUM
+
+#const  WAVE_FULL_LENGTH	WAVE_LENGTH * TONE_NUM
+
+#define WID_TEMP 10
+
+;=================================================
+; オブジェクトサイズ圧縮用サポートマクロ
+;=================================================
+
+; if 0 == (expr)
+#define _ifn				on
+; max(a, b)
+#define ctype maxf(%1,%2)	limitf(%1,%2,2147483647)
+; v = 0
+#define let0(%1)			dim %1
+; v = 0.0
+#define let0d(%1)			dimtype %1, 3
+
+;=================================================
+
+	MINUS_ONE  = -1
+	DOT_ONE    = 0.1
+	ARIAL_FONT = "Arial"
+	sdim EMPTY_STR
+
+	; 0RR0GGBB ※シフトする関係で変な配置になっている
+#define ctype RGB(%1,%2,%3) (%1<<20)|(%2<<8)|%3
+#const COLOR1 RGB( 64,  80,  64)	; 消灯色
+#const COLOR2 RGB(233, 249, 233)	; 点灯色
+#const COLOR3 RGB(157, 253, 143)	; 消灯色(再生)
+#const COLOR4 RGB(253, 157, 143)	; 点灯色(再生)
+#const COLOR5 RGB( 64,  64,  64)	; 存在しない
+	color_tbl = COLOR1, COLOR2, COLOR3, COLOR4, COLOR5, COLOR5
+
+#ifdef ENABLE_HSPTV
+	; HSPTV機能を初期化
+	sdim ranking
+	hsptv_send ranking, MINUS_ONE
+#endif
+
+	; Waveフォームオーディオ出力デバイス初期化
+
+#if 1 == WAVE_BLOCK_ALIGN
+	wfex = 0x00010001, 11025, 11025, 0x00080001
+#else
+	wfex = 0x00010001, 11025, 22050, 0x00100002
+#endif
+	waveOutOpen hwo, MINUS_ONE, wfex;, 0, 0, 0
+
+	sdim wave_, WAVE_LENGTH_n
+	dup wave, wave_
+	pwave = varptr(wave_)
+#if 1 == WAVE_BLOCK_ALIGN
+	memset wave, 128, WAVE_LENGTH_n ; 無音にしておく
+#endif
+	dim wh, 8, WAVE_RING_NUM
+	repeat WAVE_RING_NUM
+		dup pwh, wh(0,cnt)
+		pwh = pwave + WAVE_LENGTH_BYTE * cnt, WAVE_LENGTH_BYTE
+		waveOutPrepareHeader hwo, pwh, 32
+		; 再生バッファを満杯にしておく
+		waveOutWrite hwo, pwh, 32
+	loop
+
+	; 音階生成
+	freq_step = 1.0594630943592952645618252949463
+	freq = 523.2511306012
+	repeat 15 ; 16 - 1
+		freq(cnt + 1) = freq(cnt) / freq_step
+	loop
+;	freq = 932.3275230362,880.0,783.9908719635,698.456462866,659.2551138257,587.3295358348,523.2511306012,493.8833012561,440.0,391.9954359818,349.228231433,329.6275569129,293.6647679174,261.6255653006,246.9416506281,220.0
+
+#const WAVE_RING_NUM_m1 WAVE_RING_NUM - 1
+	let0 rd_wave
+	wr_wave = WAVE_RING_NUM_m1
+	let0 play_wave
+	gen_wave = wr_wave
+
+	let0 menu_sel
+	let0 menu_effect
+	volume = 3
+	volume_= DOT_ONE * volume
+	
+	menu_text = "LOAD\rSAVE\r\nUPLOAD\rDONWLOAD\r\nRESET"
+	notesel menu_text
+	
+	menu_label = *load, *save, *main, *upload, *download, *main, *reset
+
+*reset
+
+#const sizeof_dot TONE_NUM * 16 * 4
+	dim dot, TONE_NUM, 16
+	let0 click_flag
+
+*main
+	stick key, 256
+	key = 0 != (key & 256)
+	key_trigger = 0 == okey && okey != key
+	okey = key
+
+	; 描画処理
+	redraw 0
+	color
+	boxf
+#const TIP_X TONE_NUM
+#const TIP_Y 16
+#const TIP_XxY TIP_X*TIP_Y
+#const SIZE 480
+#const WX (SIZE - TONE_NUM) / TIP_X
+#const WY (SIZE - 16) / TIP_Y
+#const WXr WX-8
+#const WYr WY-8
+#const WXh WXr/2
+#const WYh WYr/2
+#const WXi WX/2
+#const WYi WY/2
+	repeat TIP_XxY
+		xx = cnt \ TIP_X
+		yy = cnt / TIP_X
+		x = 10 + WX * xx
+		y = 10 + WY * yy
+		idx = xx == play_wave
+		idx|= dot(xx, yy) * 2
+		if abs(x + WXh - mousex) < WXh && abs(y + WYh - mousey) < WYh {
+			if key {
+				if 0 == click_flag {
+					click_flag = 2 - dot(xx, yy)
+				}
+				dot(xx, yy) = click_flag - 1
+			} else {
+				let0 click_flag
+			}
+		}
+		; ドットを描画
+		cr = color_tbl(idx)
+		color cr>>20,cr<<12>>20,cr&255
+		boxf x, y, x + WXr, y + WYr
+	loop
+
+	; メニュー
+	if SIZE < mousex {
+		cur_sel = mousey / 25 - 11
+		if 0 <= cur_sel {
+			noteget s, cur_sel
+			if EMPTY_STR != s {
+				if menu_sel != cur_sel {
+					menu_effect = 16
+					menu_sel = cur_sel
+				}
+				if 0 < menu_effect {
+					cr = menu_effect * 16
+					color cr, cr, cr
+#const Y_EFFECT_CENTER	12 + 11 * 25
+#const X_EFFECT_RIGHT	640 - 10
+					nn = menu_sel * 25 + Y_EFFECT_CENTER
+					boxf SIZE + 10, nn - menu_effect, X_EFFECT_RIGHT, nn + menu_effect
+					menu_effect--
+				}
+				if key_trigger {
+					menu_sel = MINUS_ONE
+					goto menu_label(cur_sel)
+				}
+			}
+		}
+		if ((cur_sel + 4) & $7ff) < 2 && key_trigger {
+			volume \= 5
+			volume++
+			volume_= DOT_ONE * volume
+		}
+
+	}
+
+	; タイトル
+	color 255, 255, 255
+	gosub *draw_title
+	
+	; メニュー文字列
+	repeat 7
+		noteget s, cnt
+#const X_MENU_POS 640 - SIZE
+		pos SIZE + (X_MENU_POS - 12 * strlen(s)) / 2, 25 * (cnt + 11) : mes s
+	loop
+
+	; スピーカー
+	font "Webdings", 64
+#const X_SPEAKER SIZE + 25
+#const Y_SPEAKER 170
+	pos X_SPEAKER, Y_SPEAKER : mes "V"
+	repeat volume
+		font ARIAL_FONT, 30 + cnt * 10
+#const X_SPEAKER2 SIZE + 25 + 64
+#const Y_SPEAKER2 180
+		pos X_SPEAKER2 + cnt * 8, Y_SPEAKER2 - cnt * 7
+		mes ")"
+	loop
+
+	redraw
+
+	; Waveデータ転送
+	_ifn rd_wave == wr_wave gosub *update_wave_data
+	waveOutWrite hwo, wh(0,rd_wave), 32
+	if stat : await : else : rd_wave++ : rd_wave \= WAVE_RING_NUM : play_wave++ : play_wave \= 16
+	goto *main
+
+*draw_title
+#const X_TITLE_POS	SIZE + (640 - SIZE - 14 * 8) / 2
+#const Y_TITLE_POS	25 *  1
+	font ARIAL_FONT, 24, 1
+	pos X_TITLE_POS, Y_TITLE_POS : mes "PICO tone" ; 8bit tone だと某アプリと被るorz
+	font ARIAL_FONT, 18
+	return
+
+*load
+	dialog "pico", 16, "トーンデータ"
+	exist refstr
+	_ifn sizeof_dot <= strsize goto *main
+	bload refstr, dot, sizeof_dot
+	goto *main
+
+#const double RADIAN			3.14159265358979323846 / 180.0
+#const double DATA_ANGLE		RADIAN * 360.0 * 9.0702947845804988662131519274376e-5; / 11025.0
+
+*save
+	dialog "pico|wav|hsp", 17, "トーンデータ|WAVEファイル|HSPソース"
+	_ifn stat goto *main
+	fname = refstr
+	fext  = getpath(fname, 18) ; 拡張子 + 小文字変換
+	if ".pico" == fext || EMPTY_STR == fext {
+		bsave getpath(fname, 1) + ".pico", dot, sizeof_dot
+	}
+	if ".wav" == fext {
+		dim w, 8203
+		w = $46464952, $D824, $45564157, $20746D66, 16, 65537, 11025, 11025, $80001, $61746164, WAVE_FULL_LENGTH
+		bsave fname, w, 44
+		gen_wave_ = gen_wave : let0 gen_wave
+		wr_wave_  = wr_wave
+		sdim s, WAVE_FULL_LENGTH
+		dup wave, s
+		repeat TONE_NUM
+			wr_wave = cnt
+			gosub *update_wave_data
+		loop
+		bsave fname, s, WAVE_FULL_LENGTH, 44
+		dup wave, wave_
+		gen_wave = gen_wave_
+		wr_wave  = wr_wave_
+	}
+	if ".hsp" == fext {
+		s = strf({"%64d"
+q=%.15f:repeat 15:q(cnt+1)=q.cnt/%.15f:loop
+dim w,8203:w=$46464952,$D824,$45564157,$20746D66,16,65537,11025,11025,$80001,$61746164,32768
+repeat 32768:n=cnt\\2048:d=0.0:c=0:m=cnt/2048*4
+repeat 16:g=(peek(f,m+cnt/4)>>(cnt&3))&1:d+=limitf(sin(%.15f*q.cnt*n)*99999,-1,1)*g*(1.0-0.00048828125*n):c+=g:loop
+c+=c<1:poke w,44+cnt,int((%f*d/c+1)*128)
+loop
+memfile w,0,32812:mmload "MEM:.wav",1,1:mmplay 1"},0,freq,freq_step,DATA_ANGLE,volume_)
+		gosub *conv_tone
+		s = "f=\"" + s
+		bsave fname, s, strlen(s)
+	}
+	goto *main
+
+*conv_tone
+#const TONE_MATRIX_NUM_h4  TONE_MATRIX_NUM / 4
+	repeat TONE_MATRIX_NUM_h4
+		x = (cnt * 4) / 16
+		y = (cnt * 4) \ 16
+		poke s, cnt, '@' + dot(x,y+3) * 8 + dot(x,y+2) * 4 + dot(x,y+1) * 2 + dot(x,y)
+	loop
+	return
+
+*upload
+#ifdef ENABLE_HSPTV
+	; 空データのチェック
+	let0 n
+	repeat TONE_MATRIX_NUM
+		n += dot(cnt\16,cnt/16)
+	loop
+	_ifn 0 < n goto *main
+	; 最高スコア取得＆削除インデックス取得
+	let0 index : gosub *hsptv_getrank
+	;
+#const TONE_MATRIX_NUM_h4p1 TONE_MATRIX_NUM_h4 + 1
+	sdim s, TONE_MATRIX_NUM_h4p1
+	gosub *conv_tone
+	hsptv_send ranking, score + 1, s
+	notesel ranking
+	; 追加した後重複を削除
+	repeat 30
+		noteget user_name, cnt * 3 + 1
+		repeat 29 - cnt, cnt + 1
+			noteget user_name2, cnt * 3 + 1
+			if EMPTY_STR != user_name && user_name == user_name2 { ; 同じユーザー名の場合はスコアクリア
+				hsptv_send ranking, cnt, EMPTY_STR, $3000
+			}
+		loop
+	loop
+	noteunsel
+#endif
+	goto *main
+
+*download
+#ifdef ENABLE_HSPTV
+	stick key
+	n = MINUS_ONE
+	redraw 0
+	color
+	boxf
+	sysfont 17
+	let0 index_
+	repeat 75
+#const DL_TIP_SIZE		((480 - 20) / 5)
+#const DL_TIP_SIZE_HALF	DL_TIP_SIZE / 2
+		x = index_ \ 5 * DL_TIP_SIZE + 10
+		y = index_ / 5 * DL_TIP_SIZE + 10
+		let0 score
+		if cnt < 30 : index = cnt : gosub *hsptv_getrank
+		repeat TONE_MATRIX_NUM
+			xx = x + cnt / 16 * 5
+			yy = y + cnt \ 16 * 5
+			cr = color_tbl(4 * (0 == score) + ((peek(comment, cnt/4)>>(cnt&3))&1))
+			color cr>>20,cr<<12>>20,cr&255
+			boxf xx, yy, xx + 3, yy + 3
+		loop
+		if 0 < score && abs(x + DL_TIP_SIZE_HALF - mousex) < DL_TIP_SIZE_HALF && abs(y + DL_TIP_SIZE_HALF - mousey) < DL_TIP_SIZE_HALF {
+			gmode 3, DL_TIP_SIZE, DL_TIP_SIZE, 96
+			pos x, y
+			gcopy 0, 480, 100
+			color 255,255,255
+			mes user_name
+			if key : n = cnt
+		}
+		index_ += 0 < score || 30 <= cnt
+		if 25 <= index_ : break
+	loop
+	color 255,255,255
+	gosub *draw_title
+#const X_BACK_TEXT	SIZE + (640 - SIZE - 12 * 4) / 2
+#const Y_BACK_TEXT	25 * (6 + 11)
+	pos X_BACK_TEXT, Y_BACK_TEXT : mes "BACK"
+	redraw
+
+	if n + 1 {
+		index = n : gosub *hsptv_getrank
+		repeat TONE_MATRIX_NUM
+			dot(cnt/16,cnt\16) = (peek(comment, cnt/4)>>(cnt&3)) & 1
+		loop
+		goto *main
+	}
+	
+	_ifn 0 == key || mousex < 480 goto *main
+
+	await
+	goto *download
+
+*hsptv_getrank
+	index *= 3
+	notesel ranking
+	noteget score,     index : score = 0 + score
+	noteget user_name, index + 1
+	noteget comment,   index + 2
+	noteunsel
+	return
+#else
+	goto *main
+#endif
+
+*update_wave_data
+	; Waveデータ生成
+	repeat WAVE_LENGTH : n = cnt
+		let0d tmp
+		let0  tmp2
+		repeat 16
+			if dot(gen_wave, cnt)  {
+				; 三角波
+			;	a = int(131072.0 * n * freq(cnt) / 11025 + 65535) \ 131072
+			;	w = int(double(limit(a, 0, 65535) - limit(a - 65535, 0, 65535) - 32767) * 0.3) 
+				; 正弦波
+			;	w = sin( DATA_ANGLE * freq(cnt) * n )
+				; 矩形波
+				w = limitf(sin( DATA_ANGLE * freq(cnt) * n ) * 100000, MINUS_ONE, 1)
+				;
+		;		w = int(limitf(sin( DATA_ANGLE * freq(cnt) * (0.5 * rnd(2)) * n ) * 100000, -32768, 32767) * 0.3)
+				; 減衰処理
+				w *= 1.0 - double(n) / WAVE_LENGTH
+				; 波形ミックス
+				tmp += w
+				tmp2++
+			}
+		loop
+		tmp2 += 0 == tmp2 ; if 0 == tmp2 : tmp2++ ; ※ 0割防止
+#if 1 == WAVE_BLOCK_ALIGN
+		poke wave, WAVE_LENGTH_BYTE * wr_wave + cnt, int((tmp / tmp2 * volume_ + 1) * 128)
+#else
+		wpoke wave, WAVE_LENGTH_BYTE * wr_wave + cnt * 2, int(tmp / tmp2 * 32767.0 * volume_)
+#endif
+	loop
+
+	gen_wave++
+	gen_wave \= 16
+	wr_wave++
+	wr_wave \= WAVE_RING_NUM
+	return
+

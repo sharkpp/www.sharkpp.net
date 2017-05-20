@@ -1,0 +1,79 @@
+// UWSC  ALFAR 画像カッター by Shark++ Software
+//  実行条件
+//   ALFAR が起動していること
+//   グリッドが保存サイズになっていること
+//   →を押すと次の画像が表示されること
+//   始めに保存する画像が表示されていること
+
+//設定
+
+	//保存する名前のファイル名("<>" の部分に連番が入る)
+	save_file = GET_CUR_DIR + "\file<>s"
+
+	// 0)BMP, 1)MAG, 2)ICO, 3)PNG
+	save_type = 0
+	Dim save_ext[4] = ".bmp",".mag",".ico",".png"
+
+// 各種設定
+	//保存色(2(BMP のみ), 16, 256)
+	save_colors = 2
+
+	//透明色(PNG のみ)-1 は透明色なし
+	save_trans = -1
+
+	//連番初期値、終値
+	save_cnt_satrt= 0
+	save_cnt_end  = 9
+	//連番桁数
+	save_cntw= 1
+
+// ウインドウ取得
+	alfar_id = GetID("ALFAR", "oniwnd0")
+	Ifb -1 = alfar_id Then
+		MsgBox("ALFAR が見つかりません", BTN_OK)
+		ExitExit
+	Endif
+
+	//ALFAR をアクティブに
+	CtrlWin(alfar_id, ACTIVATE)
+
+	//マウス座標をクライアント基準で
+	MouseOrg(alfar_id, TRUE)
+
+	For i = save_cnt_satrt To save_cnt_end
+
+		//[ルーペ内の記憶] クリック
+		Btn(LEFT, CLICK, 140, 10)
+
+		//[記憶範囲の保存] クリック
+		Btn(LEFT, CLICK, 110, 10)
+
+		//保存ダイアログ
+		savedlg_id = GetID("記憶範囲を保存", "#32770")
+		Ifb -1 = alfar_id Then
+			MsgBox("保存ダイアログが見つかりません", BTN_OK)
+			ExitExit
+		Endif
+
+		//ファイル名セット
+		savefile = ChgMoj(save_file, "<>", ChgMoj(Format(i, save_cntw), " ", "0")) +save_ext[save_type]
+		SendStr(savedlg_id, savefile, 0, TRUE)
+
+		//保存クリック
+		ClkItem(savedlg_id, "保存")
+
+		//色を指定
+		Sleep(0.5)
+		savedlg2_id = GetID("保存", "oniwnd1")
+		ClkItem(savedlg2_id, "" +save_colors +"色")
+
+		//次の保存画像へ移動
+	//	Sleep(1)
+		CtrlWin(alfar_id, ACTIVATE)
+		KBD(VK_RIGHT, DOWN, 100) 
+		KBD(VK_RIGHT, UP,   100) 
+
+		Sleep(0.5) //少し休む
+	Next
+
+//EOF

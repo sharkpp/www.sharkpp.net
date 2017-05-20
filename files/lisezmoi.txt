@@ -1,0 +1,7 @@
+Insérer entre <HEAD> et </HEAD>
+
+<?php lytebox(); ?>
+
+Lytebox est sous licence Creative Commons Attribution 3.0 License
+
+Ce plugin a été réalisé à partir de http://dolem.com/lytebox, inspiré par http://frog.bebliuc.ro

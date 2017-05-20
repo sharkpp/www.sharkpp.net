@@ -1,0 +1,45 @@
+#packopt name		"sample_SetSysColor"
+#packopt runtime	"hsp3c.hrt"
+
+	sdim sm_tag, 64, 31
+	
+	sm_tag(0)	= "COLOR_SCROLLBAR",	"COLOR_BACKGROUND",		"COLOR_ACTIVECAPTION",	"COLOR_INACTIVECAPTION",	"COLOR_MENU"
+	sm_tag(5)	= "COLOR_WINDOW",		"COLOR_WINDOWFRAME",	"COLOR_MENUTEXT",		"COLOR_WINDOWTEXT",			"COLOR_CAPTIONTEXT"
+	sm_tag(10)	= "COLOR_ACTIVEBORDER",	"COLOR_INACTIVEBORDER",	"COLOR_APPWORKSPACE",	"COLOR_HIGHLIGHT",			"COLOR_HIGHLIGHTTEXT"
+	sm_tag(15)	= "COLOR_BTNFACE",		"COLOR_BTNSHADOW",		"COLOR_GRAYTEXT",		"COLOR_BTNTEXT",			"COLOR_INACTIVECAPTIONTEXT"
+	sm_tag(20)	= "COLOR_BTNHIGHLIGHT",	"COLOR_3DDKSHADOW",		"COLOR_3DLIGHT",		"COLOR_INFOTEXT",			"COLOR_INFOBK"
+	sm_tag(25)	= "",					"COLOR_HOTLIGHT",		"COLOR_GRADIENTACTIVECAPTION",	"COLOR_GRADIENTINACTIVECAPTION",	"COLOR_MENUHILIGHT"
+	sm_tag(30)	= "COLOR_MENUBAR"	
+
+	gsel 0, 2
+
+	width 220 * 3, 20 * 11
+	title "SetSysColor sample"
+
+	onkey goto *OnKeyPress
+
+	font msgothic, 12
+	
+	redraw 1
+	
+	repeat 31
+		x = cnt \ 3 * 220 + 1
+		y = cnt / 3 * 20  + 1
+		color 0, 0, 0
+		boxf x, y, x + 30, y + 16
+		syscolor cnt
+		boxf x + 1, y + 1, x + 30 - 1, y + 16 - 1
+		color 0, 0, 0
+		pos x + 35, y
+		mes sm_tag(cnt)
+	loop
+	redraw 1
+
+	gsel 0, 2
+
+	stop
+
+*OnKeyPress
+	if 27 = iparam : end
+	stop
+
