@@ -220,6 +220,10 @@ exec_deploy () {
     popd
     rm -rf output_prod/*
   fi
+  #
+  echo "imports:"          >app/config/sculpin_site_prod.yml
+  echo "- sculpin_site.yml">>app/config/sculpin_site_prod.yml
+  echo "google_analytics_tracking_id: $GOOGLE_ANALYTICS_TRACKING_ID">>app/config/sculpin_site_prod.yml
   # production generate
   PRIOD_BEGIN0=$(php -r 'echo microtime(true);')
   PRIOD_BEGIN=$(php -r 'echo microtime(true);')
@@ -236,6 +240,7 @@ exec_deploy () {
           -e "s/{BUILD_SEC}/$(echo $PRIOD_END-$PRIOD_BEGIN*2+$PRIOD_BEGIN0|bc)/g" \
     > README.md
   # deploy
+  return 0
   git add . -A
   echo $DEPLOY_MSG | git commit -F -
   git push --quiet origin $DEPLOY_BRANCH
