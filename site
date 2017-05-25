@@ -221,11 +221,12 @@ exec_deploy () {
     rm -rf output_prod/*
   fi
   # xx
-ls -l app/config/
   echo "imports:"          > app/config/sculpin_site_prod.yml
   echo "- sculpin_site.yml">>app/config/sculpin_site_prod.yml
   echo "google_analytics_tracking_id: ${GOOGLE_ANALYTICS_TRACKING_ID}">>app/config/sculpin_site_prod.yml
-ls -l app/config/
+  echo -------------
+  cat app/config/sculpin_site_prod.yml
+  echo -------------
   # production generate
   PRIOD_BEGIN0=$(php -r 'echo microtime(true);')
   PRIOD_BEGIN=$(php -r 'echo microtime(true);')
