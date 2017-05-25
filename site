@@ -224,14 +224,15 @@ exec_deploy () {
   echo "imports:"          > app/config/sculpin_site_prod.yml
   echo "- sculpin_site.yml">>app/config/sculpin_site_prod.yml
   echo "google_analytics_tracking_id: ${GOOGLE_ANALYTICS_TRACKING_ID}">>app/config/sculpin_site_prod.yml
-  echo -------------
-  cat app/config/sculpin_site_prod.yml
-  echo -------------
   # production generate
   PRIOD_BEGIN0=$(php -r 'echo microtime(true);')
   PRIOD_BEGIN=$(php -r 'echo microtime(true);')
   _sculpin generate --env=prod
   PRIOD_END=$(php -r 'echo microtime(true);')
+  # check google analytics tracking id
+  if [ "" == "$(cat output_prod/index.html | grep "${GOOGLE_ANALYTICS_TRACKING_ID}")" ]; then
+    return 1
+  fi
   # deploy message
   DEPLOY_MSG=$(git log --pretty=format:"Deploy from https://github.com/${TRAVIS_REPO_SLUG}/commit/%H : %s" -1)
   # create README.md
@@ -243,7 +244,6 @@ exec_deploy () {
           -e "s/{BUILD_SEC}/$(echo $PRIOD_END-$PRIOD_BEGIN*2+$PRIOD_BEGIN0|bc)/g" \
     > README.md
   # deploy
-  return 0
   git add . -A
   echo $DEPLOY_MSG | git commit -F -
   git push --quiet origin $DEPLOY_BRANCH
