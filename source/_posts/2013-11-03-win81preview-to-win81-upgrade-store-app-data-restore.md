@@ -3,7 +3,8 @@ title: "Windows 8.1 Preview から Windows 8.1 正式版への更新で消えた
 date: 2013-11-03 17:39:00
 tags: [雑記, Windows, Tips]
 categories: [ブログ]
-
+redirect:
+    - /blog/2013/11/03/win81preview_to_win81_upgrade_store_app_data_restore.html
 ---
 
 **注意事項** 下記内容を実行する場合は自己責任でお願いします。何がおきても知りません。

@@ -3,7 +3,8 @@ title: "pcbnet2 付属サンプルのHSP3対応修正"
 date: 2008-08-20 23:54:00
 tags: [HSP, HSPプラグイン]
 categories: [HSP, HSPプラグイン]
-
+redirect:
+    - /hsp/plugin/pcbnet2_sample_hsp3_fix.html
 ---
 
 ## 説明

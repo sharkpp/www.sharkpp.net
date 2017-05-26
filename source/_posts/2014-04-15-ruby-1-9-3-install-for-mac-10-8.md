@@ -3,7 +3,8 @@ title: "Mac OS X 10.8 に Ruby 1.9.3 をインストールする方法"
 date: 2014-04-15 16:18:00
 tags: [雑記, Mac, 環境構築, Ruby]
 categories: [ブログ]
-
+redirect:
+    - /blog/2014/04/15/ruby-1-9-3_install_for_mac_10_8.html
 ---
 
 `gem install chef` しようとしたら `mime-types requires Ruby version >= 1.9.2.` って怒られたので Ruby 1.9.3 を Mac にインストールしたときのメモです。

@@ -3,7 +3,8 @@ title: "”yabuinu” 難読化＆独自スクランブル ツール for HSP 3.x
 date: 2009-09-30 00:05:00
 tags: [HSP]
 categories: [HSP, HSP用ツール]
-
+redirect:
+    - /hsp/tool/yabuinu.html
 ---
 
 ### ソフトの説明

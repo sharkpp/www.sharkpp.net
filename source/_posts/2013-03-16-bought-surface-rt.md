@@ -3,7 +3,8 @@ title: "Surface RT 購入したよ！"
 date: 2013-03-16 01:40:00
 tags: [雑記]
 categories: [ブログ]
-
+redirect:
+    - /blog/2013/03/16/surface-rt-preview.html
 ---
 
 [Surface RT][1]が日本上陸とのことなので購入してみました。

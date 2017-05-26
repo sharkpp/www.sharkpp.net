@@ -3,7 +3,8 @@ title: "point指定font命令モジュール"
 date: 2011-06-29 00:57:00
 tags: [HSP]
 categories: [HSP, HSPモジュール]
-
+redirect:
+    - /hsp/module/point-size-font.html
 ---
 
 HSP標準のfont命令はピクセル指定のようなので、ポイント指定でフォントを生成するモジュールを作りました。

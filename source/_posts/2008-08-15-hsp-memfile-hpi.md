@@ -3,7 +3,8 @@ title: "memfile.hpi"
 date: 2008-08-15 01:03:00
 tags: [HSP, HSPプラグイン]
 categories: [HSP, HSPプラグイン]
-
+redirect:
+    - /hsp/plugin/memfile-hpi.html
 ---
 
 ## プラグインの説明

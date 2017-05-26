@@ -3,7 +3,8 @@ title: "クールなメニュー表示モジュール"
 date: 2011-06-29 01:08:00
 tags: [HSP]
 categories: [HSP, HSPモジュール]
-
+redirect:
+    - /hsp/module/cool-menu.html
 ---
 
 何を言っているのか分からない名前が付いていますがスクリーンショットを見てもらえば一目瞭然かと思います。

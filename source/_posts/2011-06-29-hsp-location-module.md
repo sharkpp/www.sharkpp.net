@@ -3,7 +3,8 @@ title: "現在位置取得モジュール"
 date: 2011-06-29 00:43:00
 tags: [HSP]
 categories: [HSP, HSPモジュール]
-
+redirect:
+    - /hsp/module/location-module.html
 ---
 
 何に役立つか分からないHSP用モジュールを作っちゃったので公開します。

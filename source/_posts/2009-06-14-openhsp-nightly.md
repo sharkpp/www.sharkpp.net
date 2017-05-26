@@ -3,7 +3,8 @@ title: "ナイトリービルド"
 date: 2009-06-14 22:26:00
 tags: [HSP]
 categories: [HSP]
-
+redirect:
+    - /hsp/openhsp/nightly.html
 ---
 
   * [OpenHSP\_20090627\_r330.zip][1] (3866 KB)

@@ -3,7 +3,8 @@ title: "色々なメモ: Qtで遊ぶ 其の２"
 date: 2009-10-04 17:24:00
 tags: [C++, Qt, Qtで遊ぶ]
 categories: [ブログ]
-
+redirect:
+    - /blog/2009/10/04/play-with-qt-part-2.html.html
 ---
 
 Qtでアプリケーションを作る時のコマンドなどなどのメモ

@@ -3,7 +3,8 @@ title: "HSPLetについて"
 date: 2008-09-02 01:35:00
 tags: [HSP, HSPlet]
 categories: [ブログ]
-
+redirect:
+    - /blog/about-hsplet.html
 ---
 
 1ヶ月ぐらい前の記事だけどfujidigさんの所でHSPLetの挙動について書かれていたのでトラックバックのテストついでに書いてみる。
