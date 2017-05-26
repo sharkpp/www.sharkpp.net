@@ -4,7 +4,8 @@ date: 2009-08-23 16:31:00
 update: 2015-06-02 13:00
 tags: [x64, Lhaplus, シェル拡張]
 categories: [ソフト, ツール]
-
+redirect:
+    - /soft/tool/lhaplus-x64-shell-extension.html
 ---
 
 {% import 'post_alert.html' as m %}
