@@ -14,3 +14,4 @@ output_*/
 *.phar
 *.log
 webhook.conf
+*.stackdump
