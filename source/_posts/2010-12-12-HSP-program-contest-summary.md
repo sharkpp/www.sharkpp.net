@@ -3,7 +3,8 @@ title: "HSPプログラムコンテスト統計"
 date: 2010-12-12 22:22:00
 tags: [HSP, まとめ]
 categories: [まとめ, HSP]
-
+redirect:
+    - /hsp/HSP-program-contest-summary.html
 ---
 
 | 開催年 | 作者数 | エントリー  

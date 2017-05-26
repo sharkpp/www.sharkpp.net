@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b8fe0542f83bf17d3d0f187520f6d8c0",
+    "content-hash": "c412205146fa585714d93c2c7d0f7637",
     "packages": [
         {
             "name": "beelab/bowerphp",
@@ -133,7 +133,7 @@
             "support": {
                 "source": "https://github.com/sharkpp/icelus/tree/impl_config_read"
             },
-            "time": "2017-05-20 14:15:19"
+            "time": "2017-05-20T14:15:19+00:00"
         },
         {
             "name": "components/bootstrap",
@@ -930,7 +930,7 @@
                 "embedded",
                 "extensibility"
             ],
-            "time": "2016-05-21 00:49:42"
+            "time": "2016-05-21T00:49:42+00:00"
         },
         {
             "name": "dflydev/placeholder-resolver",
@@ -1363,7 +1363,7 @@
                 "text",
                 "time"
             ],
-            "time": "2017-02-07 23:24:07"
+            "time": "2017-02-07T23:24:07+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -1570,6 +1570,52 @@
                 "minification"
             ],
             "time": "2016-11-11T18:43:20+00:00"
+        },
+        {
+            "name": "mavimo/sculpin-redirect-bundle",
+            "version": "dev-master",
+            "target-dir": "Mavimo/Sculpin/Bundle/RedirectBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mavimo/sculpin-redirect-bundle.git",
+                "reference": "5c42c401942008de04aa1e1d64161ca105568e2a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mavimo/sculpin-redirect-bundle/zipball/5c42c401942008de04aa1e1d64161ca105568e2a",
+                "reference": "5c42c401942008de04aa1e1d64161ca105568e2a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Mavimo\\Sculpin\\Bundle\\RedirectBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Vito Moscaritolo",
+                    "email": "marco@mavimo.org",
+                    "homepage": "http://www.mavimo.org"
+                }
+            ],
+            "description": "Sculpin Redirect Bundle",
+            "homepage": "https://sculpin.io",
+            "keywords": [
+                "blog",
+                "blogging",
+                "redirect",
+                "site",
+                "static"
+            ],
+            "time": "2014-01-04T14:40:02+00:00"
         },
         {
             "name": "michelf/php-markdown",
@@ -2459,7 +2505,7 @@
                 "calender",
                 "sculpin"
             ],
-            "time": "2016-09-03 06:35:32"
+            "time": "2016-09-03T06:35:32+00:00"
         },
         {
             "name": "symfony/config",
@@ -3456,7 +3502,8 @@
         "dflydev/embedded-composer": 20,
         "jasny/twig-extensions": 20,
         "sculpin/sculpin": 20,
-        "sharkpp/sculpin-calendarian-bundle": 20
+        "sharkpp/sculpin-calendarian-bundle": 20,
+        "mavimo/sculpin-redirect-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

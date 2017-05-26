@@ -24,7 +24,8 @@
         "dflydev/embedded-composer": "@dev",
         "jasny/twig-extensions": "@dev",
         "sculpin/sculpin": "^2.1@dev",
-        "sharkpp/sculpin-calendarian-bundle": "dev-master"
+        "sharkpp/sculpin-calendarian-bundle": "dev-master",
+        "mavimo/sculpin-redirect-bundle": "@dev"
     },
     "autoload": {
         "psr-0": {

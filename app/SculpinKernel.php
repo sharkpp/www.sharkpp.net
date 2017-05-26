@@ -7,6 +7,7 @@ class SculpinKernel extends \Sculpin\Bundle\SculpinBundle\HttpKernel\AbstractKer
         return array(
            'Sharkpp\Sculpin\Bundle\CalendarianBundle\SculpinCalendarianBundle',
            'Beryllium\Icelus\IcelusBundle',
+           'Mavimo\Sculpin\Bundle\RedirectBundle\SculpinRedirectBundle',
         );
     }
 }
