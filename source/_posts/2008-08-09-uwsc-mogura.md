@@ -2,7 +2,8 @@
 title: "モグラ男 参上!!"
 date: 2008-08-09 09:56:00
 categories: [がらくた, uwsc]
-
+redirect:
+    - /junk/uwsc/mogura.html
 ---
 
 拙作[「モグラ叩き」][1]を自動で遊ぶ UWSC スクリプトです。

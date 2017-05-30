@@ -3,7 +3,8 @@ title: "TeraPad Temporary Tool"
 date: 2008-07-21 00:11:00
 tags: [TeraPad]
 categories: [ソフト, TeraPad]
-
+redirect:
+    - /soft/tptool/tptemp.html
 ---
 
 ## 詳細

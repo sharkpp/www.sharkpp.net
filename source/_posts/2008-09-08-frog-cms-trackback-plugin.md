@@ -3,7 +3,8 @@ title: "トラックバックプラグイン"
 date: 2008-09-08 01:13:00
 tags: [php, Frog CMS]
 categories: [php, Frog CMS]
-
+redirect:
+    - /php/frog-cms/trackback-plugin.html
 ---
 
 [DOWNLOAD][1] 

@@ -3,7 +3,8 @@ title: "C言語講座 第二回 ファイルサイズの縮小"
 date: 2008-07-20 23:36:00
 tags: [ポケコン]
 categories: [ポケコン, ポケコン講座]
-
+redirect:
+    - /pokecom/lecture/02_file_size_compact.html
 ---
 
 ## 始めに

@@ -4,7 +4,8 @@ date: 2009-03-08 15:20:00
 update: 2015-09-05 12:00
 tags: [サクラエディタ, php]
 categories: [がらくた, サクラエディタ]
-
+redirect:
+    - /junk/sakura-editor/php-keyword.html
 ---
 
 サクラエディタ用のPHP用強調キーワード・キーワードヘルプファイルです。

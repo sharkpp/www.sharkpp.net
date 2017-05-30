@@ -2,7 +2,8 @@
 title: "「VaporCD」日本語化パッチ"
 date: 2008-08-10 02:27:00
 categories: [がらくた, パッチ]
-
+redirect:
+    - /junk/patch/vaporcd.html
 ---
 
 Brad Johnson 氏作の「VaporCD」を日本語化します。

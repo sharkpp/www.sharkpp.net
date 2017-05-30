@@ -3,7 +3,8 @@ title: "除夜の鐘"
 date: 2011-01-01 02:32:00
 tags: [除夜の鐘, 季節物, 大晦日]
 categories: [ソフト, ツール]
-
+redirect:
+    - /soft/tool/joya_no_kane.html
 ---
 
 ### ソフトの説明

@@ -2,7 +2,8 @@
 title: "「ぷーさめ32 for Windows」日本語化パッチ"
 date: 2008-08-10 02:23:00
 categories: [がらくた, パッチ]
-
+redirect:
+    - /junk/patch/pusame.html
 ---
 
 ＥＤ(飯田　英隆) 氏作の「ぷーさめ32 for Windows」を日本語化します。

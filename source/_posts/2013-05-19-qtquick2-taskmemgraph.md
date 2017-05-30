@@ -3,7 +3,8 @@ title: "続・QtQuick2でアプリ作ってみたよ"
 date: 2013-05-19 18:48:00
 tags: [C++, Qt, Qtで遊ぶ, QtQuick]
 categories: [ブログ]
-
+redirect:
+    - /blog/2013/05/19/qtquick2_taskmemgraph.html
 ---
 
 勉強会の続きが結構かかってしまったけど何とかそれなりに形になりました。

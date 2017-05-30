@@ -2,7 +2,8 @@
 title: "ALFAR 画像カッター"
 date: 2008-08-09 09:57:00
 categories: [がらくた, uwsc]
-
+redirect:
+    - /junk/uwsc/alcut.html
 ---
 
 Dot Painter ALFAR([ELF's Software][1])で画像の切り出し操作を自動で行うスクリプトです。 

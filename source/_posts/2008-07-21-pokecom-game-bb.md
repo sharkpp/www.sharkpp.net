@@ -3,7 +3,8 @@ title: "BlockBreak"
 date: 2008-07-21 00:00:00
 tags: [ポケコン]
 categories: [ポケコン, ポケコン用ゲーム]
-
+redirect:
+    - /pokecom/game/bb.html
 ---
 
 ## 画面

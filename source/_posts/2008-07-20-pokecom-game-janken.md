@@ -3,7 +3,8 @@ title: "ジャンケンゲーム"
 date: 2008-07-20 23:43:00
 tags: [ポケコン]
 categories: [ポケコン, ポケコン用ゲーム]
-
+redirect:
+    - /pokecom/game/janken.html
 ---
 
 ## 画面

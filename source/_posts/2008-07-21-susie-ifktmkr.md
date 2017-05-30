@@ -2,7 +2,8 @@
 title: "Project-μ Bitmap to DIB Filter"
 date: 2008-07-21 00:14:00
 categories: [ソフト, Susie]
-
+redirect:
+    - /soft/susie/ifktmkr.html
 ---
 
 <div><a href="/files/ifktm001.lzh">DOWNLOAD</a> 2004/02/24

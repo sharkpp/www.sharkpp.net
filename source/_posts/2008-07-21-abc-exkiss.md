@@ -2,7 +2,8 @@
 title: "KiSS CEL Export Library"
 date: 2008-07-21 00:14:00
 categories: [ソフト, A to B Converter]
-
+redirect:
+    - /soft/abc/exkiss.html
 ---
 
 <div><a href="/files/exks001c.lzh">DOWNLOAD</a> 2004/02/24

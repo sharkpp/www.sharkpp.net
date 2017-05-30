@@ -2,7 +2,8 @@
 title: "「ライグルの野望」用SSG"
 date: 2008-08-09 10:00:00
 categories: [がらくた, SpoilerAL]
-
+redirect:
+    - /junk/spal/rigle.html
 ---
 
 PHAME 氏作の「TransForm ～ ライグルの野望」のトスのステータスを書き換えます。

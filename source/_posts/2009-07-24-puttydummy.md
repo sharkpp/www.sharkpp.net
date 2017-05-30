@@ -2,7 +2,8 @@
 title: "PuTTY command line interface proxy for TeraTerm"
 date: 2009-07-24 01:04:00
 categories: [ソフト, ツール]
-
+redirect:
+    - /soft/tool/puttydummy.html
 ---
 
 ### ソフトの説明

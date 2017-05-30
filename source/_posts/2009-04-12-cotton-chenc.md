@@ -2,7 +2,8 @@
 title: "IRC Channel encode convert plugin"
 date: 2009-04-12 23:01:00
 categories: [ソフト, cotton]
-
+redirect:
+    - /soft/cotton/chenc.html
 ---
 
 <div><a href="/files/chenc001.zip">DOWNLOAD</a> 2009/04/12

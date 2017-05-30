@@ -2,7 +2,8 @@
 title: "とりゲーム 自動ショット"
 date: 2008-08-09 09:57:00
 categories: [がらくた, uwsc]
-
+redirect:
+    - /junk/uwsc/torigame.html
 ---
 
 とりゲーム([オレンチペーヂ。][1])でZキーの連打を自動で行うスクリプトです。 

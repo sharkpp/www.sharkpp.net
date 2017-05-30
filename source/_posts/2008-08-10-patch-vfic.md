@@ -2,7 +2,8 @@
 title: "「Virtual Floppy Image Converter」改造パッチ"
 date: 2008-08-10 02:29:00
 categories: [がらくた, パッチ]
-
+redirect:
+    - /junk/patch/vfic.html
 ---
 
 RED 氏作の「VFIC」のフォントの大きさを変え見やすくする改造パッチです。

@@ -3,7 +3,8 @@ title: "rand.h"
 date: 2008-07-20 23:40:00
 tags: [ポケコン]
 categories: [ポケコン, ポケコン用プログラム]
-
+redirect:
+    - /pokecom/program/rand_h.html
 ---
 
 <div><img src="/images/pokecom-c.gif" alt="C言語" /> <a href="/files/rand.h">DOWNLOAD</a> 2004/03/14

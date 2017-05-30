@@ -2,7 +2,8 @@
 title: "ポケコン"
 date: 2008-08-10 14:11:00
 categories: [リンク]
-
+redirect:
+    - /link/pokecom.html
 ---
 
 <div class="link"><h3>

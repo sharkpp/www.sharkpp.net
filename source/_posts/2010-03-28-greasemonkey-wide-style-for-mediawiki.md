@@ -3,7 +3,8 @@ title: "Wide style for mediawiki"
 date: 2010-03-28 16:41:00
 tags: [Greasemonkey, Userscript]
 categories: [がらくた, greasemonkey]
-
+redirect:
+    - /junk/greasemonkey/wide-style-for-mediawiki.html
 ---
 
 Mediawikiのデフォルトスタイルのサイドバーに開閉機能を付けるユーザースクリプトです。

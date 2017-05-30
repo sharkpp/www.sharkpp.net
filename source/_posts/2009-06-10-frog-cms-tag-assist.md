@@ -3,7 +3,8 @@ title: "タグ入力補助プラグイン"
 date: 2009-06-10 00:28:00
 tags: [php, Frog CMS]
 categories: [php, Frog CMS]
-
+redirect:
+    - /php/frog-cms/tag_assist.html
 ---
 
 

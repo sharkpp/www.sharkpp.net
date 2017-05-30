@@ -3,7 +3,8 @@ title: "PC-G850S/PC-G850V/PC-G850VS 性能比較"
 date: 2009-03-29 23:42:00
 tags: [ポケコン]
 categories: [ポケコン]
-
+redirect:
+    - /pokecom/pcg850vs.html
 ---
 
 ## 始めに

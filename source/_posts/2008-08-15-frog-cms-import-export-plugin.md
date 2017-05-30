@@ -3,7 +3,8 @@ title: "インポート/エクスポートプラグイン"
 date: 2008-08-15 01:38:00
 tags: [php, Frog CMS]
 categories: [php, Frog CMS]
-
+redirect:
+    - /php/frog-cms/import-export-plugin.html
 ---
 
 [DOWNLOAD][1] 

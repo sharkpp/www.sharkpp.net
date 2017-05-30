@@ -3,7 +3,8 @@ title: "ぱたぱた"
 date: 2008-07-21 00:01:00
 tags: [ポケコン]
 categories: [ポケコン, ポケコン用ゲーム]
-
+redirect:
+    - /pokecom/game/patapata.html
 ---
 
 ## 画面

@@ -3,7 +3,8 @@ title: "rhaco2ってどうやって使うの？"
 date: 2009-02-01 17:45:00
 tags: [php, rhaco, rhaco2]
 categories: [php, rhaco]
-
+redirect:
+    - /php/rhaco/how-to-use-rhaco2.html
 ---
 
 2009年12月31日 追記

@@ -2,7 +2,8 @@
 title: "KiSS CEL to DIB Filter"
 date: 2008-07-21 00:12:00
 categories: [ソフト, Susie]
-
+redirect:
+    - /soft/susie/ifcel.html
 ---
 
 <div><a href="/files/ifcl003a.lzh">DOWNLOAD</a> 2004/02/24

@@ -3,7 +3,8 @@ title: "ポヨポヨ"
 date: 2008-07-20 23:59:00
 tags: [ポケコン]
 categories: [ポケコン, ポケコン用ゲーム]
-
+redirect:
+    - /pokecom/game/poyopoyo.html
 ---
 
 ## 画面

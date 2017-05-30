@@ -3,7 +3,8 @@ title: "Escape"
 date: 2008-07-20 23:42:00
 tags: [ポケコン]
 categories: [ポケコン, ポケコン用ゲーム]
-
+redirect:
+    - /pokecom/game/escape.html
 ---
 
 ## 画面

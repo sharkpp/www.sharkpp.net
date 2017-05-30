@@ -3,7 +3,8 @@ title: "KeyHiter"
 date: 2008-07-20 23:41:00
 tags: [ポケコン]
 categories: [ポケコン, ポケコン用ゲーム]
-
+redirect:
+    - /pokecom/game/keyhiter.html
 ---
 
 ## 画面

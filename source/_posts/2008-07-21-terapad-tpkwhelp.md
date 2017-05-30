@@ -3,7 +3,8 @@ title: "TeraPad KeyWord Help Tool"
 date: 2008-07-21 00:09:00
 tags: [TeraPad]
 categories: [ソフト, TeraPad]
-
+redirect:
+    - /soft/tptool/tpkwhelp.html
 ---
 
 ## ソフトの説明

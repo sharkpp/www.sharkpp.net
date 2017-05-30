@@ -3,7 +3,8 @@ title: "スニペット貼り付けプラグイン"
 date: 2009-03-10 15:17:00
 tags: [php, Frog CMS]
 categories: [php, Frog CMS]
-
+redirect:
+    - /php/frog-cms/snippet_paster.html
 ---
 
 

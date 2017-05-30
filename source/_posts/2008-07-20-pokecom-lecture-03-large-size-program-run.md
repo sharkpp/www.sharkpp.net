@@ -3,7 +3,8 @@ title: "C言語講座 第三回 巨大なプログラムの実行"
 date: 2008-07-20 23:37:00
 tags: [ポケコン]
 categories: [ポケコン, ポケコン講座]
-
+redirect:
+    - /pokecom/lecture/03_large_size_program_run.html
 ---
 
 ## 始めに

@@ -3,7 +3,8 @@ title: "inkey.h"
 date: 2008-07-20 23:39:00
 tags: [ポケコン]
 categories: [ポケコン, ポケコン用プログラム]
-
+redirect:
+    - /pokecom/program/inkey_h.html
 ---
 
 <div><img src="/images/pokecom-c.gif" alt="C言語" /> <a href="/files/inkey.h">DOWNLOAD</a> 2004/03/14

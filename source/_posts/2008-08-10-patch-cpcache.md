@@ -2,7 +2,8 @@
 title: "「URL Cache Copy Program」日本語化パッチ"
 date: 2008-08-10 02:25:00
 categories: [がらくた, パッチ]
-
+redirect:
+    - /junk/patch/cpcache.html
 ---
 
 Thrasher 氏作の「CpCache」を日本語化します。

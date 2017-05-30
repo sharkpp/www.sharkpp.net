@@ -3,7 +3,8 @@ title: "TeraPad KeyWord Get Tool"
 date: 2008-07-21 00:10:00
 tags: [TeraPad]
 categories: [ソフト, TeraPad]
-
+redirect:
+    - /soft/tptool/tpkwget.html
 ---
 
 ## 詳細

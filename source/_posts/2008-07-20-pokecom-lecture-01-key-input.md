@@ -3,7 +3,8 @@ title: "C言語講座 第一回 キー入力"
 date: 2008-07-20 23:36:00
 tags: [ポケコン]
 categories: [ポケコン, ポケコン講座]
-
+redirect:
+    - /pokecom/lecture/01_key_input.html
 ---
 
 ## 始めに

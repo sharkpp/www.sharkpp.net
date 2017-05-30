@@ -2,7 +2,8 @@
 title: "D-Angel Archive extract plug-in"
 date: 2008-07-21 00:13:00
 categories: [ソフト, Susie]
-
+redirect:
+    - /soft/susie/axdangel.html
 ---
 
 <div><a href="/files/axda003.lzh">DOWNLOAD</a> 2004/02/24

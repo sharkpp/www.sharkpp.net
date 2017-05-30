@@ -3,7 +3,8 @@ title: "日本語言語ファイル"
 date: 2008-08-15 01:32:00
 tags: [php, Frog CMS]
 categories: [php, Frog CMS]
-
+redirect:
+    - /php/frog-cms/ja_message.html
 ---
 
 [DOWNLOAD][1] 
