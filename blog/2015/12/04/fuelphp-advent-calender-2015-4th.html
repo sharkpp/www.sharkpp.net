@@ -1,48 +1,9 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Markdown Wiki を通して Temporal Model の使い方を覚えよう &mdash; さめたすたすのお家</title>
-        <meta charset="utf-8">
-        <meta name="theme-color" content="#6877AA">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="robots" content="index, follow">
-        <meta name="keywords" content="Advent Calendar,php,FuelPHP">
-        <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/lightbox2/dist/css/lightbox.css" rel="stylesheet" type="text/css" />
-        <link href="/css/style.min.css" rel="stylesheet" type="text/css" />
-        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-
-        <link rel="apple-touch-startup-image" href="/images/noname/2048x2048.png">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="shortcut icon" sizes="76x76" href="/images/noname/76x76.png">
-        <link rel="shortcut icon" sizes="120x120" href="/images/noname/120x120.png">
-        <link rel="shortcut icon" sizes="128x128" href="/images/noname/128x128.png">
-        <link rel="shortcut icon" sizes="152x152" href="/images/noname/152x152.png">
-        <link rel="shortcut icon" sizes="196x196" href="/images/noname/196x196.png">
-        <link rel="shortcut icon" sizes="512x512" href="/images/noname/512x512.png">
-        <link rel="shortcut icon" sizes="1024x1024" href="/images/noname/1024x1024.png">
-        <link rel="shortcut icon" sizes="2048x2048" href="/images/noname/2048x2048.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="/images/noname/76x76.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="/images/noname/120x120.png">
-        <link rel="apple-touch-icon" sizes="128x128" href="/images/noname/128x128.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="/images/noname/152x152.png">
-        <link rel="apple-touch-icon" sizes="196x196" href="/images/noname/196x196.png">
-        <link rel="apple-touch-icon" sizes="512x512" href="/images/noname/512x512.png">
-        <link rel="apple-touch-icon" sizes="1024x1024" href="/images/noname/1024x1024.png">
-        <link rel="apple-touch-icon" sizes="2048x2048" href="/images/noname/2048x2048.png">
-
-        <link rel="stylesheet" href="/assets/highlightjs/styles/github.css" />
-        <link rel="alternate" type="application/atom+xml" href="/atom.xml" title="さめたすたすのお家 activity feed" />
-        <style>
+<head><title>Markdown Wiki を通して Temporal Model の使い方を覚えよう &mdash; さめたすたすのお家</title><meta charset="utf-8"><meta name="theme-color" content="#6877AA"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="index, follow"><meta name="keywords" content="Advent Calendar,php,FuelPHP"><link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" /><link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" /><link href="/assets/lightbox2/dist/css/lightbox.css" rel="stylesheet" type="text/css" /><link href="/css/style.min.css" rel="stylesheet" type="text/css" /><!-- HTML5 shim, for IE6-8 support of HTML5 elements --><!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--><link rel="apple-touch-startup-image" href="/images/noname/2048x2048.png"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="shortcut icon" sizes="76x76" href="/images/noname/76x76.png"><link rel="shortcut icon" sizes="120x120" href="/images/noname/120x120.png"><link rel="shortcut icon" sizes="128x128" href="/images/noname/128x128.png"><link rel="shortcut icon" sizes="152x152" href="/images/noname/152x152.png"><link rel="shortcut icon" sizes="196x196" href="/images/noname/196x196.png"><link rel="shortcut icon" sizes="512x512" href="/images/noname/512x512.png"><link rel="shortcut icon" sizes="1024x1024" href="/images/noname/1024x1024.png"><link rel="shortcut icon" sizes="2048x2048" href="/images/noname/2048x2048.png"><link rel="apple-touch-icon" sizes="76x76" href="/images/noname/76x76.png"><link rel="apple-touch-icon" sizes="120x120" href="/images/noname/120x120.png"><link rel="apple-touch-icon" sizes="128x128" href="/images/noname/128x128.png"><link rel="apple-touch-icon" sizes="152x152" href="/images/noname/152x152.png"><link rel="apple-touch-icon" sizes="196x196" href="/images/noname/196x196.png"><link rel="apple-touch-icon" sizes="512x512" href="/images/noname/512x512.png"><link rel="apple-touch-icon" sizes="1024x1024" href="/images/noname/1024x1024.png"><link rel="apple-touch-icon" sizes="2048x2048" href="/images/noname/2048x2048.png"><link rel="stylesheet" href="/assets/highlightjs/styles/github.css" /><link rel="alternate" type="application/atom+xml" href="/atom.xml" title="さめたすたすのお家 activity feed" /><style>
         /** quick fix because bootstrap <pre> has a background-color. */
         pre code { background-color: inherit; }
-        </style>
-                <style>
+        </style><style>
         #go-top {
             display: none;
             bottom: 40px;
@@ -65,42 +26,8 @@
             max-width: 350px;
             word-wrap: break-word;
         }
-        </style>
-                    </head>
-    <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/">さめたすたすのお家</a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav pull-right">
-                        <li><a href="/blog/"><i class="fa fa-archive"></i> アーカイブ</a></li>
-                        <li><a href="/blog/categories"><i class="fa fa-folder-open"></i> カテゴリ</a></li>
-                        <li><a href="/blog/tags"><i class="fa fa-tags"></i> タグ</a></li>
-                        <li><a href="/product/"><i class="fa fa-download"></i> 作ったもの</a></li>
-                        <li><a href="/graffiti/"><i class="fa fa-paint-brush"></i> 落書き</a></li>
-                        <li><a href="/link.html"><i class="fa fa-link"></i> リンク</a></li>
-                        <li><a href="/about">About</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
-
-        <div class="mainContent container">
-                                                                                
-                                
-    <ol class="breadcrumb" itemscope="itemscope"
-                           itemtype="http://schema.org/BreadcrumbList">
-        <li
+        </style></head><body><nav class="navbar navbar-inverse navbar-fixed-top"><div class="container-fluid"><!-- Brand and toggle get grouped for better mobile display --><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/">さめたすたすのお家</a></div><!-- Collect the nav links, forms, and other content for toggling --><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><ul class="nav navbar-nav pull-right"><li><a href="/blog/"><i class="fa fa-archive"></i> アーカイブ</a></li><li><a href="/blog/categories"><i class="fa fa-folder-open"></i> カテゴリ</a></li><li><a href="/blog/tags"><i class="fa fa-tags"></i> タグ</a></li><li><a href="/product/"><i class="fa fa-download"></i> 作ったもの</a></li><li><a href="/graffiti/"><i class="fa fa-paint-brush"></i> 落書き</a></li><li><a href="/link.html"><i class="fa fa-link"></i> リンク</a></li><li><a href="/about">About</a></li></ul></div><!-- /.navbar-collapse --></div><!-- /.container-fluid --></nav><div class="mainContent container"><ol class="breadcrumb" itemscope="itemscope"
+                           itemtype="http://schema.org/BreadcrumbList"><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/"
@@ -108,154 +35,36 @@
      >&nbsp;<span itemprop="name">HOME</span
            ><meta itemprop="position" content="1"
           /></a
-       ></li>
-        <li
+       ></li><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/blog/2015/"
            ><span>2015</span
            ><meta itemprop="position" content="2"
           /></a
-       ></li>
-        <li
+       ></li><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/blog/2015/12/"
            ><span>12</span
            ><meta itemprop="position" content="3"
           /></a
-       ></li>
-        <li
+       ></li><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/blog/2015/12/04/"
            ><span>04</span
            ><meta itemprop="position" content="4"
           /></a
-       ></li>
-        <li
+       ></li><li
             class="active"><span 
            ><span>Markdown Wiki を通して Temporal Model の使い方を覚えよう</span
-       ></li>
-    </ol>
-
-    <article itemscope="itemscope" itemtype="http://schema.org/Article">
-        <meta itemscope="itemscope" itemprop="mainEntityOfPage"
-              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net/blog/2015/12/04/fuelphp-advent-calender-2015-4th.html"/>
-        <header>
-            <h1><span itemprop="headline">Markdown Wiki を通して Temporal Model の使い方を覚えよう</span> <small>post</small></h1>
-        </header>
-
-<div id="toc" class="panel panel-default pull-right">
-    <div class="panel-heading text-center">目次</div>
-        <div class="panel-body" style="padding: 10px;">
-            <ul class="fa-ul">
-            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">はじめに</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E7%92%B0%E5%A2%83%E3%81%AE%E6%BA%96%E5%82%99">環境の準備</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#fuelphp-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">FuelPHP のインストール</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%AE%9F%E8%A3%85">実装</a>
-<ul class="fa-ul">            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%A2%E3%83%87%E3%83%AB%E3%82%84%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%81%AA%E3%81%A9%E3%81%AE%E3%82%B9%E3%82%B1%E3%83%AB%E3%83%88%E3%83%B3%E3%82%92%E8%BF%BD%E5%8A%A0">モデルやコントローラなどのスケルトンを追加</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%82%B3%E3%83%BC%E3%83%89%E3%82%92%E8%BF%BD%E5%8A%A0">コードを追加</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%93%E3%83%A5%E3%83%BC%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E4%BF%AE%E6%AD%A3">ビューテンプレートを修正</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%9A%E3%83%BC%E3%82%B8%E8%A1%A8%E7%A4%BA%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85">ページ表示用のコントローラメソッドとビュー実装</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%9A%E3%83%BC%E3%82%B8%E7%B7%A8%E9%9B%86%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85">ページ編集用のコントローラメソッドとビュー実装</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7%E8%A1%A8%E7%A4%BA%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85">ページ一覧表示用のコントローラメソッドとビュー実装</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%9A%E3%83%BC%E3%82%B8%E5%B1%A5%E6%AD%B4%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85">ページ履歴用のコントローラメソッドとビュー実装</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%9A%E3%83%BC%E3%82%B8%E5%89%8A%E9%99%A4%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85">ページ削除用のコントローラメソッドとビュー実装</a>
-</li></ul></li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#wiki-%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9">Wiki の使い方</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%8F%82%E8%80%83">参考</a>
-        </ul>
-    </div>
-</div>
-
-<div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div>
-
-        <div itemprop="articleBody">
-            <p>こんにちは、こんばんは、<a href="http://qiita.com/advent-calendar/2015/fuelphp">FuelPHP Advent Calendar 2015</a> の 4 日目を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p>
-
-<p>今回は Temporal Model を使って Markdown で記述できる簡易 Wiki を作ってみることにします。</p>
-
-<p>題して「Markdown Wiki を通して Temporal Model の使い方を覚えよう」です。</p>
-
-<p>完成品は <a href="https://github.com/sharkpp/md-micro-wiki">md-micro-wiki @ github.com</a> にコミットし <a href="https://www.vagrantup.com/">Vagrant</a> を使って簡単に試せるようにしてあります。</p>
-
-<h2 id="%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB" itemprop="articleSection">はじめに</h2>
-
-<p>Markdwon で記述できる簡単な Wiki の作成を通して <a href="http://fuelphp.com/docs/packages/orm/model/temporal.html">Temporal Model</a> (日本語訳は <a href="http://fuelphp.jp/docs/1.8/packages/orm/model/temporal.html">Temporal Model @ fuelphp.jp</a> を参照) の使い方を説明してみようと思います。</p>
-
-<p>作るものの要件として</p>
-
-<ul>
-<li>FuelPHP 1.7.3 を使用</li>
-<li>履歴が残せる簡易な Wiki アプリ</li>
-<li>Model_Temporal クラスを使用</li>
-<li>Markdown で本文を記述</li>
-<li>ログイン管理は長くなるので省略</li>
-</ul>
-
-<p>を簡単に決め作ってみました。</p>
-
-<p>また、なるべく Oil コマンドの Generate 機能でスケルトンを作り実装の速度を上げてみたいと思います。</p>
-
-<h2 id="%E7%92%B0%E5%A2%83%E3%81%AE%E6%BA%96%E5%82%99" itemprop="articleSection">環境の準備</h2>
-
-<p>データベースは FuelPHP の開発環境デフォルトの</p>
-
-<table>
-<thead>
-<tr>
-  <th>項目名</th>
-  <th>値</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>データベース名</td>
-  <td>fuel_dev</td>
-</tr>
-<tr>
-  <td>ユーザー名</td>
-  <td>root</td>
-</tr>
-<tr>
-  <td>パスワード</td>
-  <td>root</td>
-</tr>
-</tbody>
-</table>
-
-<p>とします。</p>
-
-<h2 id="fuelphp-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" itemprop="articleSection">FuelPHP のインストール</h2>
-
-<p><a href="http://fuelphp.com/docs/installation/instructions.html">Instruction</a> (日本語訳は <a href="http://fuelphp.jp/docs/1.8/installation/instructions.html">インストール方法 @ fuelphp.jp</a> を参照) を確認しながら、 Composer を使い、サクッとインストールします。</p>
-
-<p>この時、PHP のタイムゾーンを設定しておかないとエラーが発生してインストール処理が中断するので注意です。</p>
-
-<pre><code>$ composer create-project fuel/fuel:dev-1.7/master --prefer-dist md-micro-wiki
-</code></pre>
-
-<p>Welcome ページもいらないので削除します。</p>
-
-<pre><code>$ cd md-micro-wiki
+       ></li></ol><article itemscope="itemscope" itemtype="http://schema.org/Article"><meta itemscope="itemscope" itemprop="mainEntityOfPage"
+              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net/blog/2015/12/04/fuelphp-advent-calender-2015-4th.html"/><header><h1><span itemprop="headline">Markdown Wiki を通して Temporal Model の使い方を覚えよう</span><small>post</small></h1></header><div id="toc" class="panel panel-default pull-right"><div class="panel-heading text-center">目次</div><div class="panel-body" style="padding: 10px;"><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">はじめに</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E7%92%B0%E5%A2%83%E3%81%AE%E6%BA%96%E5%82%99">環境の準備</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#fuelphp-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">FuelPHP のインストール</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%AE%9F%E8%A3%85">実装</a><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%A2%E3%83%87%E3%83%AB%E3%82%84%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%81%AA%E3%81%A9%E3%81%AE%E3%82%B9%E3%82%B1%E3%83%AB%E3%83%88%E3%83%B3%E3%82%92%E8%BF%BD%E5%8A%A0">モデルやコントローラなどのスケルトンを追加</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%82%B3%E3%83%BC%E3%83%89%E3%82%92%E8%BF%BD%E5%8A%A0">コードを追加</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%93%E3%83%A5%E3%83%BC%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E4%BF%AE%E6%AD%A3">ビューテンプレートを修正</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%9A%E3%83%BC%E3%82%B8%E8%A1%A8%E7%A4%BA%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85">ページ表示用のコントローラメソッドとビュー実装</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%9A%E3%83%BC%E3%82%B8%E7%B7%A8%E9%9B%86%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85">ページ編集用のコントローラメソッドとビュー実装</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7%E8%A1%A8%E7%A4%BA%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85">ページ一覧表示用のコントローラメソッドとビュー実装</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%9A%E3%83%BC%E3%82%B8%E5%B1%A5%E6%AD%B4%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85">ページ履歴用のコントローラメソッドとビュー実装</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%9A%E3%83%BC%E3%82%B8%E5%89%8A%E9%99%A4%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85">ページ削除用のコントローラメソッドとビュー実装</a></li></ul></li><li><i class="fa-li fa fa-paperclip"></i><a href="#wiki-%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9">Wiki の使い方</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%8F%82%E8%80%83">参考</a></ul></div></div><div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div><div itemprop="articleBody"><p>こんにちは、こんばんは、<a href="http://qiita.com/advent-calendar/2015/fuelphp">FuelPHP Advent Calendar 2015</a> の 4 日目を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p><p>今回は Temporal Model を使って Markdown で記述できる簡易 Wiki を作ってみることにします。</p><p>題して「Markdown Wiki を通して Temporal Model の使い方を覚えよう」です。</p><p>完成品は <a href="https://github.com/sharkpp/md-micro-wiki">md-micro-wiki @ github.com</a> にコミットし <a href="https://www.vagrantup.com/">Vagrant</a> を使って簡単に試せるようにしてあります。</p><h2 id="%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB" itemprop="articleSection">はじめに</h2><p>Markdwon で記述できる簡単な Wiki の作成を通して <a href="http://fuelphp.com/docs/packages/orm/model/temporal.html">Temporal Model</a> (日本語訳は <a href="http://fuelphp.jp/docs/1.8/packages/orm/model/temporal.html">Temporal Model @ fuelphp.jp</a> を参照) の使い方を説明してみようと思います。</p><p>作るものの要件として</p><ul><li>FuelPHP 1.7.3 を使用</li><li>履歴が残せる簡易な Wiki アプリ</li><li>Model_Temporal クラスを使用</li><li>Markdown で本文を記述</li><li>ログイン管理は長くなるので省略</li></ul><p>を簡単に決め作ってみました。</p><p>また、なるべく Oil コマンドの Generate 機能でスケルトンを作り実装の速度を上げてみたいと思います。</p><h2 id="%E7%92%B0%E5%A2%83%E3%81%AE%E6%BA%96%E5%82%99" itemprop="articleSection">環境の準備</h2><p>データベースは FuelPHP の開発環境デフォルトの</p><table><thead><tr><th>項目名</th><th>値</th></tr></thead><tbody><tr><td>データベース名</td><td>fuel_dev</td></tr><tr><td>ユーザー名</td><td>root</td></tr><tr><td>パスワード</td><td>root</td></tr></tbody></table><p>とします。</p><h2 id="fuelphp-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" itemprop="articleSection">FuelPHP のインストール</h2><p><a href="http://fuelphp.com/docs/installation/instructions.html">Instruction</a> (日本語訳は <a href="http://fuelphp.jp/docs/1.8/installation/instructions.html">インストール方法 @ fuelphp.jp</a> を参照) を確認しながら、 Composer を使い、サクッとインストールします。</p><p>この時、PHP のタイムゾーンを設定しておかないとエラーが発生してインストール処理が中断するので注意です。</p><pre><code>$ composer create-project fuel/fuel:dev-1.7/master --prefer-dist md-micro-wiki
+</code></pre><p>Welcome ページもいらないので削除します。</p><pre><code>$ cd md-micro-wiki
 $ rm -rf fuel/app/{classes/{controller/welcome.php,presenter/welcome/},views/welcome/}
 $ touch fuel/app/classes/presenter/.gitkeep
-</code></pre>
-
-<p>この状態でアクセすると 404 ページの表示になります。</p>
-
-<p><img src="/images/2015_1204_fuel_4th_404.png" alt="FuelPHP 404 page" /></p>
-
-<h2 id="%E5%AE%9F%E8%A3%85" itemprop="articleSection">実装</h2>
-
-<h3 id="%E3%83%A2%E3%83%87%E3%83%AB%E3%82%84%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%81%AA%E3%81%A9%E3%81%AE%E3%82%B9%E3%82%B1%E3%83%AB%E3%83%88%E3%83%B3%E3%82%92%E8%BF%BD%E5%8A%A0" itemprop="articleSection">モデルやコントローラなどのスケルトンを追加</h3>
-
-<p><a href="http://fuelphp.com/docs/packages/orm/intro.html">Introduction - Orm Package</a> (日本語訳は <a href="http://fuelphp.jp/docs/1.8/packages/orm/intro.html">はじめに - Orm パッケージ @ fuelphp.jp</a> を参照) を参考にORM パッケージを有効化します。</p>
-
-<p><code>fuel/app/config/config.php</code></p>
-
-<pre><code class="diff">@@ -256,7 +256,7 @@
+</code></pre><p>この状態でアクセすると 404 ページの表示になります。</p><p><img src="/images/2015_1204_fuel_4th_404.png" alt="FuelPHP 404 page" /></p><h2 id="%E5%AE%9F%E8%A3%85" itemprop="articleSection">実装</h2><h3 id="%E3%83%A2%E3%83%87%E3%83%AB%E3%82%84%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%81%AA%E3%81%A9%E3%81%AE%E3%82%B9%E3%82%B1%E3%83%AB%E3%83%88%E3%83%B3%E3%82%92%E8%BF%BD%E5%8A%A0" itemprop="articleSection">モデルやコントローラなどのスケルトンを追加</h3><p><a href="http://fuelphp.com/docs/packages/orm/intro.html">Introduction - Orm Package</a> (日本語訳は <a href="http://fuelphp.jp/docs/1.8/packages/orm/intro.html">はじめに - Orm パッケージ @ fuelphp.jp</a> を参照) を参考にORM パッケージを有効化します。</p><p><code>fuel/app/config/config.php</code></p><pre><code class="diff">@@ -256,7 +256,7 @@
     /**************************************************************************/
     /* Always Load                                                            */
     /**************************************************************************/
@@ -285,19 +94,9 @@ $ touch fuel/app/classes/presenter/.gitkeep
 +   ),
 
  );
-</code></pre>
-
-<p>Oil コマンドの Generate 機能を使い、モデルやコントローラ、ビューのスケルトンを作ります。</p>
-
-<pre><code class="bash">$ php oil g controller page list view revision edit delete
+</code></pre><p>Oil コマンドの Generate 機能を使い、モデルやコントローラ、ビューのスケルトンを作ります。</p><pre><code class="bash">$ php oil g controller page list view revision edit delete
 $ php oil g model page title:string body:text body_html:text brief:string --temporal
-</code></pre>
-
-<p><a href="http://fuelphp.com/docs/packages/oil/generate.html#/model_temporal">Generate - Oil Package</a> (日本語訳は <a href="http://fuelphp.jp/docs/1.8/packages/oil/generate.html#/model_temporal">Generate - Oil パッケージ @ fuelphp.jp</a> を参照) の注意に書かれているように、マイグレーションコードを修正し主キーを設定します。</p>
-
-<p><code>fuel/app/migrations/001_create_pages.php</code></p>
-
-<pre><code class="diff">            'body_html' =&gt; array('type' =&gt; 'text'),
+</code></pre><p><a href="http://fuelphp.com/docs/packages/oil/generate.html#/model_temporal">Generate - Oil Package</a> (日本語訳は <a href="http://fuelphp.jp/docs/1.8/packages/oil/generate.html#/model_temporal">Generate - Oil パッケージ @ fuelphp.jp</a> を参照) の注意に書かれているように、マイグレーションコードを修正し主キーを設定します。</p><p><code>fuel/app/migrations/001_create_pages.php</code></p><pre><code class="diff">            'body_html' =&gt; array('type' =&gt; 'text'),
             'brief' =&gt; array('constraint' =&gt; 255, 'type' =&gt; 'varchar'),
 
 -       ), array('id'));
@@ -305,33 +104,8 @@ $ php oil g model page title:string body:text body_html:text brief:string --temp
     }
 
     public function down()
-</code></pre>
-
-<p>マイグレーションを実行しテーブルを作成します。</p>
-
-<pre><code>$ php oil r migrate
-</code></pre>
-
-<h3 id="%E3%82%B3%E3%83%BC%E3%83%89%E3%82%92%E8%BF%BD%E5%8A%A0" itemprop="articleSection">コードを追加</h3>
-
-<p>ここから若干巻きで進めます。</p>
-
-<ol>
-<li>ルーティング、モデル、ビューテンプレートの実装</li>
-<li>ページ編集画面の実装</li>
-<li>ページ表示画面の実装</li>
-<li>ページ一覧表示画面の実装</li>
-<li>ページ編集履歴の実装</li>
-<li>ページ削除画面の実装</li>
-</ol>
-
-<p>の順番で実装を行います。</p>
-
-<p>ルーティングをごそっと変えて、ページの表示、編集、履歴表示、削除、ができるようにします。</p>
-
-<p><code>fuel/app/config/routes.php</code></p>
-
-<pre><code class="diff"> &lt;?php
+</code></pre><p>マイグレーションを実行しテーブルを作成します。</p><pre><code>$ php oil r migrate
+</code></pre><h3 id="%E3%82%B3%E3%83%BC%E3%83%89%E3%82%92%E8%BF%BD%E5%8A%A0" itemprop="articleSection">コードを追加</h3><p>ここから若干巻きで進めます。</p><ol><li>ルーティング、モデル、ビューテンプレートの実装</li><li>ページ編集画面の実装</li><li>ページ表示画面の実装</li><li>ページ一覧表示画面の実装</li><li>ページ編集履歴の実装</li><li>ページ削除画面の実装</li></ol><p>の順番で実装を行います。</p><p>ルーティングをごそっと変えて、ページの表示、編集、履歴表示、削除、ができるようにします。</p><p><code>fuel/app/config/routes.php</code></p><pre><code class="diff"> &lt;?php
  return array(
 -   '_root_'  =&gt; 'welcome/index',  // The default route
 -   '_404_'   =&gt; 'welcome/404',    // The main 404 route
@@ -344,22 +118,7 @@ $ php oil g model page title:string body:text body_html:text brief:string --temp
 +   '(:segment)/revision/(:num)' =&gt; 'page/view/$1/$2',
 +   '(:segment)' =&gt; 'page/view/$1',
  );
-</code></pre>
-
-<p>Markdown から HTML への変換処理メソッドやオブザーバー、バリデーション、ページタイトルからレコードを探すメソッドなどを実装します。</p>
-
-<p>ページタイトルのカラムを今回は主キーとしていないため、ページタイトルから特定のリビジョンを示すレコードを探すには、</p>
-
-<ol>
-<li>ページタイトルで引っかかる最新のレコードを取得する。</li>
-<li>レコードから <code>id</code> を取得し、リビジョンを指定し検索。</li>
-</ol>
-
-<p>と、2 回のクエリを発行しないとダメなようです。</p>
-
-<p><code>fuel/app/classes/model/page.php</code></p>
-
-<pre><code class="diff"><br />    protected static $_table_name = 'pages';
+</code></pre><p>Markdown から HTML への変換処理メソッドやオブザーバー、バリデーション、ページタイトルからレコードを探すメソッドなどを実装します。</p><p>ページタイトルのカラムを今回は主キーとしていないため、ページタイトルから特定のリビジョンを示すレコードを探すには、</p><ol><li>ページタイトルで引っかかる最新のレコードを取得する。</li><li>レコードから <code>id</code> を取得し、リビジョンを指定し検索。</li></ol><p>と、2 回のクエリを発行しないとダメなようです。</p><p><code>fuel/app/classes/model/page.php</code></p><pre><code class="diff"><br />    protected static $_table_name = 'pages';
 
 +   protected static $_observers = array('Orm\\Observer_Self' =&gt; array(
 +    'events' =&gt; array('before_save')
@@ -412,13 +171,7 @@ $ php oil g model page title:string body:text body_html:text brief:string --temp
 +   }
 +
  }
-</code></pre>
-
-<h3 id="%E3%83%93%E3%83%A5%E3%83%BC%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E4%BF%AE%E6%AD%A3" itemprop="articleSection">ビューテンプレートを修正</h3>
-
-<p><code>fuel/app/views/template.php</code></p>
-
-<pre><code class="diff">@@ -11,6 +11,20 @@
+</code></pre><h3 id="%E3%83%93%E3%83%A5%E3%83%BC%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E4%BF%AE%E6%AD%A3" itemprop="articleSection">ビューテンプレートを修正</h3><p><code>fuel/app/views/template.php</code></p><pre><code class="diff">@@ -11,6 +11,20 @@
  &lt;body&gt;
     &lt;div class="container"&gt;
         &lt;div class="col-md-12"&gt;
@@ -455,15 +208,7 @@ $ php oil g model page title:string body:text body_html:text brief:string --temp
         &lt;/div&gt;
         &lt;footer&gt;
             &lt;p class="pull-right"&gt;Page rendered in {exec_time}s using {mem_usage}mb of memory.&lt;/p&gt;
-</code></pre>
-
-<h3 id="%E3%83%9A%E3%83%BC%E3%82%B8%E8%A1%A8%E7%A4%BA%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85" itemprop="articleSection">ページ表示用のコントローラメソッドとビュー実装</h3>
-
-<p>実装すると作成 or 編集したページが表示できるようになります。</p>
-
-<p><code>fuel/app/classes/controller/page.php</code></p>
-
-<pre><code class="diff">-   public function action_view()
+</code></pre><h3 id="%E3%83%9A%E3%83%BC%E3%82%B8%E8%A1%A8%E7%A4%BA%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85" itemprop="articleSection">ページ表示用のコントローラメソッドとビュー実装</h3><p>実装すると作成 or 編集したページが表示できるようになります。</p><p><code>fuel/app/classes/controller/page.php</code></p><pre><code class="diff">-   public function action_view()
 +   public function action_view($name = '', $timestamp = null)
     {
 -       $data["subnav"] = array('view'=&gt; 'active' );
@@ -481,26 +226,8 @@ $ php oil g model page title:string body:text body_html:text brief:string --temp
 +       $this-&gt;template-&gt;content = View::forge('page/view')
 +                                   -&gt;set_safe('page', $page);
     }
-</code></pre>
-
-<p><code>fuel/app/views/page/view.php</code></p>
-
-<pre><code class="php">&lt;?php echo $page-&gt;body_html; ?&gt;&lt;/p&gt;
-</code></pre>
-
-<h3 id="%E3%83%9A%E3%83%BC%E3%82%B8%E7%B7%A8%E9%9B%86%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85" itemprop="articleSection">ページ編集用のコントローラメソッドとビュー実装</h3>
-
-<p>実装すると、ページの編集ができるようになります。</p>
-
-<p><a href="/images/2015_1204_fuel_4th_editing.png"><img src="/thumbs/32e1813e0bc4e7a012b748c5263e4779-256x256.png" alt="編集中"></a></p>
-
-<p>またプレビュー機能も同時に実装しています。</p>
-
-<p><a href="/images/2015_1204_fuel_4th_editing_preview.png"><img src="/thumbs/6f633f1b809c34d8892cbbc7187817d7-256x256.png" alt="編集中のプレビュー"></a></p>
-
-<p><code>fuel/app/classes/controller/page.php</code></p>
-
-<pre><code class="diff">-   public function action_edit()
+</code></pre><p><code>fuel/app/views/page/view.php</code></p><pre><code class="php">&lt;?php echo $page-&gt;body_html; ?&gt;&lt;/p&gt;
+</code></pre><h3 id="%E3%83%9A%E3%83%BC%E3%82%B8%E7%B7%A8%E9%9B%86%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85" itemprop="articleSection">ページ編集用のコントローラメソッドとビュー実装</h3><p>実装すると、ページの編集ができるようになります。</p><p><a href="/images/2015_1204_fuel_4th_editing.png"><img src="/thumbs/32e1813e0bc4e7a012b748c5263e4779-256x256.png" alt="編集中"></a></p><p>またプレビュー機能も同時に実装しています。</p><p><a href="/images/2015_1204_fuel_4th_editing_preview.png"><img src="/thumbs/6f633f1b809c34d8892cbbc7187817d7-256x256.png" alt="編集中のプレビュー"></a></p><p><code>fuel/app/classes/controller/page.php</code></p><pre><code class="diff">-   public function action_edit()
 +   
 +   public function action_edit($name = '')
     {
@@ -542,11 +269,7 @@ $ php oil g model page title:string body:text body_html:text brief:string --temp
 +       $this-&gt;template-&gt;name = $name;
 +       $this-&gt;template-&gt;content = View::forge('page/edit');
     }
-</code></pre>
-
-<p><code>fuel/app/views/page/edit.php</code></p>
-
-<pre><code class="php">&lt;?php if (isset($body_html)): ?&gt;
+</code></pre><p><code>fuel/app/views/page/edit.php</code></p><pre><code class="php">&lt;?php if (isset($body_html)): ?&gt;
 &lt;div class="alert alert-info"&gt;
     &lt;p&gt;This is only a preview; your changes have not yet been saved! → &lt;a href="#form"&gt;Go to editing area&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -575,19 +298,7 @@ $ php oil g model page title:string body:text body_html:text brief:string --temp
         &lt;/div&gt;
     &lt;/fieldset&gt;
 &lt;?php echo Form::close(); ?&gt;
-</code></pre>
-
-<h3 id="%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7%E8%A1%A8%E7%A4%BA%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85" itemprop="articleSection">ページ一覧表示用のコントローラメソッドとビュー実装</h3>
-
-<p>実装すると追加したページの一覧が、</p>
-
-<p><a href="/images/2015_1204_fuel_4th_page_list.png"><img src="/thumbs/e85a6468e24b04b7fb73195c6775a7b8-256x256.png" alt="リスト表示"></a></p>
-
-<p>と、このような感じで表示できるようになります。</p>
-
-<p><code>fuel/app/classes/controller/page.php</code></p>
-
-<pre><code class="diff">    public function action_list()
+</code></pre><h3 id="%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7%E8%A1%A8%E7%A4%BA%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85" itemprop="articleSection">ページ一覧表示用のコントローラメソッドとビュー実装</h3><p>実装すると追加したページの一覧が、</p><p><a href="/images/2015_1204_fuel_4th_page_list.png"><img src="/thumbs/e85a6468e24b04b7fb73195c6775a7b8-256x256.png" alt="リスト表示"></a></p><p>と、このような感じで表示できるようになります。</p><p><code>fuel/app/classes/controller/page.php</code></p><pre><code class="diff">    public function action_list()
     {
 -       $data["subnav"] = array('list'=&gt; 'active' );
 -       $this-&gt;template-&gt;title = 'Page &amp;raquo; List';
@@ -597,11 +308,7 @@ $ php oil g model page title:string body:text body_html:text brief:string --temp
 +       $this-&gt;template-&gt;title = 'List of all pages';
 +       $this-&gt;template-&gt;content = View::forge('page/list', $data);
     }
-</code></pre>
-
-<p><code>fuel/app/views/page/list.php</code></p>
-
-<pre><code class="php">&lt;div class="row"&gt;
+</code></pre><p><code>fuel/app/views/page/list.php</code></p><pre><code class="php">&lt;div class="row"&gt;
   &lt;div class="col-md-6"&gt;
     &lt;ul&gt;
 &lt;?php for ($i = 0, $num = count($pages), $page = current($pages); $page; $i++, $page = next($pages)): ?&gt;
@@ -613,21 +320,7 @@ $ php oil g model page title:string body:text body_html:text brief:string --temp
     &lt;/ul&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
-
-<h3 id="%E3%83%9A%E3%83%BC%E3%82%B8%E5%B1%A5%E6%AD%B4%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85" itemprop="articleSection">ページ履歴用のコントローラメソッドとビュー実装</h3>
-
-<p>実装するとページの編集履歴が</p>
-
-<p><a href="/images/2015_1204_fuel_4th_revision.png"><img src="/thumbs/ccc99f4b994b0f8ff4c582dee40eb0c4-256x256.png" alt="履歴"></a></p>
-
-<p>と、このような感じで表示できるようになります。</p>
-
-<p>各リビジョンは日付が該当リビジョンの内容を表示するためのリンクとなっています。</p>
-
-<p><code>fuel/app/classes/controller/page.php</code></p>
-
-<pre><code class="diff">-   public function action_revision()
+</code></pre><h3 id="%E3%83%9A%E3%83%BC%E3%82%B8%E5%B1%A5%E6%AD%B4%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85" itemprop="articleSection">ページ履歴用のコントローラメソッドとビュー実装</h3><p>実装するとページの編集履歴が</p><p><a href="/images/2015_1204_fuel_4th_revision.png"><img src="/thumbs/ccc99f4b994b0f8ff4c582dee40eb0c4-256x256.png" alt="履歴"></a></p><p>と、このような感じで表示できるようになります。</p><p>各リビジョンは日付が該当リビジョンの内容を表示するためのリンクとなっています。</p><p><code>fuel/app/classes/controller/page.php</code></p><pre><code class="diff">-   public function action_revision()
 +   public function action_revision($name = '')
     {
 -       $data["subnav"] = array('revision'=&gt; 'active' );
@@ -641,11 +334,7 @@ $ php oil g model page title:string body:text body_html:text brief:string --temp
 +       $this-&gt;template-&gt;name = $name;
 +       $this-&gt;template-&gt;content = View::forge('page/revision', $data);
     }
-</code></pre>
-
-<p><code>fuel/app/views/page/revision.php</code></p>
-
-<pre><code class="php">&lt;table&gt;
+</code></pre><p><code>fuel/app/views/page/revision.php</code></p><pre><code class="php">&lt;table&gt;
 &lt;?php $i = 0; foreach ($revisions as $revision): ?&gt;
   &lt;tr&gt;
 &lt;?php if (0 == $i): ?&gt;
@@ -657,17 +346,7 @@ $ php oil g model page title:string body:text body_html:text brief:string --temp
   &lt;/tr&gt;
 &lt;?php $i++; endforeach; ?&gt;
 &lt;/table&gt;
-</code></pre>
-
-<h3 id="%E3%83%9A%E3%83%BC%E3%82%B8%E5%89%8A%E9%99%A4%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85" itemprop="articleSection">ページ削除用のコントローラメソッドとビュー実装</h3>
-
-<p>実装すると削除処理ができるようになります。</p>
-
-<p><a href="/images/2015_1204_fuel_4th_delete.png"><img src="/thumbs/2cdf9085abd8d7791b23c8d9ba986fc3-256x256.png" alt="削除"></a></p>
-
-<p><code>fuel/app/classes/controller/page.php</code></p>
-
-<pre><code class="diff">-   public function action_delete()
+</code></pre><h3 id="%E3%83%9A%E3%83%BC%E3%82%B8%E5%89%8A%E9%99%A4%E7%94%A8%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%83%93%E3%83%A5%E3%83%BC%E5%AE%9F%E8%A3%85" itemprop="articleSection">ページ削除用のコントローラメソッドとビュー実装</h3><p>実装すると削除処理ができるようになります。</p><p><a href="/images/2015_1204_fuel_4th_delete.png"><img src="/thumbs/2cdf9085abd8d7791b23c8d9ba986fc3-256x256.png" alt="削除"></a></p><p><code>fuel/app/classes/controller/page.php</code></p><pre><code class="diff">-   public function action_delete()
 +   public function action_delete($name)
     {
 -       $data["subnav"] = array('delete'=&gt; 'active' );
@@ -691,96 +370,23 @@ $ php oil g model page title:string body:text body_html:text brief:string --temp
 +       $this-&gt;template-&gt;name = $name;
 +       $this-&gt;template-&gt;content = View::forge('page/delete', $data);
     }
-</code></pre>
-
-<p><code>fuel/app/views/page/delete.php</code></p>
-
-<pre><code class="php">&lt;p&gt;Are you sure you want to delete &lt;?php echo $page-&gt;title; ?&gt; ?&lt;/p&gt;
+</code></pre><p><code>fuel/app/views/page/delete.php</code></p><pre><code class="php">&lt;p&gt;Are you sure you want to delete &lt;?php echo $page-&gt;title; ?&gt; ?&lt;/p&gt;
 &lt;?php echo Form::open(array("class"=&gt;"form-horizontal")); ?&gt;
   &lt;?php echo Form::submit('submit', 'Yes, Delete', array('class' =&gt; 'btn btn-danger')); ?&gt;
   &lt;?php echo Html::anchor(isset($page) ? $page-&gt;title : '', 'Cancel', array('class' =&gt; 'btn btn-normal')); ?&gt;
 &lt;?php echo Form::close(); ?&gt;
-</code></pre>
-
-<h2 id="wiki-%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9" itemprop="articleSection">Wiki の使い方</h2>
-
-<p>基本的な動作として、ページがない場合は新規作成画面に移動します。</p>
-
-<p>そのため、初期状態でトップページにアクセスするとトップページの作成画面に移動します。</p>
-
-<p>書式は <a href="https://michelf.ca/projects/php-markdown/">PHP Markdown</a> のドキュメントが参考になります。</p>
-
-<p>加えて、リンクのテキストを</p>
-
-<pre><code class="markdown">[](テスト)
-</code></pre>
-
-<p>のような感じに省略した場合、</p>
-
-<pre><code class="markdown">[テスト](テスト)
-</code></pre>
-
-<p>の形式に直されます。</p>
-
-<p>また、このような形で各ページに対してリンクを貼ることができます。</p>
-
-<h2 id="%E3%81%BE%E3%81%A8%E3%82%81" itemprop="articleSection">まとめ</h2>
-
-<p>駆け足でしたが、 Temporal Model を使って簡単に Markdown で編集できる Wiki を作ることができました。</p>
-
-<p>とりあえず、今回わかったことをまとめると</p>
-
-<ul>
-<li><code>php oil g model XXX ... --temporal</code> で Temporal Model のスケルトンが簡単に生成できる、がマイグレーションコードに手を入れる必要あり。</li>
-<li>主キー以外のカラムから特定リビジョンを取得するには 2 回のデータベースクエリ発行が必要。</li>
-<li>単純なモデルクラスに少し足した感じなので簡単に扱うことができる</li>
-</ul>
-
-<p>と、若干の考慮する点などがありますが、 Temporal Model は履歴管理を実装として含んでいるためユーザーが複雑なクエリを構築することなく、単純なモデルクラスのような感じで扱うことができます。</p>
-
-<p>ぜひ使って見てください。</p>
-
-<p>以上、<a href="https://twitter.com/sharkpp">@sharkpp</a> がお送りいたしました。</p>
-
-<p>この文章は <a href="https://creativecommons.org/licenses/by/4.0/legalcode.ja">クリエイティブ・コモンズ 表示 4.0 国際</a> ライセンス、コードスニペットは <a href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license">MIT ライセンス</a> の下に提供されています。</p>
-
-<h2 id="%E5%8F%82%E8%80%83" itemprop="articleSection">参考</h2>
-
-<ul>
-<li><a href="http://fuelphp.jp/docs/1.8/packages/orm/model/temporal.html">Temporal Model - Orm パッケージ - FuelPHP ドキュメント</a></li>
-<li><a href="https://www.mediawiki.org/wiki/Manual:Database_layout/ja">Manual:データベースのレイアウト - MediaWiki</a></li>
-<li><a href="http://www.slideshare.net/takyam1213/temporal-model-takyam">What's Temporal model FuelPHP東京勉強会03</a></li>
-<li><a href="https://ja.wikipedia.org/wiki/Help:%E4%BB%A5%E5%89%8D%E3%81%AE%E7%89%88%E3%81%AB%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E6%88%BB%E3%81%99%E6%96%B9%E6%B3%95">Help:以前の版にページを戻す方法 - Wikipedia</a></li>
-<li><a href="https://michelf.ca/projects/php-markdown/">PHP Markdown</a></li>
-</ul>
-
-<hr>
-
-<p>この投稿は <strong><a href="http://qiita.com/advent-calendar/2015/fuelphp">FuelPHP Advent Calendar 2015</a></strong> の <strong>4日目</strong>の記事です。</p>
-
-<ul>
-<li>3日目の記事: <a href="http://qiita.com/ken880guchi/items/300b16b8b8473c3b45a9">FuelPHP で TODO アプリケーションを作ってみた。</a></li>
-<li>5日目の記事: <a href="http://www.sharkpp.net/blog/2015/12/05/fuelphp-advent-calender-2015-5th.html">NestedSets Model を使って FuelPHP 用コメントボックスパッケージを作った話</a></li>
-</ul>
-
-        </div>
-        <hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" />
-        <footer>            <div style="line-height: 25px; height: 25px;">
-    <span style="display: inline-block; vertical-align: top;">
-        <i class="fa fa-calendar"></i>
-        <span itemprop="datePublished" content="2015-12-04">2015年12月04日</span>
+</code></pre><h2 id="wiki-%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9" itemprop="articleSection">Wiki の使い方</h2><p>基本的な動作として、ページがない場合は新規作成画面に移動します。</p><p>そのため、初期状態でトップページにアクセスするとトップページの作成画面に移動します。</p><p>書式は <a href="https://michelf.ca/projects/php-markdown/">PHP Markdown</a> のドキュメントが参考になります。</p><p>加えて、リンクのテキストを</p><pre><code class="markdown">[](テスト)
+</code></pre><p>のような感じに省略した場合、</p><pre><code class="markdown">[テスト](テスト)
+</code></pre><p>の形式に直されます。</p><p>また、このような形で各ページに対してリンクを貼ることができます。</p><h2 id="%E3%81%BE%E3%81%A8%E3%82%81" itemprop="articleSection">まとめ</h2><p>駆け足でしたが、 Temporal Model を使って簡単に Markdown で編集できる Wiki を作ることができました。</p><p>とりあえず、今回わかったことをまとめると</p><ul><li><code>php oil g model XXX ... --temporal</code> で Temporal Model のスケルトンが簡単に生成できる、がマイグレーションコードに手を入れる必要あり。</li><li>主キー以外のカラムから特定リビジョンを取得するには 2 回のデータベースクエリ発行が必要。</li><li>単純なモデルクラスに少し足した感じなので簡単に扱うことができる</li></ul><p>と、若干の考慮する点などがありますが、 Temporal Model は履歴管理を実装として含んでいるためユーザーが複雑なクエリを構築することなく、単純なモデルクラスのような感じで扱うことができます。</p><p>ぜひ使って見てください。</p><p>以上、<a href="https://twitter.com/sharkpp">@sharkpp</a> がお送りいたしました。</p><p>この文章は <a href="https://creativecommons.org/licenses/by/4.0/legalcode.ja">クリエイティブ・コモンズ 表示 4.0 国際</a> ライセンス、コードスニペットは <a href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license">MIT ライセンス</a> の下に提供されています。</p><h2 id="%E5%8F%82%E8%80%83" itemprop="articleSection">参考</h2><ul><li><a href="http://fuelphp.jp/docs/1.8/packages/orm/model/temporal.html">Temporal Model - Orm パッケージ - FuelPHP ドキュメント</a></li><li><a href="https://www.mediawiki.org/wiki/Manual:Database_layout/ja">Manual:データベースのレイアウト - MediaWiki</a></li><li><a href="http://www.slideshare.net/takyam1213/temporal-model-takyam">What's Temporal model FuelPHP東京勉強会03</a></li><li><a href="https://ja.wikipedia.org/wiki/Help:%E4%BB%A5%E5%89%8D%E3%81%AE%E7%89%88%E3%81%AB%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E6%88%BB%E3%81%99%E6%96%B9%E6%B3%95">Help:以前の版にページを戻す方法 - Wikipedia</a></li><li><a href="https://michelf.ca/projects/php-markdown/">PHP Markdown</a></li></ul><hr><p>この投稿は <strong><a href="http://qiita.com/advent-calendar/2015/fuelphp">FuelPHP Advent Calendar 2015</a></strong> の <strong>4日目</strong>の記事です。</p><ul><li>3日目の記事: <a href="http://qiita.com/ken880guchi/items/300b16b8b8473c3b45a9">FuelPHP で TODO アプリケーションを作ってみた。</a></li><li>5日目の記事: <a href="http://www.sharkpp.net/blog/2015/12/05/fuelphp-advent-calender-2015-5th.html">NestedSets Model を使って FuelPHP 用コメントボックスパッケージを作った話</a></li></ul></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i><span itemprop="datePublished" content="2015-12-04">2015年12月04日</span>
         &nbsp;/&nbsp;
-        <i class="fa fa-history"></i> <a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2015-12-04-fuelphp-advent-calender-2015-4th.md">変更履歴</a>
+        <i class="fa fa-history"></i><a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2015-12-04-fuelphp-advent-calender-2015-4th.md">変更履歴</a>
         &nbsp;/&nbsp;
-        <i class="fa fa-thumb-tack"></i> <a href="/blog/2015/12/04/fuelphp-advent-calender-2015-4th.html">Permalink</a>
+        <i class="fa fa-thumb-tack"></i><a href="/blog/2015/12/04/fuelphp-advent-calender-2015-4th.html">Permalink</a>
         &nbsp;/&nbsp;
-    </span>
-    <meta itemprop="url" content="http://www.sharkpp.net/blog/2015/12/04/fuelphp-advent-calender-2015-4th.html" />
-    <span itemprop="author" itemscope itemtype="https://schema.org/Person"
+    </span><meta itemprop="url" content="http://www.sharkpp.net/blog/2015/12/04/fuelphp-advent-calender-2015-4th.html" /><span itemprop="author" itemscope itemtype="https://schema.org/Person"
           style="display: none;"
        ><span itemprop="name">sharkpp</span
-   ></span>
-    <a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2015%2F12%2F04%2Ffuelphp-advent-calender-2015-4th.html"
+   ></span><a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2015%2F12%2F04%2Ffuelphp-advent-calender-2015-4th.html"
        class="hatena-bookmark-button"
        data-hatena-bookmark-title="Markdown Wiki を通して Temporal Model の使い方を覚えよう &mdash; さめたすたすのお家"
        data-hatena-bookmark-layout="simple-balloon"
@@ -788,90 +394,24 @@ $ php oil g model page title:string body:text body_html:text brief:string --temp
       ><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png"
             alt="このエントリーをはてなブックマークに追加"
             width="20" height="20" style="border: none;" /></a
-      >
-    <a href="https://twitter.com/share" class="twitter-share-button"
-       data-url="http://www.sharkpp.net/blog/2015/12/04/fuelphp-advent-calender-2015-4th.html" data-via="sharkpp">Tweet</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-</div><div style="line-height: 25px; height: 25px;">
-                                <span class="categories">
-            <i class="fa fa-folder-open"></i> カテゴリ:
-                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a>                        </span>
+      ><a href="https://twitter.com/share" class="twitter-share-button"
+       data-url="http://www.sharkpp.net/blog/2015/12/04/fuelphp-advent-calender-2015-4th.html" data-via="sharkpp">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><div style="line-height: 25px; height: 25px;"><span class="categories"><i class="fa fa-folder-open"></i> カテゴリ:
+                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
         &nbsp;/&nbsp;
-                                <span class="tags">
-            <i class="fa fa-tag"></i> タグ:
-                        <a href="/blog/tags/Advent%20Calendar">Advent Calendar</a>,                         <a href="/blog/tags/php">php</a>,                         <a href="/blog/tags/FuelPHP">FuelPHP</a>                        </span>
-        </div>
-        </footer>
-
-                    <hr style="border-top: none; border-bottom: 1px dashed #aaa; margin: 10px 0;" />
-            <nav class="article">
-                <ul class="list-unstyled row">
-                                            <li class="col-md-6 text-left"><a class="next" href="/blog/2015/12/05/fuelphp-advent-calender-2015-5th.html" title="NestedSets Model を使って FuelPHP 用コメントボックスパッケージを作った話"><span class="title"><i class="fa fa-chevron-left"></i> NestedSets Model を使って FuelPHP 用コメントボックスパッケージを作った話</span></a></li>
-                                                                <li class="col-md-6 text-right"><a class="previous" href="/blog/2015/11/03/git-memo-for-fuel-docs-trans.html" title="FuelPHP ドキュメント翻訳のための git メモ"><span class="title">FuelPHP ドキュメント翻訳のための git メモ</span> <i class="fa fa-chevron-right"></i></a></li>
-                                    </ul>
-            </nav>
-            </article>
-
-
-
-        </div>
-
-        <footer class="footer">
-            <dev class="overflow">
-                <div class="container text-center">
-                    <ul class="list-unstyled list-inline">
-                        <li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li>
-                        <li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li>
-                        <li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li>
-                        <li><i class="fa-li fa fa-ellipsis-h"></i> <a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li>
-                        <li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /blog/2015/12/04/fuelphp-advent-calender-2015-4th.html"
-                                  rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li>
-                    </ul>
-                </div>
-                <div class="container text-center">
-                    <ul class="list-unstyled list-inline">
-                        <li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li>
-                        <li class="text-muted">&copy; 2004-2017 sharkpp</li>
-                    </ul>
-                </div>
-                <div class="container text-center text-muted">
-                    <ruby>
-                        <rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
-                                                            >Creative Commons Attribution 4.0 International License</a>.</rb>
-                        <rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
-                                                  >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp>
-                    </ruby>
-                </div>
-                <div class="container text-center text-muted">
-                    <ruby>
-                        <rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
-                                                                            >The MIT License</a>.</rb>
-                        <rp>(</rp><rt>さらに、コードスニペットは <a rel="nofollow" href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license"
-                                                               >MIT ライセンス</a> の下にライセンスされています。</rt><rp>)</rp>
-                    </ruby>
-                </div>
-            </div>
-        </footer>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>')</script>
-
-        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.js"></script>
-        <script>$('body').modal || document.write('<script src="/assets/bootstrap/js/bootstrap.min.js"><\/script>')</script>
-                
-                <script type="text/javascript">
+                                <span class="tags"><i class="fa fa-tag"></i> タグ:
+                        <a href="/blog/tags/Advent%20Calendar">Advent Calendar</a>,                         <a href="/blog/tags/php">php</a>,                         <a href="/blog/tags/FuelPHP">FuelPHP</a></span></div></footer><hr style="border-top: none; border-bottom: 1px dashed #aaa; margin: 10px 0;" /><nav class="article"><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/blog/2015/12/05/fuelphp-advent-calender-2015-5th.html" title="NestedSets Model を使って FuelPHP 用コメントボックスパッケージを作った話"><span class="title"><i class="fa fa-chevron-left"></i> NestedSets Model を使って FuelPHP 用コメントボックスパッケージを作った話</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/blog/2015/11/03/git-memo-for-fuel-docs-trans.html" title="FuelPHP ドキュメント翻訳のための git メモ"><span class="title">FuelPHP ドキュメント翻訳のための git メモ</span><i class="fa fa-chevron-right"></i></a></li></ul></nav></article></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li><li><i class="fa-li fa fa-ellipsis-h"></i><a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /blog/2015/12/04/fuelphp-advent-calender-2015-4th.html"
+                                  rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li></ul></div><div class="container text-center"><ul class="list-unstyled list-inline"><li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li><li class="text-muted">&copy; 2004-2017 sharkpp</li></ul></div><div class="container text-center text-muted"><ruby><rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                            >Creative Commons Attribution 4.0 International License</a>.</rb><rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                  >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp></ruby></div><div class="container text-center text-muted"><ruby><rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
+                                                                            >The MIT License</a>.</rb><rp>(</rp><rt>さらに、コードスニペットは <a rel="nofollow" href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license"
+                                                               >MIT ライセンス</a> の下にライセンスされています。</rt><rp>)</rp></ruby></div></div></footer><script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>')</script><script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.js"></script><script>$('body').modal || document.write('<script src="/assets/bootstrap/js/bootstrap.min.js"><\/script>')</script><script type="text/javascript">
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
             ga('create', 'UA-5908801-2', 'auto');
             ga('send', 'pageview');
-        </script>
-        
-        <script src="/assets/highlightjs/highlight.pack.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-
-        <script type="text/javascript">
+        </script><script src="/assets/highlightjs/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><script type="text/javascript">
             $('a img').each(function(){
                 var rel = ($(this).attr('src').match(/images\u002f([0-9_]{4}_[0-9_]{4})/i) ||
                            ['','lightbox'])[1];
@@ -880,13 +420,7 @@ $ php oil g model page title:string body:text body_html:text brief:string --temp
                     .attr('data-title', $(this).attr('alt'))
                     ;
             });
-        </script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
-        <script>$(document).ready(function(){ window.lightbox || $.getScript("/assets/lightbox2/dist/js/lightbox.min.js"); });</script>
-
-                <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.5/jquery.smooth-scroll.min.js"></script>
-        <script>$.smoothScroll || document.write('<script src="/assets/jquery-smooth-scroll/jquery.smooth-scroll.min.js"><\/script>')</script>
-        <script type="text/javascript">
+        </script><script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script><script>$(document).ready(function(){ window.lightbox || $.getScript("/assets/lightbox2/dist/js/lightbox.min.js"); });</script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.5/jquery.smooth-scroll.min.js"></script><script>$.smoothScroll || document.write('<script src="/assets/jquery-smooth-scroll/jquery.smooth-scroll.min.js"><\/script>')</script><script type="text/javascript">
             $('#toc a')
                 .each(function(){
                     var id = $(this).attr('href').slice(1);
@@ -928,19 +462,11 @@ $ php oil g model page title:string body:text body_html:text brief:string --temp
                         });
             });
             $(window).scroll();
-        </script>
-
-        <script type="text/javascript">
+        </script><script type="text/javascript">
             $(document).ready(function(){
                 // apply table to bootstrap css
                 $('table:not([class])')
                     .addClass('table table-bordered table-hover table-condensed table-striped')
                     .wrap("<div style='width:100%;overflow-x:auto;'></div>");
              });
-        </script>
-
-        <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
-
-
-    </body>
-</html>
+        </script><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></body></html>

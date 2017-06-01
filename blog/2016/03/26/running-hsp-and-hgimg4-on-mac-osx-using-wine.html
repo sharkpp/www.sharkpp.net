@@ -1,48 +1,9 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Wine を使って Mac OS X で HSP と hgimg4 を動かしてみた &mdash; さめたすたすのお家</title>
-        <meta charset="utf-8">
-        <meta name="theme-color" content="#6877AA">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="robots" content="index, follow">
-        <meta name="keywords" content="Mac,Wine,How to,メモ,環境構築,HSP,HSP3,hgimg4">
-        <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/lightbox2/dist/css/lightbox.css" rel="stylesheet" type="text/css" />
-        <link href="/css/style.min.css" rel="stylesheet" type="text/css" />
-        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-
-        <link rel="apple-touch-startup-image" href="/images/noname/2048x2048.png">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="shortcut icon" sizes="76x76" href="/images/noname/76x76.png">
-        <link rel="shortcut icon" sizes="120x120" href="/images/noname/120x120.png">
-        <link rel="shortcut icon" sizes="128x128" href="/images/noname/128x128.png">
-        <link rel="shortcut icon" sizes="152x152" href="/images/noname/152x152.png">
-        <link rel="shortcut icon" sizes="196x196" href="/images/noname/196x196.png">
-        <link rel="shortcut icon" sizes="512x512" href="/images/noname/512x512.png">
-        <link rel="shortcut icon" sizes="1024x1024" href="/images/noname/1024x1024.png">
-        <link rel="shortcut icon" sizes="2048x2048" href="/images/noname/2048x2048.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="/images/noname/76x76.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="/images/noname/120x120.png">
-        <link rel="apple-touch-icon" sizes="128x128" href="/images/noname/128x128.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="/images/noname/152x152.png">
-        <link rel="apple-touch-icon" sizes="196x196" href="/images/noname/196x196.png">
-        <link rel="apple-touch-icon" sizes="512x512" href="/images/noname/512x512.png">
-        <link rel="apple-touch-icon" sizes="1024x1024" href="/images/noname/1024x1024.png">
-        <link rel="apple-touch-icon" sizes="2048x2048" href="/images/noname/2048x2048.png">
-
-        <link rel="stylesheet" href="/assets/highlightjs/styles/github.css" />
-        <link rel="alternate" type="application/atom+xml" href="/atom.xml" title="さめたすたすのお家 activity feed" />
-        <style>
+<head><title>Wine を使って Mac OS X で HSP と hgimg4 を動かしてみた &mdash; さめたすたすのお家</title><meta charset="utf-8"><meta name="theme-color" content="#6877AA"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="index, follow"><meta name="keywords" content="Mac,Wine,How to,メモ,環境構築,HSP,HSP3,hgimg4"><link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" /><link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" /><link href="/assets/lightbox2/dist/css/lightbox.css" rel="stylesheet" type="text/css" /><link href="/css/style.min.css" rel="stylesheet" type="text/css" /><!-- HTML5 shim, for IE6-8 support of HTML5 elements --><!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--><link rel="apple-touch-startup-image" href="/images/noname/2048x2048.png"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="shortcut icon" sizes="76x76" href="/images/noname/76x76.png"><link rel="shortcut icon" sizes="120x120" href="/images/noname/120x120.png"><link rel="shortcut icon" sizes="128x128" href="/images/noname/128x128.png"><link rel="shortcut icon" sizes="152x152" href="/images/noname/152x152.png"><link rel="shortcut icon" sizes="196x196" href="/images/noname/196x196.png"><link rel="shortcut icon" sizes="512x512" href="/images/noname/512x512.png"><link rel="shortcut icon" sizes="1024x1024" href="/images/noname/1024x1024.png"><link rel="shortcut icon" sizes="2048x2048" href="/images/noname/2048x2048.png"><link rel="apple-touch-icon" sizes="76x76" href="/images/noname/76x76.png"><link rel="apple-touch-icon" sizes="120x120" href="/images/noname/120x120.png"><link rel="apple-touch-icon" sizes="128x128" href="/images/noname/128x128.png"><link rel="apple-touch-icon" sizes="152x152" href="/images/noname/152x152.png"><link rel="apple-touch-icon" sizes="196x196" href="/images/noname/196x196.png"><link rel="apple-touch-icon" sizes="512x512" href="/images/noname/512x512.png"><link rel="apple-touch-icon" sizes="1024x1024" href="/images/noname/1024x1024.png"><link rel="apple-touch-icon" sizes="2048x2048" href="/images/noname/2048x2048.png"><link rel="stylesheet" href="/assets/highlightjs/styles/github.css" /><link rel="alternate" type="application/atom+xml" href="/atom.xml" title="さめたすたすのお家 activity feed" /><style>
         /** quick fix because bootstrap <pre> has a background-color. */
         pre code { background-color: inherit; }
-        </style>
-                <style>
+        </style><style>
         #go-top {
             display: none;
             bottom: 40px;
@@ -65,42 +26,8 @@
             max-width: 350px;
             word-wrap: break-word;
         }
-        </style>
-                    </head>
-    <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/">さめたすたすのお家</a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav pull-right">
-                        <li><a href="/blog/"><i class="fa fa-archive"></i> アーカイブ</a></li>
-                        <li><a href="/blog/categories"><i class="fa fa-folder-open"></i> カテゴリ</a></li>
-                        <li><a href="/blog/tags"><i class="fa fa-tags"></i> タグ</a></li>
-                        <li><a href="/product/"><i class="fa fa-download"></i> 作ったもの</a></li>
-                        <li><a href="/graffiti/"><i class="fa fa-paint-brush"></i> 落書き</a></li>
-                        <li><a href="/link.html"><i class="fa fa-link"></i> リンク</a></li>
-                        <li><a href="/about">About</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
-
-        <div class="mainContent container">
-                                                                                
-                                
-    <ol class="breadcrumb" itemscope="itemscope"
-                           itemtype="http://schema.org/BreadcrumbList">
-        <li
+        </style></head><body><nav class="navbar navbar-inverse navbar-fixed-top"><div class="container-fluid"><!-- Brand and toggle get grouped for better mobile display --><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/">さめたすたすのお家</a></div><!-- Collect the nav links, forms, and other content for toggling --><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><ul class="nav navbar-nav pull-right"><li><a href="/blog/"><i class="fa fa-archive"></i> アーカイブ</a></li><li><a href="/blog/categories"><i class="fa fa-folder-open"></i> カテゴリ</a></li><li><a href="/blog/tags"><i class="fa fa-tags"></i> タグ</a></li><li><a href="/product/"><i class="fa fa-download"></i> 作ったもの</a></li><li><a href="/graffiti/"><i class="fa fa-paint-brush"></i> 落書き</a></li><li><a href="/link.html"><i class="fa fa-link"></i> リンク</a></li><li><a href="/about">About</a></li></ul></div><!-- /.navbar-collapse --></div><!-- /.container-fluid --></nav><div class="mainContent container"><ol class="breadcrumb" itemscope="itemscope"
+                           itemtype="http://schema.org/BreadcrumbList"><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/"
@@ -108,115 +35,38 @@
      >&nbsp;<span itemprop="name">HOME</span
            ><meta itemprop="position" content="1"
           /></a
-       ></li>
-        <li
+       ></li><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/blog/2016/"
            ><span>2016</span
            ><meta itemprop="position" content="2"
           /></a
-       ></li>
-        <li
+       ></li><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/blog/2016/03/"
            ><span>03</span
            ><meta itemprop="position" content="3"
           /></a
-       ></li>
-        <li
+       ></li><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/blog/2016/03/26/"
            ><span>26</span
            ><meta itemprop="position" content="4"
           /></a
-       ></li>
-        <li
+       ></li><li
             class="active"><span 
            ><span>Wine を使って Mac OS X で HSP と hgimg4 を動かしてみた</span
-       ></li>
-    </ol>
-
-    <article itemscope="itemscope" itemtype="http://schema.org/Article">
-        <meta itemscope="itemscope" itemprop="mainEntityOfPage"
-              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html"/>
-        <header>
-            <h1><span itemprop="headline">Wine を使って Mac OS X で HSP と hgimg4 を動かしてみた</span> <small>post</small></h1>
-        </header>
-
-<div id="toc" class="panel panel-default pull-right">
-    <div class="panel-heading text-center">目次</div>
-        <div class="panel-body" style="padding: 10px;">
-            <ul class="fa-ul">
-            <li><i class="fa-li fa fa-paperclip"></i><a href="#wine-%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%92%B0%E5%A2%83%E3%82%92%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B">Wine の日本語環境を設定する</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#hsp-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">HSP のインストール</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#osx-%E4%B8%8A%E3%81%AE-wine-%E3%81%A7-hgimg3-%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99">OSX 上の Wine で hgimg3 を動かす</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#osx-%E4%B8%8A%E3%81%AE-wine-%E3%81%A7-hgimg4-%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99">OSX 上の Wine で hgimg4 を動かす</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E6%8A%80%E8%A1%93%E7%9A%84%E3%81%AA%E3%81%93%E3%81%A8%E3%82%92%E3%81%99%E3%81%93%E3%81%97">技術的なことをすこし</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%81%8A%E3%81%BE%E3%81%91">おまけ</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%8F%82%E8%80%83">参考</a>
-        </ul>
-    </div>
-</div>
-
-<div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div>
-
-        <div itemprop="articleBody">
-            <p>HSP をどうしても Mac OS X で動かしたい！</p>
-
-<p>まあ、とりあえず Wine 使っておけばいいよね！</p>
-
-<p>よしよし動いた、って hgimg4 が動かないじゃないか！むきー</p>
-
-<p>と、言う所から</p>
-
-<p><a href="/images/2016_0326_hgimg4_test9.png"><img src="/thumbs/605ffbef1139b6b8bc46f69d73d86b6b-512x512.png" alt="hgimg4 サンプル test9"></a></p>
-
-<p>このように、hgimg4 のサンプルが動くようにするための方法です。</p>
-
-<h2 id="wine-%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%92%B0%E5%A2%83%E3%82%92%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B" itemprop="articleSection">Wine の日本語環境を設定する</h2>
-
-<p>まず Wine で UI などに日本語を表示させる為の設定を行います。</p>
-
-<p>設定をしないと</p>
-
-<p><a href="/images/2016_0326_hsp_install_wizard_tofu.png"><img src="/thumbs/e2f456d9675823508a2d47ecb49a0bca-256x256.png" alt="HSP インストールウィザード 豆腐"></a></p>
-
-<p>こんな感じに、全部が全部では無いですが豆腐になります。</p>
-
-<p>最初に HSP のインストール前にいろいろ設定を行うために Wine の環境を作ります。</p>
-
-<p>標準では <code>~/.wine</code> に環境が作られます。</p>
-
-<pre><code>$ wine xxx
-</code></pre>
-
-<p>「xxx.exe が見つから無い」と言われても無視してください。ワザとです。</p>
-
-<p>別の場所に専用の環境を作る場合は</p>
-
-<pre><code>$ WINEPREFIX=~/wine-hgimg4-test wine xxx
-</code></pre>
-
-<p>と <code>WINEPREFIX</code> 環境変数を指定します。</p>
-
-<p>以降では <code>~/wine-hgimg4-test</code> を環境として使用します。</p>
-
-<p>日本語のフォントは  <a href="http://www.geocities.jp/ipa_mona/">IPAモナーフォント</a> をインストールし、利用します。</p>
-
-<p>まずは、フォントをインストールします。</p>
-
-<pre><code class="bash">$ wget http://www.geocities.jp/ipa_mona/opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8.tar.gz
+       ></li></ol><article itemscope="itemscope" itemtype="http://schema.org/Article"><meta itemscope="itemscope" itemprop="mainEntityOfPage"
+              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html"/><header><h1><span itemprop="headline">Wine を使って Mac OS X で HSP と hgimg4 を動かしてみた</span><small>post</small></h1></header><div id="toc" class="panel panel-default pull-right"><div class="panel-heading text-center">目次</div><div class="panel-body" style="padding: 10px;"><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#wine-%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%92%B0%E5%A2%83%E3%82%92%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B">Wine の日本語環境を設定する</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#hsp-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">HSP のインストール</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#osx-%E4%B8%8A%E3%81%AE-wine-%E3%81%A7-hgimg3-%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99">OSX 上の Wine で hgimg3 を動かす</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#osx-%E4%B8%8A%E3%81%AE-wine-%E3%81%A7-hgimg4-%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99">OSX 上の Wine で hgimg4 を動かす</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E6%8A%80%E8%A1%93%E7%9A%84%E3%81%AA%E3%81%93%E3%81%A8%E3%82%92%E3%81%99%E3%81%93%E3%81%97">技術的なことをすこし</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%81%8A%E3%81%BE%E3%81%91">おまけ</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%8F%82%E8%80%83">参考</a></ul></div></div><div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div><div itemprop="articleBody"><p>HSP をどうしても Mac OS X で動かしたい！</p><p>まあ、とりあえず Wine 使っておけばいいよね！</p><p>よしよし動いた、って hgimg4 が動かないじゃないか！むきー</p><p>と、言う所から</p><p><a href="/images/2016_0326_hgimg4_test9.png"><img src="/thumbs/605ffbef1139b6b8bc46f69d73d86b6b-512x512.png" alt="hgimg4 サンプル test9"></a></p><p>このように、hgimg4 のサンプルが動くようにするための方法です。</p><h2 id="wine-%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%92%B0%E5%A2%83%E3%82%92%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B" itemprop="articleSection">Wine の日本語環境を設定する</h2><p>まず Wine で UI などに日本語を表示させる為の設定を行います。</p><p>設定をしないと</p><p><a href="/images/2016_0326_hsp_install_wizard_tofu.png"><img src="/thumbs/e2f456d9675823508a2d47ecb49a0bca-256x256.png" alt="HSP インストールウィザード 豆腐"></a></p><p>こんな感じに、全部が全部では無いですが豆腐になります。</p><p>最初に HSP のインストール前にいろいろ設定を行うために Wine の環境を作ります。</p><p>標準では <code>~/.wine</code> に環境が作られます。</p><pre><code>$ wine xxx
+</code></pre><p>「xxx.exe が見つから無い」と言われても無視してください。ワザとです。</p><p>別の場所に専用の環境を作る場合は</p><pre><code>$ WINEPREFIX=~/wine-hgimg4-test wine xxx
+</code></pre><p>と <code>WINEPREFIX</code> 環境変数を指定します。</p><p>以降では <code>~/wine-hgimg4-test</code> を環境として使用します。</p><p>日本語のフォントは  <a href="http://www.geocities.jp/ipa_mona/">IPAモナーフォント</a> をインストールし、利用します。</p><p>まずは、フォントをインストールします。</p><pre><code class="bash">$ wget http://www.geocities.jp/ipa_mona/opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8.tar.gz
 $ tar xzf opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8.tar.gz
 $ mv opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8/fonts/ipa*.ttf ~/wine-hgimg4-test/drive_c/windows/Fonts/
 $ rm -rf opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8
-</code></pre>
-
-<p>次に、<code>MS Gothic</code> などのフォントを別のフォント(ここでは IPA モナー フォント)のエリアスとする設定をします。</p>
-
-<pre><code>REGEDIT4
+</code></pre><p>次に、<code>MS Gothic</code> などのフォントを別のフォント(ここでは IPA モナー フォント)のエリアスとする設定をします。</p><pre><code>REGEDIT4
 
 [HKEY_CURRENT_USER¥Software¥Wine¥Fonts¥Replacements]
 "MS Gothic"="IPA モナー ゴシック"
@@ -228,110 +78,22 @@ $ rm -rf opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8
 "ＭＳ 明朝"="IPA モナー 明朝"
 "ＭＳ Ｐゴシック"="IPA モナー Pゴシック"
 "ＭＳ Ｐ明朝"="IPA モナー P明朝"
-</code></pre>
-
-<p>を <strong>Shift_JIS</strong> で！ <code>wine-font-replace-mona.reg</code> として保存しレジストリを更新します。</p>
-
-<p>コピペも面倒な場合は、 <a href="/files/2016_0326_wine-font-replace-mona.reg">wine-font-replace-mona.reg</a> をダウンロードしてください。</p>
-
-<pre><code class="bash">$ WINEPREFIX=~/wine-hgimg4-test wine regedit wine-font-replace-mona.reg
-</code></pre>
-
-<p>最後に、フォントのスムース処理の設定を行います。</p>
-
-<pre><code class="registory">REGEDIT4
+</code></pre><p>を <strong>Shift_JIS</strong> で！ <code>wine-font-replace-mona.reg</code> として保存しレジストリを更新します。</p><p>コピペも面倒な場合は、 <a href="/files/2016_0326_wine-font-replace-mona.reg">wine-font-replace-mona.reg</a> をダウンロードしてください。</p><pre><code class="bash">$ WINEPREFIX=~/wine-hgimg4-test wine regedit wine-font-replace-mona.reg
+</code></pre><p>最後に、フォントのスムース処理の設定を行います。</p><pre><code class="registory">REGEDIT4
 
 [HKEY_CURRENT_USER\Control Panel\Desktop]
 "FontSmoothing"="1"
 "FontSmoothingGamma"=dword:00000578
 "FontSmoothingOrientation"=dword:00000001
 "FontSmoothingType"=dword:00000002
-</code></pre>
-
-<p>を同じく <strong>Shift_JIS</strong> で！ <code>wine-font-smoothing-rgb.reg</code> として保存しレジストリを更新します。</p>
-
-<p>コピペがやっぱり面倒な場合は、 <a href="/files/2016_0326_wine-font-smoothing-rgb.reg">wine-font-smoothing-rgb.reg</a> をダウンロードしてください。</p>
-
-<pre><code>$ WINEPREFIX=~/wine-hgimg4-test wine regedit wine-font-smoothing-rgb.reg
-</code></pre>
-
-<h2 id="hsp-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" itemprop="articleSection">HSP のインストール</h2>
-
-<p><a href="http://hsp.tv/make/downlist.html">HSPダウンロード</a> から HSP 3.4 をダウンロードします。</p>
-
-<p>※ <a href="http://www.onionsoft.net/wp/archives/1642">HSP3.5β3を公開しました - おにたま(オニオンソフト)のおぼえがき</a> から HSP 3.5b3 をダウンロードしてもいいですが、こちらはインストーラ版では無いので注意です。</p>
-
-<p>コマンドでダウンロードする場合はこんな感じです。</p>
-
-<pre><code>$ wget http://www.onionsoft.net/hsp/file/hsp34.exe
-</code></pre>
-
-<p>そして、インストールします。</p>
-
-<pre><code class="bash">$ WINEPREFIX=~/wine-hgimg4-test wine hsp34.exe
-</code></pre>
-
-<p>途中の「デスクトップ上にアイコンを作成する」や「拡張子の関連付けを行う」はチェックを外しておきましょう。</p>
-
-<p><a href="/images/2016_0326_hsp_install_wizard_page_1.png"><img src="/thumbs/9b93c326efb30e0e081f852fdc82f27c-128x128.png" alt="HSP インストールウィザード ページ 01"></a> 
-<a href="/images/2016_0326_hsp_install_wizard_page_2.png"><img src="/thumbs/944bfa26b702b628fdd4d800bba14dc3-128x128.png" alt="HSP インストールウィザード ページ 02"></a> 
-<a href="/images/2016_0326_hsp_install_wizard_page_3.png"><img src="/thumbs/f5959a28a94fe43e70c5d52368920698-128x128.png" alt="HSP インストールウィザード ページ 03"></a> 
-<a href="/images/2016_0326_hsp_install_wizard_page_4.png"><img src="/thumbs/78106ccd5918ab9c41b399079e5b3cf1-128x128.png" alt="HSP インストールウィザード ページ 04"></a> 
-<a href="/images/2016_0326_hsp_install_wizard_page_5.png"><img src="/thumbs/e330caa9317c918cd8008d4e63cc8ca3-128x128.png" alt="HSP インストールウィザード ページ 05"></a> 
-<a href="/images/2016_0326_hsp_install_wizard_page_6.png"><img src="/thumbs/88933c9aab67553abd0bc21af909a3a9-128x128.png" alt="HSP インストールウィザード ページ 06"></a> 
-<a href="/images/2016_0326_hsp_install_wizard_page_7.png"><img src="/thumbs/69dfcfea98e8cc10ce874d787a6c0174-128x128.png" alt="HSP インストールウィザード ページ 07"></a></p>
-
-<p>こんな感じにセットアップウィザードを行うと、</p>
-
-<p><a href="/images/2016_0326_hsp_demo.png"><img src="/thumbs/0442cc0847c8faec0fefeb50c18da5a9-384x384.png" alt="HSPデモ"></a></p>
-
-<p>とりあえず、 Wine で HSP が動くようになります。</p>
-
-<pre><code class="bash">$ WINEPREFIX=~/wine-hgimg4-test wine c:\\hsp34\\hsed3.exe
-</code></pre>
-
-<p>とすると HSPスクリプトエディタ も起動します。</p>
-
-<p><a href="/images/2016_0326_hsp_script_editor_with_assistant.png"><img src="/thumbs/9ebdeb5fd154ee9b2ce9200d5f1c98fe-384x384.png" alt="HSP スクリプトエディタ＆アシスタント"></a></p>
-
-<h2 id="osx-%E4%B8%8A%E3%81%AE-wine-%E3%81%A7-hgimg3-%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99" itemprop="articleSection">OSX 上の Wine で hgimg3 を動かす</h2>
-
-<p>HSPスクリプトエディタ で <code>sample\\hgimg3\\tamane4.hsp</code> を開きます。</p>
-
-<pre><code class="bash">$ WINEPREFIX=~/wine-hgimg4-test wine c:\\hsp34\\hsed3.exe "sample\\hgimg3\\tamane4.hsp"
-</code></pre>
-
-<p><a href="/images/2016_0326_hgimg3_tamane_source.png"><img src="/thumbs/7cc244fde01011f836fc6ec65c444a7a-384x384.png" alt="hgimg3 珠音 ソース"></a></p>
-
-<p>そして、おもむろに <kbd>F5</kbd> を押下、</p>
-
-<p><a href="/images/2016_0326_hgimg3_tamane_running.png"><img src="/thumbs/1e9426ea187d90bd2febb15569bc3c60-384x384.png" alt="hgimg3 珠音"></a></p>
-
-<p>はい、無事にSDサイズの<ruby>珠音<rp>(</rp><rt>たまね</rt><rp>)</rp></ruby>ちゃんが表示されました。</p>
-
-<h2 id="osx-%E4%B8%8A%E3%81%AE-wine-%E3%81%A7-hgimg4-%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99" itemprop="articleSection">OSX 上の Wine で hgimg4 を動かす</h2>
-
-<p>HSPスクリプトエディタ で <code>sample\\hgimg4\\tamane1.hsp</code> を開きます。</p>
-
-<pre><code class="bash">$ WINEPREFIX=~/wine-hgimg4-test wine c:\\hsp34\\hsed3.exe "sample\\hgimg4\\tamane1.hsp"
-</code></pre>
-
-<p><a href="/images/2016_0326_hgimg4_tamane_source.png"><img src="/thumbs/ff0fd23abc5d83baa50d638b36b744cf-384x384.png" alt="hgimg4 珠音 ソース"></a></p>
-
-<p>そして、おもむろに <kbd>F5</kbd> を押下、</p>
-
-<p><a href="/images/2016_0326_hgimg4_tamane_running_failed.png"><img src="/thumbs/8930f39e1744af1691e5f13b93140428-384x384.png" alt="hgimg4 珠音 失敗"></a></p>
-
-<p><span style="font-family: IPAMonaPGothic,'ＭＳ Ｐゴシック',sans-serif;font-size:16px;">(´・ω・`)</sapn></p>
-
-<p>ここで諦めずに頑張る自分。</p>
-
-<p>Wine のビルド方法は <a href="/blog/2016/01/31/building-wine-on-mac-osx.html">Mac OS X での Wine のビルドの仕方</a>
- の記事を参照のこと。</p>
-
-<p>そして、Wine 1.9.6 からの変更が、<a href="https://github.com/sharkpp/wine/commit/6a876fd9a51d5c6ce54c1a6facf9b59561f62ecd">どーん</a></p>
-
-<pre><code class="diff">$ git diff 6bc0ce26a853b51f11958545bfa5570bdcb1cf01 6a876fd9a51d5c6ce54c1a6facf9b59561f62ecd
+</code></pre><p>を同じく <strong>Shift_JIS</strong> で！ <code>wine-font-smoothing-rgb.reg</code> として保存しレジストリを更新します。</p><p>コピペがやっぱり面倒な場合は、 <a href="/files/2016_0326_wine-font-smoothing-rgb.reg">wine-font-smoothing-rgb.reg</a> をダウンロードしてください。</p><pre><code>$ WINEPREFIX=~/wine-hgimg4-test wine regedit wine-font-smoothing-rgb.reg
+</code></pre><h2 id="hsp-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" itemprop="articleSection">HSP のインストール</h2><p><a href="http://hsp.tv/make/downlist.html">HSPダウンロード</a> から HSP 3.4 をダウンロードします。</p><p>※ <a href="http://www.onionsoft.net/wp/archives/1642">HSP3.5β3を公開しました - おにたま(オニオンソフト)のおぼえがき</a> から HSP 3.5b3 をダウンロードしてもいいですが、こちらはインストーラ版では無いので注意です。</p><p>コマンドでダウンロードする場合はこんな感じです。</p><pre><code>$ wget http://www.onionsoft.net/hsp/file/hsp34.exe
+</code></pre><p>そして、インストールします。</p><pre><code class="bash">$ WINEPREFIX=~/wine-hgimg4-test wine hsp34.exe
+</code></pre><p>途中の「デスクトップ上にアイコンを作成する」や「拡張子の関連付けを行う」はチェックを外しておきましょう。</p><p><a href="/images/2016_0326_hsp_install_wizard_page_1.png"><img src="/thumbs/9b93c326efb30e0e081f852fdc82f27c-128x128.png" alt="HSP インストールウィザード ページ 01"></a><a href="/images/2016_0326_hsp_install_wizard_page_2.png"><img src="/thumbs/944bfa26b702b628fdd4d800bba14dc3-128x128.png" alt="HSP インストールウィザード ページ 02"></a><a href="/images/2016_0326_hsp_install_wizard_page_3.png"><img src="/thumbs/f5959a28a94fe43e70c5d52368920698-128x128.png" alt="HSP インストールウィザード ページ 03"></a><a href="/images/2016_0326_hsp_install_wizard_page_4.png"><img src="/thumbs/78106ccd5918ab9c41b399079e5b3cf1-128x128.png" alt="HSP インストールウィザード ページ 04"></a><a href="/images/2016_0326_hsp_install_wizard_page_5.png"><img src="/thumbs/e330caa9317c918cd8008d4e63cc8ca3-128x128.png" alt="HSP インストールウィザード ページ 05"></a><a href="/images/2016_0326_hsp_install_wizard_page_6.png"><img src="/thumbs/88933c9aab67553abd0bc21af909a3a9-128x128.png" alt="HSP インストールウィザード ページ 06"></a><a href="/images/2016_0326_hsp_install_wizard_page_7.png"><img src="/thumbs/69dfcfea98e8cc10ce874d787a6c0174-128x128.png" alt="HSP インストールウィザード ページ 07"></a></p><p>こんな感じにセットアップウィザードを行うと、</p><p><a href="/images/2016_0326_hsp_demo.png"><img src="/thumbs/0442cc0847c8faec0fefeb50c18da5a9-384x384.png" alt="HSPデモ"></a></p><p>とりあえず、 Wine で HSP が動くようになります。</p><pre><code class="bash">$ WINEPREFIX=~/wine-hgimg4-test wine c:\\hsp34\\hsed3.exe
+</code></pre><p>とすると HSPスクリプトエディタ も起動します。</p><p><a href="/images/2016_0326_hsp_script_editor_with_assistant.png"><img src="/thumbs/9ebdeb5fd154ee9b2ce9200d5f1c98fe-384x384.png" alt="HSP スクリプトエディタ＆アシスタント"></a></p><h2 id="osx-%E4%B8%8A%E3%81%AE-wine-%E3%81%A7-hgimg3-%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99" itemprop="articleSection">OSX 上の Wine で hgimg3 を動かす</h2><p>HSPスクリプトエディタ で <code>sample\\hgimg3\\tamane4.hsp</code> を開きます。</p><pre><code class="bash">$ WINEPREFIX=~/wine-hgimg4-test wine c:\\hsp34\\hsed3.exe "sample\\hgimg3\\tamane4.hsp"
+</code></pre><p><a href="/images/2016_0326_hgimg3_tamane_source.png"><img src="/thumbs/7cc244fde01011f836fc6ec65c444a7a-384x384.png" alt="hgimg3 珠音 ソース"></a></p><p>そして、おもむろに <kbd>F5</kbd> を押下、</p><p><a href="/images/2016_0326_hgimg3_tamane_running.png"><img src="/thumbs/1e9426ea187d90bd2febb15569bc3c60-384x384.png" alt="hgimg3 珠音"></a></p><p>はい、無事にSDサイズの<ruby>珠音<rp>(</rp><rt>たまね</rt><rp>)</rp></ruby>ちゃんが表示されました。</p><h2 id="osx-%E4%B8%8A%E3%81%AE-wine-%E3%81%A7-hgimg4-%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99" itemprop="articleSection">OSX 上の Wine で hgimg4 を動かす</h2><p>HSPスクリプトエディタ で <code>sample\\hgimg4\\tamane1.hsp</code> を開きます。</p><pre><code class="bash">$ WINEPREFIX=~/wine-hgimg4-test wine c:\\hsp34\\hsed3.exe "sample\\hgimg4\\tamane1.hsp"
+</code></pre><p><a href="/images/2016_0326_hgimg4_tamane_source.png"><img src="/thumbs/ff0fd23abc5d83baa50d638b36b744cf-384x384.png" alt="hgimg4 珠音 ソース"></a></p><p>そして、おもむろに <kbd>F5</kbd> を押下、</p><p><a href="/images/2016_0326_hgimg4_tamane_running_failed.png"><img src="/thumbs/8930f39e1744af1691e5f13b93140428-384x384.png" alt="hgimg4 珠音 失敗"></a></p><p><span style="font-family: IPAMonaPGothic,'ＭＳ Ｐゴシック',sans-serif;font-size:16px;">(´・ω・`)</sapn></p><p>ここで諦めずに頑張る自分。</p><p>Wine のビルド方法は <a href="/blog/2016/01/31/building-wine-on-mac-osx.html">Mac OS X での Wine のビルドの仕方</a>
+ の記事を参照のこと。</p><p>そして、Wine 1.9.6 からの変更が、<a href="https://github.com/sharkpp/wine/commit/6a876fd9a51d5c6ce54c1a6facf9b59561f62ecd">どーん</a></p><pre><code class="diff">$ git diff 6bc0ce26a853b51f11958545bfa5570bdcb1cf01 6a876fd9a51d5c6ce54c1a6facf9b59561f62ecd
 diff --git a/dlls/winemac.drv/opengl.c b/dlls/winemac.drv/opengl.c
 index ab79a82..c1492f7 100644
 --- a/dlls/winemac.drv/opengl.c
@@ -350,121 +112,22 @@ index ab79a82..c1492f7 100644
      if ((major == 3 &amp;&amp; (minor == 2 || minor == 3)) ||
          (major == 4 &amp;&amp; (minor == 0 || minor == 1)))
      {
-</code></pre>
-
-<p>ビルドが、ばーん</p>
-
-<pre><code class="bash">$ make
+</code></pre><p>ビルドが、ばーん</p><pre><code class="bash">$ make
    :
 Wine build complete.
-</code></pre>
-
-<p>最後に <code>sample\\hgimg4\\tamane1.hsp</code> を開き、</p>
-
-<pre><code class="bash">$ WINEPREFIX=~/wine-hgimg4-test ./wine c:\\hsp34\\hsed3.exe "sample\\hgimg4\\tamane1.hsp"
-</code></pre>
-
-<p>そして、おもむろに <kbd>F5</kbd> を押下、</p>
-
-<p><a href="/images/2016_0326_hgimg4_tamane_running.png"><img src="/thumbs/7095b1a5c9519d4d7402612142b8c1b6-384x384.png" alt="hgimg4 珠音"></a></p>
-
-<p>おおおおー</p>
-
-<p>やったね、無事に<ruby>珠音<rp>(</rp><rt>たまね</rt><rp>)</rp></ruby>ちゃんが表示されました。</p>
-
-<h2 id="%E6%8A%80%E8%A1%93%E7%9A%84%E3%81%AA%E3%81%93%E3%81%A8%E3%82%92%E3%81%99%E3%81%93%E3%81%97" itemprop="articleSection">技術的なことをすこし</h2>
-
-<p>今回やったことは、 OpenGL 3.1 を要求された場合に OpenGL 2.1 に強制的に変えることをしています。</p>
-
-<p>いろいろ調べたところ、OS X の OpenGL サポートがちょっと残念なことになっているようで、<a href="https://developer.apple.com/opengl/capabilities/GLInfo_1090.html">OS X 10.9 OpenGL Information - OpenGL - Apple Developer</a> の辺りを見ると</p>
-
-<table>
-<thead>
-<tr>
-  <th>Profile</th>
-  <th>Version</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>Legacy</td>
-  <td>2.1</td>
-</tr>
-<tr>
-  <td>Core</td>
-  <td>3.3 - 4.1</td>
-</tr>
-</tbody>
-</table>
-
-<p>となっていて、OpenGL 3.1 なんてサポートして無いよ！って怒られて実行できなかったようです。</p>
-
-<p>単純に Core プロファイルで動くようにして今度はシェーダーでバージョンが違うと怒られたのでどうしたものかと悩んでいましたが、 hgimg4 の 3D エンジンであるところの <a href="http://www.gameplay3d.io/">GamePlay 2D/3D</a> は OS X もサポートしているらしいのでビルドしてみて試したところ、あれ？ OpenGL 2.1 で動いているぞ！ってことで、今回の対応になったわけです。</p>
-
-<p>ただ、OpenGL 3.1 で使えるシェーダーの機能を使っている場合は Windows と動きが違う可能性があるので確認は必要になると思います。</p>
-
-<h2 id="%E3%81%8A%E3%81%BE%E3%81%91" itemprop="articleSection">おまけ</h2>
-
-<p>hgimg4 の他のサンプルや、 HSPプログラムコンテスト 2015 で hgimg4 を利用したプログラムを探し動かしてみました。</p>
-
-<p><a href="/images/2016_0326_hgimg4_test1.png"><img src="/thumbs/9909f635e32ecccd3d061bd49f5718cc-256x256.png" alt="hgimg4 サンプル test1"></a>
-<a href="/images/2016_0326_hgimg4_test2.png"><img src="/thumbs/6225a1255e77e5d0d46b35b487e5397c-256x256.png" alt="hgimg4 サンプル test2"></a>
-<a href="/images/2016_0326_hgimg4_test3.png"><img src="/thumbs/75789f539377222aba6535d5e37b00ad-256x256.png" alt="hgimg4 サンプル test3"></a>
-<a href="/images/2016_0326_hgimg4_test4.png"><img src="/thumbs/06caf84bc1fb78e628676a0a75c4ca71-256x256.png" alt="hgimg4 サンプル test4"></a>
-<a href="/images/2016_0326_hgimg4_test5.png"><img src="/thumbs/b2f896301fb8295cfc6a63134c8860fa-256x256.png" alt="hgimg4 サンプル test5"></a>
-<a href="/images/2016_0326_hgimg4_test6.png"><img src="/thumbs/0ee1b30a809c80b7272297875d9288b2-256x256.png" alt="hgimg4 サンプル test6"></a>
-<a href="/images/2016_0326_hgimg4_test7.png"><img src="/thumbs/fb8331afdbe5be612ce12d5b6e084058-256x256.png" alt="hgimg4 サンプル test7"></a>
-<a href="/images/2016_0326_hgimg4_test8.png"><img src="/thumbs/7721eeef26d9c47dceab361c3bf05b55-256x256.png" alt="hgimg4 サンプル test8"></a>
-<a href="/images/2016_0326_hgimg4_test9.png"><img src="/thumbs/605ffbef1139b6b8bc46f69d73d86b6b-256x256.png" alt="hgimg4 サンプル test9"></a>
-<a href="/images/2016_0326_hgimg4_test10.png"><img src="/thumbs/96a44b6e76b6511e3f1b069f3f0457f8-256x256.png" alt="hgimg4 サンプル test10"></a>
-<a href="/images/2016_0326_hgimg4_test11.png"><img src="/thumbs/820f347f4df1ae5f73069937720df6f8-256x256.png" alt="hgimg4 サンプル test11"></a>
-<a href="/images/2016_0326_hgimg4_test12.png"><img src="/thumbs/8e056d3f9c8cfc709817396d5b66e0a4-256x256.png" alt="hgimg4 サンプル test12"></a>
-<a href="/images/2016_0326_hgimg4_test13.png"><img src="/thumbs/a84bf8234192e3ff26852dbfc6623d41-256x256.png" alt="hgimg4 サンプル test13"></a>
-<a href="/images/2016_0326_hgimg4_block3.png"><img src="/thumbs/ad5e652367972a2d7884af6008565618-256x256.png" alt="hgimg4 サンプル block3"></a></p>
-
-<p><a href="http://dev.onionsoft.net/seed/info.ax?id=1077">ヨミチハコワイ</a>
-(c) 法貴 優雅（MYAOSOFT）/ <a href="https://twitter.com/MYAOSOFT">@MYAOSOFT</a></p>
-
-<p><a href="/images/2016_0326_hsp_contest_2015_no1077_ss_01.png"><img src="/thumbs/c6a5cc7b92acf6127054f3edbe0f6867-256x256.png" alt="ヨミチハコワイ 01"></a>
-<a href="/images/2016_0326_hsp_contest_2015_no1077_ss_02.png"><img src="/thumbs/85b6912a8e8af5d7b013385f29a8878c-256x256.png" alt="ヨミチハコワイ 02"></a>
-<a href="/images/2016_0326_hsp_contest_2015_no1077_ss_03.png"><img src="/thumbs/2b49015e278dcc10bab77fe863dadd26-256x256.png" alt="ヨミチハコワイ 03"></a></p>
-
-<p><a href="http://dev.onionsoft.net/seed/info.ax?id=1084">R-sim++</a>
-(c) hashikemu / <a href="https://twitter.com/kemuduino">@hashikemu</a></p>
-
-<p><a href="/images/2016_0326_hsp_contest_2015_no1084_ss_01.png"><img src="/thumbs/5e254af57f6df3f1a0e6636aef19175d-256x256.png" alt="R-sim++ 01"></a>
-<a href="/images/2016_0326_hsp_contest_2015_no1084_ss_02.png"><img src="/thumbs/cabc8d6a7d789a12153a0c6e4b8d25d2-256x256.png" alt="R-sim++ 02"></a>
-<a href="/images/2016_0326_hsp_contest_2015_no1084_ss_03.png"><img src="/thumbs/1b694ea19f12b779d33fcdafd81f58cd-256x256.png" alt="R-sim++ 03"></a></p>
-
-<h2 id="%E5%8F%82%E8%80%83" itemprop="articleSection">参考</h2>
-
-<ul>
-<li><a href="https://cozyattic.wordpress.com/2015/02/16/homebrew%E3%81%A7wine%E3%82%92%E4%BD%BF%E3%81%86/">【微妙】HomebrewでWineを使う | cozy attic</a></li>
-<li><a href="http://kakurasan.blogspot.jp/2015/06/manage-winapps-using-wineprefixes.html">Wine環境(WINEPREFIX)を分けてWindowsアプリを上手に管理する - kakurasan</a></li>
-<li><a href="http://www.geocities.jp/ipa_mona/">IPAモナーフォント</a></li>
-<li><a href="https://technet.microsoft.com/en-us/library/cc978612.aspx">FontSmoothing</a></li>
-<li><a href="http://d.hatena.ne.jp/kakurasan/20090107/p1">Wine 1.1.12におけるフォントのサブピクセルレンダリングについて - 試験運用中なLinux備忘録</a>
-<a href="https://developer.apple.com/opengl/capabilities/GLInfo_1090.html">OS X 10.9 OpenGL Information - OpenGL - Apple Developer</a></li>
-</ul>
-
-        </div>
-        <hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" />
-        <footer>            <div style="line-height: 25px; height: 25px;">
-    <span style="display: inline-block; vertical-align: top;">
-        <i class="fa fa-calendar"></i>
-        <span itemprop="datePublished" content="2016-03-26">2016年03月26日</span>
+</code></pre><p>最後に <code>sample\\hgimg4\\tamane1.hsp</code> を開き、</p><pre><code class="bash">$ WINEPREFIX=~/wine-hgimg4-test ./wine c:\\hsp34\\hsed3.exe "sample\\hgimg4\\tamane1.hsp"
+</code></pre><p>そして、おもむろに <kbd>F5</kbd> を押下、</p><p><a href="/images/2016_0326_hgimg4_tamane_running.png"><img src="/thumbs/7095b1a5c9519d4d7402612142b8c1b6-384x384.png" alt="hgimg4 珠音"></a></p><p>おおおおー</p><p>やったね、無事に<ruby>珠音<rp>(</rp><rt>たまね</rt><rp>)</rp></ruby>ちゃんが表示されました。</p><h2 id="%E6%8A%80%E8%A1%93%E7%9A%84%E3%81%AA%E3%81%93%E3%81%A8%E3%82%92%E3%81%99%E3%81%93%E3%81%97" itemprop="articleSection">技術的なことをすこし</h2><p>今回やったことは、 OpenGL 3.1 を要求された場合に OpenGL 2.1 に強制的に変えることをしています。</p><p>いろいろ調べたところ、OS X の OpenGL サポートがちょっと残念なことになっているようで、<a href="https://developer.apple.com/opengl/capabilities/GLInfo_1090.html">OS X 10.9 OpenGL Information - OpenGL - Apple Developer</a> の辺りを見ると</p><table><thead><tr><th>Profile</th><th>Version</th></tr></thead><tbody><tr><td>Legacy</td><td>2.1</td></tr><tr><td>Core</td><td>3.3 - 4.1</td></tr></tbody></table><p>となっていて、OpenGL 3.1 なんてサポートして無いよ！って怒られて実行できなかったようです。</p><p>単純に Core プロファイルで動くようにして今度はシェーダーでバージョンが違うと怒られたのでどうしたものかと悩んでいましたが、 hgimg4 の 3D エンジンであるところの <a href="http://www.gameplay3d.io/">GamePlay 2D/3D</a> は OS X もサポートしているらしいのでビルドしてみて試したところ、あれ？ OpenGL 2.1 で動いているぞ！ってことで、今回の対応になったわけです。</p><p>ただ、OpenGL 3.1 で使えるシェーダーの機能を使っている場合は Windows と動きが違う可能性があるので確認は必要になると思います。</p><h2 id="%E3%81%8A%E3%81%BE%E3%81%91" itemprop="articleSection">おまけ</h2><p>hgimg4 の他のサンプルや、 HSPプログラムコンテスト 2015 で hgimg4 を利用したプログラムを探し動かしてみました。</p><p><a href="/images/2016_0326_hgimg4_test1.png"><img src="/thumbs/9909f635e32ecccd3d061bd49f5718cc-256x256.png" alt="hgimg4 サンプル test1"></a><a href="/images/2016_0326_hgimg4_test2.png"><img src="/thumbs/6225a1255e77e5d0d46b35b487e5397c-256x256.png" alt="hgimg4 サンプル test2"></a><a href="/images/2016_0326_hgimg4_test3.png"><img src="/thumbs/75789f539377222aba6535d5e37b00ad-256x256.png" alt="hgimg4 サンプル test3"></a><a href="/images/2016_0326_hgimg4_test4.png"><img src="/thumbs/06caf84bc1fb78e628676a0a75c4ca71-256x256.png" alt="hgimg4 サンプル test4"></a><a href="/images/2016_0326_hgimg4_test5.png"><img src="/thumbs/b2f896301fb8295cfc6a63134c8860fa-256x256.png" alt="hgimg4 サンプル test5"></a><a href="/images/2016_0326_hgimg4_test6.png"><img src="/thumbs/0ee1b30a809c80b7272297875d9288b2-256x256.png" alt="hgimg4 サンプル test6"></a><a href="/images/2016_0326_hgimg4_test7.png"><img src="/thumbs/fb8331afdbe5be612ce12d5b6e084058-256x256.png" alt="hgimg4 サンプル test7"></a><a href="/images/2016_0326_hgimg4_test8.png"><img src="/thumbs/7721eeef26d9c47dceab361c3bf05b55-256x256.png" alt="hgimg4 サンプル test8"></a><a href="/images/2016_0326_hgimg4_test9.png"><img src="/thumbs/605ffbef1139b6b8bc46f69d73d86b6b-256x256.png" alt="hgimg4 サンプル test9"></a><a href="/images/2016_0326_hgimg4_test10.png"><img src="/thumbs/96a44b6e76b6511e3f1b069f3f0457f8-256x256.png" alt="hgimg4 サンプル test10"></a><a href="/images/2016_0326_hgimg4_test11.png"><img src="/thumbs/820f347f4df1ae5f73069937720df6f8-256x256.png" alt="hgimg4 サンプル test11"></a><a href="/images/2016_0326_hgimg4_test12.png"><img src="/thumbs/8e056d3f9c8cfc709817396d5b66e0a4-256x256.png" alt="hgimg4 サンプル test12"></a><a href="/images/2016_0326_hgimg4_test13.png"><img src="/thumbs/a84bf8234192e3ff26852dbfc6623d41-256x256.png" alt="hgimg4 サンプル test13"></a><a href="/images/2016_0326_hgimg4_block3.png"><img src="/thumbs/ad5e652367972a2d7884af6008565618-256x256.png" alt="hgimg4 サンプル block3"></a></p><p><a href="http://dev.onionsoft.net/seed/info.ax?id=1077">ヨミチハコワイ</a>
+(c) 法貴 優雅（MYAOSOFT）/ <a href="https://twitter.com/MYAOSOFT">@MYAOSOFT</a></p><p><a href="/images/2016_0326_hsp_contest_2015_no1077_ss_01.png"><img src="/thumbs/c6a5cc7b92acf6127054f3edbe0f6867-256x256.png" alt="ヨミチハコワイ 01"></a><a href="/images/2016_0326_hsp_contest_2015_no1077_ss_02.png"><img src="/thumbs/85b6912a8e8af5d7b013385f29a8878c-256x256.png" alt="ヨミチハコワイ 02"></a><a href="/images/2016_0326_hsp_contest_2015_no1077_ss_03.png"><img src="/thumbs/2b49015e278dcc10bab77fe863dadd26-256x256.png" alt="ヨミチハコワイ 03"></a></p><p><a href="http://dev.onionsoft.net/seed/info.ax?id=1084">R-sim++</a>
+(c) hashikemu / <a href="https://twitter.com/kemuduino">@hashikemu</a></p><p><a href="/images/2016_0326_hsp_contest_2015_no1084_ss_01.png"><img src="/thumbs/5e254af57f6df3f1a0e6636aef19175d-256x256.png" alt="R-sim++ 01"></a><a href="/images/2016_0326_hsp_contest_2015_no1084_ss_02.png"><img src="/thumbs/cabc8d6a7d789a12153a0c6e4b8d25d2-256x256.png" alt="R-sim++ 02"></a><a href="/images/2016_0326_hsp_contest_2015_no1084_ss_03.png"><img src="/thumbs/1b694ea19f12b779d33fcdafd81f58cd-256x256.png" alt="R-sim++ 03"></a></p><h2 id="%E5%8F%82%E8%80%83" itemprop="articleSection">参考</h2><ul><li><a href="https://cozyattic.wordpress.com/2015/02/16/homebrew%E3%81%A7wine%E3%82%92%E4%BD%BF%E3%81%86/">【微妙】HomebrewでWineを使う | cozy attic</a></li><li><a href="http://kakurasan.blogspot.jp/2015/06/manage-winapps-using-wineprefixes.html">Wine環境(WINEPREFIX)を分けてWindowsアプリを上手に管理する - kakurasan</a></li><li><a href="http://www.geocities.jp/ipa_mona/">IPAモナーフォント</a></li><li><a href="https://technet.microsoft.com/en-us/library/cc978612.aspx">FontSmoothing</a></li><li><a href="http://d.hatena.ne.jp/kakurasan/20090107/p1">Wine 1.1.12におけるフォントのサブピクセルレンダリングについて - 試験運用中なLinux備忘録</a><a href="https://developer.apple.com/opengl/capabilities/GLInfo_1090.html">OS X 10.9 OpenGL Information - OpenGL - Apple Developer</a></li></ul></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i><span itemprop="datePublished" content="2016-03-26">2016年03月26日</span>
         &nbsp;/&nbsp;
-        <i class="fa fa-history"></i> <a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2016-03-26-running-hsp-and-hgimg4-on-mac-osx-using-wine.md">変更履歴</a>
+        <i class="fa fa-history"></i><a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2016-03-26-running-hsp-and-hgimg4-on-mac-osx-using-wine.md">変更履歴</a>
         &nbsp;/&nbsp;
-        <i class="fa fa-thumb-tack"></i> <a href="/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html">Permalink</a>
+        <i class="fa fa-thumb-tack"></i><a href="/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html">Permalink</a>
         &nbsp;/&nbsp;
-    </span>
-    <meta itemprop="url" content="http://www.sharkpp.net/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html" />
-    <span itemprop="author" itemscope itemtype="https://schema.org/Person"
+    </span><meta itemprop="url" content="http://www.sharkpp.net/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html" /><span itemprop="author" itemscope itemtype="https://schema.org/Person"
           style="display: none;"
        ><span itemprop="name">sharkpp</span
-   ></span>
-    <a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2016%2F03%2F26%2Frunning-hsp-and-hgimg4-on-mac-osx-using-wine.html"
+   ></span><a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2016%2F03%2F26%2Frunning-hsp-and-hgimg4-on-mac-osx-using-wine.html"
        class="hatena-bookmark-button"
        data-hatena-bookmark-title="Wine を使って Mac OS X で HSP と hgimg4 を動かしてみた &mdash; さめたすたすのお家"
        data-hatena-bookmark-layout="simple-balloon"
@@ -472,90 +135,24 @@ Wine build complete.
       ><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png"
             alt="このエントリーをはてなブックマークに追加"
             width="20" height="20" style="border: none;" /></a
-      >
-    <a href="https://twitter.com/share" class="twitter-share-button"
-       data-url="http://www.sharkpp.net/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html" data-via="sharkpp">Tweet</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-</div><div style="line-height: 25px; height: 25px;">
-                                <span class="categories">
-            <i class="fa fa-folder-open"></i> カテゴリ:
-                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a>                        </span>
+      ><a href="https://twitter.com/share" class="twitter-share-button"
+       data-url="http://www.sharkpp.net/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html" data-via="sharkpp">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><div style="line-height: 25px; height: 25px;"><span class="categories"><i class="fa fa-folder-open"></i> カテゴリ:
+                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
         &nbsp;/&nbsp;
-                                <span class="tags">
-            <i class="fa fa-tag"></i> タグ:
-                        <a href="/blog/tags/Mac">Mac</a>,                         <a href="/blog/tags/Wine">Wine</a>,                         <a href="/blog/tags/How%20to">How to</a>,                         <a href="/blog/tags/%E3%83%A1%E3%83%A2">メモ</a>,                         <a href="/blog/tags/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89">環境構築</a>,                         <a href="/blog/tags/HSP">HSP</a>,                         <a href="/blog/tags/HSP3">HSP3</a>,                         <a href="/blog/tags/hgimg4">hgimg4</a>                        </span>
-        </div>
-        </footer>
-
-                    <hr style="border-top: none; border-bottom: 1px dashed #aaa; margin: 10px 0;" />
-            <nav class="article">
-                <ul class="list-unstyled row">
-                                            <li class="col-md-6 text-left"><a class="next" href="/blog/2016/04/01/hub-site-launched-for-hsp-users.html" title="HSP ユーザーのためのハブサイトを立上げました"><span class="title"><i class="fa fa-chevron-left"></i> HSP ユーザーのためのハブサイトを立上げました</span></a></li>
-                                                                <li class="col-md-6 text-right"><a class="previous" href="/blog/2016/03/19/git-memo-change-committed-email-and-history-repair.html" title="git メモ：コミット済みの電子メールの変更と履歴の復旧"><span class="title">git メモ：コミット済みの電子メールの変更と履歴の復旧</span> <i class="fa fa-chevron-right"></i></a></li>
-                                    </ul>
-            </nav>
-            </article>
-
-
-
-        </div>
-
-        <footer class="footer">
-            <dev class="overflow">
-                <div class="container text-center">
-                    <ul class="list-unstyled list-inline">
-                        <li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li>
-                        <li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li>
-                        <li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li>
-                        <li><i class="fa-li fa fa-ellipsis-h"></i> <a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li>
-                        <li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html"
-                                  rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li>
-                    </ul>
-                </div>
-                <div class="container text-center">
-                    <ul class="list-unstyled list-inline">
-                        <li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li>
-                        <li class="text-muted">&copy; 2004-2017 sharkpp</li>
-                    </ul>
-                </div>
-                <div class="container text-center text-muted">
-                    <ruby>
-                        <rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
-                                                            >Creative Commons Attribution 4.0 International License</a>.</rb>
-                        <rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
-                                                  >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp>
-                    </ruby>
-                </div>
-                <div class="container text-center text-muted">
-                    <ruby>
-                        <rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
-                                                                            >The MIT License</a>.</rb>
-                        <rp>(</rp><rt>さらに、コードスニペットは <a rel="nofollow" href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license"
-                                                               >MIT ライセンス</a> の下にライセンスされています。</rt><rp>)</rp>
-                    </ruby>
-                </div>
-            </div>
-        </footer>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>')</script>
-
-        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.js"></script>
-        <script>$('body').modal || document.write('<script src="/assets/bootstrap/js/bootstrap.min.js"><\/script>')</script>
-                
-                <script type="text/javascript">
+                                <span class="tags"><i class="fa fa-tag"></i> タグ:
+                        <a href="/blog/tags/Mac">Mac</a>,                         <a href="/blog/tags/Wine">Wine</a>,                         <a href="/blog/tags/How%20to">How to</a>,                         <a href="/blog/tags/%E3%83%A1%E3%83%A2">メモ</a>,                         <a href="/blog/tags/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89">環境構築</a>,                         <a href="/blog/tags/HSP">HSP</a>,                         <a href="/blog/tags/HSP3">HSP3</a>,                         <a href="/blog/tags/hgimg4">hgimg4</a></span></div></footer><hr style="border-top: none; border-bottom: 1px dashed #aaa; margin: 10px 0;" /><nav class="article"><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/blog/2016/04/01/hub-site-launched-for-hsp-users.html" title="HSP ユーザーのためのハブサイトを立上げました"><span class="title"><i class="fa fa-chevron-left"></i> HSP ユーザーのためのハブサイトを立上げました</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/blog/2016/03/19/git-memo-change-committed-email-and-history-repair.html" title="git メモ：コミット済みの電子メールの変更と履歴の復旧"><span class="title">git メモ：コミット済みの電子メールの変更と履歴の復旧</span><i class="fa fa-chevron-right"></i></a></li></ul></nav></article></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li><li><i class="fa-li fa fa-ellipsis-h"></i><a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html"
+                                  rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li></ul></div><div class="container text-center"><ul class="list-unstyled list-inline"><li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li><li class="text-muted">&copy; 2004-2017 sharkpp</li></ul></div><div class="container text-center text-muted"><ruby><rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                            >Creative Commons Attribution 4.0 International License</a>.</rb><rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                  >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp></ruby></div><div class="container text-center text-muted"><ruby><rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
+                                                                            >The MIT License</a>.</rb><rp>(</rp><rt>さらに、コードスニペットは <a rel="nofollow" href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license"
+                                                               >MIT ライセンス</a> の下にライセンスされています。</rt><rp>)</rp></ruby></div></div></footer><script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>')</script><script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.js"></script><script>$('body').modal || document.write('<script src="/assets/bootstrap/js/bootstrap.min.js"><\/script>')</script><script type="text/javascript">
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
             ga('create', 'UA-5908801-2', 'auto');
             ga('send', 'pageview');
-        </script>
-        
-        <script src="/assets/highlightjs/highlight.pack.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-
-        <script type="text/javascript">
+        </script><script src="/assets/highlightjs/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><script type="text/javascript">
             $('a img').each(function(){
                 var rel = ($(this).attr('src').match(/images\u002f([0-9_]{4}_[0-9_]{4})/i) ||
                            ['','lightbox'])[1];
@@ -564,13 +161,7 @@ Wine build complete.
                     .attr('data-title', $(this).attr('alt'))
                     ;
             });
-        </script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
-        <script>$(document).ready(function(){ window.lightbox || $.getScript("/assets/lightbox2/dist/js/lightbox.min.js"); });</script>
-
-                <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.5/jquery.smooth-scroll.min.js"></script>
-        <script>$.smoothScroll || document.write('<script src="/assets/jquery-smooth-scroll/jquery.smooth-scroll.min.js"><\/script>')</script>
-        <script type="text/javascript">
+        </script><script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script><script>$(document).ready(function(){ window.lightbox || $.getScript("/assets/lightbox2/dist/js/lightbox.min.js"); });</script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.5/jquery.smooth-scroll.min.js"></script><script>$.smoothScroll || document.write('<script src="/assets/jquery-smooth-scroll/jquery.smooth-scroll.min.js"><\/script>')</script><script type="text/javascript">
             $('#toc a')
                 .each(function(){
                     var id = $(this).attr('href').slice(1);
@@ -612,19 +203,11 @@ Wine build complete.
                         });
             });
             $(window).scroll();
-        </script>
-
-        <script type="text/javascript">
+        </script><script type="text/javascript">
             $(document).ready(function(){
                 // apply table to bootstrap css
                 $('table:not([class])')
                     .addClass('table table-bordered table-hover table-condensed table-striped')
                     .wrap("<div style='width:100%;overflow-x:auto;'></div>");
              });
-        </script>
-
-        <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
-
-
-    </body>
-</html>
+        </script><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></body></html>

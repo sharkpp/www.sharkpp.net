@@ -1,48 +1,9 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>QNAP TS-109II と GALAXY S(SC-02B) をOpenVPNで繋ぐ &mdash; さめたすたすのお家</title>
-        <meta charset="utf-8">
-        <meta name="theme-color" content="#6877AA">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="robots" content="index, follow">
-        <meta name="keywords" content="Android,QNAP,Galaxy S,Linux">
-        <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/lightbox2/dist/css/lightbox.css" rel="stylesheet" type="text/css" />
-        <link href="/css/style.min.css" rel="stylesheet" type="text/css" />
-        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-
-        <link rel="apple-touch-startup-image" href="/images/noname/2048x2048.png">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="shortcut icon" sizes="76x76" href="/images/noname/76x76.png">
-        <link rel="shortcut icon" sizes="120x120" href="/images/noname/120x120.png">
-        <link rel="shortcut icon" sizes="128x128" href="/images/noname/128x128.png">
-        <link rel="shortcut icon" sizes="152x152" href="/images/noname/152x152.png">
-        <link rel="shortcut icon" sizes="196x196" href="/images/noname/196x196.png">
-        <link rel="shortcut icon" sizes="512x512" href="/images/noname/512x512.png">
-        <link rel="shortcut icon" sizes="1024x1024" href="/images/noname/1024x1024.png">
-        <link rel="shortcut icon" sizes="2048x2048" href="/images/noname/2048x2048.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="/images/noname/76x76.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="/images/noname/120x120.png">
-        <link rel="apple-touch-icon" sizes="128x128" href="/images/noname/128x128.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="/images/noname/152x152.png">
-        <link rel="apple-touch-icon" sizes="196x196" href="/images/noname/196x196.png">
-        <link rel="apple-touch-icon" sizes="512x512" href="/images/noname/512x512.png">
-        <link rel="apple-touch-icon" sizes="1024x1024" href="/images/noname/1024x1024.png">
-        <link rel="apple-touch-icon" sizes="2048x2048" href="/images/noname/2048x2048.png">
-
-        <link rel="stylesheet" href="/assets/highlightjs/styles/github.css" />
-        <link rel="alternate" type="application/atom+xml" href="/atom.xml" title="さめたすたすのお家 activity feed" />
-        <style>
+<head><title>QNAP TS-109II と GALAXY S(SC-02B) をOpenVPNで繋ぐ &mdash; さめたすたすのお家</title><meta charset="utf-8"><meta name="theme-color" content="#6877AA"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="index, follow"><meta name="keywords" content="Android,QNAP,Galaxy S,Linux"><link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" /><link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" /><link href="/assets/lightbox2/dist/css/lightbox.css" rel="stylesheet" type="text/css" /><link href="/css/style.min.css" rel="stylesheet" type="text/css" /><!-- HTML5 shim, for IE6-8 support of HTML5 elements --><!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--><link rel="apple-touch-startup-image" href="/images/noname/2048x2048.png"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="shortcut icon" sizes="76x76" href="/images/noname/76x76.png"><link rel="shortcut icon" sizes="120x120" href="/images/noname/120x120.png"><link rel="shortcut icon" sizes="128x128" href="/images/noname/128x128.png"><link rel="shortcut icon" sizes="152x152" href="/images/noname/152x152.png"><link rel="shortcut icon" sizes="196x196" href="/images/noname/196x196.png"><link rel="shortcut icon" sizes="512x512" href="/images/noname/512x512.png"><link rel="shortcut icon" sizes="1024x1024" href="/images/noname/1024x1024.png"><link rel="shortcut icon" sizes="2048x2048" href="/images/noname/2048x2048.png"><link rel="apple-touch-icon" sizes="76x76" href="/images/noname/76x76.png"><link rel="apple-touch-icon" sizes="120x120" href="/images/noname/120x120.png"><link rel="apple-touch-icon" sizes="128x128" href="/images/noname/128x128.png"><link rel="apple-touch-icon" sizes="152x152" href="/images/noname/152x152.png"><link rel="apple-touch-icon" sizes="196x196" href="/images/noname/196x196.png"><link rel="apple-touch-icon" sizes="512x512" href="/images/noname/512x512.png"><link rel="apple-touch-icon" sizes="1024x1024" href="/images/noname/1024x1024.png"><link rel="apple-touch-icon" sizes="2048x2048" href="/images/noname/2048x2048.png"><link rel="stylesheet" href="/assets/highlightjs/styles/github.css" /><link rel="alternate" type="application/atom+xml" href="/atom.xml" title="さめたすたすのお家 activity feed" /><style>
         /** quick fix because bootstrap <pre> has a background-color. */
         pre code { background-color: inherit; }
-        </style>
-                <style>
+        </style><style>
         #go-top {
             display: none;
             bottom: 40px;
@@ -65,42 +26,8 @@
             max-width: 350px;
             word-wrap: break-word;
         }
-        </style>
-                    </head>
-    <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/">さめたすたすのお家</a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav pull-right">
-                        <li><a href="/blog/"><i class="fa fa-archive"></i> アーカイブ</a></li>
-                        <li><a href="/blog/categories"><i class="fa fa-folder-open"></i> カテゴリ</a></li>
-                        <li><a href="/blog/tags"><i class="fa fa-tags"></i> タグ</a></li>
-                        <li><a href="/product/"><i class="fa fa-download"></i> 作ったもの</a></li>
-                        <li><a href="/graffiti/"><i class="fa fa-paint-brush"></i> 落書き</a></li>
-                        <li><a href="/link.html"><i class="fa fa-link"></i> リンク</a></li>
-                        <li><a href="/about">About</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
-
-        <div class="mainContent container">
-                                                                                
-                                
-    <ol class="breadcrumb" itemscope="itemscope"
-                           itemtype="http://schema.org/BreadcrumbList">
-        <li
+        </style></head><body><nav class="navbar navbar-inverse navbar-fixed-top"><div class="container-fluid"><!-- Brand and toggle get grouped for better mobile display --><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/">さめたすたすのお家</a></div><!-- Collect the nav links, forms, and other content for toggling --><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><ul class="nav navbar-nav pull-right"><li><a href="/blog/"><i class="fa fa-archive"></i> アーカイブ</a></li><li><a href="/blog/categories"><i class="fa fa-folder-open"></i> カテゴリ</a></li><li><a href="/blog/tags"><i class="fa fa-tags"></i> タグ</a></li><li><a href="/product/"><i class="fa fa-download"></i> 作ったもの</a></li><li><a href="/graffiti/"><i class="fa fa-paint-brush"></i> 落書き</a></li><li><a href="/link.html"><i class="fa fa-link"></i> リンク</a></li><li><a href="/about">About</a></li></ul></div><!-- /.navbar-collapse --></div><!-- /.container-fluid --></nav><div class="mainContent container"><ol class="breadcrumb" itemscope="itemscope"
+                           itemtype="http://schema.org/BreadcrumbList"><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/"
@@ -108,108 +35,34 @@
      >&nbsp;<span itemprop="name">HOME</span
            ><meta itemprop="position" content="1"
           /></a
-       ></li>
-        <li
+       ></li><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/blog/2011/"
            ><span>2011</span
            ><meta itemprop="position" content="2"
           /></a
-       ></li>
-        <li
+       ></li><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/blog/2011/12/"
            ><span>12</span
            ><meta itemprop="position" content="3"
           /></a
-       ></li>
-        <li
+       ></li><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/blog/2011/12/10/"
            ><span>10</span
            ><meta itemprop="position" content="4"
           /></a
-       ></li>
-        <li
+       ></li><li
             class="active"><span 
            ><span>QNAP TS-109II と GALAXY S(SC-02B) をOpenVPNで繋ぐ</span
-       ></li>
-    </ol>
-
-    <article itemscope="itemscope" itemtype="http://schema.org/Article">
-        <meta itemscope="itemscope" itemprop="mainEntityOfPage"
-              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net/blog/2011/12/10/qnap-ts-109-galaxys-openvpn.html"/>
-        <header>
-            <h1><span itemprop="headline">QNAP TS-109II と GALAXY S(SC-02B) をOpenVPNで繋ぐ</span> <small>post</small></h1>
-        </header>
-
-<div id="toc" class="panel panel-default pull-right">
-    <div class="panel-heading text-center">目次</div>
-        <div class="panel-body" style="padding: 10px;">
-            <ul class="fa-ul">
-            <li><i class="fa-li fa fa-paperclip"></i><a href="#qnap-ts-109ii%E5%81%B4%E3%81%AE%E8%A8%AD%E5%AE%9A">QNAP TS-109II側の設定</a>
-<ul class="fa-ul">            <li><i class="fa-li fa fa-paperclip"></i><a href="#openvpn%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">OpenVPNをインストール</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%AD%E3%82%B0%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%82%84tun%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E7%94%A8%E3%81%AE%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%82%92%E7%94%9F%E6%88%90">ログディレクトリやtunモジュール用のディレクトリを生成</a>
-</li></ul></li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#galaxy-ssc-02b%E5%81%B4%E3%81%AE%E8%A8%AD%E5%AE%9A">GALAXY S(SC-02B)側の設定</a>
-<ul class="fa-ul">            <li><i class="fa-li fa fa-paperclip"></i><a href="#android-market%E3%81%8B%E3%82%89%E5%BF%85%E8%A6%81%E3%81%AA%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">Android Marketから必要なアプリをインストール</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#ifconfig%2Froute%E3%81%AE%E9%85%8D%E7%BD%AE">ifconfig/routeの配置</a>
-</li></ul></li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#lan%E5%86%85%E9%83%A8%E3%81%AE%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%81%A8%E9%80%9A%E4%BF%A1%E3%81%99%E3%82%8B">LAN内部のクライアントと通信する</a>
-<ul class="fa-ul">            <li><i class="fa-li fa fa-paperclip"></i><a href="#qnap%E5%81%B4vpn%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%A7ipv4%E3%81%AE%E8%BB%A2%E9%80%81%E3%82%92%E6%9C%89%E5%8A%B9%E3%81%AB%E3%81%99%E3%82%8B">QNAP側(VPNサーバー)でipv4の転送を有効にする</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#windows-pc%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%85%B1%E6%9C%89%E3%82%92%E8%A6%8B%E3%82%8B">Windows PCのファイル共有を見る</a>
-            </li></ul></li>
-            </li></ul></li>
-        </ul>
-    </div>
-</div>
-
-<div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div>
-
-        <div itemprop="articleBody">
-            <p>NAS(QNAP TS-109II)をゴニョゴニョやりながらなんとかOpenVPN使って、3G/WiFi経由でGALAXY S(SC-02B)と通信できたのでメモ。</p>
-
-<ul>
-<li><a href="http://blog.circlea4.net/?p=406">QNAPへのインターネット経由でのOpenVPNアクセス</a></li>
-<li><a href="http://wiki.nas-portal.org/index.php/Install_OpenVPN_on_QNAP">Install OpenVPN on QNAP ? NAS Wiki</a></li>
-<li><a href="http://photo.viasv.com/?p=3269">ViaPress inc. ? SC-02B OpenVPN for Android</a></li>
-<li><a href="http://beautiful-moon.net/2011-03-05_android-xperia-openvpn/">beautiful-moon.net ? Blog Archive ? Xperia(Android)からOpenVPN接続</a></li>
-</ul>
-
-<p>あたりを参考にした。</p>
-
-<p>いずれも自己責任でお願いします。</p>
-
-<p>特にAndroid側はroot化が必要なので高級文鎮にならないように注意が必要です。</p>
-
-<p>最終的に</p>
-
-<ul>
-<li>QNAP TS-109II側の設定</li>
-<li>GALAXY S(SC-02B)側の設定</li>
-<li>LAN内部のクライアントと通信する</li>
-</ul>
-
-<p>と、順にGALAXY S⇔QNAP⇔WindowsPCまで通信できるようになりました。</p>
-
-<h3 id="qnap-ts-109ii%E5%81%B4%E3%81%AE%E8%A8%AD%E5%AE%9A" itemprop="articleSection">QNAP TS-109II側の設定</h3>
-
-<p>Optware ipkg は、<a href="/blog/2011/12/05/using-subversion-with-qnap-ts109II.html">QNAP TS-109II で Subversionを使う</a> で色々やったのでそちらを参考にしてください。</p>
-
-<h4 id="openvpn%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" itemprop="articleSection">OpenVPNをインストール</h4>
-
-<pre># ipkg install openvpn
-</pre>
-
-<pre># openvpn
-</pre>
-
-<p>で動けばとりあえずOK</p>
-
-<h4 id="%E3%83%AD%E3%82%B0%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%82%84tun%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E7%94%A8%E3%81%AE%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%82%92%E7%94%9F%E6%88%90" itemprop="articleSection">ログディレクトリやtunモジュール用のディレクトリを生成</h4>
-
-<pre># cd /opt/etc/openvpn
+       ></li></ol><article itemscope="itemscope" itemtype="http://schema.org/Article"><meta itemscope="itemscope" itemprop="mainEntityOfPage"
+              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net/blog/2011/12/10/qnap-ts-109-galaxys-openvpn.html"/><header><h1><span itemprop="headline">QNAP TS-109II と GALAXY S(SC-02B) をOpenVPNで繋ぐ</span><small>post</small></h1></header><div id="toc" class="panel panel-default pull-right"><div class="panel-heading text-center">目次</div><div class="panel-body" style="padding: 10px;"><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#qnap-ts-109ii%E5%81%B4%E3%81%AE%E8%A8%AD%E5%AE%9A">QNAP TS-109II側の設定</a><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#openvpn%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">OpenVPNをインストール</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%AD%E3%82%B0%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%82%84tun%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E7%94%A8%E3%81%AE%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%82%92%E7%94%9F%E6%88%90">ログディレクトリやtunモジュール用のディレクトリを生成</a></li></ul></li><li><i class="fa-li fa fa-paperclip"></i><a href="#galaxy-ssc-02b%E5%81%B4%E3%81%AE%E8%A8%AD%E5%AE%9A">GALAXY S(SC-02B)側の設定</a><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#android-market%E3%81%8B%E3%82%89%E5%BF%85%E8%A6%81%E3%81%AA%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">Android Marketから必要なアプリをインストール</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#ifconfig%2Froute%E3%81%AE%E9%85%8D%E7%BD%AE">ifconfig/routeの配置</a></li></ul></li><li><i class="fa-li fa fa-paperclip"></i><a href="#lan%E5%86%85%E9%83%A8%E3%81%AE%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%81%A8%E9%80%9A%E4%BF%A1%E3%81%99%E3%82%8B">LAN内部のクライアントと通信する</a><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#qnap%E5%81%B4vpn%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%A7ipv4%E3%81%AE%E8%BB%A2%E9%80%81%E3%82%92%E6%9C%89%E5%8A%B9%E3%81%AB%E3%81%99%E3%82%8B">QNAP側(VPNサーバー)でipv4の転送を有効にする</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#windows-pc%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%85%B1%E6%9C%89%E3%82%92%E8%A6%8B%E3%82%8B">Windows PCのファイル共有を見る</a></li></ul></li></li></ul></li></ul></div></div><div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div><div itemprop="articleBody"><p>NAS(QNAP TS-109II)をゴニョゴニョやりながらなんとかOpenVPN使って、3G/WiFi経由でGALAXY S(SC-02B)と通信できたのでメモ。</p><ul><li><a href="http://blog.circlea4.net/?p=406">QNAPへのインターネット経由でのOpenVPNアクセス</a></li><li><a href="http://wiki.nas-portal.org/index.php/Install_OpenVPN_on_QNAP">Install OpenVPN on QNAP ? NAS Wiki</a></li><li><a href="http://photo.viasv.com/?p=3269">ViaPress inc. ? SC-02B OpenVPN for Android</a></li><li><a href="http://beautiful-moon.net/2011-03-05_android-xperia-openvpn/">beautiful-moon.net ? Blog Archive ? Xperia(Android)からOpenVPN接続</a></li></ul><p>あたりを参考にした。</p><p>いずれも自己責任でお願いします。</p><p>特にAndroid側はroot化が必要なので高級文鎮にならないように注意が必要です。</p><p>最終的に</p><ul><li>QNAP TS-109II側の設定</li><li>GALAXY S(SC-02B)側の設定</li><li>LAN内部のクライアントと通信する</li></ul><p>と、順にGALAXY S⇔QNAP⇔WindowsPCまで通信できるようになりました。</p><h3 id="qnap-ts-109ii%E5%81%B4%E3%81%AE%E8%A8%AD%E5%AE%9A" itemprop="articleSection">QNAP TS-109II側の設定</h3><p>Optware ipkg は、<a href="/blog/2011/12/05/using-subversion-with-qnap-ts109II.html">QNAP TS-109II で Subversionを使う</a> で色々やったのでそちらを参考にしてください。</p><h4 id="openvpn%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" itemprop="articleSection">OpenVPNをインストール</h4><pre># ipkg install openvpn
+</pre><pre># openvpn
+</pre><p>で動けばとりあえずOK</p><h4 id="%E3%83%AD%E3%82%B0%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%82%84tun%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E7%94%A8%E3%81%AE%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%82%92%E7%94%9F%E6%88%90" itemprop="articleSection">ログディレクトリやtunモジュール用のディレクトリを生成</h4><pre># cd /opt/etc/openvpn
 ---
 title: "mkdir log"
 date: 2011-12-10 16:15:00
@@ -245,18 +98,8 @@ tags: [雑記, Android, QNAP, Galaxy S]
 categories: [ブログ]
 
 ---
-</pre>
-
-<p><a href="http://wiki.nas-portal.org/index.php/Install_OpenVPN_on_QNAP#Install_the_missing_tun.ko_module">Install the missing tun.ko module</a>から適切なtunモジュールをダウンロードし</p>
-
-<pre>/opt/etc/openvpn/modules
-</pre>
-
-<p>に配置</p>
-
-<p>起動時に、</p>
-
-<pre># install tun.ko
+</pre><p><a href="http://wiki.nas-portal.org/index.php/Install_OpenVPN_on_QNAP#Install_the_missing_tun.ko_module">Install the missing tun.ko module</a>から適切なtunモジュールをダウンロードし</p><pre>/opt/etc/openvpn/modules
+</pre><p>に配置</p><p>起動時に、</p><pre># install tun.ko
 mkdir /dev/net;
 mknod /dev/net/tun c 10 200;
 (sleep 10; insmod /opt/etc/openvpn/modules/tun.ko)&
@@ -269,13 +112,7 @@ categories: [ブログ]
 
 ---
 (sleep 10; /opt/sbin/openvpn /opt/etc/openvpn/easy.conf)&
-</pre>
-
-<p>が実行されるように、autorun.shなどに書き加える</p>
-
-<p>easy.confの内容</p>
-
-<pre># OpenVPN server configuration QNAP NAS
+</pre><p>が実行されるように、autorun.shなどに書き加える</p><p>easy.confの内容</p><pre># OpenVPN server configuration QNAP NAS
 ---
 title: "basic settings"
 date: 2011-12-10 16:15:00
@@ -407,31 +244,9 @@ categories: [ブログ]
 
 ---
 management localhost 7505
-</pre>
-
-<h3 id="galaxy-ssc-02b%E5%81%B4%E3%81%AE%E8%A8%AD%E5%AE%9A" itemprop="articleSection">GALAXY S(SC-02B)側の設定</h3>
-
-<h4 id="android-market%E3%81%8B%E3%82%89%E5%BF%85%E8%A6%81%E3%81%AA%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" itemprop="articleSection">Android Marketから必要なアプリをインストール</h4>
-
-<p><a href="https://market.android.com/details?id=stericson.busybox&amp;hl=ja">BusyBox</a>、<a href="https://market.android.com/details?id=de.schaeuffelhut.android.openvpn.installer&amp;hl=ja">OpenVPN Installer</a>、<a href="https://market.android.com/details?id=de.schaeuffelhut.android.openvpn&amp;hl=ja">OpenVPN Settings</a>をインストール</p>
-
-<p>あと、ターミナルソフト(<a href="https://market.android.com/details?id=org.connectbot">ConnectBot</a>/<a href="https://market.android.com/details?id=jackpal.androidterm">Android Terminal Emulator</a>など) or adbでも出来るかも？ も必要</p>
-
-<p>OpenVPN関連のインストール先は、</p>
-
-<pre>/system/xbin/
-</pre>
-
-<p>ifconfig/route関連のインストール先は、</p>
-
-<pre>/system/xbin/bb/
-</pre>
-
-<p>にしました。</p>
-
-<h4 id="ifconfig%2Froute%E3%81%AE%E9%85%8D%E7%BD%AE" itemprop="articleSection">ifconfig/routeの配置</h4>
-
-<pre>su
+</pre><h3 id="galaxy-ssc-02b%E5%81%B4%E3%81%AE%E8%A8%AD%E5%AE%9A" itemprop="articleSection">GALAXY S(SC-02B)側の設定</h3><h4 id="android-market%E3%81%8B%E3%82%89%E5%BF%85%E8%A6%81%E3%81%AA%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" itemprop="articleSection">Android Marketから必要なアプリをインストール</h4><p><a href="https://market.android.com/details?id=stericson.busybox&amp;hl=ja">BusyBox</a>、<a href="https://market.android.com/details?id=de.schaeuffelhut.android.openvpn.installer&amp;hl=ja">OpenVPN Installer</a>、<a href="https://market.android.com/details?id=de.schaeuffelhut.android.openvpn&amp;hl=ja">OpenVPN Settings</a>をインストール</p><p>あと、ターミナルソフト(<a href="https://market.android.com/details?id=org.connectbot">ConnectBot</a>/<a href="https://market.android.com/details?id=jackpal.androidterm">Android Terminal Emulator</a>など) or adbでも出来るかも？ も必要</p><p>OpenVPN関連のインストール先は、</p><pre>/system/xbin/
+</pre><p>ifconfig/route関連のインストール先は、</p><pre>/system/xbin/bb/
+</pre><p>にしました。</p><h4 id="ifconfig%2Froute%E3%81%AE%E9%85%8D%E7%BD%AE" itemprop="articleSection">ifconfig/routeの配置</h4><pre>su
 ---
 title: "mount -o remount,rw /dev/block/stl9 /system"
 date: 2011-12-10 16:15:00
@@ -460,39 +275,8 @@ tags: [雑記, Android, QNAP, Galaxy S]
 categories: [ブログ]
 
 ---
-</pre>
-
-<p>で一旦、GALAXY Sを再起動</p>
-
-<p>/sdcard/openvpn/galaxys/</p>
-
-<p>にGALAXY S用のtunドライバ(tun-I9000-JPK.zip)を配置</p>
-
-<p>※<a href="http://forum.xda-developers.com/showthread.php?t=793712">HOWTO tun.ko to run OpenVPN on Froyo xxJPK Galaxy S I9000 - xda-developers</a>からダウンロード</p>
-
-<p>OpenVPN Settingsを起動して、Advancedを開き、</p>
-
-<ol>
-<li>「Load tun kernel module」にチェック</li>
-<li>「TUN module settings」</li>
-<li>　「Load modules usings」→ insmod を選択</li>
-<li>　「Path to tun module」→ /sdcard/openvpn/galaxys/tun.ko と指定</li>
-</ol>
-
-<p><a href="http://wiki.nas-portal.org/index.php/Install_OpenVPN_on_QNAP#Key-generation">Key-generation</a>の手順で認証キーなどを作る</p>
-
-<p>それぞれ、必要なファイルを指定したパス(/sdcard/openvpn/ca/)にアップ</p>
-
-<p>vpn.confを配置</p>
-
-<pre>/sdcard/openvpn/vpn.conf
-</pre>
-
-<p>に配置</p>
-
-<p>vpn.confの内容</p>
-
-<pre># connect to QNAP OpenVPN Server
+</pre><p>で一旦、GALAXY Sを再起動</p><p>/sdcard/openvpn/galaxys/</p><p>にGALAXY S用のtunドライバ(tun-I9000-JPK.zip)を配置</p><p>※<a href="http://forum.xda-developers.com/showthread.php?t=793712">HOWTO tun.ko to run OpenVPN on Froyo xxJPK Galaxy S I9000 - xda-developers</a>からダウンロード</p><p>OpenVPN Settingsを起動して、Advancedを開き、</p><ol><li>「Load tun kernel module」にチェック</li><li>「TUN module settings」</li><li>　「Load modules usings」→ insmod を選択</li><li>　「Path to tun module」→ /sdcard/openvpn/galaxys/tun.ko と指定</li></ol><p><a href="http://wiki.nas-portal.org/index.php/Install_OpenVPN_on_QNAP#Key-generation">Key-generation</a>の手順で認証キーなどを作る</p><p>それぞれ、必要なファイルを指定したパス(/sdcard/openvpn/ca/)にアップ</p><p>vpn.confを配置</p><pre>/sdcard/openvpn/vpn.conf
+</pre><p>に配置</p><p>vpn.confの内容</p><pre># connect to QNAP OpenVPN Server
 script-security 2
 proto udp
 dev tun
@@ -533,88 +317,21 @@ key  /sdcard/openvpn/ca/key.key
 comp-lzo
 #status /sdcard/openvpn/status.log
 #log-append /sdcard/openvpn/log.log
-</pre>
-
-<p>設定の内容はサーバー側の設定と合わせないとうまく繋がりません。</p>
-
-<p>ログを出力するようにしておくと原因の究明に役立つでしょう。</p>
-
-<p>3Gだと実装で20kbpsも出ませんでしたのでまあやれることは限られていますがVPNで繋がるようになりました。</p>
-
-<h3 id="lan%E5%86%85%E9%83%A8%E3%81%AE%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%81%A8%E9%80%9A%E4%BF%A1%E3%81%99%E3%82%8B" itemprop="articleSection">LAN内部のクライアントと通信する</h3>
-
-<p><a href="http://wiki.nas-portal.org/index.php/OpenVPN_Extras">OpenVPN Extras ? NAS Wiki</a>を参考</p>
-
-<h4 id="qnap%E5%81%B4vpn%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%A7ipv4%E3%81%AE%E8%BB%A2%E9%80%81%E3%82%92%E6%9C%89%E5%8A%B9%E3%81%AB%E3%81%99%E3%82%8B" itemprop="articleSection">QNAP側(VPNサーバー)でipv4の転送を有効にする</h4>
-
-<p>下記コマンドを 起動時に実行されるようにしておく</p>
-
-<pre>echo "1" &gt; /proc/sys/net/ipv4/ip_forward
-</pre>
-
-<h4 id="windows-pc%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%85%B1%E6%9C%89%E3%82%92%E8%A6%8B%E3%82%8B" itemprop="articleSection">Windows PCのファイル共有を見る</h4>
-
-<p>まず、クライアント側で</p>
-
-<pre>C:\&gt; route -p add 10.8.0.0 MASK 255.255.255.0 QNAPのアドレス
-</pre>
-
-<p>としてパケットを送り返すことが出来るようにしておく。</p>
-
-<p>ちなみに、-p を指定しておくとPCを再起動しても設定した内容を覚えておいてくれます。</p>
-
-<pre>C:\&gt; route add ほげほげ
+</pre><p>設定の内容はサーバー側の設定と合わせないとうまく繋がりません。</p><p>ログを出力するようにしておくと原因の究明に役立つでしょう。</p><p>3Gだと実装で20kbpsも出ませんでしたのでまあやれることは限られていますがVPNで繋がるようになりました。</p><h3 id="lan%E5%86%85%E9%83%A8%E3%81%AE%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%81%A8%E9%80%9A%E4%BF%A1%E3%81%99%E3%82%8B" itemprop="articleSection">LAN内部のクライアントと通信する</h3><p><a href="http://wiki.nas-portal.org/index.php/OpenVPN_Extras">OpenVPN Extras ? NAS Wiki</a>を参考</p><h4 id="qnap%E5%81%B4vpn%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%A7ipv4%E3%81%AE%E8%BB%A2%E9%80%81%E3%82%92%E6%9C%89%E5%8A%B9%E3%81%AB%E3%81%99%E3%82%8B" itemprop="articleSection">QNAP側(VPNサーバー)でipv4の転送を有効にする</h4><p>下記コマンドを 起動時に実行されるようにしておく</p><pre>echo "1" &gt; /proc/sys/net/ipv4/ip_forward
+</pre><h4 id="windows-pc%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%85%B1%E6%9C%89%E3%82%92%E8%A6%8B%E3%82%8B" itemprop="articleSection">Windows PCのファイル共有を見る</h4><p>まず、クライアント側で</p><pre>C:\&gt; route -p add 10.8.0.0 MASK 255.255.255.0 QNAPのアドレス
+</pre><p>としてパケットを送り返すことが出来るようにしておく。</p><p>ちなみに、-p を指定しておくとPCを再起動しても設定した内容を覚えておいてくれます。</p><pre>C:\&gt; route add ほげほげ
 エラー: ネットワーク データベース ファイル ﾀﾉE を開けません
 エラー: ネットワーク データベース ファイル ﾀﾉE を開けません
-</pre>
-
-<p>見たいに、エラーが出る場合は、自己の責任においてレジストリの</p>
-
-<p>HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\DataBasePath</p>
-
-<p>を、REG&#95;SZからREG&#95;EXPANG_SZに変えてみてください。</p>
-
-<p>まえ、boost::asioでサンプルがうまく動かなかったのはこれが原因かもと今更気が付いた。</p>
-
-<p>ここで、Windows PC⇔Galaxy S でpingの疎通確認をしておく</p>
-
-<p>※Windows PC側は、pingの応答を返さないようになっていることが良くあるので設定を変更しておくこと</p>
-
-<p>※ICMPの「エコー要求の着信を許可する」をONにしておくこと</p>
-
-<p>問題なければ、ファイヤーウォールでファイル共有がローカルエリア外から接続できるかを確認</p>
-
-<p>Windowsファイヤーウォールの場合</p>
-
-<ol>
-<li>「例外」</li>
-<li>「ファイルとプリンタの共有」</li>
-<li>「スコープの変更」</li>
-<li>「ユーザーのネットワークのみ」になっていたら「カスタム一覧」にして「10.8.0.0/255.255.255.0,192.168.1.0/255.255.255.0」などに変更</li>
-</ol>
-
-<p>で、接続できると思います。</p>
-
-<p>出来なかったら、Wiresharkで確認するのがイイです。</p>
-
-        </div>
-        <hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" />
-        <footer>            <div style="line-height: 25px; height: 25px;">
-    <span style="display: inline-block; vertical-align: top;">
-        <i class="fa fa-calendar"></i>
-        <span itemprop="datePublished" content="2011-12-10">2011年12月10日</span>
+</pre><p>見たいに、エラーが出る場合は、自己の責任においてレジストリの</p><p>HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\DataBasePath</p><p>を、REG&#95;SZからREG&#95;EXPANG_SZに変えてみてください。</p><p>まえ、boost::asioでサンプルがうまく動かなかったのはこれが原因かもと今更気が付いた。</p><p>ここで、Windows PC⇔Galaxy S でpingの疎通確認をしておく</p><p>※Windows PC側は、pingの応答を返さないようになっていることが良くあるので設定を変更しておくこと</p><p>※ICMPの「エコー要求の着信を許可する」をONにしておくこと</p><p>問題なければ、ファイヤーウォールでファイル共有がローカルエリア外から接続できるかを確認</p><p>Windowsファイヤーウォールの場合</p><ol><li>「例外」</li><li>「ファイルとプリンタの共有」</li><li>「スコープの変更」</li><li>「ユーザーのネットワークのみ」になっていたら「カスタム一覧」にして「10.8.0.0/255.255.255.0,192.168.1.0/255.255.255.0」などに変更</li></ol><p>で、接続できると思います。</p><p>出来なかったら、Wiresharkで確認するのがイイです。</p></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i><span itemprop="datePublished" content="2011-12-10">2011年12月10日</span>
         &nbsp;/&nbsp;
-        <i class="fa fa-history"></i> <a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2011-12-10-qnap-ts-109-galaxys-openvpn.md">変更履歴</a>
+        <i class="fa fa-history"></i><a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2011-12-10-qnap-ts-109-galaxys-openvpn.md">変更履歴</a>
         &nbsp;/&nbsp;
-        <i class="fa fa-thumb-tack"></i> <a href="/blog/2011/12/10/qnap-ts-109-galaxys-openvpn.html">Permalink</a>
+        <i class="fa fa-thumb-tack"></i><a href="/blog/2011/12/10/qnap-ts-109-galaxys-openvpn.html">Permalink</a>
         &nbsp;/&nbsp;
-    </span>
-    <meta itemprop="url" content="http://www.sharkpp.net/blog/2011/12/10/qnap-ts-109-galaxys-openvpn.html" />
-    <span itemprop="author" itemscope itemtype="https://schema.org/Person"
+    </span><meta itemprop="url" content="http://www.sharkpp.net/blog/2011/12/10/qnap-ts-109-galaxys-openvpn.html" /><span itemprop="author" itemscope itemtype="https://schema.org/Person"
           style="display: none;"
        ><span itemprop="name">sharkpp</span
-   ></span>
-    <a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2011%2F12%2F10%2Fqnap-ts-109-galaxys-openvpn.html"
+   ></span><a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2011%2F12%2F10%2Fqnap-ts-109-galaxys-openvpn.html"
        class="hatena-bookmark-button"
        data-hatena-bookmark-title="QNAP TS-109II と GALAXY S(SC-02B) をOpenVPNで繋ぐ &mdash; さめたすたすのお家"
        data-hatena-bookmark-layout="simple-balloon"
@@ -622,90 +339,24 @@ comp-lzo
       ><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png"
             alt="このエントリーをはてなブックマークに追加"
             width="20" height="20" style="border: none;" /></a
-      >
-    <a href="https://twitter.com/share" class="twitter-share-button"
-       data-url="http://www.sharkpp.net/blog/2011/12/10/qnap-ts-109-galaxys-openvpn.html" data-via="sharkpp">Tweet</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-</div><div style="line-height: 25px; height: 25px;">
-                                <span class="categories">
-            <i class="fa fa-folder-open"></i> カテゴリ:
-                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a>                        </span>
+      ><a href="https://twitter.com/share" class="twitter-share-button"
+       data-url="http://www.sharkpp.net/blog/2011/12/10/qnap-ts-109-galaxys-openvpn.html" data-via="sharkpp">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><div style="line-height: 25px; height: 25px;"><span class="categories"><i class="fa fa-folder-open"></i> カテゴリ:
+                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
         &nbsp;/&nbsp;
-                                <span class="tags">
-            <i class="fa fa-tag"></i> タグ:
-                        <a href="/blog/tags/Android">Android</a>,                         <a href="/blog/tags/QNAP">QNAP</a>,                         <a href="/blog/tags/Galaxy%20S">Galaxy S</a>,                         <a href="/blog/tags/Linux">Linux</a>                        </span>
-        </div>
-        </footer>
-
-                    <hr style="border-top: none; border-bottom: 1px dashed #aaa; margin: 10px 0;" />
-            <nav class="article">
-                <ul class="list-unstyled row">
-                                            <li class="col-md-6 text-left"><a class="next" href="/blog/2011/12/31/new-years-eve-of-2011.html" title="大晦日@2011"><span class="title"><i class="fa fa-chevron-left"></i> 大晦日@2011</span></a></li>
-                                                                <li class="col-md-6 text-right"><a class="previous" href="/blog/2011/12/08/hsp-program-contest-2011-winner.html" title="HSPプログラムコンテスト2011入賞しました"><span class="title">HSPプログラムコンテスト2011入賞しました</span> <i class="fa fa-chevron-right"></i></a></li>
-                                    </ul>
-            </nav>
-            </article>
-
-
-
-        </div>
-
-        <footer class="footer">
-            <dev class="overflow">
-                <div class="container text-center">
-                    <ul class="list-unstyled list-inline">
-                        <li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li>
-                        <li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li>
-                        <li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li>
-                        <li><i class="fa-li fa fa-ellipsis-h"></i> <a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li>
-                        <li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /blog/2011/12/10/qnap-ts-109-galaxys-openvpn.html"
-                                  rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li>
-                    </ul>
-                </div>
-                <div class="container text-center">
-                    <ul class="list-unstyled list-inline">
-                        <li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li>
-                        <li class="text-muted">&copy; 2004-2017 sharkpp</li>
-                    </ul>
-                </div>
-                <div class="container text-center text-muted">
-                    <ruby>
-                        <rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
-                                                            >Creative Commons Attribution 4.0 International License</a>.</rb>
-                        <rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
-                                                  >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp>
-                    </ruby>
-                </div>
-                <div class="container text-center text-muted">
-                    <ruby>
-                        <rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
-                                                                            >The MIT License</a>.</rb>
-                        <rp>(</rp><rt>さらに、コードスニペットは <a rel="nofollow" href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license"
-                                                               >MIT ライセンス</a> の下にライセンスされています。</rt><rp>)</rp>
-                    </ruby>
-                </div>
-            </div>
-        </footer>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>')</script>
-
-        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.js"></script>
-        <script>$('body').modal || document.write('<script src="/assets/bootstrap/js/bootstrap.min.js"><\/script>')</script>
-                
-                <script type="text/javascript">
+                                <span class="tags"><i class="fa fa-tag"></i> タグ:
+                        <a href="/blog/tags/Android">Android</a>,                         <a href="/blog/tags/QNAP">QNAP</a>,                         <a href="/blog/tags/Galaxy%20S">Galaxy S</a>,                         <a href="/blog/tags/Linux">Linux</a></span></div></footer><hr style="border-top: none; border-bottom: 1px dashed #aaa; margin: 10px 0;" /><nav class="article"><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/blog/2011/12/31/new-years-eve-of-2011.html" title="大晦日@2011"><span class="title"><i class="fa fa-chevron-left"></i> 大晦日@2011</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/blog/2011/12/08/hsp-program-contest-2011-winner.html" title="HSPプログラムコンテスト2011入賞しました"><span class="title">HSPプログラムコンテスト2011入賞しました</span><i class="fa fa-chevron-right"></i></a></li></ul></nav></article></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li><li><i class="fa-li fa fa-ellipsis-h"></i><a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /blog/2011/12/10/qnap-ts-109-galaxys-openvpn.html"
+                                  rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li></ul></div><div class="container text-center"><ul class="list-unstyled list-inline"><li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li><li class="text-muted">&copy; 2004-2017 sharkpp</li></ul></div><div class="container text-center text-muted"><ruby><rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                            >Creative Commons Attribution 4.0 International License</a>.</rb><rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                  >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp></ruby></div><div class="container text-center text-muted"><ruby><rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
+                                                                            >The MIT License</a>.</rb><rp>(</rp><rt>さらに、コードスニペットは <a rel="nofollow" href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license"
+                                                               >MIT ライセンス</a> の下にライセンスされています。</rt><rp>)</rp></ruby></div></div></footer><script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>')</script><script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.js"></script><script>$('body').modal || document.write('<script src="/assets/bootstrap/js/bootstrap.min.js"><\/script>')</script><script type="text/javascript">
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
             ga('create', 'UA-5908801-2', 'auto');
             ga('send', 'pageview');
-        </script>
-        
-        <script src="/assets/highlightjs/highlight.pack.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-
-        <script type="text/javascript">
+        </script><script src="/assets/highlightjs/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><script type="text/javascript">
             $('a img').each(function(){
                 var rel = ($(this).attr('src').match(/images\u002f([0-9_]{4}_[0-9_]{4})/i) ||
                            ['','lightbox'])[1];
@@ -714,13 +365,7 @@ comp-lzo
                     .attr('data-title', $(this).attr('alt'))
                     ;
             });
-        </script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
-        <script>$(document).ready(function(){ window.lightbox || $.getScript("/assets/lightbox2/dist/js/lightbox.min.js"); });</script>
-
-                <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.5/jquery.smooth-scroll.min.js"></script>
-        <script>$.smoothScroll || document.write('<script src="/assets/jquery-smooth-scroll/jquery.smooth-scroll.min.js"><\/script>')</script>
-        <script type="text/javascript">
+        </script><script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script><script>$(document).ready(function(){ window.lightbox || $.getScript("/assets/lightbox2/dist/js/lightbox.min.js"); });</script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.5/jquery.smooth-scroll.min.js"></script><script>$.smoothScroll || document.write('<script src="/assets/jquery-smooth-scroll/jquery.smooth-scroll.min.js"><\/script>')</script><script type="text/javascript">
             $('#toc a')
                 .each(function(){
                     var id = $(this).attr('href').slice(1);
@@ -762,19 +407,11 @@ comp-lzo
                         });
             });
             $(window).scroll();
-        </script>
-
-        <script type="text/javascript">
+        </script><script type="text/javascript">
             $(document).ready(function(){
                 // apply table to bootstrap css
                 $('table:not([class])')
                     .addClass('table table-bordered table-hover table-condensed table-striped')
                     .wrap("<div style='width:100%;overflow-x:auto;'></div>");
              });
-        </script>
-
-        <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
-
-
-    </body>
-</html>
+        </script><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></body></html>

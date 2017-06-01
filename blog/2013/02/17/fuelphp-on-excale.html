@@ -1,48 +1,9 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>eXcaleでFuelPHPをpublicサブディレクトリなしで動かしてみた(追記あり) &mdash; さめたすたすのお家</title>
-        <meta charset="utf-8">
-        <meta name="theme-color" content="#6877AA">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="robots" content="index, follow">
-        <meta name="keywords" content="php,FuelPHP,PaaS">
-        <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/lightbox2/dist/css/lightbox.css" rel="stylesheet" type="text/css" />
-        <link href="/css/style.min.css" rel="stylesheet" type="text/css" />
-        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-
-        <link rel="apple-touch-startup-image" href="/images/noname/2048x2048.png">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="shortcut icon" sizes="76x76" href="/images/noname/76x76.png">
-        <link rel="shortcut icon" sizes="120x120" href="/images/noname/120x120.png">
-        <link rel="shortcut icon" sizes="128x128" href="/images/noname/128x128.png">
-        <link rel="shortcut icon" sizes="152x152" href="/images/noname/152x152.png">
-        <link rel="shortcut icon" sizes="196x196" href="/images/noname/196x196.png">
-        <link rel="shortcut icon" sizes="512x512" href="/images/noname/512x512.png">
-        <link rel="shortcut icon" sizes="1024x1024" href="/images/noname/1024x1024.png">
-        <link rel="shortcut icon" sizes="2048x2048" href="/images/noname/2048x2048.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="/images/noname/76x76.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="/images/noname/120x120.png">
-        <link rel="apple-touch-icon" sizes="128x128" href="/images/noname/128x128.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="/images/noname/152x152.png">
-        <link rel="apple-touch-icon" sizes="196x196" href="/images/noname/196x196.png">
-        <link rel="apple-touch-icon" sizes="512x512" href="/images/noname/512x512.png">
-        <link rel="apple-touch-icon" sizes="1024x1024" href="/images/noname/1024x1024.png">
-        <link rel="apple-touch-icon" sizes="2048x2048" href="/images/noname/2048x2048.png">
-
-        <link rel="stylesheet" href="/assets/highlightjs/styles/github.css" />
-        <link rel="alternate" type="application/atom+xml" href="/atom.xml" title="さめたすたすのお家 activity feed" />
-        <style>
+<head><title>eXcaleでFuelPHPをpublicサブディレクトリなしで動かしてみた(追記あり) &mdash; さめたすたすのお家</title><meta charset="utf-8"><meta name="theme-color" content="#6877AA"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="index, follow"><meta name="keywords" content="php,FuelPHP,PaaS"><link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" /><link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" /><link href="/assets/lightbox2/dist/css/lightbox.css" rel="stylesheet" type="text/css" /><link href="/css/style.min.css" rel="stylesheet" type="text/css" /><!-- HTML5 shim, for IE6-8 support of HTML5 elements --><!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--><link rel="apple-touch-startup-image" href="/images/noname/2048x2048.png"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="shortcut icon" sizes="76x76" href="/images/noname/76x76.png"><link rel="shortcut icon" sizes="120x120" href="/images/noname/120x120.png"><link rel="shortcut icon" sizes="128x128" href="/images/noname/128x128.png"><link rel="shortcut icon" sizes="152x152" href="/images/noname/152x152.png"><link rel="shortcut icon" sizes="196x196" href="/images/noname/196x196.png"><link rel="shortcut icon" sizes="512x512" href="/images/noname/512x512.png"><link rel="shortcut icon" sizes="1024x1024" href="/images/noname/1024x1024.png"><link rel="shortcut icon" sizes="2048x2048" href="/images/noname/2048x2048.png"><link rel="apple-touch-icon" sizes="76x76" href="/images/noname/76x76.png"><link rel="apple-touch-icon" sizes="120x120" href="/images/noname/120x120.png"><link rel="apple-touch-icon" sizes="128x128" href="/images/noname/128x128.png"><link rel="apple-touch-icon" sizes="152x152" href="/images/noname/152x152.png"><link rel="apple-touch-icon" sizes="196x196" href="/images/noname/196x196.png"><link rel="apple-touch-icon" sizes="512x512" href="/images/noname/512x512.png"><link rel="apple-touch-icon" sizes="1024x1024" href="/images/noname/1024x1024.png"><link rel="apple-touch-icon" sizes="2048x2048" href="/images/noname/2048x2048.png"><link rel="stylesheet" href="/assets/highlightjs/styles/github.css" /><link rel="alternate" type="application/atom+xml" href="/atom.xml" title="さめたすたすのお家 activity feed" /><style>
         /** quick fix because bootstrap <pre> has a background-color. */
         pre code { background-color: inherit; }
-        </style>
-                <style>
+        </style><style>
         #go-top {
             display: none;
             bottom: 40px;
@@ -65,42 +26,8 @@
             max-width: 350px;
             word-wrap: break-word;
         }
-        </style>
-                    </head>
-    <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/">さめたすたすのお家</a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav pull-right">
-                        <li><a href="/blog/"><i class="fa fa-archive"></i> アーカイブ</a></li>
-                        <li><a href="/blog/categories"><i class="fa fa-folder-open"></i> カテゴリ</a></li>
-                        <li><a href="/blog/tags"><i class="fa fa-tags"></i> タグ</a></li>
-                        <li><a href="/product/"><i class="fa fa-download"></i> 作ったもの</a></li>
-                        <li><a href="/graffiti/"><i class="fa fa-paint-brush"></i> 落書き</a></li>
-                        <li><a href="/link.html"><i class="fa fa-link"></i> リンク</a></li>
-                        <li><a href="/about">About</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
-
-        <div class="mainContent container">
-                                                                                
-                                
-    <ol class="breadcrumb" itemscope="itemscope"
-                           itemtype="http://schema.org/BreadcrumbList">
-        <li
+        </style></head><body><nav class="navbar navbar-inverse navbar-fixed-top"><div class="container-fluid"><!-- Brand and toggle get grouped for better mobile display --><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/">さめたすたすのお家</a></div><!-- Collect the nav links, forms, and other content for toggling --><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><ul class="nav navbar-nav pull-right"><li><a href="/blog/"><i class="fa fa-archive"></i> アーカイブ</a></li><li><a href="/blog/categories"><i class="fa fa-folder-open"></i> カテゴリ</a></li><li><a href="/blog/tags"><i class="fa fa-tags"></i> タグ</a></li><li><a href="/product/"><i class="fa fa-download"></i> 作ったもの</a></li><li><a href="/graffiti/"><i class="fa fa-paint-brush"></i> 落書き</a></li><li><a href="/link.html"><i class="fa fa-link"></i> リンク</a></li><li><a href="/about">About</a></li></ul></div><!-- /.navbar-collapse --></div><!-- /.container-fluid --></nav><div class="mainContent container"><ol class="breadcrumb" itemscope="itemscope"
+                           itemtype="http://schema.org/BreadcrumbList"><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/"
@@ -108,248 +35,53 @@
      >&nbsp;<span itemprop="name">HOME</span
            ><meta itemprop="position" content="1"
           /></a
-       ></li>
-        <li
+       ></li><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/blog/2013/"
            ><span>2013</span
            ><meta itemprop="position" content="2"
           /></a
-       ></li>
-        <li
+       ></li><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/blog/2013/02/"
            ><span>02</span
            ><meta itemprop="position" content="3"
           /></a
-       ></li>
-        <li
+       ></li><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/blog/2013/02/17/"
            ><span>17</span
            ><meta itemprop="position" content="4"
           /></a
-       ></li>
-        <li
+       ></li><li
             class="active"><span 
            ><span>eXcaleでFuelPHPをpublicサブディレクトリなしで動かしてみた(追記あり)</span
-       ></li>
-    </ol>
-
-    <article itemscope="itemscope" itemtype="http://schema.org/Article">
-        <meta itemscope="itemscope" itemprop="mainEntityOfPage"
-              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net/blog/2013/02/17/fuelphp-on-excale.html"/>
-        <header>
-            <h1><span itemprop="headline">eXcaleでFuelPHPをpublicサブディレクトリなしで動かしてみた(追記あり)</span> <small>post</small></h1>
-        </header>
-
-<div id="toc" class="panel panel-default pull-right">
-    <div class="panel-heading text-center">目次</div>
-        <div class="panel-body" style="padding: 10px;">
-            <ul class="fa-ul">
-            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%A7%8B%E3%82%81%E3%81%AB">始めに</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E7%99%BB%E9%8C%B2">アカウント登録</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#fuelphp%E3%82%92%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89">FuelPHPをアップロード</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E6%9C%AC%E9%A1%8C">本題</a>
-<ul class="fa-ul">            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%AB%E3%83%BC%E3%83%88%E3%83%91%E3%82%B9%E3%82%92%E5%A4%89%E6%9B%B4">ルートパスを変更</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#asset-%E3%81%AE%E3%83%91%E3%82%B9%E3%82%92%E5%A4%89%E6%9B%B4">asset のパスを変更</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#public%2Findex.php-%E3%82%92-index.php-%E3%81%AB%E7%A7%BB%E5%8B%95%E3%81%97%E3%81%A6%E5%86%85%E5%AE%B9%E5%A4%89%E6%9B%B4">public/index.php を index.php に移動して内容変更</a>
-</li></ul></li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%AE%8C%E6%88%90">完成</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a>
-        </ul>
-    </div>
-</div>
-
-<div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div>
-
-        <div itemprop="articleBody">
-            <p></p>
-<div class="alert alert-danger alert-dismissible" role="alert">
-  <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
-  <dl style="margin-bottom: 0; margin-left: 35px;">
-    <dt>2015-06-10 追記</dt>
-    <dd>eXcale(エクスケール) は 2014年11月28日 にサービスの提供が終了しました。そのため下記内容は過去の参考としてのみ残してあります。</dd>
-  </dl>
-</div>
-
-<h2 id="%E5%A7%8B%E3%82%81%E3%81%AB" itemprop="articleSection">始めに</h2>
-
-<p><a href="/blog/2013/02/17/fuelphp-workshop-in-osu-vol-3.html">FuelPHP 勉強会 大須 vol.3 に参加しました</a>で少し触れた FuelPHP + eXcale でデプロイ体験をもうすし踏み込んでまとめてみました。</p>
-
-<p>内容的には <a href="http://yamamoto.phpapps.jp/2012/12/13/6/">FuelPHP + eXcale</a> を参照した記事となります。</p>
-
-<p>なので、色々省かれているので先に目を通しておくことをお勧めします。</p>
-
-<p>勉強会のレポ以外では、もしかして、初めてのFuelPHPの記事かもです。</p>
-
-<p><strong>2013年2月18日追記</strong></p>
-
-<p><a href="http://fuelphp.jp/docs/1.5/installation/instructions.html#/install_inside_root2">インストール方法 - インストール - FuelPHP ドキュメント</a> にルートからしか公開できない場合の設定方法が載っていました。</p>
-
-<blockquote class="twitter-tweet" lang="ja"><p>@<a href="https://twitter.com/sharkpp">sharkpp</a> Assetのパスを変更する意義はないように思いますので、<a href="http://t.co/oQKk2vX9" title="http://ow.ly/hNx5G">ow.ly/hNx5G</a> の「もっと簡単な方法」の方がいいと思います <a href="https://twitter.com/search/%23fuelphposu">#fuelphposu</a></p>&mdash; kenjisさん (@kenji_s) <a href="https://twitter.com/kenji_s/status/303321663796289537">2013年2月18日</a></blockquote>
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<h2 id="%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E7%99%BB%E9%8C%B2" itemprop="articleSection">アカウント登録</h2>
-
-<p>とりあえず、普通に eXcale に登録してみました。</p>
-
-<p>メールアドレスで登録するだけなので簡単です。</p>
-
-<p>と、ここで、、、</p>
-
-<p><strong>This invitation link isn't valid. Perhaps you already used it?</strong></p>
-
-<p>(´・ω・｀)</p>
-
-<p>３?４回おなじメールアドレスで仮登録申請してみましたが、いずれもだめでした。 そもそも、本登録用のアドレスが何回やっても同じだったので結果は変わらないですね。</p>
-
-<p>で、何回かやってて気が付きました。 なんかメッセージがページの上部に表示されてる？</p>
-
-<p><strong>Please enter an collect email address format or password must be more than 6 characters, letters and numbers.</strong></p>
-
-<p>あれ？もしかして、記号だめ？</p>
-
-<p>はい、パスワード設定の時に記号を含めたパスワードを使用していました。</p>
-
-<p>で、記号を抜いてみたら、、、できました。 酷いです(´・ω・｀)</p>
-
-<p>あと、適当な名前でアプリケーションを登録しておきます。</p>
-
-<h2 id="fuelphp%E3%82%92%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89" itemprop="articleSection">FuelPHPをアップロード</h2>
-
-<p>FuelPHP本家からパッケージをダウンロードし、一旦展開します。 現在のバージョンは、1.5.2なので展開すると fuelphp-1.5.2 というフォルダができています。</p>
-
-<p>で、 fuelphp-1.5.2/fuel/app/config/config.php に、</p>
-
-<pre><code class="php">return array(
+       ></li></ol><article itemscope="itemscope" itemtype="http://schema.org/Article"><meta itemscope="itemscope" itemprop="mainEntityOfPage"
+              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net/blog/2013/02/17/fuelphp-on-excale.html"/><header><h1><span itemprop="headline">eXcaleでFuelPHPをpublicサブディレクトリなしで動かしてみた(追記あり)</span><small>post</small></h1></header><div id="toc" class="panel panel-default pull-right"><div class="panel-heading text-center">目次</div><div class="panel-body" style="padding: 10px;"><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%A7%8B%E3%82%81%E3%81%AB">始めに</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E7%99%BB%E9%8C%B2">アカウント登録</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#fuelphp%E3%82%92%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89">FuelPHPをアップロード</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E6%9C%AC%E9%A1%8C">本題</a><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%AB%E3%83%BC%E3%83%88%E3%83%91%E3%82%B9%E3%82%92%E5%A4%89%E6%9B%B4">ルートパスを変更</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#asset-%E3%81%AE%E3%83%91%E3%82%B9%E3%82%92%E5%A4%89%E6%9B%B4">asset のパスを変更</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#public%2Findex.php-%E3%82%92-index.php-%E3%81%AB%E7%A7%BB%E5%8B%95%E3%81%97%E3%81%A6%E5%86%85%E5%AE%B9%E5%A4%89%E6%9B%B4">public/index.php を index.php に移動して内容変更</a></li></ul></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%AE%8C%E6%88%90">完成</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a></ul></div></div><div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div><div itemprop="articleBody"><p></p><div class="alert alert-danger alert-dismissible" role="alert"><div class="pull-left"><i class="fa fa-warning fa-2x"></i></div><dl style="margin-bottom: 0; margin-left: 35px;"><dt>2015-06-10 追記</dt><dd>eXcale(エクスケール) は 2014年11月28日 にサービスの提供が終了しました。そのため下記内容は過去の参考としてのみ残してあります。</dd></dl></div><h2 id="%E5%A7%8B%E3%82%81%E3%81%AB" itemprop="articleSection">始めに</h2><p><a href="/blog/2013/02/17/fuelphp-workshop-in-osu-vol-3.html">FuelPHP 勉強会 大須 vol.3 に参加しました</a>で少し触れた FuelPHP + eXcale でデプロイ体験をもうすし踏み込んでまとめてみました。</p><p>内容的には <a href="http://yamamoto.phpapps.jp/2012/12/13/6/">FuelPHP + eXcale</a> を参照した記事となります。</p><p>なので、色々省かれているので先に目を通しておくことをお勧めします。</p><p>勉強会のレポ以外では、もしかして、初めてのFuelPHPの記事かもです。</p><p><strong>2013年2月18日追記</strong></p><p><a href="http://fuelphp.jp/docs/1.5/installation/instructions.html#/install_inside_root2">インストール方法 - インストール - FuelPHP ドキュメント</a> にルートからしか公開できない場合の設定方法が載っていました。</p><blockquote class="twitter-tweet" lang="ja"><p>@<a href="https://twitter.com/sharkpp">sharkpp</a> Assetのパスを変更する意義はないように思いますので、<a href="http://t.co/oQKk2vX9" title="http://ow.ly/hNx5G">ow.ly/hNx5G</a> の「もっと簡単な方法」の方がいいと思います <a href="https://twitter.com/search/%23fuelphposu">#fuelphposu</a></p>&mdash; kenjisさん (@kenji_s) <a href="https://twitter.com/kenji_s/status/303321663796289537">2013年2月18日</a></blockquote><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><h2 id="%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E7%99%BB%E9%8C%B2" itemprop="articleSection">アカウント登録</h2><p>とりあえず、普通に eXcale に登録してみました。</p><p>メールアドレスで登録するだけなので簡単です。</p><p>と、ここで、、、</p><p><strong>This invitation link isn't valid. Perhaps you already used it?</strong></p><p>(´・ω・｀)</p><p>３?４回おなじメールアドレスで仮登録申請してみましたが、いずれもだめでした。 そもそも、本登録用のアドレスが何回やっても同じだったので結果は変わらないですね。</p><p>で、何回かやってて気が付きました。 なんかメッセージがページの上部に表示されてる？</p><p><strong>Please enter an collect email address format or password must be more than 6 characters, letters and numbers.</strong></p><p>あれ？もしかして、記号だめ？</p><p>はい、パスワード設定の時に記号を含めたパスワードを使用していました。</p><p>で、記号を抜いてみたら、、、できました。 酷いです(´・ω・｀)</p><p>あと、適当な名前でアプリケーションを登録しておきます。</p><h2 id="fuelphp%E3%82%92%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89" itemprop="articleSection">FuelPHPをアップロード</h2><p>FuelPHP本家からパッケージをダウンロードし、一旦展開します。 現在のバージョンは、1.5.2なので展開すると fuelphp-1.5.2 というフォルダができています。</p><p>で、 fuelphp-1.5.2/fuel/app/config/config.php に、</p><pre><code class="php">return array(
 'default_timezone' =&amp;gt; 'Asia/Tokyo'
 );
-</code></pre>
-
-<p>のような感じで設定を追加します。</p>
-
-<p>で、fuelphp-1.5.2 の <strong>中身を</strong> .tar.gz で圧縮します。圧縮の仕方とかは適当に検索してみてください。 そのままではなく、 <strong>中身を</strong> ってところが重要です。</p>
-
-<p>で、eXcle上でアプリケーション一覧から上で登録したアプリケーションのアップロードから .tar.gz をアップします。</p>
-
-<p>アップしても、1分ぐらいは</p>
-
-<p><strong>Down for maintenance</strong></p>
-
-<p>な状態から更新されないのでしばらく待ってます。</p>
-
-<p>501とかのエラーになったら、ログを確認してみてください。 なんかメッセージがでてるかもです。</p>
-
-<h2 id="%E6%9C%AC%E9%A1%8C" itemprop="articleSection">本題</h2>
-
-<p>ここからがこの記事の本題です。 上で書いた内容は、ただの前書き、序文、前菜です。</p>
-
-<p>無事、デプロイ出来た場合でも、アクセスするには、 http://sharkpp.excale.net/public/ としないといけないのです。</p>
-
-<p>これはかっこ悪い＆fuelとかにアクセスできてよろしくない。</p>
-
-<p>何とかしたい、で何とかしてみました。</p>
-
-<p>やり方は、</p>
-
-<ol>
-<li>ルートパスを変更</li>
-<li><del>asset のパスを変更</del></li>
-<li><del>public/index.php を index.php に移動して内容変更</del> public/* を / に移動し index.php の内容を変更</li>
-</ol>
-
-<h3 id="%E3%83%AB%E3%83%BC%E3%83%88%E3%83%91%E3%82%B9%E3%82%92%E5%A4%89%E6%9B%B4" itemprop="articleSection">ルートパスを変更</h3>
-
-<p>上で変更した fuel/app/config/config.php に、base_urlの指定をします。 これ、なくても動くのかな？もしかして、、、試していないですが、、、</p>
-
-<p>上の設定とあわせると最終的には、</p>
-
-<pre><code class="php">return array(
+</code></pre><p>のような感じで設定を追加します。</p><p>で、fuelphp-1.5.2 の <strong>中身を</strong> .tar.gz で圧縮します。圧縮の仕方とかは適当に検索してみてください。 そのままではなく、 <strong>中身を</strong> ってところが重要です。</p><p>で、eXcle上でアプリケーション一覧から上で登録したアプリケーションのアップロードから .tar.gz をアップします。</p><p>アップしても、1分ぐらいは</p><p><strong>Down for maintenance</strong></p><p>な状態から更新されないのでしばらく待ってます。</p><p>501とかのエラーになったら、ログを確認してみてください。 なんかメッセージがでてるかもです。</p><h2 id="%E6%9C%AC%E9%A1%8C" itemprop="articleSection">本題</h2><p>ここからがこの記事の本題です。 上で書いた内容は、ただの前書き、序文、前菜です。</p><p>無事、デプロイ出来た場合でも、アクセスするには、 http://sharkpp.excale.net/public/ としないといけないのです。</p><p>これはかっこ悪い＆fuelとかにアクセスできてよろしくない。</p><p>何とかしたい、で何とかしてみました。</p><p>やり方は、</p><ol><li>ルートパスを変更</li><li><del>asset のパスを変更</del></li><li><del>public/index.php を index.php に移動して内容変更</del> public/* を / に移動し index.php の内容を変更</li></ol><h3 id="%E3%83%AB%E3%83%BC%E3%83%88%E3%83%91%E3%82%B9%E3%82%92%E5%A4%89%E6%9B%B4" itemprop="articleSection">ルートパスを変更</h3><p>上で変更した fuel/app/config/config.php に、base_urlの指定をします。 これ、なくても動くのかな？もしかして、、、試していないですが、、、</p><p>上の設定とあわせると最終的には、</p><pre><code class="php">return array(
 'default_timezone' =&gt; 'Asia/Tokyo',
 'base_url'  =&gt;  '/',
 );
-</code></pre>
-
-<p>のような内容になっているはずです。</p>
-
-<h3 id="asset-%E3%81%AE%E3%83%91%E3%82%B9%E3%82%92%E5%A4%89%E6%9B%B4" itemprop="articleSection"><del>asset のパスを変更</del></h3>
-
-<p><strong>2013年2月18日削除</strong></p>
-
-<p><del>fuel/app/config/asset.php はインストール直後では存在しないので、下のような内容を追加します。</del></p>
-
-<pre><code class="php">return array(
+</code></pre><p>のような内容になっているはずです。</p><h3 id="asset-%E3%81%AE%E3%83%91%E3%82%B9%E3%82%92%E5%A4%89%E6%9B%B4" itemprop="articleSection"><del>asset のパスを変更</del></h3><p><strong>2013年2月18日削除</strong></p><p><del>fuel/app/config/asset.php はインストール直後では存在しないので、下のような内容を追加します。</del></p><pre><code class="php">return array(
 'paths' =&gt; array('public/assets/'),
 );
-</code></pre>
-
-<h3 id="public%2Findex.php-%E3%82%92-index.php-%E3%81%AB%E7%A7%BB%E5%8B%95%E3%81%97%E3%81%A6%E5%86%85%E5%AE%B9%E5%A4%89%E6%9B%B4-public%2F%2A-%E3%82%92-%2F-%E3%81%AB%E7%A7%BB%E5%8B%95%E3%81%97-index.php-%E3%81%AE%E5%86%85%E5%AE%B9%E3%82%92%E5%A4%89%E6%9B%B4" itemprop="articleSection"><del>public/index.php を index.php に移動して内容変更</del> public/* を / に移動し index.php の内容を変更</h3>
-
-<p><del>public/index.php をルートに移動し、 index.php とします。</del></p>
-
-<p>public/* をルートに移動します。 publicフォルダは空っぽなので削除しましょう。 で、パスも合わせて変更。</p>
-
-<p>APPPATH と PKGPATH と COREPATH です。</p>
-
-<pre><code class="php">define('APPPATH', realpath(__DIR__.'/../fuel/app/').DIRECTORY_SEPARATOR);
-</code></pre>
-
-<p>を</p>
-
-<pre><code class="php">define('APPPATH', realpath(__DIR__.'/fuel/app/').DIRECTORY_SEPARATOR);
-</code></pre>
-
-<p>のような感じです。</p>
-
-<p>この時、/fuel を、たとえば、 /fuel_hoge にしておけば、少し安全になるかもです。</p>
-
-<p>で、また、固めなおしてアップします。</p>
-
-<h2 id="%E5%AE%8C%E6%88%90" itemprop="articleSection">完成</h2>
-
-<p>で、うまくアクセスできるようになりました。</p>
-
-<ul>
-<li><del>http://sharkpp.excale.net/</del></li>
-<li><del>http://sharkpp.excale.net/index.php/welcome</del></li>
-</ul>
-
-<p>ただ、mod_rewrite相当の機能が使えないとの話なので /welcom.php などとアクセスしても 404 エラーとなってしまいます。</p>
-
-<p>少し残念です。</p>
-
-<p>あと、 /index.php/hoge.php はかっこ悪いです。</p>
-
-<p><strong>あとあと、なんか重大な見落としがあるかもなので実際にやる時は自己責任でお願いしますです、はい。</strong></p>
-
-<h2 id="%E3%81%BE%E3%81%A8%E3%82%81" itemprop="articleSection">まとめ</h2>
-
-<p>eXcale は日本語で使えて遊べるかもってことで触ってみましたが、少し残念なところがあって、もうちょっと、、、って感じでした。</p>
-
-<p>SNSなどに書くとそれを拾い上げてくれる場合もあるようなので、みんながいっぱい書けばもっとよくなるかも？ってことで期待をしたいなーと思います。</p>
-
-        </div>
-        <hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" />
-        <footer>            <div style="line-height: 25px; height: 25px;">
-    <span style="display: inline-block; vertical-align: top;">
-        <i class="fa fa-calendar"></i>
-        <span itemprop="datePublished" content="2013-02-17">2013年02月17日</span>
+</code></pre><h3 id="public%2Findex.php-%E3%82%92-index.php-%E3%81%AB%E7%A7%BB%E5%8B%95%E3%81%97%E3%81%A6%E5%86%85%E5%AE%B9%E5%A4%89%E6%9B%B4-public%2F%2A-%E3%82%92-%2F-%E3%81%AB%E7%A7%BB%E5%8B%95%E3%81%97-index.php-%E3%81%AE%E5%86%85%E5%AE%B9%E3%82%92%E5%A4%89%E6%9B%B4" itemprop="articleSection"><del>public/index.php を index.php に移動して内容変更</del> public/* を / に移動し index.php の内容を変更</h3><p><del>public/index.php をルートに移動し、 index.php とします。</del></p><p>public/* をルートに移動します。 publicフォルダは空っぽなので削除しましょう。 で、パスも合わせて変更。</p><p>APPPATH と PKGPATH と COREPATH です。</p><pre><code class="php">define('APPPATH', realpath(__DIR__.'/../fuel/app/').DIRECTORY_SEPARATOR);
+</code></pre><p>を</p><pre><code class="php">define('APPPATH', realpath(__DIR__.'/fuel/app/').DIRECTORY_SEPARATOR);
+</code></pre><p>のような感じです。</p><p>この時、/fuel を、たとえば、 /fuel_hoge にしておけば、少し安全になるかもです。</p><p>で、また、固めなおしてアップします。</p><h2 id="%E5%AE%8C%E6%88%90" itemprop="articleSection">完成</h2><p>で、うまくアクセスできるようになりました。</p><ul><li><del>http://sharkpp.excale.net/</del></li><li><del>http://sharkpp.excale.net/index.php/welcome</del></li></ul><p>ただ、mod_rewrite相当の機能が使えないとの話なので /welcom.php などとアクセスしても 404 エラーとなってしまいます。</p><p>少し残念です。</p><p>あと、 /index.php/hoge.php はかっこ悪いです。</p><p><strong>あとあと、なんか重大な見落としがあるかもなので実際にやる時は自己責任でお願いしますです、はい。</strong></p><h2 id="%E3%81%BE%E3%81%A8%E3%82%81" itemprop="articleSection">まとめ</h2><p>eXcale は日本語で使えて遊べるかもってことで触ってみましたが、少し残念なところがあって、もうちょっと、、、って感じでした。</p><p>SNSなどに書くとそれを拾い上げてくれる場合もあるようなので、みんながいっぱい書けばもっとよくなるかも？ってことで期待をしたいなーと思います。</p></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i><span itemprop="datePublished" content="2013-02-17">2013年02月17日</span>
         &nbsp;/&nbsp;
-        <i class="fa fa-history"></i> <a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2013-02-17-fuelphp-on-excale.md">変更履歴</a>
+        <i class="fa fa-history"></i><a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2013-02-17-fuelphp-on-excale.md">変更履歴</a>
         &nbsp;/&nbsp;
-        <i class="fa fa-thumb-tack"></i> <a href="/blog/2013/02/17/fuelphp-on-excale.html">Permalink</a>
+        <i class="fa fa-thumb-tack"></i><a href="/blog/2013/02/17/fuelphp-on-excale.html">Permalink</a>
         &nbsp;/&nbsp;
-    </span>
-    <meta itemprop="url" content="http://www.sharkpp.net/blog/2013/02/17/fuelphp-on-excale.html" />
-    <span itemprop="author" itemscope itemtype="https://schema.org/Person"
+    </span><meta itemprop="url" content="http://www.sharkpp.net/blog/2013/02/17/fuelphp-on-excale.html" /><span itemprop="author" itemscope itemtype="https://schema.org/Person"
           style="display: none;"
        ><span itemprop="name">sharkpp</span
-   ></span>
-    <a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2013%2F02%2F17%2Ffuelphp-on-excale.html"
+   ></span><a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2013%2F02%2F17%2Ffuelphp-on-excale.html"
        class="hatena-bookmark-button"
        data-hatena-bookmark-title="eXcaleでFuelPHPをpublicサブディレクトリなしで動かしてみた(追記あり) &mdash; さめたすたすのお家"
        data-hatena-bookmark-layout="simple-balloon"
@@ -357,90 +89,24 @@
       ><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png"
             alt="このエントリーをはてなブックマークに追加"
             width="20" height="20" style="border: none;" /></a
-      >
-    <a href="https://twitter.com/share" class="twitter-share-button"
-       data-url="http://www.sharkpp.net/blog/2013/02/17/fuelphp-on-excale.html" data-via="sharkpp">Tweet</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-</div><div style="line-height: 25px; height: 25px;">
-                                <span class="categories">
-            <i class="fa fa-folder-open"></i> カテゴリ:
-                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a>                        </span>
+      ><a href="https://twitter.com/share" class="twitter-share-button"
+       data-url="http://www.sharkpp.net/blog/2013/02/17/fuelphp-on-excale.html" data-via="sharkpp">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><div style="line-height: 25px; height: 25px;"><span class="categories"><i class="fa fa-folder-open"></i> カテゴリ:
+                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
         &nbsp;/&nbsp;
-                                <span class="tags">
-            <i class="fa fa-tag"></i> タグ:
-                        <a href="/blog/tags/php">php</a>,                         <a href="/blog/tags/FuelPHP">FuelPHP</a>,                         <a href="/blog/tags/PaaS">PaaS</a>                        </span>
-        </div>
-        </footer>
-
-                    <hr style="border-top: none; border-bottom: 1px dashed #aaa; margin: 10px 0;" />
-            <nav class="article">
-                <ul class="list-unstyled row">
-                                            <li class="col-md-6 text-left"><a class="next" href="/blog/2013/03/10/aese-command.html" title="ANSI Escape Sequences Emulator作ったよ"><span class="title"><i class="fa fa-chevron-left"></i> ANSI Escape Sequences Emulator作ったよ</span></a></li>
-                                                                <li class="col-md-6 text-right"><a class="previous" href="/blog/2013/02/17/fuelphp-workshop-in-osu-vol-3.html" title="FuelPHP 勉強会 大須 vol.3 に参加しました"><span class="title">FuelPHP 勉強会 大須 vol.3 に参加しました</span> <i class="fa fa-chevron-right"></i></a></li>
-                                    </ul>
-            </nav>
-            </article>
-
-
-
-        </div>
-
-        <footer class="footer">
-            <dev class="overflow">
-                <div class="container text-center">
-                    <ul class="list-unstyled list-inline">
-                        <li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li>
-                        <li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li>
-                        <li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li>
-                        <li><i class="fa-li fa fa-ellipsis-h"></i> <a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li>
-                        <li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /blog/2013/02/17/fuelphp-on-excale.html"
-                                  rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li>
-                    </ul>
-                </div>
-                <div class="container text-center">
-                    <ul class="list-unstyled list-inline">
-                        <li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li>
-                        <li class="text-muted">&copy; 2004-2017 sharkpp</li>
-                    </ul>
-                </div>
-                <div class="container text-center text-muted">
-                    <ruby>
-                        <rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
-                                                            >Creative Commons Attribution 4.0 International License</a>.</rb>
-                        <rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
-                                                  >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp>
-                    </ruby>
-                </div>
-                <div class="container text-center text-muted">
-                    <ruby>
-                        <rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
-                                                                            >The MIT License</a>.</rb>
-                        <rp>(</rp><rt>さらに、コードスニペットは <a rel="nofollow" href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license"
-                                                               >MIT ライセンス</a> の下にライセンスされています。</rt><rp>)</rp>
-                    </ruby>
-                </div>
-            </div>
-        </footer>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>')</script>
-
-        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.js"></script>
-        <script>$('body').modal || document.write('<script src="/assets/bootstrap/js/bootstrap.min.js"><\/script>')</script>
-                
-                <script type="text/javascript">
+                                <span class="tags"><i class="fa fa-tag"></i> タグ:
+                        <a href="/blog/tags/php">php</a>,                         <a href="/blog/tags/FuelPHP">FuelPHP</a>,                         <a href="/blog/tags/PaaS">PaaS</a></span></div></footer><hr style="border-top: none; border-bottom: 1px dashed #aaa; margin: 10px 0;" /><nav class="article"><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/blog/2013/03/10/aese-command.html" title="ANSI Escape Sequences Emulator作ったよ"><span class="title"><i class="fa fa-chevron-left"></i> ANSI Escape Sequences Emulator作ったよ</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/blog/2013/02/17/fuelphp-workshop-in-osu-vol-3.html" title="FuelPHP 勉強会 大須 vol.3 に参加しました"><span class="title">FuelPHP 勉強会 大須 vol.3 に参加しました</span><i class="fa fa-chevron-right"></i></a></li></ul></nav></article></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li><li><i class="fa-li fa fa-ellipsis-h"></i><a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /blog/2013/02/17/fuelphp-on-excale.html"
+                                  rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li></ul></div><div class="container text-center"><ul class="list-unstyled list-inline"><li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li><li class="text-muted">&copy; 2004-2017 sharkpp</li></ul></div><div class="container text-center text-muted"><ruby><rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                            >Creative Commons Attribution 4.0 International License</a>.</rb><rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                  >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp></ruby></div><div class="container text-center text-muted"><ruby><rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
+                                                                            >The MIT License</a>.</rb><rp>(</rp><rt>さらに、コードスニペットは <a rel="nofollow" href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license"
+                                                               >MIT ライセンス</a> の下にライセンスされています。</rt><rp>)</rp></ruby></div></div></footer><script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>')</script><script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.js"></script><script>$('body').modal || document.write('<script src="/assets/bootstrap/js/bootstrap.min.js"><\/script>')</script><script type="text/javascript">
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
             ga('create', 'UA-5908801-2', 'auto');
             ga('send', 'pageview');
-        </script>
-        
-        <script src="/assets/highlightjs/highlight.pack.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-
-        <script type="text/javascript">
+        </script><script src="/assets/highlightjs/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><script type="text/javascript">
             $('a img').each(function(){
                 var rel = ($(this).attr('src').match(/images\u002f([0-9_]{4}_[0-9_]{4})/i) ||
                            ['','lightbox'])[1];
@@ -449,13 +115,7 @@
                     .attr('data-title', $(this).attr('alt'))
                     ;
             });
-        </script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
-        <script>$(document).ready(function(){ window.lightbox || $.getScript("/assets/lightbox2/dist/js/lightbox.min.js"); });</script>
-
-                <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.5/jquery.smooth-scroll.min.js"></script>
-        <script>$.smoothScroll || document.write('<script src="/assets/jquery-smooth-scroll/jquery.smooth-scroll.min.js"><\/script>')</script>
-        <script type="text/javascript">
+        </script><script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script><script>$(document).ready(function(){ window.lightbox || $.getScript("/assets/lightbox2/dist/js/lightbox.min.js"); });</script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.5/jquery.smooth-scroll.min.js"></script><script>$.smoothScroll || document.write('<script src="/assets/jquery-smooth-scroll/jquery.smooth-scroll.min.js"><\/script>')</script><script type="text/javascript">
             $('#toc a')
                 .each(function(){
                     var id = $(this).attr('href').slice(1);
@@ -497,19 +157,11 @@
                         });
             });
             $(window).scroll();
-        </script>
-
-        <script type="text/javascript">
+        </script><script type="text/javascript">
             $(document).ready(function(){
                 // apply table to bootstrap css
                 $('table:not([class])')
                     .addClass('table table-bordered table-hover table-condensed table-striped')
                     .wrap("<div style='width:100%;overflow-x:auto;'></div>");
              });
-        </script>
-
-        <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
-
-
-    </body>
-</html>
+        </script><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></body></html>

@@ -1,48 +1,9 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>EdMaxメールボックスtoUnixメールボックス形式コンバータ開発中... &mdash; さめたすたすのお家</title>
-        <meta charset="utf-8">
-        <meta name="theme-color" content="#6877AA">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="robots" content="index, follow">
-        <meta name="keywords" content="Develop,雑記">
-        <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/lightbox2/dist/css/lightbox.css" rel="stylesheet" type="text/css" />
-        <link href="/css/style.min.css" rel="stylesheet" type="text/css" />
-        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-
-        <link rel="apple-touch-startup-image" href="/images/noname/2048x2048.png">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="shortcut icon" sizes="76x76" href="/images/noname/76x76.png">
-        <link rel="shortcut icon" sizes="120x120" href="/images/noname/120x120.png">
-        <link rel="shortcut icon" sizes="128x128" href="/images/noname/128x128.png">
-        <link rel="shortcut icon" sizes="152x152" href="/images/noname/152x152.png">
-        <link rel="shortcut icon" sizes="196x196" href="/images/noname/196x196.png">
-        <link rel="shortcut icon" sizes="512x512" href="/images/noname/512x512.png">
-        <link rel="shortcut icon" sizes="1024x1024" href="/images/noname/1024x1024.png">
-        <link rel="shortcut icon" sizes="2048x2048" href="/images/noname/2048x2048.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="/images/noname/76x76.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="/images/noname/120x120.png">
-        <link rel="apple-touch-icon" sizes="128x128" href="/images/noname/128x128.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="/images/noname/152x152.png">
-        <link rel="apple-touch-icon" sizes="196x196" href="/images/noname/196x196.png">
-        <link rel="apple-touch-icon" sizes="512x512" href="/images/noname/512x512.png">
-        <link rel="apple-touch-icon" sizes="1024x1024" href="/images/noname/1024x1024.png">
-        <link rel="apple-touch-icon" sizes="2048x2048" href="/images/noname/2048x2048.png">
-
-        <link rel="stylesheet" href="/assets/highlightjs/styles/github.css" />
-        <link rel="alternate" type="application/atom+xml" href="/atom.xml" title="さめたすたすのお家 activity feed" />
-        <style>
+<head><title>EdMaxメールボックスtoUnixメールボックス形式コンバータ開発中... &mdash; さめたすたすのお家</title><meta charset="utf-8"><meta name="theme-color" content="#6877AA"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="index, follow"><meta name="keywords" content="Develop,雑記"><link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" /><link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" /><link href="/assets/lightbox2/dist/css/lightbox.css" rel="stylesheet" type="text/css" /><link href="/css/style.min.css" rel="stylesheet" type="text/css" /><!-- HTML5 shim, for IE6-8 support of HTML5 elements --><!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--><link rel="apple-touch-startup-image" href="/images/noname/2048x2048.png"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="shortcut icon" sizes="76x76" href="/images/noname/76x76.png"><link rel="shortcut icon" sizes="120x120" href="/images/noname/120x120.png"><link rel="shortcut icon" sizes="128x128" href="/images/noname/128x128.png"><link rel="shortcut icon" sizes="152x152" href="/images/noname/152x152.png"><link rel="shortcut icon" sizes="196x196" href="/images/noname/196x196.png"><link rel="shortcut icon" sizes="512x512" href="/images/noname/512x512.png"><link rel="shortcut icon" sizes="1024x1024" href="/images/noname/1024x1024.png"><link rel="shortcut icon" sizes="2048x2048" href="/images/noname/2048x2048.png"><link rel="apple-touch-icon" sizes="76x76" href="/images/noname/76x76.png"><link rel="apple-touch-icon" sizes="120x120" href="/images/noname/120x120.png"><link rel="apple-touch-icon" sizes="128x128" href="/images/noname/128x128.png"><link rel="apple-touch-icon" sizes="152x152" href="/images/noname/152x152.png"><link rel="apple-touch-icon" sizes="196x196" href="/images/noname/196x196.png"><link rel="apple-touch-icon" sizes="512x512" href="/images/noname/512x512.png"><link rel="apple-touch-icon" sizes="1024x1024" href="/images/noname/1024x1024.png"><link rel="apple-touch-icon" sizes="2048x2048" href="/images/noname/2048x2048.png"><link rel="stylesheet" href="/assets/highlightjs/styles/github.css" /><link rel="alternate" type="application/atom+xml" href="/atom.xml" title="さめたすたすのお家 activity feed" /><style>
         /** quick fix because bootstrap <pre> has a background-color. */
         pre code { background-color: inherit; }
-        </style>
-                <style>
+        </style><style>
         #go-top {
             display: none;
             bottom: 40px;
@@ -65,42 +26,8 @@
             max-width: 350px;
             word-wrap: break-word;
         }
-        </style>
-                    </head>
-    <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/">さめたすたすのお家</a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav pull-right">
-                        <li><a href="/blog/"><i class="fa fa-archive"></i> アーカイブ</a></li>
-                        <li><a href="/blog/categories"><i class="fa fa-folder-open"></i> カテゴリ</a></li>
-                        <li><a href="/blog/tags"><i class="fa fa-tags"></i> タグ</a></li>
-                        <li><a href="/product/"><i class="fa fa-download"></i> 作ったもの</a></li>
-                        <li><a href="/graffiti/"><i class="fa fa-paint-brush"></i> 落書き</a></li>
-                        <li><a href="/link.html"><i class="fa fa-link"></i> リンク</a></li>
-                        <li><a href="/about">About</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
-
-        <div class="mainContent container">
-                                                                                
-                                
-    <ol class="breadcrumb" itemscope="itemscope"
-                           itemtype="http://schema.org/BreadcrumbList">
-        <li
+        </style></head><body><nav class="navbar navbar-inverse navbar-fixed-top"><div class="container-fluid"><!-- Brand and toggle get grouped for better mobile display --><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/">さめたすたすのお家</a></div><!-- Collect the nav links, forms, and other content for toggling --><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><ul class="nav navbar-nav pull-right"><li><a href="/blog/"><i class="fa fa-archive"></i> アーカイブ</a></li><li><a href="/blog/categories"><i class="fa fa-folder-open"></i> カテゴリ</a></li><li><a href="/blog/tags"><i class="fa fa-tags"></i> タグ</a></li><li><a href="/product/"><i class="fa fa-download"></i> 作ったもの</a></li><li><a href="/graffiti/"><i class="fa fa-paint-brush"></i> 落書き</a></li><li><a href="/link.html"><i class="fa fa-link"></i> リンク</a></li><li><a href="/about">About</a></li></ul></div><!-- /.navbar-collapse --></div><!-- /.container-fluid --></nav><div class="mainContent container"><ol class="breadcrumb" itemscope="itemscope"
+                           itemtype="http://schema.org/BreadcrumbList"><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/"
@@ -108,111 +35,41 @@
      >&nbsp;<span itemprop="name">HOME</span
            ><meta itemprop="position" content="1"
           /></a
-       ></li>
-        <li
+       ></li><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/blog/2010/"
            ><span>2010</span
            ><meta itemprop="position" content="2"
           /></a
-       ></li>
-        <li
+       ></li><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/blog/2010/09/"
            ><span>09</span
            ><meta itemprop="position" content="3"
           /></a
-       ></li>
-        <li
+       ></li><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/blog/2010/09/14/"
            ><span>14</span
            ><meta itemprop="position" content="4"
           /></a
-       ></li>
-        <li
+       ></li><li
             class="active"><span 
            ><span>EdMaxメールボックスtoUnixメールボックス形式コンバータ開発中...</span
-       ></li>
-    </ol>
-
-    <article itemscope="itemscope" itemtype="http://schema.org/Article">
-        <meta itemscope="itemscope" itemprop="mainEntityOfPage"
-              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net/blog/2010/09/14/developing-EdMax-mailbox-to-Unix-mailbox-format-converter.html"/>
-        <header>
-            <h1><span itemprop="headline">EdMaxメールボックスtoUnixメールボックス形式コンバータ開発中...</span> <small>post</small></h1>
-        </header>
-
-
-<div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div>
-
-        <div itemprop="articleBody">
-            <p>近況...</p>
-
-<p>最近はEdMaxのメールボックスをUnixメールボックス形式に変換するコンバータを作っています。</p>
-
-<p>そろそろThunderbirdに移行したかったんだけどエクスポートが面倒で今まで手をつけてなかったのですorz</p>
-
-<p>移行って事だと↓に書かれているような方法があるのですがフォルダ単位で変換をかけないといけないので面倒</p>
-
-<p><a href="http://b.hatena.ne.jp/entry/d.hatena.ne.jp/pure_jam/20080622/1214150769">はてなブックマーク - EdMaxからThunderbirdへの移行 - the long tail soup</a></p>
-
-<p>ってことで自力で実装中...</p>
-
-<p>なかなか面白かったので自分でもやってみた</p>
-
-<p><a href="http://hsp.tv/play/pforum.php?mode=all&amp;num=34964">HSP3掲示板 コーディングについて教えてください</a></p>
-
-<p><a href="http://hspdev-wiki.net/?%B4%CB%CB%FD%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8%B0%DC%C5%BE%C0%E8%2F%A5%B3%A1%BC%A5%C7%A5%A3%A5%F3%A5%B0%A4%CB%A4%C4%A4%A4%A4%C6%A4%CE%BC%C1%CC%E4">緩慢スクリプト移転先/コーディングについての質問</a></p>
-
-<ul>
-<li>Q1, 並列に隔離され、且つ用途が似通っている場合、同一のローカル変数で処理を済ますか否か</li>
-<li>Q2, マルチステートメント(命令間を:で区切り1行に複数命令を記述する事)をするか否か</li>
-<li>Q3, if構文をマルチステートメントにするか否か</li>
-<li>Q4, switch構文を利用するか否か</li>
-<li>Q5, if構文を利用するか否か</li>
-<li>Q6, 命令の引数間に半角空白を入れるか(=color a,bではなくcolor a, bと書くか)否か</li>
-<li>Q7, 関数の引数間に半角空白を入れるか(=limit(a,b,c)ではなくlimit(a, b, c)と書くか)否か</li>
-<li>Q8, ローカル変数を使うか否か</li>
-<li>Q9, 一次元の配列変数を記述する際にa(b)ではなくa.bの表記法を使うか否か</li>
-<li>Q10,１行の文字数を半角80文字以内に収めているか否か</li>
-<li>Q11,各命令、各関数の行数を30行以内に収めているか否か</li>
-<li>Q12,外部から要求されないであろうモジュール命令を必ずローカルにするか否か</li>
-<li>Q13,モジュール命令には共通の接頭辞を付けるか(例：hspdxfixのex_等)否か</li>
-<li>Q14,取得関数(モジュール変数を直に返す関数)にはgetの接頭辞を付けるか否か</li>
-<li>Q15,設定命令(モジュール変数を直に変更する命令)にはsetの接頭辞を付けるか否か</li>
-<li>Q16,自作の出力命令(引数にデータを返す命令、notegetやcnvstow等に近い)を使うか否か</li>
-<li>Q17,goto命令を利用するか否か</li>
-<li>Q18,gosub命令を利用するか否か</li>
-<li>Q19,画像等のファイルを利用する際、自前の暗号化と解錠を行うか否か</li>
-<li>Q20,Unicode形式の文字列を操作する専用のモジュールを使うか否か</li>
-</ul>
-
-<p>○○××○ ○○○×○ ×××○○ ×○○○×</p>
-
-<p>基本的にはスタイルが決まっているけど常にって事ではないし、時がたつにつれ変わってきてはいるかなー</p>
-
-        </div>
-        <hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" />
-        <footer>            <div style="line-height: 25px; height: 25px;">
-    <span style="display: inline-block; vertical-align: top;">
-        <i class="fa fa-calendar"></i>
-        <span itemprop="datePublished" content="2010-09-14">2010年09月14日</span>
+       ></li></ol><article itemscope="itemscope" itemtype="http://schema.org/Article"><meta itemscope="itemscope" itemprop="mainEntityOfPage"
+              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net/blog/2010/09/14/developing-EdMax-mailbox-to-Unix-mailbox-format-converter.html"/><header><h1><span itemprop="headline">EdMaxメールボックスtoUnixメールボックス形式コンバータ開発中...</span><small>post</small></h1></header><div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div><div itemprop="articleBody"><p>近況...</p><p>最近はEdMaxのメールボックスをUnixメールボックス形式に変換するコンバータを作っています。</p><p>そろそろThunderbirdに移行したかったんだけどエクスポートが面倒で今まで手をつけてなかったのですorz</p><p>移行って事だと↓に書かれているような方法があるのですがフォルダ単位で変換をかけないといけないので面倒</p><p><a href="http://b.hatena.ne.jp/entry/d.hatena.ne.jp/pure_jam/20080622/1214150769">はてなブックマーク - EdMaxからThunderbirdへの移行 - the long tail soup</a></p><p>ってことで自力で実装中...</p><p>なかなか面白かったので自分でもやってみた</p><p><a href="http://hsp.tv/play/pforum.php?mode=all&amp;num=34964">HSP3掲示板 コーディングについて教えてください</a></p><p><a href="http://hspdev-wiki.net/?%B4%CB%CB%FD%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8%B0%DC%C5%BE%C0%E8%2F%A5%B3%A1%BC%A5%C7%A5%A3%A5%F3%A5%B0%A4%CB%A4%C4%A4%A4%A4%C6%A4%CE%BC%C1%CC%E4">緩慢スクリプト移転先/コーディングについての質問</a></p><ul><li>Q1, 並列に隔離され、且つ用途が似通っている場合、同一のローカル変数で処理を済ますか否か</li><li>Q2, マルチステートメント(命令間を:で区切り1行に複数命令を記述する事)をするか否か</li><li>Q3, if構文をマルチステートメントにするか否か</li><li>Q4, switch構文を利用するか否か</li><li>Q5, if構文を利用するか否か</li><li>Q6, 命令の引数間に半角空白を入れるか(=color a,bではなくcolor a, bと書くか)否か</li><li>Q7, 関数の引数間に半角空白を入れるか(=limit(a,b,c)ではなくlimit(a, b, c)と書くか)否か</li><li>Q8, ローカル変数を使うか否か</li><li>Q9, 一次元の配列変数を記述する際にa(b)ではなくa.bの表記法を使うか否か</li><li>Q10,１行の文字数を半角80文字以内に収めているか否か</li><li>Q11,各命令、各関数の行数を30行以内に収めているか否か</li><li>Q12,外部から要求されないであろうモジュール命令を必ずローカルにするか否か</li><li>Q13,モジュール命令には共通の接頭辞を付けるか(例：hspdxfixのex_等)否か</li><li>Q14,取得関数(モジュール変数を直に返す関数)にはgetの接頭辞を付けるか否か</li><li>Q15,設定命令(モジュール変数を直に変更する命令)にはsetの接頭辞を付けるか否か</li><li>Q16,自作の出力命令(引数にデータを返す命令、notegetやcnvstow等に近い)を使うか否か</li><li>Q17,goto命令を利用するか否か</li><li>Q18,gosub命令を利用するか否か</li><li>Q19,画像等のファイルを利用する際、自前の暗号化と解錠を行うか否か</li><li>Q20,Unicode形式の文字列を操作する専用のモジュールを使うか否か</li></ul><p>○○××○ ○○○×○ ×××○○ ×○○○×</p><p>基本的にはスタイルが決まっているけど常にって事ではないし、時がたつにつれ変わってきてはいるかなー</p></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i><span itemprop="datePublished" content="2010-09-14">2010年09月14日</span>
         &nbsp;/&nbsp;
-        <i class="fa fa-history"></i> <a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2010-09-14-developing-EdMax-mailbox-to-Unix-mailbox-format-converter.md">変更履歴</a>
+        <i class="fa fa-history"></i><a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2010-09-14-developing-EdMax-mailbox-to-Unix-mailbox-format-converter.md">変更履歴</a>
         &nbsp;/&nbsp;
-        <i class="fa fa-thumb-tack"></i> <a href="/blog/2010/09/14/developing-EdMax-mailbox-to-Unix-mailbox-format-converter.html">Permalink</a>
+        <i class="fa fa-thumb-tack"></i><a href="/blog/2010/09/14/developing-EdMax-mailbox-to-Unix-mailbox-format-converter.html">Permalink</a>
         &nbsp;/&nbsp;
-    </span>
-    <meta itemprop="url" content="http://www.sharkpp.net/blog/2010/09/14/developing-EdMax-mailbox-to-Unix-mailbox-format-converter.html" />
-    <span itemprop="author" itemscope itemtype="https://schema.org/Person"
+    </span><meta itemprop="url" content="http://www.sharkpp.net/blog/2010/09/14/developing-EdMax-mailbox-to-Unix-mailbox-format-converter.html" /><span itemprop="author" itemscope itemtype="https://schema.org/Person"
           style="display: none;"
        ><span itemprop="name">sharkpp</span
-   ></span>
-    <a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2010%2F09%2F14%2Fdeveloping-EdMax-mailbox-to-Unix-mailbox-format-converter.html"
+   ></span><a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2010%2F09%2F14%2Fdeveloping-EdMax-mailbox-to-Unix-mailbox-format-converter.html"
        class="hatena-bookmark-button"
        data-hatena-bookmark-title="EdMaxメールボックスtoUnixメールボックス形式コンバータ開発中... &mdash; さめたすたすのお家"
        data-hatena-bookmark-layout="simple-balloon"
@@ -220,90 +77,24 @@
       ><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png"
             alt="このエントリーをはてなブックマークに追加"
             width="20" height="20" style="border: none;" /></a
-      >
-    <a href="https://twitter.com/share" class="twitter-share-button"
-       data-url="http://www.sharkpp.net/blog/2010/09/14/developing-EdMax-mailbox-to-Unix-mailbox-format-converter.html" data-via="sharkpp">Tweet</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-</div><div style="line-height: 25px; height: 25px;">
-                                <span class="categories">
-            <i class="fa fa-folder-open"></i> カテゴリ:
-                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a>                        </span>
+      ><a href="https://twitter.com/share" class="twitter-share-button"
+       data-url="http://www.sharkpp.net/blog/2010/09/14/developing-EdMax-mailbox-to-Unix-mailbox-format-converter.html" data-via="sharkpp">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><div style="line-height: 25px; height: 25px;"><span class="categories"><i class="fa fa-folder-open"></i> カテゴリ:
+                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
         &nbsp;/&nbsp;
-                                <span class="tags">
-            <i class="fa fa-tag"></i> タグ:
-                        <a href="/blog/tags/Develop">Develop</a>,                         <a href="/blog/tags/%E9%9B%91%E8%A8%98">雑記</a>                        </span>
-        </div>
-        </footer>
-
-                    <hr style="border-top: none; border-bottom: 1px dashed #aaa; margin: 10px 0;" />
-            <nav class="article">
-                <ul class="list-unstyled row">
-                                            <li class="col-md-6 text-left"><a class="next" href="/blog/2010/10/17/recent-state-2010-10-17.html" title="近況(2010-10-17)"><span class="title"><i class="fa fa-chevron-left"></i> 近況(2010-10-17)</span></a></li>
-                                                                <li class="col-md-6 text-right"><a class="previous" href="/blog/2010/08/29/enter-the-HSP-program-contest-2010.html" title="昨年に引き続き今年もHSPプログラムコンテスト2010へ応募しました"><span class="title">昨年に引き続き今年もHSPプログラムコンテスト2010へ応募しました</span> <i class="fa fa-chevron-right"></i></a></li>
-                                    </ul>
-            </nav>
-            </article>
-
-
-
-        </div>
-
-        <footer class="footer">
-            <dev class="overflow">
-                <div class="container text-center">
-                    <ul class="list-unstyled list-inline">
-                        <li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li>
-                        <li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li>
-                        <li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li>
-                        <li><i class="fa-li fa fa-ellipsis-h"></i> <a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li>
-                        <li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /blog/2010/09/14/developing-EdMax-mailbox-to-Unix-mailbox-format-converter.html"
-                                  rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li>
-                    </ul>
-                </div>
-                <div class="container text-center">
-                    <ul class="list-unstyled list-inline">
-                        <li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li>
-                        <li class="text-muted">&copy; 2004-2017 sharkpp</li>
-                    </ul>
-                </div>
-                <div class="container text-center text-muted">
-                    <ruby>
-                        <rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
-                                                            >Creative Commons Attribution 4.0 International License</a>.</rb>
-                        <rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
-                                                  >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp>
-                    </ruby>
-                </div>
-                <div class="container text-center text-muted">
-                    <ruby>
-                        <rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
-                                                                            >The MIT License</a>.</rb>
-                        <rp>(</rp><rt>さらに、コードスニペットは <a rel="nofollow" href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license"
-                                                               >MIT ライセンス</a> の下にライセンスされています。</rt><rp>)</rp>
-                    </ruby>
-                </div>
-            </div>
-        </footer>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>')</script>
-
-        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.js"></script>
-        <script>$('body').modal || document.write('<script src="/assets/bootstrap/js/bootstrap.min.js"><\/script>')</script>
-                
-                <script type="text/javascript">
+                                <span class="tags"><i class="fa fa-tag"></i> タグ:
+                        <a href="/blog/tags/Develop">Develop</a>,                         <a href="/blog/tags/%E9%9B%91%E8%A8%98">雑記</a></span></div></footer><hr style="border-top: none; border-bottom: 1px dashed #aaa; margin: 10px 0;" /><nav class="article"><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/blog/2010/10/17/recent-state-2010-10-17.html" title="近況(2010-10-17)"><span class="title"><i class="fa fa-chevron-left"></i> 近況(2010-10-17)</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/blog/2010/08/29/enter-the-HSP-program-contest-2010.html" title="昨年に引き続き今年もHSPプログラムコンテスト2010へ応募しました"><span class="title">昨年に引き続き今年もHSPプログラムコンテスト2010へ応募しました</span><i class="fa fa-chevron-right"></i></a></li></ul></nav></article></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li><li><i class="fa-li fa fa-ellipsis-h"></i><a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /blog/2010/09/14/developing-EdMax-mailbox-to-Unix-mailbox-format-converter.html"
+                                  rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li></ul></div><div class="container text-center"><ul class="list-unstyled list-inline"><li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li><li class="text-muted">&copy; 2004-2017 sharkpp</li></ul></div><div class="container text-center text-muted"><ruby><rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                            >Creative Commons Attribution 4.0 International License</a>.</rb><rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                  >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp></ruby></div><div class="container text-center text-muted"><ruby><rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
+                                                                            >The MIT License</a>.</rb><rp>(</rp><rt>さらに、コードスニペットは <a rel="nofollow" href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license"
+                                                               >MIT ライセンス</a> の下にライセンスされています。</rt><rp>)</rp></ruby></div></div></footer><script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>')</script><script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.js"></script><script>$('body').modal || document.write('<script src="/assets/bootstrap/js/bootstrap.min.js"><\/script>')</script><script type="text/javascript">
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
             ga('create', 'UA-5908801-2', 'auto');
             ga('send', 'pageview');
-        </script>
-        
-        <script src="/assets/highlightjs/highlight.pack.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-
-        <script type="text/javascript">
+        </script><script src="/assets/highlightjs/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><script type="text/javascript">
             $('a img').each(function(){
                 var rel = ($(this).attr('src').match(/images\u002f([0-9_]{4}_[0-9_]{4})/i) ||
                            ['','lightbox'])[1];
@@ -312,13 +103,7 @@
                     .attr('data-title', $(this).attr('alt'))
                     ;
             });
-        </script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
-        <script>$(document).ready(function(){ window.lightbox || $.getScript("/assets/lightbox2/dist/js/lightbox.min.js"); });</script>
-
-                <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.5/jquery.smooth-scroll.min.js"></script>
-        <script>$.smoothScroll || document.write('<script src="/assets/jquery-smooth-scroll/jquery.smooth-scroll.min.js"><\/script>')</script>
-        <script type="text/javascript">
+        </script><script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script><script>$(document).ready(function(){ window.lightbox || $.getScript("/assets/lightbox2/dist/js/lightbox.min.js"); });</script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.5/jquery.smooth-scroll.min.js"></script><script>$.smoothScroll || document.write('<script src="/assets/jquery-smooth-scroll/jquery.smooth-scroll.min.js"><\/script>')</script><script type="text/javascript">
             $('#toc a')
                 .each(function(){
                     var id = $(this).attr('href').slice(1);
@@ -360,19 +145,11 @@
                         });
             });
             $(window).scroll();
-        </script>
-
-        <script type="text/javascript">
+        </script><script type="text/javascript">
             $(document).ready(function(){
                 // apply table to bootstrap css
                 $('table:not([class])')
                     .addClass('table table-bordered table-hover table-condensed table-striped')
                     .wrap("<div style='width:100%;overflow-x:auto;'></div>");
              });
-        </script>
-
-        <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
-
-
-    </body>
-</html>
+        </script><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></body></html>

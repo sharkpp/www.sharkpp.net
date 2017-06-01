@@ -1,48 +1,9 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>JavaScript の選択範囲関連のメモ &mdash; さめたすたすのお家</title>
-        <meta charset="utf-8">
-        <meta name="theme-color" content="#6877AA">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="robots" content="index, follow">
-        <meta name="keywords" content="メモ,JavaScript,Userscript">
-        <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/lightbox2/dist/css/lightbox.css" rel="stylesheet" type="text/css" />
-        <link href="/css/style.min.css" rel="stylesheet" type="text/css" />
-        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-
-        <link rel="apple-touch-startup-image" href="/images/noname/2048x2048.png">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="shortcut icon" sizes="76x76" href="/images/noname/76x76.png">
-        <link rel="shortcut icon" sizes="120x120" href="/images/noname/120x120.png">
-        <link rel="shortcut icon" sizes="128x128" href="/images/noname/128x128.png">
-        <link rel="shortcut icon" sizes="152x152" href="/images/noname/152x152.png">
-        <link rel="shortcut icon" sizes="196x196" href="/images/noname/196x196.png">
-        <link rel="shortcut icon" sizes="512x512" href="/images/noname/512x512.png">
-        <link rel="shortcut icon" sizes="1024x1024" href="/images/noname/1024x1024.png">
-        <link rel="shortcut icon" sizes="2048x2048" href="/images/noname/2048x2048.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="/images/noname/76x76.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="/images/noname/120x120.png">
-        <link rel="apple-touch-icon" sizes="128x128" href="/images/noname/128x128.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="/images/noname/152x152.png">
-        <link rel="apple-touch-icon" sizes="196x196" href="/images/noname/196x196.png">
-        <link rel="apple-touch-icon" sizes="512x512" href="/images/noname/512x512.png">
-        <link rel="apple-touch-icon" sizes="1024x1024" href="/images/noname/1024x1024.png">
-        <link rel="apple-touch-icon" sizes="2048x2048" href="/images/noname/2048x2048.png">
-
-        <link rel="stylesheet" href="/assets/highlightjs/styles/github.css" />
-        <link rel="alternate" type="application/atom+xml" href="/atom.xml" title="さめたすたすのお家 activity feed" />
-        <style>
+<head><title>JavaScript の選択範囲関連のメモ &mdash; さめたすたすのお家</title><meta charset="utf-8"><meta name="theme-color" content="#6877AA"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="index, follow"><meta name="keywords" content="メモ,JavaScript,Userscript"><link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" /><link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" /><link href="/assets/lightbox2/dist/css/lightbox.css" rel="stylesheet" type="text/css" /><link href="/css/style.min.css" rel="stylesheet" type="text/css" /><!-- HTML5 shim, for IE6-8 support of HTML5 elements --><!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--><link rel="apple-touch-startup-image" href="/images/noname/2048x2048.png"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="shortcut icon" sizes="76x76" href="/images/noname/76x76.png"><link rel="shortcut icon" sizes="120x120" href="/images/noname/120x120.png"><link rel="shortcut icon" sizes="128x128" href="/images/noname/128x128.png"><link rel="shortcut icon" sizes="152x152" href="/images/noname/152x152.png"><link rel="shortcut icon" sizes="196x196" href="/images/noname/196x196.png"><link rel="shortcut icon" sizes="512x512" href="/images/noname/512x512.png"><link rel="shortcut icon" sizes="1024x1024" href="/images/noname/1024x1024.png"><link rel="shortcut icon" sizes="2048x2048" href="/images/noname/2048x2048.png"><link rel="apple-touch-icon" sizes="76x76" href="/images/noname/76x76.png"><link rel="apple-touch-icon" sizes="120x120" href="/images/noname/120x120.png"><link rel="apple-touch-icon" sizes="128x128" href="/images/noname/128x128.png"><link rel="apple-touch-icon" sizes="152x152" href="/images/noname/152x152.png"><link rel="apple-touch-icon" sizes="196x196" href="/images/noname/196x196.png"><link rel="apple-touch-icon" sizes="512x512" href="/images/noname/512x512.png"><link rel="apple-touch-icon" sizes="1024x1024" href="/images/noname/1024x1024.png"><link rel="apple-touch-icon" sizes="2048x2048" href="/images/noname/2048x2048.png"><link rel="stylesheet" href="/assets/highlightjs/styles/github.css" /><link rel="alternate" type="application/atom+xml" href="/atom.xml" title="さめたすたすのお家 activity feed" /><style>
         /** quick fix because bootstrap <pre> has a background-color. */
         pre code { background-color: inherit; }
-        </style>
-                <style>
+        </style><style>
         #go-top {
             display: none;
             bottom: 40px;
@@ -65,42 +26,8 @@
             max-width: 350px;
             word-wrap: break-word;
         }
-        </style>
-                    </head>
-    <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/">さめたすたすのお家</a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav pull-right">
-                        <li><a href="/blog/"><i class="fa fa-archive"></i> アーカイブ</a></li>
-                        <li><a href="/blog/categories"><i class="fa fa-folder-open"></i> カテゴリ</a></li>
-                        <li><a href="/blog/tags"><i class="fa fa-tags"></i> タグ</a></li>
-                        <li><a href="/product/"><i class="fa fa-download"></i> 作ったもの</a></li>
-                        <li><a href="/graffiti/"><i class="fa fa-paint-brush"></i> 落書き</a></li>
-                        <li><a href="/link.html"><i class="fa fa-link"></i> リンク</a></li>
-                        <li><a href="/about">About</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
-
-        <div class="mainContent container">
-                                                                                
-                                
-    <ol class="breadcrumb" itemscope="itemscope"
-                           itemtype="http://schema.org/BreadcrumbList">
-        <li
+        </style></head><body><nav class="navbar navbar-inverse navbar-fixed-top"><div class="container-fluid"><!-- Brand and toggle get grouped for better mobile display --><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/">さめたすたすのお家</a></div><!-- Collect the nav links, forms, and other content for toggling --><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><ul class="nav navbar-nav pull-right"><li><a href="/blog/"><i class="fa fa-archive"></i> アーカイブ</a></li><li><a href="/blog/categories"><i class="fa fa-folder-open"></i> カテゴリ</a></li><li><a href="/blog/tags"><i class="fa fa-tags"></i> タグ</a></li><li><a href="/product/"><i class="fa fa-download"></i> 作ったもの</a></li><li><a href="/graffiti/"><i class="fa fa-paint-brush"></i> 落書き</a></li><li><a href="/link.html"><i class="fa fa-link"></i> リンク</a></li><li><a href="/about">About</a></li></ul></div><!-- /.navbar-collapse --></div><!-- /.container-fluid --></nav><div class="mainContent container"><ol class="breadcrumb" itemscope="itemscope"
+                           itemtype="http://schema.org/BreadcrumbList"><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/"
@@ -108,85 +35,35 @@
      >&nbsp;<span itemprop="name">HOME</span
            ><meta itemprop="position" content="1"
           /></a
-       ></li>
-        <li
+       ></li><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/blog/2015/"
            ><span>2015</span
            ><meta itemprop="position" content="2"
           /></a
-       ></li>
-        <li
+       ></li><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/blog/2015/08/"
            ><span>08</span
            ><meta itemprop="position" content="3"
           /></a
-       ></li>
-        <li
+       ></li><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/blog/2015/08/29/"
            ><span>29</span
            ><meta itemprop="position" content="4"
           /></a
-       ></li>
-        <li
+       ></li><li
             class="active"><span 
            ><span>JavaScript の選択範囲関連のメモ</span
-       ></li>
-    </ol>
-
-    <article itemscope="itemscope" itemtype="http://schema.org/Article">
-        <meta itemscope="itemscope" itemprop="mainEntityOfPage"
-              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net/blog/2015/08/29/javascript-memo-selection-object.html"/>
-        <header>
-            <h1><span itemprop="headline">JavaScript の選択範囲関連のメモ</span> <small>post</small></h1>
-        </header>
-
-<div id="toc" class="panel panel-default pull-right">
-    <div class="panel-heading text-center">目次</div>
-        <div class="panel-body" style="padding: 10px;">
-            <ul class="fa-ul">
-            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E9%81%B8%E6%8A%9E%E6%96%87%E5%AD%97%E6%95%B0%E3%82%92%E5%8F%96%E5%BE%97">選択文字数を取得</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E9%81%B8%E6%8A%9E%E3%81%AE%E5%A4%89%E6%9B%B4%E3%82%92%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%A7%E5%8F%96%E5%BE%97">選択の変更をイベントで取得</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E9%81%B8%E6%8A%9E%E7%AF%84%E5%9B%B2%E3%81%AE%E7%B5%B6%E5%AF%BE%E4%BD%8D%E7%BD%AE%E3%82%92%E5%8F%96%E5%BE%97">選択範囲の絶対位置を取得</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%8F%82%E8%80%83">参考</a>
-        </ul>
-    </div>
-</div>
-
-<div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div>
-
-        <div itemprop="articleBody">
-            <p>以前に作った <a href="https://greasyfork.org/ja/scripts/9647-calculation-of-selection-length">calculation of selection length</a> (ソースは<a href="https://github.com/sharkpp-userscripts/calculation-of-selection-length">GitHub</a>) を作る時に内容は選択された文字列の扱い関連について調べたことをメモメモです。
-Chrome でのみ確認している。</p>
-
-<h2 id="%E9%81%B8%E6%8A%9E%E6%96%87%E5%AD%97%E6%95%B0%E3%82%92%E5%8F%96%E5%BE%97" itemprop="articleSection">選択文字数を取得</h2>
-
-<p>選択範囲は <code>document.getSelection()</code> または <code>window.getSelection()</code> で取得できる。</p>
-
-<p>取得できるのは <code>Selection</code> オブジェクトなので、</p>
-
-<pre><code class="bash">var selectionLen = String(document.getSelection()).length;
-</code></pre>
-
-<p>の用な感じで <code>String</code> に変換してから取得する。</p>
-
-<h2 id="%E9%81%B8%E6%8A%9E%E3%81%AE%E5%A4%89%E6%9B%B4%E3%82%92%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%A7%E5%8F%96%E5%BE%97" itemprop="articleSection">選択の変更をイベントで取得</h2>
-
-<p>どうやら標準ではないっぽいけど <code>onselectionchange</code> というイベントがあるみたい。</p>
-
-<pre><code class="bash">document.addEventListener("selectionchange", function(e){ console.log(e); }, false);
-</code></pre>
-
-<h2 id="%E9%81%B8%E6%8A%9E%E7%AF%84%E5%9B%B2%E3%81%AE%E7%B5%B6%E5%AF%BE%E4%BD%8D%E7%BD%AE%E3%82%92%E5%8F%96%E5%BE%97" itemprop="articleSection">選択範囲の絶対位置を取得</h2>
-
-<p>絶対位置を取得は、</p>
-
-<pre><code class="bash">var getSelectionBoundingRect = function() {
+       ></li></ol><article itemscope="itemscope" itemtype="http://schema.org/Article"><meta itemscope="itemscope" itemprop="mainEntityOfPage"
+              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net/blog/2015/08/29/javascript-memo-selection-object.html"/><header><h1><span itemprop="headline">JavaScript の選択範囲関連のメモ</span><small>post</small></h1></header><div id="toc" class="panel panel-default pull-right"><div class="panel-heading text-center">目次</div><div class="panel-body" style="padding: 10px;"><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#%E9%81%B8%E6%8A%9E%E6%96%87%E5%AD%97%E6%95%B0%E3%82%92%E5%8F%96%E5%BE%97">選択文字数を取得</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E9%81%B8%E6%8A%9E%E3%81%AE%E5%A4%89%E6%9B%B4%E3%82%92%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%A7%E5%8F%96%E5%BE%97">選択の変更をイベントで取得</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E9%81%B8%E6%8A%9E%E7%AF%84%E5%9B%B2%E3%81%AE%E7%B5%B6%E5%AF%BE%E4%BD%8D%E7%BD%AE%E3%82%92%E5%8F%96%E5%BE%97">選択範囲の絶対位置を取得</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%8F%82%E8%80%83">参考</a></ul></div></div><div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div><div itemprop="articleBody"><p>以前に作った <a href="https://greasyfork.org/ja/scripts/9647-calculation-of-selection-length">calculation of selection length</a> (ソースは<a href="https://github.com/sharkpp-userscripts/calculation-of-selection-length">GitHub</a>) を作る時に内容は選択された文字列の扱い関連について調べたことをメモメモです。
+Chrome でのみ確認している。</p><h2 id="%E9%81%B8%E6%8A%9E%E6%96%87%E5%AD%97%E6%95%B0%E3%82%92%E5%8F%96%E5%BE%97" itemprop="articleSection">選択文字数を取得</h2><p>選択範囲は <code>document.getSelection()</code> または <code>window.getSelection()</code> で取得できる。</p><p>取得できるのは <code>Selection</code> オブジェクトなので、</p><pre><code class="bash">var selectionLen = String(document.getSelection()).length;
+</code></pre><p>の用な感じで <code>String</code> に変換してから取得する。</p><h2 id="%E9%81%B8%E6%8A%9E%E3%81%AE%E5%A4%89%E6%9B%B4%E3%82%92%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%A7%E5%8F%96%E5%BE%97" itemprop="articleSection">選択の変更をイベントで取得</h2><p>どうやら標準ではないっぽいけど <code>onselectionchange</code> というイベントがあるみたい。</p><pre><code class="bash">document.addEventListener("selectionchange", function(e){ console.log(e); }, false);
+</code></pre><h2 id="%E9%81%B8%E6%8A%9E%E7%AF%84%E5%9B%B2%E3%81%AE%E7%B5%B6%E5%AF%BE%E4%BD%8D%E7%BD%AE%E3%82%92%E5%8F%96%E5%BE%97" itemprop="articleSection">選択範囲の絶対位置を取得</h2><p>絶対位置を取得は、</p><pre><code class="bash">var getSelectionBoundingRect = function() {
   var rect = { left: 0, top: 0, right: 0, bottom: 0 };
   var selAll = document.getSelection();
   for (var i = 0; i &lt; selAll.rangeCount; ++i) {
@@ -204,37 +81,16 @@ Chrome でのみ確認している。</p>
   rect.bottom+= window.pageYOffset;
   return selAll.rangeCount ? rect : null;
 };
-</code></pre>
-
-<p>こんな感じ。</p>
-
-<h2 id="%E5%8F%82%E8%80%83" itemprop="articleSection">参考</h2>
-
-<ul>
-<li><a href="http://www.nishishi.com/javascript/2013/get-selection-length.html">範囲選択されている文字列を得る - JavaScript TIPSふぁくとりー</a></li>
-<li><a href="https://developer.mozilla.org/ja/docs/Web/API/Selection">selection - Web API インターフェイス | MDN</a></li>
-<li><a href="http://help.dottoro.com/ljixpxji.php">onselectionchange event | selectionchange event JavaScript</a></li>
-<li><a href="http://gifnksm.hatenablog.jp/entry/20101007/1286419969">TextNodeにも使えるgetBoundingClientRect - gifnksmの雑多なメモ</a></li>
-</ul>
-
-        </div>
-        <hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" />
-        <footer>            <div style="line-height: 25px; height: 25px;">
-    <span style="display: inline-block; vertical-align: top;">
-        <i class="fa fa-calendar"></i>
-        <span itemprop="datePublished" content="2015-08-29">2015年08月29日</span>
+</code></pre><p>こんな感じ。</p><h2 id="%E5%8F%82%E8%80%83" itemprop="articleSection">参考</h2><ul><li><a href="http://www.nishishi.com/javascript/2013/get-selection-length.html">範囲選択されている文字列を得る - JavaScript TIPSふぁくとりー</a></li><li><a href="https://developer.mozilla.org/ja/docs/Web/API/Selection">selection - Web API インターフェイス | MDN</a></li><li><a href="http://help.dottoro.com/ljixpxji.php">onselectionchange event | selectionchange event JavaScript</a></li><li><a href="http://gifnksm.hatenablog.jp/entry/20101007/1286419969">TextNodeにも使えるgetBoundingClientRect - gifnksmの雑多なメモ</a></li></ul></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i><span itemprop="datePublished" content="2015-08-29">2015年08月29日</span>
         &nbsp;/&nbsp;
-        <i class="fa fa-history"></i> <a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2015-08-29-javascript-memo-selection-object.md">変更履歴</a>
+        <i class="fa fa-history"></i><a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2015-08-29-javascript-memo-selection-object.md">変更履歴</a>
         &nbsp;/&nbsp;
-        <i class="fa fa-thumb-tack"></i> <a href="/blog/2015/08/29/javascript-memo-selection-object.html">Permalink</a>
+        <i class="fa fa-thumb-tack"></i><a href="/blog/2015/08/29/javascript-memo-selection-object.html">Permalink</a>
         &nbsp;/&nbsp;
-    </span>
-    <meta itemprop="url" content="http://www.sharkpp.net/blog/2015/08/29/javascript-memo-selection-object.html" />
-    <span itemprop="author" itemscope itemtype="https://schema.org/Person"
+    </span><meta itemprop="url" content="http://www.sharkpp.net/blog/2015/08/29/javascript-memo-selection-object.html" /><span itemprop="author" itemscope itemtype="https://schema.org/Person"
           style="display: none;"
        ><span itemprop="name">sharkpp</span
-   ></span>
-    <a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2015%2F08%2F29%2Fjavascript-memo-selection-object.html"
+   ></span><a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2015%2F08%2F29%2Fjavascript-memo-selection-object.html"
        class="hatena-bookmark-button"
        data-hatena-bookmark-title="JavaScript の選択範囲関連のメモ &mdash; さめたすたすのお家"
        data-hatena-bookmark-layout="simple-balloon"
@@ -242,90 +98,24 @@ Chrome でのみ確認している。</p>
       ><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png"
             alt="このエントリーをはてなブックマークに追加"
             width="20" height="20" style="border: none;" /></a
-      >
-    <a href="https://twitter.com/share" class="twitter-share-button"
-       data-url="http://www.sharkpp.net/blog/2015/08/29/javascript-memo-selection-object.html" data-via="sharkpp">Tweet</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-</div><div style="line-height: 25px; height: 25px;">
-                                <span class="categories">
-            <i class="fa fa-folder-open"></i> カテゴリ:
-                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a>                        </span>
+      ><a href="https://twitter.com/share" class="twitter-share-button"
+       data-url="http://www.sharkpp.net/blog/2015/08/29/javascript-memo-selection-object.html" data-via="sharkpp">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><div style="line-height: 25px; height: 25px;"><span class="categories"><i class="fa fa-folder-open"></i> カテゴリ:
+                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
         &nbsp;/&nbsp;
-                                <span class="tags">
-            <i class="fa fa-tag"></i> タグ:
-                        <a href="/blog/tags/%E3%83%A1%E3%83%A2">メモ</a>,                         <a href="/blog/tags/JavaScript">JavaScript</a>,                         <a href="/blog/tags/Userscript">Userscript</a>                        </span>
-        </div>
-        </footer>
-
-                    <hr style="border-top: none; border-bottom: 1px dashed #aaa; margin: 10px 0;" />
-            <nav class="article">
-                <ul class="list-unstyled row">
-                                            <li class="col-md-6 text-left"><a class="next" href="/blog/2015/09/05/release-sakura-editor-plugin-text-convert-extension-pack.html" title="サクラエディタ用テキスト変換拡張パックを公開"><span class="title"><i class="fa fa-chevron-left"></i> サクラエディタ用テキスト変換拡張パックを公開</span></a></li>
-                                                                <li class="col-md-6 text-right"><a class="previous" href="/blog/2015/08/23/fuelphp-memo.html" title="FuelPHPのメモ"><span class="title">FuelPHPのメモ</span> <i class="fa fa-chevron-right"></i></a></li>
-                                    </ul>
-            </nav>
-            </article>
-
-
-
-        </div>
-
-        <footer class="footer">
-            <dev class="overflow">
-                <div class="container text-center">
-                    <ul class="list-unstyled list-inline">
-                        <li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li>
-                        <li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li>
-                        <li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li>
-                        <li><i class="fa-li fa fa-ellipsis-h"></i> <a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li>
-                        <li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /blog/2015/08/29/javascript-memo-selection-object.html"
-                                  rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li>
-                    </ul>
-                </div>
-                <div class="container text-center">
-                    <ul class="list-unstyled list-inline">
-                        <li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li>
-                        <li class="text-muted">&copy; 2004-2017 sharkpp</li>
-                    </ul>
-                </div>
-                <div class="container text-center text-muted">
-                    <ruby>
-                        <rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
-                                                            >Creative Commons Attribution 4.0 International License</a>.</rb>
-                        <rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
-                                                  >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp>
-                    </ruby>
-                </div>
-                <div class="container text-center text-muted">
-                    <ruby>
-                        <rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
-                                                                            >The MIT License</a>.</rb>
-                        <rp>(</rp><rt>さらに、コードスニペットは <a rel="nofollow" href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license"
-                                                               >MIT ライセンス</a> の下にライセンスされています。</rt><rp>)</rp>
-                    </ruby>
-                </div>
-            </div>
-        </footer>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>')</script>
-
-        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.js"></script>
-        <script>$('body').modal || document.write('<script src="/assets/bootstrap/js/bootstrap.min.js"><\/script>')</script>
-                
-                <script type="text/javascript">
+                                <span class="tags"><i class="fa fa-tag"></i> タグ:
+                        <a href="/blog/tags/%E3%83%A1%E3%83%A2">メモ</a>,                         <a href="/blog/tags/JavaScript">JavaScript</a>,                         <a href="/blog/tags/Userscript">Userscript</a></span></div></footer><hr style="border-top: none; border-bottom: 1px dashed #aaa; margin: 10px 0;" /><nav class="article"><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/blog/2015/09/05/release-sakura-editor-plugin-text-convert-extension-pack.html" title="サクラエディタ用テキスト変換拡張パックを公開"><span class="title"><i class="fa fa-chevron-left"></i> サクラエディタ用テキスト変換拡張パックを公開</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/blog/2015/08/23/fuelphp-memo.html" title="FuelPHPのメモ"><span class="title">FuelPHPのメモ</span><i class="fa fa-chevron-right"></i></a></li></ul></nav></article></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li><li><i class="fa-li fa fa-ellipsis-h"></i><a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /blog/2015/08/29/javascript-memo-selection-object.html"
+                                  rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li></ul></div><div class="container text-center"><ul class="list-unstyled list-inline"><li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li><li class="text-muted">&copy; 2004-2017 sharkpp</li></ul></div><div class="container text-center text-muted"><ruby><rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                            >Creative Commons Attribution 4.0 International License</a>.</rb><rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                  >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp></ruby></div><div class="container text-center text-muted"><ruby><rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
+                                                                            >The MIT License</a>.</rb><rp>(</rp><rt>さらに、コードスニペットは <a rel="nofollow" href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license"
+                                                               >MIT ライセンス</a> の下にライセンスされています。</rt><rp>)</rp></ruby></div></div></footer><script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>')</script><script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.js"></script><script>$('body').modal || document.write('<script src="/assets/bootstrap/js/bootstrap.min.js"><\/script>')</script><script type="text/javascript">
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
             ga('create', 'UA-5908801-2', 'auto');
             ga('send', 'pageview');
-        </script>
-        
-        <script src="/assets/highlightjs/highlight.pack.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-
-        <script type="text/javascript">
+        </script><script src="/assets/highlightjs/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><script type="text/javascript">
             $('a img').each(function(){
                 var rel = ($(this).attr('src').match(/images\u002f([0-9_]{4}_[0-9_]{4})/i) ||
                            ['','lightbox'])[1];
@@ -334,13 +124,7 @@ Chrome でのみ確認している。</p>
                     .attr('data-title', $(this).attr('alt'))
                     ;
             });
-        </script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
-        <script>$(document).ready(function(){ window.lightbox || $.getScript("/assets/lightbox2/dist/js/lightbox.min.js"); });</script>
-
-                <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.5/jquery.smooth-scroll.min.js"></script>
-        <script>$.smoothScroll || document.write('<script src="/assets/jquery-smooth-scroll/jquery.smooth-scroll.min.js"><\/script>')</script>
-        <script type="text/javascript">
+        </script><script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script><script>$(document).ready(function(){ window.lightbox || $.getScript("/assets/lightbox2/dist/js/lightbox.min.js"); });</script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.5/jquery.smooth-scroll.min.js"></script><script>$.smoothScroll || document.write('<script src="/assets/jquery-smooth-scroll/jquery.smooth-scroll.min.js"><\/script>')</script><script type="text/javascript">
             $('#toc a')
                 .each(function(){
                     var id = $(this).attr('href').slice(1);
@@ -382,19 +166,11 @@ Chrome でのみ確認している。</p>
                         });
             });
             $(window).scroll();
-        </script>
-
-        <script type="text/javascript">
+        </script><script type="text/javascript">
             $(document).ready(function(){
                 // apply table to bootstrap css
                 $('table:not([class])')
                     .addClass('table table-bordered table-hover table-condensed table-striped')
                     .wrap("<div style='width:100%;overflow-x:auto;'></div>");
              });
-        </script>
-
-        <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
-
-
-    </body>
-</html>
+        </script><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></body></html>

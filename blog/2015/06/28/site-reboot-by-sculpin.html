@@ -1,48 +1,9 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Sculpin でホムペを再構築したときのメモ &mdash; さめたすたすのお家</title>
-        <meta charset="utf-8">
-        <meta name="theme-color" content="#6877AA">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="robots" content="index, follow">
-        <meta name="keywords" content="雑記,php,xrea.com,Sculpin">
-        <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/lightbox2/dist/css/lightbox.css" rel="stylesheet" type="text/css" />
-        <link href="/css/style.min.css" rel="stylesheet" type="text/css" />
-        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-
-        <link rel="apple-touch-startup-image" href="/images/noname/2048x2048.png">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="shortcut icon" sizes="76x76" href="/images/noname/76x76.png">
-        <link rel="shortcut icon" sizes="120x120" href="/images/noname/120x120.png">
-        <link rel="shortcut icon" sizes="128x128" href="/images/noname/128x128.png">
-        <link rel="shortcut icon" sizes="152x152" href="/images/noname/152x152.png">
-        <link rel="shortcut icon" sizes="196x196" href="/images/noname/196x196.png">
-        <link rel="shortcut icon" sizes="512x512" href="/images/noname/512x512.png">
-        <link rel="shortcut icon" sizes="1024x1024" href="/images/noname/1024x1024.png">
-        <link rel="shortcut icon" sizes="2048x2048" href="/images/noname/2048x2048.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="/images/noname/76x76.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="/images/noname/120x120.png">
-        <link rel="apple-touch-icon" sizes="128x128" href="/images/noname/128x128.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="/images/noname/152x152.png">
-        <link rel="apple-touch-icon" sizes="196x196" href="/images/noname/196x196.png">
-        <link rel="apple-touch-icon" sizes="512x512" href="/images/noname/512x512.png">
-        <link rel="apple-touch-icon" sizes="1024x1024" href="/images/noname/1024x1024.png">
-        <link rel="apple-touch-icon" sizes="2048x2048" href="/images/noname/2048x2048.png">
-
-        <link rel="stylesheet" href="/assets/highlightjs/styles/github.css" />
-        <link rel="alternate" type="application/atom+xml" href="/atom.xml" title="さめたすたすのお家 activity feed" />
-        <style>
+<head><title>Sculpin でホムペを再構築したときのメモ &mdash; さめたすたすのお家</title><meta charset="utf-8"><meta name="theme-color" content="#6877AA"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="index, follow"><meta name="keywords" content="雑記,php,xrea.com,Sculpin"><link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" /><link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" /><link href="/assets/lightbox2/dist/css/lightbox.css" rel="stylesheet" type="text/css" /><link href="/css/style.min.css" rel="stylesheet" type="text/css" /><!-- HTML5 shim, for IE6-8 support of HTML5 elements --><!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--><link rel="apple-touch-startup-image" href="/images/noname/2048x2048.png"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="shortcut icon" sizes="76x76" href="/images/noname/76x76.png"><link rel="shortcut icon" sizes="120x120" href="/images/noname/120x120.png"><link rel="shortcut icon" sizes="128x128" href="/images/noname/128x128.png"><link rel="shortcut icon" sizes="152x152" href="/images/noname/152x152.png"><link rel="shortcut icon" sizes="196x196" href="/images/noname/196x196.png"><link rel="shortcut icon" sizes="512x512" href="/images/noname/512x512.png"><link rel="shortcut icon" sizes="1024x1024" href="/images/noname/1024x1024.png"><link rel="shortcut icon" sizes="2048x2048" href="/images/noname/2048x2048.png"><link rel="apple-touch-icon" sizes="76x76" href="/images/noname/76x76.png"><link rel="apple-touch-icon" sizes="120x120" href="/images/noname/120x120.png"><link rel="apple-touch-icon" sizes="128x128" href="/images/noname/128x128.png"><link rel="apple-touch-icon" sizes="152x152" href="/images/noname/152x152.png"><link rel="apple-touch-icon" sizes="196x196" href="/images/noname/196x196.png"><link rel="apple-touch-icon" sizes="512x512" href="/images/noname/512x512.png"><link rel="apple-touch-icon" sizes="1024x1024" href="/images/noname/1024x1024.png"><link rel="apple-touch-icon" sizes="2048x2048" href="/images/noname/2048x2048.png"><link rel="stylesheet" href="/assets/highlightjs/styles/github.css" /><link rel="alternate" type="application/atom+xml" href="/atom.xml" title="さめたすたすのお家 activity feed" /><style>
         /** quick fix because bootstrap <pre> has a background-color. */
         pre code { background-color: inherit; }
-        </style>
-                <style>
+        </style><style>
         #go-top {
             display: none;
             bottom: 40px;
@@ -65,42 +26,8 @@
             max-width: 350px;
             word-wrap: break-word;
         }
-        </style>
-                    </head>
-    <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/">さめたすたすのお家</a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav pull-right">
-                        <li><a href="/blog/"><i class="fa fa-archive"></i> アーカイブ</a></li>
-                        <li><a href="/blog/categories"><i class="fa fa-folder-open"></i> カテゴリ</a></li>
-                        <li><a href="/blog/tags"><i class="fa fa-tags"></i> タグ</a></li>
-                        <li><a href="/product/"><i class="fa fa-download"></i> 作ったもの</a></li>
-                        <li><a href="/graffiti/"><i class="fa fa-paint-brush"></i> 落書き</a></li>
-                        <li><a href="/link.html"><i class="fa fa-link"></i> リンク</a></li>
-                        <li><a href="/about">About</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
-
-        <div class="mainContent container">
-                                                                                
-                                
-    <ol class="breadcrumb" itemscope="itemscope"
-                           itemtype="http://schema.org/BreadcrumbList">
-        <li
+        </style></head><body><nav class="navbar navbar-inverse navbar-fixed-top"><div class="container-fluid"><!-- Brand and toggle get grouped for better mobile display --><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/">さめたすたすのお家</a></div><!-- Collect the nav links, forms, and other content for toggling --><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><ul class="nav navbar-nav pull-right"><li><a href="/blog/"><i class="fa fa-archive"></i> アーカイブ</a></li><li><a href="/blog/categories"><i class="fa fa-folder-open"></i> カテゴリ</a></li><li><a href="/blog/tags"><i class="fa fa-tags"></i> タグ</a></li><li><a href="/product/"><i class="fa fa-download"></i> 作ったもの</a></li><li><a href="/graffiti/"><i class="fa fa-paint-brush"></i> 落書き</a></li><li><a href="/link.html"><i class="fa fa-link"></i> リンク</a></li><li><a href="/about">About</a></li></ul></div><!-- /.navbar-collapse --></div><!-- /.container-fluid --></nav><div class="mainContent container"><ol class="breadcrumb" itemscope="itemscope"
+                           itemtype="http://schema.org/BreadcrumbList"><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/"
@@ -108,193 +35,35 @@
      >&nbsp;<span itemprop="name">HOME</span
            ><meta itemprop="position" content="1"
           /></a
-       ></li>
-        <li
+       ></li><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/blog/2015/"
            ><span>2015</span
            ><meta itemprop="position" content="2"
           /></a
-       ></li>
-        <li
+       ></li><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/blog/2015/06/"
            ><span>06</span
            ><meta itemprop="position" content="3"
           /></a
-       ></li>
-        <li
+       ></li><li
 　　　　　    itemscope="itemscope" itemprop="itemListElement"
 　　　　　    itemtype="http://schema.org/ListItem"
            ><a itemprop="item" href="/blog/2015/06/28/"
            ><span>28</span
            ><meta itemprop="position" content="4"
           /></a
-       ></li>
-        <li
+       ></li><li
             class="active"><span 
            ><span>Sculpin でホムペを再構築したときのメモ</span
-       ></li>
-    </ol>
-
-    <article itemscope="itemscope" itemtype="http://schema.org/Article">
-        <meta itemscope="itemscope" itemprop="mainEntityOfPage"
-              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net/blog/2015/06/28/site-reboot-by-sculpin.html"/>
-        <header>
-            <h1><span itemprop="headline">Sculpin でホムペを再構築したときのメモ</span> <small>post</small></h1>
-        </header>
-
-<div id="toc" class="panel panel-default pull-right">
-    <div class="panel-heading text-center">目次</div>
-        <div class="panel-body" style="padding: 10px;">
-            <ul class="fa-ul">
-            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%83%A9%E3%82%A4%E3%83%B3">コマンドライン</a>
-<ul class="fa-ul">            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E6%A7%8B%E7%AF%89">構築</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E6%A7%8B%E7%AF%89%EF%BC%86%E3%83%86%E3%82%B9%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E8%B5%B7%E5%8B%95">構築＆テストサーバー起動</a>
-</li></ul></li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#sculpin-%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%A7%E3%81%8D%E3%82%8B%E5%A4%89%E6%95%B0">Sculpin で使用できる変数</a>
-<ul class="fa-ul">            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%9A%E3%83%BC%E3%82%B8%E5%86%85%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%A7%E3%81%8D%E3%82%8B%E5%A4%89%E6%95%B0">ページ内で使用できる変数</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#site-%E5%A4%89%E6%95%B0">site 変数</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#page-%E5%A4%89%E6%95%B0">page 変数</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#data-%E5%A4%89%E6%95%B0">data 変数</a>
-</li></ul></li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#tips%E7%9A%84%E3%81%AA%E3%82%81%E3%82%82">Tips的なめも</a>
-<ul class="fa-ul">            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%96%E3%83%AD%E3%82%B0%E3%83%9A%E3%83%BC%E3%82%B8%E6%84%8F%E5%A4%96%E3%82%92%E5%8F%82%E7%85%A7%E3%81%99%E3%82%8B%E5%A4%89%E6%95%B0%E3%82%84%E6%96%B9%E6%B3%95%E3%81%AF%E7%84%A1%E3%81%84">ブログページ意外を参照する変数や方法は無い</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#.htaccess-%E8%87%AA%E4%BD%93%E3%82%92%E3%82%B3%E3%83%94%E3%83%BC%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AF%E5%87%BA%E6%9D%A5%E3%81%AA%E3%81%84">.htaccess 自体をコピーすることは出来ない</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E8%A8%98%E4%BA%8B%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E5%BC%B5%E3%82%8B%E3%81%AB%E3%81%AF%E3%83%A1%E3%82%BF%E6%83%85%E5%A0%B1%E3%81%8C%E5%BF%85%E8%A6%81">記事へのリンクを張るにはメタ情報が必要</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%E3%81%AF%E3%83%80%E3%83%96%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%A7%E5%9B%B2%E3%81%86%E3%81%B9%E3%81%97">タイトルはダブルコーテーションで囲うべし</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%87%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E3%81%A7%E5%85%A8%E3%81%A6%E3%81%AE%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E6%8B%A1%E5%BC%B5%E5%AD%90%E3%82%92%E4%BB%98%E3%81%91%E3%82%8B%E3%81%AB%E3%81%AF%EF%BC%9F">デフォルトで全てのページに拡張子を付けるには？</a>
-</li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#twig-extensions-%E3%82%92%E4%BD%BF%E3%81%86%E6%96%B9%E6%B3%95">Twig Extensions を使う方法</a>
-</li></ul></li>            <li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%8F%82%E8%80%83">参考</a>
-        </ul>
-    </div>
-</div>
-
-<div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div>
-
-        <div itemprop="articleBody">
-            <p><a href="https://sculpin.io/">Sculpin</a> でホムペを再構築してからだいたい一ヶ月ぐらい経ちました。</p>
-
-<p>元のページは、 Markdown で作ったり はてな記法で書いてたり色々あったので全ページをクロールしてダウンロードした .html から .md への変換スクリプトを書きページを再構成しました。</p>
-
-<p>手順としては</p>
-
-<ol>
-<li>全ページをクロール</li>
-<li>.html をスクリプトで .md に変換＆リンクを再構成(実際の変換スクリプトは <a href="https://github.com/sharkpp/www.sharkpp.net/blob/master/convert">www.sharkpp.net/convert/ - GitHub</a> を参照)</li>
-<li>Sculpin で構築しやすいように再構成</li>
-<li>Github へ push したら自動で更新する仕組みを実装( <a href="/blog/2015/05/31/how-to-build-libxml2-on-xrea-com-for-sculpin.html">Sculpin を実行するために xrea.com 上で libxml2 を構築する方法</a> や <a href="https://github.com/sharkpp/www.sharkpp.net/blob/master/site">www.sharkpp.net/site - GitHub</a> を参照)</li>
-<li>公開</li>
-</ol>
-
-<p>という感じです。</p>
-
-<p>いろいろ自分好みなページを作る中で Sculpin の挙動を調べたメモを記録として残しておきます。</p>
-
-<h2 id="%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%83%A9%E3%82%A4%E3%83%B3" itemprop="articleSection">コマンドライン</h2>
-
-<h3 id="%E6%A7%8B%E7%AF%89" itemprop="articleSection">構築</h3>
-
-<pre><code class="bash">$ php sculpin.phar generate
-</code></pre>
-
-<p>または</p>
-
-<pre><code class="bash">$ php sculpin.phar generate --env=prod
-</code></pre>
-
-<h3 id="%E6%A7%8B%E7%AF%89%EF%BC%86%E3%83%86%E3%82%B9%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E8%B5%B7%E5%8B%95" itemprop="articleSection">構築＆テストサーバー起動</h3>
-
-<pre><code class="bash">$ php sculpin.phar generate --watch --server
-</code></pre>
-
-<h2 id="sculpin-%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%A7%E3%81%8D%E3%82%8B%E5%A4%89%E6%95%B0" itemprop="articleSection">Sculpin で使用できる変数</h2>
-
-<h3 id="%E3%83%9A%E3%83%BC%E3%82%B8%E5%86%85%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%A7%E3%81%8D%E3%82%8B%E5%A4%89%E6%95%B0" itemprop="articleSection">ページ内で使用できる変数</h3>
-
-<table>
-<thead>
-<tr>
-  <th>変数名</th>
-  <th>概要</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>site</td>
-  <td><code>sculpin_site.yml</code> の値</td>
-</tr>
-<tr>
-  <td>page</td>
-  <td>ページ自体</td>
-</tr>
-<tr>
-  <td>formatter</td>
-  <td>テンプレートエンジン名( <code>twig</code> など)</td>
-</tr>
-<tr>
-  <td>converters</td>
-  <td>？</td>
-</tr>
-<tr>
-  <td>relative_root_url</td>
-  <td>ページ自体から見たルートへの相対パス</td>
-</tr>
-<tr>
-  <td>data</td>
-  <td><code>Frontmatter</code> (各ページ先頭での指示) で宣言されたコンテンツ</td>
-</tr>
-<tr>
-  <td>layout</td>
-  <td>レイアウト名</td>
-</tr>
-</tbody>
-</table>
-
-<h3 id="site-%E5%A4%89%E6%95%B0" itemprop="articleSection">site 変数</h3>
-
-<p><code>app/config/sculpin_site.yml</code> で指定した値が設定されます。</p>
-
-<table>
-<thead>
-<tr>
-  <th>キー</th>
-  <th>概要</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>.posts</td>
-  <td><code>use: ["posts"]</code></td>
-</tr>
-<tr>
-  <td>.subtitle</td>
-  <td><code>app/config/sculpin_site.yml</code> で指定した値</td>
-</tr>
-<tr>
-  <td>.url</td>
-  <td>サイトのURL。引数 <code>--url</code> で指定した値。</td>
-</tr>
-<tr>
-  <td>.author</td>
-  <td><code>app/config/sculpin_site.yml</code> で指定した値</td>
-</tr>
-<tr>
-  <td>.env</td>
-  <td>引数 <code>--env</code> で指定した値。<code>dev</code> など</td>
-</tr>
-<tr>
-  <td>.calculated_date</td>
-  <td>ページの生成日時</td>
-</tr>
-</tbody>
-</table>
-
-<h3 id="page-%E5%A4%89%E6%95%B0" itemprop="articleSection">page 変数</h3>
-
-<p>ページ自体の情報を参照できる変数。</p>
-
-<pre><code class="yaml">---
+       ></li></ol><article itemscope="itemscope" itemtype="http://schema.org/Article"><meta itemscope="itemscope" itemprop="mainEntityOfPage"
+              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net/blog/2015/06/28/site-reboot-by-sculpin.html"/><header><h1><span itemprop="headline">Sculpin でホムペを再構築したときのメモ</span><small>post</small></h1></header><div id="toc" class="panel panel-default pull-right"><div class="panel-heading text-center">目次</div><div class="panel-body" style="padding: 10px;"><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%83%A9%E3%82%A4%E3%83%B3">コマンドライン</a><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#%E6%A7%8B%E7%AF%89">構築</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E6%A7%8B%E7%AF%89%EF%BC%86%E3%83%86%E3%82%B9%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E8%B5%B7%E5%8B%95">構築＆テストサーバー起動</a></li></ul></li><li><i class="fa-li fa fa-paperclip"></i><a href="#sculpin-%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%A7%E3%81%8D%E3%82%8B%E5%A4%89%E6%95%B0">Sculpin で使用できる変数</a><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%9A%E3%83%BC%E3%82%B8%E5%86%85%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%A7%E3%81%8D%E3%82%8B%E5%A4%89%E6%95%B0">ページ内で使用できる変数</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#site-%E5%A4%89%E6%95%B0">site 変数</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#page-%E5%A4%89%E6%95%B0">page 変数</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#data-%E5%A4%89%E6%95%B0">data 変数</a></li></ul></li><li><i class="fa-li fa fa-paperclip"></i><a href="#tips%E7%9A%84%E3%81%AA%E3%82%81%E3%82%82">Tips的なめも</a><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%96%E3%83%AD%E3%82%B0%E3%83%9A%E3%83%BC%E3%82%B8%E6%84%8F%E5%A4%96%E3%82%92%E5%8F%82%E7%85%A7%E3%81%99%E3%82%8B%E5%A4%89%E6%95%B0%E3%82%84%E6%96%B9%E6%B3%95%E3%81%AF%E7%84%A1%E3%81%84">ブログページ意外を参照する変数や方法は無い</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#.htaccess-%E8%87%AA%E4%BD%93%E3%82%92%E3%82%B3%E3%83%94%E3%83%BC%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AF%E5%87%BA%E6%9D%A5%E3%81%AA%E3%81%84">.htaccess 自体をコピーすることは出来ない</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E8%A8%98%E4%BA%8B%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E5%BC%B5%E3%82%8B%E3%81%AB%E3%81%AF%E3%83%A1%E3%82%BF%E6%83%85%E5%A0%B1%E3%81%8C%E5%BF%85%E8%A6%81">記事へのリンクを張るにはメタ情報が必要</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%E3%81%AF%E3%83%80%E3%83%96%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%A7%E5%9B%B2%E3%81%86%E3%81%B9%E3%81%97">タイトルはダブルコーテーションで囲うべし</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%87%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E3%81%A7%E5%85%A8%E3%81%A6%E3%81%AE%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E6%8B%A1%E5%BC%B5%E5%AD%90%E3%82%92%E4%BB%98%E3%81%91%E3%82%8B%E3%81%AB%E3%81%AF%EF%BC%9F">デフォルトで全てのページに拡張子を付けるには？</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#twig-extensions-%E3%82%92%E4%BD%BF%E3%81%86%E6%96%B9%E6%B3%95">Twig Extensions を使う方法</a></li></ul></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%8F%82%E8%80%83">参考</a></ul></div></div><div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div><div itemprop="articleBody"><p><a href="https://sculpin.io/">Sculpin</a> でホムペを再構築してからだいたい一ヶ月ぐらい経ちました。</p><p>元のページは、 Markdown で作ったり はてな記法で書いてたり色々あったので全ページをクロールしてダウンロードした .html から .md への変換スクリプトを書きページを再構成しました。</p><p>手順としては</p><ol><li>全ページをクロール</li><li>.html をスクリプトで .md に変換＆リンクを再構成(実際の変換スクリプトは <a href="https://github.com/sharkpp/www.sharkpp.net/blob/master/convert">www.sharkpp.net/convert/ - GitHub</a> を参照)</li><li>Sculpin で構築しやすいように再構成</li><li>Github へ push したら自動で更新する仕組みを実装( <a href="/blog/2015/05/31/how-to-build-libxml2-on-xrea-com-for-sculpin.html">Sculpin を実行するために xrea.com 上で libxml2 を構築する方法</a> や <a href="https://github.com/sharkpp/www.sharkpp.net/blob/master/site">www.sharkpp.net/site - GitHub</a> を参照)</li><li>公開</li></ol><p>という感じです。</p><p>いろいろ自分好みなページを作る中で Sculpin の挙動を調べたメモを記録として残しておきます。</p><h2 id="%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%83%A9%E3%82%A4%E3%83%B3" itemprop="articleSection">コマンドライン</h2><h3 id="%E6%A7%8B%E7%AF%89" itemprop="articleSection">構築</h3><pre><code class="bash">$ php sculpin.phar generate
+</code></pre><p>または</p><pre><code class="bash">$ php sculpin.phar generate --env=prod
+</code></pre><h3 id="%E6%A7%8B%E7%AF%89%EF%BC%86%E3%83%86%E3%82%B9%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E8%B5%B7%E5%8B%95" itemprop="articleSection">構築＆テストサーバー起動</h3><pre><code class="bash">$ php sculpin.phar generate --watch --server
+</code></pre><h2 id="sculpin-%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%A7%E3%81%8D%E3%82%8B%E5%A4%89%E6%95%B0" itemprop="articleSection">Sculpin で使用できる変数</h2><h3 id="%E3%83%9A%E3%83%BC%E3%82%B8%E5%86%85%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%A7%E3%81%8D%E3%82%8B%E5%A4%89%E6%95%B0" itemprop="articleSection">ページ内で使用できる変数</h3><table><thead><tr><th>変数名</th><th>概要</th></tr></thead><tbody><tr><td>site</td><td><code>sculpin_site.yml</code> の値</td></tr><tr><td>page</td><td>ページ自体</td></tr><tr><td>formatter</td><td>テンプレートエンジン名( <code>twig</code> など)</td></tr><tr><td>converters</td><td>？</td></tr><tr><td>relative_root_url</td><td>ページ自体から見たルートへの相対パス</td></tr><tr><td>data</td><td><code>Frontmatter</code> (各ページ先頭での指示) で宣言されたコンテンツ</td></tr><tr><td>layout</td><td>レイアウト名</td></tr></tbody></table><h3 id="site-%E5%A4%89%E6%95%B0" itemprop="articleSection">site 変数</h3><p><code>app/config/sculpin_site.yml</code> で指定した値が設定されます。</p><table><thead><tr><th>キー</th><th>概要</th></tr></thead><tbody><tr><td>.posts</td><td><code>use: ["posts"]</code></td></tr><tr><td>.subtitle</td><td><code>app/config/sculpin_site.yml</code> で指定した値</td></tr><tr><td>.url</td><td>サイトのURL。引数 <code>--url</code> で指定した値。</td></tr><tr><td>.author</td><td><code>app/config/sculpin_site.yml</code> で指定した値</td></tr><tr><td>.env</td><td>引数 <code>--env</code> で指定した値。<code>dev</code> など</td></tr><tr><td>.calculated_date</td><td>ページの生成日時</td></tr></tbody></table><h3 id="page-%E5%A4%89%E6%95%B0" itemprop="articleSection">page 変数</h3><p>ページ自体の情報を参照できる変数。</p><pre><code class="yaml">---
 title: "Sculpin でホムペを再構築"
 date: 2015-06-28 18:00
 tags: [雑記,php,xrea.com,Sculpin]
@@ -303,137 +72,46 @@ user_data: [hoge,fuga]
 
 ---
 
-</code></pre>
-
-<p>の <code>user_data</code> の用な感じで自由に値を指定することも出来ます。</p>
-
-<p><code>post.data</code> と <code>data</code> は同じ内容を参照しているようです。</p>
-
-<h3 id="data-%E5%A4%89%E6%95%B0" itemprop="articleSection">data 変数</h3>
-
-<p><code>Frontmatter</code> (各ページ先頭での指示) で <code>use: XXX</code> として宣言されたコンテンツが読み込まれます。</p>
-
-<h2 id="tips%E7%9A%84%E3%81%AA%E3%82%81%E3%82%82" itemprop="articleSection">Tips的なめも</h2>
-
-<h3 id="%E3%83%96%E3%83%AD%E3%82%B0%E3%83%9A%E3%83%BC%E3%82%B8%E6%84%8F%E5%A4%96%E3%82%92%E5%8F%82%E7%85%A7%E3%81%99%E3%82%8B%E5%A4%89%E6%95%B0%E3%82%84%E6%96%B9%E6%B3%95%E3%81%AF%E7%84%A1%E3%81%84" itemprop="articleSection">ブログページ意外を参照する変数や方法は無い</h3>
-
-<p>Sculpin 自体には <code>SculpinPostsBundle</code> から生成される <code>blogs/YYYY/MM/DD/XXXX</code> を参照するような感じで、ブログページ以外の単体ページを参照する仕組みは標準ではなさそうです。
-ただ、拡張として内部の情報を参照する形で作れば出来そうな感じではあるようです。</p>
-
-<h3 id=".htaccess-%E8%87%AA%E4%BD%93%E3%82%92%E3%82%B3%E3%83%94%E3%83%BC%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AF%E5%87%BA%E6%9D%A5%E3%81%AA%E3%81%84" itemprop="articleSection">.htaccess 自体をコピーすることは出来ない</h3>
-
-<p>あれっと思いましたが、
+</code></pre><p>の <code>user_data</code> の用な感じで自由に値を指定することも出来ます。</p><p><code>post.data</code> と <code>data</code> は同じ内容を参照しているようです。</p><h3 id="data-%E5%A4%89%E6%95%B0" itemprop="articleSection">data 変数</h3><p><code>Frontmatter</code> (各ページ先頭での指示) で <code>use: XXX</code> として宣言されたコンテンツが読み込まれます。</p><h2 id="tips%E7%9A%84%E3%81%AA%E3%82%81%E3%82%82" itemprop="articleSection">Tips的なめも</h2><h3 id="%E3%83%96%E3%83%AD%E3%82%B0%E3%83%9A%E3%83%BC%E3%82%B8%E6%84%8F%E5%A4%96%E3%82%92%E5%8F%82%E7%85%A7%E3%81%99%E3%82%8B%E5%A4%89%E6%95%B0%E3%82%84%E6%96%B9%E6%B3%95%E3%81%AF%E7%84%A1%E3%81%84" itemprop="articleSection">ブログページ意外を参照する変数や方法は無い</h3><p>Sculpin 自体には <code>SculpinPostsBundle</code> から生成される <code>blogs/YYYY/MM/DD/XXXX</code> を参照するような感じで、ブログページ以外の単体ページを参照する仕組みは標準ではなさそうです。
+ただ、拡張として内部の情報を参照する形で作れば出来そうな感じではあるようです。</p><h3 id=".htaccess-%E8%87%AA%E4%BD%93%E3%82%92%E3%82%B3%E3%83%94%E3%83%BC%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AF%E5%87%BA%E6%9D%A5%E3%81%AA%E3%81%84" itemprop="articleSection">.htaccess 自体をコピーすることは出来ない</h3><p>あれっと思いましたが、
 <a href="https://github.com/sculpin/sculpin/issues/121">Is it expected behavior that .htaccess file is not carried over from source dir to destination? - Issue #121 - sculpin/sculpin</a> を見ると <code>.htaccess</code> 自体をページ生成時にコピーすることは出来ない様です。
-が、ちょっと考えると <code>htaccess.twig</code> というファイルを作り</p>
-
-<pre><code>---
+が、ちょっと考えると <code>htaccess.twig</code> というファイルを作り</p><pre><code>---
 permalink: .htaccess
 ---
 # hoge fuga
-</code></pre>
-
-<p>とすればいいようです。</p>
-
-<h3 id="%E8%A8%98%E4%BA%8B%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E5%BC%B5%E3%82%8B%E3%81%AB%E3%81%AF%E3%83%A1%E3%82%BF%E6%83%85%E5%A0%B1%E3%81%8C%E5%BF%85%E8%A6%81" itemprop="articleSection">記事へのリンクを張るにはメタ情報が必要</h3>
-
-<p>ヘッダとして</p>
-
-<pre><code class="markdown"># Sculpin でホムペを再構築
-</code></pre>
-
-<p>の様にしても記事へのリンクが張られなかった。
-タグ情報とかも結局入れるのでこのような形にする</p>
-
-<pre><code class="markdown">---
+</code></pre><p>とすればいいようです。</p><h3 id="%E8%A8%98%E4%BA%8B%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E5%BC%B5%E3%82%8B%E3%81%AB%E3%81%AF%E3%83%A1%E3%82%BF%E6%83%85%E5%A0%B1%E3%81%8C%E5%BF%85%E8%A6%81" itemprop="articleSection">記事へのリンクを張るにはメタ情報が必要</h3><p>ヘッダとして</p><pre><code class="markdown"># Sculpin でホムペを再構築
+</code></pre><p>の様にしても記事へのリンクが張られなかった。
+タグ情報とかも結局入れるのでこのような形にする</p><pre><code class="markdown">---
 title: "Sculpin でホムペを再構築"
 
 ---
-</code></pre>
-
-<h3 id="%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%E3%81%AF%E3%83%80%E3%83%96%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%A7%E5%9B%B2%E3%81%86%E3%81%B9%E3%81%97" itemprop="articleSection">タイトルはダブルコーテーションで囲うべし</h3>
-
-<p>タイトルの頭に記号が含まれると</p>
-
-<pre><code class="bash">$ php sculpin.phar generate --watch --server
+</code></pre><h3 id="%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%E3%81%AF%E3%83%80%E3%83%96%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%A7%E5%9B%B2%E3%81%86%E3%81%B9%E3%81%97" itemprop="articleSection">タイトルはダブルコーテーションで囲うべし</h3><p>タイトルの頭に記号が含まれると</p><pre><code class="bash">$ php sculpin.phar generate --watch --server
      ! FileSource:FilesystemDataSource:.../source:_posts/2013-01-24-user-jp-follow-up.md Reference "-user.jp(?ユーザのためのハブサイト)のその後を追跡調査" does not exist at line 0. !
     Detected new or updated files
     Generating: 100% (215 sources / 0.04 seconds)
                :
-</code></pre>
-
-<p>の様に処理できない場合がある模様。
-なので、ダブルコーテーションで囲うことでこの問題を回避出来る。</p>
-
-<h3 id="%E3%83%87%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E3%81%A7%E5%85%A8%E3%81%A6%E3%81%AE%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E6%8B%A1%E5%BC%B5%E5%AD%90%E3%82%92%E4%BB%98%E3%81%91%E3%82%8B%E3%81%AB%E3%81%AF%EF%BC%9F" itemprop="articleSection">デフォルトで全てのページに拡張子を付けるには？</h3>
-
-<p>設定を下記のようにする。</p>
-
-<pre><code class="yaml"># app/config/sculpin_kernel.yml
+</code></pre><p>の様に処理できない場合がある模様。
+なので、ダブルコーテーションで囲うことでこの問題を回避出来る。</p><h3 id="%E3%83%87%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E3%81%A7%E5%85%A8%E3%81%A6%E3%81%AE%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E6%8B%A1%E5%BC%B5%E5%AD%90%E3%82%92%E4%BB%98%E3%81%91%E3%82%8B%E3%81%AB%E3%81%AF%EF%BC%9F" itemprop="articleSection">デフォルトで全てのページに拡張子を付けるには？</h3><p>設定を下記のようにする。</p><pre><code class="yaml"># app/config/sculpin_kernel.yml
 sculpin:
     permalink: :basename.html
 
-</code></pre>
-
-<p>ただし、ページネーションやページ内に埋め込まれているリンクは別個修正する必要がある。</p>
-
-<h3 id="twig-extensions-%E3%82%92%E4%BD%BF%E3%81%86%E6%96%B9%E6%B3%95" itemprop="articleSection">Twig Extensions を使う方法</h3>
-
-<p><a href="http://twig.sensiolabs.org/doc/extensions/text.html">truncate</a> などを使用するために必要な <a href="http://twig.sensiolabs.org/doc/extensions/index.html">Twig Extensions</a> は <code>sculpin.phar</code> 自体には組み込まれていますが、デフォルトでは無効となっていてそのままでは利用できないようです。</p>
-
-<p>利用するには <code>app/config/sculpin_services.yml</code> を作り設定を行う必要があります。</p>
-
-<p><code>sculpin_services.yml</code> の利用方法は <a href="https://sculpin.io/documentation/bundles/SculpinPostsBundle/">SculpinPostsBundle — Sculpin — PHP Static Site Generator</a> あたりに書いてありますが、残念ながらドキュメントからのリンクが張られていないようです。</p>
-
-<p>また、残念なことに <code>sculpin_services_{ENV}.yml</code> の用な感じで環境ごとに拡張の有効/無効を切り替えて使用することは出来ないようです。</p>
-
-<pre><code class="yaml"># app/config/sculpin_services.yml
+</code></pre><p>ただし、ページネーションやページ内に埋め込まれているリンクは別個修正する必要がある。</p><h3 id="twig-extensions-%E3%82%92%E4%BD%BF%E3%81%86%E6%96%B9%E6%B3%95" itemprop="articleSection">Twig Extensions を使う方法</h3><p><a href="http://twig.sensiolabs.org/doc/extensions/text.html">truncate</a> などを使用するために必要な <a href="http://twig.sensiolabs.org/doc/extensions/index.html">Twig Extensions</a> は <code>sculpin.phar</code> 自体には組み込まれていますが、デフォルトでは無効となっていてそのままでは利用できないようです。</p><p>利用するには <code>app/config/sculpin_services.yml</code> を作り設定を行う必要があります。</p><p><code>sculpin_services.yml</code> の利用方法は <a href="https://sculpin.io/documentation/bundles/SculpinPostsBundle/">SculpinPostsBundle — Sculpin — PHP Static Site Generator</a> あたりに書いてありますが、残念ながらドキュメントからのリンクが張られていないようです。</p><p>また、残念なことに <code>sculpin_services_{ENV}.yml</code> の用な感じで環境ごとに拡張の有効/無効を切り替えて使用することは出来ないようです。</p><pre><code class="yaml"># app/config/sculpin_services.yml
 services:
     twig.extension.text:
         class: Twig_Extensions_Extension_Text
         tags:
             - { name: twig.extension }
-</code></pre>
-
-<p>と、このようなファイルを作ることで</p>
-
-<pre><code class="html">&lt;div&gt;{{ post.contents | truncate }}&lt;/div&gt;
-</code></pre>
-
-<p>このように使用することが可能になります。</p>
-
-<h2 id="%E5%8F%82%E8%80%83" itemprop="articleSection">参考</h2>
-
-<ul>
-<li><a href="https://sculpin.io/documentation/">Documentation — Sculpin — PHP Static Site Generator</a></li>
-<li><a href="http://blog.a-way-out.net/blog/2013/10/11/how-to-use-sculpin/">PHPで静的サイトを簡単に作成できるSculpin — A Day in Serenity (Reloaded) — PHP, FuelPHP, Linux or something</a></li>
-<li><a href="https://github.com/dragonmantank/solarized-sculpin">dragonmantank/solarized-sculpin</a></li>
-<li><a href="https://github.com/GhislainPhu/ghislainphu.fr/blob/29ff7d704dab9df39d586b7781c47955019c0864/app/config/sculpin_kernel.yml">ghislainphu.fr/sculpin_kernel.yml at 29ff7d704dab9df39d586b7781c47955019c0864 - GhislainPhu/ghislainphu.fr</a></li>
-<li><a href="http://twig.sensiolabs.org/doc/filters/index.html">Filters - Documentation - Twig - The flexible, fast, and secure PHP template engine</a></li>
-<li><a href="http://akasingo.com/483">Twig: 連想配列の連結</a></li>
-<li><a href="https://adamcod.es/2014/02/07/getting-started-with-sculpin.html">Getting Started With Sculpin - adamcod.es</a></li>
-<li><a href="https://github.com/andrewshell/blog.andrewshell.org">andrewshell/blog.andrewshell.org</a></li>
-<li><a href="https://sculpin.io/documentation/bundles/SculpinPostsBundle/">SculpinPostsBundle — Sculpin — PHP Static Site Generator</a></li>
-<li><a href="https://github.com/sculpin/sculpin/issues/121">Is it expected behavior that .htaccess file is not carried over from source dir to destination? - Issue #121 - sculpin/sculpin</a></li>
-</ul>
-
-        </div>
-        <hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" />
-        <footer>            <div style="line-height: 25px; height: 25px;">
-    <span style="display: inline-block; vertical-align: top;">
-        <i class="fa fa-calendar"></i>
-        <span itemprop="datePublished" content="2015-06-28">2015年06月28日</span>
+</code></pre><p>と、このようなファイルを作ることで</p><pre><code class="html">&lt;div&gt;{{ post.contents | truncate }}&lt;/div&gt;
+</code></pre><p>このように使用することが可能になります。</p><h2 id="%E5%8F%82%E8%80%83" itemprop="articleSection">参考</h2><ul><li><a href="https://sculpin.io/documentation/">Documentation — Sculpin — PHP Static Site Generator</a></li><li><a href="http://blog.a-way-out.net/blog/2013/10/11/how-to-use-sculpin/">PHPで静的サイトを簡単に作成できるSculpin — A Day in Serenity (Reloaded) — PHP, FuelPHP, Linux or something</a></li><li><a href="https://github.com/dragonmantank/solarized-sculpin">dragonmantank/solarized-sculpin</a></li><li><a href="https://github.com/GhislainPhu/ghislainphu.fr/blob/29ff7d704dab9df39d586b7781c47955019c0864/app/config/sculpin_kernel.yml">ghislainphu.fr/sculpin_kernel.yml at 29ff7d704dab9df39d586b7781c47955019c0864 - GhislainPhu/ghislainphu.fr</a></li><li><a href="http://twig.sensiolabs.org/doc/filters/index.html">Filters - Documentation - Twig - The flexible, fast, and secure PHP template engine</a></li><li><a href="http://akasingo.com/483">Twig: 連想配列の連結</a></li><li><a href="https://adamcod.es/2014/02/07/getting-started-with-sculpin.html">Getting Started With Sculpin - adamcod.es</a></li><li><a href="https://github.com/andrewshell/blog.andrewshell.org">andrewshell/blog.andrewshell.org</a></li><li><a href="https://sculpin.io/documentation/bundles/SculpinPostsBundle/">SculpinPostsBundle — Sculpin — PHP Static Site Generator</a></li><li><a href="https://github.com/sculpin/sculpin/issues/121">Is it expected behavior that .htaccess file is not carried over from source dir to destination? - Issue #121 - sculpin/sculpin</a></li></ul></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i><span itemprop="datePublished" content="2015-06-28">2015年06月28日</span>
         &nbsp;/&nbsp;
-        <i class="fa fa-history"></i> <a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2015-06-28-site-reboot-by-sculpin.md">変更履歴</a>
+        <i class="fa fa-history"></i><a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2015-06-28-site-reboot-by-sculpin.md">変更履歴</a>
         &nbsp;/&nbsp;
-        <i class="fa fa-thumb-tack"></i> <a href="/blog/2015/06/28/site-reboot-by-sculpin.html">Permalink</a>
+        <i class="fa fa-thumb-tack"></i><a href="/blog/2015/06/28/site-reboot-by-sculpin.html">Permalink</a>
         &nbsp;/&nbsp;
-    </span>
-    <meta itemprop="url" content="http://www.sharkpp.net/blog/2015/06/28/site-reboot-by-sculpin.html" />
-    <span itemprop="author" itemscope itemtype="https://schema.org/Person"
+    </span><meta itemprop="url" content="http://www.sharkpp.net/blog/2015/06/28/site-reboot-by-sculpin.html" /><span itemprop="author" itemscope itemtype="https://schema.org/Person"
           style="display: none;"
        ><span itemprop="name">sharkpp</span
-   ></span>
-    <a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2015%2F06%2F28%2Fsite-reboot-by-sculpin.html"
+   ></span><a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2015%2F06%2F28%2Fsite-reboot-by-sculpin.html"
        class="hatena-bookmark-button"
        data-hatena-bookmark-title="Sculpin でホムペを再構築したときのメモ &mdash; さめたすたすのお家"
        data-hatena-bookmark-layout="simple-balloon"
@@ -441,90 +119,24 @@ services:
       ><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png"
             alt="このエントリーをはてなブックマークに追加"
             width="20" height="20" style="border: none;" /></a
-      >
-    <a href="https://twitter.com/share" class="twitter-share-button"
-       data-url="http://www.sharkpp.net/blog/2015/06/28/site-reboot-by-sculpin.html" data-via="sharkpp">Tweet</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-</div><div style="line-height: 25px; height: 25px;">
-                                <span class="categories">
-            <i class="fa fa-folder-open"></i> カテゴリ:
-                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a>                        </span>
+      ><a href="https://twitter.com/share" class="twitter-share-button"
+       data-url="http://www.sharkpp.net/blog/2015/06/28/site-reboot-by-sculpin.html" data-via="sharkpp">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><div style="line-height: 25px; height: 25px;"><span class="categories"><i class="fa fa-folder-open"></i> カテゴリ:
+                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
         &nbsp;/&nbsp;
-                                <span class="tags">
-            <i class="fa fa-tag"></i> タグ:
-                        <a href="/blog/tags/%E9%9B%91%E8%A8%98">雑記</a>,                         <a href="/blog/tags/php">php</a>,                         <a href="/blog/tags/xrea.com">xrea.com</a>,                         <a href="/blog/tags/Sculpin">Sculpin</a>                        </span>
-        </div>
-        </footer>
-
-                    <hr style="border-top: none; border-bottom: 1px dashed #aaa; margin: 10px 0;" />
-            <nav class="article">
-                <ul class="list-unstyled row">
-                                            <li class="col-md-6 text-left"><a class="next" href="/blog/2015/07/05/how-to-japanese-html-to-markdown-in-php.html" title="PHP で日本語を含む HTML から Markdown に変換する方法"><span class="title"><i class="fa fa-chevron-left"></i> PHP で日本語を含む HTML から Markdown に変換する方法</span></a></li>
-                                                                <li class="col-md-6 text-right"><a class="previous" href="/blog/2015/06/22/fuelphp-documents-translation-month-alone.html" title="ひとり FuelPHP ドキュメント翻訳月間 お疲れ様でした"><span class="title">ひとり FuelPHP ドキュメント翻訳月間 お疲れ様でした</span> <i class="fa fa-chevron-right"></i></a></li>
-                                    </ul>
-            </nav>
-            </article>
-
-
-
-        </div>
-
-        <footer class="footer">
-            <dev class="overflow">
-                <div class="container text-center">
-                    <ul class="list-unstyled list-inline">
-                        <li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li>
-                        <li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li>
-                        <li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li>
-                        <li><i class="fa-li fa fa-ellipsis-h"></i> <a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li>
-                        <li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /blog/2015/06/28/site-reboot-by-sculpin.html"
-                                  rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li>
-                    </ul>
-                </div>
-                <div class="container text-center">
-                    <ul class="list-unstyled list-inline">
-                        <li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li>
-                        <li class="text-muted">&copy; 2004-2017 sharkpp</li>
-                    </ul>
-                </div>
-                <div class="container text-center text-muted">
-                    <ruby>
-                        <rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
-                                                            >Creative Commons Attribution 4.0 International License</a>.</rb>
-                        <rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
-                                                  >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp>
-                    </ruby>
-                </div>
-                <div class="container text-center text-muted">
-                    <ruby>
-                        <rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
-                                                                            >The MIT License</a>.</rb>
-                        <rp>(</rp><rt>さらに、コードスニペットは <a rel="nofollow" href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license"
-                                                               >MIT ライセンス</a> の下にライセンスされています。</rt><rp>)</rp>
-                    </ruby>
-                </div>
-            </div>
-        </footer>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>')</script>
-
-        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.js"></script>
-        <script>$('body').modal || document.write('<script src="/assets/bootstrap/js/bootstrap.min.js"><\/script>')</script>
-                
-                <script type="text/javascript">
+                                <span class="tags"><i class="fa fa-tag"></i> タグ:
+                        <a href="/blog/tags/%E9%9B%91%E8%A8%98">雑記</a>,                         <a href="/blog/tags/php">php</a>,                         <a href="/blog/tags/xrea.com">xrea.com</a>,                         <a href="/blog/tags/Sculpin">Sculpin</a></span></div></footer><hr style="border-top: none; border-bottom: 1px dashed #aaa; margin: 10px 0;" /><nav class="article"><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/blog/2015/07/05/how-to-japanese-html-to-markdown-in-php.html" title="PHP で日本語を含む HTML から Markdown に変換する方法"><span class="title"><i class="fa fa-chevron-left"></i> PHP で日本語を含む HTML から Markdown に変換する方法</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/blog/2015/06/22/fuelphp-documents-translation-month-alone.html" title="ひとり FuelPHP ドキュメント翻訳月間 お疲れ様でした"><span class="title">ひとり FuelPHP ドキュメント翻訳月間 お疲れ様でした</span><i class="fa fa-chevron-right"></i></a></li></ul></nav></article></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li><li><i class="fa-li fa fa-ellipsis-h"></i><a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /blog/2015/06/28/site-reboot-by-sculpin.html"
+                                  rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li></ul></div><div class="container text-center"><ul class="list-unstyled list-inline"><li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li><li class="text-muted">&copy; 2004-2017 sharkpp</li></ul></div><div class="container text-center text-muted"><ruby><rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                            >Creative Commons Attribution 4.0 International License</a>.</rb><rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                  >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp></ruby></div><div class="container text-center text-muted"><ruby><rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
+                                                                            >The MIT License</a>.</rb><rp>(</rp><rt>さらに、コードスニペットは <a rel="nofollow" href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license"
+                                                               >MIT ライセンス</a> の下にライセンスされています。</rt><rp>)</rp></ruby></div></div></footer><script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>')</script><script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.js"></script><script>$('body').modal || document.write('<script src="/assets/bootstrap/js/bootstrap.min.js"><\/script>')</script><script type="text/javascript">
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
             ga('create', 'UA-5908801-2', 'auto');
             ga('send', 'pageview');
-        </script>
-        
-        <script src="/assets/highlightjs/highlight.pack.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-
-        <script type="text/javascript">
+        </script><script src="/assets/highlightjs/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><script type="text/javascript">
             $('a img').each(function(){
                 var rel = ($(this).attr('src').match(/images\u002f([0-9_]{4}_[0-9_]{4})/i) ||
                            ['','lightbox'])[1];
@@ -533,13 +145,7 @@ services:
                     .attr('data-title', $(this).attr('alt'))
                     ;
             });
-        </script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
-        <script>$(document).ready(function(){ window.lightbox || $.getScript("/assets/lightbox2/dist/js/lightbox.min.js"); });</script>
-
-                <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.5/jquery.smooth-scroll.min.js"></script>
-        <script>$.smoothScroll || document.write('<script src="/assets/jquery-smooth-scroll/jquery.smooth-scroll.min.js"><\/script>')</script>
-        <script type="text/javascript">
+        </script><script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script><script>$(document).ready(function(){ window.lightbox || $.getScript("/assets/lightbox2/dist/js/lightbox.min.js"); });</script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.5/jquery.smooth-scroll.min.js"></script><script>$.smoothScroll || document.write('<script src="/assets/jquery-smooth-scroll/jquery.smooth-scroll.min.js"><\/script>')</script><script type="text/javascript">
             $('#toc a')
                 .each(function(){
                     var id = $(this).attr('href').slice(1);
@@ -581,19 +187,11 @@ services:
                         });
             });
             $(window).scroll();
-        </script>
-
-        <script type="text/javascript">
+        </script><script type="text/javascript">
             $(document).ready(function(){
                 // apply table to bootstrap css
                 $('table:not([class])')
                     .addClass('table table-bordered table-hover table-condensed table-striped')
                     .wrap("<div style='width:100%;overflow-x:auto;'></div>");
              });
-        </script>
-
-        <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
-
-
-    </body>
-</html>
+        </script><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></body></html>
