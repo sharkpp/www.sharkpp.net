@@ -1,14 +1,14 @@
 ---
 title: "SqaleでFuelPHPを動かしてみました"
 date: 2013-03-17 01:34:00
-update: 2017-06-02 01:50:00
+update: 2017-06-02 07:25:00
 tags: [php, FuelPHP, PaaS]
 categories: [ブログ]
 
 ---
 
 {% import 'post_alert.html' as m %}
-{{ m.alert('2017-06-02 追記', 'eXcale(エクスケール) は 2017年05月31日 にサービスの提供が終了しました。そのため下記内容は過去の参考としてのみ残してあります。') }}
+{{ m.alert('2017-06-02 追記', 'Sqaleは 2017年05月31日 にサービスの提供が終了しました。そのため下記内容は過去の参考としてのみ残してあります。') }}
 <!-- http://info.sqale.jp/?eid=105 http://archive.is/Fp1ES -->
 
 [fuelphp.jpのGoogleグループ][1]で [Sqale『無料アプリケーション1個 プレゼント』キャンペーン実施中！ | Sqale Information][2] なんてものをやってるのを知ったので早速登録してみました。(※3/17まで)
