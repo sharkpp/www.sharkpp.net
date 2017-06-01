@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+{% spaceless %}
     <head>
 {% if page.title %}
         <title>{% block title %}{{ page.title }}{% endblock %} &mdash; {{ site.title }}</title>
@@ -158,4 +159,5 @@
         {% block scripts_after %}
         {% endblock %}
     </body>
+{% endspaceless %}
 </html>
