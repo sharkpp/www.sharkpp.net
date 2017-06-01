@@ -3,11 +3,127 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/PaaS.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-06-01T03:36:48+00:00</updated>
+    <updated>2017-06-01T16:53:11+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[SqaleでFuelPHPを動かしてみました]]></title>
+            <link href="http://www.sharkpp.net/blog/2013/03/17/fuelphp-on-sqale.html"/>
+            <updated>2013-03-17T01:34:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2013/03/17/fuelphp-on-sqale.html</id>
+            <content type="html"><![CDATA[<p></p>
+<div class="alert alert-danger alert-dismissible" role="alert">
+  <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
+  <dl style="margin-bottom: 0; margin-left: 35px;">
+    <dt>2017-06-02 追記</dt>
+    <dd>eXcale(エクスケール) は 2017年05月31日 にサービスの提供が終了しました。そのため下記内容は過去の参考としてのみ残してあります。</dd>
+  </dl>
+</div>
+
+<!-- http://info.sqale.jp/?eid=105 http://archive.is/Fp1ES -->
+
+<p><a href="https://groups.google.com/group/fuelphp_jp?hl=ja">fuelphp.jpのGoogleグループ</a>で <a href="http://info.sqale.jp/?eid=33">Sqale『無料アプリケーション1個 プレゼント』キャンペーン実施中！ | Sqale Information</a> なんてものをやってるのを知ったので早速登録してみました。(※3/17まで)</p>
+
+<p>立ち上げてみたページは↓</p>
+
+<ul>
+<li>http://fuelphp-sharkpp.sqale.jp/</li>
+<li>http:/sqale.sharkpp.net/ ※独自ドメインを設定</li>
+</ul>
+
+<h2 id="%E7%99%BB%E9%8C%B2">登録</h2>
+
+<p>とりあえず、ページの手順通りにアカウントの登録とアプリケーションの登録をします。 ユーザー名とアプリケーション名を決めるのですが、公開用のURLが <code>http://{アプリケーション名}-{ユーザー名}.sqale.jp/</code> となるため、 うまいこと考えないと間抜けなアドレスになってしまいます。 独自のドメインを設定する方法もあります。</p>
+
+<p>トップページからユーザー登録します。</p>
+
+<p><a href="/images/2013_0317_sqale_01.png"><img src="/images/2013_0317_sqale_01_s.png" alt="トップページ" /></a></p>
+
+<p>Twitterやfacebook、githubのアカウントを使っての登録もできます。</p>
+
+<p><a href="/images/2013_0317_sqale_02.png"><img src="/images/2013_0317_sqale_02_s.png" alt="アカウント登録" /></a></p>
+
+<p>登録が完了するとダッシュボードが表示されるので、続けてアプリケーションも登録しましょう。</p>
+
+<p><a href="/images/2013_0317_sqale_03_dashboard.png"><img src="/images/2013_0317_sqale_03_dashboard_s.png" alt="登録直後のダッシュボード" /></a></p>
+
+<p>ここで登録したアプリケーション名は、 <code>http://{アプリケーション名}-{ユーザー名}.sqale.jp/</code> の形式で公開アドレスに使われます。 なので、適当に自分の名前とかにすると、 <code>http://sharkpp-sharkpp.sqale.jp/</code> と、間抜けな感じになります(なります、なってしまったので、一旦削除しましたorz)</p>
+
+<p><a href="/images/2013_0317_sqale_04_add_app.png"><img src="/images/2013_0317_sqale_04_add_app_s.png" alt="アプリケーションの登録" /></a></p>
+
+<p>アプリケーションも登録完了です。 準備ができても勝手にリロードされないので、指示のとおり30秒ぐらい経ったらリロードしましょう。</p>
+
+<p><a href="/images/2013_0317_sqale_05_dashboard.png"><img src="/images/2013_0317_sqale_05_dashboard_s.png" alt="アプリケーション登録直後のダッシュボード" /></a></p>
+
+<p>リロードすると、アプリケーション詳細画面が表示されます。</p>
+
+<p><a href="/images/2013_0317_sqale_06_dashboard.png"><img src="/images/2013_0317_sqale_06_dashboard_s.png" alt="アプリケーション詳細画面" /></a></p>
+
+<p>登録直後の公開用ページ</p>
+
+<p><a href="/images/2013_0317_sqale_07_all_ready.png"><img src="/images/2013_0317_sqale_07_all_ready_s.png" alt="登録直後の公開ページ" /></a></p>
+
+<p>最後に、問い合わせフォームからキャンペーンの申し込みをしておきます。</p>
+
+<p>登録完了すると、ステータスが契約状態：Freeになります。</p>
+
+<p><a href="/images/2013_0317_sqale_08_free.png"><img src="/images/2013_0317_sqale_08_free_s.png" alt="契約状態" /></a></p>
+
+<p>と、このように登録が完了したところで、本題のFuelPHPをアップします。</p>
+
+<h2 id="fuelphp%E3%82%92%E5%8B%95%E3%81%8B%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B">FuelPHPを動かしてみる</h2>
+
+<p>サポートページの<a href="https://sqale.jp/support/manual/fuelphp">Sqale - Sqale で FuelPHP を利用する</a>に やり方が書いてあるので参考にします。 とりあえず、SFTPで転送してみます。</p>
+
+<p>自分は、<a href="http://winscp.net/">WinSCP</a>を使っているのでこいつで転送しました。 ログイン情報はダッシュボードのアプリケーション詳細に書かれています。</p>
+
+<p><a href="/images/2013_0317_sqale_09_dashboard.png"><img src="/images/2013_0317_sqale_09_dashboard_s.png" alt="アプリケーション詳細画面２" /></a></p>
+
+<p>これで、しばらくすると、ダッシュボード上で、「ビルドを開始」→「ビルドが完了」→「デプロイを開始」→「デプロイが完了」と表示されるので、 ページをリロードすると確認できると思います。 SFTPの転送に時間がかかりますが簡単ですね！</p>
+
+<p><a href="/images/2013_0317_sqale_10_fuelphp.png"><img src="/images/2013_0317_sqale_10_fuelphp_s.png" alt="公開ページ" /></a></p>
+
+<p>さて、デフォルトではdevelopment環境になってるので、環境変数を設定してproduction環境にします、、、と思ったのだけれど、まだうまく動作しないみたいです。 問い合わせたら、もうすぐ動くようになるとのことなので期待しましょう。</p>
+
+<h2 id="git%E3%81%A7%E3%81%AE%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4">gitでのデプロイ</h2>
+
+<p>gitでのデプロイは、ダッシュボードからSFTPではなくGITを選択することでできます。</p>
+
+<p><a href="/images/2013_0317_sqale_13_git.png"><img src="/images/2013_0317_sqale_13_git_s.png" alt="git" /></a></p>
+
+<p>選択をするとgitのアドレスが表示されるので git clone や git add remote などを使って関連付けます。 認証は公開鍵の使用を前提としているので予め公開鍵をアップしておきます。</p>
+
+<p><a href="https://sqale.jp/support/manual/getting-started-win">Sqale - Getting Started for Windows</a>の先頭あたりが参考になります。</p>
+
+<p><a href="/images/2013_0317_sqale_14_dashboard.png"><img src="/images/2013_0317_sqale_14_dashboard_s.png" alt="ダッシュボード" /></a></p>
+
+<h2 id="%E7%8B%AC%E8%87%AA%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E3%81%AE%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6">独自ドメインの割り当て</h2>
+
+<p><em>-</em>.sqale.jp ではなく、独自ドメインで公開したい場合は、</p>
+
+<p><a href="/images/2013_0317_sqale_11_domain.png"><img src="/images/2013_0317_sqale_11_domain_s.png" alt="ドメインの割り当て" /></a></p>
+
+<p><a href="/images/2013_0317_sqale_12_domain.png"><img src="/images/2013_0317_sqale_12_domain_s.png" alt="ドメインの割り当て" /></a></p>
+
+<p>で設定して、DNSのCNAMEで、設定すると公開できます。</p>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<ul>
+<li>SFTPやGIT、SSHなどデータのアップ方法が選べる</li>
+<li>FuelPHPも簡単に動かせる</li>
+<li>公開用のディレクトリ外部にファイルが置ける</li>
+<li>独自ドメインが指定できる</li>
+<li>.htaccess が機能していないっぽい</li>
+<li>環境変数を設定できない(FUEL_ENVの指定やデータベースのパスワードの指定など) ※後日対応予定とのこと</li>
+<li>メンテナンスモードがない(これは一般的な機能なんだろうか？)</li>
+</ul>
+
+<p>と、少し痒いところに手が届かない感じではありますが、サービスの公開用としても十分な感じがします。</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[eXcaleでFuelPHPをpublicサブディレクトリなしで動かしてみた(追記あり)]]></title>
             <link href="http://www.sharkpp.net/blog/2013/02/17/fuelphp-on-excale.html"/>
