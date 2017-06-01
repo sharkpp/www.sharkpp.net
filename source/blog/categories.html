@@ -16,6 +16,6 @@ use:
 <a href="{{ site.url }}/blog/categories/{{ category|url_encode(true) }}"
    class="btn btn-default {{ 50 < posts|length ? 'btn-lg' : 20 < posts|length ? '' : 5 < posts|length ? 'btn-sm' : 'btn-xs' }}"
    style="margin-bottom: 5px"
-   >{{ category }}{% if posts|length > 1 %} <span class="badge">{{ posts|length }}</span>{% endif %}</a>
+   >{{ category }}{% if posts|length > 1 %} <span class="badge">{{ posts|length }}</span>{% endif %}</a>&nbsp;
 {% endfor %}
 </div>
