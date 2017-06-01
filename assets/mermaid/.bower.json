@@ -3,14 +3,16 @@
     "authors": [
         "knsv <knut@sveido.com>"
     ],
-    "description": "Markdownish syntax for generating flowcharts, sequence diagrams and gantt charts.",
+    "description": "Markdownish syntax for generating flowcharts, sequence diagrams, class diagrams, gantt charts and git graphs.",
     "main": "dist/mermaid.slim.js",
     "keywords": [
         "diagram",
         "markdown",
         "flowchart",
         "sequence diagram",
-        "gantt"
+        "gantt",
+        "class diagram",
+        "git graph"
     ],
     "license": "MIT",
     "ignore": [
@@ -25,5 +27,5 @@
         "d3": "3.3.8",
         "dagre-d3": "0.3.3"
     },
-    "version": "7.0.0"
+    "version": "7.0.2"
 }
