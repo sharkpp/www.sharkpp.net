@@ -383,8 +383,8 @@ products:
 <div>
     <div id="products-content" class="tiles-wrap animated">
         
-{% for product in page.products %}
-<div class="panel panel-default" style="width: 210px;" data-filter-class='["{{ product.tags | join('","') | raw }}"]'>
+{% for product in page.products %}<div
+    class="panel panel-default" style="width: 210px;" data-filter-class='["{{ product.tags | join('","') | raw }}"]'>
   <div class="panel-heading">
 {% if product.detail %}
     <h3 class="panel-title"><a style="color: #337ab7;" href="{{ product.detail }}">{{ product.name }}</a></h3>
@@ -416,8 +416,8 @@ products:
 {% endif %}
     </ul>
   </div>
-</div>&nbsp;
-{% endfor %}
+</div
+>&nbsp;{% endfor %}
 
   </div>
 </div>

@@ -12,10 +12,10 @@ use:
 {% for k,v in data.posts_tags   %}{% set tags = tags | merge({(k):v}) %}{% endfor %}
 
 <div>
-{% for tag,posts in tags %}
-<a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}"
+{% for tag,posts in tags %}<a
+  href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}"
    class="btn btn-default {{ 50 < posts|length ? 'btn-lg' : 20 < posts|length ? '' : 5 < posts|length ? 'btn-sm' : 'btn-xs' }}"
    style="margin-bottom: 5px"
-   >{{ tag }}{% if posts|length > 1 %} <span class="badge">{{ posts|length }}</span>{% endif %}</a>&nbsp;
-{% endfor %}
+   >{{ tag }}{% if posts|length > 1 %} <span class="badge">{{ posts|length }}</span>{% endif %}</a
+>&nbsp;{% endfor %}
 </div>
