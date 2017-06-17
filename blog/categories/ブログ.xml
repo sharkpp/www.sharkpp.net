@@ -3,11 +3,85 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-06-02T03:37:10+00:00</updated>
+    <updated>2017-06-17T14:02:10+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[じゅげむったーの開発日記 その３]]></title>
+            <link href="http://www.sharkpp.net/blog/2017/06/17/jugemutter-development-diary-3rd.html"/>
+            <updated>2017-06-17T22:57:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2017/06/17/jugemutter-development-diary-3rd.html</id>
+            <content type="html"><![CDATA[<p>さて、先月に引き続いて今月も参加した <a href="https://qt-users.connpass.com/event/58337/">Qt 勉強会 @ Nagoya No9(17.06) - connpass</a> のまとめ。</p>
+
+<p>今回も長文投稿専用Twitterクライアントの開発の続きをしました。
+そろそろ終わらせたいです...</p>
+
+<p>レポジトリは ... <a href="https://github.com/sharkpp/Jugemutter">sharkpp/Jugemutter: 長文投稿専用クライアント「じゅげむったー」</a> です。</p>
+
+<p><img src="/images/2017_0617_jugemutter1.png" alt="画面" /></p>
+
+<h2 id="%E9%80%B2%E6%8D%97">進捗</h2>
+
+<p>とりあえず、作ってた設定画面ができて、設定した内容も保存できたぞ！</p>
+
+<p><img src="/images/2017_0617_jugemutter1.png" alt="設定画面" /></p>
+
+<p>投稿画面の本文前後のテキストも表示できるようになったし、</p>
+
+<p><img src="/images/2017_0617_jugemutter2.png" alt="投稿画面" /></p>
+
+<p>インストーラ作るの？って聞かれた。
+たしかに、配布どうするか、って問題はある。</p>
+
+<p><a href="https://booth.pm/ja/items/122098">インストーラを作ろう！</a> を持ってたはずなので、それを参考にやってみようかとは思ってる。</p>
+
+<h2 id="%E3%81%9D%E3%81%AE%E4%BB%96%E3%83%A1%E3%83%A2">その他メモ</h2>
+
+<h3 id="%E3%83%87%E3%83%BC%E3%82%BF%E3%83%90%E3%82%A4%E3%83%B3%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">データバインディングについて</h3>
+
+<p>データバインディングは QML の方が Widget より素直？直感的？で実装が楽、らしい。</p>
+
+<p>QML は、かなり昔( <a href="https://github.com/sharkpp/TaskMemGraph">sharkpp/TaskMemGraph: sample of QtQuick2 application</a> )に触ってそれっきりなので、また色々覚えないとダメかもしれないけど、 Android とか iOS のアプリ作るなら Widget よりも最近は QML っぽいので、またやってみようと思う。</p>
+
+<p>そういえば、 <a href="https://github.com/sharkpp/TaskMemGraph">TaskMemGraph</a> っていまビルド通るのだろうか？</p>
+
+<h3 id="%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E6%A7%8B%E6%88%90">ディレクトリ構成</h3>
+
+<p>ファイル数増えて困る、って問題。</p>
+
+<p>何かキッチリ答えがあるわけでもないけど、</p>
+
+<ul>
+<li>機能ごと</li>
+<li>モジュールごと</li>
+</ul>
+
+<p>みたいな感じで良いのでは、とアドバイス。</p>
+
+<h3 id="qt-%E6%9C%AC%E4%BD%93%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">Qt 本体について</h3>
+
+<p>Qt 5.9 は、ある人曰く、アップデートしても大丈夫なバージョンな気がする、とのこと。</p>
+
+<p>LTS(=Long Term Support)版だけあって、最初から安定しているのかも。</p>
+
+<h3 id="qtcretor-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">QtCretor について</h3>
+
+<p>QtCretor 4.3.0 はどうも動作が怪しい部分があるらしい（自分はまだ 4.2.1 なので、あくまでらしい）。</p>
+
+<p>前のバージョン、 4.2.1 では大丈夫だけど、ある機能のメニューをクリックしても反応しなかったり、クラスを追加しても、プロジェクトビューに追加されなかったり（再起動すると追加されている）、など。</p>
+
+<p>Qt 5.9 に付属の QtCretor 4.3.1 は大丈夫かも？と言う話。
+なお QtCretor 4.3.1 はこの記事を書いている時点では、単体でのダウンロードはできないようです。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://www.qt.io/download-open-source/#section-9">Qt - Download Open Source Step 3</a></li>
+</ul>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[じゅげむったーの開発日記 その２]]></title>
             <link href="http://www.sharkpp.net/blog/2017/05/20/jugemutter-development-diary-2nd.html"/>
@@ -1058,367 +1132,6 @@ Wineで開発完了を整えたのが功を奏したのかもしれないです�
 <p>来年はもうちょっとなんとかしたいな、と言うあたりで今年の反省会終了です。</p>
 
 <p>来年もよろしくお願いしますです。</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Hot Soup Processor Advent Calendar 2016 まとめ]]></title>
-            <link href="http://www.sharkpp.net/blog/2016/12/25/hsp-advent-calendar-2016-25th-day.html"/>
-            <updated>2016-12-25T15:40:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2016/12/25/hsp-advent-calendar-2016-25th-day.html</id>
-            <content type="html"><![CDATA[<p>こんにちは、こんばんは。</p>
-
-<p><a href="http://qiita.com/advent-calendar/2016/hsp">Hot Soup Processor Advent Calendar 2016</a> の 最終日を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p>
-
-<p>まず始めに、呼びかけに応え Hot Soup Processor Advent Calendar 2016 へご参加いただいた11名の皆様に深く感謝を。</p>
-
-<p>今回、多分 HSP 史上初の Advent Calendar を開催して見ましたが、それのまとめ的なものを最後に投稿してみようかと思います。</p>
-
-<h2 id="%E6%8A%95%E7%A8%BF%E3%81%95%E3%82%8C%E3%81%9F%E8%A8%98%E4%BA%8B%E3%81%AE%E4%B8%80%E8%A6%A7">投稿された記事の一覧</h2>
-
-<table>
-<thead>
-<tr>
-  <th>日付</th>
-  <th>執筆者</th>
-  <th>記事</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>12/01</td>
-  <td><a href="http://qiita.com/sharkpp">sharkpp</a></td>
-  <td><a href="http://www.sharkpp.net/blog/2016/12/01/hsp-advent-calendar-2016-1st-day.html">macOS と Wine で作る HSP 3 の開発環境</a></td>
-</tr>
-<tr>
-  <td>12/02</td>
-  <td><a href="http://qiita.com/mjhd-devlion">mjhd-devlion</a></td>
-  <td><a href="http://qiita.com/mjhd-devlion/items/375ea9894294919380fd">Linux・MacでVimでHSP開発</a></td>
-</tr>
-<tr>
-  <td>12/03</td>
-  <td><a href="http://qiita.com/ptr-yudai">ptr-yudai</a></td>
-  <td><a href="http://qiita.com/ptr-yudai/items/3b834cd1765adb17ba96">HSP3のチート対策いろいろ -メモリハック編-</a></td>
-</tr>
-<tr>
-  <td>12/04</td>
-  <td><a href="http://qiita.com/theoldmoon0602">theoldmoon0602</a></td>
-  <td><a href="http://furutsuki.hatenablog.com/entry/2016/12/03/231056">hsp初心者なのでゲーム作った</a></td>
-</tr>
-<tr>
-  <td>12/05</td>
-  <td><a href="http://qiita.com/exrd">exrd</a></td>
-  <td><a href="http://qiita.com/exrd/items/8bc0be17a15ff77d3754">HSPで8パズルを高速に解くまで</a></td>
-</tr>
-<tr>
-  <td>12/06</td>
-  <td><a href="http://qiita.com/skymonsters_Ks">skymonsters_Ks</a></td>
-  <td><a href="http://uchitsukushi2.hatenablog.jp/entry/advent-calendar-2016-hsp-06">Notepad++でHSPスクリプトを編集・実行できるようにする</a></td>
-</tr>
-<tr>
-  <td>12/07</td>
-  <td><a href="http://qiita.com/y_tack">y_tack</a></td>
-  <td><a href="http://qiita.com/y_tack/items/b31b039ba236d962cf32">えたーなってる中のHSP製インタプリタについてとか</a></td>
-</tr>
-<tr>
-  <td>12/08</td>
-  <td><a href="http://qiita.com/zerogen_gre">zerogen_gre</a></td>
-  <td><a href="http://hspcube.blogspot.jp/2016/12/hsp.html">HSPでマップ表示</a></td>
-</tr>
-<tr>
-  <td>12/09</td>
-  <td><a href="http://qiita.com/hato">hato</a></td>
-  <td><a href="http://qiita.com/hato/items/7b720e87a408a6ab147a">HSPTV部門でのstart.ax削減術</a></td>
-</tr>
-<tr>
-  <td>12/10</td>
-  <td><a href="http://qiita.com/YSRKEN">YSRKEN</a></td>
-  <td><a href="http://qiita.com/YSRKEN/items/c3a69959c88cc56785a1">HSPで画像処理する際の覚書</a></td>
-</tr>
-<tr>
-  <td>12/11</td>
-  <td><a href="http://qiita.com/ptr-yudai">ptr-yudai</a></td>
-  <td><a href="http://qiita.com/ptr-yudai/items/d1583e3206eca1637fea">HSPのチート対策いろいろ -セーブデータ編-</a></td>
-</tr>
-<tr>
-  <td>12/12</td>
-  <td><a href="http://qiita.com/hato">hato</a></td>
-  <td><a href="http://qiita.com/hato/items/0d509766e62817da413c">HSPTV部門でのランキング機能活用術</a></td>
-</tr>
-<tr>
-  <td>12/13</td>
-  <td><a href="http://qiita.com/Jbox_sandbag">Jbox_sandbag</a></td>
-  <td><a href="http://hspboxinggame.blogspot.jp/2013/03/o2.html">O2システムの思い出</a></td>
-</tr>
-<tr>
-  <td>12/14</td>
-  <td><a href="http://qiita.com/kureikei">kureikei</a></td>
-  <td><a href="http://pronama.azurewebsites.net/2016/12/14/hsp3dish/">HSP3Dish で iOS アプリ開発を体験！</a></td>
-</tr>
-<tr>
-  <td>12/16</td>
-  <td><a href="http://qiita.com/skymonsters_Ks">skymonsters_Ks</a></td>
-  <td><a href="http://qiita.com/skymonsters_Ks/items/ad28c7a21ea55d2bbed8">HSPプログラムコンテストを振り返る</a></td>
-</tr>
-<tr>
-  <td>12/25</td>
-  <td><a href="http://qiita.com/sharkpp">sharkpp</a></td>
-  <td><a href="http://www.sharkpp.net/blog/2016-12-25-hsp-advent-calendar-2016-25th-day.html">Hot Soup Processor Advent Calendar 2016 まとめ</a></td>
-</tr>
-</tbody>
-</table>
-
-<h2 id="%E7%B5%90%E6%9E%9C">結果</h2>
-
-<p><code>執筆率 = 16 / 25 = 64%</code></p>
-
-<p>どのぐらいの日付が記事で埋まっているかの割合です。</p>
-
-<p>やはり、投稿募集の開始時期も直前だったことや、日付を詰めてもらった影響か最終週が丸々抜けてしまったのが響いているようですね。</p>
-
-<p>ただ、半分は超えたので、来年はもう少し記事を書いてもらえるように根回しとかもしてみようかと思います。</p>
-
-<p>まあ、来年も自分が主催？するならばですけど。</p>
-
-<p><code>参加率 = 12 / 25 = 48%</code></p>
-
-<p>これは、どのぐらいの人が記事を投稿しているかの割合です。</p>
-
-<p>空きがあったので、ツイートした所、何人かの人は２回目の投稿をしていただいたようで、実際の投稿よりも参加人数は少なっています。</p>
-
-<p><code>参加率 = 12 / 16 = 75%</code></p>
-
-<p>これは、投稿済みの記事に対してどのぐらいの人が記事を投稿しているかの割合です。</p>
-
-<p>一人、一投稿であれば <code>100%</code> で、一人で Advent Calendar な場合は <code>4%</code> になります。</p>
-
-<h2 id="%E6%8A%95%E7%A8%BF%E3%81%95%E3%82%8C%E3%81%9F%E8%A8%98%E4%BA%8B%E3%81%AE%E5%88%86%E9%A1%9E">投稿された記事の分類</h2>
-
-<p><strong>独断と偏見で</strong>カテゴライズ</p>
-
-<table>
-<thead>
-<tr>
-  <th>カテゴリ</th>
-  <th>1</th>
-  <th>2</th>
-  <th>3</th>
-  <th>4</th>
-  <th>5</th>
-  <th>6</th>
-  <th>7</th>
-  <th>8</th>
-  <th>9</th>
-  <th>10</th>
-  <th>11</th>
-  <th>12</th>
-  <th>13</th>
-  <th>14</th>
-  <th>16</th>
-  <th>25</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>環境構築</td>
-  <td>★</td>
-  <td>★</td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td>★</td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-</tr>
-<tr>
-  <td>初心者向け</td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td>★</td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td>★</td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-</tr>
-<tr>
-  <td>HSP プログラムコンテスト</td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td>★</td>
-  <td></td>
-  <td></td>
-  <td>★</td>
-  <td></td>
-  <td></td>
-  <td>★</td>
-  <td></td>
-</tr>
-<tr>
-  <td>HSP Dish</td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td>★</td>
-  <td></td>
-  <td></td>
-</tr>
-<tr>
-  <td>macOS</td>
-  <td>★</td>
-  <td>★</td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td>★</td>
-  <td></td>
-  <td></td>
-</tr>
-<tr>
-  <td>チート対策</td>
-  <td></td>
-  <td></td>
-  <td>★</td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td>★</td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-</tr>
-<tr>
-  <td>アルゴリズム</td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td>★</td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td>★</td>
-  <td></td>
-  <td>★</td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-</tr>
-<tr>
-  <td>その他</td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td>★</td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td>★</td>
-  <td></td>
-  <td>★</td>
-  <td>★</td>
-</tr>
-</tbody>
-</table>
-
-<h2 id="%E6%B3%A8%E7%9B%AE%E8%A8%98%E4%BA%8B">注目記事</h2>
-
-<p><strong>独断と偏見により</strong>、今回の Advent Calendar での注目記事を選びました。</p>
-
-<p>あっ、紹介の順番がイコールで順位ということではありません。</p>
-
-<ul>
-<li><p>10日目の記事「<a href="http://qiita.com/YSRKEN/items/c3a69959c88cc56785a1">HSPで画像処理する際の覚書</a>」</p>
-
-<p>画像処理に関して、標準命令での操作やArtlet2D、HSPCVごとの動作の違い、動作速度などをソースコードを交えながら詳細に解説する記事となっています。</p>
-
-<p>VRAM操作は、ある意味、初心者から中級者への壁の一つかなとも思います。
-まあ、手入れイヤーな操作が必要なのはどうなんだと思わなくもないですが、どうなんでしょうね。
-HSPCVといえば実装がされたHSP公開数日後(もしかしたら翌日かも)に、それを使った顔認識を作っり、どこかに公開したような記憶がありますが、さてどこへ行ったんだろう。</p></li>
-<li><p>11日目の記事「<a href="http://qiita.com/ptr-yudai/items/d1583e3206eca1637fea">HSPのチート対策いろいろ -セーブデータ編-</a>」</p>
-
-<p>ゲームを作る場合に気になる所である、セーブデータの保護の方法の一案をソースコードを交えながら解説してくれる記事となっています。</p>
-
-<p>初めてスコア改ざん検知機能を持ったHSPのゲームを見たのは <a href="http://www.vector.co.jp/soft/win95/game/se093109.html">GEO SHOOTERS</a>でしたね。
-ゲームで遊びつつ、セーブデータの解析をしたりとなかなか無茶なことをしていました。</p></li>
-<li><p>16日の記事「<a href="http://qiita.com/skymonsters_Ks/items/ad28c7a21ea55d2bbed8">HSPプログラムコンテストを振り返る - Qiita</a>」</p>
-
-<p>今年も含めた、HSPプログラムコンテストの歴史を、参加作品数の統計や考察を交え振り返る記事となっています。</p>
-
-<p>参加作品数のグラフを見るとだんだんと下降気味なのが残念ですね。
-近年は洗練された作品も多いですが、上位入賞者も若干固定化されてきている感じで、新しい風がもっと吹いて欲しいなと思ったり、その辺りも少し残念かなと思わなくもないです。
-あくまで印象ですが。</p></li>
-</ul>
-
-<p>それ以外の記事も、HSPの魅力を教えてくれたり、またHSPのこれまでの歩みを教えてくれる良い記事だと思いました。</p>
-
-<h2 id="%E6%9C%80%E5%BE%8C%E3%81%AB">最後に</h2>
-
-<p>改めて、<a href="http://qiita.com/advent-calendar/2016/hsp">Hot Soup Processor Advent Calendar 2016</a> にご参加いただきました皆様、そして記事を呼んでくださいました読者の方々に感謝を。</p>
-
-<p><strong>メリークリスマス！</strong></p>
-
-<hr />
-
-<p>この投稿は <strong><a href="http://qiita.com/advent-calendar/2016/hsp">Hot Soup Processor Advent Calendar 2016</a></strong> の <strong>25日目</strong>の記事です。</p>
-
-<ul>
-<li>16日目の記事: <a href="http://qiita.com/skymonsters_Ks/items/ad28c7a21ea55d2bbed8">HSPプログラムコンテストを振り返る</a></li>
-</ul>
-
-<hr />
 ]]></content>
         </entry>
     </feed>

@@ -3,11 +3,85 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/%E3%81%98%E3%82%85%E3%81%92%E3%82%80%E3%81%A3%E3%81%9F%E3%83%BC.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-06-02T03:37:40+00:00</updated>
+    <updated>2017-06-17T14:02:42+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[じゅげむったーの開発日記 その３]]></title>
+            <link href="http://www.sharkpp.net/blog/2017/06/17/jugemutter-development-diary-3rd.html"/>
+            <updated>2017-06-17T22:57:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2017/06/17/jugemutter-development-diary-3rd.html</id>
+            <content type="html"><![CDATA[<p>さて、先月に引き続いて今月も参加した <a href="https://qt-users.connpass.com/event/58337/">Qt 勉強会 @ Nagoya No9(17.06) - connpass</a> のまとめ。</p>
+
+<p>今回も長文投稿専用Twitterクライアントの開発の続きをしました。
+そろそろ終わらせたいです...</p>
+
+<p>レポジトリは ... <a href="https://github.com/sharkpp/Jugemutter">sharkpp/Jugemutter: 長文投稿専用クライアント「じゅげむったー」</a> です。</p>
+
+<p><img src="/images/2017_0617_jugemutter1.png" alt="画面" /></p>
+
+<h2 id="%E9%80%B2%E6%8D%97">進捗</h2>
+
+<p>とりあえず、作ってた設定画面ができて、設定した内容も保存できたぞ！</p>
+
+<p><img src="/images/2017_0617_jugemutter1.png" alt="設定画面" /></p>
+
+<p>投稿画面の本文前後のテキストも表示できるようになったし、</p>
+
+<p><img src="/images/2017_0617_jugemutter2.png" alt="投稿画面" /></p>
+
+<p>インストーラ作るの？って聞かれた。
+たしかに、配布どうするか、って問題はある。</p>
+
+<p><a href="https://booth.pm/ja/items/122098">インストーラを作ろう！</a> を持ってたはずなので、それを参考にやってみようかとは思ってる。</p>
+
+<h2 id="%E3%81%9D%E3%81%AE%E4%BB%96%E3%83%A1%E3%83%A2">その他メモ</h2>
+
+<h3 id="%E3%83%87%E3%83%BC%E3%82%BF%E3%83%90%E3%82%A4%E3%83%B3%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">データバインディングについて</h3>
+
+<p>データバインディングは QML の方が Widget より素直？直感的？で実装が楽、らしい。</p>
+
+<p>QML は、かなり昔( <a href="https://github.com/sharkpp/TaskMemGraph">sharkpp/TaskMemGraph: sample of QtQuick2 application</a> )に触ってそれっきりなので、また色々覚えないとダメかもしれないけど、 Android とか iOS のアプリ作るなら Widget よりも最近は QML っぽいので、またやってみようと思う。</p>
+
+<p>そういえば、 <a href="https://github.com/sharkpp/TaskMemGraph">TaskMemGraph</a> っていまビルド通るのだろうか？</p>
+
+<h3 id="%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E6%A7%8B%E6%88%90">ディレクトリ構成</h3>
+
+<p>ファイル数増えて困る、って問題。</p>
+
+<p>何かキッチリ答えがあるわけでもないけど、</p>
+
+<ul>
+<li>機能ごと</li>
+<li>モジュールごと</li>
+</ul>
+
+<p>みたいな感じで良いのでは、とアドバイス。</p>
+
+<h3 id="qt-%E6%9C%AC%E4%BD%93%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">Qt 本体について</h3>
+
+<p>Qt 5.9 は、ある人曰く、アップデートしても大丈夫なバージョンな気がする、とのこと。</p>
+
+<p>LTS(=Long Term Support)版だけあって、最初から安定しているのかも。</p>
+
+<h3 id="qtcretor-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">QtCretor について</h3>
+
+<p>QtCretor 4.3.0 はどうも動作が怪しい部分があるらしい（自分はまだ 4.2.1 なので、あくまでらしい）。</p>
+
+<p>前のバージョン、 4.2.1 では大丈夫だけど、ある機能のメニューをクリックしても反応しなかったり、クラスを追加しても、プロジェクトビューに追加されなかったり（再起動すると追加されている）、など。</p>
+
+<p>Qt 5.9 に付属の QtCretor 4.3.1 は大丈夫かも？と言う話。
+なお QtCretor 4.3.1 はこの記事を書いている時点では、単体でのダウンロードはできないようです。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://www.qt.io/download-open-source/#section-9">Qt - Download Open Source Step 3</a></li>
+</ul>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[じゅげむったーの開発日記 その２]]></title>
             <link href="http://www.sharkpp.net/blog/2017/05/20/jugemutter-development-diary-2nd.html"/>
