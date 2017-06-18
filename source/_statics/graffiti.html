@@ -3,8 +3,19 @@ layout: default
 title: 落書き
 permalink: graffiti/index.html
 date: 2015-05-01 00:00
+update: 2017-06-18 11:23
 category: ["graffiti"]
 graffities:
+  -
+    caption: favicon
+    description: "アバター 2017/06"
+    thumbnail: "../images/avatar/pokecom201706_.png"
+    download: ["../images/avatar/pokecom201706.png"]
+  -
+    caption: favicon
+    description: 旧アバター
+    thumbnail: "../images/avatar/pokecom_.png"
+    download: ["../images/avatar/pokecom.png"]
   -
     caption: favicon
     description: 謎生物
@@ -187,6 +198,7 @@ graffities:
 {% endif %}
           <div class="contenthover">
               <div class="toolbar btn-group-vertical pull-right" role="group">
+{% if graffiti.image %}
                 <a href="{{ site.url }}/graffiti/{{ graffiti.image }}"
                     class="btn btn-sm btn-default"
                     data-lightbox="xxx"
@@ -196,6 +208,9 @@ graffities:
                     title="{{ graffiti.caption }}"
 {% endif %}
                     ><i class="fa fa-search-plus fa-2x"></i
+{% else %}
+                <a href="" style="display: none"
+{% endif %}
 {% if graffiti.download %}
                 ></a
                 ><a href="{{ site.url }}/graffiti/{{ graffiti.download[0] }}"
