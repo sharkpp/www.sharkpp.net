@@ -1,7 +1,7 @@
 ---
 title: "Xperia Touch 開封の儀"
 date: 2017-06-27 00:30
-update: 2017-06-27 00:45
+update: 2017-06-28 12:28
 tags: [雑記, 開封の儀, Android, Android Tablet, Xperia, プロジェクター]
 categories: [ブログ]
 
@@ -53,6 +53,8 @@ XPERIA な起動ロゴ
 [<img src="{{ thumbnail('/images/2017_0627_xperia_touch_09.png', 455, 455) }}" alt="画面の大きさ">](/images/2017_0627_xperia_touch_09.png)
 
 中身は Android 7.0 のタブレットの模様
+
+[<img src="{{ thumbnail('/images/2017_0627_xperia_touch_10.png', 455, 455) }}" alt="Androidのバージョン">](/images/2017_0627_xperia_touch_10.png)
 
 ## お絵描きして見た
 
