@@ -2,7 +2,7 @@
 title: "Xperia Touch 開封の儀"
 date: 2017-06-27 00:30
 update: 2017-06-28 12:28
-tags: [雑記, 開封の儀, Android, Android Tablet, Xperia, プロジェクター]
+tags: [雑記, 開封の儀, Android, Android Tablet, Xperia, Xperia Touch, プロジェクター]
 categories: [ブログ]
 
 ---
