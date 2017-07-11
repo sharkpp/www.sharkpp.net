@@ -1,12 +1,15 @@
 ---
 title: "じゅげむったーの開発日記 その３"
 date: 2017-06-17 22:57
+update: 2017-07-11 23:43
 tags: [Qt, Twitter, OAuth, C++, cpp, 勉強会, 開発日記, じゅげむったー]
 categories: [ブログ]
 
 ---
 
 さて、先月に引き続いて今月も参加した [Qt 勉強会 @ Nagoya No9(17.06) - connpass](https://qt-users.connpass.com/event/58337/) のまとめ。
+
+つぶやきは [Qt勉強会 Tokyo #48 + @Nagoya #9 つぶやきまとめ](https://togetter.com/li/1127556) でまとめられています。
 
 今回も長文投稿専用Twitterクライアントの開発の続きをしました。
 そろそろ終わらせたいです...
