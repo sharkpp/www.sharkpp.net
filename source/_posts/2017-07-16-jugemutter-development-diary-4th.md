@@ -1,6 +1,7 @@
 ---
 title: "じゅげむったーの開発日記 その４"
 date: 2017-07-16 18:10
+update: 2017-07-22 14:32
 tags: [Qt, Twitter, OAuth, C++, cpp, 開発日記, じゅげむったー]
 categories: [ブログ]
 
@@ -38,7 +39,7 @@ Apple 的には `[Sheet](https://developer.apple.com/library/content/documentati
 
 こんな感じでリストの下部に追加や削除のボタンがついているやつ。
 
-これは Apple 的には...なんて機能なんだろう？一度見つけたけど、見失った。
+これは Apple 的には `NSAddTemplate` と `NSRemoveTemplate` って言うらしい。
 
 この機能はどうやら実装されていないようなので、レイアウトとボタンをそれらしく配置することで再現するしかない様です。
 まあ、Windows や Linux でも同じ機能にしたいなら、そちらの方が良いかもですね。
@@ -241,3 +242,4 @@ QToolBar QToolButton:pressed {
 * [How to stop child widgets from inheriting parent's StyleSheet and use system default?](http://www.qtcentre.org/threads/14099-How-to-stop-child-widgets-from-inheriting-parent-s-StyleSheet-and-use-system-default)
 * [c++ - Connecting overloaded signals and slots in Qt 5 - Stack Overflow](https://stackoverflow.com/questions/16794695/connecting-overloaded-signals-and-slots-in-qt-5)
 * [[QTBUG-12717] Background color for QToolBar is not stylable on Mac - Qt Bug Tracker](https://bugreports.qt.io/browse/QTBUG-12717)
+* [cocoa - NSTableView with Plus and Minus buttons - Stack Overflow](https://stackoverflow.com/questions/10706357/nstableview-with-plus-and-minus-buttons)
