@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/Twitter.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-07-16T09:14:42+00:00</updated>
+    <updated>2017-07-22T05:35:29+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -44,7 +44,7 @@
 
 <p>こんな感じでリストの下部に追加や削除のボタンがついているやつ。</p>
 
-<p>これは Apple 的には...なんて機能なんだろう？一度見つけたけど、見失った。</p>
+<p>これは Apple 的には <code>NSAddTemplate</code> と <code>NSRemoveTemplate</code> って言うらしい。</p>
 
 <p>この機能はどうやら実装されていないようなので、レイアウトとボタンをそれらしく配置することで再現するしかない様です。
 まあ、Windows や Linux でも同じ機能にしたいなら、そちらの方が良いかもですね。</p>
@@ -239,6 +239,7 @@ QToolBar QToolButton:pressed {
 <li><a href="http://www.qtcentre.org/threads/14099-How-to-stop-child-widgets-from-inheriting-parent-s-StyleSheet-and-use-system-default">How to stop child widgets from inheriting parent's StyleSheet and use system default?</a></li>
 <li><a href="https://stackoverflow.com/questions/16794695/connecting-overloaded-signals-and-slots-in-qt-5">c++ - Connecting overloaded signals and slots in Qt 5 - Stack Overflow</a></li>
 <li><a href="https://bugreports.qt.io/browse/QTBUG-12717">[QTBUG-12717] Background color for QToolBar is not stylable on Mac - Qt Bug Tracker</a></li>
+<li><a href="https://stackoverflow.com/questions/10706357/nstableview-with-plus-and-minus-buttons">cocoa - NSTableView with Plus and Minus buttons - Stack Overflow</a></li>
 </ul>
 ]]></content>
         </entry>
