@@ -3,11 +3,70 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/atom.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-07-22T05:35:09+00:00</updated>
+    <updated>2017-08-22T16:53:18+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[じゅげむったーの開発日記 その５]]></title>
+            <link href="http://www.sharkpp.net/blog/2017/08/23/jugemutter-development-diary-5th.html"/>
+            <updated>2017-08-23T01:50:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2017/08/23/jugemutter-development-diary-5th.html</id>
+            <content type="html"><![CDATA[<p>さて、今月も引き続き参加した <a href="https://qt-users.connpass.com/event/62861/">Qt 勉強会 @ Nagoya No11 - connpass</a> のまとめ。</p>
+
+<p>先月の勉強会から日付(YY.MM)が付かなくなりました。</p>
+
+<p>さて、今回も長文投稿専用Twitterクライアントの開発の続きをしました。</p>
+
+<p>レポジトリは ... <a href="https://github.com/sharkpp/Jugemutter">sharkpp/Jugemutter: 長文投稿専用クライアント「じゅげむったー」</a> です。</p>
+
+<p><img src="/images/2017_0819_jugemutter1.png" alt="画面" /></p>
+
+<h2 id="%E9%80%B2%E6%8D%97">進捗</h2>
+
+<p><img src="/images/2017_0819_jugemutter2.png" alt="テスト画面" /></p>
+
+<p>とりあえず、分割処理のいろんなパターンのテストがやっと通ったので、ようやく一山越えた感じです。
+ここまで長かった。</p>
+
+<p>で、<code>Could not authenticate you.</code> がなぜか出る、と。
+これは、<a href="https://dev.twitter.com/overview/api/response-codes">Error Codes &amp; Responses — Twitter Developers</a> によると、『<ruby>ダイヤルしても通話を完了できませんでした。<rp>(</rp><rt>Your call could not be completed as dialed.</rt><rp>)</rp></ruby>』って意味らしい。</p>
+
+<h2 id="wireshark-%E3%81%A7-https-%E3%81%AE%E4%B8%AD%E8%BA%AB%E3%81%AE%E7%A2%BA%E8%AA%8D">Wireshark で https の中身の確認</h2>
+
+<p>Twitter の API への指示がおかしいらしいので、なんとか調べられないかとググってた所、Wiresharkでhttpsの中身が確認できるとの記事を発見。</p>
+
+<pre><code># SSLKEYLOGFILE=~/tls_key.log {ChromeやFirefox、cURLなどのパス}
+</code></pre>
+
+<p>で起動し、Wireshark で</p>
+
+<p><img src="/images/2017_0819_https_decrypt_in_wireshark.png" alt="Wireshark" /></p>
+
+<p>と、このような設定をすれば良いらしい。</p>
+
+<p>が、解析画面</p>
+
+<p><img src="/images/2017_0819_wireshark.png" alt="Wireshark" /></p>
+
+<p>を見ても、<code>Decrypted SSL Data</code> なんてタブはもちろん、<code>Frame</code> などのタブも表示されて居ないので、もしかしてUIがQtベースになった時に何か変わったのかもしれない。</p>
+
+<p>あと、そもそもの問題、Qtの通信を覗きたいわけだから、Qtで使えないと意味がないんだけど、使えるのだろうか？</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://qiita.com/Hexa/items/ce0ac23526df12a64ad0">暗号化された Application Data を復号する - Qiita</a></li>
+<li><a href="https://f-o.org.uk/2017/decrypting-https-traffic-without-a-key.html">Floating Octothorpe: Decrypting HTTPS traffic without a key</a></li>
+<li><a href="https://serverfault.com/questions/263530/how-can-i-filter-https-when-monitoring-traffic-with-wireshark">How can I filter https when monitoring traffic with Wireshark? - Server Fault</a></li>
+<li><a href="http://troushoo.blog.fc2.com/blog-entry-234.html">Wireshark を用いて、クライアント側の情報のみでHTTPS 通信を複合する方法</a></li>
+<li><a href="http://qiita.com/toshihirock/items/acbf9800f7e784118e46">HTTPSのパケットをwiresharkで見てみる - Qiita</a></li>
+<li><a href="https://gist.github.com/summerwind/a482dd1f8e9887d26199">Wireshark で HTTP/2 over TLS の通信をダンプする方法</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/Key_Log_Format">NSS Key Log Format - Mozilla | MDN</a></li>
+</ul>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[じゅげむったーの開発日記 その４]]></title>
             <link href="http://www.sharkpp.net/blog/2017/07/16/jugemutter-development-diary-4th.html"/>
@@ -1248,147 +1307,6 @@ API ドキュメントをよく読むと確かに書いてあったけど、見�
 <li><a href="http://www.slideshare.net/ginpei_jp/dropbox-api-39190004">Dropbox APIさわってみた</a> ※情報が古いっぽい</li>
 <li><a href="https://gist.github.com/voluntas/fe9394ce56ef4a305aa14168c09a3991">Dropbox API v2 仕様まとめ · GitHub</a></li>
 <li><a href="https://www.dropbox.com/developers/documentation/http/documentation">HTTP - Developers - Dropbox</a></li>
-</ul>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[はじめての Qt Network Authorization]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/01/28/first-impression-qt-network-authorization.html"/>
-            <updated>2017-01-28T16:50:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/01/28/first-impression-qt-network-authorization.html</id>
-            <content type="html"><![CDATA[<p>先日、ちょうど「<a href="https://mag.osdn.jp/17/01/25/161000">設定を統合した「Qt 5.8」が登場 | OSDN Magazine</a>」の記事が目に入り、ふんふんと読んでいたところで、Qt Lite も気になりましたが、それよりも OAuth 2 と OAuth 2 に対応した <a href="https://doc.qt.io/qt-5/qtnetworkauth-index.html">Qt Network Authorization</a> が技術プレビューで追加、と書かれていたので軽く試して見ました。</p>
-
-<p>と言うことで、新しくなってから２回目の参加になる <a href="https://qt-users.connpass.com/event/48608/">Qt 勉強会 @ Nagoya No4(17.01)</a> は、Qt Network Authorization を触って見ることにしました。</p>
-
-<p>※ <a href="https://togetter.com/li/1092291">Qt 勉強会 @ Nagoya No4(17.01) - Togetterまとめ</a> で当日のつぶやきがまとめられています。</p>
-
-<p>結論を先に言うと、 <strong>Qt Network Authorization</strong> は簡単に OAuth 認証をアプリケーションへ組み込めるようです。</p>
-
-<p>気になる点としては、</p>
-
-<ul>
-<li>ドキュメントが少ない</li>
-<li>認証が通った後「Callback received. Feel free to close this page.」と書かれたページがブラウザで開いたままになる。
-
-<ul>
-<li>これは自動で閉じてほしい</li>
-</ul></li>
-<li>コールバックを受け取るためにポートを自動で開くのでファイヤーウォールなどでブロックしていると失敗する</li>
-</ul>
-
-<p>などですが、まあ現状は技術プレビューの段階なので正式版までになんとかなっていてほしいなと。</p>
-
-<h2 id="%E3%81%BE%E3%81%9A%E5%A7%8B%E3%82%81%E3%81%AB">まず始めに</h2>
-
-<p>まあ、大前提として、Qt Network Authorization を利用するには Qt 5.8 以降が必要となります。</p>
-
-<p>次に <a href="http://doc.qt.io/qt-5/qtnetworkauth-index.html">Qt Network Authorization 5.8</a> を参考に、</p>
-
-<p>.pro に</p>
-
-<pre><code>QT += network networkauth
-</code></pre>
-
-<p>と追加しましょう。</p>
-
-<p>あとは、 Twitter なり Tumblr なりなんなりへ、アプリケーションを登録して OAuth Consumer Key と Secret Key を取得しておきましょう。
-この時、コールバックURLを書く必要がある場合は、適当なアドレスを書いておけば問題ありません。</p>
-
-<h2 id="%E6%B5%81%E3%82%8C">流れ</h2>
-
-<p>最低限のプログラムの流れです。</p>
-
-<p>OAuth 1.x なら QOAuth1 クラスを基底クラスにして処理を実装していけば良いようです。</p>
-
-<p>今回は、 Tumblr で試していたので OAuth 1.0a 対応の QOAuth1 を触りますが、 QOAuth2 でも多分大体同じだと思います。</p>
-
-<p>ただ、 QOAuth1 のドキュメントがないので <a href="http://doc.qt.io/qt-5/qabstractoauth.html">QAbstractOAuth</a> クラスのドキュメントで我慢しましょう。</p>
-
-<h3 id="url%E3%81%AE%E7%99%BB%E9%8C%B2">URLの登録</h3>
-
-<p>とりあえず３種類のURLを登録する必要があります。</p>
-
-<table>
-<thead>
-<tr>
-  <th>メソッド</th>
-  <th>URL例</th>
-  <th>説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>setTemporaryCredentialsUrl</td>
-  <td>https://api.twitter.com/oauth/request_token<br/>https://www.tumblr.com/oauth/request_token</td>
-  <td>トークンの要求</td>
-</tr>
-<tr>
-  <td>setAuthorizationUrl</td>
-  <td>https://api.twitter.com/oauth/authenticate<br/>https://www.tumblr.com/oauth/authorize</td>
-  <td>認証</td>
-</tr>
-<tr>
-  <td>setTokenCredentialsUrl</td>
-  <td>https://api.twitter.com/oauth/access_token<br/>https://www.tumblr.com/oauth/access_token</td>
-  <td>アクセストークン取得</td>
-</tr>
-</tbody>
-</table>
-
-<p>いずれも <code>QAbstractOAuth</code> クラスの public メンバメソッドです。</p>
-
-<p>ここに変なのを指定すると <code>QOAuthOobReplyHandler::networkReplyFinished: Protocol "" is unknown</code> と言われたりします。</p>
-
-<h3 id="consumer-key-%E3%81%A8-secret-key-%E3%81%AE%E6%8C%87%E5%AE%9A">Consumer Key と Secret Key の指定</h3>
-
-<p>OAuth Consumer Key と Secret Key を指定します。
-これ自体の扱いはいろいろ厄介なのですが、とりあえずそれは置いておきます。</p>
-
-<p><code>QOAuth1.setClientCredentials()</code> に <code>QPair&lt;QString, QString&gt;</code> で指定します。</p>
-
-<p><code>QPair&lt;QString, QString&gt;().first</code> は Consumer Key で</p>
-
-<p><code>QPair&lt;QString, QString&gt;().second</code> は Secret Key です。</p>
-
-<h3 id="%E8%AA%8D%E8%A8%BC%E8%A6%81%E6%B1%82">認証要求</h3>
-
-<p>ここまで設定できたら <code>grant()</code> を呼ぶことで、認証手続きが開始されます。</p>
-
-<h3 id="%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%A7%E3%81%AE%E8%AA%8D%E8%A8%BC%E8%A6%81%E6%B1%82%E3%81%AE%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB">ブラウザでの認証要求のシグナル</h3>
-
-<p><code>grant()</code> を呼ぶと <code>QAbstractOAuth::authorizeWithBrowser</code> シグナルが飛んでくるので、あらかじめスロットで受け取れるようにしておきましょう。</p>
-
-<p><a href="http://doc.qt.io/qt-5/qabstractoauth.html#authorizeWithBrowser">QAbstractOAuth::authorizeWithBrowser</a> の中で引数に指定されたURLをウェブブラウザで開くことでいつも利用しているブラウザを用いた認証ができるような仕組みになっています。</p>
-
-<p>ただ、この処理を実現するために、アプリケーション自身でポートをリッスンし、そのアドレスをコールバックとして指定しているようで、ファイヤーウォールなどでブロックされる可能性があるので注意が必要です。</p>
-
-<h3 id="%E8%AA%8D%E8%A8%BC%E5%AE%8C%E4%BA%86%E3%81%AE%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB">認証完了のシグナル</h3>
-
-<p>認証が完了すると <a href="http://doc.qt.io/qt-5/qabstractoauth.html#grant">QOAuth1::granted</a> シグナルが飛ぶので、必要に応じてメッセージを出すなり、UIを有効化させるなりで利用できると思います。</p>
-
-<p>一応、認証後にはアクセストークンも取れるので、それを保存しておけば次回以降は認証が必要なくなると思いますが、すこし試したところうまくいきませんでした。</p>
-
-<h3 id="api%E3%82%92%E5%91%BC%E3%81%B6">APIを呼ぶ</h3>
-
-<p>ここまできたら、後は簡単で <code>QAbstractOAuth</code> に含まれるメンバメソッドの get() / head() / post() を呼ぶだけで、非同期でコンテンツが取得できます。</p>
-
-<p>要求アドレスへ <code>api_key</code> などというパラメータをユーザーがつける必要はないので扱いやすいと思います。</p>
-
-<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
-
-<ul>
-<li><strong>Qt Network Authorization</strong> は簡単に OAuth 認証をアプリケーションへ組み込めそう</li>
-<li>サンプルがあるからまあなんとかなりそう</li>
-<li>ツイッター連携とか実装するのが簡単になるね！</li>
-</ul>
-
-<h2 id="%E5%8F%82%E8%80%83">参考</h2>
-
-<ul>
-<li><a href="https://doc.qt.io/qt-5/qtnetworkauth-index.html">Qt Network Authorization 5.8</a></li>
-<li><a href="https://doc-snapshots.qt.io/qt5-5.8/examples-qtnetworkauth.html">Qt Network Authorization Examples | Qt Network Authorization 5.8</a></li>
-<li><a href="http://code.qt.io/cgit/qt/qtnetworkauth.git/">qt/qtnetworkauth.git - Qt Network Authenticators; QtOAuth in particular</a></li>
-<li><a href="http://www.sharkpp.net/blog/2014/03/30/oauth-providers-list.html">oAuth 認証を提供しているサービスをまとめてみました — さめたすたすのお家</a></li>
 </ul>
 ]]></content>
         </entry>

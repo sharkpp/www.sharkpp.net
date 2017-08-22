@@ -3,11 +3,70 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/C%2B%2B.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-07-22T05:35:29+00:00</updated>
+    <updated>2017-08-22T16:53:38+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[じゅげむったーの開発日記 その５]]></title>
+            <link href="http://www.sharkpp.net/blog/2017/08/23/jugemutter-development-diary-5th.html"/>
+            <updated>2017-08-23T01:50:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2017/08/23/jugemutter-development-diary-5th.html</id>
+            <content type="html"><![CDATA[<p>さて、今月も引き続き参加した <a href="https://qt-users.connpass.com/event/62861/">Qt 勉強会 @ Nagoya No11 - connpass</a> のまとめ。</p>
+
+<p>先月の勉強会から日付(YY.MM)が付かなくなりました。</p>
+
+<p>さて、今回も長文投稿専用Twitterクライアントの開発の続きをしました。</p>
+
+<p>レポジトリは ... <a href="https://github.com/sharkpp/Jugemutter">sharkpp/Jugemutter: 長文投稿専用クライアント「じゅげむったー」</a> です。</p>
+
+<p><img src="/images/2017_0819_jugemutter1.png" alt="画面" /></p>
+
+<h2 id="%E9%80%B2%E6%8D%97">進捗</h2>
+
+<p><img src="/images/2017_0819_jugemutter2.png" alt="テスト画面" /></p>
+
+<p>とりあえず、分割処理のいろんなパターンのテストがやっと通ったので、ようやく一山越えた感じです。
+ここまで長かった。</p>
+
+<p>で、<code>Could not authenticate you.</code> がなぜか出る、と。
+これは、<a href="https://dev.twitter.com/overview/api/response-codes">Error Codes &amp; Responses — Twitter Developers</a> によると、『<ruby>ダイヤルしても通話を完了できませんでした。<rp>(</rp><rt>Your call could not be completed as dialed.</rt><rp>)</rp></ruby>』って意味らしい。</p>
+
+<h2 id="wireshark-%E3%81%A7-https-%E3%81%AE%E4%B8%AD%E8%BA%AB%E3%81%AE%E7%A2%BA%E8%AA%8D">Wireshark で https の中身の確認</h2>
+
+<p>Twitter の API への指示がおかしいらしいので、なんとか調べられないかとググってた所、Wiresharkでhttpsの中身が確認できるとの記事を発見。</p>
+
+<pre><code># SSLKEYLOGFILE=~/tls_key.log {ChromeやFirefox、cURLなどのパス}
+</code></pre>
+
+<p>で起動し、Wireshark で</p>
+
+<p><img src="/images/2017_0819_https_decrypt_in_wireshark.png" alt="Wireshark" /></p>
+
+<p>と、このような設定をすれば良いらしい。</p>
+
+<p>が、解析画面</p>
+
+<p><img src="/images/2017_0819_wireshark.png" alt="Wireshark" /></p>
+
+<p>を見ても、<code>Decrypted SSL Data</code> なんてタブはもちろん、<code>Frame</code> などのタブも表示されて居ないので、もしかしてUIがQtベースになった時に何か変わったのかもしれない。</p>
+
+<p>あと、そもそもの問題、Qtの通信を覗きたいわけだから、Qtで使えないと意味がないんだけど、使えるのだろうか？</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://qiita.com/Hexa/items/ce0ac23526df12a64ad0">暗号化された Application Data を復号する - Qiita</a></li>
+<li><a href="https://f-o.org.uk/2017/decrypting-https-traffic-without-a-key.html">Floating Octothorpe: Decrypting HTTPS traffic without a key</a></li>
+<li><a href="https://serverfault.com/questions/263530/how-can-i-filter-https-when-monitoring-traffic-with-wireshark">How can I filter https when monitoring traffic with Wireshark? - Server Fault</a></li>
+<li><a href="http://troushoo.blog.fc2.com/blog-entry-234.html">Wireshark を用いて、クライアント側の情報のみでHTTPS 通信を複合する方法</a></li>
+<li><a href="http://qiita.com/toshihirock/items/acbf9800f7e784118e46">HTTPSのパケットをwiresharkで見てみる - Qiita</a></li>
+<li><a href="https://gist.github.com/summerwind/a482dd1f8e9887d26199">Wireshark で HTTP/2 over TLS の通信をダンプする方法</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/Key_Log_Format">NSS Key Log Format - Mozilla | MDN</a></li>
+</ul>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[じゅげむったーの開発日記 その４]]></title>
             <link href="http://www.sharkpp.net/blog/2017/07/16/jugemutter-development-diary-4th.html"/>
@@ -1048,109 +1107,6 @@ API ドキュメントをよく読むと確かに書いてあったけど、見�
 <h2 id="%E6%87%87%E8%A6%AA%E4%BC%9A">懇親会</h2>
 
 <p>手羽先＆ピザ 美味しかったです。</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[名古屋Qt勉強会#9に参加しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2013/07/13/qt-nagoya-9.html"/>
-            <updated>2013-07-13T22:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2013/07/13/qt-nagoya-9.html</id>
-            <content type="html"><![CDATA[<p><a href="http://www.zusaar.com/event/826006">名古屋Qt勉強会#9 7/13 on Zusaar</a></p>
-
-<p>名古屋Qt勉強会 #9 に参加しました。</p>
-
-<h3 id="%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B">自己紹介</h3>
-
-<p>集まったメンバーで自己紹介</p>
-
-<h3 id="qt-for-android">Qt for Android</h3>
-
-<p>発表者：<a href="https://twitter.com/IoriAYANE">@IoriAYANE</a></p>
-
-<p>正式採用に近づくQt for AndroidでQt Quickアプリを作る</p>
-
-<h4 id="%E5%BF%85%E8%A6%81%E3%81%AA%E7%89%A9">必要な物</h4>
-
-<ul>
-<li>Qt</li>
-<li>Android SDK</li>
-<li>Android NDK</li>
-<li>Apach Ant 1.8 以上</li>
-<li>Open JDS v6 以上 or JDK 7</li>
-</ul>
-
-<p>QtCreator で CTRL+K 押して ?Android で確認できる</p>
-
-<p>設定すると設定ダイアログがすごく重くなる！</p>
-
-<p>プロジェクトは Qt Quick2 を選ぶ！ するとAndroidが選べる</p>
-
-<p>Qtのライブラリはアプリ自体に組み込むようになったのでアプリのサイズが大きくなった！ 共有ライブラリを使うようにもできるけどそのままapkで配布すると悲惨なことに、、、</p>
-
-<p>Androidでのマルティメディアファイルの参照方法はよくわからない。</p>
-
-<p>Qt Quick2 で簡単にゲームも作れる！</p>
-
-<h3 id="raspberrypi%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6qt%E3%81%A7%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3">RaspberryPiを使ってQtでプレゼン</h3>
-
-<p>発表者：<a href="https://twitter.com/sazus">@sazus</a></p>
-
-<p>プレゼンは持ち歩く時代！</p>
-
-<p>qml-presentation-system でプレゼン</p>
-
-<ul>
-<li><a href="https://gitorious.org/bakeqtpi">bakeqtpi - Gitorious</a></li>
-<li><a href="https://github.com/sazus/miso-ni-qtpi">sazus/miso-ni-qtpi - GitHub</a></li>
-</ul>
-
-<p>Qt.labs.presentation プラグインを import することでプレゼン用の Slide エレメントなどが使えるようになる</p>
-
-<p>プレゼンというよりプログラムしてる感じ、、、</p>
-
-<h3 id="qt%E3%81%A7%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86">Qtでウェブサービスを作ろう</h3>
-
-<p>発表者：<a href="https://twitter.com/task_jp">@task_jp</a></p>
-
-<p>とりあえずJavaもphpもなんやかんやも覚えるの大変なのでサーバーもクライアントもQtで</p>
-
-<p>サーバーサイドは C++ で書きたくないしオーバースペック！</p>
-
-<p><a href="http://silk.qtquick.me/">silk - simple and flexible web framework</a></p>
-
-<p>33分だけUbuntuが起動して自由にさわれる→ <a href="http://instantserver.io">Instant Server</a></p>
-
-<p>作ってみたサービス→<a href="http://tweet2pocket.com/">Tweet2Pocket</a></p>
-
-<h3 id="qplanet%E3%81%AE%E4%BD%9C%E6%88%90%E3%81%AB%E6%8C%91%E6%88%A6%E4%B8%AD">QPlanetの作成に挑戦中</h3>
-
-<p>発表者：<a href="https://twitter.com/hermit4">@hermit4</a></p>
-
-<p><a href="http://www.planetplanet.org/">Planet Feed Reader</a></p>
-
-<p>QtでXMLを扱う方法は３種類</p>
-
-<ul>
-<li>QXmlStreamReader/Writer(QtCore)</li>
-<li>QtXml</li>
-<li>QtXmlPaterns(XQuery実装)</li>
-</ul>
-
-<p>XQuery は XPath で Dom を操作できる テンプレートを定義することで読み出した内容を使って別の内容として出すことができる。</p>
-
-<h3 id="%E3%82%82%E3%81%8F%E3%82%82%E3%81%8F">もくもく</h3>
-
-<p>以下もくもく</p>
-
-<p>Qtのインストールを何度もやり直しつつhspideをやっとMacでビルド通るようにしました。</p>
-
-<p>アイコンが表示されてなかったので <a href="http://www.dotapon.sakura.ne.jp/blog/?p=776">MacアプリのRetina対応アイコン(*.icns)を作成する方法 | DOTAPON Blog</a> や <a href="http://qt-project.org/doc/qt-4.8/appicon.html">Setting the Application Icon | Documentation | Qt Project</a> あたりを見ながらやってみたけどうまく行かなかったところで終了。</p>
-
-<h3 id="%E6%87%87%E8%A6%AA%E4%BC%9A">懇親会</h3>
-
-<p>手羽先＆ピザ</p>
-
-<p>もぐもぐおいしかったです。</p>
 ]]></content>
         </entry>
     </feed>
