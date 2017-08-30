@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/Twitter.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-08-30T15:54:25+00:00</updated>
+    <updated>2017-08-30T16:04:29+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -50,7 +50,7 @@
 
 <p><img src="/images/2017_0819_wireshark.png" alt="Wireshark" /></p>
 
-<p>を見ても、 ~~<code>Decrypted SSL Data</code> なんてタブはもちろん、<code>Frame</code> などのタブも表示されていないので、もしかしてUIがQtベースになった時に何か変わったのかもしれない。~~</p>
+<p>を見ても、 <del><code>Decrypted SSL Data</code> なんてタブはもちろん、<code>Frame</code> などのタブも表示されていないので、もしかしてUIがQtベースになった時に何か変わったのかもしれない。</del></p>
 
 <p><img src="/images/2017_0831_wireshark.png" alt="Wireshark" /></p>
 
