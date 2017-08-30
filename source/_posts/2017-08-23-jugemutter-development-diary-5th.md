@@ -45,7 +45,7 @@ Twitter の API への指示がおかしいらしいので、なんとか調べ�
 
 ![Wireshark](/images/2017_0819_wireshark.png)
 
-を見ても、 ~~`Decrypted SSL Data` なんてタブはもちろん、`Frame` などのタブも表示されていないので、もしかしてUIがQtベースになった時に何か変わったのかもしれない。~~
+を見ても、 <del>`Decrypted SSL Data` なんてタブはもちろん、`Frame` などのタブも表示されていないので、もしかしてUIがQtベースになった時に何か変わったのかもしれない。</del>
 
 ![Wireshark](/images/2017_0831_wireshark.png)
 
