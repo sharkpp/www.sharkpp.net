@@ -9,6 +9,8 @@ categories: [ブログ]
 
 さて、今月も引き続き参加した [Qt 勉強会 @ Nagoya No11 - connpass](https://qt-users.connpass.com/event/62861/) のまとめ。
 
+つぶやきは [Qt 勉強会 @ Nagoya No11 つぶやきまとめ - Togetterまとめ](https://togetter.com/li/1146658) でまとめられています。
+
 先月の勉強会から日付(YY.MM)が付かなくなりました。
 
 さて、今回も長文投稿専用Twitterクライアントの開発の続きをしました。
