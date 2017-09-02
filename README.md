@@ -1,8 +1,8 @@
 # www.sharkpp.net
 
-Processing completed 2763 files in  seconds.
+Processing completed 2267 files in 217.7683 seconds.
 
-Build completed on 2017-08-30 16:04:34.
+Build completed on 2017-09-02 09:50:14.
 
 ## License
 
