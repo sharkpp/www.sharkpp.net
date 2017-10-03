@@ -132,6 +132,26 @@ GNU gettext の `.po` と `.mo` との関係と同じですね。
 QtCreator のメニューから「ツール」→「外部」と辿り「翻訳をリリース(lrelease)」を実行します。
 これで `.ts` から `.qm` へと変換します。
 
+### 起動確認
+
+実際に翻訳できているかどうかは、ロケールを切り替えると確認できます。
+
+普通に起動すると……
+
+![日本語版](/images/2017_0930_jugemutter_jp.png)
+
+こう。
+
+言語を英語にすると……
+
+```console
+# LANG=en_US.UTF-8 open ./Jugemutter.app
+```
+
+![英語版](/images/2017_0930_jugemutter_en.png)
+
+こうなります。
+
 ## 参考
 
 * [Twitterアカウント凍結解除方法と申請入力例](https://kazuto-yoshida.com/twitter-unfreeze-application.html)
