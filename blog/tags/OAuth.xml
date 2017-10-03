@@ -3,16 +3,16 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/OAuth.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-10-03T16:11:20+00:00</updated>
+    <updated>2017-10-03T16:16:52+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[じゅげむったーの開発日記 その７]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/10/03/jugemutter-development-diary-7th.html"/>
-            <updated>2017-10-03T01:05:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/10/03/jugemutter-development-diary-7th.html</id>
+            <link href="http://www.sharkpp.net/blog/2017/10/04/jugemutter-development-diary-7th.html"/>
+            <updated>2017-10-04T01:05:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2017/10/04/jugemutter-development-diary-7th.html</id>
             <content type="html"><![CDATA[<p>前回に引き続き <a href="https://qt-users.connpass.com/event/67390/">Qt 勉強会 @ Nagoya No13 一区切り会 - connpass</a> に参加しました。
 とりあえず、今回でもくもく会は一旦一区切りとなるので、このあとはボチボチと進めていこうかなと思います。</p>
 
