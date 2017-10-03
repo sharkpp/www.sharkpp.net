@@ -3,11 +3,149 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/Twitter.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-09-27T03:44:59+00:00</updated>
+    <updated>2017-10-03T16:11:20+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[じゅげむったーの開発日記 その７]]></title>
+            <link href="http://www.sharkpp.net/blog/2017/10/03/jugemutter-development-diary-7th.html"/>
+            <updated>2017-10-03T01:05:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2017/10/03/jugemutter-development-diary-7th.html</id>
+            <content type="html"><![CDATA[<p>前回に引き続き <a href="https://qt-users.connpass.com/event/67390/">Qt 勉強会 @ Nagoya No13 一区切り会 - connpass</a> に参加しました。
+とりあえず、今回でもくもく会は一旦一区切りとなるので、このあとはボチボチと進めていこうかなと思います。</p>
+
+<p>レポジトリは ... <a href="https://github.com/sharkpp/Jugemutter">sharkpp/Jugemutter: 長文投稿専用クライアント「じゅげむったー」</a> となります。</p>
+
+<p>画面は、多言語対応をしたので載っけます。</p>
+
+<p><img src="/images/2017_0930_jugemutter_jp.png" alt="日本語版" /></p>
+
+<p>次はなんちゃっての英語版です。</p>
+
+<p><img src="/images/2017_0930_jugemutter_en.png" alt="英語版" /></p>
+
+<h2 id="twitter-api-%E3%81%A7-%22could-not-authenticate-you.%22-%E3%81%8C%E5%87%BA%E3%82%8B">Twitter API で "Could not authenticate you." が出る</h2>
+
+<p>Twitter API への要求で <code>Could not authenticate you.</code> とレスポンスが返ってくる件、HMACとかの計算を手動でやって検証しようかと考えたけど、そうだその前に、Qtのバグトラッカーで登録ないか、と、探して見たら...</p>
+
+<p><a href="https://bugreports.qt.io/browse/QTBUG-61125">[QTBUG-61125] QOAuth1 creates an invalid signature for percent encoded query - Qt Bug Tracker</a></p>
+
+<p>まさに、ドンピシャなものが、４ヶ月も前の 5/31 に報告が上がっていました。</p>
+
+<p>それでもって、修正完了の 5.9.2 でリリースらしい。</p>
+
+<p><a href="https://wiki.qt.io/Qt_5.9_Release">Qt 5.9 Release - Qt Wiki</a> によると、この記事を書いている時点では <code>September 2017</code> に公開予定らしいので、もう少し待つ必要があるみたい。</p>
+
+<p>まあ、今回の教訓は先にバグトラッカーを探すべきだったのかなぁと、言うこと。</p>
+
+<h2 id="%E3%80%90%E6%82%B2%E5%A0%B1%E3%80%91%E3%81%98%E3%82%85%E3%81%92%E3%82%80%E3%81%A3%E3%81%9F%E3%83%BC%E7%94%A8twitter%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%8C%E5%87%8D%E7%B5%90%E3%81%95%E3%82%8C%E3%81%A6%E3%81%9F%E4%BB%B6%E3%80%90%E3%81%84%E3%81%A4%E3%81%AE%E3%81%BE%E3%81%AB%E3%80%91">【悲報】じゅげむったー用Twitterアカウントが凍結されてた件【いつのまに】</h2>
+
+<p>とりあえず、APIの要求は、Qtのバグが原因で特定文字で必ずエラーが返ってくるらしいので、とりあえず諦めて他のことを進めることにしました。</p>
+
+<p>で、何をやろうかと考えたところで、せっかくマルチアカウント管理を実装したので試してみようと久しぶりにサブ垢（公式垢として利用しようと登録したもの）へログインしたところ...</p>
+
+<p><img src="/images/2017_0930_twitter_frozen_acctount.png" alt="凍結済みアカウント(再現)" /></p>
+
+<p>ん？ んん？ は？ と、凍結！？ 
+※ スクショは撮り忘れたので当時の状況を可能な限り再現しています</p>
+
+<p>と、言うわけで、何時のまにか今流行り（？）の凍結祭りに参加していたようです。
+とりあえず、慌てて解除方法をググり、凍結の解除申請をしました。</p>
+
+<p>そして、30分後...</p>
+
+<p><img src="/images/2017_0930_twitter_thawed_account.png" alt="凍結解除" /></p>
+
+<p>ほっ。</p>
+
+<p>ヘッダー画像やプロフィール画像、あとは本垢への相互フォロー、そして鍵垢と、諸々設定しました。</p>
+
+<h2 id="%E5%A4%9A%E8%A8%80%E8%AA%9E%E5%AF%BE%E5%BF%9C">多言語対応</h2>
+
+<p>Qt で .ts / .qm でのラベルなどの多言語対応、昔々もやった記憶があるけど、忘却の彼方に近いので、改めて調べた。</p>
+
+<h3 id="%E8%A8%80%E8%AA%9E%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E6%8C%87%E5%AE%9A">言語ファイルの指定</h3>
+
+<p><code>.pro</code> を開き、言語ファイルのパスを設定。パスは適時読み替えてください。
+ 複数言語ある場合は、、スペース区切りで後ろに追加します。</p>
+
+<pre><code class="ini">     :
+TRANSLATIONS = src/i18n/ja_JP.ts
+     :
+</code></pre>
+
+<h3 id="%E7%BF%BB%E8%A8%B3%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF">翻訳ファイルの読み込み</h3>
+
+<p>起動時に現在のロケールを元に言語ファイルを読み込む処理を実装します。</p>
+
+<p><code>.qm</code> ファイルはアプリケーションのリソースとして埋め込み、そこから読むようにしています。</p>
+
+<pre><code class="cpp">            :
+    // 翻訳
+    QString locale = QLocale::system().name();
+    QTranslator translator;
+    translator.load(locale, ":/i18n");
+    a.installTranslator(&amp;translator);
+            :
+</code></pre>
+
+<p><code>locale</code> の値は、日本語環境だったら <code>ja_JP</code> です。</p>
+
+<p>リソースへの登録はこんな感じ</p>
+
+<p><img src="/images/2017_0930_qm_in_qrc.png" alt="qmファイルのqrcへの登録" /></p>
+
+<h3 id="%E7%BF%BB%E8%A8%B3%E5%AF%BE%E8%B1%A1%E3%81%AE%E6%8C%87%E5%AE%9A">翻訳対象の指定</h3>
+
+<p>まずは、翻訳したいものを <a href="http://doc.qt.io/qt-5/qobject.html#tr"><code>tr(...)</code></a> で囲います。</p>
+
+<pre><code class="diff">     if (tweetQueue.isEmpty()) {
+          finishPost();
+ -        QMessageBox::information(this, qAppName(), "投稿を完了しました。");
+ +        QMessageBox::information(this, qAppName(), tr("Your post has been completed."));
+          return;
+      }
+</code></pre>
+
+<p>こんな感じ。</p>
+
+<h3 id="%E7%BF%BB%E8%A8%B3%E5%AF%BE%E8%B1%A1%E3%81%AE%E6%8A%BD%E5%87%BA">翻訳対象の抽出</h3>
+
+<p>QtCreator のメニューから「ツール」→「外部」と辿り「翻訳を更新(lupdate)」を実行します。</p>
+
+<p><img src="/images/2017_0930_qtcreator_extrnal_tools_linguist.png" alt="翻訳を更新" /></p>
+
+<p>すると、 先ほど、<code>tr(...)</code> で囲った部分や <code>.ui</code> ファイルから翻訳対象が抽出されファイルへ書き出されます。
+ソース側の記述が変わった時は、同じように「翻訳を更新(lupdate)」を実行すると、変更が適用されます。</p>
+
+<h3 id="%E7%BF%BB%E8%A8%B3">翻訳</h3>
+
+<p>Linguist を起動し</p>
+
+<p><img src="/images/2017_0930_linguist.png" alt="Linguist" /></p>
+
+<p>抽出された文字列を翻訳していきます。</p>
+
+<h3 id="qt-message-file-format-%E3%82%92%E3%83%93%E3%83%AB%E3%83%89">Qt message file format をビルド</h3>
+
+<p><code>.ts</code> を <code>.qm</code> (Qt message file format)へと変換します。
+GNU gettext の <code>.po</code> と <code>.mo</code> との関係と同じですね。</p>
+
+<p>QtCreator のメニューから「ツール」→「外部」と辿り「翻訳をリリース(lrelease)」を実行します。
+これで <code>.ts</code> から <code>.qm</code> へと変換します。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://kazuto-yoshida.com/twitter-unfreeze-application.html">Twitterアカウント凍結解除方法と申請入力例</a></li>
+<li><a href="https://forum.qt.io/topic/57863/solved-how-to-embed-qm-translation-files-into-executable">[solved]How to embed qm translation files into executable | Qt Forum</a></li>
+<li><a href="https://github.com/wireshark/wireshark/tree/master/ui/qt">wireshark/ui/qt at master · wireshark/wireshark</a></li>
+<li><a href="http://doc.qt.io/qt-5/qtlinguist-hellotr-example.html">Hello tr() Example | Qt Linguist Manual</a></li>
+</ul>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[じゅげむったーの開発日記 その６]]></title>
             <link href="http://www.sharkpp.net/blog/2017/09/27/jugemutter-development-diary-6th.html"/>

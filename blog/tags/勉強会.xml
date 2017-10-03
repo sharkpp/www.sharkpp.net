@@ -3,11 +3,149 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-09-27T03:44:59+00:00</updated>
+    <updated>2017-10-03T16:11:20+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[じゅげむったーの開発日記 その７]]></title>
+            <link href="http://www.sharkpp.net/blog/2017/10/03/jugemutter-development-diary-7th.html"/>
+            <updated>2017-10-03T01:05:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2017/10/03/jugemutter-development-diary-7th.html</id>
+            <content type="html"><![CDATA[<p>前回に引き続き <a href="https://qt-users.connpass.com/event/67390/">Qt 勉強会 @ Nagoya No13 一区切り会 - connpass</a> に参加しました。
+とりあえず、今回でもくもく会は一旦一区切りとなるので、このあとはボチボチと進めていこうかなと思います。</p>
+
+<p>レポジトリは ... <a href="https://github.com/sharkpp/Jugemutter">sharkpp/Jugemutter: 長文投稿専用クライアント「じゅげむったー」</a> となります。</p>
+
+<p>画面は、多言語対応をしたので載っけます。</p>
+
+<p><img src="/images/2017_0930_jugemutter_jp.png" alt="日本語版" /></p>
+
+<p>次はなんちゃっての英語版です。</p>
+
+<p><img src="/images/2017_0930_jugemutter_en.png" alt="英語版" /></p>
+
+<h2 id="twitter-api-%E3%81%A7-%22could-not-authenticate-you.%22-%E3%81%8C%E5%87%BA%E3%82%8B">Twitter API で "Could not authenticate you." が出る</h2>
+
+<p>Twitter API への要求で <code>Could not authenticate you.</code> とレスポンスが返ってくる件、HMACとかの計算を手動でやって検証しようかと考えたけど、そうだその前に、Qtのバグトラッカーで登録ないか、と、探して見たら...</p>
+
+<p><a href="https://bugreports.qt.io/browse/QTBUG-61125">[QTBUG-61125] QOAuth1 creates an invalid signature for percent encoded query - Qt Bug Tracker</a></p>
+
+<p>まさに、ドンピシャなものが、４ヶ月も前の 5/31 に報告が上がっていました。</p>
+
+<p>それでもって、修正完了の 5.9.2 でリリースらしい。</p>
+
+<p><a href="https://wiki.qt.io/Qt_5.9_Release">Qt 5.9 Release - Qt Wiki</a> によると、この記事を書いている時点では <code>September 2017</code> に公開予定らしいので、もう少し待つ必要があるみたい。</p>
+
+<p>まあ、今回の教訓は先にバグトラッカーを探すべきだったのかなぁと、言うこと。</p>
+
+<h2 id="%E3%80%90%E6%82%B2%E5%A0%B1%E3%80%91%E3%81%98%E3%82%85%E3%81%92%E3%82%80%E3%81%A3%E3%81%9F%E3%83%BC%E7%94%A8twitter%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%8C%E5%87%8D%E7%B5%90%E3%81%95%E3%82%8C%E3%81%A6%E3%81%9F%E4%BB%B6%E3%80%90%E3%81%84%E3%81%A4%E3%81%AE%E3%81%BE%E3%81%AB%E3%80%91">【悲報】じゅげむったー用Twitterアカウントが凍結されてた件【いつのまに】</h2>
+
+<p>とりあえず、APIの要求は、Qtのバグが原因で特定文字で必ずエラーが返ってくるらしいので、とりあえず諦めて他のことを進めることにしました。</p>
+
+<p>で、何をやろうかと考えたところで、せっかくマルチアカウント管理を実装したので試してみようと久しぶりにサブ垢（公式垢として利用しようと登録したもの）へログインしたところ...</p>
+
+<p><img src="/images/2017_0930_twitter_frozen_acctount.png" alt="凍結済みアカウント(再現)" /></p>
+
+<p>ん？ んん？ は？ と、凍結！？ 
+※ スクショは撮り忘れたので当時の状況を可能な限り再現しています</p>
+
+<p>と、言うわけで、何時のまにか今流行り（？）の凍結祭りに参加していたようです。
+とりあえず、慌てて解除方法をググり、凍結の解除申請をしました。</p>
+
+<p>そして、30分後...</p>
+
+<p><img src="/images/2017_0930_twitter_thawed_account.png" alt="凍結解除" /></p>
+
+<p>ほっ。</p>
+
+<p>ヘッダー画像やプロフィール画像、あとは本垢への相互フォロー、そして鍵垢と、諸々設定しました。</p>
+
+<h2 id="%E5%A4%9A%E8%A8%80%E8%AA%9E%E5%AF%BE%E5%BF%9C">多言語対応</h2>
+
+<p>Qt で .ts / .qm でのラベルなどの多言語対応、昔々もやった記憶があるけど、忘却の彼方に近いので、改めて調べた。</p>
+
+<h3 id="%E8%A8%80%E8%AA%9E%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E6%8C%87%E5%AE%9A">言語ファイルの指定</h3>
+
+<p><code>.pro</code> を開き、言語ファイルのパスを設定。パスは適時読み替えてください。
+ 複数言語ある場合は、、スペース区切りで後ろに追加します。</p>
+
+<pre><code class="ini">     :
+TRANSLATIONS = src/i18n/ja_JP.ts
+     :
+</code></pre>
+
+<h3 id="%E7%BF%BB%E8%A8%B3%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF">翻訳ファイルの読み込み</h3>
+
+<p>起動時に現在のロケールを元に言語ファイルを読み込む処理を実装します。</p>
+
+<p><code>.qm</code> ファイルはアプリケーションのリソースとして埋め込み、そこから読むようにしています。</p>
+
+<pre><code class="cpp">            :
+    // 翻訳
+    QString locale = QLocale::system().name();
+    QTranslator translator;
+    translator.load(locale, ":/i18n");
+    a.installTranslator(&amp;translator);
+            :
+</code></pre>
+
+<p><code>locale</code> の値は、日本語環境だったら <code>ja_JP</code> です。</p>
+
+<p>リソースへの登録はこんな感じ</p>
+
+<p><img src="/images/2017_0930_qm_in_qrc.png" alt="qmファイルのqrcへの登録" /></p>
+
+<h3 id="%E7%BF%BB%E8%A8%B3%E5%AF%BE%E8%B1%A1%E3%81%AE%E6%8C%87%E5%AE%9A">翻訳対象の指定</h3>
+
+<p>まずは、翻訳したいものを <a href="http://doc.qt.io/qt-5/qobject.html#tr"><code>tr(...)</code></a> で囲います。</p>
+
+<pre><code class="diff">     if (tweetQueue.isEmpty()) {
+          finishPost();
+ -        QMessageBox::information(this, qAppName(), "投稿を完了しました。");
+ +        QMessageBox::information(this, qAppName(), tr("Your post has been completed."));
+          return;
+      }
+</code></pre>
+
+<p>こんな感じ。</p>
+
+<h3 id="%E7%BF%BB%E8%A8%B3%E5%AF%BE%E8%B1%A1%E3%81%AE%E6%8A%BD%E5%87%BA">翻訳対象の抽出</h3>
+
+<p>QtCreator のメニューから「ツール」→「外部」と辿り「翻訳を更新(lupdate)」を実行します。</p>
+
+<p><img src="/images/2017_0930_qtcreator_extrnal_tools_linguist.png" alt="翻訳を更新" /></p>
+
+<p>すると、 先ほど、<code>tr(...)</code> で囲った部分や <code>.ui</code> ファイルから翻訳対象が抽出されファイルへ書き出されます。
+ソース側の記述が変わった時は、同じように「翻訳を更新(lupdate)」を実行すると、変更が適用されます。</p>
+
+<h3 id="%E7%BF%BB%E8%A8%B3">翻訳</h3>
+
+<p>Linguist を起動し</p>
+
+<p><img src="/images/2017_0930_linguist.png" alt="Linguist" /></p>
+
+<p>抽出された文字列を翻訳していきます。</p>
+
+<h3 id="qt-message-file-format-%E3%82%92%E3%83%93%E3%83%AB%E3%83%89">Qt message file format をビルド</h3>
+
+<p><code>.ts</code> を <code>.qm</code> (Qt message file format)へと変換します。
+GNU gettext の <code>.po</code> と <code>.mo</code> との関係と同じですね。</p>
+
+<p>QtCreator のメニューから「ツール」→「外部」と辿り「翻訳をリリース(lrelease)」を実行します。
+これで <code>.ts</code> から <code>.qm</code> へと変換します。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://kazuto-yoshida.com/twitter-unfreeze-application.html">Twitterアカウント凍結解除方法と申請入力例</a></li>
+<li><a href="https://forum.qt.io/topic/57863/solved-how-to-embed-qm-translation-files-into-executable">[solved]How to embed qm translation files into executable | Qt Forum</a></li>
+<li><a href="https://github.com/wireshark/wireshark/tree/master/ui/qt">wireshark/ui/qt at master · wireshark/wireshark</a></li>
+<li><a href="http://doc.qt.io/qt-5/qtlinguist-hellotr-example.html">Hello tr() Example | Qt Linguist Manual</a></li>
+</ul>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[じゅげむったーの開発日記 その６]]></title>
             <link href="http://www.sharkpp.net/blog/2017/09/27/jugemutter-development-diary-6th.html"/>
@@ -1504,267 +1642,6 @@ OpenGL の統合、 8 bit alpha/grayscale サポート、 exif rotate</li>
 メモ書きが予想以上に大量でおかしいな？的なあれでしたがなかなか興味深い話が聞けて良かったです。</p>
 
 <p>ちなみに、今年のノベルティーはボールペンとエコバックでした。</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Qt DEVELOPER DAY 2014 Tokyo に行ってきました]]></title>
-            <link href="http://www.sharkpp.net/blog/2014/05/20/qt-developer-day-2014-tokyo.html"/>
-            <updated>2014-05-20T22:19:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2014/05/20/qt-developer-day-2014-tokyo.html</id>
-            <content type="html"><![CDATA[<p><a href="http://qt.digia.com/Jp/QtDD2014/">Qt DEVELOPER DAY 2014 Tokyo に行ってきました</a> に行ってきました。</p>
-
-<p>要所要所でのメモで不正確な内容かもしれませんが聴いたセッションの内容をまとめました。</p>
-
-<p>人々のつぶやきは <a href="http://togetter.com/li/669676">Qt Developer Day Tokyo 2014 - Togetterまとめ</a> にまとめられています。</p>
-
-<h2 id="%E9%96%8B%E5%A0%B4%E3%83%BB%E5%8F%97%E4%BB%989%3A00---10%3A00">開場・受付(9:00 - 10:00)</h2>
-
-<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">受付待ち <a href="https://twitter.com/hashtag/QtDDTokyo?src=hash">#QtDDTokyo</a> <a href="https://twitter.com/hashtag/QtJP?src=hash">#QtJP</a> <a href="http://t.co/dSSjU4rrvc">http://t.co/dSSjU4rrvc</a></p>&mdash; さめたすたす-22号 (@sharkpp) <a href="https://twitter.com/sharkpp/status/468548131756724225">2014, 5月 20</a></blockquote>
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">発見！ <a href="https://twitter.com/hashtag/QtDDTokyo?src=hash">#QtDDTokyo</a> <a href="https://twitter.com/hashtag/QtJP?src=hash">#QtJP</a> <a href="http://t.co/gpSJnoiybl">http://t.co/gpSJnoiybl</a></p>&mdash; さめたすたす-22号 (@sharkpp) <a href="https://twitter.com/sharkpp/status/468550069608656896">2014, 5月 20</a></blockquote>
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>Tシャツを貰いました。</p>
-
-<h2 id="%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%A9%E3%83%AB%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF10%3A00---12%3A30">ジェネラルトラック(10:00 - 12:30)</h2>
-
-<h3 id="%E5%BE%A1%E6%8C%A8%E6%8B%B610%3A00---10%3A15">御挨拶(10:00 - 10:15)</h3>
-
-<p>JP Niemi (Qt セールス＆マーケティング, 副社長, Digia, Qt)</p>
-
-<ul>
-<li>若干始まりは遅れたけど挨拶は時刻通り終わる</li>
-</ul>
-
-<h3 id="%E6%8A%80%E8%A1%93%E3%81%AE%E5%A3%81%E3%82%92%E6%89%93%E3%81%A1%E7%A0%B4%E3%82%8B10%3A15---10%3A30">技術の壁を打ち破る(10:15 - 10:30)</h3>
-
-<p>現代のアプリケーション開発の最前線にある Qt</p>
-
-<p>Tommi Laitinen (インターナショナルプロダクツ上級副社長, Digia, Qt)</p>
-
-<ul>
-<li>少ないコードでより多くの製品を</li>
-<li>よりよいユーザーエクスペリエンスを、一番手でありたい</li>
-<li>クロスプラットフォームの対応で一番になりたい！</li>
-<li>Qtは開発者が開発者のために開発したものなので開発者の声に耳を傾けないといけない</li>
-<li>Qt Enterprise Enbeded もあるよ！</li>
-<li>昨年末にQt 5.2をリリース、一時間までまでは最新バージョンでしたが、Qt 5.3 を本日リリースされました</li>
-<li>Qt Quick Compiler はリバースエンジニアリングを防ぐ手段も提供 ※このバージョンでは製品版のみ</li>
-<li>だんだん世の中のアプリケーションはクラウドサービスに移行すると考えるのでクラウドを提供することにした(<a href="http://qtcloudservices.com/">Qt Cloud Services</a>)</li>
-<li>WindowsRT にも対応(ベータサポートで 5.4 で正式対応予定)</li>
-<li>昨年から iOS などもサポート</li>
-<li>最新の OS やウェブシステムも対応</li>
-<li>95% のユーザーが満足しているが、満足度をもっと上げていきたい</li>
-</ul>
-
-<h3 id="qt-%E3%81%AE%E3%81%82%E3%82%86%E3%81%BF10%3A30---11%3A15">Qt のあゆみ(10:30 - 11:15)</h3>
-
-<p>我々の今とテクノロジーの向かう先</p>
-
-<p>Lars Knoll (Qt CTO および Qt Project チーフメンテナ, Digia, Qt)</p>
-
-<ul>
-<li>Qt 5.2 と本日リリースの5.3及びその未来について</li>
-<li>TrolltechがQtを開発しだしてから20年経った</li>
-<li>二人の開発者が立ち上げたプロジェクト</li>
-<li>一枚のファックスに書かれた仕様書からQtは始まった <a href="https://twitter.com/task_jp/status/468566003832471553">写真</a></li>
-<li>Qt 5.2 は Qt everywhere を実現、デスクトップだけでなくモバイルにもフォーカス、将来に向けたAPIの拡張など改良を行った</li>
-<li>Qt 5.3 は安定性、ユーザーエクスペリエンスを高める</li>
-<li>AndroidとiOSてばQtWebKitはサポートされてない</li>
-<li>WinRTのベータサポートが追加された、WebKitはサポートしてない</li>
-<li>ウィジェットベースのアプリに Qt Quick の機能を統合する <a href="http://qt-project.org/doc/qt-5/qquickwidget.html">QtQuickWidget</a> が追加された</li>
-<li>新しいQtQuickエンジンやシーンレンダラー</li>
-<li>Qt Quick Compiler は QMLをネイティブなコードにコンパイルしてパフォーマンスを改善し、また、そしてQMLのコードを保護する</li>
-<li>新しいモジュール、Positioning や bluetooth 、 NFC を追加</li>
-<li>Webkit を更新、ただし、最後のリリースになり、次は Chromium で Fork された WebKit をベースにした物(Qt WebEngine)に変わる</li>
-<li>Qt clud service は data storage と managed websocket を提供し、managed runtime を提供予定</li>
-<li>リリースのタイミングは Time based release に変更され、5.4 は 10月〜11月頃、5.5 は来年の4月〜5月を予定</li>
-<li>Qt 5.4 は WinRT の正式サポートや bluetooth の拡張などが目玉</li>
-<li>Qt 5.5 のリリースの目玉はまだ決まっていない</li>
-<li>Qt 5.3 はデスクトップの強化もしてるので Qt 4 から Qt 5 へ移行しやすくなってるので、ぜひ移行して欲しい</li>
-</ul>
-
-<h3 id="%E4%BC%91%E6%81%AF11%3A15---11%3A30">休息(11:15 - 11:30)</h3>
-
-<p>席に荷物を置いて休息する人もちらほら、、、</p>
-
-<h3 id="%E6%97%A5%E6%9C%AC%E5%B8%82%E5%A0%B4%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Bqt%E3%81%AE%E6%8B%A1%E3%81%8C%E3%82%8A11%3A30---12%3A00">日本市場におけるQtの拡がり(11:30 - 12:00)</h3>
-
-<p>山口 大介 (シニアマネージャー、株式会社SRA)</p>
-
-<ul>
-<li>SRA はライセンス販売以外にQtouch や Qinput なども作ってる</li>
-<li>SRA が関係した書籍以外に Qt Quickの本 も紹介</li>
-<li>Qt は世界で100万ダウンロード！</li>
-<li>ナビメーカーの半数でQtを採用！</li>
-</ul>
-
-<h3 id="qt%E3%81%AF%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AEinternet-of-things%E3%81%AB%E3%81%A4%E3%81%AA%E3%81%8C%E3%82%8B%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E3%81%AE%E6%88%A6%E7%95%A5%E3%82%92%E5%BE%8C%E6%8A%BC%E3%81%97%E3%81%97%E3%81%BE%E3%81%9912%3A00---12%3A30">QtはあなたのInternet of Thingsにつながるデバイスの戦略を後押しします(12:00 - 12:30)</h3>
-
-<p>Tuukka Ahoniemi (テクニカルプロダクトマーケティングマネージャー, Digia, Qt)</p>
-
-<ul>
-<li>Qt Cloud Services でセンサーをネットワーク経由で使うことが出来る</li>
-<li>デザインの変更にも Qt Quick を使っていたから即対応が出来た</li>
-</ul>
-
-<h2 id="%E3%83%A9%E3%83%B3%E3%83%81%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%BB%E5%B1%95%E7%A4%BA12%3A30---13%3A30">ランチタイム・展示(12:30 - 13:30)</h2>
-
-<blockquote class="twitter-tweet" lang="ja"><p>お弁当もぐもぐ♪ <a href="https://twitter.com/search?q=%23QtJP&src=hash">#QtJP</a> <a href="https://twitter.com/search?q=%23QtDDTokyo&src=hash">#QtDDTokyo</a> <a href="https://twitter.com/search?q=%23mogmog&src=hash">#mogmog</a> <a href="http://t.co/mB2Csd8WmF">http://t.co/mB2Csd8WmF</a></p>&mdash; 98式AVさめたすたす (@sharkpp) <a href="https://twitter.com/sharkpp/statuses/468595870535933952">2014, 5月 20</a></blockquote>
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<h2 id="lt12%3A45---13%3A30">LT(12:45 - 13:30)</h2>
-
-<p>弁当を食べながらLTを聴く</p>
-
-<h3 id="qt%E3%81%AE%E3%82%88%E3%81%84%E3%81%A8%E6%80%9D%E3%81%86%E3%81%A8%E3%81%93%E3%82%8D">Qtのよい(と思う)ところ</h3>
-
-<p><a href="https://twitter.com/IoriAYANE">@IoriAYANE</a></p>
-
-<ul>
-<li>簡単</li>
-<li>少ないコードで高機能</li>
-<li>QtWidget と Qt Quick</li>
-<li>マルチプラットフォーム</li>
-</ul>
-
-<h3 id="%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%E4%B8%8D%E6%98%8E">タイトル不明</h3>
-
-<p>柴田充也</p>
-
-<ul>
-<li>スマートフォンはスマートですか？</li>
-<li>そのスマホ Qt 動いてますか？</li>
-<li>Ubuntu touch の紹介</li>
-<li>Qt Creatorでアプリが作れる</li>
-<li>Ubuntu touch は全て Qt 製</li>
-<li>Nexus 4 /Nexus 7 2013 / Nexus 10 をサポート</li>
-<li>ARMhf / i386 エミュレータが有る</li>
-</ul>
-
-<h3 id="qt-creator%E3%81%A7remote_debug">Qt creatorでremote_debug</h3>
-
-<p><a href="http://www.slideshare.net/sazuzas/qt-creatorremotedebug">Qt creatorでremote_debug</a> by <a href="https://twitter.com/sazus">@sazus</a></p>
-
-<ul>
-<li>Qt on せんべい あるよ！</li>
-<li>Embeded Linux (non X Window System)</li>
-<li>組み込み環境のデバッグでQtCreator使ってますか？</li>
-<li>Qt Creator で デプロイやリモートでバッグが出来る！</li>
-</ul>
-
-<h3 id="qt%E3%81%8A%E3%82%84%E3%81%A4%E9%83%A8%E6%B4%BB%E5%8B%95%E5%A0%B1%E5%91%8A">Qtおやつ部活動報告</h3>
-
-<p><a href="https://twitter.com/hermit4">@hermit4</a></p>
-
-<ul>
-<li>おやつを持ち込む人は部員</li>
-<li>Qtのケーキやガム、チロルチョコも作った</li>
-<li>普段はみかんや饅頭など</li>
-<li>Androidは女子部があるのに、、、おやつ目当てのひと募集</li>
-<li>勉強会はどなたでも参加可能！</li>
-<li>アドレスは <a href="http://qt-users.jp/">http://qt-users.jp/</a></li>
-</ul>
-
-<h3 id="qt-developer-day-2014-%E3%80%9C-%E5%89%8D%E5%9B%9E%E3%81%8B%E3%82%89%E3%81%AE%EF%BC%92%E5%B9%B4%E5%8D%8A-%E3%80%9C">Qt Developer Day 2014 〜 前回からの２年半 〜</h3>
-
-<p><a href="https://twitter.com/moguriso">@moguriso</a></p>
-
-<ul>
-<li>intel MeeGo 捨てた！</li>
-<li>NOKIA Meego/Qt 捨てた！</li>
-<li>日本Qtユーザー会発足</li>
-<li>関東、名古屋、大阪で勉強会が開催</li>
-</ul>
-
-<h2 id="%E3%83%86%E3%82%AF%E3%83%8B%E3%82%AB%E3%83%AB%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF13%3A30---18%3A15">テクニカルトラック(13:30 - 18:15)</h2>
-
-<h3 id="qt-%E3%81%A8-qt-creator13%3A30---15%3A00">Qt と Qt Creator(13:30 - 15:00)</h3>
-
-<p><a href="https://twitter.com/bluepicky">杉田 研治</a> (プログラマ, 株式会社 SRA)</p>
-
-<ul>
-<li>商用版はグラフ、データビジュアライゼーション、<a href="http://doc.qt.digia.com/QtPurchasing/">Qt Purchasing API</a>(Android/iOS用ストア向け)など</li>
-<li>デバッガは QString や QList などの中身を表示できる！</li>
-<li>Qt用の拡張は、Qt CreatorのバージョンやWindowsの場合はデバッグやリリースなどにも気お付けないとうまく動かない</li>
-<li>Qt Creator だとオーバーライドされた関数はイタリックで表示されるのでプロトタイプが間違っている場合にはすぐ分かる！</li>
-<li>OS X での emacs のキーバインドは 3.2 で取り込まれる予定</li>
-<li>Qt Creator 3.1 の新機能としては Clang コードモデルなど</li>
-</ul>
-
-<h3 id="qtquick-%E3%81%AE%E7%B4%B9%E4%BB%8B15%3A00---16%3A00">QtQuick の紹介(15:00 - 16:00)</h3>
-
-<p><a href="https://twitter.com/takumiasaki">朝木卓見</a> (シニアコンサルタント, 株式会社 SRA)</p>
-
-<ul>
-<li>Qt Quick が出来た背景</li>
-<li>もっと動きのある、タッチやジェチャー、アニメーションやエフェクトがあるUIを簡単に作りたい</li>
-<li>C++の機能が増えても楽にはならないしサンプルどまりだった</li>
-<li>ユーザー入力系にはキーボードやマウス入力などがある</li>
-<li>レイアウトはカラムやグリッドなど</li>
-<li>ステートは状態の定義やトランジションなど</li>
-<li>アニメーションには NumberAnimation など複数種類がある</li>
-<li>Easing (補完関数？) には線形やバウンスなどがある</li>
-<li>モデルビューはリストモデル、グリッドビュー、パスビュー(任意の曲線上に並べる)など</li>
-<li>パーティクルも表示できるがいろいろな種類のパーティクルのデモはブースで(もしくは<a href="https://play.google.com/store/apps/details?id=com.digia.Qt5Intro&amp;hl=ja">サンプルアプリ</a>)</li>
-<li>シェーダーは OpenGL が使える、使用頻度の高そうなものは予め定義してあるので QtGraphicalEffect を import をすれば使える</li>
-<li>ファイル単位で独自の QML を部品として再利用できる</li>
-<li>Loaderを使った動的なオブジェクトの生成もできる</li>
-<li>HTML5 の canvas 風エレメントも QtQuick2 からある</li>
-<li>Bluetooth や NFC を Qt Quick から使えるモジュールもある</li>
-<li>QtWidget 風の Qt Quick Controls が別で用意してある</li>
-<li>現状 Qt Quick Designer は雛形の作成用として使うぐらいが良さそう</li>
-<li>QQuickRenderControl はレンダリング制御用のクラスで現状はプライベートクラスだけど後々に公開APIになる予定</li>
-</ul>
-
-<h3 id="%E4%BC%91%E6%86%A916%3A00---16%3A15">休憩(16:00 - 16:15)</h3>
-
-<h3 id="qt-enterprise-embedded-%E3%81%AB%E3%82%88%E3%82%8B%E7%B5%84%E3%81%BF%E8%BE%BC%E3%81%BF%E9%96%8B%E7%99%BA%E3%81%AE%E7%B4%B9%E4%BB%8B16%3A15--17%3A15">Qt Enterprise Embedded による組み込み開発の紹介(16:15 -17:15)</h3>
-
-<p>Tuukka Ahoniemi &amp; Andy Nichols (ソフトウェアエンジニア, Digia, Qt)</p>
-
-<ul>
-<li>デプロイに半日かかったりビルド設定が大変だったりを Qt enterprise enbeded を使って変えていきたい</li>
-<li>その価値はプロジェクトの開発期間の短縮</li>
-<li>Qt creaitor が中心となりデプロイやデバックをすることが可能</li>
-<li>キュートのシステムはエッシェンシャルとアドオンにわけられる</li>
-<li>Qt quick はモバイルにも組み込みも使われている</li>
-<li>Qt Creator からのデプロイは USBでもIPでもできる</li>
-<li>キーワード：Boot to Qt</li>
-<li>Boot to Qt では標準でNexus 7やエミュレータなどが使用可能でカスタマイズすることで他にも対応することができる</li>
-<li>グラフや仮想キーボードなどが含まれている</li>
-</ul>
-
-<h3 id="qt-quick%E3%81%A8qt-quick-controls%E3%81%AE%E6%B7%B1%E6%B7%B5%E3%81%B817%3A15---18%3A15">Qt QuickとQt Quick Controlsの深淵へ(17:15 - 18:15)</h3>
-
-<p>Dr. Gabriel de Dietrich (シニアソフトウェアディベロッパー, Digia, Qt)</p>
-
-<ul>
-<li>QtQuick の <code>Qt.platform.os</code> で os が分かる</li>
-<li><code>import QtQuick.Controls</code> で Qt Quick Control を使える</li>
-<li>QtQuick.Dialogs はファイル選択などができるモジュール</li>
-<li>Menu/MenuItem でメニューを表示できる</li>
-<li>C++のようにActionってエレメントありツールバーやメニューからと処理を共通化できる</li>
-<li>DockWidget は入る可能性はあるが時間はかかる</li>
-<li>一億行をテーブルビューに入れた場合もデータの再利用をしたりで出来るだけパフォーマンスが出るようになっている</li>
-<li>QtQuickWidget を使って表示するのではなく今はまだ QtQuick をUiで使うほうがいいと思う</li>
-</ul>
-
-<h2 id="%E6%87%87%E8%A6%AA%E4%BC%9A">懇親会</h2>
-
-<p>日本Qtユーザー会の皆様で乾杯＆もぐもぐ</p>
-
-<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
-
-<p>はじめてな感じの日本でやる海外企業の展示会に潜入した結果ですが、同時通訳を聴けたり質問(自分はしていないですが)も通訳してもらったりと聞き取れなくて (´・ω・｀) な状態にはならなかったので良かったです。</p>
-
-<p>ただ、人によるのでしょうがスライドの文字が小さかったので後ろの席だと、場合によっては前の方でも内容が見えないことが有ったので座るなら前の方がいい感じでした。 いろいろな話が聞けて、自分的には満足な一日でした。</p>
-
-<p>あとは、開催日が平日でなければとかはなきにしもあらず、、、でしたが、休みを取ってまでして行ってよかった感じです。</p>
 ]]></content>
         </entry>
     </feed>
