@@ -1,6 +1,6 @@
 ---
 title: "じゅげむったーの開発日記 その７"
-date: 2017-10-03 01:05
+date: 2017-10-04 01:05
 tags: [Qt, Twitter, OAuth, C++, cpp, 勉強会, 開発日記, じゅげむったー, 凍結]
 categories: [ブログ]
 
