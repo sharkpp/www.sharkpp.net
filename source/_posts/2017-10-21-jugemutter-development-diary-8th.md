@@ -40,7 +40,7 @@ $ php composer.phar require risan/oauth1
 
 で、いろいろ試している..
 
-ソースは [risan/oauth1: Basic Usage](https://github.com/risan/oauth1#basic-usage) を基にした。
+ソースは [risan/oauth1: Basic Usage](https://github.com/risan/oauth1#basic-usage) を基に `$ sudo php -S localhost:80 -t .` で動かします。
 
 ```php
 <?php
