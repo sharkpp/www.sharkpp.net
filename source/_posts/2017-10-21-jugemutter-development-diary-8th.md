@@ -13,7 +13,7 @@ categories: [ブログ]
 
 レポジトリは ... [sharkpp/Jugemutter: 長文投稿専用クライアント「じゅげむったー」](https://github.com/sharkpp/Jugemutter) となります。
 
-## Twitter API の "Could not authenticate you." 問題
+## Twitter API の "Could not authenticate you." 問題
 
 Twitter API への要求で `Could not authenticate you.` とレスポンスが返ってくる問題、どうも [[QTBUG-61125] QOAuth1 creates an invalid signature for percent encoded query - Qt Bug Tracker](https://bugreports.qt.io/browse/QTBUG-61125) のバグが原因ではなかった様子。
 
