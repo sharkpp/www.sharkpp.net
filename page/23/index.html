@@ -18,7 +18,21 @@
        ></li></ol><div class="row"><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
            href="/blog/"><i class="fa fa-archive fa-4x"></i><br />アーカイブ</a></div><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
            href="/product/"><i class="fa fa-download fa-4x"></i><br />作ったもの</a></div><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
-           href="/graffiti/"><i class="fa fa-paint-brush fa-4x"></i><br />落書き</a></div></div><hr style="border-bottom: 1px dashed #aaa; border-top: none;" /><article class="full-contents"><header><h1><a href="/blog/2014/06/30/publish-cookbook-to-opscode.html">Opscode Community に自作の Cookbook を登録してみた</a></h1></header><div><p>必要に迫られて作成した <a href="https://github.com/sharkpp-cookbooks/ya-piwik">ya-piwik</a> を &#91;Opscode Community&#93; (http://community.opscode.com/) に登録してみました。 もしか、動かなかったりするかもですがそのときはタイミングを見て直そうかと思います。 とりあえず自分所では動いています。</p><p>登録した Cookbook は <a href="http://community.opscode.com/cookbooks/ya-piwik">Chef Cookbook: ya-piwik - Opscode Community</a> から確認できます。</p>
+           href="/graffiti/"><i class="fa fa-paint-brush fa-4x"></i><br />落書き</a></div></div><hr style="border-bottom: 1px dashed #aaa; border-top: none;" /><article class="full-contents"><header><h1><a href="/blog/2014/10/19/github-import-from-svn.html">github.com へ SVNのレポジトリを取り込んで公開する方法</a></h1></header><div><p>svn のレポジトリを既存の github レポジトリに取り込む手順をメモ。 多分、既存の git に取り込むのにも使えるはず。</p><p>ちなみに取り込むとログに <code>git-svn-id: 〜</code> の用な感じで SVN のリポジトリパスが残るのでパスを秘密にしたい場合は諦めてファイルコピーで取り込んだ方がいいと思います。</p><ul><li>2016-02-14 git-svn-id を付与せずに clone する方法を追記</li></ul>
+
+
+                            &hellip;&nbsp;<a href="/blog/2014/10/19/github-import-from-svn.html">続きを見る</a></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i>&nbsp;
+        <span itemprop="datePublished" content="2014-10-19">2014年10月19日</span>
+        &nbsp;/&nbsp;
+        <i class="fa fa-history"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2014-10-19-github-import-from-svn.md">変更履歴</a>
+        &nbsp;/&nbsp;
+        <i class="fa fa-thumb-tack"></i>&nbsp;<a href="/blog/2014/10/19/github-import-from-svn.html">Permalink</a>
+        &nbsp;/&nbsp;
+                                <span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
+                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
+        &nbsp;/&nbsp;
+                                <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:
+                        <a href="/blog/tags/Develop">Develop</a>,                         <a href="/blog/tags/git">git</a>,                         <a href="/blog/tags/GitHub">GitHub</a>,                         <a href="/blog/tags/Subversion">Subversion</a></span></span></div></footer></article><article class="full-contents"><header><h1><a href="/blog/2014/06/30/publish-cookbook-to-opscode.html">Opscode Community に自作の Cookbook を登録してみた</a></h1></header><div><p>必要に迫られて作成した <a href="https://github.com/sharkpp-cookbooks/ya-piwik">ya-piwik</a> を &#91;Opscode Community&#93; (http://community.opscode.com/) に登録してみました。 もしか、動かなかったりするかもですがそのときはタイミングを見て直そうかと思います。 とりあえず自分所では動いています。</p><p>登録した Cookbook は <a href="http://community.opscode.com/cookbooks/ya-piwik">Chef Cookbook: ya-piwik - Opscode Community</a> から確認できます。</p>
 
 
                             &hellip;&nbsp;<a href="/blog/2014/06/30/publish-cookbook-to-opscode.html">続きを見る</a></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i>&nbsp;
@@ -46,21 +60,7 @@
                         <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
         &nbsp;/&nbsp;
                                 <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:
-                        <a href="/blog/tags/Qt">Qt</a>,                         <a href="/blog/tags/%E9%9B%91%E8%A8%98">雑記</a>,                         <a href="/blog/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A">勉強会</a></span></span></div></footer></article><article class="full-contents"><header><h1><a href="/blog/2014/04/18/first-step-chef.html">はじめてのChef</a></h1></header><div><h2 id="%E7%9B%AE%E6%A8%99">目標</h2><p>母艦であるところの Mac から、VirtualBox で構築した VM や VPS に対して環境を構築したい。 が、最初は、 <a href="http://www.getchef.com/">Chef</a> で遊んでみることに。</p>
-
-
-                            &hellip;&nbsp;<a href="/blog/2014/04/18/first-step-chef.html">続きを見る</a></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i>&nbsp;
-        <span itemprop="datePublished" content="2014-04-18">2014年04月18日</span>
-        &nbsp;/&nbsp;
-        <i class="fa fa-history"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2014-04-18-first-step-chef.md">変更履歴</a>
-        &nbsp;/&nbsp;
-        <i class="fa fa-thumb-tack"></i>&nbsp;<a href="/blog/2014/04/18/first-step-chef.html">Permalink</a>
-        &nbsp;/&nbsp;
-                                <span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
-                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
-        &nbsp;/&nbsp;
-                                <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:
-                        <a href="/blog/tags/Chef">Chef</a></span></span></div></footer></article><br /><nav><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/page/22" title=""><span class="title"><i class="fa fa-chevron-left"></i> 新しい投稿</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/page/24" title=""><span class="title">古い投稿</span><i class="fa fa-chevron-right"></i></a></li></ul></nav></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li><li><i class="fa-li fa fa-ellipsis-h"></i><a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /page/23"
+                        <a href="/blog/tags/Qt">Qt</a>,                         <a href="/blog/tags/%E9%9B%91%E8%A8%98">雑記</a>,                         <a href="/blog/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A">勉強会</a></span></span></div></footer></article><br /><nav><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/page/22" title=""><span class="title"><i class="fa fa-chevron-left"></i> 新しい投稿</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/page/24" title=""><span class="title">古い投稿</span><i class="fa fa-chevron-right"></i></a></li></ul></nav></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li><li><i class="fa-li fa fa-ellipsis-h"></i><a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /page/23"
                                   rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li></ul></div><div class="container text-center"><ul class="list-unstyled list-inline"><li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li><li class="text-muted">&copy; 2004-2017 sharkpp</li></ul></div><div class="container text-center text-muted"><ruby><rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
                                                             >Creative Commons Attribution 4.0 International License</a>.</rb><rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
                                                   >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp></ruby></div><div class="container text-center text-muted"><ruby><rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
