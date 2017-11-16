@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/RAIJIN.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-11-16T18:15:50+00:00</updated>
+    <updated>2017-11-16T18:24:48+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -13,6 +13,252 @@
             <link href="http://www.sharkpp.net/blog/2017/11/17/unboxing-and-used-one-month-of-freetel-raijin.html"/>
             <updated>2017-11-17T02:31:00+00:00</updated>
             <id>http://www.sharkpp.net/blog/2017/11/17/unboxing-and-used-one-month-of-freetel-raijin.html</id>
-            <content type="html"><![CDATA[]]></content>
+            <content type="html"><![CDATA[<p>前に使っていた <a href="/blog/2015/12/07/unboxing-and-used-one-month-of-nexus-5x.html">Google Nexus 5X</a> が、巷で話題の再起動ループに陥ったので、新しいスマホを購入しました。</p>
+
+<p>今回は、長々と代替機で過ごしていると<a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&amp;hl=ja">某ボールを投げて何某をゲットするゲーム</a>が遊べないのでサクッと選びました。
+まあ、前のスマホが二年も前のなので、そこそこのスペックでほぼ同等ぐらいだからいいやと思って、<a href="https://www.freetel.jp/product/smartphone/raijin/">FREETEL RAIJIN</a>を選びました。
+本当は Google PIXEL 2 がよかったんですが、あれ絶対日本では発売しないよなーと。</p>
+
+<p><a href="/images/2017_1117_raijin_outerbox.jpg"><img src="/thumbs/0e99fd9e7890ad2bd78ab2a7c6cc9f67-256x256.jpg" alt="雷神 -RAIJIN-"></a></p>
+
+<h2 id="%E3%81%95%E3%82%88%E3%81%AA%E3%82%89-nexus-5x">さよなら Nexus 5X</h2>
+
+<p>とうとうお家の Nexus 5X にも再起動ループがやってきました。</p>
+
+<p><code>fastboot</code> コマンドで、OSを更新しようとしたら、「ロックが掛かっているのでできない」と言われ、ロックを解除しようにも、OSが正常起動していないと、だめと言う、ああ、これは詰んだ状態でした。
+そのままの状態で一晩放っておいたら、いつのまにか復帰していました（少ししたら再起動しましたけど）
+ただまあ、後から考えると、OS書き込んでも治らなかった可能性が高いなぁと。</p>
+
+<p>ともあれ、これで保有している LG のスマホは、２台ともが故障したことになります（１台は修理交換済み）。
+もう二度と LG のスマホは買わないことを誓った 2017年の秋でした。</p>
+
+<p>まあ、ともかく、さよならです、Nexus 5X 、２年間ありがとう。</p>
+
+<h2 id="%E9%96%8B%E5%B0%81%E3%81%AE%E5%84%80">開封の儀</h2>
+
+<p>10月某日、FREETEL RAIJIN がお家にやってきた。</p>
+
+<p><a href="/images/2017_1117_raijin_outerbox.jpg"><img src="/thumbs/0e99fd9e7890ad2bd78ab2a7c6cc9f67-256x256.jpg" alt="雷神 -RAIJIN- 外箱"></a></p>
+
+<p>ともかく、ご開帳です！</p>
+
+<p><a href="/images/2017_1117_raijin_logo_zoom.jpg"><img src="/thumbs/de750b41f64c932fd740b24c098ba1f4-256x256.jpg" alt="雷神 -RAIJIN- ロゴ拡大"></a></p>
+
+<p><a href="/images/2017_1117_raijin_bundles.jpg"><img src="/thumbs/9f24a1075eb00d927dfcd485ccdecbd1-256x256.jpg" alt="同梱品一覧"></a></p>
+
+<p><a href="/images/2017_1117_raijin_charge_cable.jpg"><img src="/thumbs/370465992277354ba46ac2f7fdb12d35-256x256.jpg" alt="本体＆充電ケーブル"></a></p>
+
+<p><a href="/images/2017_1117_raijin_backside.jpg"><img src="/thumbs/ef3d4cb58579c2736d0ab11b31052d80-256x256.jpg" alt="裏面"></a></p>
+
+<p>SIMスロットは、microSDカードリーダと兼用も含めて二つ付いているようです。</p>
+
+<p><a href="/images/2017_1117_raijin_sim_slot.jpg"><img src="/thumbs/535717116b1c0b95c023ae7965e2187e-256x256.jpg" alt="nanoSIM収納"></a></p>
+
+<p>前のスマホ <a href="https://www.google.co.jp/intl/ja_jp/nexus/5x/">Google Nexus 5X</a>との比較</p>
+
+<p><a href="/images/2017_1117_raijin_vs_nexus5x_size.jpg"><img src="/thumbs/ceb439f8179534ccd5865514844dcd94-256x256.jpg" alt="大きさ FREETEL RAIJIN vs Google Nexus 5X"></a></p>
+
+<p><a href="/images/2017_1117_raijin_vs_nexus5x_size2.jpg"><img src="/thumbs/a43a83d6d8a8f97d0618ee6b4125e56f-256x256.jpg" alt="大きさ FREETEL RAIJIN vs Google Nexus 5X その２"></a></p>
+
+<p>少し大きいですね。</p>
+
+<p>保護シートを慌てて購入したので、欲しかったのぞき見防止じゃなくて普通を選んでしまっていた、不覚！</p>
+
+<h2 id="%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E4%B8%AD">セットアップ中</h2>
+
+<p><a href="/images/2017_1117_raijin_setup01.png"><img src="/thumbs/2da765528e9949e154cb0422db13a813-256x256.png" alt="セットアップ：ようこそ"></a>
+<a href="/images/2017_1117_raijin_setup02.png"><img src="/thumbs/eaa3c212f3575eef8c9eb5cb4d335967-256x256.png" alt="セットアップ：SIM挿入"></a>
+<a href="/images/2017_1117_raijin_setup03.png"><img src="/thumbs/083c6702a923b670bff64237ce1e2315-256x256.png" alt="セットアップ：挿入したらSMSが届いた"></a>
+<a href="/images/2017_1117_raijin_setup04.png"><img src="/thumbs/ab1340eb57047b9782e93bb50dbffa43-256x256.png" alt="セットアップ：セットアップ"></a>
+<a href="/images/2017_1117_raijin_setup05.png"><img src="/thumbs/377717b7868c55e91dfb475bf31ec4b5-256x256.png" alt="セットアップ：データの引き継ぎ"></a>
+<a href="/images/2017_1117_raijin_setup06.png"><img src="/thumbs/eb410e034c92cd435bd9e45c048206b1-256x256.png" alt="セットアップ：ソフトウエアアップデート"></a>
+<a href="/images/2017_1117_raijin_setup07.png"><img src="/thumbs/c05041aba6aaffa1f0b308a3dceb76e3-256x256.png" alt="セットアップ：別端末からコピー"></a>
+<a href="/images/2017_1117_raijin_setup08.png"><img src="/thumbs/b8b468b8c152063a4314e3a03ff58a9d-256x256.png" alt="セットアップ：あと少しで完了です(Nexus 5X側)"></a>
+<a href="/images/2017_1117_raijin_setup09.png"><img src="/thumbs/6b13b367004fb7041244adcc7480a356-256x256.png" alt="セットアップ：指紋ロック設定"></a>
+<a href="/images/2017_1117_raijin_setup10.png"><img src="/thumbs/3a5407eea1a11b64d9e08c6f03bdac56-256x256.png" alt="セットアップ：指紋センサー位置の確認"></a>
+<a href="/images/2017_1117_raijin_setup11.png"><img src="/thumbs/66826955db53897dec77d535b4dc4fce-256x256.png" alt="セットアップ：指紋登録完了"></a>
+<a href="/images/2017_1117_raijin_setup12.png"><img src="/thumbs/38b5445f0b289494c9bc08f222d02080-256x256.png" alt="セットアップ：設定完了"></a></p>
+
+<h2 id="%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E5%AE%8C%E4%BA%86">セットアップ完了</h2>
+
+<p><a href="/images/2017_1117_raijin_welcome.png"><img src="/thumbs/20b3c103b01637a7fdd21111ad9235cb-256x256.png" alt="ようこそ"></a>
+<a href="/images/2017_1117_raijin_info.png"><img src="/thumbs/a2f373bb39ae57c397255385205f5439-256x256.png" alt="端末の情報"></a></p>
+
+<h2 id="%E3%82%A4%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%A8%E3%83%83%E3%82%B0">イースターエッグ</h2>
+
+<p>Android 7 のイースターエッグはネコ集めらしい。</p>
+
+<p><a href="/images/2017_1117_raijin_android7_logo.png"><img src="/thumbs/524b7814dc466b0ac5e24a78db7733f1-256x256.png" alt="ロゴ"></a></p>
+
+<p><a href="/images/2017_1117_raijin_first_cat.png"><img src="/thumbs/7174af1ada79ded9376eccd9e1927cec-256x256.png" alt="最初の猫"></a></p>
+
+<h2 id="%E4%B8%80%E6%9C%88%E3%81%BB%E3%81%A9%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E6%84%9F%E3%81%98">一月ほど使ってみた感じ</h2>
+
+<h3 id="%E3%82%AB%E3%83%A1%E3%83%A9">カメラ</h3>
+
+<p>カメラアプリは独自性を出しやすい部分。</p>
+
+<p>まあ、カメラの性能としてはトントンかなぁと。</p>
+
+<h4 id="%E6%A8%99%E6%BA%96%E3%81%AE%E3%82%AB%E3%83%A1%E3%83%A9%E3%82%A2%E3%83%97%E3%83%AA%E3%81%A7%E6%92%AE%E3%81%A3%E3%81%9F%E5%86%99%E7%9C%9F">標準のカメラアプリで撮った写真</h4>
+
+<h4 id="%E7%89%B9%E6%AE%8A%E3%81%AA%E6%92%AE%E5%BD%B1%E3%83%A2%E3%83%BC%E3%83%89">特殊な撮影モード</h4>
+
+<p>こんな感じで</p>
+
+<p><a href="/images/2017_1117_raijin_camera_mode.png"><img src="/thumbs/dda70048243c3680e4e84d519539bb35-256x256.png" alt="カメラ：カメラモード"></a></p>
+
+<ul>
+<li>オート</li>
+<li>マニュアル</li>
+<li>ビューティー</li>
+<li>パノラマ</li>
+<li>暗がり撮影</li>
+<li>色鮮やかHDR</li>
+<li>一眼レフ</li>
+<li>残像</li>
+<li>ハイスピード</li>
+</ul>
+
+<p>と、いろんな撮影方法ができるみたいです。</p>
+
+<p>カメラの設定はこんな感じ。</p>
+
+<h5 id="%E3%80%8C%E4%B8%80%E7%9C%BC%E3%83%AC%E3%83%95%E3%80%8D%E3%83%A2%E3%83%BC%E3%83%89">「一眼レフ」モード</h5>
+
+<p><a href="/images/2017_1117_raijin_camera_mode01.png"><img src="/thumbs/925a53b71a293e2b5ea781d2f415070e-256x256.png" alt="「一眼レフ」モード"></a></p>
+
+<p>２枚？を焦点をずらして撮影して、自動でぼかしを入れるようです。</p>
+
+<p>こんな感じ。</p>
+
+<p><a href="/images/2017_1117_raijin_camera01.jpg"><img src="/thumbs/31923ce3dbbc64bc8353e7bdfd0b58f8-256x256.jpg" alt="お寿司その１：「一眼レフ」モード"></a></p>
+
+<h5 id="%E3%80%8C%E6%AE%8B%E5%83%8F%E3%80%8D%E3%83%A2%E3%83%BC%E3%83%89">「残像」モード</h5>
+
+<p><a href="/images/2017_1117_raijin_camera_mode02.png"><img src="/thumbs/9d64a195c3312d177c37a1c12cb1ab54-256x256.png" alt="「残像」モード"></a></p>
+
+<p>何枚か撮影して、複数枚選んだ画像に移る目標物を抜き出し、合成するようです。</p>
+
+<h5 id="%E3%80%8C%E3%83%8F%E3%82%A4%E3%82%B9%E3%83%94%E3%83%BC%E3%83%89%E3%80%8D%E3%83%A2%E3%83%BC%E3%83%89">「ハイスピード」モード</h5>
+
+<p><a href="/images/2017_1117_raijin_camera_mode03.png"><img src="/thumbs/a0a0ad379e69beb3731c5ccc1dda6d53-256x256.png" alt="「ハイスピード」モード"></a></p>
+
+<p>何枚か撮影して、選んだ画像に写る目標物以外にモーションブラーを掛けるようです。</p>
+
+<h4 id="%E3%82%AB%E3%83%A1%E3%83%A9%E3%81%AE%E3%82%B7%E3%83%A3%E3%83%83%E3%82%BF%E3%83%BC%E9%9F%B3">カメラのシャッター音</h4>
+
+<p>このカメラアプリ、なんとシャッター音が消せるんです。
+公式アプリで、良いのこれ？</p>
+
+<p>まあ、ともかく消してみると、困ったことに写真を撮ったかどうかがわかりにくいので微妙かも。</p>
+
+<h4 id="%E6%A8%99%E6%BA%96%E3%81%AE%E3%82%AB%E3%83%A1%E3%83%A9%E3%81%A7%E6%92%AE%E3%81%A3%E3%81%9F%E3%81%82%E3%82%8C%E3%81%93%E3%82%8C">標準のカメラで撮ったあれこれ</h4>
+
+<p><a href="/images/2017_1117_raijin_camera02.jpg"><img src="/thumbs/3ff4905e54ebc1550ab8faf846f36c42-256x256.jpg" alt="お寿司その２：「一眼レフ」モード"></a>
+<a href="/images/2017_1117_raijin_camera03.jpg"><img src="/thumbs/d1f47c8c67ea68e7bac9fb4b534e6fb1-256x256.jpg" alt="お寿司その３：「一眼レフ」モード失敗"></a>
+<a href="/images/2017_1117_raijin_camera04.jpg"><img src="/thumbs/1739d902ac3cc30a9ae2e3d0d84bae17-256x256.jpg" alt="お寿司その４：「一眼レフ」モード"></a>
+<a href="/images/2017_1117_raijin_camera05.jpg"><img src="/thumbs/6f018ad225f9140fa26679cfdec47168-256x256.jpg" alt="お寿司その５：「一眼レフ」モード"></a>
+<a href="/images/2017_1117_raijin_camera06.jpg"><img src="/thumbs/345d232b76916c3c8f700d76c0afc51d-256x256.jpg" alt="さんまの蒲焼：「一眼レフ」モード"></a>
+<a href="/images/2017_1117_raijin_camera07.jpg"><img src="/thumbs/dcd849faa87043064ce5e4601fcdfa85-256x256.jpg" alt="お空"></a>
+<a href="/images/2017_1117_raijin_camera08.jpg"><img src="/thumbs/fbb4deaa273ebc9dcd3fba6f8ab80e03-256x256.jpg" alt="道端の植物"></a>
+<a href="/images/2017_1117_raijin_camera09.jpg"><img src="/thumbs/40e74677f92faddf1e8aad3b18ab5a1d-256x256.jpg" alt="夜の鳥居：夜間・最大ズーム"></a></p>
+
+<h3 id="%E3%81%93%E3%81%93%E3%81%8C-good%21">ここが GOOD!</h3>
+
+<h4 id="%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC%E5%AE%B9%E9%87%8F">バッテリー容量</h4>
+
+<p>バッテリー容量が、<code>2,700 mAh</code> から <code>5,000mAh</code> になったので、ゲームを長時間やっていてもまだ余裕がある。</p>
+
+<p>減り具合も、巷で言われるほどひどくはない気がする。</p>
+
+<p>まあ、まだバッテリーが新品だからなのかもしれないけど。</p>
+
+<h4 id="%E3%82%B2%E3%83%BC%E3%83%A0%E4%B8%AD%E3%81%AE%E7%99%BA%E7%86%B1">ゲーム中の発熱</h4>
+
+<p>ゲーム中も <code>Nexus 5X</code> よりも発熱はなさそうな感じ。
+もう、<code>Nexus 5X</code> でゲームをやったら、画面上部が手で触ると辛いぐらいの温度になってたので、これはうれしい。</p>
+
+<p>まあ、２年もたてばCPUなどの性能も上がってるし、こんな感じだよね、と。</p>
+
+<h4 id="%E9%8C%B2%E9%9F%B3">録音</h4>
+
+<p>通話中の会話の録音が標準機能？でできるようになった。
+自動録音ではないのがちょっと残念。</p>
+
+<h3 id="%E3%81%93%E3%81%93%E3%81%8C-bad%21">ここが BAD!</h3>
+
+<h4 id="gps%E3%81%AE%E7%B2%BE%E5%BA%A6%E3%81%8C%E6%82%AA%E3%81%84">GPSの精度が悪い</h4>
+
+<p>どうも、GPSの精度、というか掴む数が少ない気がする。</p>
+
+<p>Nexus 5X に比べて、室内だと特に乱れやすい。</p>
+
+<p>位置ゲームをやっている身としては困る...</p>
+
+<h4 id="%E6%99%82%E8%A8%88%E3%81%8C%E7%9C%81%E7%95%A5%E3%81%95%E3%82%8C%E3%82%8B%EF%BC%81">時計が省略される！</h4>
+
+<p>何故か時計が <code>...</code> で省略されて、今何時か、しかわからない。
+<del>とりあえず、バッテリーの残り容量が数字で表示されている部分を表示しないようにするだけで直った様子。</del>
+直りませんでした。</p>
+
+<p>※ 縦横を切り替えると直る様子。</p>
+
+<h4 id="%E3%82%B9%E3%83%86%E3%83%BC%E3%82%BF%E3%82%B9%E3%83%90%E3%83%BC%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B8%E3%82%B1%E3%83%BC%E3%82%BF%E3%81%8C%E9%87%8D%E3%81%AA%E3%82%8B">ステータスバーのインジケータが重なる</h4>
+
+<p>Bluetooth の状態インジケータが隣のアイコンと重なる。</p>
+
+<h4 id="%E6%99%82%E8%A8%88%E3%81%8C%E9%80%B2%E3%81%BE%E3%81%AA%E3%81%84">時計が進まない</h4>
+
+<p>ゲームをしている最中などに、ステータスバーの時計が進まなくなることがある様子。</p>
+
+<p>ウィジェットや通知領域の時刻は進んでいるのでなんだかなーと。</p>
+
+<p><a href="/images/2017_1117_raijin_clock_not_working.png"><img src="/thumbs/af861fc8f79d9f0f208215abb11e64b6-256x256.png" alt="時刻が進まない"></a></p>
+
+<p>※ 縦横を切り替えると直る様子。</p>
+
+<h4 id="%E6%A8%99%E6%BA%96%E3%83%A9%E3%83%B3%E3%83%81%E3%83%A3%E3%83%BC%E3%81%AE%E8%A1%8C%E6%95%B0%E3%81%8C%E5%B0%91%E3%81%AA%E3%81%84">標準ランチャーの行数が少ない</h4>
+
+<p>解像度は Nexus 5X と同じはずだけど、なぜだかランチャーで並べられる数が少ない。</p>
+
+<p>比較画像</p>
+
+<p><a href="/images/2017_1117_raijin_welcome.png"><img src="/thumbs/20b3c103b01637a7fdd21111ad9235cb-256x256.png" alt="FREETEL RAIJIN ランチャースクショ"></a></p>
+
+<p><a href="/images/2015_1207_nexus5x_17_setup.png"><img src="/thumbs/44a9a648a8ff0199dd758ee702235cb2-256x256.png" alt="Google Nexus 5X ランチャースクショ"></a></p>
+
+<p>を見てみるとよくわかるけど、RAIJIN の方は置けるアプリの数が Nexus 5X よりも少ない模様。</p>
+
+<p>間抜けなことに、最初なんだか画面が狭いなーと思ってたけど、何のことはない、5 x 5 から 4 x 4 に減っただけだった。</p>
+
+<h4 id="%E6%80%A5%E9%80%9F%E5%85%85%E9%9B%BB%E3%81%AB%E3%81%AA%E3%82%89%E3%81%AA%E3%81%84">急速充電にならない</h4>
+
+<p>急速充電に対応していないらしく... あれ？対応しているって「<a href="https://blg.freetel.jp/faq/17254.html">急速充電に対応していますか？ </a>」に書かれてるな。</p>
+
+<p>充電中のステータスが「充電中」のままのようだ。</p>
+
+<p>充電器によってはそもそも給電がされないか、消費が多くて充電が進まなことがある模様。</p>
+
+<h3 id="%E7%AD%90%E4%BD%93%E8%87%AA%E4%BD%93%E3%81%AB%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE">筐体自体に欲しかったもの</h3>
+
+<ul>
+<li>防水機能
+まあ、そこまで神経質にならなくてもいいけど、水没にだけは気をつけよう。</li>
+</ul>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://mobareco.jp/a77458/">FREETEL SAMURAI REIを買ったら設定しておきたい10のこと - モバレコ</a></li>
+<li><a href="https://mobareco.jp/a95780/">最新モデル「FREETEL RAIJIN」レビュー！フリーテルならではのこだわりを感じる1台 - モバレコ</a></li>
+<li><a href="https://www.dream-seed.com/weblog/note/android-7-nougat-easteregg">Android 7.0 Nougatのイースターエッグの遊び方 – Dream Seed</a></li>
+<li><a href="http://wnkhs.net/2017/02/android-7-easter-egg-watch/">Android 7 Nougatのイースターエッグは時計でも確認できる – wnkhs.net</a></li>
+<li><a href="https://www.freetel.jp/product/smartphone/raijin/faq.html">RAIJINのFAQ｜FTJ162E-RAIJIN｜FREETEL(フリーテル) のSIMフリースマホ</a></li>
+<li><a href="https://www.freetel.jp/product/smartphone/raijin/spec.html">RAIJINのスペック｜FTJ162E-RAIJIN｜FREETEL(フリーテル) のSIMフリースマホ</a></li>
+<li><a href="http://monomoney.hatenablog.com/entry/2017/02/09/165434">FREETELのRAIJIN 雷神のカメラの設定項目 - M,LIFE</a></li>
+<li><a href="https://zenfone3-asus-wiki.fxtec.info/wiki.cgi?page=FREETEL%20%CD%EB%BF%C0%20RAIJIN%20vs%20ZenFone%203%20%A5%B9%A5%DA%A5%C3%A5%AF%A4%CE%B0%E3%A4%A4%A1%A2%A5%AC%A5%C1%C8%E6%B3%D3%A1%AA">FREETEL 雷神 RAIJIN vs ZenFone 3 スペックの違い、ガチ比較！ - ZenFone 3（ASUS）まとめWiki</a></li>
+</ul>
+]]></content>
         </entry>
     </feed>
