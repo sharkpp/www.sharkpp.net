@@ -6,9 +6,9 @@ categories: [ブログ]
 
 ---
 
-[前に使っていた Google Nexus 5X](/blog/2015/12/07/unboxing-and-used-one-month-of-nexus-5x.html) が、巷で話題の再起動ループに陥ったので、新しいスマホに購入しました。
+前に使っていた [Google Nexus 5X](/blog/2015/12/07/unboxing-and-used-one-month-of-nexus-5x.html) が、巷で話題の再起動ループに陥ったので、新しいスマホを購入しました。
 
-今回は、長々と代替機で過ごしていると[某ボールを投げて何某をゲットするゲーム](https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=ja)が遊べないのでサクッと選びました。
+今回は、長々と代替機で過ごしていると[某ボールを投げて何某をゲットするゲーム](https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&amp;hl=ja)が遊べないのでサクッと選びました。
 まあ、前のスマホが二年も前のなので、そこそこのスペックでほぼ同等ぐらいだからいいやと思って、[FREETEL RAIJIN](https://www.freetel.jp/product/smartphone/raijin/)を選びました。
 本当は Google PIXEL 2 がよかったんですが、あれ絶対日本では発売しないよなーと。
 
