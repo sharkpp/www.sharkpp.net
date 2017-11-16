@@ -228,6 +228,9 @@ exec_deploy () {
   PRIOD_BEGIN0=$(php -r 'echo microtime(true);')
   PRIOD_BEGIN=$(php -r 'echo microtime(true);')
   _sculpin generate --env=prod
+  if [ 0 -ne $? ] ; then
+    return 1
+  fi
   PRIOD_END=$(php -r 'echo microtime(true);')
   # check google analytics tracking id
   if [ "" == "$(cat output_prod/index.html | grep "${GOOGLE_ANALYTICS_TRACKING_ID}")" ]; then
