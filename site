@@ -60,6 +60,8 @@ _sculpin () {
                       $PHP $SCULPIN_PATH2 $*
                     fi ;;
   esac
+  echo L63 $?
+  return $?
 }
 
 # exec bowerphp
