@@ -114,29 +114,27 @@ Android 7 のイースターエッグはネコ集めらしい。
 
 と、いろんな撮影方法ができるみたいです。
 
-[<img src="{{ thumbnail('/images/2017_1117_raijin_camera01.jpg', 256, 256) }}" alt="お寿司その１：「一眼レフ」モード">](/images/2017_1117_raijin_camera01.jpg)
-
 カメラの設定はこんな感じ。
 
 ##### 「一眼レフ」モード
 
-[<img src="{{ thumbnail('/images/2017_1117_raijin_camera_mode01.png', 256, 256) }}" alt="ようこそ">](/images/2017_1117_raijin_camera_mode01.png)
+[<img src="{{ thumbnail('/images/2017_1117_raijin_camera_mode01.png', 256, 256) }}" alt="「一眼レフ」モード">](/images/2017_1117_raijin_camera_mode01.png)
 
 ２枚？を焦点をずらして撮影して、自動でぼかしを入れるようです。
 
 こんな感じ。
 
-[<img src="{{ thumbnail('/images/2017_1117_raijin_camera_mode01a.png', 256, 256) }}" alt="ようこそ">](/images/2017_1117_raijin_camera_mode01a.png)
+[<img src="{{ thumbnail('/images/2017_1117_raijin_camera01.jpg', 256, 256) }}" alt="お寿司その１：「一眼レフ」モード">](/images/2017_1117_raijin_camera01.jpg)
 
 ##### 「残像」モード
 
-[<img src="{{ thumbnail('/images/2017_1117_raijin_camera_mode02.png', 256, 256) }}" alt="ようこそ">](/images/2017_1117_raijin_camera_mode02.png)
+[<img src="{{ thumbnail('/images/2017_1117_raijin_camera_mode02.png', 256, 256) }}" alt="「残像」モード">](/images/2017_1117_raijin_camera_mode02.png)
 
 何枚か撮影して、複数枚選んだ画像に移る目標物を抜き出し、合成するようです。
 
 ##### 「ハイスピード」モード
 
-[<img src="{{ thumbnail('/images/2017_1117_raijin_camera_mode03.png', 256, 256) }}" alt="ようこそ">](/images/2017_1117_raijin_camera_mode03.png)
+[<img src="{{ thumbnail('/images/2017_1117_raijin_camera_mode03.png', 256, 256) }}" alt="「ハイスピード」モード">](/images/2017_1117_raijin_camera_mode03.png)
 
 何枚か撮影して、選んだ画像に写る目標物以外にモーションブラーを掛けるようです。
 
