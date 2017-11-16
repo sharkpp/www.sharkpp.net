@@ -43,8 +43,6 @@ categories: [ブログ]
 
 [<img src="{{ thumbnail('/images/2017_1117_raijin_backside.jpg', 256, 256) }}" alt="裏面">](/images/2017_1117_raijin_backside.jpg)
 
-[<img src="{{ thumbnail('/images/Cat_100.png', 256, 256) }}" alt="本体＆充電ケーブル">](/images/Cat_100.png)
-
 SIMスロットは、microSDカードリーダと兼用も含めて二つ付いているようです。
 
 [<img src="{{ thumbnail('/images/2017_1117_raijin_sim_slot.jpg', 256, 256) }}" alt="nanoSIM収納">](/images/2017_1117_raijin_sim_slot.jpg)
