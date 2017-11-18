@@ -5,6 +5,8 @@ sudo: false
 branches:
   only:
     - master
+before_script:
+  - npm install -g bower
 script:
   - '[ "$TRAVIS_PULL_REQUEST" == "false" ] && bash ./site deploy'
 cache:

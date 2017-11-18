@@ -60,13 +60,15 @@ _sculpin () {
                       $PHP $SCULPIN_PATH2 $*
                     fi ;;
   esac
-  echo L63 $?
-  return $?
 }
 
 # exec bowerphp
 _bower () {
-  $PHP .vendor/beelab/bowerphp/bin/bowerphp $*
+  if [ "" != "$(whereis bower)" ]; then
+    bower $*
+  else
+    $PHP .vendor/beelab/bowerphp/bin/bowerphp $*
+  fi
 }
 
 # get config value
