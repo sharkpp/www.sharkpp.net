@@ -65,7 +65,7 @@ _sculpin () {
 # exec bowerphp
 _bower () {
   if [ "" != "$(whereis bower)" ]; then
-    bower $*
+    bower $* -s
   else
     $PHP .vendor/beelab/bowerphp/bin/bowerphp $*
   fi

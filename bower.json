@@ -10,9 +10,12 @@
     "dependencies": {
         "lightbox2": "2.7.*",
         "imagesloaded": "~3.1.8",
-        "wookmark-jquery": "https:\/\/github.com\/germanysbestkeptsecret\/Wookmark-jQuery#~2.0.0",
-        "mermaid": "*",
+        "wookmark-jquery": "https:\/\/github.com\/germanysbestkeptsecret\/Wookmark-jQuery.git#~2.0.0",
+        "mermaid": "https:/\/github.com\/knsv\/mermaid\/archive\/7.0.0.tar.gz",
         "jquery-smooth-scroll": "*",
         "jquery-sheetrock": "*"
+    },
+    "resolutions": {
+        "jquery": ">=1.8.0"
     }
 }

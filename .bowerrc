@@ -1,4 +1,9 @@
 {
     "directory": "source/assets/",
-    "json": "bower.json"
+    "json": "bower.json",
+    "storage": {
+        "packages" : ".bower/packages",
+        "registry" : ".bower/registry",
+        "links" : ".bower/links"
+    }
 }

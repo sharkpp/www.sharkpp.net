@@ -12,4 +12,5 @@ script:
 cache:
   directories:
     - .vendor
+    - .bower
     - source/assets
