@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/Google%20Poly.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-12-01T14:30:57+00:00</updated>
+    <updated>2017-12-01T14:46:14+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -17,17 +17,19 @@
 
 <p><a href="http://qiita.com/advent-calendar/2017/hsp">Hot Soup Processor Advent Calendar 2017</a> の 初日を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p>
 
-<p>この記事では、Google Poly で公開されている <a href="https://ja.wikipedia.org/wiki/Wavefront_.obj%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">Wavefront .OBJ ファイル</a> を HSP の hgimg4 で利用してみる方法について書いています。</p>
+<p>この記事では、Google Poly で公開されている <a href="https://ja.wikipedia.org/wiki/Wavefront_.obj%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">Wavefront .OBJ ファイル</a> を HSP の hgimg4 で利用してみる方法について書いてみました。</p>
 
 <h2 id="%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">はじめに</h2>
+
+<p><img src="/images/2017_1201_poly_ss.png" alt="Google Poly" /></p>
 
 <p>皆さんは、ちょうどひと月前に公開された Google の <a href="https://poly.google.com/">Poly</a> というサイトをご存知でしょうか？</p>
 
 <p>似てますが Google Play じゃないですよ？</p>
 
-<p>このサイトは、Google が後悔した VR/AR向け素材のライブラリサイトで、クレジット（著作権表示）を行えば改変なども可能な CC BY ライセンスで数多くの素材が公開されています。</p>
+<p>このサイトは、Google が公開した VR/AR向け素材のライブラリサイトで、クレジット（著作権表示）を行えば改変なども可能な CC BY ライセンスで数多くの素材が公開されています。</p>
 
-<p>今回はこのサイトに登録されている Tilt Brush 以外で作られた OBJ をダウンロードして hgimg4 で表示して見ることにします。</p>
+<p>今回はこのサイトに登録されている Tilt Brush 以外で作られた OBJ をダウンロードして hgimg4 で表示してみることにします。</p>
 
 <p>あ、 HSP は 3.5 を利用しています。</p>
 
