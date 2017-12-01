@@ -14,6 +14,8 @@ categories: [ブログ]
 
 ## はじめに
 
+![Google Poly](/images/2017_1201_poly_ss.png)
+
 皆さんは、ちょうどひと月前に公開された Google の [Poly](https://poly.google.com/) というサイトをご存知でしょうか？
 
 似てますが Google Play じゃないですよ？
