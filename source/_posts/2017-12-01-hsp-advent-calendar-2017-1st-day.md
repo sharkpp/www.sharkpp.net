@@ -10,7 +10,7 @@ categories: [ブログ]
 
 [Hot Soup Processor Advent Calendar 2017](http://qiita.com/advent-calendar/2017/hsp) の 初日を担当する [@sharkpp](https://twitter.com/sharkpp) です。
 
-この記事では、Google Poly で公開されている [Wavefront .OBJ ファイル](https://ja.wikipedia.org/wiki/Wavefront_.obj%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB) を HSP の hgimg4 で利用してみる方法について書いています。
+この記事では、Google Poly で公開されている [Wavefront .OBJ ファイル](https://ja.wikipedia.org/wiki/Wavefront_.obj%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB) を HSP の hgimg4 で利用してみる方法について書いてみました。
 
 ## はじめに
 
@@ -18,9 +18,9 @@ categories: [ブログ]
 
 似てますが Google Play じゃないですよ？
 
-このサイトは、Google が後悔した VR/AR向け素材のライブラリサイトで、クレジット（著作権表示）を行えば改変なども可能な CC BY ライセンスで数多くの素材が公開されています。
+このサイトは、Google が公開した VR/AR向け素材のライブラリサイトで、クレジット（著作権表示）を行えば改変なども可能な CC BY ライセンスで数多くの素材が公開されています。
 
-今回はこのサイトに登録されている Tilt Brush 以外で作られた OBJ をダウンロードして hgimg4 で表示して見ることにします。
+今回はこのサイトに登録されている Tilt Brush 以外で作られた OBJ をダウンロードして hgimg4 で表示してみることにします。
 
 あ、 HSP は 3.5 を利用しています。
 
