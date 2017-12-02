@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/atom.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-12-01T14:45:52+00:00</updated>
+    <updated>2017-12-02T00:31:37+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -226,7 +226,7 @@ loop
 <p>パッとさわってみた限り、テクスチャの問題を除いても、そのままで HSP で利用できそうなのが少ない印象でした。
 ここは、HSP専用のassetストアの解説が待たれるところです！</p>
 
-<p>明日は <a href="https://twitter.com/y_tack">@y_tack</a> さんの「（エターナル化してきた）OpenHSPの書写他（仮）」です。</p>
+<p>明日は <a href="https://twitter.com/y_tack">@y_tack</a> さんの「<a href="https://qiita.com/y_tack/items/7eda1f2502de4611b4f7">（エターナル化してきた）OpenHSPの書写他</a>」です。</p>
 
 <p>楽しみですね。</p>
 
@@ -248,7 +248,7 @@ loop
 <p>この投稿は <strong><a href="http://qiita.com/advent-calendar/2017/hsp">Hot Soup Processor Advent Calendar 2017</a></strong> の <strong>1日目</strong>の記事です。</p>
 
 <ul>
-<li>2日目の記事: （エターナル化してきた）OpenHSPの書写他（仮）</li>
+<li>2日目の記事: <a href="https://qiita.com/y_tack/items/7eda1f2502de4611b4f7">（エターナル化してきた）OpenHSPの書写他</a></li>
 </ul>
 
 <hr />
