@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/VR.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-12-02T00:32:04+00:00</updated>
+    <updated>2017-12-02T00:46:40+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -113,7 +113,7 @@
 
 <h2 id="hgimg4-%E5%B0%82%E7%94%A8%E5%BD%A2%E5%BC%8F%E3%81%B8%E5%A4%89%E6%8F%9B">hgimg4 専用形式へ変換</h2>
 
-<p>HSP付属の；；；；は FBX からの変換のみに対応しているようなので OBJ から FBX 形式への変換処理をする必要があります。</p>
+<p>HSP付属の GPB Converter というツールは FBX からの変換のみに対応しているようなので OBJ から FBX 形式への変換処理をする必要があります。</p>
 
 <p>昔は Autodesk FBX Converter がダウンロード出たようですが、今見に行くと Autodesk FBX Preview のダウンロードページへと飛ばされてしまいます。</p>
 
