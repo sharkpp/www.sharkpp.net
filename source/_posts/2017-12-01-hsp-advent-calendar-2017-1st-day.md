@@ -199,7 +199,7 @@ loop
 パッとさわってみた限り、テクスチャの問題を除いても、そのままで HSP で利用できそうなのが少ない印象でした。
 ここは、HSP専用のassetストアの解説が待たれるところです！
 
-明日は [@y_tack](https://twitter.com/y_tack) さんの「（エターナル化してきた）OpenHSPの書写他（仮）」です。
+明日は [@y_tack](https://twitter.com/y_tack) さんの「[（エターナル化してきた）OpenHSPの書写他](https://qiita.com/y_tack/items/7eda1f2502de4611b4f7)」です。
 
 楽しみですね。
 
@@ -219,6 +219,6 @@ loop
 
 この投稿は **[Hot Soup Processor Advent Calendar 2017](http://qiita.com/advent-calendar/2017/hsp)** の **1日目**の記事です。
 
-* 2日目の記事: （エターナル化してきた）OpenHSPの書写他（仮）
+* 2日目の記事: [（エターナル化してきた）OpenHSPの書写他](https://qiita.com/y_tack/items/7eda1f2502de4611b4f7)
 
 <hr />
