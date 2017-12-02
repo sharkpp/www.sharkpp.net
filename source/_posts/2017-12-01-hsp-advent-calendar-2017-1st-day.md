@@ -97,7 +97,7 @@ FBX ファイルをダウンロードして利用する場合は、次の OBJ �
 
 ## hgimg4 専用形式へ変換
 
-HSP付属の；；；；は FBX からの変換のみに対応しているようなので OBJ から FBX 形式への変換処理をする必要があります。
+HSP付属の GPB Converter というツールは FBX からの変換のみに対応しているようなので OBJ から FBX 形式への変換処理をする必要があります。
 
 昔は Autodesk FBX Converter がダウンロード出たようですが、今見に行くと Autodesk FBX Preview のダウンロードページへと飛ばされてしまいます。
 
