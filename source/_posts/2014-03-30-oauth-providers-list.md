@@ -1,12 +1,12 @@
 ---
-title: "oAuth 認証を提供しているサービスをまとめてみました"
+title: "OAuth 認証を提供しているサービスをまとめてみました"
 date: 2014-03-30 23:35:00
-tags: [まとめ, php, Develop, oAuth, ウェブサービス]
+tags: [まとめ, php, Develop, OAuth, ウェブサービス]
 categories: [まとめ, ウェブサービス]
 
 ---
 
-oAuth 認証を提供しているサービスをまとめてみました。
+OAuth 認証を提供しているサービスをまとめてみました。
 
 どちらかというと Opauth で使えそうなサービス一覧、が正しいのかもしれません。
 
@@ -25,7 +25,7 @@ Opauth
 プロバイダ
 </th>
 <th align="center">
-oAuth
+OAuth
 </th>
 <th align="left">
 開発サイト(アプリ登録など)
