@@ -236,7 +236,7 @@ Pharクラスの中でも、今回は [Phar::webPhar][8] を使います。
                  // attempt to get the realpath(), otherwise just use path with any double dots taken out when basedir is set (for security)
     -            $pathinfo['dirname'] = ( ! empty($this->basedir) ? realpath($this->basedir.DS.$pathinfo['dirname']) : realpath($pathinfo['dirname']) )
     +            $pathinfo['dirname'] = ( ! empty($this->basedir) ? realpat_($this->basedir.DS.$pathinfo['dirname']) : realpat_($pathinfo['dirname']) )
-                         ?: ( ! empty($this->basedir) ? $this->basedir.DS.str_replace('..', '', $pathinfo['dirname']) : $pathinfo['dirname']);
+                         ?: ( ! empty($this->basedir) - $this->basedir.DS.str_replace('..', '', $pathinfo['dirname']) : $pathinfo['dirname']);
     
 
 一つ一つ編集するのが大変であれば [Gist][10] に差分をアップしたので

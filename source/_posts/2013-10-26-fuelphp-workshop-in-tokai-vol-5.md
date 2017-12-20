@@ -24,7 +24,7 @@ categories: [ブログ]
 
  [2]: https://twitter.com/ounziw
 
-2.0 へ向けての変更点を [FuelPHP ? 2.0 - An Update | Blog][3] の内容をもとに確認
+2.0 へ向けての変更点を [FuelPHP - 2.0 - An Update | Blog][3] の内容をもとに確認
 
  [3]: http://fuelphp.com/blogs/2013/08/2-0-an-update
 

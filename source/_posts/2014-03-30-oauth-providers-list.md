@@ -12,7 +12,7 @@ OAuth 認証を提供しているサービスをまとめてみました。
 
 ついでに、ステータスやアプリケーションの登録を行うためのサイトも全てではないですが調べてあります。
 
-一覧は [Opauth ? Multi-provider authentication framework for PHP][1] や [Packagist][2] などを参考にしています。
+一覧は [Opauth - Multi-provider authentication framework for PHP][1] や [Packagist][2] などを参考にしています。
 
  [1]: http://opauth.org/
  [2]: https://packagist.org/packages/opauth/
@@ -407,7 +407,7 @@ OpenID
 2.0
 </td>
 <td align="left">
-<a href="https://api.onthecity.org/docs/apps">The City ? API Docs</a>
+<a href="https://api.onthecity.org/docs/apps">The City - API Docs</a>
 </td>
 <td align="left">
 </td>

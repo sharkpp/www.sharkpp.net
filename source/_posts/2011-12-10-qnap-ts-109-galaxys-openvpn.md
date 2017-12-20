@@ -14,9 +14,9 @@ NAS(QNAP TS-109II)をゴニョゴニョやりながらなんとかOpenVPN使っ�
 
 
   * [QNAPへのインターネット経由でのOpenVPNアクセス][1]
-  * [Install OpenVPN on QNAP ? NAS Wiki][2]
-  * [ViaPress inc. ? SC-02B OpenVPN for Android][3]
-  * [beautiful-moon.net ? Blog Archive ? Xperia(Android)からOpenVPN接続][4]
+  * [Install OpenVPN on QNAP - NAS Wiki][2]
+  * [ViaPress inc. - SC-02B OpenVPN for Android][3]
+  * [beautiful-moon.net - Blog Archive - Xperia(Android)からOpenVPN接続][4]
 
  [1]: http://blog.circlea4.net/?p=406
  [2]: http://wiki.nas-portal.org/index.php/Install_OpenVPN_on_QNAP
@@ -426,7 +426,7 @@ comp-lzo
 
 ### LAN内部のクライアントと通信する
 
-[OpenVPN Extras ? NAS Wiki][14]を参考
+[OpenVPN Extras - NAS Wiki][14]を参考
 
  [14]: http://wiki.nas-portal.org/index.php/OpenVPN_Extras
 

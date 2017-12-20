@@ -236,7 +236,7 @@ SSH鍵を使う場合は
 ## 参考
 
   * [特集 DevOps時代の必須知識：インフラストラクチャ自動化フレームワーク「Chef」の基本 (1/2) - ＠IT][6]
-  * [Install Chef 11.x on a Workstation ? Chef Docs][7]
+  * [Install Chef 11.x on a Workstation - Chef Docs][7]
   * [http://qiita.com/takeshi\_ok\_desu/items/936ee44b712c37d25a0e][8]
   * [Chef Soloの正しい始め方 | tsuchikazu blog][4]
   * [Chef 11.12.2のknife configureが失敗する - Qiita][3]

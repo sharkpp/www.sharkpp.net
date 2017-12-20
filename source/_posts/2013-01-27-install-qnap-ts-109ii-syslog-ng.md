@@ -179,9 +179,9 @@ QPKGの設定に追加することで機能の有効無効がUIから操作で�
 
 ### 参考
 
-  * [QNAP NAS Community Forum ? View topic - [HOWTO] Syslog-ng- receive router logs][1]
-  * [QNAP NAS Community Forum ? View topic - where to link optware auto-start][2]
-  * [QNAP NAS Community Forum ? View topic - rsyslog][3]
+  * [QNAP NAS Community Forum - View topic - [HOWTO] Syslog-ng- receive router logs][1]
+  * [QNAP NAS Community Forum - View topic - where to link optware auto-start][2]
+  * [QNAP NAS Community Forum - View topic - rsyslog][3]
   * [QNAPにsyslog-ng: とくさんブログ][4]
   * [syslog-ng.confの設定 : マロンくん.NET][5]
   * [＠IT：止められないUNIXサーバの管理対策 第9回][6]

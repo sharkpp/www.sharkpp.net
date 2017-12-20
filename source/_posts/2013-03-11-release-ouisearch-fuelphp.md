@@ -125,7 +125,7 @@ OUIを検索するFuelPHP用のパッケージを作ったよってことで、�
  [15]: /images/2013_0311_ouisearch_travisci_s.png
  [16]: /images/2013_0311_ouisearch_travisci.png
 
-最終的に完成した .travis.yml は、[fuel-ouisearch/.travis.yml at master ? sharkpp/fuel-ouisearch ? GitHub][17] です。 中身はたいしたことをやっていなくて
+最終的に完成した .travis.yml は、[fuel-ouisearch/.travis.yml at master - sharkpp/fuel-ouisearch - GitHub][17] です。 中身はたいしたことをやっていなくて
 
  [17]: https://github.com/sharkpp/fuel-ouisearch/blob/master/.travis.yml
 

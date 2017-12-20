@@ -15,11 +15,11 @@ categories: [まとめ]
 ## サンプル
 
   * [URI Template の C++ 実装 (Xbyak による JIT 版ほか)][2]
-  * [JIT ? Gist][3]
-  * [make thunk with JIT wrapper ? Gist][4]
-  * [サンクでthiscallをcdeclに変換 ? Gist][5]
+  * [JIT - Gist][3]
+  * [make thunk with JIT wrapper - Gist][4]
+  * [サンクでthiscallをcdeclに変換 - Gist][5]
   * [DirectWriteをいじる(1) | S.F.Page][6]
-  * [/lang/cplusplus/i3/src/mol/include/mol/gui-windows ? CodeRepos::Share ? Trac][7]
+  * [/lang/cplusplus/i3/src/mol/include/mol/gui-windows - CodeRepos::Share - Trac][7]
 
  [2]: http://labs.cybozu.co.jp/blog/nakatani/2008/07/uri_template_c_xbyak_jit.html
  [3]: https://gist.github.com/1225880

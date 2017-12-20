@@ -45,7 +45,7 @@ QtQuick2でCanvasエレメント上に円グラフを描き描きしてそれら
 
 単純なQStringとかを返すのではなくいろんな情報を持つオブジェクトを返したかったので少し変わった事をしています。
 
-[TaskMemGraph/processlist.h at master ? sharkpp/TaskMemGraph - GitHub][7] や [TaskMemGraph/processinfo.h at master ? sharkpp/TaskMemGraph - GitHub][8] など で実装しているのですが、`ProcessInfo`クラスは`QObject`から派生していて、`Q_PROPERTY`でプロパティーを定義しています。
+[TaskMemGraph/processlist.h at master - sharkpp/TaskMemGraph - GitHub][7] や [TaskMemGraph/processinfo.h at master - sharkpp/TaskMemGraph - GitHub][8] など で実装しているのですが、`ProcessInfo`クラスは`QObject`から派生していて、`Q_PROPERTY`でプロパティーを定義しています。
 
  [7]: https://github.com/sharkpp/TaskMemGraph/blob/master/processlist.h
  [8]: https://github.com/sharkpp/TaskMemGraph/blob/master/processinfo.h
@@ -82,7 +82,7 @@ QtQuick2でCanvasエレメント上に円グラフを描き描きしてそれら
 
 ### 参考
 
-  * [\[Qt\]\[QML\]QMLとC++コードの連携 ? Utworks][9]
+  * [\[Qt\]\[QML\]QMLとC++コードの連携 - Utworks][9]
   * [Using QML Bindings in C++ Applications | Documentation | Qt Project][10]
   * [QtQuick での C++ × QML バインディングについてまとめてみた - 凹みTips][11]
   * [Calling Qt class methods from QML - Nokia Developer Wiki][12]

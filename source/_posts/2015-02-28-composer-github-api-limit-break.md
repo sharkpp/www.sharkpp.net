@@ -34,8 +34,8 @@ github のレポジトリを参照している場合に composer で update 時�
 
 ## 参考
 
-  * [Authentication required, while manual file download succeeds ? Issue #2439 ? composer/composer][2]
-  * [composer/troubleshooting.md at master ? composer/composer][3]
+  * [Authentication required, while manual file download succeeds - Issue #2439 - composer/composer][2]
+  * [composer/troubleshooting.md at master - composer/composer][3]
 
  [2]: https://github.com/composer/composer/issues/2439#issuecomment-33034375
  [3]: https://github.com/composer/composer/blob/master/doc/articles/troubleshooting.md#api-rate-limit-and-oauth-tokens
