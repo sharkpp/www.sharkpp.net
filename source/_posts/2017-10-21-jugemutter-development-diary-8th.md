@@ -8,8 +8,9 @@ categories: [ブログ]
 
 今回は、明日行われる [技術書典３](https://techbookfest.org/event/tbf03) に前日入りして、[Qt 勉強会 @ Tokyo #52](https://qt-users.connpass.com/event/68878/) に参加してきました。
 
-東京の勉強会はすごく久しぶりの参加でした。
-以前は、誰かしらが発表をして、それを聞く感じの会でしたが、最近はもくもくがメインのようでした。
+東京の勉強会はすごく久しぶりの参加でした。
+
+以前は、誰かしらが発表をして、それを聞く感じの会でしたが、最近はもくもくがメインのようでした。
 
 レポジトリは ... [sharkpp/Jugemutter: 長文投稿専用クライアント「じゅげむったー」](https://github.com/sharkpp/Jugemutter) となります。
 
