@@ -1,4 +1,6 @@
 ---
+layout: post
+js: { mermaid: true }
 title: "駆け足で Qt Network Authorization の使い方を紹介してみる"
 date: 2017-12-21 23:45:00
 tags: [Advent Calendar, Qt, OS X, macOS, OAuth]
