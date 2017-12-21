@@ -3,11 +3,519 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/Advent%20Calendar.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-12-02T00:46:40+00:00</updated>
+    <updated>2017-12-21T14:49:02+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[駆け足で Qt Network Authorization の使い方を紹介してみる]]></title>
+            <link href="http://www.sharkpp.net/blog/2017/12/21/qt-advent-calendar-2017-21th-day.html"/>
+            <updated>2017-12-21T23:45:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2017/12/21/qt-advent-calendar-2017-21th-day.html</id>
+            <content type="html"><![CDATA[<p>こんにちは、こんばんは。</p>
+
+<p><a href="http://qiita.com/advent-calendar/2017/qt">Qt Advent Calendar 2017</a> の 21日目を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p>
+
+<p>昨日の <a href="https://qiita.com/Donokono/items/cb9167ee78eb758f8806">Qtでグラフを書いてみよう！</a> の自前のグラフ描画、すごかったですね。
+自分も MFC で苦労して実装した覚えがあります。</p>
+
+<p>さて、今回は Qt Network Authorization の使い方についてです。</p>
+
+<h2 id="qt-network-authorization-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">Qt Network Authorization について</h2>
+
+<p>Qt 5.8 から Technology Preview として追加された <a href="https://doc.qt.io/qt-5.10/qtnetworkauth-index.html">Qt Network Authorization</a> モジュールが、先日公開された Qt 5.10 でついに完全サポート(fully supported)されるようになりました。</p>
+
+<p>モジュール自体は汎用的にできていて、Twitter や Facebook などの OAuth1/2 での認証に対応したサイトの利用も容易にできるようになっています。
+ただ、現状は日本語の情報が少ないようなので、 Technology Preview で公開されて以降、この一年で調べたことなどをまとめていきたいと思います。</p>
+
+<h2 id="%E7%92%B0%E5%A2%83">環境</h2>
+
+<table>
+<thead>
+<tr>
+  <th>バージョン</th>
+  <th>注意点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Qt 5.8</td>
+  <td>TP、一部サービスでソースコードの修正が必要な不具合あり</td>
+</tr>
+<tr>
+  <td>Qt 5.9</td>
+  <td>TP2、OAuthの計算がおかしい場合がある</td>
+</tr>
+<tr>
+  <td>Qt 5.10</td>
+  <td>基本はこれ！</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="%E3%81%93%E3%81%AE%E4%B8%80%E5%B9%B4%E3%81%AE%E5%A0%B1%E5%91%8A">この一年の報告</h2>
+
+<h3 id="%E8%A8%98%E4%BA%8B">記事</h3>
+
+<p>自分が書いた Qt Network Authorization に関する記事です。</p>
+
+<p>意外と本数が少なかった。</p>
+
+<ul>
+<li><a href="/blog/2017/01/28/first-impression-qt-network-authorization.html">はじめての Qt Network Authorization</a></li>
+<li><a href="/blog/2017/03/25/twitter-api-using-qt-network-authorization.html">Qt Network Authorization を使った Twitter API の利用</a></li>
+<li><a href="/blog/2017/02/28/dropbox-api-using-qt-network-authorization.html">Qt Network Authorization を使った Dropbox API　の利用</a></li>
+<li><a href="/blog/2017/10/21/jugemutter-development-diary-8th.html">じゅげむったーの開発日記 その８</a></li>
+</ul>
+
+<h3 id="%E4%B8%8D%E5%85%B7%E5%90%88">不具合</h3>
+
+<p>自身が見つけた不具合です。</p>
+
+<p>他にもいろいろ見つけたけど、どちらかと言うと要望に近かったので登録していないです、実は。</p>
+
+<ul>
+<li><a href="https://bugreports.qt.io/browse/QTBUG-59725">QTBUG-59725</a>
+callback時に表示するHTMLでマルチバイト文字が欠ける</li>
+<li><a href="https://bugreports.qt.io/browse/QTBUG-60400">QTBUG-60400</a>
+Content-type を text/javascript で返すAPIでエラーになる</li>
+</ul>
+
+<h2 id="%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%AE%E8%AA%AC%E6%98%8E">クラスの説明</h2>
+
+<p>基本的には <a href="https://doc.qt.io/qt-5.10/qtnetworkauth-module.html">Qt Network Authorization C++ Classes</a> に書かれているクラスがすべて。</p>
+
+<table>
+<thead>
+<tr>
+  <th>クラス名</th>
+  <th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="https://doc.qt.io/qt-5.10/qoauth1.html">QOAuth1</a></td>
+  <td>OAuth 1 プロトコル実装</td>
+</tr>
+<tr>
+  <td><a href="https://doc.qt.io/qt-5.10/qoauth1signature.html">QOAuth1Signature</a></td>
+  <td>OAuth 1 シグネチャメソッド実装</td>
+</tr>
+<tr>
+  <td><a href="https://doc.qt.io/qt-5.10/qoauth2authorizationcodeflow.html">QOAuth2AuthorizationCodeFlow</a></td>
+  <td>承認コード付与フロー実装、QOAuth 2 用</td>
+</tr>
+</tbody>
+</table>
+
+<p>現状実装されているのは、 OAuth 1.x 用と OAuth 2.x 用のクラスで、Twitter や DropBox などなどサービスによってバージョンがバラバラなので APIの仕様書をよく確認する必要があります。</p>
+
+<p>数年前に調べた結果は 「<a href="/blog/2014/03/30/oauth-providers-list.html">OAuth 認証を提供しているサービスをまとめてみました</a>」にまとめてありますので参考にしてください。</p>
+
+<h2 id="%E5%AE%9F%E8%A3%85%E6%96%B9%E9%87%9D">実装方針</h2>
+
+<p>いろんな実装方法があると思いますが、ここでは、クラスを new して利用する方向性、つまり…</p>
+
+<pre><code class="cpp">    void MainWindow::onSendTweet() {
+        TwitterAPI t = this-&gt;twitter;
+        t-&gt;tweet("hoge");
+    }
+</code></pre>
+
+<p>このような利用方法を想定として実装してみます。</p>
+
+<h2 id="%E6%BA%96%E5%82%99">準備</h2>
+
+<p>まずは何はともあれ、 API を利用するためのキーを取得しましょう。</p>
+
+<p>アプリの登録方法は探せば見つかると思いますが、「<a href="/blog/2014/03/30/oauth-providers-list.html">OAuth 認証を提供しているサービスをまとめてみました</a>」で直接のリンクを張っておきましたので参考にしてみてください。</p>
+
+<h3 id="%E7%A7%98%E3%81%99%E3%81%B9%E3%81%8D%E6%83%85%E5%A0%B1%E3%82%92%E3%81%A9%E3%81%AE%E3%82%88%E3%81%86%E3%81%AB%E6%B8%A1%E3%81%99%E3%81%8B%EF%BC%9F">秘すべき情報をどのように渡すか？</h3>
+
+<p>この場合の、「秘すべき情報」とは、APIを利用するアプリ用の、"App key" と "App secret" と呼ばれる類のアプリ登録時にサービス側から発行してもらった情報です。</p>
+
+<p>現状は、「プロジェクト」→「ビルド設定」→「ビルドステップ」→「追加の引数」に追加します。</p>
+
+<p><img src="/images/20171221_qmake_args_for_oauth_apps.png" alt="OAuthのアプリケーションキーを設定するためのQMake設定" /></p>
+
+<p>「追加の引数」に設定する内容は</p>
+
+<pre><code>DEFINES+=TWITTER_APP_KEY="..." DEFINES+=TWITTER_APP_SECRET="..."
+</code></pre>
+
+<p>こんな感じ。</p>
+
+<p>ソース側で利用するときは</p>
+
+<pre><code class="cpp">                  :
+#define STR__(x) #x
+#define STR_(x) STR__(x)
+                  :
+    setClientIdentifier(STR_(TWITTER_APP_KEY));
+    setClientSharedSecret(STR_(TWITTER_APP_SECRET));
+                  :
+</code></pre>
+
+<p>このような形で利用しています。</p>
+
+<p>この方法、 <code>.pro.user</code> に保存されるため QtCreator が更新された場合は設定が消えてしまうのが注意点です。</p>
+
+<p>何か良い方法はないのでしょうか？</p>
+
+<h2 id="%E5%AE%9F%E8%A3%85%E3%81%99%E3%82%8B%E5%89%8D%E3%81%AB">実装する前に</h2>
+
+<p>ここからは、OAuth のバージョンによってそのクラスや利用方法が違うので順に記載していきます。</p>
+
+<p>OAuth 1 は Twitter を利用している <a href="https://github.com/sharkpp/Jugemutter">sharkpp/Jugemutter: 長文投稿専用ツイッタークライアント「じゅげむったー」</a> を、
+OAuth 2 は DropBox を利用している <a href="https://github.com/sharkpp/NetworkStorageAccessSample">sharkpp/NetworkStorageAccessSample: Qt Network Authorization "Network storage access" sample</a> を
+下敷きに書き進めているので、参考にしてみてください。</p>
+
+<h2 id="oauth-1">OAuth 1</h2>
+
+<p>Twitter の例</p>
+
+<p>大まかな初期化フローは</p>
+
+<pre><code class="mermaid">graph TD;
+
+A["初期化"] --&gt; |API エンドポイントの指定| B
+
+B["setTemporaryCredentialsUrl() / setAuthorizationUrl() / setTokenCredentialsUrl()"] --&gt; |API キーの指定| C
+
+C["setClientIdentifier() / setClientSharedSecret()"] --&gt; |"Auth Token 未初期化"| D0["grant()"]
+C --&gt; |"Auth Token 初期化済"| F
+
+D0 --&gt; D1("authorizeWithBrowser 受信")
+
+F["内部状態を認証済みに変更"] --&gt; J
+
+D1 --&gt;G
+D1 --&gt;H("requestFailed 受信")
+
+G("granted 受信") --&gt; I
+
+I["ID情報など問い合わせ"] --&gt;  J["API利用可能"]
+</code></pre>
+
+<p>こんな感じ</p>
+
+<p><code>QOAuth1</code> クラスから派生します。</p>
+
+<pre><code class="cpp">#include &lt;QtCore&gt;
+#include &lt;QtNetwork&gt;
+#include &lt;QtNetworkAuth&gt;
+
+class Twitter
+    : public QOAuth1
+{
+    Q_OBJECT
+public:
+    :
+    :
+};
+</code></pre>
+
+<p>とりあえず、利用するシグナルは</p>
+
+<table>
+<thead>
+<tr>
+  <th>シグナル名＆プロトタイプ</th>
+  <th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>void QAbstractOAuth::authorizeWithBrowser(const QUrl &amp;url)</code></td>
+  <td>ブラウザでの認証要求</td>
+</tr>
+<tr>
+  <td><code>void QAbstractOAuth::granted()</code></td>
+  <td>認証フローが正常終了した。つまり、APIを利用できるような状態になった</td>
+</tr>
+<tr>
+  <td><code>void QAbstractOAuth::requestFailed(const Error error)</code></td>
+  <td>認証フローが失敗した</td>
+</tr>
+</tbody>
+</table>
+
+<p>これだけです。</p>
+
+<h3 id="api-%E3%82%A8%E3%83%B3%E3%83%89%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E3%81%AE%E6%8C%87%E5%AE%9A">API エンドポイントの指定</h3>
+
+<pre><code class="cpp">    setTemporaryCredentialsUrl(QUrl("https://api.twitter.com/oauth/request_token"));
+    setAuthorizationUrl(QUrl("https://api.twitter.com/oauth/authenticate"));
+    setTokenCredentialsUrl(QUrl("https://api.twitter.com/oauth/access_token"));
+</code></pre>
+
+<h3 id="api-%E3%82%AD%E3%83%BC%E3%81%AE%E6%8C%87%E5%AE%9A">API キーの指定</h3>
+
+<p>これは、開発サイトなどでアプリを登録されたときに発行されるキーの組です。
+値自体はさらに暗号化されているのが望ましいと思います。</p>
+
+<pre><code class="cpp">    setClientIdentifier("..."); // TWITTER_APP_KEY
+    setClientSharedSecret("..."); // TWITTER_APP_SECRET
+</code></pre>
+
+<h3 id="authorizewithbrowser-%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB">authorizeWithBrowser シグナル</h3>
+
+<pre><code class="cpp"> connect(this, &amp;QAbstractOAuth::authorizeWithBrowser, [=](QUrl url) {
+        QUrlQuery query(url);
+        query.addQueryItem("force_login", "true");
+        url.setQuery(query);
+        QDesktopServices::openUrl(url);
+    });
+</code></pre>
+
+<p><code>QAbstractOAuth::authorizeWithBrowser</code> のシグナルを処理します。</p>
+
+<p>これは、ブラウザで認証を行う前に引数を加えたりする(<code>query.addQueryItem("force_login", "true");</code> がこの例での引数を追加する)ためのシグナルです。</p>
+
+<p>ここは別にラムダ式じゃなくても問題ないです。</p>
+
+<p><code>QDesktopServices::openUrl(url);</code></p>
+
+<p>この静的関数を呼び出すとブラウザが開き、各サービスの認証ページにアクセスが可能です。</p>
+
+<h3 id="granted-%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB">granted シグナル</h3>
+
+<p>認証が正常に終了した場合ためのシグナルです。</p>
+
+<pre><code class="cpp">  connect(this, &amp;QAbstractOAuth::granted, this, &amp;Twitter::authenticated);
+</code></pre>
+
+<p>場合によっては</p>
+
+<pre><code class="cpp">  connect(this, &amp;QAbstractOAuth::granted, this, [=]() {
+    // 認証要求成功
+    Q_EMIT authenticated();
+    // 続けてID情報などを取得する
+    verifyCredentials();
+  });
+</code></pre>
+
+<p>のように、ID情報やアイコン等の情報を予め取得するのも良いかもしれません。</p>
+
+<h3 id="requestfailed-%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB">requestFailed シグナル</h3>
+
+<p>要求が失敗した場合ためのシグナルです。</p>
+
+<p>granted シグナル の場合と同じく、何らかの形でクラス外へ通知しUI側でメッセージを表示させるなどの対応が必要になると思います。</p>
+
+<pre><code class="cpp">  connect(this, &amp;QAbstractOAuth::requestFailed, this, &amp;Twitter::authenticateFailed);
+</code></pre>
+
+<h3 id="api-%E3%81%AE%E5%88%A9%E7%94%A8">API の利用</h3>
+
+<p>予め GET や POST などのメソッドが用意されているためそれを利用します。</p>
+
+<pre><code class="cpp">virtual QNetworkReply * deleteResource(const QUrl &amp;url, const QVariantMap &amp;parameters = QVariantMap()) override;
+virtual QNetworkReply * get(const QUrl &amp;url, const QVariantMap &amp;parameters = QVariantMap()) override;
+virtual QNetworkReply * head(const QUrl &amp;url, const QVariantMap &amp;parameters = QVariantMap()) override;
+virtual QNetworkReply * post(const QUrl &amp;url, const QVariantMap &amp;parameters = QVariantMap()) override;
+virtual QNetworkReply * put(const QUrl &amp;url, const QVariantMap &amp;parameters = QVariantMap()) override;
+</code></pre>
+
+<p>こんな感じですね</p>
+
+<pre><code class="cpp">    QUrl url("https://api.twitter.com/1.1/account/verify_credentials.json");
+    QUrlQuery query(url);
+
+    QVariantMap data;
+    query.addQueryItem("include_entities", "false");
+    query.addQueryItem("skip_status",      "true");
+    query.addQueryItem("include_email",    "false");
+
+    url.setQuery(query);
+
+    QNetworkReply *reply = get(url);
+    connect(reply, &amp;QNetworkReply::finished, this, [=](){
+        auto reply_ = qobject_cast&lt;QNetworkReply*&gt;(sender());
+
+        // ここで結果を処理
+    });
+</code></pre>
+
+<p><code>QNetworkReply</code> の結果を JSON として処理する方法などは割愛します。</p>
+
+<h2 id="oauth-2">OAuth 2</h2>
+
+<p>DropBox の例</p>
+
+<p>大まかな初期化フローは</p>
+
+<pre><code class="mermaid">graph TD;
+
+A["初期化"] --&gt; |API エンドポイントの指定| B
+
+B["setAuthorizationUrl() / setAccessTokenUrl()"] --&gt; |API キーの指定| C
+
+C["setClientIdentifier() / setClientIdentifierSharedKey()"] --&gt; |"Auth Token 未初期化"| D0["grant()"]
+C --&gt; |"Auth Token 初期化済"| F
+
+F["内部状態を認証済みに変更"] --&gt; J
+
+D0 --&gt; D1("authorizeWithBrowser 受付")
+
+D1 --&gt;G
+D1 --&gt;H("requestFailed 受付")
+
+G("granted 受付") --&gt; I
+
+I["ID情報など問い合わせ"] --&gt;  J["API利用可能"]
+</code></pre>
+
+<p>こんな感じ</p>
+
+<p><code>QOAuth2AuthorizationCodeFlow</code> クラスから派生します。</p>
+
+<pre><code class="cpp">#include &lt;QtCore&gt;
+#include &lt;QtNetwork&gt;
+#include &lt;QtNetworkAuth&gt;
+
+class DropBox
+    : public QOAuth2AuthorizationCodeFlow
+{
+    Q_OBJECT
+public:
+    :
+    :
+};
+</code></pre>
+
+<p>とりあえず、利用するシグナルは</p>
+
+<table>
+<thead>
+<tr>
+  <th>シグナル名＆プロトタイプ</th>
+  <th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>void QAbstractOAuth::authorizeWithBrowser(const QUrl &amp;url)</code></td>
+  <td>ブラウザでの認証要求</td>
+</tr>
+<tr>
+  <td><code>void QOAuth2AuthorizationCodeFlow::statusChanged(QAbstractOAuth::Status status)</code></td>
+  <td></td>
+</tr>
+</tbody>
+</table>
+
+<p>これだけです。</p>
+
+<h3 id="api-%E3%82%A8%E3%83%B3%E3%83%89%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E3%81%AE%E6%8C%87%E5%AE%9A">API エンドポイントの指定</h3>
+
+<p><code>OAuth1</code> クラスとはメソッドが違っているので注意です。</p>
+
+<pre><code class="cpp">    setAuthorizationUrl(QUrl("https://www.dropbox.com/oauth2/authorize"));
+    setAccessTokenUrl(QUrl("https://api.dropbox.com/oauth2/token"));
+</code></pre>
+
+<h3 id="api-%E3%82%AD%E3%83%BC%E3%81%AE%E6%8C%87%E5%AE%9A">API キーの指定</h3>
+
+<p>これは、開発サイトなどでアプリを登録されたときに発行されるキーの組です。
+値自体はさらに暗号化されているのが望ましいと思います。</p>
+
+<p><code>OAuth1</code> クラスとはメソッドが違っているので注意です。</p>
+
+<pre><code class="cpp">    setClientIdentifier("..."); // DROPBOX_APP_KEY
+    setClientIdentifierSharedKey("..."); // DROPBOX_APP_SECRET
+</code></pre>
+
+<h3 id="%E8%A6%81%E6%B1%82%E5%89%8D%E3%81%AE%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E5%A4%89%E6%9B%B4">要求前のパラメータ変更</h3>
+
+<p>認証処理中に受け渡されるデータを編集するための関数を登録します。</p>
+
+<pre><code class="cpp">    setModifyParametersFunction([&amp;](Stage stage, QVariantMap* data) {
+        if (Stage::RequestingAuthorization == stage ||
+            Stage::RequestingAccessToken   == stage)
+        {
+            data-&gt;remove(Key::redirectUri);
+        }
+    });
+</code></pre>
+
+<p>DropBox では リダイレクト先のURLが存在していると意図しない動きをするため削除しています。</p>
+
+<h3 id="authorizewithbrowser-%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB">authorizeWithBrowser シグナル</h3>
+
+<pre><code class="cpp"> connect(this, &amp;QAbstractOAuth::authorizeWithBrowser, [=](QUrl url) {
+        QUrlQuery query(url);
+        customReplyHandler-&gt;setState(query.queryItemValue(Key::state));
+        QDesktopServices::openUrl(url);
+    });
+</code></pre>
+
+<p><code>QAbstractOAuth::authorizeWithBrowser</code> のシグナルを処理します。</p>
+
+<p>これは、ブラウザで認証を行う前に引数を加えたりするためのシグナルです。</p>
+
+<p>ここは別にラムダ式じゃなくても問題ないです。</p>
+
+<p><code>QDesktopServices::openUrl(url);</code></p>
+
+<p>この静的関数を呼び出すとブラウザが開き、各サービスの認証ページにアクセスが可能です。</p>
+
+<h3 id="statuschanged-%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB">statusChanged シグナル</h3>
+
+<p>認証ステータスが変化した時に呼ばれます。</p>
+
+<pre><code class="cpp">    connect(this, &amp;QOAuth2AuthorizationCodeFlow::statusChanged, [=](QAbstractOAuth::Status status) {
+        if (QAbstractOAuth::Status::Granted == status) {
+            Q_EMIT authenticated();
+        }
+    });
+</code></pre>
+
+<p>ちょっとここは覚えてないですが、少なくとも当時は <code>QOAuth2AuthorizationCodeFlow::granted</code> シグナルではうまく処理できなかったみたいなので、認証ステータスの変化時にこのクラスを利用する側に対してシグナルを発報しています。</p>
+
+<h3 id="api-%E3%81%AE%E5%88%A9%E7%94%A8">API の利用</h3>
+
+<p>API の利用 は OAuth 1 の場合と同じなので割愛します。</p>
+
+<h3 id="%E8%A3%9C%E8%B6%B3">補足</h3>
+
+<p>例として出した DropBox は、出た当時の実装だと色々と不具合がでてこ汚い手を使って回避しないと実装できなかったため、ソース自体が参考にするにはふさわしくないかもしれません。</p>
+
+<p>また、そのあたりソースは今回割愛しています。
+興味がある方は <a href="https://github.com/sharkpp/NetworkStorageAccessSample">sharkpp/NetworkStorageAccessSample: Qt Network Authorization "Network storage access" sample</a> を参照しいてください。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://github.com/sharkpp/NetworkStorageAccessSample">sharkpp/NetworkStorageAccessSample: Qt Network Authorization "Network storage access" sample</a></li>
+<li><a href="https://github.com/sharkpp/Jugemutter">sharkpp/Jugemutter: 長文投稿専用ツイッタークライアント「じゅげむったー」</a></li>
+<li><a href="https://doc.qt.io/qt-5.10/qtnetworkauth-module.html">Qt Network Authorization C++ Classes | Qt Network Authorization 5.10</a></li>
+</ul>
+
+<h2 id="%E6%9C%80%E5%BE%8C%E3%81%AB">最後に</h2>
+
+<p>今回は、新たに標準として加わった <a href="https://doc.qt.io/qt-5.10/qtnetworkauth-index.html">Qt Network Authorization</a> モジュール を駆け足で紹介しました。</p>
+
+<p>お仕事でも趣味でも <code>Qt Network Authorization</code> モジュールを使ってみようかと思う方の参考になれば幸いです。</p>
+
+<p>それでは、また。</p>
+
+<p>明日は <a href="https://qiita.com/ynuma">ynuma</a> さんによる「QtRuby について書こうかと思っています。」です。
+お楽しみに。</p>
+
+<hr />
+
+<p>この投稿は <strong><a href="http://qiita.com/advent-calendar/2017/qt">Qt Advent Calendar 2017</a></strong> の <strong>21日目</strong>の記事です。</p>
+
+<ul>
+<li>20日目の記事: <a href="https://qiita.com/Donokono/items/cb9167ee78eb758f8806">Qtでグラフを書いてみよう！</a></li>
+<li>22日目の記事: QtRuby について書こうかと思っています。</li>
+</ul>
+
+<hr />
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Google Poly で公開されている素材を HSP 3 で利用してみよう]]></title>
             <link href="http://www.sharkpp.net/blog/2017/12/01/hsp-advent-calendar-2017-1st-day.html"/>
