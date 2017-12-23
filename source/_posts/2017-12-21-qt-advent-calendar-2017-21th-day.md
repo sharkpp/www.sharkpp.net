@@ -445,7 +445,7 @@ API の利用 は OAuth 1 の場合と同じなので割愛します。
 
 それでは、また。
 
-明日は [ynuma](https://qiita.com/ynuma) さんによる「QtRuby について書こうかと思っています。」です。
+明日は [ynuma](https://qiita.com/ynuma) さんによる「[QtRuby を使ってみました](https://qiita.com/ynuma/items/21e49d084f1f5c8d3e4d)」です。
 お楽しみに。
 
 <hr />
@@ -453,6 +453,6 @@ API の利用 は OAuth 1 の場合と同じなので割愛します。
 この投稿は **[Qt Advent Calendar 2017](http://qiita.com/advent-calendar/2017/qt)** の **21日目**の記事です。
 
 * 20日目の記事: [Qtでグラフを書いてみよう！](https://qiita.com/Donokono/items/cb9167ee78eb758f8806)
-* 22日目の記事: QtRuby について書こうかと思っています。
+* 22日目の記事: [QtRuby を使ってみました](https://qiita.com/ynuma/items/21e49d084f1f5c8d3e4d)
 
 <hr />
