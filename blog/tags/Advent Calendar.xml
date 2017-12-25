@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/Advent%20Calendar.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-12-25T14:50:06+00:00</updated>
+    <updated>2017-12-25T14:55:48+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -121,7 +121,7 @@
 
 <p>どんな人が書いたかグラフにすると</p>
 
-<p><a href="/images/20171225_writer_graph.png">書いた人</a></p>
+<p><img src="/images/20171225_writer_graph.png" alt="書いた人" /></p>
 
 <p>こんな感じ。</p>
 
@@ -129,7 +129,7 @@
 
 <p><strong>独断と偏見で</strong>カテゴライズ</p>
 
-<p><a href="/images/20171225_genre_graph.png">ジャンル</a></p>
+<p><img src="/images/20171225_genre_graph.png" alt="ジャンル" /></p>
 
 <p>今年は hgimg4 の記事がほとんどを占めていますね。</p>
 
