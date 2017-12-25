@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/Qt%E3%81%A7%E9%81%8A%E3%81%B6.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-12-23T00:58:08+00:00</updated>
+    <updated>2017-12-25T03:55:18+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -44,7 +44,7 @@
 
 <p>単純なQStringとかを返すのではなくいろんな情報を持つオブジェクトを返したかったので少し変わった事をしています。</p>
 
-<p><a href="https://github.com/sharkpp/TaskMemGraph/blob/master/processlist.h">TaskMemGraph/processlist.h at master ? sharkpp/TaskMemGraph - GitHub</a> や <a href="https://github.com/sharkpp/TaskMemGraph/blob/master/processinfo.h">TaskMemGraph/processinfo.h at master ? sharkpp/TaskMemGraph - GitHub</a> など で実装しているのですが、<code>ProcessInfo</code>クラスは<code>QObject</code>から派生していて、<code>Q_PROPERTY</code>でプロパティーを定義しています。</p>
+<p><a href="https://github.com/sharkpp/TaskMemGraph/blob/master/processlist.h">TaskMemGraph/processlist.h at master - sharkpp/TaskMemGraph - GitHub</a> や <a href="https://github.com/sharkpp/TaskMemGraph/blob/master/processinfo.h">TaskMemGraph/processinfo.h at master - sharkpp/TaskMemGraph - GitHub</a> など で実装しているのですが、<code>ProcessInfo</code>クラスは<code>QObject</code>から派生していて、<code>Q_PROPERTY</code>でプロパティーを定義しています。</p>
 
 <p>こうすると、QML側では、</p>
 
@@ -79,7 +79,7 @@ qmlRegisterType&lt;ProcessList&gt;("ProcessLib",1,0,"ProcessList");
 <h3 id="%E5%8F%82%E8%80%83">参考</h3>
 
 <ul>
-<li><a href="http://utworks.net/?p=64">&#91;Qt&#93;&#91;QML&#93;QMLとC++コードの連携 ? Utworks</a></li>
+<li><a href="http://utworks.net/?p=64">&#91;Qt&#93;&#91;QML&#93;QMLとC++コードの連携 - Utworks</a></li>
 <li><a href="http://qt-project.org/doc/qt-4.8/qtbinding.html">Using QML Bindings in C++ Applications | Documentation | Qt Project</a></li>
 <li><a href="http://d.hatena.ne.jp/hecomi/20130503/1367594609">QtQuick での C++ × QML バインディングについてまとめてみた - 凹みTips</a></li>
 <li><a href="http://www.developer.nokia.com/Community/Wiki/Calling_Qt_class_methods_from_QML">Calling Qt class methods from QML - Nokia Developer Wiki</a></li>

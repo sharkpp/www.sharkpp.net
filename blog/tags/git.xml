@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/git.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-12-23T00:58:08+00:00</updated>
+    <updated>2017-12-25T03:55:18+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -557,8 +557,8 @@ Loading composer repositories with package information
 <h2 id="%E5%8F%82%E8%80%83">参考</h2>
 
 <ul>
-<li><a href="https://github.com/composer/composer/issues/2439#issuecomment-33034375">Authentication required, while manual file download succeeds ? Issue #2439 ? composer/composer</a></li>
-<li><a href="https://github.com/composer/composer/blob/master/doc/articles/troubleshooting.md#api-rate-limit-and-oauth-tokens">composer/troubleshooting.md at master ? composer/composer</a></li>
+<li><a href="https://github.com/composer/composer/issues/2439#issuecomment-33034375">Authentication required, while manual file download succeeds - Issue #2439 - composer/composer</a></li>
+<li><a href="https://github.com/composer/composer/blob/master/doc/articles/troubleshooting.md#api-rate-limit-and-oauth-tokens">composer/troubleshooting.md at master - composer/composer</a></li>
 </ul>
 ]]></content>
         </entry>

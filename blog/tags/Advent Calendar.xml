@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/Advent%20Calendar.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-12-23T00:58:06+00:00</updated>
+    <updated>2017-12-25T03:55:17+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -2827,7 +2827,7 @@ $ php composer.phar update
              // attempt to get the realpath(), otherwise just use path with any double dots taken out when basedir is set (for security)
 -            $pathinfo['dirname'] = ( ! empty($this-&gt;basedir) ? realpath($this-&gt;basedir.DS.$pathinfo['dirname']) : realpath($pathinfo['dirname']) )
 +            $pathinfo['dirname'] = ( ! empty($this-&gt;basedir) ? realpat_($this-&gt;basedir.DS.$pathinfo['dirname']) : realpat_($pathinfo['dirname']) )
-                     ?: ( ! empty($this-&gt;basedir) ? $this-&gt;basedir.DS.str_replace('..', '', $pathinfo['dirname']) : $pathinfo['dirname']);
+                     ?: ( ! empty($this-&gt;basedir) - $this-&gt;basedir.DS.str_replace('..', '', $pathinfo['dirname']) : $pathinfo['dirname']);
 </code></pre>
 
 <p>一つ一つ編集するのが大変であれば <a href="https://gist.github.com/sharkpp/7716098">Gist</a> に差分をアップしたので</p>

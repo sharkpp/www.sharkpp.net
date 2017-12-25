@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/categories/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-12-23T00:57:47+00:00</updated>
+    <updated>2017-12-25T03:54:57+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -25,17 +25,17 @@
 ]]></content>
         </entry>
             <entry>
-            <title type="html"><![CDATA[oAuth 認証を提供しているサービスをまとめてみました]]></title>
+            <title type="html"><![CDATA[OAuth 認証を提供しているサービスをまとめてみました]]></title>
             <link href="http://www.sharkpp.net/blog/2014/03/30/oauth-providers-list.html"/>
             <updated>2014-03-30T23:35:00+00:00</updated>
             <id>http://www.sharkpp.net/blog/2014/03/30/oauth-providers-list.html</id>
-            <content type="html"><![CDATA[<p>oAuth 認証を提供しているサービスをまとめてみました。</p>
+            <content type="html"><![CDATA[<p>OAuth 認証を提供しているサービスをまとめてみました。</p>
 
 <p>どちらかというと Opauth で使えそうなサービス一覧、が正しいのかもしれません。</p>
 
 <p>ついでに、ステータスやアプリケーションの登録を行うためのサイトも全てではないですが調べてあります。</p>
 
-<p>一覧は <a href="http://opauth.org/">Opauth ? Multi-provider authentication framework for PHP</a> や <a href="https://packagist.org/packages/opauth/">Packagist</a> などを参考にしています。</p>
+<p>一覧は <a href="http://opauth.org/">Opauth - Multi-provider authentication framework for PHP</a> や <a href="https://packagist.org/packages/opauth/">Packagist</a> などを参考にしています。</p>
 
 <table><tr>
 <th align="center">
@@ -45,7 +45,7 @@ Opauth
 プロバイダ
 </th>
 <th align="center">
-oAuth
+OAuth
 </th>
 <th align="left">
 開発サイト(アプリ登録など)
@@ -427,7 +427,7 @@ OpenID
 2.0
 </td>
 <td align="left">
-<a href="https://api.onthecity.org/docs/apps">The City ? API Docs</a>
+<a href="https://api.onthecity.org/docs/apps">The City - API Docs</a>
 </td>
 <td align="left">
 </td>

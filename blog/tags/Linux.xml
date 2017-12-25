@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/Linux.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-12-23T00:58:08+00:00</updated>
+    <updated>2017-12-25T03:55:18+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -568,9 +568,9 @@ compress
 <h3 id="%E5%8F%82%E8%80%83">参考</h3>
 
 <ul>
-<li><a href="http://forum.qnap.com/viewtopic.php?f=121&amp;t=17151">QNAP NAS Community Forum ? View topic - [HOWTO] Syslog-ng- receive router logs</a></li>
-<li><a href="http://forum.qnap.com/viewtopic.php?t=5379">QNAP NAS Community Forum ? View topic - where to link optware auto-start</a></li>
-<li><a href="http://forum.qnap.com/viewtopic.php?t=11507">QNAP NAS Community Forum ? View topic - rsyslog</a></li>
+<li><a href="http://forum.qnap.com/viewtopic.php?f=121&amp;t=17151">QNAP NAS Community Forum - View topic - [HOWTO] Syslog-ng- receive router logs</a></li>
+<li><a href="http://forum.qnap.com/viewtopic.php?t=5379">QNAP NAS Community Forum - View topic - where to link optware auto-start</a></li>
+<li><a href="http://forum.qnap.com/viewtopic.php?t=11507">QNAP NAS Community Forum - View topic - rsyslog</a></li>
 <li><a href="http://tokusan-sk49.cocolog-nifty.com/blog/2010/05/qnapsyslog-ng-c.html">QNAPにsyslog-ng: とくさんブログ</a></li>
 <li><a href="http://www.marronkun.net/linux/other/syslogng_000047.html">syslog-ng.confの設定 : マロンくん.NET</a></li>
 <li><a href="http://www.atmarkit.co.jp/fsecurity/rensai/unix_sec09/unix_sec01.html">＠IT：止められないUNIXサーバの管理対策 第9回</a></li>
@@ -586,9 +586,9 @@ compress
 
 <ul>
 <li><a href="http://blog.circlea4.net/?p=406">QNAPへのインターネット経由でのOpenVPNアクセス</a></li>
-<li><a href="http://wiki.nas-portal.org/index.php/Install_OpenVPN_on_QNAP">Install OpenVPN on QNAP ? NAS Wiki</a></li>
-<li><a href="http://photo.viasv.com/?p=3269">ViaPress inc. ? SC-02B OpenVPN for Android</a></li>
-<li><a href="http://beautiful-moon.net/2011-03-05_android-xperia-openvpn/">beautiful-moon.net ? Blog Archive ? Xperia(Android)からOpenVPN接続</a></li>
+<li><a href="http://wiki.nas-portal.org/index.php/Install_OpenVPN_on_QNAP">Install OpenVPN on QNAP - NAS Wiki</a></li>
+<li><a href="http://photo.viasv.com/?p=3269">ViaPress inc. - SC-02B OpenVPN for Android</a></li>
+<li><a href="http://beautiful-moon.net/2011-03-05_android-xperia-openvpn/">beautiful-moon.net - Blog Archive - Xperia(Android)からOpenVPN接続</a></li>
 </ul>
 
 <p>あたりを参考にした。</p>
@@ -957,7 +957,7 @@ comp-lzo
 
 <h3 id="lan%E5%86%85%E9%83%A8%E3%81%AE%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%81%A8%E9%80%9A%E4%BF%A1%E3%81%99%E3%82%8B">LAN内部のクライアントと通信する</h3>
 
-<p><a href="http://wiki.nas-portal.org/index.php/OpenVPN_Extras">OpenVPN Extras ? NAS Wiki</a>を参考</p>
+<p><a href="http://wiki.nas-portal.org/index.php/OpenVPN_Extras">OpenVPN Extras - NAS Wiki</a>を参考</p>
 
 <h4 id="qnap%E5%81%B4vpn%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%A7ipv4%E3%81%AE%E8%BB%A2%E9%80%81%E3%82%92%E6%9C%89%E5%8A%B9%E3%81%AB%E3%81%99%E3%82%8B">QNAP側(VPNサーバー)でipv4の転送を有効にする</h4>
 

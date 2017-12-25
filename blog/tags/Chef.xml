@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/Chef.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-12-23T00:58:08+00:00</updated>
+    <updated>2017-12-25T03:55:18+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -299,7 +299,7 @@ tcp        0      0 ::1:25                      :::*                        LIST
 
 <ul>
 <li><a href="http://www.atmarkit.co.jp/ait/articles/1305/24/news003.html">特集 DevOps時代の必須知識：インフラストラクチャ自動化フレームワーク「Chef」の基本 (1/2) - ＠IT</a></li>
-<li><a href="http://docs.opscode.com/install_workstation.html#run-the-omnibus-installer">Install Chef 11.x on a Workstation ? Chef Docs</a></li>
+<li><a href="http://docs.opscode.com/install_workstation.html#run-the-omnibus-installer">Install Chef 11.x on a Workstation - Chef Docs</a></li>
 <li><a href="http://qiita.com/takeshi_ok_desu/items/936ee44b712c37d25a0e">http://qiita.com/takeshi&#95;ok&#95;desu/items/936ee44b712c37d25a0e</a></li>
 <li><a href="http://tsuchikazu.net/chef_solo_start/">Chef Soloの正しい始め方 | tsuchikazu blog</a></li>
 <li><a href="http://qiita.com/sakatuba@github/items/1548818b02735b2047ad">Chef 11.12.2のknife configureが失敗する - Qiita</a></li>

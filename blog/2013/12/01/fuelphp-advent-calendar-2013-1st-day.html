@@ -121,7 +121,7 @@ $ php composer.phar update
              // attempt to get the realpath(), otherwise just use path with any double dots taken out when basedir is set (for security)
 -            $pathinfo['dirname'] = ( ! empty($this-&gt;basedir) ? realpath($this-&gt;basedir.DS.$pathinfo['dirname']) : realpath($pathinfo['dirname']) )
 +            $pathinfo['dirname'] = ( ! empty($this-&gt;basedir) ? realpat_($this-&gt;basedir.DS.$pathinfo['dirname']) : realpat_($pathinfo['dirname']) )
-                     ?: ( ! empty($this-&gt;basedir) ? $this-&gt;basedir.DS.str_replace('..', '', $pathinfo['dirname']) : $pathinfo['dirname']);
+                     ?: ( ! empty($this-&gt;basedir) - $this-&gt;basedir.DS.str_replace('..', '', $pathinfo['dirname']) : $pathinfo['dirname']);
 </code></pre><p>一つ一つ編集するのが大変であれば <a href="https://gist.github.com/sharkpp/7716098">Gist</a> に差分をアップしたので</p><pre><code>$ cd fuelphp-1.7
 $ wget -q https://gist.github.com/sharkpp/7716098/raw -O - | patch -u -p0
 </code></pre><p>とすることで変更を適用することができます。</p><p>次は、phar の生成スクリプトです。</p><pre><code>&lt;?php
