@@ -3,11 +3,178 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/Advent%20Calendar.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-12-25T03:55:17+00:00</updated>
+    <updated>2017-12-25T14:50:06+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Hot Soup Processor Advent Calendar 2017 まとめ]]></title>
+            <link href="http://www.sharkpp.net/blog/2017/12/25/hsp-advent-calendar-2017-25th-day.html"/>
+            <updated>2017-12-25T23:45:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2017/12/25/hsp-advent-calendar-2017-25th-day.html</id>
+            <content type="html"><![CDATA[<p>こんにちは、こんばんは。</p>
+
+<p><a href="http://qiita.com/advent-calendar/2017/hsp">Hot Soup Processor Advent Calendar 2017</a> の 最終日を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p>
+
+<p>まず始めに、呼びかけに応え Hot Soup Processor Advent Calendar 2017 へご参加いただいた7名の皆様に深く感謝を。</p>
+
+<p>昨年に引き続き HSP ユーザーのための HSP ユーザーによる Advent Calendar を開催して見ました。
+それのまとめ的なものを最後に投稿してみようかと思います。</p>
+
+<h2 id="%E6%8A%95%E7%A8%BF%E3%81%95%E3%82%8C%E3%81%9F%E8%A8%98%E4%BA%8B%E3%81%AE%E4%B8%80%E8%A6%A7">投稿された記事の一覧</h2>
+
+<table>
+<thead>
+<tr>
+  <th>日付</th>
+  <th>執筆者</th>
+  <th>記事</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>12/01</td>
+  <td><a href="http://qiita.com/sharkpp">sharkpp</a></td>
+  <td><a href="http://www.sharkpp.net/blog/2017/12/01/hsp-advent-calendar-2017-1st-day.html">Google Poly で公開されている素材を HSP 3 で利用してみよう</a></td>
+</tr>
+<tr>
+  <td>12/02</td>
+  <td><a href="http://qiita.com/y_tack">y_tack</a></td>
+  <td><a href="https://qiita.com/y_tack/items/7eda1f2502de4611b4f7">（エターナル化してきた）OpenHSPの書写他</a></td>
+</tr>
+<tr>
+  <td>12/03</td>
+  <td><a href="http://qiita.com/mjhd-devlion">mjhd-devlion</a></td>
+  <td><a href="https://qiita.com/mjhd-devlion/items/44d1a919b5485629e7e8">newlabの使い道を頑張って考えてみる</a></td>
+</tr>
+<tr>
+  <td>12/04</td>
+  <td><a href="http://qiita.com/hta393939">hta393939</a></td>
+  <td><a href="https://qiita.com/hta393939/items/e6fb2399030287005b5f">HSP3.5 HGIMG4 で2Dビューポート表示</a></td>
+</tr>
+<tr>
+  <td>12/05</td>
+  <td><a href="http://qiita.com/exrd">exrd</a></td>
+  <td><a href="http://fe0km.blog.fc2.com/blog-entry-125.html">Effekseerプラグインでhgimg4でも映えるエフェクトを！</a></td>
+</tr>
+<tr>
+  <td>12/06</td>
+  <td><a href="http://qiita.com/onionsoftware">onionsoftware</a></td>
+  <td><a href="https://qiita.com/onionsoftware/items/d9c837725251ae89a376">シンプルな追いかけっこから始めるゲームメカニクス</a></td>
+</tr>
+<tr>
+  <td>12/07</td>
+  <td><a href="http://qiita.com/hta393939">hta393939</a></td>
+  <td><a href="https://qiita.com/hta393939/items/7dc602552b71f784e61e">HSP3.5 HGIMG4 で高品質circle代用</a></td>
+</tr>
+<tr>
+  <td>12/13</td>
+  <td><a href="http://qiita.com/hatakoma">hatakoma</a></td>
+  <td><a href="http://d.hatena.ne.jp/hatahata/20171213">あほべんとカレンダーで公開したミニゲームのソース公開しました。画像、音楽、効果音は再利用NGで。</a></td>
+</tr>
+<tr>
+  <td>12/14</td>
+  <td><a href="http://qiita.com/hta393939">hta393939</a></td>
+  <td><a href="https://qiita.com/hta393939/items/b3eb2aeda07e5d5a9429">HSP3.5 HGIMG4 で複数カメラ視点描画</a></td>
+</tr>
+<tr>
+  <td>12/15</td>
+  <td><a href="http://qiita.com/hta393939">hta393939</a></td>
+  <td><a href="https://qiita.com/hta393939/items/3e358e7e852b34b4552c">HSP3.5 HGIMG4 で物理サイコロもどき</a></td>
+</tr>
+<tr>
+  <td>12/17</td>
+  <td><a href="http://qiita.com/exrd">exrd</a></td>
+  <td><a href="https://qiita.com/exrd/items/3fa31353df396ef53312">HSP3.5 で hgimg4 （再）入門</a></td>
+</tr>
+<tr>
+  <td>12/19</td>
+  <td><a href="http://qiita.com/hta393939">hta393939</a></td>
+  <td><a href="https://qiita.com/hta393939/items/99e7dd7fa81714584d94">HSP3.5 HGIMG4 でイベント待ちを制御する</a></td>
+</tr>
+<tr>
+  <td>12/20</td>
+  <td><a href="http://qiita.com/hta393939">hta393939</a></td>
+  <td><a href="https://qiita.com/hta393939/items/a8b2d88655f9c14b1001">HSP3.5 HGIMG4 で剛体をキネティック(強制指定)モードにする</a></td>
+</tr>
+<tr>
+  <td>12/21</td>
+  <td><a href="http://qiita.com/hta393939">hta393939</a></td>
+  <td><a href="https://qiita.com/hta393939/items/aee255aa02a508e71552">HSP3.5 HGIMG4 でヘルプに書かれてないイベント動作紹介</a></td>
+</tr>
+<tr>
+  <td>12/25</td>
+  <td><a href="http://qiita.com/sharkpp">sharkpp</a></td>
+  <td><a href="http://www.sharkpp.net/blog/2017-12-25-hsp-advent-calendar-2017-25th-day.html">Hot Soup Processor Advent Calendar 2017 まとめ</a></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="%E7%B5%90%E6%9E%9C">結果</h2>
+
+<p><code>執筆率 = 15 / 25 = 60%</code></p>
+
+<p>どのぐらいの日付が記事で埋まっているかの割合です。</p>
+
+<p><code>参加率 = 7 / 15 = 46.7%</code></p>
+
+<p>どんな人が書いたかグラフにすると</p>
+
+<p><a href="/images/20171225_writer_graph.png">書いた人</a></p>
+
+<p>こんな感じ。</p>
+
+<h2 id="%E6%8A%95%E7%A8%BF%E3%81%95%E3%82%8C%E3%81%9F%E8%A8%98%E4%BA%8B%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%AB">投稿された記事のジャンル</h2>
+
+<p><strong>独断と偏見で</strong>カテゴライズ</p>
+
+<p><a href="/images/20171225_genre_graph.png">ジャンル</a></p>
+
+<p>今年は hgimg4 の記事がほとんどを占めていますね。</p>
+
+<h2 id="%E6%B3%A8%E7%9B%AE%E8%A8%98%E4%BA%8B">注目記事</h2>
+
+<p><strong>独断と偏見により</strong>、今回の Advent Calendar での注目記事を選びました。</p>
+
+<p>あっ、紹介の順番がイコールで順位ということではありません。</p>
+
+<ul>
+<li>5日目の記事「<a href="http://fe0km.blog.fc2.com/blog-entry-125.html">Effekseerプラグインでhgimg4でも映えるエフェクトを！</a>」</li>
+</ul>
+
+<p><a href="https://effekseer.github.io/jp/">エフェクト制作ツール「Effekseer」</a> で作ったかっこいいエフェクトを hgimg4 で利用しようという内容の記事です。</p>
+
+<p>最近、このツールを知って何かできないかなぁと思っていたところで、ババーン！と記事が出て来たので、思わず唸ってしまいました！</p>
+
+<ul>
+<li>6日目の記事「<a href="https://qiita.com/onionsoftware/items/d9c837725251ae89a376">シンプルな追いかけっこから始めるゲームメカニクス</a>」</li>
+</ul>
+
+<p>HSP作者のおにたまさんの記事です。</p>
+
+<p>記事の内容はシンプルなルールのゲームの作り方を順序だてて解説しています。</p>
+
+<p>今回は hgimg4 に関する記事が多く、これから HSP で 3D ゲームを作りたいという人にとって参考になることが多いのではないでしょうか？
+また、それ以外の記事も、HSP の新たな面を見せてくれる良質な記事だと思います。</p>
+
+<h2 id="%E6%9C%80%E5%BE%8C%E3%81%AB">最後に</h2>
+
+<p>改めて、<a href="http://qiita.com/advent-calendar/2017/hsp">Hot Soup Processor Advent Calendar 2017</a> にご参加いただきました皆様、そして記事を呼んでくださいました読者の方々に感謝を。</p>
+
+<p><strong>メリークリスマス！</strong></p>
+
+<hr />
+
+<p>この投稿は <strong><a href="http://qiita.com/advent-calendar/2017/hsp">Hot Soup Processor Advent Calendar 2017</a></strong> の <strong>25日目</strong>の記事です。</p>
+
+<ul>
+<li>21日目の記事: <a href="https://qiita.com/hta393939/items/aee255aa02a508e71552">HSP3.5 HGIMG4 でヘルプに書かれてないイベント動作紹介</a></li>
+</ul>
+
+<hr />
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[駆け足で Qt Network Authorization の使い方を紹介してみる]]></title>
             <link href="http://www.sharkpp.net/blog/2017/12/21/qt-advent-calendar-2017-21th-day.html"/>
@@ -2595,364 +2762,6 @@ foreach ($header as $key =&gt; $value) { $curl-&gt;set_header($key, $value); }
 <p>と言うことで、 <code>Request_Curl</code> クラスの紹介でした。</p>
 
 <p>明日は <a href="https://twitter.com/Tukimikage">@Tukimikage</a> さんの「<a href="http://think-sv.net/blog/?p=1290">続・Cloudn_PaaSでFuelPHPを動かしてみた</a>」です。お楽しみに！</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[FuelPHPをphar化してポータブルに！]]></title>
-            <link href="http://www.sharkpp.net/blog/2013/12/01/fuelphp-advent-calendar-2013-1st-day.html"/>
-            <updated>2013-12-01T14:57:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2013/12/01/fuelphp-advent-calendar-2013-1st-day.html</id>
-            <content type="html"><![CDATA[<p><a href="http://atnd.org/events/45096">FuelPHP Advent Calendar 2013</a> 1日目の参加記事です。</p>
-
-<p>初めましての方もご存知の方も、よろしくお願いします。</p>
-
-<p><a href="https://twitter.com/sharkpp">@sharkpp</a>です。</p>
-
-<p>さて、昨年の12月1日はアドベント(待降節)ではありませんでしたが、安心してください、今年は12月1日からアドベントは始まります。</p>
-
-<p>とりあえず、初日なので軽い内容でいきたいと思います。</p>
-
-<p>内容は、FuelPHP を phar(PHP Archive) で１ファイルにしてウェブサーバーで動かしてみよう、です。</p>
-
-<p>子ネタをやりつつ phar の紹介も兼ねています。</p>
-
-<p>環境としては、</p>
-
-<ul>
-<li>PHP 5.3 以上</li>
-<li>FuelPHP 1.7</li>
-<li>Apache on CentOS or Windows</li>
-</ul>
-
-<p>を想定しています。</p>
-
-<h2 id="pharphp-archive%E3%81%A3%E3%81%A6%E3%81%94%E5%AD%98%E7%9F%A5%E3%81%A7%E3%81%99%E3%81%8B%EF%BC%9F">phar(PHP Archive)ってご存知ですか？</h2>
-
-<p>まず、大前提。</p>
-
-<p><a href="http://jp2.php.net/manual/ja/intro.phar.php">PHP: 導入 - Manual</a>によると、</p>
-
-<blockquote>
-  <p>phar 拡張モジュールは、PHP アプリケーション全体をひとつの "phar" (PHP Archive) ファイルにまとめてしまい、配布やインストールを容易にするためのものです。</p>
-</blockquote>
-
-<p>となっています。</p>
-
-<p>実際に使われている例としては、</p>
-
-<ul>
-<li><a href="http://getcomposer.org/">composer.phar</a> パッケージ管理ツール</li>
-<li><a href="https://github.com/fabpot/goutte">goutte.phar</a> スクレイピングライブラリ</li>
-<li><a href="https://github.com/guzzle/guzzle">guzzle.phar</a> HTTPクライアントライブラリ</li>
-<li><a href="http://pear2.php.net/PEAR2_Pyrus">pyrus.phar</a> PEAR2</li>
-</ul>
-
-<p>などがあります。</p>
-
-<p>例として上げた中でも composer は FuelPHP を使っている方であれば</p>
-
-<pre><code>$ php composer.phar update
-</code></pre>
-
-<p>と、このような形で触ったことがあると思います。</p>
-
-<h2 id="fuelphp-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">FuelPHP をインストール</h2>
-
-<p>Pharクラスの中でも、今回は <a href="http://jp2.php.net/manual/ja/phar.webphar.php">Phar::webPhar</a> を使います。</p>
-
-<p>まずは、FuelPHPを適当なフォルダに配置します。</p>
-
-<p>詳しい手順は<a href="http://fuelphp.jp/docs/1.7/">FuelPHP ドキュメント</a>に書かれているので参考にしてください。</p>
-
-<p>ここでは、<code>~/fuelphp-1.7</code> に配置されるものとします。</p>
-
-<pre><code>$ curl get.fuelphp.com/oil | sh
-$ cd ~
-$ oil create fuelphp-1.7
-</code></pre>
-
-<p>もしくは、</p>
-
-<pre><code>$ wget http://fuelphp.com/files/download/25 -O fuelphp.zip
-$ unzip fuelphp.zip
-</code></pre>
-
-<p>とすることで、git がインストールされていない場合は fuelphp.com からダウンロードして展開ができます。</p>
-
-<p>次に</p>
-
-<pre><code>$ cd fuelphp-1.7
-$ php composer.phar self-update
-$ php composer.phar update
-</code></pre>
-
-<p>として、composer自身のアップデートとパッケージを更新します。</p>
-
-<p>これで、Apacheなどのウェブサーバー上に公開するとWelcome画面が表示されるはずです。</p>
-
-<h2 id="fuelphp%E3%82%92phar%E3%81%A71%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AB%E3%81%BE%E3%81%A8%E3%82%81%E3%82%8B">FuelPHPをPharで1ファイルにまとめる</h2>
-
-<p>まず、そのままでは1ファイルにまとめても動かないのでいくつかソースを変更する必要があります。</p>
-
-<p>残念なことに core の中も変更する必要がありました。</p>
-
-<p>インストール直後のページを表示できるようにするために変更するファイルは</p>
-
-<ul>
-<li><code>public/index.php</code></li>
-<li><code>fuel/app/config/config.php</code></li>
-<li><code>fuel/app/config/asset.php</code> ※ fuel/core/config/asset.php からコピー</li>
-<li><code>fuel/core/bootstrap.php</code></li>
-<li><code>fuel/core/classes/file/area.php</code></li>
-</ul>
-
-<p>の 5 個のファイルです。</p>
-
-<p>実際のアプリケーションの場合は先に挙げたファイル以外にも変更が必要になると思います。</p>
-
-<p>変更のポイントは、</p>
-
-<ul>
-<li>phar 内からの realpath が常に空文字で返ってくるのでダミー関数に置き換え</li>
-<li>Windows であっても パスの区切りは <code>'/'</code> とする</li>
-<li>パスに含まれる親ディレクトリへの移動などを削除し正規化</li>
-<li>ログやキャッシュの保存先が .phar 外を示すようにする</li>
-</ul>
-
-<p>と、主に、ファイルパスに関する物が主となります。</p>
-
-<p>まず、<code>public/index.php</code> の変更部分です。</p>
-
-<p>パスを正規化する <code>canonicalizePath</code> 関数と <code>realpath</code> 関数のダミーとして <code>realpat_</code> 関数を定義しています。</p>
-
-<pre><code> error_reporting(-1);
- ini_set('display_errors', 1);
-
- +function canonicalizePath($path) {
- +    $path = 0===strpos($path,'phar://')?'phar://'.preg_replace('!//!', '/', substr($path,7))
- +                                       :preg_replace('!//!', '/', $path);
- +    do {
- +        $tmp  = $path;
- +        $path = preg_replace('!/[^/]+/\.\./!', '/', $tmp);
- +    } while ($tmp != $path);
- +    return rtrim($path, '/');
- +}
- +
- +function realpat_($path) {
- +    return canonicalizePath(str_replace(array('/', '\\'), '/', $path));
- +}
-</code></pre>
-
-<p>あとは、<code>realpath</code> 関数の代わりに <code>realpat_</code> 関数を使うようにし、パスの区切りも <code>'/'</code> に変更しています。</p>
-
-<pre><code>-define('DOCROOT', __DIR__.DIRECTORY_SEPARATOR);
-+define('DOCROOT', realpat_(__DIR__.'/'));
-</code></pre>
-
-<p>　</p>
-
-<pre><code>-define('APPPATH', realpath(__DIR__.'/../fuel/app/').DIRECTORY_SEPARATOR);
-+define('APPPATH', realpat_(__DIR__.'/../fuel/app/').'/');
-</code></pre>
-
-<p>　</p>
-
-<pre><code>-define('PKGPATH', realpath(__DIR__.'/../fuel/packages/').DIRECTORY_SEPARATOR);
-+define('PKGPATH', realpat_(__DIR__.'/../fuel/packages/').'/');
-</code></pre>
-
-<p>　</p>
-
-<pre><code>-define('COREPATH', realpath(__DIR__.'/../fuel/core/').DIRECTORY_SEPARATOR);
-+define('COREPATH', realpat_(__DIR__.'/../fuel/core/').'/');
-</code></pre>
-
-<p><code>fuel/app/config/config.php</code> の変更部分です。 .phar 内には書き込めないので .phar と同じ場所の <code>writable</code> ディレクトリを示すように変更しています。</p>
-
-<p><strong>保存先は公開ディレクトリ外を示すべきなので、さらに一つ上などに示すようにするのが本来は良いでしょう。</strong></p>
-
-<pre><code>-    // 'cache_dir'       =&gt; APPPATH.'cache/',
-+    'cache_dir'       =&gt; canonicalizePath(str_replace('phar://', '', APPPATH).'../../../writable/cache/'),
-</code></pre>
-
-<p>　</p>
-
-<pre><code>-    // 'log_path'         =&gt; APPPATH.'logs/',
-+    'log_path'         =&gt; canonicalizePath(str_replace('phar://', '', APPPATH).'../../../writable/logs/'),
-</code></pre>
-
-<p><code>fuel/app/config/asset.php</code> の変更部分です。 <code>fuel/core/config/asset.php</code> をコピーして使うのでそのファイルとの比較になります。 一部、三項演算を使っていますが phar でまとめない場合にもそのまま動くようにとの苦肉の策です。</p>
-
-<pre><code>-    'paths' =&gt; array('assets/'),
-+    'paths' =&gt; array(DOCROOT . 'assets/'),
-</code></pre>
-
-<p>　</p>
-
-<pre><code>-    'url' =&gt; Config::get('base_url'),
-+    'url' =&gt; Config::get('base_url').(0===strpos(__DIR__,'phar://')?'index.phar/':''),
-</code></pre>
-
-<p>　</p>
-
-<pre><code>-    'add_mtime' =&gt; true,
-+    'add_mtime' =&gt; false,
-</code></pre>
-
-<p><code>fuel/core/bootstrap.php</code> の変更部分です。 パスの区切りの変更と関数の置き換えです。</p>
-
-<pre><code>-define('DS', DIRECTORY_SEPARATOR);
-+define('DS', '/');
-
--defined('VENDORPATH') or define('VENDORPATH', realpath(COREPATH.'..'.DS.'vendor').DS);
-+defined('VENDORPATH') or define('VENDORPATH', realpat_(COREPATH.'..'.DS.'vendor').DS);
-</code></pre>
-
-<p>最後、<code>fuel/core/classes/file/area.php</code> の変更部分です。</p>
-
-<pre><code>         {
--            $this-&gt;basedir = realpath($this-&gt;basedir) ?: $this-&gt;basedir;
-+            $this-&gt;basedir = realpat_($this-&gt;basedir) ?: $this-&gt;basedir;
-         }
-</code></pre>
-
-<p>　</p>
-
-<pre><code>         {
--            $pathinfo['dirname'] = realpath($pathinfo['dirname']);
-+            $pathinfo['dirname'] = realpat_($pathinfo['dirname']);
-         }
-         else
-         {
-             // attempt to get the realpath(), otherwise just use path with any double dots taken out when basedir is set (for security)
--            $pathinfo['dirname'] = ( ! empty($this-&gt;basedir) ? realpath($this-&gt;basedir.DS.$pathinfo['dirname']) : realpath($pathinfo['dirname']) )
-+            $pathinfo['dirname'] = ( ! empty($this-&gt;basedir) ? realpat_($this-&gt;basedir.DS.$pathinfo['dirname']) : realpat_($pathinfo['dirname']) )
-                     ?: ( ! empty($this-&gt;basedir) - $this-&gt;basedir.DS.str_replace('..', '', $pathinfo['dirname']) : $pathinfo['dirname']);
-</code></pre>
-
-<p>一つ一つ編集するのが大変であれば <a href="https://gist.github.com/sharkpp/7716098">Gist</a> に差分をアップしたので</p>
-
-<pre><code>$ cd fuelphp-1.7
-$ wget -q https://gist.github.com/sharkpp/7716098/raw -O - | patch -u -p0
-</code></pre>
-
-<p>とすることで変更を適用することができます。</p>
-
-<p>次は、phar の生成スクリプトです。</p>
-
-<pre><code>&lt;?php
-/*
- * Copyright (c) 2013 sharkpp
- * This software is released under the MIT License.
- * http://opensource.org/licenses/mit-license.php
- */
-// 確実に削除 
-@unlink('index.phar');
-// phar書庫作成のためクラスを生成 
-$phar = new Phar(__DIR__ . '/index.phar', 0, 'index.phar');
-// fuelphp17 ディレクトリ丸ごと固める 
-$phar-&gt;buildFromDirectory(__DIR__ . '/fuelphp-1.7/');
-// gzipで圧縮
-//$phar-&gt;compressFiles(Phar::GZ); // ※ css などがうまく取り出せない
-// 起動スタブを設定 
-$phar-&gt;setStub(&lt;&lt;&lt;'EOD'
-&lt;?php
-    function phar_rewrites($path) {
-        if (0 === strpos($path,'/assets/'))
-            return '/public' . $path;     // assets だけはパスを変更 
-        return '/public/index.php'.$path; // あとはすべてindexに渡す 
-    }
-    Phar::interceptFileFuncs();
-    Phar::webPhar('index.phar', 'public/index.php', '', array(), 'phar_rewrites');
-    __HALT_COMPILER(); ?&gt;
-EOD
-);
-</code></pre>
-
-<p>FuelPHP をインストールした fuelphp-1.7 ディレクトリの上にファイルを保存してください。</p>
-
-<p>こちらも <a href="https://gist.github.com/sharkpp/7716423">Gist</a> にアップしてあるので、</p>
-
-<pre><code>$ cd ~
-$ wget -q https://gist.github.com/sharkpp/7716423/raw/mkphar.php
-</code></pre>
-
-<p>として、ローカルに保存できます。</p>
-
-<p>準備ができたら</p>
-
-<pre><code>$ php mkphar.php
-</code></pre>
-
-<p>と入力して、index.phar を作成すると、70MBぐらいのファイルが出来上がります。</p>
-
-<p>ドキュメントや .git などが含まれているので巨大になってしまいました。</p>
-
-<p><strong>ちなみに、Pharクラスでアーカイブを作成するには設定を変える必要があるかもしれません。</strong></p>
-
-<p>具体的には、<code>php.ini</code> の <code>Phar</code> セクション内で <code>phar.readonly = Off</code> と設定されている必要があります。</p>
-
-<h2 id="%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%A7%E7%A2%BA%E8%AA%8D">ブラウザで確認</h2>
-
-<p>ここまでできたら index.phar をウェブサーバーの公開フォルダに置きましょう。</p>
-
-<p>と、その前に、 AddType で .phar を php で実行できるように <code>.htaccess</code> を設置しましょう。</p>
-
-<pre><code>Options +FollowSymLinks
-DirectoryIndex index.phar
-AddType application/x-httpd-php .phar
-
-&lt;IfModule mod_rewrite.c&gt;
-    RewriteEngine on
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    &lt;IfModule mod_fcgid.c&gt;
-        RewriteRule ^(.*)$ index.phar?/$1 [QSA,L]
-    &lt;/IfModule&gt;
-    &lt;IfModule !mod_fcgid.c&gt;
-        &lt;IfModule mod_php5.c&gt;
-            RewriteRule ^(.*)$ index.phar/$1 [L]
-        &lt;/IfModule&gt;
-        &lt;IfModule !mod_php5.c&gt;
-            RewriteRule ^(.*)$ index.phar?/$1 [QSA,L]
-        &lt;/IfModule&gt;
-    &lt;/IfModule&gt;
-&lt;/IfModule&gt;
-</code></pre>
-
-<p>こちらも例によって <a href="https://gist.github.com/sharkpp/7718075">Gist</a> にアップしてあるので、</p>
-
-<pre><code>$ wget -q https://gist.github.com/sharkpp/7718075/raw/.htaccess
-</code></pre>
-
-<p>で取得できます。</p>
-
-<p>例えば、ローカルホストでウェブサーバーを動かしていてドキュメントルートに先の .htaccess と共に置いたのであれば、</p>
-
-<pre><code>http://127.0.0.1/
-</code></pre>
-
-<p>にブラウザでアクセスすると Welcome 画面が表示されます。</p>
-
-<pre><code>http://127.0.0.1/hello
-</code></pre>
-
-<p>にアクセスすると hello と表示されます。</p>
-
-<pre><code>http://127.0.0.1/xxxx
-</code></pre>
-
-<p>エラーページも表示できます。</p>
-
-<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
-
-<p>お遊びのつもりで手を出してみたら、かなり時間をかけないとうまくいかなかったりで当てが外れてちょっとションボリ。</p>
-
-<p>実際問題として core の修正が必要となるので実用性となると皆無だと思います。</p>
-
-<p>ただ、１ファイルでウェブサーバーにアプリが公開できるのは、うまく作れば面白いことが出来るのではないかとの期待が持てそうな機能でした。</p>
-
-<p>明日は <a href="https://twitter.com/kenji_s">@kenji_s</a> さんの「<a href="http://blog.a-way-out.net/blog/2013/12/02/quick-mastering-fuelphp/">FuelPHPの開発環境を20分で構築する（Vagrant編）</a>」です。お楽しみに！</p>
 ]]></content>
         </entry>
     </feed>
