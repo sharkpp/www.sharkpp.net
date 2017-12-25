@@ -45,7 +45,7 @@ categories: [ブログ]
 
 どんな人が書いたかグラフにすると
 
-[書いた人](/images/20171225_writer_graph.png)
+![書いた人](/images/20171225_writer_graph.png)
 
 こんな感じ。
 
@@ -53,7 +53,7 @@ categories: [ブログ]
 
 **独断と偏見で**カテゴライズ
 
-[ジャンル](/images/20171225_genre_graph.png)
+![ジャンル](/images/20171225_genre_graph.png)
 
 今年は hgimg4 の記事がほとんどを占めていますね。
 
