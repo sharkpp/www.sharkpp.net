@@ -33,7 +33,7 @@ categories: [ブログ]
 |12/19|[hta393939](http://qiita.com/hta393939)|[HSP3.5 HGIMG4 でイベント待ちを制御する](https://qiita.com/hta393939/items/99e7dd7fa81714584d94)|
 |12/20|[hta393939](http://qiita.com/hta393939)|[HSP3.5 HGIMG4 で剛体をキネティック(強制指定)モードにする](https://qiita.com/hta393939/items/a8b2d88655f9c14b1001)|
 |12/21|[hta393939](http://qiita.com/hta393939)|[HSP3.5 HGIMG4 でヘルプに書かれてないイベント動作紹介](https://qiita.com/hta393939/items/aee255aa02a508e71552)|
-|12/25|[sharkpp](http://qiita.com/sharkpp)|[Hot Soup Processor Advent Calendar 2017 まとめ](http://www.sharkpp.net/blog/2017-12-25-hsp-advent-calendar-2017-25th-day.html)|
+|12/25|[sharkpp](http://qiita.com/sharkpp)|[Hot Soup Processor Advent Calendar 2017 まとめ](http://www.sharkpp.net/blog/2017/12/25/hsp-advent-calendar-2017-25th-day.html)|
 
 ## 結果
 
@@ -63,11 +63,13 @@ categories: [ブログ]
 
 あっ、紹介の順番がイコールで順位ということではありません。
 
+
 * 5日目の記事「[Effekseerプラグインでhgimg4でも映えるエフェクトを！](http://fe0km.blog.fc2.com/blog-entry-125.html)」
 
 [エフェクト制作ツール「Effekseer」](https://effekseer.github.io/jp/) で作ったかっこいいエフェクトを hgimg4 で利用しようという内容の記事です。
 
 最近、このツールを知って何かできないかなぁと思っていたところで、ババーン！と記事が出て来たので、思わず唸ってしまいました！
+
 
 * 6日目の記事「[シンプルな追いかけっこから始めるゲームメカニクス](https://qiita.com/onionsoftware/items/d9c837725251ae89a376)」
 
