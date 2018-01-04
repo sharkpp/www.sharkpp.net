@@ -3,11 +3,55 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/%E9%9B%91%E8%A8%98.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-12-31T13:16:18+00:00</updated>
+    <updated>2018-01-04T09:32:52+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[HAPPY NEW YEAR 2018]]></title>
+            <link href="http://www.sharkpp.net/blog/2018/01/01/happy-new-year-2018.html"/>
+            <updated>2018-01-01T17:35:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2018/01/01/happy-new-year-2018.html</id>
+            <content type="html"><![CDATA[<p>明けましておめでとうございます。</p>
+
+<p>ほむぺ開設 14 年目… だと思います、たぶん。
+今年も一年よろしくお願いします。</p>
+
+<p>では、今年の目標をば。</p>
+
+<h2 id="%E7%9B%AE%E6%A8%99">目標</h2>
+
+<ul>
+<li><a href="https://github.com/sharkpp/Jugemutter">Jugemutter</a> の完成</li>
+</ul>
+
+<p>なんか公式が同じような機能を実装しているのでちょっとモチベが下がり気味だけど、とりあえずリリースしたいと思います。</p>
+
+<h3 id="hsp%E9%96%A2%E9%80%A3">HSP関連</h3>
+
+<ul>
+<li>HSPコンテスト作品の製作！</li>
+<li><a href="http://hsp-users.jp/">HSP関連サイト</a>の定期的な更新。</li>
+<li>Advent Calendar の開催（三年目）</li>
+<li>WINEの最新版でHSPが動くように！</li>
+<li>macOSで利用できるドキュメントビューアの作成</li>
+<li>HSP to rust トランスレータ</li>
+</ul>
+
+<h3 id="%E3%82%A2%E3%83%97%E3%83%AA%E9%96%A2%E9%80%A3">アプリ関連</h3>
+
+<ul>
+<li><a href="https://github.com/sharkpp/TimestampFreezer">TimestampFreezer</a> のバイナリ公開</li>
+<li><a href="https://github.com/sharkpp/Jugemutter">Jugemutter</a> の完成</li>
+<li>バイナリエディタを作りたい</li>
+</ul>
+
+<p>、、、できるかなぁ？</p>
+
+<p>てなわけで、よろしくお願いいたします。</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[大晦日@2017]]></title>
             <link href="http://www.sharkpp.net/blog/2017/12/31/new-years-eve-2017.html"/>
@@ -1042,150 +1086,6 @@ Wineで開発完了を整えたのが功を奏したのかもしれないです�
 <p>ぐらいかな？</p>
 
 <p>とりあえず、来年もよろしくお願いしますです。</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[FuelPHPのメモ]]></title>
-            <link href="http://www.sharkpp.net/blog/2015/08/23/fuelphp-memo.html"/>
-            <updated>2015-08-23T18:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2015/08/23/fuelphp-memo.html</id>
-            <content type="html"><![CDATA[<p>落ち葉拾い的な？</p>
-
-<p>SSDの肥やしになっていたのをサルベージしてきました。</p>
-
-<p>FuelPHP を使っている中で気がついたことのメモです。</p>
-
-<h2 id="orm%5Cmodel_temporal-%E3%82%92%E4%BD%BF%E3%81%86%E3%81%A8%E3%81%8D%E3%81%AE%E6%B3%A8%E6%84%8F%E7%82%B9">Orm\Model_Temporal を使うときの注意点</h2>
-
-<p><a href="http://fuelphp.com/docs/packages/orm/intro.html">Orm パッケージ</a>の <a href="http://fuelphp.com/docs/packages/orm/model/temporal.html">Model_Temporal</a> という、データを履歴管理するのに便利そうなモデルが FuelPHP 1.6 以降で実装されています。</p>
-
-<p>このモデルを使っているときにちょっと気がついたことがあるのでメモしておきます。</p>
-
-<p>とりあえず、モデルは次のような感じで用意します。
-<code>mysql_timestamp</code> に <code>true</code> と指定しているのが <a href="http://fuelphp.com/docs/packages/orm/model/temporal.html">Temporal Model - Orm Package - FuelPHP Documentation</a> の例と違うところですが、 <code>false</code> でも同じ問題が起きます。 <strong>要確認</strong></p>
-
-<pre><code class="php">// app/classes/model/mytemporal.php
-class Model_MyTemporal extends Orm\Model_Temporal
-{
-    protected static $_primary_key = array('id', 'temporal_start', 'temporal_end');
-    protected static $_temporal = array(
-        'start_column' =&gt; 'temporal_start',
-        'end_column' =&gt; 'temporal_end',
-        'mysql_timestamp' =&gt; true, // ここを true に
-    );
-}
-</code></pre>
-
-<p>テストで↓のようなのを実行します。</p>
-
-<pre><code class="php">// app/tests/model/mytemporal.php
-
-$model = new Model_MyTemporal();
-$model-&gt;save();
-</code></pre>
-
-<p>そして実行</p>
-
-<pre><code class="bash">[root@localhost test_temporal_model]# oil t --group=App
-Tests Running...This may take a few moments.
-PHPUnit 3.7.31 by Sebastian Bergmann.
-
-Configuration read from /var/www/html/test_temporal_model/fuel/core/phpunit.xml
-
-.
-
-Time: 68 ms, Memory: 22.50Mb
-
-OK (1 test, 5 assertions)
-</code></pre>
-
-<p>日付を 2040/1/1 00:00 にしてみると、、、</p>
-
-<p>下は失敗、、、、</p>
-
-<pre><code class="bash">[root@localhost test_temporal_model]# date 010100002040
-2040年  1月  1日 日曜日 00:00:00 JST
-[root@localhost test_temporal_model]# oil t --group=App
-Tests Running...This may take a few moments.
-PHPUnit 3.7.31 by Sebastian Bergmann.
-
-Configuration read from /var/www/html/test_temporal_model/fuel/core/phpunit.xml
-
-E
-
-Time: 12 ms, Memory: 20.50Mb
-
-There was 1 error:
-
-1) Test_Model_MyTemporal::test_save_and_between
-PDOException: SQLSTATE[HY000]: General error: 2013 Lost connection to MySQL server during query
-
-/var/www/html/test_temporal_model/fuel/core/classes/database/pdo/connection.php:150
-/var/www/html/test_temporal_model/fuel/core/classes/database/pdo/connection.php:113
-/var/www/html/test_temporal_model/fuel/core/classes/database/pdo/connection.php:167
-/var/www/html/test_temporal_model/fuel/core/classes/database/query.php:287
-/var/www/html/test_temporal_model/fuel/core/classes/dbutil.php:621
-/var/www/html/test_temporal_model/fuel/core/classes/migrate.php:595
-/var/www/html/test_temporal_model/fuel/core/classes/migrate.php:74
-/var/www/html/test_temporal_model/fuel/core/classes/autoloader.php:364
-/var/www/html/test_temporal_model/fuel/core/classes/autoloader.php:247
-/var/www/html/test_temporal_model/fuel/app/tests/model/mytemporal.php:12
-
-FAILURES!
-Tests: 1, Assertions: 0, Errors: 1.
-[root@localhost test_temporal_model]# 
-</code></pre>
-
-<p>まあ、詳しくは調べていないですが、どうやら MySQL で 32ビットで日付を扱っているためのようです。</p>
-
-<p><a href="http://tech-blog.tsukaby.com/archives/179">MySQLの日付型の扱い方や機能をまとめてみました | つかびーの技術日記</a> などを見ると DATETIME 型を使うといいようですね。</p>
-
-<h2 id="opauth-%E3%82%AF%E3%83%A9%E3%82%B9-%E3%83%A1%E3%83%A2">Opauth クラス メモ</h2>
-
-<ul>
-<li>Opauth::forge() ではプロバイダのIdは大文字小文字区別して、一致しないと、 <strong><code>Unsupported or undefined Opauth strategy - XXXXX</code></strong> と例外が発行される、基本小文字？</li>
-<li><strong><code>Authentication error: the callback returned an error auth response</code></strong> とログイン時に出た場合、Webサーバーを再起動すれば直る、、、かも(なんかセッションが残ってるか、期限が切れてるけどリセットできてない？)</li>
-<li>設定の <code>opauth.auto_registration</code> を true にしておけば、ユーザー名とメールアドレスがあれば、初めての認証時に自動でユーザー登録してログインできる(Twitterはメールアドレスが取得できないので無理そう)</li>
-<li>ログイン中にOauthでアカウントと関連付けると、既に別のアカウントで関連づけていても関連付けが変更される(A ユーザーに Twitter の @hoge を関連づけた後、 B ユーザーでログイン中に @hoge に関連づけると、関連づけされているユーザーが A あら B に変更されてしまう、 <code>login_or_register()</code> の戻り値は <code>'linked'</code>)</li>
-<li>関連付けの解除は存在しないので、解除したい場合は <code>_providers</code> から <code>parent_id</code> と <code>provider</code> で探して削除する</li>
-</ul>
-
-<h2 id="ormauth-%E3%82%AF%E3%83%A9%E3%82%B9-%E3%83%A1%E3%83%A2">Ormauth クラス メモ</h2>
-
-<ul>
-<li><code>Auth::member()</code> は <code>Auth::member($group, $user)</code> ではなく <code>Auth::member($group, 'Ormgroup', $user)</code> っぽい(それでも欲しかった情報が取得できなかったけど)</li>
-</ul>
-
-<h2 id="orm-%E3%82%AF%E3%83%A9%E3%82%B9-%E3%83%A1%E3%83%A2">Orm クラス メモ</h2>
-
-<ul>
-<li><code>Model_SoftDelete</code> は <code>Model_XXX::query()</code> からは 論理削除が出来ないので <code>Model_XXX::find()</code> で探してから削除する</li>
-<li><code>Model_SoftDelete</code> は <code>Model_XXX::find('all'</code>) では削除が呼び出せないので foreach でまわして処理する</li>
-<li><code>Model_Temporal::query()</code> で検索すると全ての履歴が範囲に含まれてしまうので、自分で <code>where('temporal_start', '&lt;=', $timestamp)-&gt;where('temporal_end', '&gt;=', $timestamp)</code> として制限を掛けないと最新の履歴のみが取得できない</li>
-<li><code>hoge IN SUBQUERY</code> なサブクエリを使うときには <code>-&gt;where('id', 'in', DB::expr('('.$subQuery-&gt;get_query(true).')'))</code> とすれば一応使える</li>
-<li><code>Model_Soft::disable_filter()</code> は <code>Model_Soft::query()</code> の前で使用しないと効果がない。</li>
-<li><code>$this-&gt;_is_new</code> を <code>true</code> にした場合、 <code>_original_relations</code> もクリア(リレーションごとに空に)しないと new したときと同じ動作にならない。</li>
-<li><code>Model_Huga::query()-&gt;related('hoge')-&gt;where('hoge.id', '!=', null)-&gt;get_one()</code> すると結果がおかしくなることがあるので <code>Model_Huga::query()-&gt;related('hoge')-&gt;where('hoge.id', '!=', null)-&gt;limit_row(1)-&gt;get()</code> とする(参考：<a href="http://stackoverflow.com/questions/13399884/fuelphp-orm-related-limit-ignored">php - Fuelphp ORM related limit ignored - Stack Overflow</a>)</li>
-</ul>
-
-<h2 id="file-%E3%82%AF%E3%83%A9%E3%82%B9-%E3%83%A1%E3%83%A2">File クラス メモ</h2>
-
-<ul>
-<li><code>$area-&gt;read_dir()</code> では <code>File_Handler_Directory</code> が返されるのでこのオブジェクトのインターフェースを通してディレクトリ内のファイルの一覧を取得することはできない。</li>
-</ul>
-
-<h2 id="%E3%81%9D%E3%81%AE%E4%BB%96-%E3%83%A1%E3%83%A2">その他 メモ</h2>
-
-<ul>
-<li><code>oil t</code> など CLI インターフェースでは Asset は使えないので <code>Config::set('assets.fail_silently', true);</code> しておくとエラーが出ない(暫定)</li>
-<li><code>DomainException: Form instance already exists, cannot be recreated. Use instance() instead of forge() to retrieve the existing instance.</code> って言われたらリクエスト内で <code>::forge('hoge')</code> の <code>hoge</code> が同じ物が居るってこと</li>
-</ul>
-
-<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
-
-<p>とりあえず、フレームワークを触るとドキュメントに載っていないことが色々でてくるのはしょうがないのかなぁと思います。</p>
-
-<p>まぁ、そのうち、整理してまとめたいなぁとは思いますが、きっと手つかずのままになるの未来予想が出来てしまいます。</p>
 ]]></content>
         </entry>
     </feed>

@@ -3,11 +3,55 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/atom.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2017-12-31T13:15:57+00:00</updated>
+    <updated>2018-01-04T09:32:29+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[HAPPY NEW YEAR 2018]]></title>
+            <link href="http://www.sharkpp.net/blog/2018/01/01/happy-new-year-2018.html"/>
+            <updated>2018-01-01T17:35:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2018/01/01/happy-new-year-2018.html</id>
+            <content type="html"><![CDATA[<p>明けましておめでとうございます。</p>
+
+<p>ほむぺ開設 14 年目… だと思います、たぶん。
+今年も一年よろしくお願いします。</p>
+
+<p>では、今年の目標をば。</p>
+
+<h2 id="%E7%9B%AE%E6%A8%99">目標</h2>
+
+<ul>
+<li><a href="https://github.com/sharkpp/Jugemutter">Jugemutter</a> の完成</li>
+</ul>
+
+<p>なんか公式が同じような機能を実装しているのでちょっとモチベが下がり気味だけど、とりあえずリリースしたいと思います。</p>
+
+<h3 id="hsp%E9%96%A2%E9%80%A3">HSP関連</h3>
+
+<ul>
+<li>HSPコンテスト作品の製作！</li>
+<li><a href="http://hsp-users.jp/">HSP関連サイト</a>の定期的な更新。</li>
+<li>Advent Calendar の開催（三年目）</li>
+<li>WINEの最新版でHSPが動くように！</li>
+<li>macOSで利用できるドキュメントビューアの作成</li>
+<li>HSP to rust トランスレータ</li>
+</ul>
+
+<h3 id="%E3%82%A2%E3%83%97%E3%83%AA%E9%96%A2%E9%80%A3">アプリ関連</h3>
+
+<ul>
+<li><a href="https://github.com/sharkpp/TimestampFreezer">TimestampFreezer</a> のバイナリ公開</li>
+<li><a href="https://github.com/sharkpp/Jugemutter">Jugemutter</a> の完成</li>
+<li>バイナリエディタを作りたい</li>
+</ul>
+
+<p>、、、できるかなぁ？</p>
+
+<p>てなわけで、よろしくお願いいたします。</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[大晦日@2017]]></title>
             <link href="http://www.sharkpp.net/blog/2017/12/31/new-years-eve-2017.html"/>
@@ -1893,73 +1937,6 @@ $ openssl rsa -in tmp.der -inform DER -out server-key.pem -outform pem
 <li><a href="http://qiita.com/kunichiko/items/12cbccaadcbf41c72735">RSA鍵、証明書のファイルフォーマットについて - Qiita</a></li>
 <li><a href="https://hacknote.jp/archives/13939/">SSL証明書を.crtから.pemに変換する方法 | ハックノート</a></li>
 <li><a href="http://certificate.fyicenter.com/2134_OpenSSL_ca_Error_..._directory_for_new_certificate_..._.html">OpenSSL - OpenSSL "ca" Error "... directory for new certificate ..."</a></li>
-</ul>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[じゅげむったーの開発日記 その５]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/08/23/jugemutter-development-diary-5th.html"/>
-            <updated>2017-08-23T01:50:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/08/23/jugemutter-development-diary-5th.html</id>
-            <content type="html"><![CDATA[<p>さて、今月も引き続き参加した <a href="https://qt-users.connpass.com/event/62861/">Qt 勉強会 @ Nagoya No11 - connpass</a> のまとめ。</p>
-
-<p>つぶやきは <a href="https://togetter.com/li/1146658">Qt 勉強会 @ Nagoya No11 つぶやきまとめ - Togetterまとめ</a> でまとめられています。</p>
-
-<p>先月の勉強会から日付(YY.MM)が付かなくなりました。</p>
-
-<p>さて、今回も長文投稿専用Twitterクライアントの開発の続きをしました。</p>
-
-<p>レポジトリは ... <a href="https://github.com/sharkpp/Jugemutter">sharkpp/Jugemutter: 長文投稿専用クライアント「じゅげむったー」</a> です。</p>
-
-<p><img src="/images/2017_0819_jugemutter1.png" alt="画面" /></p>
-
-<h2 id="%E9%80%B2%E6%8D%97">進捗</h2>
-
-<p><img src="/images/2017_0819_jugemutter2.png" alt="テスト画面" /></p>
-
-<p>とりあえず、分割処理のいろんなパターンのテストがやっと通ったので、ようやく一山越えた感じです。
-ここまで長かった。</p>
-
-<p>で、<code>Could not authenticate you.</code> がなぜか出る、と。
-これは、<a href="https://dev.twitter.com/overview/api/response-codes">Error Codes &amp; Responses — Twitter Developers</a> によると、『<ruby>ダイヤルしても通話を完了できませんでした。<rp>(</rp><rt>Your call could not be completed as dialed.</rt><rp>)</rp></ruby>』って意味らしい。</p>
-
-<h2 id="wireshark-%E3%81%A7-https-%E3%81%AE%E4%B8%AD%E8%BA%AB%E3%81%AE%E7%A2%BA%E8%AA%8D">Wireshark で https の中身の確認</h2>
-
-<p>Twitter の API への指示がおかしいらしいので、なんとか調べられないかとググってた所、Wiresharkでhttpsの中身が確認できるとの記事を発見。</p>
-
-<pre><code># SSLKEYLOGFILE=~/tls_key.log {ChromeやFirefox、cURLなどのパス}
-</code></pre>
-
-<p>で起動し、Wireshark で</p>
-
-<p><img src="/images/2017_0819_https_decrypt_in_wireshark.png" alt="Wireshark" /></p>
-
-<p>と、このような設定をすれば良いらしい。</p>
-
-<p>が、解析画面</p>
-
-<p><img src="/images/2017_0819_wireshark.png" alt="Wireshark" /></p>
-
-<p>を見ても、 <del><code>Decrypted SSL Data</code> なんてタブはもちろん、<code>Frame</code> などのタブも表示されていないので、もしかしてUIがQtベースになった時に何か変わったのかもしれない。</del></p>
-
-<p><img src="/images/2017_0831_wireshark.png" alt="Wireshark" /></p>
-
-<p><code>RSA keys list</code> の設定を触って居たら、なぜかタブが出るようになった。
-実装自体はされているようだ。</p>
-
-<p>あと、そもそもの話、Qtの通信を覗きたいのが目的。
-なので、Qtで上の方法が使えないと意味がないんだけど使えるのだろうか？</p>
-
-<h2 id="%E5%8F%82%E8%80%83">参考</h2>
-
-<ul>
-<li><a href="http://qiita.com/Hexa/items/ce0ac23526df12a64ad0">暗号化された Application Data を復号する - Qiita</a></li>
-<li><a href="https://f-o.org.uk/2017/decrypting-https-traffic-without-a-key.html">Floating Octothorpe: Decrypting HTTPS traffic without a key</a></li>
-<li><a href="https://serverfault.com/questions/263530/how-can-i-filter-https-when-monitoring-traffic-with-wireshark">How can I filter https when monitoring traffic with Wireshark? - Server Fault</a></li>
-<li><a href="http://troushoo.blog.fc2.com/blog-entry-234.html">Wireshark を用いて、クライアント側の情報のみでHTTPS 通信を複合する方法</a></li>
-<li><a href="http://qiita.com/toshihirock/items/acbf9800f7e784118e46">HTTPSのパケットをwiresharkで見てみる - Qiita</a></li>
-<li><a href="https://gist.github.com/summerwind/a482dd1f8e9887d26199">Wireshark で HTTP/2 over TLS の通信をダンプする方法</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/Key_Log_Format">NSS Key Log Format - Mozilla | MDN</a></li>
 </ul>
 ]]></content>
         </entry>

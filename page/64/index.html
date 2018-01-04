@@ -18,7 +18,54 @@
        ></li></ol><div class="row"><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
            href="/blog/"><i class="fa fa-archive fa-4x"></i><br />アーカイブ</a></div><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
            href="/product/"><i class="fa fa-download fa-4x"></i><br />作ったもの</a></div><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
-           href="/graffiti/"><i class="fa fa-paint-brush fa-4x"></i><br />落書き</a></div></div><hr style="border-bottom: 1px dashed #aaa; border-top: none;" /><article class="full-contents"><header><h1><a href="/blog/2009/06/14/startup-openhsp-nightly-builds.html">OpenHSPのナイトリービルドを始めました</a></h1></header><div><p>まあタイトルの通りなんだけど、OpenHSPのナイトリービルドを始めました。</p><p>毎日0時ごろにリビジョンをチェックして上がっていたら自動でビルドしてzipで固めてこのサイトにアップロードって感じのバッチファイルを組んでタスクで動かすようにしました。</p><p>自動でビルドしているだけなんでバグがあってもお構いなしでアップします。</p><p>ただビルドエラーがあったりビルドに使用しているPCが止まっていると更新されません。</p><p>サーバーの容量にも限りがあるので適当に消しますが、過去のパッケージはローカルに残っているので再アップすることは出来ると思います。</p><p>ダウンロードは<a href="/blog/categories/HSP">OpenHSP</a>からどうぞ</p></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i>&nbsp;
+           href="/graffiti/"><i class="fa fa-paint-brush fa-4x"></i><br />落書き</a></div></div><hr style="border-bottom: 1px dashed #aaa; border-top: none;" /><article class="full-contents"><header><h1><a href="/blog/2009/06/23/openhsp-modcfunc-patch.html">OpenHSP #modcfuncパッチ</a></h1></header><div><p>OpenHSP用の#modcfuncパッチを作ってみた。</p><p>コンパイルは出来たのでそんなには間違っていないと思うが未保障。</p><p>はて、fujidigさんのコンパイルの実装で変更前と結果が同じかチェックするコンパイラテスタ？はどこへ行ったのだろう？</p><p>パッチ</p><pre>Index: hspcmp/hspcmd.cpp
+===================================================================
+--- hspcmp/hspcmd.cpp   (リビジョン 323)
++++ hspcmp/hspcmd.cpp   (作業コピー)
+@@ -322,6 +322,7 @@
+"$000 0 #ifndef",
+"$000 0 #include",
+"$000 0 #modfunc",
++   "$000 0 #modcfunc",
+"$000 0 #modinit",
+"$000 0 #modterm",
+"$000 0 #module",
+Index: hspcmp/token.cpp
+===================================================================
+--- hspcmp/token.cpp    (リビジョン 323)
++++ hspcmp/token.cpp    (作業コピー)
+@@ -2177,6 +2177,8 @@
+ppresult_t CToken::PP_Defcfunc( int mode )
+{
+//      #defcfunc解析
++   //          mode : 0 = 通常cfunc
++   //                 1 = modcfunc
+//
+int i,id;
+char *word;
+@@ -3014,6 +3016,10 @@
+res = PP_Deffunc(1);
+return res;
+}
++   if (tstrcmp(word,"modcfunc")) {     // module function (2)
++       res = PP_Defcfunc(1);
++       return res;
++   }
+if (tstrcmp(word,"modinit")) {      // module function (3)
+res = PP_Deffunc(2);
+return res;
+</pre></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i>&nbsp;
+        <span itemprop="datePublished" content="2009-06-23">2009年06月23日</span>
+        &nbsp;/&nbsp;
+        <i class="fa fa-history"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2009-06-23-openhsp-modcfunc-patch.md">変更履歴</a>
+        &nbsp;/&nbsp;
+        <i class="fa fa-thumb-tack"></i>&nbsp;<a href="/blog/2009/06/23/openhsp-modcfunc-patch.html">Permalink</a>
+        &nbsp;/&nbsp;
+                                <span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
+                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
+        &nbsp;/&nbsp;
+                                <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:
+                        <a href="/blog/tags/HSP">HSP</a>,                         <a href="/blog/tags/OpenHSP">OpenHSP</a></span></span></div></footer></article><article class="full-contents"><header><h1><a href="/blog/2009/06/14/startup-openhsp-nightly-builds.html">OpenHSPのナイトリービルドを始めました</a></h1></header><div><p>まあタイトルの通りなんだけど、OpenHSPのナイトリービルドを始めました。</p><p>毎日0時ごろにリビジョンをチェックして上がっていたら自動でビルドしてzipで固めてこのサイトにアップロードって感じのバッチファイルを組んでタスクで動かすようにしました。</p><p>自動でビルドしているだけなんでバグがあってもお構いなしでアップします。</p><p>ただビルドエラーがあったりビルドに使用しているPCが止まっていると更新されません。</p><p>サーバーの容量にも限りがあるので適当に消しますが、過去のパッケージはローカルに残っているので再アップすることは出来ると思います。</p><p>ダウンロードは<a href="/blog/categories/HSP">OpenHSP</a>からどうぞ</p></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i>&nbsp;
         <span itemprop="datePublished" content="2009-06-14">2009年06月14日</span>
         &nbsp;/&nbsp;
         <i class="fa fa-history"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2009-06-14-startup-openhsp-nightly-builds.md">変更履歴</a>
@@ -40,19 +87,8 @@
                         <a href="/blog/categories/HSP">HSP</a></span>
         &nbsp;/&nbsp;
                                 <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:
-                        <a href="/blog/tags/HSP">HSP</a></span></span></div></footer></article><article class="full-contents"><header><h1><a href="/blog/2009/06/10/frog-cms-tag-assist.html">タグ入力補助プラグイン</a></h1></header><div><p><img src="/images/2009_0610_tag_assist_ss_20090610.png" alt="tag_assistスクリーンショット" /></p><p><a href="/files/tag_assist_1.0.0_20090610.zip">DOWNLOAD</a></p><p>タグの入力補助機能を編集画面に追加します。</p><p>プラグインを有効にするとページの編集画面にタグの入力補助機能が追加されます。</p><p>タグを入力してENTERキーを入力するとタグが確定されます。</p><p>タグ欄はタグの一覧から選択することも出来ます。</p><p>Frog CMS 0.9.3以降での動作確認をしています。</p><dl><dt>2008/06/10</dt><dd>1.0.0公開</dd></dl></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i>&nbsp;
-        <span itemprop="datePublished" content="2009-06-10">2009年06月10日</span>
-        &nbsp;/&nbsp;
-        <i class="fa fa-history"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2009-06-10-frog-cms-tag-assist.md">変更履歴</a>
-        &nbsp;/&nbsp;
-        <i class="fa fa-thumb-tack"></i>&nbsp;<a href="/blog/2009/06/10/frog-cms-tag-assist.html">Permalink</a>
-        &nbsp;/&nbsp;
-                                <span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
-                        <a href="/blog/categories/php">php</a>,                         <a href="/blog/categories/Frog%20CMS">Frog CMS</a></span>
-        &nbsp;/&nbsp;
-                                <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:
-                        <a href="/blog/tags/php">php</a>,                         <a href="/blog/tags/Frog%20CMS">Frog CMS</a></span></span></div></footer></article><br /><nav><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/page/63" title=""><span class="title"><i class="fa fa-chevron-left"></i> 新しい投稿</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/page/65" title=""><span class="title">古い投稿</span><i class="fa fa-chevron-right"></i></a></li></ul></nav></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li><li><i class="fa-li fa fa-ellipsis-h"></i><a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /page/64"
-                                  rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li></ul></div><div class="container text-center"><ul class="list-unstyled list-inline"><li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li><li class="text-muted">&copy; 2004-2017 sharkpp</li></ul></div><div class="container text-center text-muted"><ruby><rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                        <a href="/blog/tags/HSP">HSP</a></span></span></div></footer></article><br /><nav><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/page/63" title=""><span class="title"><i class="fa fa-chevron-left"></i> 新しい投稿</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/page/65" title=""><span class="title">古い投稿</span><i class="fa fa-chevron-right"></i></a></li></ul></nav></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li><li><i class="fa-li fa fa-ellipsis-h"></i><a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /page/64"
+                                  rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li></ul></div><div class="container text-center"><ul class="list-unstyled list-inline"><li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li><li class="text-muted">&copy; 2004-2018 sharkpp</li></ul></div><div class="container text-center text-muted"><ruby><rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
                                                             >Creative Commons Attribution 4.0 International License</a>.</rb><rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
                                                   >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp></ruby></div><div class="container text-center text-muted"><ruby><rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
                                                                             >The MIT License</a>.</rb><rp>(</rp><rt>さらに、コードスニペットは <a rel="nofollow" href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license"
