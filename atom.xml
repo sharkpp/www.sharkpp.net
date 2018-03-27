@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/atom.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2018-03-26T16:15:59+00:00</updated>
+    <updated>2018-03-27T13:36:38+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -102,13 +102,13 @@
 
 <h3 id="%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3">サインイン</h3>
 
-<p>![](/images/20180327_mstdn_jp-signin.png）</p>
+<p><img src="/images/20180327_mstdn_jp-signin.png" alt="" /></p>
 
 <p>登録されたアカウント情報を入力してください。</p>
 
 <h3 id="%E9%80%9A%E7%9F%A5%E3%83%90%E3%83%83%E3%82%B8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">通知バッジについて</h3>
 
-<p>![](/images/20180327_notification-badge-example.png）</p>
+<p><img src="/images/20180327_notification-badge-example.png" alt="" /></p>
 
 <p>利用するには <em>mastodon</em> 側でデスクトップ通知を有効にする必要があります。</p>
 
