@@ -70,13 +70,13 @@ categories: [ブログ]
 
 ### サインイン
 
-![](/images/20180327_mstdn_jp-signin.png）
+![](/images/20180327_mstdn_jp-signin.png)
 
 登録されたアカウント情報を入力してください。
 
 ### 通知バッジについて
 
-![](/images/20180327_notification-badge-example.png）
+![](/images/20180327_notification-badge-example.png)
 
 利用するには *mastodon* 側でデスクトップ通知を有効にする必要があります。
 
