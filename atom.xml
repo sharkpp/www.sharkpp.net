@@ -3,11 +3,115 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/atom.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2018-03-31T04:38:30+00:00</updated>
+    <updated>2018-04-20T20:59:54+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[名古屋Qt勉強会#15 に参加しました]]></title>
+            <link href="http://www.sharkpp.net/blog/2018/04/21/qt-nagoya-15.html"/>
+            <updated>2018-04-21T05:50:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2018/04/21/qt-nagoya-15.html</id>
+            <content type="html"><![CDATA[<p>つい先日 4月14日(土) に開催された <a href="https://qt-users.connpass.com/event/84048/">Qt 勉強会 @ Nagoya #15 - connpass</a> に参加しました。</p>
+
+<p>まとめは <a href="https://togetter.com/li/1218135">Qt 勉強会 @ Nagoya # 15 まとめ - Togetter</a> です。</p>
+
+<p>ちょっと遅くなったけど、そのまとめ。</p>
+
+<p><img src="/images/20180414_qauthwith.png" alt="開発中" /></p>
+
+<h2 id="%E4%BC%9A%E5%A0%B4%E5%88%B0%E7%9D%80%E3%81%BE%E3%81%A7">会場到着まで</h2>
+
+<p>会場近くには、あの食器で有名なノリタケの森がある。
+それを横目に通り過ぎながら名古屋駅からテクテク歩くこと約20分。
+最初、別の場所を会場と思ってたけど間違えてたようで <a href="https://twitter.com/kazuo_asa">@kazuo_asa</a> @主催者さんに助けてもらった。</p>
+
+<h2 id="%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B">自己紹介</h2>
+
+<p>みんなで自己紹介</p>
+
+<p>ほぼ何回か参加していて見知っていた人だった。
+まあ、久しぶりの参加の人もいたけど。</p>
+
+<h2 id="%E4%BB%8A%E5%9B%9E%E3%81%AE%E3%81%8A%E8%8F%93%E5%AD%90">今回のお菓子</h2>
+
+<p>今回は駄菓子を持って来たけど、横に長く座っていた関係もあったのか、まああまり減らなかった。</p>
+
+<p><img src="/images/20180414_dagashi.jpg" alt="串カツ田中で懇親会" /></p>
+
+<h2 id="%E3%82%82%E3%81%8F%E3%82%82%E3%81%8F">もくもく</h2>
+
+<p>とりあえず、久しぶりに Qt を触る。</p>
+
+<p><a href="https://github.com/sharkpp/qtauthwith">qtauthwith</a> を触ってみるも、ビルドエラーが出るのでひたすら修正。</p>
+
+<p>最終的にビルドは通るようになったけど... UIがそういえば実装するの超面倒だったな、と思い出して QtQuick で実装できないか模索。</p>
+
+<h2 id="%E3%81%A8%E3%81%A4%E3%81%9C%E3%82%93%E3%81%AE%E6%9A%97%E5%8F%B7%E9%80%9A%E8%B2%A8">とつぜんの暗号通貨</h2>
+
+<p>勉強会のイベントページに、なんか企業アカウントっぽいのが登録されているなぁと思ってたけど、開始時間過ぎても来ていなかったので、なんだったんだろうな、とは思ってた。
+が、しばらくしてから、２人組の人が来たが、その片方は外国の方だったので、ちとびっくり。</p>
+
+<p>どうやら、外国の方の方は暗号通貨 Dash と言う日本ではマイナーな仮想通貨の伝道師的な人だったようで、公式の Wallet アプリが Qt で作られている関係で参加した様子。</p>
+
+<h3 id="%E6%9A%97%E5%8F%B7%E9%80%9A%E8%B2%A8-dash">暗号通貨 Dash</h3>
+
+<p><a href="https://www.dash.org/jp/">DASH公式サイト | DASH暗号通貨 — Dash</a></p>
+
+<p>どうやら Core Wallet って管理アプリが Qt 4 で作られているらしい。</p>
+
+<p>話してくれたのは、暗号通貨 Dash のコミュニティマネージャ兼伝道師兼いろいろ。</p>
+
+<p>Dash は bitcoin のハードフォークで Core Wallet が Qt 製なのも bitcoin から受け継いだもの。</p>
+
+<p>bitcoin はマイニングで得た報酬はマイニングした人にのみ分配されるが、Dash はマイニングで発掘された報酬を開発者に分ける仕組みがあるとのこと。</p>
+
+<p>分配の割合は 45:45:10 で、マイナー：マスターノード（いっぱいコインを持ってる人？）：コミュニティに分配され、コミュニティに分配された報酬は、投票により開発者やマーケティングなどに使われるらしい。</p>
+
+<p>この辺り、面白い戦略をとってると思う。</p>
+
+<p><a href="https://github.com/dashpay/dash">dashpay/dash: Dash - Reinventing Cryptocurrency</a> が公式リポジトリっぽい。</p>
+
+<h4 id="%E6%A8%99%E6%BA%96-wallet-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">標準 wallet について</h4>
+
+<ul>
+<li>Qt 4 で実装</li>
+<li>改善する箇所が多い。例えば、
+
+<ul>
+<li>エクスポートはCSV形式なので、JSONなどへの対応する、など。</li>
+<li>送信先の選択画面、フィルタとかもできないし、一人一人選択しないといけない。</li>
+<li>Multisig 機能があるがそのUIがないのでコマンドラインを直接指定しないといけない。</li>
+</ul></li>
+<li>つまるところ、Qtの開発者がもっと増えて欲しい</li>
+<li>先の10%をどういう風に使うかを、フォーラムで提案＆投票し決める仕組みがある。</li>
+<li>改善の提案はPRでもフォーラムでもできるけど、大きな改善はフォーラムで提案すると予算が降りるかもしれない。</li>
+</ul>
+
+<h3 id="solarcoin">SolarCoin</h3>
+
+<p>公式はたぶんこれ <a href="https://solarcoin.org/">SolarCoin | SolarCoin</a> 。</p>
+
+<p>どうやらこっちにも携わっているみたい。</p>
+
+<p>dash のどこかのバージョンのフォーク。</p>
+
+<p>コアな開発者は３人ぐらいなので、こちらも増えて欲しい、とのこと。</p>
+
+<h2 id="%E6%87%87%E8%A6%AA%E4%BC%9A">懇親会</h2>
+
+<p>会場近くの串カツ屋さん。なんか両隣は結構有名なお店らしい。</p>
+
+<p><img src="/images/20180414_kushikatsu.jpg" alt="串カツ田中で懇親会" /></p>
+
+<h2 id="%E6%9C%80%E5%BE%8C%E3%81%AB">最後に</h2>
+
+<p>久しぶりに参加したけど、久しぶりにQt触っていろいろと忘れていたこともあった。
+けど、強制的に時間を確保しもくもくするのはやはり悪くない。
+あと、Dash コインの話もいろいろ面白かった。</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Franz 用の Mastodon レシピを作りました！]]></title>
             <link href="http://www.sharkpp.net/blog/2018/03/27/franz-recipe-mastodon.html"/>
@@ -1781,191 +1885,6 @@ loop
 <li><a href="https://twitter.com/consomme72/status/921869169267687424">こんそめさんのツイート: "これから設営です #技術書典 https://t.co/1KqJSF3e68"</a></li>
 <li><a href="https://twitter.com/consomme72/status/921889799392206848">こんそめさんのツイート: "設営中です #技術書典 https://t.co/CfdynRWSvz"</a></li>
 <li><a href="https://twitter.com/consomme72/status/922023704892096512">こんそめさんのツイート: "兵どもが夢の跡 #技術書典 https://t.co/9HdJIHFgfz"</a></li>
-</ul>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[じゅげむったーの開発日記 その８]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/10/21/jugemutter-development-diary-8th.html"/>
-            <updated>2017-10-21T17:41:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/10/21/jugemutter-development-diary-8th.html</id>
-            <content type="html"><![CDATA[<p>今回は、明日行われる <a href="https://techbookfest.org/event/tbf03">技術書典３</a> に前日入りして、<a href="https://qt-users.connpass.com/event/68878/">Qt 勉強会 @ Tokyo #52</a> に参加してきました。</p>
-
-<p>東京の勉強会はすごく久しぶりの参加でした。</p>
-
-<p>以前は、誰かしらが発表をして、それを聞く感じの会でしたが、最近はもくもくがメインのようでした。</p>
-
-<p>レポジトリは ... <a href="https://github.com/sharkpp/Jugemutter">sharkpp/Jugemutter: 長文投稿専用クライアント「じゅげむったー」</a> となります。</p>
-
-<h2 id="twitter-api-%E3%81%AE-%22could-not-authenticate-you.%22-%E5%95%8F%E9%A1%8C">Twitter API の "Could not authenticate you." 問題</h2>
-
-<p>Twitter API への要求で <code>Could not authenticate you.</code> とレスポンスが返ってくる問題、どうも <a href="https://bugreports.qt.io/browse/QTBUG-61125">[QTBUG-61125] QOAuth1 creates an invalid signature for percent encoded query - Qt Bug Tracker</a> のバグが原因ではなかった様子。</p>
-
-<p>なので、ちょっと踏み込んで調べて見ることにする。</p>
-
-<p>とりあえず、比較のために PHP で同じように Twitter API を使って見ることに。</p>
-
-<p>ライブラリは <a href="https://github.com/risan/oauth1">risan/oauth1: 🔐 OAuth 1.0 client library for PHP</a> をとりあえず試して見る。</p>
-
-<p>何はともあれ composer をインストール</p>
-
-<pre><code class="console">$ php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-$ php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-$ php composer-setup.php
-$ php -r "unlink('composer-setup.php');"
-</code></pre>
-
-<p>ライブラリをインストール</p>
-
-<pre><code class="console">$ php composer.phar require risan/oauth1
-</code></pre>
-
-<p>で、いろいろ試している..</p>
-
-<p>ソースは <a href="https://github.com/risan/oauth1#basic-usage">risan/oauth1: Basic Usage</a> を基に <code>$ sudo php -S localhost:80 -t .</code> で動かします。</p>
-
-<pre><code class="php">&lt;?php
-
-// Start session.
-session_start();
-
-// Include Composer autoload file.
-require 'vendor/autoload.php';
-
-// Create a new instance of OAuth1 client for Twitter.
-$oauth1 = new OAuth1\OAuth1([
-    'consumer_key'      =&gt; 'YOUR_TWITTER_CONSUMER_KEY',
-    'consumer_secret'   =&gt; 'YOUR_TWITTER_CONSUMER_SECRET',
-    'request_token_url' =&gt; 'https://api.twitter.com/oauth/request_token',
-    'authorize_url'     =&gt; 'https://api.twitter.com/oauth/authorize',
-    'access_token_url'  =&gt; 'https://api.twitter.com/oauth/access_token',
-    'callback_url'      =&gt; 'http://localhost:80', // Optional
-    'resource_base_url' =&gt; 'https://api.twitter.com/1.1/'
-]);
-
-// STEP 4: ACCESS PROTECTED RESOURCE.
-if (isset($_SESSION['access_token'])) {
-    // Retrieve the saved AccessToken instance (see STEP 3).
-    $accessToken = unserialize($_SESSION['access_token']);
-
-    // Set access token.
-    $oauth1-&gt;setGrantedAccessToken($accessToken);
-
-    // Get authenticated user's timeline.
-    // @return Psr\Http\Message\ResponseInterface instance
-    //$response = $oauth1-&gt;get('statuses/user_timeline.json');
-    $response = $oauth1-&gt;post('statuses/update.json', [
-        'query' =&gt; [
-        //'form_params' =&gt; [ // risan/oauth1 が対応していない様子
-            'status' =&gt; 'test',
-        ]
-    ]);
-
-    echo $response-&gt;getBody()-&gt;getContents();
-}
-
-// STEP 3: GET ACCESS TOKEN.
-elseif (isset($_GET['oauth_token']) &amp;&amp; isset($_GET['oauth_verifier'])) {
-    // Retrieve the previously generated request token (see STEP 1).
-    $requestToken = unserialize($_SESSION['request_token']);
-
-    // Get access token.
-    // @return OAuth1\Tokens\AccessToken instance
-    $accessToken = $oauth1-&gt;accessToken($requestToken, $_GET['oauth_token'], $_GET['oauth_verifier']);
-
-    // Serialize AccessToken instance and save it to session.
-    $_SESSION['access_token'] = serialize($accessToken);
-
-    // No longer need request token.
-    unset($_SESSION['request_token']);
-
-    // Reload page.
-    header("Location: {$_SERVER['PHP_SELF']}");
-    exit();
-}
-
-// STEP 1: Get request token.
-// STEP 2: Redirect to authorization page.
-else {
-    // Get request token.
-    // @return OAuth1\Tokens\RequestToken instance
-    $requestToken = $oauth1-&gt;requestToken();
-
-    // Serialize RequestToken instance and save to session.
-    $_SESSION['request_token'] = serialize($requestToken);
-
-    // Redirect to authorization url.
-    $authorizationUrl = $oauth1-&gt;buildAuthorizationUrl($requestToken);
-    header("Location: {$authorizationUrl}");
-    exit();
-}
-</code></pre>
-
-<p>あれ？</p>
-
-<p><del><code>{"code":32,"message":"Could not authenticate you."}</code> になるっぽい、なぜだろう？</del> <code>risan/oauth1</code> の実装が POST の フォームに対応していなかっただけのようだ。</p>
-
-<p>↑から、URLのクエリ形式で送れば大丈夫っぽい。</p>
-
-<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">むぅPOSTのフォームではなくURLのクエリで送れば(や%も大丈夫っぽいなぁ (おわり <a href="https://twitter.com/hashtag/qtjp?src=hash&amp;ref_src=twsrc%5Etfw">#qtjp</a> <a href="https://twitter.com/hashtag/jugemutter?src=hash&amp;ref_src=twsrc%5Etfw">#jugemutter</a></p>&mdash; これでチーム「さめたすたす」は最強だ！ (@sharkpp) <a href="https://twitter.com/sharkpp/status/921656868535021570?ref_src=twsrc%5Etfw">2017年10月21日</a></blockquote>
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>何か勘違いしているのか？</p>
-
-<p>というところでタイムアップ。</p>
-
-<h2 id="twitter-api-reference-%E3%81%AE-url-%E3%81%8C%E5%A4%89%E3%82%8F%E3%81%A3%E3%81%9F%EF%BC%9F">Twitter API reference の URL が変わった？</h2>
-
-<p>なんか、Twitter API のリファレンスページのアドレスが変わっている様子。</p>
-
-<pre><code>https://dev.twitter.com/rest/reference/post/statuses/update
-</code></pre>
-
-<p>↓</p>
-
-<pre><code>https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update
-</code></pre>
-
-<p>リダイレクトで飛ばして欲しかったなぁ。</p>
-
-<h2 id="%E5%8B%89%E5%BC%B7%E4%BC%9A">勉強会</h2>
-
-<h3 id="qt-contributors-summit-2017-%E3%81%A8-qt-world-summit-2017-%E3%81%AE%E5%A0%B1%E5%91%8A">Qt contributors summit 2017 と Qt World Summit 2017 の報告</h3>
-
-<p>2017年10月9日〜10月10日に開催された <a href="https://www1.qt.io/event/qt-contributors-summit-2017/">Qt Contributors' Summit 2017</a> および、2017年10月10日〜10月12日に開催された <a href="https://www1.qt.io/event/qt-world-summit-2017/">Qt World Summit</a> の<a href="https://twitter.com/takumiasaki">朝木卓見(@takumiasaki)</a> さんによる報告。</p>
-
-<p>関連するリンク</p>
-
-<ul>
-<li><a href="https://wiki.qt.io/Qt_contributors_summit_2017">Qt contributors summit 2017 - Qt Wiki</a></li>
-<li><a href="https://wiki.qt.io/Qt_contributors_summit_2017_Program">Qt contributors summit 2017 Program - Qt Wiki</a> - セッションプログラム一覧</li>
-<li><a href="https://wiki.qt.io/QtCS2017_QtCore">QtCS2017 QtCore - Qt Wiki</a> - 該当のセッションで出た話</li>
-<li><a href="http://blog.qt.io/blog/2017/10/11/qt-3d-studio-source-code-pre-release-snapshots-available/">Qt 3D Studio Source Code and Pre-Release Snapshots Available - Qt Blog</a></li>
-<li><a href="https://github.com/KDAB">KDAB</a></li>
-</ul>
-
-<h3 id="qt-3d-studio-%E3%81%AE%E7%B4%B9%E4%BB%8B">Qt 3D Studio の紹介</h3>
-
-<p><a href="https://twitter.com/shin1_okada">岡田 真一(@shin1_okada)</a> さんによる、Qt 3D Studio の紹介。</p>
-
-<p>現状、macOS向けは、ビルドできるけど大きなデモを動かす、Qt Creator から動作させる、などでクラッシュする、とのこと。</p>
-
-<p>関連するリンク</p>
-
-<ul>
-<li><a href="http://blog.qt.io/blog/2017/10/11/qt-3d-studio-source-code-pre-release-snapshots-available/">Qt 3D Studio Source Code and Pre-Release Snapshots Available - Qt Blog</a></li>
-<li><a href="https://codereview.qt-project.org/#/admin/projects/qt3dstudio/qt3dstudio">codereview.qt-project Code Review</a> - デフォルトだと submodule が取得されないので注意</li>
-</ul>
-
-<h2 id="%E5%8F%82%E8%80%83">参考</h2>
-
-<ul>
-<li><a href="https://qiita.com/hnw/items/d72815e2d45f898d9184">SipHashについてのメモ - Qiita</a></li>
-<li><a href="http://docs.guzzlephp.org/en/5.3/clients.html">Clients — Guzzle Documentation</a></li>
-<li><a href="https://qiita.com/k-holy/items/4362b8cce85642e477ec">Windows + Goutte 3.0でHTTPSでのリクエストで発生するSSL証明書のエラー - Qiita</a></li>
-<li><a href="https://qiita.com/mikakane/items/58c30b243bba697ec3fe">guzzle で Http通信する - Qiita</a></li>
-<li><a href="https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update">POST statuses/update — Twitter Developers</a></li>
 </ul>
 ]]></content>
         </entry>

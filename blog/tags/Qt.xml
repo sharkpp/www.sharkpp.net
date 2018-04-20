@@ -3,11 +3,115 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/Qt.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2018-03-31T04:39:01+00:00</updated>
+    <updated>2018-04-20T21:00:28+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[名古屋Qt勉強会#15 に参加しました]]></title>
+            <link href="http://www.sharkpp.net/blog/2018/04/21/qt-nagoya-15.html"/>
+            <updated>2018-04-21T05:50:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2018/04/21/qt-nagoya-15.html</id>
+            <content type="html"><![CDATA[<p>つい先日 4月14日(土) に開催された <a href="https://qt-users.connpass.com/event/84048/">Qt 勉強会 @ Nagoya #15 - connpass</a> に参加しました。</p>
+
+<p>まとめは <a href="https://togetter.com/li/1218135">Qt 勉強会 @ Nagoya # 15 まとめ - Togetter</a> です。</p>
+
+<p>ちょっと遅くなったけど、そのまとめ。</p>
+
+<p><img src="/images/20180414_qauthwith.png" alt="開発中" /></p>
+
+<h2 id="%E4%BC%9A%E5%A0%B4%E5%88%B0%E7%9D%80%E3%81%BE%E3%81%A7">会場到着まで</h2>
+
+<p>会場近くには、あの食器で有名なノリタケの森がある。
+それを横目に通り過ぎながら名古屋駅からテクテク歩くこと約20分。
+最初、別の場所を会場と思ってたけど間違えてたようで <a href="https://twitter.com/kazuo_asa">@kazuo_asa</a> @主催者さんに助けてもらった。</p>
+
+<h2 id="%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B">自己紹介</h2>
+
+<p>みんなで自己紹介</p>
+
+<p>ほぼ何回か参加していて見知っていた人だった。
+まあ、久しぶりの参加の人もいたけど。</p>
+
+<h2 id="%E4%BB%8A%E5%9B%9E%E3%81%AE%E3%81%8A%E8%8F%93%E5%AD%90">今回のお菓子</h2>
+
+<p>今回は駄菓子を持って来たけど、横に長く座っていた関係もあったのか、まああまり減らなかった。</p>
+
+<p><img src="/images/20180414_dagashi.jpg" alt="串カツ田中で懇親会" /></p>
+
+<h2 id="%E3%82%82%E3%81%8F%E3%82%82%E3%81%8F">もくもく</h2>
+
+<p>とりあえず、久しぶりに Qt を触る。</p>
+
+<p><a href="https://github.com/sharkpp/qtauthwith">qtauthwith</a> を触ってみるも、ビルドエラーが出るのでひたすら修正。</p>
+
+<p>最終的にビルドは通るようになったけど... UIがそういえば実装するの超面倒だったな、と思い出して QtQuick で実装できないか模索。</p>
+
+<h2 id="%E3%81%A8%E3%81%A4%E3%81%9C%E3%82%93%E3%81%AE%E6%9A%97%E5%8F%B7%E9%80%9A%E8%B2%A8">とつぜんの暗号通貨</h2>
+
+<p>勉強会のイベントページに、なんか企業アカウントっぽいのが登録されているなぁと思ってたけど、開始時間過ぎても来ていなかったので、なんだったんだろうな、とは思ってた。
+が、しばらくしてから、２人組の人が来たが、その片方は外国の方だったので、ちとびっくり。</p>
+
+<p>どうやら、外国の方の方は暗号通貨 Dash と言う日本ではマイナーな仮想通貨の伝道師的な人だったようで、公式の Wallet アプリが Qt で作られている関係で参加した様子。</p>
+
+<h3 id="%E6%9A%97%E5%8F%B7%E9%80%9A%E8%B2%A8-dash">暗号通貨 Dash</h3>
+
+<p><a href="https://www.dash.org/jp/">DASH公式サイト | DASH暗号通貨 — Dash</a></p>
+
+<p>どうやら Core Wallet って管理アプリが Qt 4 で作られているらしい。</p>
+
+<p>話してくれたのは、暗号通貨 Dash のコミュニティマネージャ兼伝道師兼いろいろ。</p>
+
+<p>Dash は bitcoin のハードフォークで Core Wallet が Qt 製なのも bitcoin から受け継いだもの。</p>
+
+<p>bitcoin はマイニングで得た報酬はマイニングした人にのみ分配されるが、Dash はマイニングで発掘された報酬を開発者に分ける仕組みがあるとのこと。</p>
+
+<p>分配の割合は 45:45:10 で、マイナー：マスターノード（いっぱいコインを持ってる人？）：コミュニティに分配され、コミュニティに分配された報酬は、投票により開発者やマーケティングなどに使われるらしい。</p>
+
+<p>この辺り、面白い戦略をとってると思う。</p>
+
+<p><a href="https://github.com/dashpay/dash">dashpay/dash: Dash - Reinventing Cryptocurrency</a> が公式リポジトリっぽい。</p>
+
+<h4 id="%E6%A8%99%E6%BA%96-wallet-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">標準 wallet について</h4>
+
+<ul>
+<li>Qt 4 で実装</li>
+<li>改善する箇所が多い。例えば、
+
+<ul>
+<li>エクスポートはCSV形式なので、JSONなどへの対応する、など。</li>
+<li>送信先の選択画面、フィルタとかもできないし、一人一人選択しないといけない。</li>
+<li>Multisig 機能があるがそのUIがないのでコマンドラインを直接指定しないといけない。</li>
+</ul></li>
+<li>つまるところ、Qtの開発者がもっと増えて欲しい</li>
+<li>先の10%をどういう風に使うかを、フォーラムで提案＆投票し決める仕組みがある。</li>
+<li>改善の提案はPRでもフォーラムでもできるけど、大きな改善はフォーラムで提案すると予算が降りるかもしれない。</li>
+</ul>
+
+<h3 id="solarcoin">SolarCoin</h3>
+
+<p>公式はたぶんこれ <a href="https://solarcoin.org/">SolarCoin | SolarCoin</a> 。</p>
+
+<p>どうやらこっちにも携わっているみたい。</p>
+
+<p>dash のどこかのバージョンのフォーク。</p>
+
+<p>コアな開発者は３人ぐらいなので、こちらも増えて欲しい、とのこと。</p>
+
+<h2 id="%E6%87%87%E8%A6%AA%E4%BC%9A">懇親会</h2>
+
+<p>会場近くの串カツ屋さん。なんか両隣は結構有名なお店らしい。</p>
+
+<p><img src="/images/20180414_kushikatsu.jpg" alt="串カツ田中で懇親会" /></p>
+
+<h2 id="%E6%9C%80%E5%BE%8C%E3%81%AB">最後に</h2>
+
+<p>久しぶりに参加したけど、久しぶりにQt触っていろいろと忘れていたこともあった。
+けど、強制的に時間を確保しもくもくするのはやはり悪くない。
+あと、Dash コインの話もいろいろ面白かった。</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Qt 用の QDialog をベースとした吹き出し型のウィジェット]]></title>
             <link href="http://www.sharkpp.net/blog/2018/02/27/popover-widget-for-qt.html"/>
@@ -1700,50 +1804,6 @@ QToolBar QToolButton:pressed {
 
 <ul>
 <li><a href="https://www.qt.io/download-open-source/#section-9">Qt - Download Open Source Step 3</a></li>
-</ul>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[じゅげむったーの開発日記 その２]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/05/20/jugemutter-development-diary-2nd.html"/>
-            <updated>2017-05-20T17:04:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/05/20/jugemutter-development-diary-2nd.html</id>
-            <content type="html"><![CDATA[<p>さて、先月に引き続いて今月も参加した <a href="https://qt-users.connpass.com/event/57080/">Qt 勉強会 @ Nagoya No8(17.05) - connpass</a> のまとめ。</p>
-
-<p>今月も、長文投稿専用Twitterクライアントの開発の続きをしました。</p>
-
-<p>レポジトリは ... <a href="https://github.com/sharkpp/Jugemutter">sharkpp/Jugemutter: 長文投稿専用クライアント「じゅげむったー」</a> です。</p>
-
-<p><img src="/images/2017_0520_jugemutter.png" alt="画面" /></p>
-
-<h2 id="%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">はじめに</h2>
-
-<p>今日は、会場にほぼ時間ぴったりで到着(どうやら参加者中、最後だった模様)。</p>
-
-<p>反時計回りで、本日のやることを宣言。</p>
-
-<p>自分は、「じゅげむったー」の続き。</p>
-
-<h2 id="%E3%82%84%E3%81%A3%E3%81%9F%E3%81%93%E3%81%A8">やったこと</h2>
-
-<p>アカウント周りの管理処理の実装を組んだ。</p>
-
-<p>とりあえず、アカウントの管理がUIが主だったのを別のクラスで管理するようにして、それの変更でUIが変わるように変更をした。</p>
-
-<p>いつのまにか、投稿ができなくなってたので、ソースを追ったら、今表示しているビューに対してドキュメントが設定されてなかった様子。</p>
-
-<p>なので、ビューにドキュメントを設定する処理を実装するが、完了にはもう少し時間が足らなかった。</p>
-
-<p>暗号化処理、Qt標準でないのでどうしたものか？
-<a href="https://github.com/roop/qblowfish">roop/qblowfish</a> とか <a href="https://github.com/xcoder123/QBlowfish">xcoder123/QBlowfish</a> とか使おうかな？
-でも、<a href="https://ja.wikipedia.org/wiki/Twofish">Twofish</a> よりも設計年代が古いので Twofish のラッパーを作ったほうがいいのかも？</p>
-
-<h2 id="%E5%8F%82%E8%80%83">参考</h2>
-
-<ul>
-<li><a href="https://github.com/roop/qblowfish">roop/qblowfish: An implementation of the Blowfish encryption algorithm in Qt.</a></li>
-<li><a href="https://github.com/xcoder123/QBlowfish">xcoder123/QBlowfish: Simple blowfish encryption implementation in Qt with QByteArray support</a></li>
-<li><a href="https://ja.wikipedia.org/wiki/Twofish">Twofish - Wikipedia</a></li>
 </ul>
 ]]></content>
         </entry>
