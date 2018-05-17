@@ -18,7 +18,228 @@
        ></li></ol><div class="row"><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
            href="/blog/"><i class="fa fa-archive fa-4x"></i><br />アーカイブ</a></div><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
            href="/product/"><i class="fa fa-download fa-4x"></i><br />作ったもの</a></div><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
-           href="/graffiti/"><i class="fa fa-paint-brush fa-4x"></i><br />落書き</a></div></div><hr style="border-bottom: 1px dashed #aaa; border-top: none;" /><article class="full-contents"><header><h1><a href="/blog/2009/01/10/ubuntu-ja-8-10-on-vmware-player-2-memo.html">Ubuntu-ja-8.10をVMware Player 2で動かすときのメモ</a></h1></header><div><p>Ubuntu-ja-8.10 on VMware Player 2 で色々はまったのでメモ</p>
+           href="/graffiti/"><i class="fa fa-paint-brush fa-4x"></i><br />落書き</a></div></div><hr style="border-bottom: 1px dashed #aaa; border-top: none;" /><article class="full-contents"><header><h1><a href="/blog/2009/01/10/rhaco-template-syntax-memo.html">テンプレート構文メモ tag/TemplateParserの構文に関してのメモ</a></h1></header><div><p>参考:<a href="http://blog.shigepon.com/snippet53" title="rhacoアプリ開発日誌 - 逆引きrhaco53: rhacoのテンプレートで使用するタグまとめ">rhacoアプリ開発日誌 - 逆引きrhaco53: rhacoのテンプレートで使用するタグまとめ</a></p><p>※整形中orz</p><pre>ループ
+構文
+&lt;rt:loop&gt;
+?
+&lt;/rt:loop&gt;
+パラメータ
+param   ループ対象の変数を指定、{$hoge}、hoge、など、省略値はparam
+var     ループ内で要素を割り当てる変数名を指定、fuga、など、省略値はvar
+counter ループ内で要素のキーを割り当てる変数名を指定、key、など、省略値はcounter
+first   ループの先頭要素かの判断に使用する変数名を指定、is_first、など、省略値はfirst
+last    ループの末尾要素かの判断に使用する変数名を指定、is_last、など、省略値はlast
+offset  ループの開始オフセットの指定、省略値は1
+limit   ループ回数の指定、省略値は0(無制限)
+サンプル
+ソース
+※ $parser-&gt;setVariable('hoge',array("a","b","c"));
+&lt;rt:loop param="{$hoge}" var="fuga" counter="key"&gt;
+hoge[{$key}] = '{$fuga}'&lt;br&gt;
+&lt;/rt:loop&gt;
+実行結果
+hoge[0] = 'a'&lt;br&gt;
+hoge[1] = 'b'&lt;br&gt;
+hoge[2] = 'c'&lt;br&gt;
+説明
+ループ
+構文
+&lt;rt:for&gt;
+～
+&lt;/rt:for&gt;
+パラメータ
+counter ループ内で現在のカウンタ値を割り当てる変数名を指定、i、など、省略値はcounter
+start   ループの初期値を指定、省略値は0
+end     ループの終了値を指定、省略値は10
+step    ループ増分を指定、省略値は1
+サンプル
+ソース
+&lt;rt:for counter="i" start="0" end="5" step="2"&gt;
+i = {$i}&lt;br&gt;
+&lt;/rt:for&gt;
+実行結果
+i = 0&lt;br&gt;
+i = 2&lt;br&gt;
+i = 4&lt;br&gt;
+説明
+条件分岐
+構文
+&lt;rt:if&gt;
+～
+&lt;rt:else /&gt;
+～
+&lt;/rt:if&gt;
+パラメータ
+param   条件の判断に使用する変数を指定、{$hoge}、など、省略値はfalse
+value   条件の判断に使用する値を指定、5、など
+サンプル
+ソース
+※ $parser-&gt;setVariable('hoge',"a"));
+&lt;rt:if param="{$hoge}" value="a"&gt;
+hoge is 'a'&lt;br&gt;
+&lt;/rt:else /&gt;
+hoge is not 'a'&lt;br&gt;
+&lt;/rt:if&gt;
+実行結果
+hoge is 'a'&lt;br&gt;
+説明
+&lt;rt:ifnot&gt;の反対の動作、条件がtrueになる場合に動作するのが&lt;rt:if&gt;
+&lt;rt:else /&gt;は省略が可能です
+条件分岐(否定)
+構文
+&lt;rt:ifnot&gt;
+～
+&lt;rt:else /&gt;
+～
+&lt;/rt:ifnot&gt;
+サンプル
+ソース
+※ $parser-&gt;setVariable('hoge',"a"));
+&lt;rt:ifnot param="{$hoge}" value="a"&gt;
+hoge is not 'a'&lt;br&gt;
+&lt;/rt:else /&gt;
+hoge is 'a'&lt;br&gt;
+&lt;/rt:ifnot&gt;
+実行結果
+hoge is 'a'&lt;br&gt;
+説明
+&lt;rt:if&gt;の反対の動作、条件がfalseになる場合に動作するのが&lt;rt:ifnot&gt;
+&lt;rt:else /&gt;は省略が可能です
+存在確認
+構文
+&lt;rt:has&gt;
+～
+&lt;/rt:has&gt;
+パラメータ
+param   条件の判断に使用する変数を指定、{$hoge}、など、省略値はparam
+サンプル
+ソース
+※ $parser-&gt;setVariable('hoge',"a"));
+&lt;rt:has param="{$hoge}"&gt;
+hoge is not empty&lt;br&gt;
+&lt;/rt:has&gt;
+実行結果
+hoge is not empty&lt;br&gt;
+説明
+paramにarray(),null,""を指定すると&lt;rt:has&gt; ～ &lt;/rt:has&gt;は実行されない
+存在確認(否定)
+構文
+&lt;rt:hasnot&gt;
+～
+&lt;/rt:hasnot&gt;
+パラメータ
+param   条件の判断に使用する変数を指定、{$hoge}、など、省略値はparam
+サンプル
+ソース
+※ $parser-&gt;setVariable('hoge',""));
+&lt;rt:has param="{$hoge}"&gt;
+hoge is empty&lt;br&gt;
+&lt;/rt:has&gt;
+実行結果
+hoge is empty&lt;br&gt;
+説明
+paramにarray(),null,""を指定すると&lt;rt:hasnot&gt; ～ &lt;/rt:hasnot&gt;が実行される
+差込
+構文
+&lt;rt:include /&gt;
+パラメータ
+href    現在のテンプレートに差し込む別のテンプレートへのパスを指定します。
+サンプル
+ソース
+&lt;rt:include href="./hoge.html" /&gt;
+説明
+hrefで指定したテンプレートが現在のテンプレートに読み込まれて表示されます
+継承
+構文
+&lt;rt:extends /&gt;
+パラメータ
+href    現在のテンプレート継承元テンプレートのパスを指定します。
+サンプル
+ソース
+&lt;rt:extends href="./hoge.html" /&gt;
+説明
+hrefで指定したテンプレートから現在のテンプレートが派生していることを宣言します
+&lt;rt:block&gt;で継承元の同じ名前のブロックを置き換えることが出来ます
+ブロック指定
+構文
+&lt;rt:setblock /&gt;
+パラメータ
+href    
+サンプル
+ソース
+&lt;rt:setblock href="./hoge.html" /&gt;
+説明
+ブロック
+構文
+&lt;rt:block&gt;
+～
+&lt;/rt:block&gt;
+パラメータ
+name    ブロック名を指定します、省略値はname
+サンプル
+ソース
+&lt;rt:block name="hoge" /&gt;
+～
+&lt;/rt:block&gt;
+説明
+&lt;rt:extends /&gt;で指定したテンプレート内に存在する同じ名前のブロックを置き換えます
+置換
+構文
+&lt;rt:replace /&gt;
+パラメータ
+src     置換対象の文字列を指定します。
+dest    置換文字列を指定します。
+サンプル
+ソース
+&lt;rt:replace src="hoge" dest="fuga" /&gt;
+実行結果
+説明
+&lt;rt:extends /&gt;で指定したテンプレート内に存在する同じ名前のブロックを置き換えます
+コメント
+構文
+&lt;rt:invalid /&gt;
+パラメータ
+name    指定した名前の疑似Exceptionのみを対象にします、初期値は、exceptions(全ての疑似Exception)
+var     疑似Exceptionメッセージの列挙に使用する変数名を指定します、初期値は、errors
+type    出力のフォーマットを指定します、
+ulかplainのどちらかを指定できます、
+ulはulタグでフォーマッティングします、
+plainはそのまま出力されます、
+初期値は、ul
+サンプル
+説明
+ExceptionTrigger::raise()で疑似Exceptionが発行されている場合はそれを表示します
+コメント
+構文
+&lt;rt:comment&gt;
+～
+&lt;/rt:comment&gt;
+パラメータ
+なし
+サンプル
+ソース
+hoge&lt;br&gt;
+&lt;rt:comment&gt;
+fuga&lt;br&gt;
+&lt;/rt:comment&gt;
+moga&lt;br&gt;
+実行結果
+hoge&lt;br&gt;
+moga&lt;br&gt;
+説明
+囲まれた文字列をコメントとして処理して結果に出力しないようにします
+</pre></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i>&nbsp;
+        <span itemprop="datePublished" content="2009-01-10">2009年01月10日</span>
+        &nbsp;/&nbsp;
+        <i class="fa fa-history"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2009-01-10-rhaco-template-syntax-memo.md">変更履歴</a>
+        &nbsp;/&nbsp;
+        <i class="fa fa-thumb-tack"></i>&nbsp;<a href="/blog/2009/01/10/rhaco-template-syntax-memo.html">Permalink</a>
+        &nbsp;/&nbsp;
+                                <span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
+                        <a href="/blog/categories/php">php</a>,                         <a href="/blog/categories/rhaco">rhaco</a></span>
+        &nbsp;/&nbsp;
+                                <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:
+                        <a href="/blog/tags/php">php</a>,                         <a href="/blog/tags/rhaco">rhaco</a>,                         <a href="/blog/tags/%E3%83%A1%E3%83%A2">メモ</a></span></span></div></footer></article><article class="full-contents"><header><h1><a href="/blog/2009/01/10/ubuntu-ja-8-10-on-vmware-player-2-memo.html">Ubuntu-ja-8.10をVMware Player 2で動かすときのメモ</a></h1></header><div><p>Ubuntu-ja-8.10 on VMware Player 2 で色々はまったのでメモ</p>
 
 
                             &hellip;&nbsp;<a href="/blog/2009/01/10/ubuntu-ja-8-10-on-vmware-player-2-memo.html">続きを見る</a></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i>&nbsp;
@@ -43,18 +264,7 @@
                         <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
         &nbsp;/&nbsp;
                                 <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:
-                        <a href="/blog/tags/Happy%20New%20Year">Happy New Year</a></span></span></div></footer></article><article class="full-contents"><header><h1><a href="/blog/2008/10/15/frog-cms-trackback-plugin-1-0-0-release.html">Frog CMS用トラックバックプラグインの1.0.0をリリース</a></h1></header><div><p>少し遅くなりましたが、Frog CMS用トラックバックプラグインの1.0.0をリリースしました。</p><p>機能は予告どおりでトラックバックの承認・排除。削除を管理できるようになりました。</p><p>以前公開していたプラグインからデーターベースに保存する内容などが変更されているので、もし入れていた場合はプラグインを一旦無効にしてその後再度有効にしてください。</p><p>詳しいヘルプなどはプラグインアーカイブ内のreadme.txtなどに書かれていますのでそちらを参照ください。</p><p>ダウンロードは<a href="/blog/2008/09/08/frog-cms-trackback-plugin.html">トラックバックプラグイン</a>からです。</p></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i>&nbsp;
-        <span itemprop="datePublished" content="2008-10-15">2008年10月15日</span>
-        &nbsp;/&nbsp;
-        <i class="fa fa-history"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2008-10-15-frog-cms-trackback-plugin-1-0-0-release.md">変更履歴</a>
-        &nbsp;/&nbsp;
-        <i class="fa fa-thumb-tack"></i>&nbsp;<a href="/blog/2008/10/15/frog-cms-trackback-plugin-1-0-0-release.html">Permalink</a>
-        &nbsp;/&nbsp;
-                                <span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
-                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
-        &nbsp;/&nbsp;
-                                <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:
-                        <a href="/blog/tags/Trackback">Trackback</a>,                         <a href="/blog/tags/Plugin">Plugin</a>,                         <a href="/blog/tags/Frog%20CMS">Frog CMS</a></span></span></div></footer></article><br /><nav><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/page/71" title=""><span class="title"><i class="fa fa-chevron-left"></i> 新しい投稿</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/page/73" title=""><span class="title">古い投稿</span><i class="fa fa-chevron-right"></i></a></li></ul></nav></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li><li><i class="fa-li fa fa-ellipsis-h"></i><a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /page/72"
+                        <a href="/blog/tags/Happy%20New%20Year">Happy New Year</a></span></span></div></footer></article><br /><nav><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/page/71" title=""><span class="title"><i class="fa fa-chevron-left"></i> 新しい投稿</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/page/73" title=""><span class="title">古い投稿</span><i class="fa fa-chevron-right"></i></a></li></ul></nav></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li><li><i class="fa-li fa fa-ellipsis-h"></i><a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /page/72"
                                   rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li></ul></div><div class="container text-center"><ul class="list-unstyled list-inline"><li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li><li class="text-muted">&copy; 2004-2018 sharkpp</li></ul></div><div class="container text-center text-muted"><ruby><rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
                                                             >Creative Commons Attribution 4.0 International License</a>.</rb><rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
                                                   >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp></ruby></div><div class="container text-center text-muted"><ruby><rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"

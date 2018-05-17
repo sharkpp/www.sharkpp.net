@@ -3,11 +3,192 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/Qt.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2018-04-20T21:00:28+00:00</updated>
+    <updated>2018-05-17T16:14:04+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[技術書典4に行ってきた]]></title>
+            <link href="http://www.sharkpp.net/blog/2018/05/18/techbookfest4.html"/>
+            <updated>2018-05-18T01:10:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2018/05/18/techbookfest4.html</id>
+            <content type="html"><![CDATA[<p>一昨年から始まった技術書オンリーな同人イベント、「<a href="https://techbookfest.org/event/tbf04">技術書典４</a>」が、4月22日に開催されました。
+今回はイベントが始まって以来の快晴で運営さんも大慌てだった、とか言う話も。
+まあ、ともかく今回も昨年に引き続き「技術書典」に引き続き行ってきました。
+これは、そのレポート、もしくは戦果報告となります。
+いやはや、かなり周回遅れながらなんとかアップしました。</p>
+
+<p><img src="/images/20180422_tf4.jpg" alt="会場前にて" /></p>
+
+<h2 id="%E5%A7%8B%E3%82%81%E3%81%AB">始めに</h2>
+
+<p>まず、前回のレポートは「<a href="/blog/2017/10/23/techbookfest3.html">技術書典３にサークル手伝いとして参加してきた - さめたすたすのお家</a>
+」です。</p>
+
+<p>今回は、サークル数 246 、入場者数 6380 人だったようです。前回から二倍以上増えていて、もう人高密度が大変なことになっていました。</p>
+
+<p><a href="https://docs.google.com/spreadsheets/d/1gNVy9ukLn3kYzOC0nyOpysD-Xl3fIzHl26WSSLHC-HY/edit?usp=sharing"><img src="/images/20180430_tf1_tf4_graph.png" alt="参加人数" /></a></p>
+
+<h2 id="%E5%BD%93%E6%97%A5">当日</h2>
+
+<p>09:45ぐらいに行ったところ、すでに結構な人数が集まってました。
+まあ、集まってるとは言っても、その時点では一般参加者の列形成はされてなかったのでばらばらと散らばっている感じ。</p>
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">技術書典4 <a href="https://twitter.com/hashtag/%E6%8A%80%E8%A1%93%E6%9B%B8%E5%85%B8?src=hash&amp;ref_src=twsrc%5Etfw">#技術書典</a> 入場待機中<br>9:45ぐらいで一般参加者が集まってた <a href="https://t.co/eXsELI3LRW">pic.twitter.com/eXsELI3LRW</a></p>&mdash; 俺はさめたすたすでいく！！！ (@sharkpp) <a href="https://twitter.com/sharkpp/status/987863108789063680?ref_src=twsrc%5Etfw">2018年4月22日</a></blockquote>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>そして、10:00 すこし前に一般参加者の列形成を開始。
+整理券を配ってましたがどうやら並んでないと入れない、との話が漏れ聞えて来ました。</p>
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E6%8A%80%E8%A1%93%E6%9B%B8%E5%85%B8?src=hash&amp;ref_src=twsrc%5Etfw">#技術書典</a> <a href="https://twitter.com/hashtag/%E6%8A%80%E8%A1%93%E6%9B%B8%E5%85%B84?src=hash&amp;ref_src=twsrc%5Etfw">#技術書典4</a> サークル一覧のサークル配置図がお亡くなりに <a href="https://t.co/IJBzP4d5n7">pic.twitter.com/IJBzP4d5n7</a></p>&mdash; 俺はさめたすたすでいく！！！ (@sharkpp) <a href="https://twitter.com/sharkpp/status/987869942820163585?ref_src=twsrc%5Etfw">2018年4月22日</a></blockquote>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>サークル配置図を見ようとしたらお亡くなりになっていたり、トイレが近くて危なかったけど、何とかなった。
+なんか、以前も同じようなことを...</p>
+
+<p>スタッフさんが、毎度おなじみ手提げバッグを持って回っていて、今回は（前回も？）どうやら後払い公式アプリでも払えるようだったけど、時間かかりそうだったので現金払いにした。
+まあ、毎度のことながら会場内でも購入できるんだけどね。</p>
+
+<p>そして、11:00 会場内で拍手があり、ついに会場。</p>
+
+<p>「この列の人、手をあげてください！」ってスタッフさんが来たので、前後を見てなんとなく手をあげたところ、どうやら第一陣の入場対象に含まれたらしく、最初に入場することができました。</p>
+
+<p>とりあえず、最初に入場できたので、知り合いのところなどなど、早速お目当てのサークルさんを駆け巡ることに。</p>
+
+<p>なんかブースの配置が一部ぐるっと回り込まないとダメな構造だったので、買い忘れで戻った時には人が多くて大変だった。</p>
+
+<p>前回から実装された、後払い公式アプリで決済をしつつ、たまに現金払い。</p>
+
+<p>後払いは簡単に決済できるから、面白いようにお金が飛んでく...</p>
+
+<p>戦利品は後ほどで。</p>
+
+<p>最後は前回と同じように、秋葉原のヤマト運輸営業所で荷物を発送しました。</p>
+
+<p>さすがに今回は購入した量が多く、紙袋的なものだと破けそうだったので箱で送ることに。</p>
+
+<p><img src="/images/20180422_tf4_packing.jpg" alt="梱包" /></p>
+
+<p>無事発送もすんだので、今回の技術書典４を抜け、身軽になって観光しました。</p>
+
+<h2 id="%E6%88%A6%E5%88%A9%E5%93%81">戦利品</h2>
+
+<p>今回の戦利品</p>
+
+<p><img src="/images/20180429_tf4_booty.jpg" alt="戦利品" /></p>
+
+<table>
+<thead>
+<tr>
+  <th>ブース</th>
+  <th>サークル名/ペンネーム</th>
+  <th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td></td>
+  <td>達人出版会</td>
+  <td>「<a href="https://techbookfest.org/journal/3">技術季報 2018 SPRING</a>」※技術書典カタログ</td>
+</tr>
+<tr>
+  <td><a href="https://techbookfest.org/event/tbf04/circle/17450001">い15</a></td>
+  <td><a href="https://mzp.booth.pm/">SKK=さらに かしこく かわいい</a></td>
+  <td>「工場実習日記」「日本語入力を作るのに必要だった本」</td>
+</tr>
+<tr>
+  <td><a href="https://techbookfest.org/event/tbf04/circle/12820001">か22</a></td>
+  <td>理ろぐ/<a href="https://twitter.com/IoriAYANE">理音伊織</a></td>
+  <td>「インストーラーで配ろう！」</td>
+</tr>
+<tr>
+  <td><a href="https://techbookfest.org/event/tbf04/circle/12820001">か22</a></td>
+  <td><a href="https://qiita.com/MegaBlackLabel">底なし沼の魔女</a>/<a href="https://twitter.com/MegaBlackLabel">れいな</a></td>
+  <td>「Libraries of React・Get ready for Next.jsのセット」</td>
+</tr>
+<tr>
+  <td><a href="https://techbookfest.org/event/tbf04/circle/16430002">お09</a></td>
+  <td>Secure旅団</td>
+  <td>「俺らの愛したセキュリティ」「ニッチ・セキュリティ - 明星へ登る」</td>
+</tr>
+<tr>
+  <td><a href="https://techbookfest.org/event/tbf04/circle/17570001">か24</a></td>
+  <td><a href="http://www.chirashiura.com/">楽描帳</a>/<a href="https://twitter.com/tomato360">@tomato360</a></td>
+  <td>「Hello Nuxt !!」「Hello!! Vue.js 最新プログレッシブフレームワーク入門」</td>
+</tr>
+<tr>
+  <td><a href="https://techbookfest.org/event/tbf04/circle/19150009">か23</a></td>
+  <td>(ねこの手@福岡](https://mya-ake.com/)/(mya-ake](https://twitter.com/mya_ake)</td>
+  <td>「知らないと損するCSS」「現場で使えるVue.js tips集」</td>
+</tr>
+<tr>
+  <td><a href="https://techbookfest.org/event/tbf04/circle/14560006">く36</a></td>
+  <td><a href="http://blogs.yahoo.co.jp/rem1988stores">紙印</a>/おたべ</td>
+  <td>「【フルセット】テスト設計入門 2018年度版」</td>
+</tr>
+<tr>
+  <td><a href="https://techbookfest.org/event/tbf04/circle/19150006">く02</a></td>
+  <td><a href="https://www.wakamesoba98.net/circle/">53鍵盤</a>/わかめそば</td>
+  <td>「初めてのsystemd-nspawn」</td>
+</tr>
+<tr>
+  <td><a href="https://techbookfest.org/event/tbf04/circle/16620002">け15</a></td>
+  <td><a href="https://staff.aist.go.jp/tominaga-daisuke/sliderule/rectilinear/index.html">お台場計算尺</a>/とみながだいすけ</td>
+  <td>「新世紀の計算尺入門」「作って使おう計算尺」</td>
+</tr>
+<tr>
+  <td><a href="https://techbookfest.org/event/tbf04/circle/21060002">き17</a></td>
+  <td>めがねをかけるんだ/<a href="https://twitter.com/keiji_ariyama">Keiji ARIYAMA</a></td>
+  <td>「本当はおそろしい商業出版！？」「茶色いトイプードルは食べ物じゃないっ！」</td>
+</tr>
+<tr>
+  <td><a href="https://techbookfest.org/event/tbf04/circle/14520005">き02</a></td>
+  <td>越後屋/なかざん</td>
+  <td>「Cheap Dive into React Native」</td>
+</tr>
+<tr>
+  <td><a href="https://techbookfest.org/event/tbf04/circle/11830001">お08</a></td>
+  <td><a href="https://twitter.com/cpaw_account">Cpaw</a></td>
+  <td>「RustによるWebアプリケーション作成入門」</td>
+</tr>
+<tr>
+  <td><a href="https://techbookfest.org/event/tbf04/circle/18420001">お02</a></td>
+  <td><a href="http://yoshikawaweb.com/">吉川雅彦</a></td>
+  <td>「z-indexを倒す」</td>
+</tr>
+<tr>
+  <td><a href="https://techbookfest.org/event/tbf04/circle/16430001">い05</a></td>
+  <td><a href="http://webdesign-manga.com/">マンガでわかるWebデザイン＋Git</a>/湊川あい</td>
+  <td>「マンガでわかるDocker」「マンガでわかるScrapbox【無料頒布】」</td>
+</tr>
+<tr>
+  <td><a href="https://techbookfest.org/event/tbf04/circle/14570001">け51</a></td>
+  <td><a href="https://www.facebook.com/windholep/">windhole</a>/風穴 江</td>
+  <td>「USB3.0 ホストドライバ自作入門」</td>
+</tr>
+<tr>
+  <td><a href="https://techbookfest.org/event/tbf04/circle/21040009">あ01</a></td>
+  <td>日経BP出版局</td>
+  <td>「日経電子の本」※無料配布</td>
+</tr>
+</tbody>
+</table>
+
+<p>※敬称略、順不同</p>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<ul>
+<li>そろそろ会場に対して人が多いのではないかと...</li>
+<li>並ぶ前にトイレを済まそう(二度目)</li>
+<li>段々と購入数が多くなっていく...</li>
+<li>公式後払いアプリ怖い（お金に羽が生えて飛んでいく的な意味で</li>
+</ul>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[名古屋Qt勉強会#15 に参加しました]]></title>
             <link href="http://www.sharkpp.net/blog/2018/04/21/qt-nagoya-15.html"/>
@@ -1728,82 +1909,6 @@ QToolBar QToolButton:pressed {
 <li><a href="https://stackoverflow.com/questions/16794695/connecting-overloaded-signals-and-slots-in-qt-5">c++ - Connecting overloaded signals and slots in Qt 5 - Stack Overflow</a></li>
 <li><a href="https://bugreports.qt.io/browse/QTBUG-12717">[QTBUG-12717] Background color for QToolBar is not stylable on Mac - Qt Bug Tracker</a></li>
 <li><a href="https://stackoverflow.com/questions/10706357/nstableview-with-plus-and-minus-buttons">cocoa - NSTableView with Plus and Minus buttons - Stack Overflow</a></li>
-</ul>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[じゅげむったーの開発日記 その３]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/06/17/jugemutter-development-diary-3rd.html"/>
-            <updated>2017-06-17T22:57:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/06/17/jugemutter-development-diary-3rd.html</id>
-            <content type="html"><![CDATA[<p>さて、先月に引き続いて今月も参加した <a href="https://qt-users.connpass.com/event/58337/">Qt 勉強会 @ Nagoya No9(17.06) - connpass</a> のまとめ。</p>
-
-<p>つぶやきは <a href="https://togetter.com/li/1127556">Qt勉強会 Tokyo #48 + @Nagoya #9 つぶやきまとめ</a> でまとめられています。</p>
-
-<p>今回も長文投稿専用Twitterクライアントの開発の続きをしました。
-そろそろ終わらせたいです...</p>
-
-<p>レポジトリは ... <a href="https://github.com/sharkpp/Jugemutter">sharkpp/Jugemutter: 長文投稿専用クライアント「じゅげむったー」</a> です。</p>
-
-<p><img src="/images/2017_0617_jugemutter1.png" alt="画面" /></p>
-
-<h2 id="%E9%80%B2%E6%8D%97">進捗</h2>
-
-<p>とりあえず、作ってた設定画面ができて、設定した内容も保存できたぞ！</p>
-
-<p><img src="/images/2017_0617_jugemutter1.png" alt="設定画面" /></p>
-
-<p>投稿画面の本文前後のテキストも表示できるようになったし、</p>
-
-<p><img src="/images/2017_0617_jugemutter2.png" alt="投稿画面" /></p>
-
-<p>インストーラ作るの？って聞かれた。
-たしかに、配布どうするか、って問題はある。</p>
-
-<p><a href="https://booth.pm/ja/items/122098">インストーラを作ろう！</a> を持ってたはずなので、それを参考にやってみようかとは思ってる。</p>
-
-<h2 id="%E3%81%9D%E3%81%AE%E4%BB%96%E3%83%A1%E3%83%A2">その他メモ</h2>
-
-<h3 id="%E3%83%87%E3%83%BC%E3%82%BF%E3%83%90%E3%82%A4%E3%83%B3%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">データバインディングについて</h3>
-
-<p>データバインディングは QML の方が Widget より素直？直感的？で実装が楽、らしい。</p>
-
-<p>QML は、かなり昔( <a href="https://github.com/sharkpp/TaskMemGraph">sharkpp/TaskMemGraph: sample of QtQuick2 application</a> )に触ってそれっきりなので、また色々覚えないとダメかもしれないけど、 Android とか iOS のアプリ作るなら Widget よりも最近は QML っぽいので、またやってみようと思う。</p>
-
-<p>そういえば、 <a href="https://github.com/sharkpp/TaskMemGraph">TaskMemGraph</a> っていまビルド通るのだろうか？</p>
-
-<h3 id="%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E6%A7%8B%E6%88%90">ディレクトリ構成</h3>
-
-<p>ファイル数増えて困る、って問題。</p>
-
-<p>何かキッチリ答えがあるわけでもないけど、</p>
-
-<ul>
-<li>機能ごと</li>
-<li>モジュールごと</li>
-</ul>
-
-<p>みたいな感じで良いのでは、とアドバイス。</p>
-
-<h3 id="qt-%E6%9C%AC%E4%BD%93%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">Qt 本体について</h3>
-
-<p>Qt 5.9 は、ある人曰く、アップデートしても大丈夫なバージョンな気がする、とのこと。</p>
-
-<p>LTS(=Long Term Support)版だけあって、最初から安定しているのかも。</p>
-
-<h3 id="qtcretor-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">QtCretor について</h3>
-
-<p>QtCretor 4.3.0 はどうも動作が怪しい部分があるらしい（自分はまだ 4.2.1 なので、あくまでらしい）。</p>
-
-<p>前のバージョン、 4.2.1 では大丈夫だけど、ある機能のメニューをクリックしても反応しなかったり、クラスを追加しても、プロジェクトビューに追加されなかったり（再起動すると追加されている）、など。</p>
-
-<p>Qt 5.9 に付属の QtCretor 4.3.1 は大丈夫かも？と言う話。
-なお QtCretor 4.3.1 はこの記事を書いている時点では、単体でのダウンロードはできないようです。</p>
-
-<h2 id="%E5%8F%82%E8%80%83">参考</h2>
-
-<ul>
-<li><a href="https://www.qt.io/download-open-source/#section-9">Qt - Download Open Source Step 3</a></li>
 </ul>
 ]]></content>
         </entry>
