@@ -2,25 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://www.sharkpp.net</loc>
-    <lastmod>2018-05-17</lastmod>
+    <lastmod>2018-05-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://www.sharkpp.net/blog</loc>
-    <lastmod>2018-05-17T16:13:45+00:00</lastmod>
+    <lastmod>2018-05-26T14:32:19+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sharkpp.net/blog/categories</loc>
-    <lastmod>2018-05-17T16:13:45+00:00</lastmod>
+    <lastmod>2018-05-26T14:32:19+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sharkpp.net/blog/tags</loc>
-    <lastmod>2018-05-17T16:13:45+00:00</lastmod>
+    <lastmod>2018-05-26T14:32:19+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -53,6 +53,12 @@
     <lastmod>2008-08-03T17:29:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.sharkpp.net/blog/2018/05/26/qt-nagoya-16.html</loc>
+    <lastmod>2018-05-26T23:26:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>http://www.sharkpp.net/blog/2018/05/18/techbookfest4.html</loc>

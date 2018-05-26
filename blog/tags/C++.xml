@@ -3,11 +3,77 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/C%2B%2B.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2018-05-17T16:14:04+00:00</updated>
+    <updated>2018-05-26T14:32:52+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[名古屋Qt勉強会#16 に参加しました]]></title>
+            <link href="http://www.sharkpp.net/blog/2018/05/26/qt-nagoya-16.html"/>
+            <updated>2018-05-26T23:26:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2018/05/26/qt-nagoya-16.html</id>
+            <content type="html"><![CDATA[<p>5月26日(土) に開催された <a href="https://qt-users.connpass.com/event/88524/">Qt 勉強会 @ Nagoya #16 - connpass</a> に参加しました。</p>
+
+<p>そのまとめ。</p>
+
+<p><img src="/images/20180526_qauthwith2.png" alt="開発中" /></p>
+
+<h2 id="%E4%BC%9A%E5%A0%B4%E5%88%B0%E7%9D%80%E3%81%BE%E3%81%A7">会場到着まで</h2>
+
+<p>前回は、ちょっと迷ってしまったけど、さすがに２回目ともなれば迷うこともなく到着。
+電車の時間を少しミスったために、今回もギリギリ（汗</p>
+
+<h2 id="%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B">自己紹介</h2>
+
+<p>みんなで自己紹介</p>
+
+<p>今回は２名のご新規さんが参加されました。</p>
+
+<p>東京組２名は少し遅れて到着（やはり迷った様子</p>
+
+<h2 id="%E4%BB%8A%E5%9B%9E%E3%81%AE%E3%81%8A%E8%8F%93%E5%AD%90">今回のお菓子</h2>
+
+<p>今回は、東京からの参加者の <a href="https://twitter.com/hermit4">@hermit4</a> さんが、美味しそうなお菓子を持ち込み。
+クッキーなどと合わせてなかなかの量になりました。</p>
+
+<h2 id="%E3%82%82%E3%81%8F%E3%82%82%E3%81%8F">もくもく</h2>
+
+<p>前回の続きをもくもく。</p>
+
+<p>本日は、Qt Quick をサンプルを見ながらUIの作り込み。</p>
+
+<p><img src="/images/20180526_qauthwith1.png" alt="開発中" /></p>
+
+<p>こんな感じに Swagger UI 風の UI を Qt Quick で作ることにした。</p>
+
+<p><img src="/images/20180526_qauthwith2.png" alt="開発中" /></p>
+
+<p>一部、どうしてもわからないことを <a href="https://twitter.com/IoriAYANE">@IoriAYANE</a> さんに聞きつつ、なんとかここまで出来た。</p>
+
+<p>さてはて、中身の実装をどうしようかな？というところで時間切れ。</p>
+
+<h2 id="%E6%87%87%E8%A6%AA%E4%BC%9A">懇親会</h2>
+
+<p>今回は、前回行った串カツ屋さんは入れず。
+少し歩いた先の串焼き屋さんで懇親会。</p>
+
+<p><img src="/images/20180526_kushiyaki.jpg" alt="テング酒場で懇親会" /></p>
+
+<h2 id="%E6%9C%80%E5%BE%8C%E3%81%AB">最後に</h2>
+
+<p>久しぶりに集中して趣味プロしたけど、やはりいいものだ。
+年々、趣味に割ける時間が減っているけど、なんとか継続して行きたい。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://doc.qt.io/qt-5/qtquickcontrols-index.html">Qt Quick Controls 5.11</a></li>
+<li><a href="https://doc.qt.io/archives/qt-5.7/qtquickcontrols2-customize.html">Customizing Qt Quick Controls 2 | Qt Quick Controls 2 5.7</a></li>
+<li><a href="http://blog.qt.io/jp/2011/03/10/qml-drawing-2/">Qt Quick 入門 第8回: QML の描画処理 - Qt Japanese Blog</a></li>
+</ul>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[名古屋Qt勉強会#15 に参加しました]]></title>
             <link href="http://www.sharkpp.net/blog/2018/04/21/qt-nagoya-15.html"/>
@@ -1075,140 +1141,6 @@ QToolBar QToolButton:pressed {
 <li><a href="http://stackoverflow.com/questions/2749798/qlabel-set-color-of-text-and-background">qt - QLabel: set color of text and background - Stack Overflow</a></li>
 <li><a href="http://doc.qt.io/qt-5/properties.html">The Property System | Qt Core 5.8</a></li>
 <li><a href="http://stackoverflow.com/questions/19729288/auto-generate-setters-getters-with-qtcreator">c++ - Auto-generate setters/getters with QTCreator? - Stack Overflow</a></li>
-</ul>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Qt Network Authorization を使った Twitter API の利用]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/03/25/twitter-api-using-qt-network-authorization.html"/>
-            <updated>2017-03-25T22:59:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/03/25/twitter-api-using-qt-network-authorization.html</id>
-            <content type="html"><![CDATA[<p>さて、先月に続いて今月も参加した <a href="https://qt-users.connpass.com/event/52009/">Qt 勉強会 @ Nagoya No6(17.03)</a> のまとめ。</p>
-
-<p>今回はいつもに増して短め。</p>
-
-<p><a href="https://github.com/sharkpp/Jugemutter">sharkpp/Jugemutter: 長文投稿専用クライアント「じゅげむったー」</a> で成果物を公開しています。</p>
-
-<h2 id="%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">はじめに</h2>
-
-<p>まずは、クラスの実装をしていきます。</p>
-
-<p><a href="https://doc-snapshots.qt.io/qt5-5.8/examples-qtnetworkauth.html">Qt Network Authorization Examples | Qt Network Authorization 5.8</a> に Twitter認証のサンプルがあるので、それを参考にしつつ <a href="https://github.com/sharkpp/NetworkStorageAccessSample">NetworkStorageAccessSample</a> で実装した認証済みトークンの保存処理を実装していきました。</p>
-
-<p>あ、<a href="http://www.sharkpp.net/blog/2017/01/28/first-impression-qt-network-authorization.html">はじめての Qt Network Authorization</a> も参考にしています。</p>
-
-<p>そろそろ、だれか Qt Network Authorization を触った記事を書いてくれないだろうか？</p>
-
-<h2 id="%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88">ポイント</h2>
-
-<p>実装するクラスは <code>QOAuth1</code> クラスから派生します。</p>
-
-<p>これは、認証した後のトークンの復帰処理で <code>setStatus(QAbstractOAuth::Status::Granted)</code> の実行が必要となります。
-ただし、該当のメソッドが <code>protected</code> として実装されているので、 <code>QOAuth1</code> クラスから派生する必要があるのです。</p>
-
-<p>APIの各エンドポイントを設定</p>
-
-<p>まあ、この辺はサンプルと同じです。</p>
-
-<pre><code class="cpp">setTemporaryCredentialsUrl(QUrl("https://api.twitter.com/oauth/request_token"));
-setAuthorizationUrl(QUrl("https://api.twitter.com/oauth/authenticate"));
-setTokenCredentialsUrl(QUrl("https://api.twitter.com/oauth/access_token"));
-</code></pre>
-
-<p>OAuth の認証を、ブラウザを利用するために、</p>
-
-<pre><code class="cpp">setReplyHandler(new QOAuthHttpServerReplyHandler(this));
-</code></pre>
-
-<p>としますが、これを実行するとポートを開きに行くので、必要な時のみポートを開くか PIN 認証にする方が良いかもしれません。</p>
-
-<p>この時、</p>
-
-<pre><code class="cpp">connect(this, &amp;QAbstractOAuth::authorizeWithBrowser,
-        this, &amp;Twitter::handleAuthorizeWithBrowser);
-</code></pre>
-
-<p>としてシグナルをスロットと関連づけて、</p>
-
-<pre><code class="cpp">void Twitter::handleAuthorizeWithBrowser(QUrl url)
-{
-    QDesktopServices::openUrl(url);
-}
-</code></pre>
-
-<p>のような感じで実装することで、ブラウザで認証することができます。</p>
-
-<p><code>grant()</code> を呼び出すことで認証開始するので、適当なメソッドでラップします。</p>
-
-<p>認証後は、</p>
-
-<pre><code>connect(this, &amp;QOAuth1::granted, this, &amp;Twitter::authenticated);
-</code></pre>
-
-<p>とすることで、 <code>authenticated()</code> を認証時に呼ばされるシグナルとして登録できます。</p>
-
-<p>つぶやくには</p>
-
-<pre><code>    QUrl url("https://api.twitter.com/1.1/statuses/update.json");
-    QUrlQuery query(url);
-    query.addQueryItem("status", "hogehoge");
-    url.setQuery(query);
-    QNetworkReply *reply = post(url);
-    connect(reply, &amp;QNetworkReply::finished, this, &amp;Twitter::tweetFinished);
-</code></pre>
-
-<p>みたいな感じです。</p>
-
-<p>まあ、後から振り返ると割と簡単な部類になると思うけど、いろいろハマってしまいました。</p>
-
-<h2 id="%E3%81%84%E3%82%8D%E3%81%84%E3%82%8D%E5%A4%B1%E6%95%97%E8%AB%87">いろいろ失敗談</h2>
-
-<p>なぜか今回はハマることハマること。</p>
-
-<p>ハマった所をメモとして残しておきます。</p>
-
-<ul>
-<li><code>setClientIdentifier()</code> / <code>setClientSharedSecret()</code> と <code>token()</code> / <code>tokenSecret()</code> をなぜかとり間違える
-なぜ間違えたし。</li>
-<li>設定したはずの、Consumer Key / Consumer Secret が設定されていなくて、<code>QOAuthOobReplyHandler::networkReplyFinished: Host requires authentication</code> とデバッグ主力に出る。
-<code>setModifyParametersFunction</code> で今の Stage とライブラリのソースをにらめっこで原因を見つけた。</li>
-<li>呟く内容が別の変数を参照していたために空っぽで <code>Missing required parameter: status.</code> と返答が返ってくる。
-うん、たしかに設定されてなかったね。</li>
-<li><del><code>connect()</code> でラムダ式を使うとなぜか <code>qobject_cast&lt;QNetworkReply*&gt;(sender())</code> が <code>nullptr</code>。</del>
-<del>横着せずに 別メソッドを作って設定すると大丈夫だった。何で？</del>
-後で試したら大丈夫だった。</li>
-</ul>
-
-<p>と、こんな感じ。</p>
-
-<p>結局、時間内になんとかつぶやきを書き込むまでは行けたけど、先のハマりがなければ、もう少し行けたかもしれない。</p>
-
-<h2 id="%E3%83%84%E3%82%A4%E3%83%83%E3%82%BF%E3%83%BC%E3%81%AE%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E7%99%BB%E9%8C%B2">ツイッターのアプリケーション登録</h2>
-
-<p><a href="https://apps.twitter.com/app/new">Create an application | Twitter Application Management</a> でアプリケーションを登録できる。</p>
-
-<p>ただし、電話番号を認証していないと <ruby><rb>You must add your mobile phone to your Twitter profile before creating an application.</rb><rp>(</rp><rt>アプリケーションを作成する前に携帯電話を Twitter プロファイルに追加する必要があります。</rt><rp>)</rp></ruby> って怒られる。</p>
-
-<p>一度登録したら、電話番号の登録を解除しても、登録内容の変更とかは問題なくできる模様。</p>
-
-<p>で、登録時、SMSで飛んでくるトークンを何回入力しても弾かれるので、途方にくれてたけど <a href="http://absg.hatenablog.com/entry/2015/01/26/163057">twitterの電話番号認証がうまくいかないとき - やったこと</a> を見たらリロードすれば大丈夫のようなので試して見たらできた。
-何じゃそりゃ？</p>
-
-<p>まあともかく、アプリケーションを登録したら、Consumer Key / Consumer Secret を確認しアプリケーションに設定。</p>
-
-<p>これでOK。</p>
-
-<h2 id="%E5%8F%82%E8%80%83">参考</h2>
-
-<ul>
-<li><a href="http://www.sharkpp.net/blog/2017/01/28/first-impression-qt-network-authorization.html">はじめての Qt Network Authorization — さめたすたすのお家</a></li>
-<li><a href="https://doc-snapshots.qt.io/qt5-5.8/examples-qtnetworkauth.html">Qt Network Authorization Examples | Qt Network Authorization 5.8</a></li>
-<li><a href="https://dev.twitter.com/docs">Twitter Developer Documentation — Twitter Developers</a></li>
-<li><a href="https://github.com/sharkpp/NetworkStorageAccessSample">sharkpp/NetworkStorageAccessSample: Qt Network Authorization "Network storage access" sample</a></li>
-<li><a href="https://syncer.jp/Web/API/Twitter/REST_API/POST/statuses/update/">POST statuses/update - ツイートを投稿する</a> ※情報が古いようだ</li>
-<li><a href="http://westplain.sakuraweb.com/translate/twitter/Documentation/REST-APIs/Public-API/POST-statuses-update.cgi">POST statuses/update - Twitter 開発者ドキュメント 日本語訳</a></li>
-<li><a href="https://dev.twitter.com/rest/tools/console">API Console — Twitter Developers</a></li>
-<li><a href="http://absg.hatenablog.com/entry/2015/01/26/163057">twitterの電話番号認証がうまくいかないとき - やったこと</a></li>
 </ul>
 ]]></content>
         </entry>
