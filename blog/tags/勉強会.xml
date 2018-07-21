@@ -3,11 +3,205 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2018-05-26T14:32:52+00:00</updated>
+    <updated>2018-07-21T08:43:04+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[名古屋Qt勉強会#18 に参加しました]]></title>
+            <link href="http://www.sharkpp.net/blog/2018/07/21/qt-nagoya-18.html"/>
+            <updated>2018-07-21T17:35:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2018/07/21/qt-nagoya-18.html</id>
+            <content type="html"><![CDATA[<p>7月21日(土) に開催された <a href="https://qt-users.connpass.com/event/94197/">Qt 勉強会 @ Nagoya #18 - connpass</a> に参加しました。</p>
+
+<p>そのまとめなどです。</p>
+
+<p><img src="/images/20180721_qauthwith1.png" alt="成果" /></p>
+
+<hr />
+
+<p>めも</p>
+
+<p>アプリケーション“qtqtest1.app”へのネットワーク受信接続を許可しますか?</p>
+
+<p>“拒否”をクリックすると、アプリケーションの一部の機能が利用できなくなることがあります。この設定は“セキュリティとプライバシー”環境設定の“ファイアウォール”パネルで変更できます。</p>
+
+<hr />
+
+<h2 id="qt-quick-%E3%81%A7%E3%81%AE%E6%96%87%E5%AD%97%E5%88%97%E3%81%AE%E5%A4%9A%E8%A8%80%E8%AA%9E%E5%AF%BE%E5%BF%9C">Qt Quick での文字列の多言語対応</h2>
+
+<p><code>qsTr()</code> で囲う。</p>
+
+<h2 id="toolbutton">ToolButton</h2>
+
+<p>ToolButton タイプで利用できる各種プロパティが QtQuick.Controls 1.x と QtQuick.Controls 2.x とで全然違うのでメモ</p>
+
+<table>
+<thead>
+<tr>
+  <th>version</th>
+  <th>QtQuick.Controls 1.x</th>
+  <th>QtQuick.Controls 2.x</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>派生</td>
+  <td><a href="http://doc.qt.io/qt-5/qml-qtquick-controls-button.html">Button</a></td>
+  <td><a href="http://doc.qt.io/qt-5/qml-qtquick-controls2-abstractbutton.html">AbstractButton</a></td>
+</tr>
+<tr>
+  <td>アイコン</td>
+  <td><code>iconName</code> プロパティ</td>
+  <td><code>icon.name</code> プロパティ</td>
+</tr>
+<tr>
+  <td>ツールチップ</td>
+  <td><code>tooltip</code> プロパティ</td>
+  <td><a href="https://doc.qt.io/Qt-5/qml-qtquick-controls2-tooltip.html#attached-tool-tips">ToolTip QML Type</a></td>
+</tr>
+<tr>
+  <td>&nbsp;&nbsp;要素押下時に表示</td>
+  <td>不明</td>
+  <td><code>ToolTip.visible: down</code></td>
+</tr>
+<tr>
+  <td>&nbsp;&nbsp;要素クリック時に表示</td>
+  <td>不明</td>
+  <td><code>ToolTip.visible: pressed</code></td>
+</tr>
+<tr>
+  <td>&nbsp;&nbsp;要素ホバー時に表示</td>
+  <td>不明</td>
+  <td><code>ToolTip.visible: hovered</code></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="qml-%E3%81%A7%E5%8F%82%E7%85%A7%E3%81%AE%E3%81%BF%E5%8F%AF%E8%83%BD%E3%81%AA%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%82%92%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%A0%E3%81%91%E7%B0%A1%E7%B4%A0%E3%81%AB%E5%AE%9A%E7%BE%A9">QML で参照のみ可能なプロパティをできるだけ簡素に定義</h2>
+
+<pre><code class="cpp">  Q_PROPERTY(QString hoge MEMBER m_hoge CONSTANT)
+</code></pre>
+
+<p>new するときとか、C++側からのみアクセスできる setter で値は代入する。</p>
+
+<h2 id="qml-%E3%81%A7%E5%AE%9F%E8%A1%8C%E5%8F%AF%E8%83%BD%E3%81%AA%E9%96%A2%E6%95%B0%E3%82%92%E5%AE%9A%E7%BE%A9">QML で実行可能な関数を定義</h2>
+
+<pre><code class="cpp">  Q_INVOKABLE inline int hoge() {
+      return 10;
+  }
+</code></pre>
+
+<h2 id="%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0">トラブルシューティング</h2>
+
+<h3 id="invalid-import-qualifier-id">Invalid import qualifier ID</h3>
+
+<blockquote>
+  <p>Invalid import qualifier ID
+  (訳: インポート修飾識別子が無効)</p>
+</blockquote>
+
+<p>エリアスの頭は大文字でないとダメらしい。</p>
+
+<pre><code class="diff">- import "xxx" as my
++ import "xxx" as My
+</code></pre>
+
+<h3 id="depends-on-non-notifyable-properties%3A-xxxxx%3Ayyyyy">depends on non-NOTIFYable properties: XXXXX:YYYYY</h3>
+
+<blockquote>
+  <p>depends on non-NOTIFYable properties: XXXXX:YYYYY
+  (訳: 通知できないプロパティに依存)</p>
+</blockquote>
+
+<p>読み取り専用の場合は <code>CONSTANT</code> をつければ良い。</p>
+
+<pre><code class="diff">           :
+-     Q_PROPERTY(QString title MEMBER m_title)
++     Q_PROPERTY(QString title MEMBER m_title CONSTANT)
+           :
+</code></pre>
+
+<h3 id="type-xxxx-unavailable">Type XXXX unavailable</h3>
+
+<blockquote>
+  <p>Type XXXX unavailable
+  (訳: タイプ XXXX は利用できません)</p>
+</blockquote>
+
+<p>XXXX をちゃんと定義しているはずなのに出る場合は、 XXXX の中でエラーになってるかも？
+その場合は、該当ファイルを対象としたエラーが出ている。</p>
+
+<h3 id="qt-creator-%E4%B8%8A%E3%81%A7%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E6%B3%A8%E9%87%88%E8%A1%A8%E7%A4%BA">Qt Creator 上でのエラー注釈表示</h3>
+
+<p>QtQuick.Controls 2 を利用しているのに QtQuick.Controls 1 のエラーが表示される</p>
+
+<p><img src="/images/20180721_qtcreator_annotation.png" alt="Qt Creator エラー注釈表示" /></p>
+
+<p>どうやら Qt 5.11 を利用すれば大丈夫な様子。</p>
+
+<h2 id="qt-quick-%E3%81%A8-c%2B%2B-%E3%81%A8%E3%81%AE%E3%82%84%E3%82%8A%E3%81%A8%E3%82%8A">Qt Quick と C++ とのやりとり</h2>
+
+<h3 id="%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0%E3%82%BF%E3%82%A4%E3%83%97%E3%81%AE%E7%99%BB%E9%8C%B2">カスタムタイプの登録</h3>
+
+<p>※ <code>HogeType</code> クラスは <code>QObjct</code> から派生</p>
+
+<pre><code>              :
+    qmlRegisterType&lt;HogeType&gt;("net.example.foo", 1, 0, "HogeType");
+    QQmlApplicationEngine engine;
+              :
+</code></pre>
+
+<p>qml では次のように利用</p>
+
+<pre><code>import net.example.foo 1.0
+            :
+ApplicationWindow {
+            :
+    HogeType {
+        id: hoge
+    }
+            :
+}
+</code></pre>
+
+<h3 id="%E3%82%B3%E3%83%B3%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%81%AB%E7%99%BB%E9%8C%B2">コンテキストに登録</h3>
+
+<p>※ <code>AppData</code> クラスは <code>QObjct</code> から派生</p>
+
+<pre><code>            :
+    AppData data;
+    QQmlApplicationEngine engine;
+    engine.rootContext()-&gt;setContextProperty("appData", &amp;data);
+            :
+</code></pre>
+
+<p>qml では次のように利用</p>
+
+<pre><code>            :
+Window {
+            :
+    Text {
+        text: appData.getTextFromCpp()
+            :
+    }
+}
+</code></pre>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://doc.qt.io/qt-5/qml-qtquick-controls-button.html">Button QML Type | Qt Quick Controls 5.11</a></li>
+<li><a href="https://doc.qt.io/Qt-5/qml-qtquick-controls2-abstractbutton.html">AbstractButton QML Type | Qt Quick Controls 2 5.11</a></li>
+<li><a href="http://forum.jollausers.com/sailfish-developers/import-js-file-invalid-import-qualifier-id/">[Solved] import js file - Invalid import qualifier ID - Sailfish Developers - Jolla &amp; Sailfish OS Forum</a></li>
+<li><a href="http://doc.qt.io/qt-5/qtqml-cppintegration-topic.html">Integrating QML and C++ | Qt QML 5.11</a></li>
+<li><a href="https://qiita.com/DAR/items/400a1725ddedcaa6ef0e">QMLとC++のバインディング - Qiita</a></li>
+<li><a href="http://tips.hecomi.com/entry/20130503/1367594609">Qt Quick での C++ × QML バインディングについてまとめてみた - 凹みTips</a></li>
+<li><a href="https://stackoverflow.com/questions/6728615/warning-about-non-notifyable-properties-in-qml">qt - Warning about non-NOTIFYable properties in QML - Stack Overflow</a></li>
+</ul>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[名古屋Qt勉強会#16 に参加しました]]></title>
             <link href="http://www.sharkpp.net/blog/2018/05/26/qt-nagoya-16.html"/>
@@ -906,140 +1100,6 @@ $ openssl rsa -in tmp.der -inform DER -out server-key.pem -outform pem
 <li><a href="http://stackoverflow.com/questions/2749798/qlabel-set-color-of-text-and-background">qt - QLabel: set color of text and background - Stack Overflow</a></li>
 <li><a href="http://doc.qt.io/qt-5/properties.html">The Property System | Qt Core 5.8</a></li>
 <li><a href="http://stackoverflow.com/questions/19729288/auto-generate-setters-getters-with-qtcreator">c++ - Auto-generate setters/getters with QTCreator? - Stack Overflow</a></li>
-</ul>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Qt Network Authorization を使った Twitter API の利用]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/03/25/twitter-api-using-qt-network-authorization.html"/>
-            <updated>2017-03-25T22:59:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/03/25/twitter-api-using-qt-network-authorization.html</id>
-            <content type="html"><![CDATA[<p>さて、先月に続いて今月も参加した <a href="https://qt-users.connpass.com/event/52009/">Qt 勉強会 @ Nagoya No6(17.03)</a> のまとめ。</p>
-
-<p>今回はいつもに増して短め。</p>
-
-<p><a href="https://github.com/sharkpp/Jugemutter">sharkpp/Jugemutter: 長文投稿専用クライアント「じゅげむったー」</a> で成果物を公開しています。</p>
-
-<h2 id="%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">はじめに</h2>
-
-<p>まずは、クラスの実装をしていきます。</p>
-
-<p><a href="https://doc-snapshots.qt.io/qt5-5.8/examples-qtnetworkauth.html">Qt Network Authorization Examples | Qt Network Authorization 5.8</a> に Twitter認証のサンプルがあるので、それを参考にしつつ <a href="https://github.com/sharkpp/NetworkStorageAccessSample">NetworkStorageAccessSample</a> で実装した認証済みトークンの保存処理を実装していきました。</p>
-
-<p>あ、<a href="http://www.sharkpp.net/blog/2017/01/28/first-impression-qt-network-authorization.html">はじめての Qt Network Authorization</a> も参考にしています。</p>
-
-<p>そろそろ、だれか Qt Network Authorization を触った記事を書いてくれないだろうか？</p>
-
-<h2 id="%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88">ポイント</h2>
-
-<p>実装するクラスは <code>QOAuth1</code> クラスから派生します。</p>
-
-<p>これは、認証した後のトークンの復帰処理で <code>setStatus(QAbstractOAuth::Status::Granted)</code> の実行が必要となります。
-ただし、該当のメソッドが <code>protected</code> として実装されているので、 <code>QOAuth1</code> クラスから派生する必要があるのです。</p>
-
-<p>APIの各エンドポイントを設定</p>
-
-<p>まあ、この辺はサンプルと同じです。</p>
-
-<pre><code class="cpp">setTemporaryCredentialsUrl(QUrl("https://api.twitter.com/oauth/request_token"));
-setAuthorizationUrl(QUrl("https://api.twitter.com/oauth/authenticate"));
-setTokenCredentialsUrl(QUrl("https://api.twitter.com/oauth/access_token"));
-</code></pre>
-
-<p>OAuth の認証を、ブラウザを利用するために、</p>
-
-<pre><code class="cpp">setReplyHandler(new QOAuthHttpServerReplyHandler(this));
-</code></pre>
-
-<p>としますが、これを実行するとポートを開きに行くので、必要な時のみポートを開くか PIN 認証にする方が良いかもしれません。</p>
-
-<p>この時、</p>
-
-<pre><code class="cpp">connect(this, &amp;QAbstractOAuth::authorizeWithBrowser,
-        this, &amp;Twitter::handleAuthorizeWithBrowser);
-</code></pre>
-
-<p>としてシグナルをスロットと関連づけて、</p>
-
-<pre><code class="cpp">void Twitter::handleAuthorizeWithBrowser(QUrl url)
-{
-    QDesktopServices::openUrl(url);
-}
-</code></pre>
-
-<p>のような感じで実装することで、ブラウザで認証することができます。</p>
-
-<p><code>grant()</code> を呼び出すことで認証開始するので、適当なメソッドでラップします。</p>
-
-<p>認証後は、</p>
-
-<pre><code>connect(this, &amp;QOAuth1::granted, this, &amp;Twitter::authenticated);
-</code></pre>
-
-<p>とすることで、 <code>authenticated()</code> を認証時に呼ばされるシグナルとして登録できます。</p>
-
-<p>つぶやくには</p>
-
-<pre><code>    QUrl url("https://api.twitter.com/1.1/statuses/update.json");
-    QUrlQuery query(url);
-    query.addQueryItem("status", "hogehoge");
-    url.setQuery(query);
-    QNetworkReply *reply = post(url);
-    connect(reply, &amp;QNetworkReply::finished, this, &amp;Twitter::tweetFinished);
-</code></pre>
-
-<p>みたいな感じです。</p>
-
-<p>まあ、後から振り返ると割と簡単な部類になると思うけど、いろいろハマってしまいました。</p>
-
-<h2 id="%E3%81%84%E3%82%8D%E3%81%84%E3%82%8D%E5%A4%B1%E6%95%97%E8%AB%87">いろいろ失敗談</h2>
-
-<p>なぜか今回はハマることハマること。</p>
-
-<p>ハマった所をメモとして残しておきます。</p>
-
-<ul>
-<li><code>setClientIdentifier()</code> / <code>setClientSharedSecret()</code> と <code>token()</code> / <code>tokenSecret()</code> をなぜかとり間違える
-なぜ間違えたし。</li>
-<li>設定したはずの、Consumer Key / Consumer Secret が設定されていなくて、<code>QOAuthOobReplyHandler::networkReplyFinished: Host requires authentication</code> とデバッグ主力に出る。
-<code>setModifyParametersFunction</code> で今の Stage とライブラリのソースをにらめっこで原因を見つけた。</li>
-<li>呟く内容が別の変数を参照していたために空っぽで <code>Missing required parameter: status.</code> と返答が返ってくる。
-うん、たしかに設定されてなかったね。</li>
-<li><del><code>connect()</code> でラムダ式を使うとなぜか <code>qobject_cast&lt;QNetworkReply*&gt;(sender())</code> が <code>nullptr</code>。</del>
-<del>横着せずに 別メソッドを作って設定すると大丈夫だった。何で？</del>
-後で試したら大丈夫だった。</li>
-</ul>
-
-<p>と、こんな感じ。</p>
-
-<p>結局、時間内になんとかつぶやきを書き込むまでは行けたけど、先のハマりがなければ、もう少し行けたかもしれない。</p>
-
-<h2 id="%E3%83%84%E3%82%A4%E3%83%83%E3%82%BF%E3%83%BC%E3%81%AE%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E7%99%BB%E9%8C%B2">ツイッターのアプリケーション登録</h2>
-
-<p><a href="https://apps.twitter.com/app/new">Create an application | Twitter Application Management</a> でアプリケーションを登録できる。</p>
-
-<p>ただし、電話番号を認証していないと <ruby><rb>You must add your mobile phone to your Twitter profile before creating an application.</rb><rp>(</rp><rt>アプリケーションを作成する前に携帯電話を Twitter プロファイルに追加する必要があります。</rt><rp>)</rp></ruby> って怒られる。</p>
-
-<p>一度登録したら、電話番号の登録を解除しても、登録内容の変更とかは問題なくできる模様。</p>
-
-<p>で、登録時、SMSで飛んでくるトークンを何回入力しても弾かれるので、途方にくれてたけど <a href="http://absg.hatenablog.com/entry/2015/01/26/163057">twitterの電話番号認証がうまくいかないとき - やったこと</a> を見たらリロードすれば大丈夫のようなので試して見たらできた。
-何じゃそりゃ？</p>
-
-<p>まあともかく、アプリケーションを登録したら、Consumer Key / Consumer Secret を確認しアプリケーションに設定。</p>
-
-<p>これでOK。</p>
-
-<h2 id="%E5%8F%82%E8%80%83">参考</h2>
-
-<ul>
-<li><a href="http://www.sharkpp.net/blog/2017/01/28/first-impression-qt-network-authorization.html">はじめての Qt Network Authorization — さめたすたすのお家</a></li>
-<li><a href="https://doc-snapshots.qt.io/qt5-5.8/examples-qtnetworkauth.html">Qt Network Authorization Examples | Qt Network Authorization 5.8</a></li>
-<li><a href="https://dev.twitter.com/docs">Twitter Developer Documentation — Twitter Developers</a></li>
-<li><a href="https://github.com/sharkpp/NetworkStorageAccessSample">sharkpp/NetworkStorageAccessSample: Qt Network Authorization "Network storage access" sample</a></li>
-<li><a href="https://syncer.jp/Web/API/Twitter/REST_API/POST/statuses/update/">POST statuses/update - ツイートを投稿する</a> ※情報が古いようだ</li>
-<li><a href="http://westplain.sakuraweb.com/translate/twitter/Documentation/REST-APIs/Public-API/POST-statuses-update.cgi">POST statuses/update - Twitter 開発者ドキュメント 日本語訳</a></li>
-<li><a href="https://dev.twitter.com/rest/tools/console">API Console — Twitter Developers</a></li>
-<li><a href="http://absg.hatenablog.com/entry/2015/01/26/163057">twitterの電話番号認証がうまくいかないとき - やったこと</a></li>
 </ul>
 ]]></content>
         </entry>
