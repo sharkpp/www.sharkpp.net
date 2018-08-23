@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/Mastodon.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2018-08-21T15:44:53+00:00</updated>
+    <updated>2018-08-23T13:06:57+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -51,7 +51,7 @@
 
 <ul>
 <li>Mac: <code>~/Library/Application Support/Franz/recipes/dev/</code></li>
-<li>Windows: <code>%appdata%/Franz/recipes/dev/</code></li>
+<li>Windows: <code>%AppData%\Franz\recipes\dev\</code></li>
 <li>Linux: <code>~/.config/Franz/recipes/dev</code></li>
 </ul></li>
 <li><code>franz-recipe-mastodon</code> フォルダを plugins ディレクトリにコピーします</li>
