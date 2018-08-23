@@ -2,6 +2,7 @@
 layout: post
 title: "Franz 用の Mastodon レシピを作りました！"
 date: 2018-03-27 01:10
+update: 2018-08-23 22:05
 tags: [Franz, Mastodon, Javascript]
 categories: [ブログ]
 
@@ -38,7 +39,7 @@ categories: [ブログ]
 1. `franz-recipe-mastodon` をダウンロードします。
 2. PC上の Franz Plugins フォルダを開きます<br />(メモ： **`dev` ディレクトリが存在しない場合は作成する必要があります**)
     * Mac: `~/Library/Application Support/Franz/recipes/dev/`
-    * Windows: `%appdata%/Franz/recipes/dev/`
+    * Windows: `%AppData%\Franz\recipes\dev\`
     * Linux: `~/.config/Franz/recipes/dev`
 3. `franz-recipe-mastodon` フォルダを plugins ディレクトリにコピーします
 4. Franz をリロードする
