@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/Misskey.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2018-08-26T22:37:59+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Franz 用の Misskey レシピを作りました！]]></title>
+            <link href="http://www.sharkpp.net/blog/2018/08/27/franz-recipe-misskey.html"/>
+            <updated>2018-08-27T00:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2018/08/27/franz-recipe-misskey.html</id>
+            <content type="html"><![CDATA[<p>先日から話題になってた分散マイクロブログSNSであるところの <a href="https://github.com/syuilo/misskey">syuilo/misskey: A planet of fediverse ✨🐢🚀✨</a> があります。
+それに対応したクライアント <a href="https://github.com/sharkpp/franz-recipe-misskey">Franz 5 recipe for Misskey</a> を昨晩公開したので紹介します。</p>
+
+<h2 id="%E3%81%9D%E3%82%82%E3%81%9D%E3%82%82-franz-%E3%81%A8%E3%81%AF%E3%81%AA%E3%82%93%E3%81%9E%E3%82%84%EF%BC%9F">そもそも Franz とはなんぞや？</h2>
+
+<p>簡単にいうと Franz は、各種 SNS をタブでまとめて管理できるデスクトップアプリです。</p>
+
+<p><a href="https://meetfranz.com/">Franz – a free messaging app for Slack, Facebook Messenger, WhatsApp, Telegram and more</a> からダウンロードできますが、利用するにはアカウント登録が必要です。</p>
+
+<p>特徴として</p>
+
+<ul>
+<li>レシピ（＝拡張）を追加することで様々な SNS などの Webサービスに対応可能</li>
+<li>レシピごとに複数のアカウントを割り当て可能（＝マルチアカウント対応）</li>
+<li>クロスプラットフォームなデスクトップアプリ</li>
+</ul>
+
+<p>などがあります。</p>
+
+<p>まあ、要するに Webで提供されているページをタブで表示している訳です。
+そのため、LINE など Webページが存在しないサービスに対しては逆立ちしても利用できないのですが...</p>
+
+<h2 id="%E5%BF%85%E8%A6%81%E3%81%AA%E3%82%82%E3%81%AE">必要なもの</h2>
+
+<ul>
+<li><a href="https://meetfranz.com/">Franz</a> 5 以降<br />古いバージョンはサポートしていません。</li>
+<li><a href="https://joinmisskey.github.io/">Misskey</a> アカウント<br />アカウントを持っていない場合は、自分で Misskey インスタンスを立ち上げるか <a href="https://joinmisskey.github.io/ja/wiki/instances/">Misskey instances</a> から探して見てください</li>
+</ul>
+
+<h2 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95">インストール方法</h2>
+
+<h3 id="%E9%96%8B%E7%99%BA%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3">開発バージョン</h3>
+
+<ol>
+<li><code>franz-recipe-misskey</code> をダウンロードします。</li>
+<li>PC上の Franz Plugins フォルダを開きます<br />(メモ： <strong><code>dev</code> ディレクトリが存在しない場合は作成する必要があります</strong>)
+
+<ul>
+<li>Mac: <code>~/Library/Application Support/Franz/recipes/dev/</code></li>
+<li>Windows: <code>%AppData%\Franz\recipes\dev\</code></li>
+<li>Linux: <code>~/.config/Franz/recipes/dev</code></li>
+</ul></li>
+<li><code>franz-recipe-misskey</code> フォルダを plugins ディレクトリにコピーします</li>
+<li>Franz を再起動する</li>
+</ol>
+
+<p>詳しくは <a href="https://github.com/meetfranz/plugins/blob/master/docs/integration.md">Franz Recipe Documentation / Overview</a> を参照してください。</p>
+
+<h3 id="%E5%AE%89%E5%AE%9A%E7%89%88">安定版</h3>
+
+<p>準備中...</p>
+
+<p>※ <a href="https://github.com/meetfranz/plugins/issues/194">[Deploy] Misskey - Issue #194 - meetfranz/plugins</a> で公式リポジトリへの登録をリクエストをしているけど、どうなることやら</p>
+
+<h2 id="%E5%88%A9%E7%94%A8%E6%96%B9%E6%B3%95">利用方法</h2>
+
+<h3 id="%E6%96%B0%E3%81%97%E3%81%84%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B">新しいサービスを追加する</h3>
+
+<p><img src="/images/20180826_add-service.png" alt="サービスの追加" /></p>
+
+<p><em>開発バージョン</em></p>
+
+<h3 id="%E8%A8%AD%E5%AE%9A">設定</h3>
+
+<p><img src="/images/20180826_add-service-settings.png" alt="サービスの追加" /></p>
+
+<table>
+<thead>
+<tr>
+  <th>#</th>
+  <th>フィールド</th>
+  <th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>①</td>
+  <td>サービス名</td>
+  <td>自由に設定してください</td>
+</tr>
+<tr>
+  <td>②</td>
+  <td>Misskey インスタンスのホスト名</td>
+  <td>Misskey を実行しているホストを入力してください。 httpsのみがサポートされています</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3">サインイン</h3>
+
+<p><img src="/images/20180826_misskey-signin.png" alt="" /></p>
+
+<p>登録されたアカウント情報を入力してください。</p>
+
+<h3 id="%E9%80%9A%E7%9F%A5%E3%83%90%E3%83%83%E3%82%B8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">通知バッジについて</h3>
+
+<p><img src="/images/20180826_notification-badge-example.png" alt="" /></p>
+
+<p>通知を確認すると同時にクリアされます。</p>
+]]></content>
+        </entry>
+    </feed>
