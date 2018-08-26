@@ -3,11 +3,137 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/Qt.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2018-08-23T13:06:57+00:00</updated>
+    <updated>2018-08-26T01:01:45+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[名古屋Qt勉強会#19 に参加しました]]></title>
+            <link href="http://www.sharkpp.net/blog/2018/08/26/qt-nagoya-19.html"/>
+            <updated>2018-08-26T09:57:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2018/08/26/qt-nagoya-19.html</id>
+            <content type="html"><![CDATA[<p>8月25日(土) に開催された <a href="https://qt-users.connpass.com/event/98190/">Qt 勉強会 @ Nagoya #19 - connpass</a> に参加しました。</p>
+
+<p>そのまとめなどです。</p>
+
+<p><img src="/images/20180825_qauthwith1.png" alt="成果" /></p>
+
+<h2 id="%E5%8B%95%E7%9A%84%E3%81%AB%E8%BF%BD%E5%8A%A0%E3%81%97%E3%81%9F%E3%82%B3%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%8D%E3%83%B3%E3%83%88%E3%81%ABc%2B%2B%E5%81%B4%E3%81%8B%E3%82%89%E5%80%A4%E3%82%92%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B">動的に追加したコンポーネントにC++側から値を設定する</h2>
+
+<p>たぶんこのままではちゃんと動かないけど、雰囲気それらしいメモ。</p>
+
+<pre><code class="javascript">// .qml
+    Component {
+        id: hogeHoge
+        Label {
+            property variant hoge: null
+            anchors.right: parent.right
+            anchors.left: parent.left
+            text: ""
+            Component.onCompleted: {
+                hoge.bind(this);
+            }
+        }
+    }
+            :
+    hogeHoge.createObject(container, {
+        hoge: hoge
+    })
+
+</code></pre>
+
+<pre><code class="cpp">// .h
+class Hoge : public QObject {
+                  :
+    Q_INVOKABLE void bind(QObject* object);
+                  :
+}
+</code></pre>
+
+<pre><code class="cpp">// .cpp
+               :
+    QQmlApplicationEngine engine;
+    Hoge hoge;
+    engine.rootContext()-&gt;setContextProperty("hoge", &amp;hoge);
+               :
+void Hoge::bind(QObject* object)
+{
+    qDebug() &lt;&lt; object; // QQuickLabel_QML_99(0xffffffffff00)
+
+    // read from
+    qDebug()  &lt;&lt; "Property value:" &lt;&lt; object-&gt;property("text").toString();
+//or qDebug() &lt;&lt; "Property value:" &lt;&lt; QQmlProperty::read(object, "text").toString();
+
+    // write to
+    object-&gt;setProperty("text", "aaaa");
+//or QQmlProperty::write(object, "text", aaaa);
+}
+</code></pre>
+
+<h2 id="%08qt-documentation-%E3%81%AB%E4%B8%80%E7%9E%AC%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E3%81%A8%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8">Qt Documentation に一瞬表示されるアイコンとメッセージ</h2>
+
+<p>Qt の公式ドキュメントを表示すると上部に一瞬だけ表示されるやつ。</p>
+
+<blockquote>
+  <p>We bake cookies in your browser for a better experience.  Using this site means that you consent.
+  訳：より良いエクスペリエンスのために、ブラウザでクッキーを焼きます。 このサイトを使用することはそれに同意することを意味します。</p>
+</blockquote>
+
+<p><img src="/images/20180825_qtdocwebsite.png" alt="クッキーマン？" /></p>
+
+<p>のメッセージとともに <a href="https://www.qt.io/company/?hsLang=en">The Qt Company</a> へのリンクがあるみたい。</p>
+
+<h2 id="%E9%80%B2%E6%8D%97">進捗</h2>
+
+<p>今回は愚直に実装を進めた関係で新たな知見は少ない感じ。</p>
+
+<ul>
+<li>signal用のヘルプ表示関連の実装
+
+<ul>
+<li>表示用の専用QMLを実装</li>
+<li>QMLの切り替え用のコードを実装</li>
+<li>C++側にも実装を追加</li>
+</ul></li>
+<li>signal受信時にどのように通知するか？
+
+<ul>
+<li><del>パターン１：スクロール＆フラッシュ</del>
+
+<ol>
+<li><del>該当signalにスクロール</del></li>
+<li><del>該当signalがフラッシング</del></li>
+</ol></li>
+<li>パターン２：通知＆クリックでスクロール <strong>採用！</strong>
+
+<ol>
+<li>ウインドウ内に通知</li>
+<li>通知をクリックすると該当のsignalにスクロール</li>
+</ol></li>
+</ul></li>
+</ul>
+
+<p><img src="/images/20180825_qauthwith2.png" alt="成果" /></p>
+
+<h2 id="%E6%87%87%E8%A6%AA%E4%BC%9A">懇親会</h2>
+
+<p>タコさんウインナーとか、もぐもぐ♪</p>
+
+<p><img src="/images/20180825_mogmog.jpg" alt="もぐもぐ" /></p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://doc.qt.io/qt-5/qtqml-cppintegration-interactqmlfromcpp.html">Interacting with QML Objects from C++ | Qt QML 5.11</a></li>
+<li><a href="http://doc.qt.io/qt-5/qtqml-cppintegration-overview.html#choosing-the-correct-integration-method-between-c-and-qml">Overview - QML and C++ Integration | Qt QML 5.11</a></li>
+<li><a href="https://gist.github.com/alex-spataru/cba4936a1d555372e898">Notification badge in QML</a></li>
+<li><a href="https://doc.qt.io/QtApplicationManager/qml-qtapplicationmanager-notificationmanager.html">NotificationManager QML Type | Qt Application Manager 5.11</a></li>
+<li><a href="http://doc.qt.io/qt-5/qml-qtqml-timer.html">Timer QML Type | Qt QML 5.11</a></li>
+<li><a href="http://doc.qt.io/qt-5/qml-qtquick-listview.html">ListView QML Type | Qt Quick 5.11</a></li>
+</ul>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Qt Quick メモ]]></title>
             <link href="http://www.sharkpp.net/blog/2018/08/22/qt-quick-memo.html"/>
@@ -1741,163 +1867,6 @@ else {
 <li><a href="https://qiita.com/k-holy/items/4362b8cce85642e477ec">Windows + Goutte 3.0でHTTPSでのリクエストで発生するSSL証明書のエラー - Qiita</a></li>
 <li><a href="https://qiita.com/mikakane/items/58c30b243bba697ec3fe">guzzle で Http通信する - Qiita</a></li>
 <li><a href="https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update">POST statuses/update — Twitter Developers</a></li>
-</ul>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[じゅげむったーの開発日記 その７]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/10/04/jugemutter-development-diary-7th.html"/>
-            <updated>2017-10-04T01:05:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/10/04/jugemutter-development-diary-7th.html</id>
-            <content type="html"><![CDATA[<p>前回に引き続き <a href="https://qt-users.connpass.com/event/67390/">Qt 勉強会 @ Nagoya No13 一区切り会 - connpass</a> に参加しました。
-とりあえず、今回でもくもく会は一旦一区切りとなるので、このあとはボチボチと進めていこうかなと思います。</p>
-
-<p>レポジトリは ... <a href="https://github.com/sharkpp/Jugemutter">sharkpp/Jugemutter: 長文投稿専用クライアント「じゅげむったー」</a> となります。</p>
-
-<p>画面は、多言語対応をしたので載っけます。</p>
-
-<p><img src="/images/2017_0930_jugemutter_jp.png" alt="日本語版" /></p>
-
-<p>次はなんちゃっての英語版です。</p>
-
-<p><img src="/images/2017_0930_jugemutter_en.png" alt="英語版" /></p>
-
-<h2 id="twitter-api-%E3%81%A7-%22could-not-authenticate-you.%22-%E3%81%8C%E5%87%BA%E3%82%8B">Twitter API で "Could not authenticate you." が出る</h2>
-
-<p>Twitter API への要求で <code>Could not authenticate you.</code> とレスポンスが返ってくる件、HMACとかの計算を手動でやって検証しようかと考えたけど、そうだその前に、Qtのバグトラッカーで登録ないか、と、探して見たら...</p>
-
-<p><a href="https://bugreports.qt.io/browse/QTBUG-61125">[QTBUG-61125] QOAuth1 creates an invalid signature for percent encoded query - Qt Bug Tracker</a></p>
-
-<p>まさに、ドンピシャなものが、４ヶ月も前の 5/31 に報告が上がっていました。</p>
-
-<p>それでもって、修正完了の 5.9.2 でリリースらしい。</p>
-
-<p><a href="https://wiki.qt.io/Qt_5.9_Release">Qt 5.9 Release - Qt Wiki</a> によると、この記事を書いている時点では <code>September 2017</code> に公開予定らしいので、もう少し待つ必要があるみたい。</p>
-
-<p>まあ、今回の教訓は先にバグトラッカーを探すべきだったのかなぁと、言うこと。</p>
-
-<h2 id="%E3%80%90%E6%82%B2%E5%A0%B1%E3%80%91%E3%81%98%E3%82%85%E3%81%92%E3%82%80%E3%81%A3%E3%81%9F%E3%83%BC%E7%94%A8twitter%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%8C%E5%87%8D%E7%B5%90%E3%81%95%E3%82%8C%E3%81%A6%E3%81%9F%E4%BB%B6%E3%80%90%E3%81%84%E3%81%A4%E3%81%AE%E3%81%BE%E3%81%AB%E3%80%91">【悲報】じゅげむったー用Twitterアカウントが凍結されてた件【いつのまに】</h2>
-
-<p>とりあえず、APIの要求は、Qtのバグが原因で特定文字で必ずエラーが返ってくるらしいので、とりあえず諦めて他のことを進めることにしました。</p>
-
-<p>で、何をやろうかと考えたところで、せっかくマルチアカウント管理を実装したので試してみようと久しぶりにサブ垢（公式垢として利用しようと登録したもの）へログインしたところ...</p>
-
-<p><img src="/images/2017_0930_twitter_frozen_acctount.png" alt="凍結済みアカウント(再現)" /></p>
-
-<p>ん？ んん？ は？ と、凍結！？ 
-※ スクショは撮り忘れたので当時の状況を可能な限り再現しています</p>
-
-<p>と、言うわけで、何時のまにか今流行り（？）の凍結祭りに参加していたようです。
-とりあえず、慌てて解除方法をググり、凍結の解除申請をしました。</p>
-
-<p>そして、30分後...</p>
-
-<p><img src="/images/2017_0930_twitter_thawed_account.png" alt="凍結解除" /></p>
-
-<p>ほっ。</p>
-
-<p>ヘッダー画像やプロフィール画像、あとは本垢への相互フォロー、そして鍵垢と、諸々設定しました。</p>
-
-<h2 id="%E5%A4%9A%E8%A8%80%E8%AA%9E%E5%AF%BE%E5%BF%9C">多言語対応</h2>
-
-<p>Qt で .ts / .qm でのラベルなどの多言語対応、昔々もやった記憶があるけど、忘却の彼方に近いので、改めて調べた。</p>
-
-<h3 id="%E8%A8%80%E8%AA%9E%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E6%8C%87%E5%AE%9A">言語ファイルの指定</h3>
-
-<p><code>.pro</code> を開き、言語ファイルのパスを設定。パスは適時読み替えてください。
- 複数言語ある場合は、、スペース区切りで後ろに追加します。</p>
-
-<pre><code class="ini">     :
-TRANSLATIONS = src/i18n/ja_JP.ts
-     :
-</code></pre>
-
-<h3 id="%E7%BF%BB%E8%A8%B3%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF">翻訳ファイルの読み込み</h3>
-
-<p>起動時に現在のロケールを元に言語ファイルを読み込む処理を実装します。</p>
-
-<p><code>.qm</code> ファイルはアプリケーションのリソースとして埋め込み、そこから読むようにしています。</p>
-
-<pre><code class="cpp">            :
-    // 翻訳
-    QString locale = QLocale::system().name();
-    QTranslator translator;
-    translator.load(locale, ":/i18n");
-    a.installTranslator(&amp;translator);
-            :
-</code></pre>
-
-<p><code>locale</code> の値は、日本語環境だったら <code>ja_JP</code> です。</p>
-
-<p>リソースへの登録はこんな感じ</p>
-
-<p><img src="/images/2017_0930_qm_in_qrc.png" alt="qmファイルのqrcへの登録" /></p>
-
-<h3 id="%E7%BF%BB%E8%A8%B3%E5%AF%BE%E8%B1%A1%E3%81%AE%E6%8C%87%E5%AE%9A">翻訳対象の指定</h3>
-
-<p>まずは、翻訳したいものを <a href="http://doc.qt.io/qt-5/qobject.html#tr"><code>tr(...)</code></a> で囲います。</p>
-
-<pre><code class="diff">     if (tweetQueue.isEmpty()) {
-          finishPost();
- -        QMessageBox::information(this, qAppName(), "投稿を完了しました。");
- +        QMessageBox::information(this, qAppName(), tr("Your post has been completed."));
-          return;
-      }
-</code></pre>
-
-<p>こんな感じ。</p>
-
-<h3 id="%E7%BF%BB%E8%A8%B3%E5%AF%BE%E8%B1%A1%E3%81%AE%E6%8A%BD%E5%87%BA">翻訳対象の抽出</h3>
-
-<p>QtCreator のメニューから「ツール」→「外部」と辿り「翻訳を更新(lupdate)」を実行します。</p>
-
-<p><img src="/images/2017_0930_qtcreator_extrnal_tools_linguist.png" alt="翻訳を更新" /></p>
-
-<p>すると、 先ほど、<code>tr(...)</code> で囲った部分や <code>.ui</code> ファイルから翻訳対象が抽出されファイルへ書き出されます。
-ソース側の記述が変わった時は、同じように「翻訳を更新(lupdate)」を実行すると、変更が適用されます。</p>
-
-<h3 id="%E7%BF%BB%E8%A8%B3">翻訳</h3>
-
-<p>Linguist を起動し</p>
-
-<p><img src="/images/2017_0930_linguist.png" alt="Linguist" /></p>
-
-<p>抽出された文字列を翻訳していきます。</p>
-
-<h3 id="qt-message-file-format-%E3%82%92%E3%83%93%E3%83%AB%E3%83%89">Qt message file format をビルド</h3>
-
-<p><code>.ts</code> を <code>.qm</code> (Qt message file format)へと変換します。
-GNU gettext の <code>.po</code> と <code>.mo</code> との関係と同じですね。</p>
-
-<p>QtCreator のメニューから「ツール」→「外部」と辿り「翻訳をリリース(lrelease)」を実行します。
-これで <code>.ts</code> から <code>.qm</code> へと変換します。</p>
-
-<h3 id="%E8%B5%B7%E5%8B%95%E7%A2%BA%E8%AA%8D">起動確認</h3>
-
-<p>実際に翻訳できているかどうかは、ロケールを切り替えると確認できます。</p>
-
-<p>普通に起動すると……</p>
-
-<p><img src="/images/2017_0930_jugemutter_jp.png" alt="日本語版" /></p>
-
-<p>こう。</p>
-
-<p>言語を英語にすると……</p>
-
-<pre><code class="console"># LANG=en_US.UTF-8 open ./Jugemutter.app
-</code></pre>
-
-<p><img src="/images/2017_0930_jugemutter_en.png" alt="英語版" /></p>
-
-<p>こうなります。</p>
-
-<h2 id="%E5%8F%82%E8%80%83">参考</h2>
-
-<ul>
-<li><a href="https://kazuto-yoshida.com/twitter-unfreeze-application.html">Twitterアカウント凍結解除方法と申請入力例</a></li>
-<li><a href="https://forum.qt.io/topic/57863/solved-how-to-embed-qm-translation-files-into-executable">[solved]How to embed qm translation files into executable | Qt Forum</a></li>
-<li><a href="https://github.com/wireshark/wireshark/tree/master/ui/qt">wireshark/ui/qt at master · wireshark/wireshark</a></li>
-<li><a href="http://doc.qt.io/qt-5/qtlinguist-hellotr-example.html">Hello tr() Example | Qt Linguist Manual</a></li>
 </ul>
 ]]></content>
         </entry>

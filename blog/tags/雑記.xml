@@ -3,11 +3,137 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/%E9%9B%91%E8%A8%98.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2018-08-23T13:06:57+00:00</updated>
+    <updated>2018-08-26T01:01:45+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[名古屋Qt勉強会#19 に参加しました]]></title>
+            <link href="http://www.sharkpp.net/blog/2018/08/26/qt-nagoya-19.html"/>
+            <updated>2018-08-26T09:57:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2018/08/26/qt-nagoya-19.html</id>
+            <content type="html"><![CDATA[<p>8月25日(土) に開催された <a href="https://qt-users.connpass.com/event/98190/">Qt 勉強会 @ Nagoya #19 - connpass</a> に参加しました。</p>
+
+<p>そのまとめなどです。</p>
+
+<p><img src="/images/20180825_qauthwith1.png" alt="成果" /></p>
+
+<h2 id="%E5%8B%95%E7%9A%84%E3%81%AB%E8%BF%BD%E5%8A%A0%E3%81%97%E3%81%9F%E3%82%B3%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%8D%E3%83%B3%E3%83%88%E3%81%ABc%2B%2B%E5%81%B4%E3%81%8B%E3%82%89%E5%80%A4%E3%82%92%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B">動的に追加したコンポーネントにC++側から値を設定する</h2>
+
+<p>たぶんこのままではちゃんと動かないけど、雰囲気それらしいメモ。</p>
+
+<pre><code class="javascript">// .qml
+    Component {
+        id: hogeHoge
+        Label {
+            property variant hoge: null
+            anchors.right: parent.right
+            anchors.left: parent.left
+            text: ""
+            Component.onCompleted: {
+                hoge.bind(this);
+            }
+        }
+    }
+            :
+    hogeHoge.createObject(container, {
+        hoge: hoge
+    })
+
+</code></pre>
+
+<pre><code class="cpp">// .h
+class Hoge : public QObject {
+                  :
+    Q_INVOKABLE void bind(QObject* object);
+                  :
+}
+</code></pre>
+
+<pre><code class="cpp">// .cpp
+               :
+    QQmlApplicationEngine engine;
+    Hoge hoge;
+    engine.rootContext()-&gt;setContextProperty("hoge", &amp;hoge);
+               :
+void Hoge::bind(QObject* object)
+{
+    qDebug() &lt;&lt; object; // QQuickLabel_QML_99(0xffffffffff00)
+
+    // read from
+    qDebug()  &lt;&lt; "Property value:" &lt;&lt; object-&gt;property("text").toString();
+//or qDebug() &lt;&lt; "Property value:" &lt;&lt; QQmlProperty::read(object, "text").toString();
+
+    // write to
+    object-&gt;setProperty("text", "aaaa");
+//or QQmlProperty::write(object, "text", aaaa);
+}
+</code></pre>
+
+<h2 id="%08qt-documentation-%E3%81%AB%E4%B8%80%E7%9E%AC%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E3%81%A8%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8">Qt Documentation に一瞬表示されるアイコンとメッセージ</h2>
+
+<p>Qt の公式ドキュメントを表示すると上部に一瞬だけ表示されるやつ。</p>
+
+<blockquote>
+  <p>We bake cookies in your browser for a better experience.  Using this site means that you consent.
+  訳：より良いエクスペリエンスのために、ブラウザでクッキーを焼きます。 このサイトを使用することはそれに同意することを意味します。</p>
+</blockquote>
+
+<p><img src="/images/20180825_qtdocwebsite.png" alt="クッキーマン？" /></p>
+
+<p>のメッセージとともに <a href="https://www.qt.io/company/?hsLang=en">The Qt Company</a> へのリンクがあるみたい。</p>
+
+<h2 id="%E9%80%B2%E6%8D%97">進捗</h2>
+
+<p>今回は愚直に実装を進めた関係で新たな知見は少ない感じ。</p>
+
+<ul>
+<li>signal用のヘルプ表示関連の実装
+
+<ul>
+<li>表示用の専用QMLを実装</li>
+<li>QMLの切り替え用のコードを実装</li>
+<li>C++側にも実装を追加</li>
+</ul></li>
+<li>signal受信時にどのように通知するか？
+
+<ul>
+<li><del>パターン１：スクロール＆フラッシュ</del>
+
+<ol>
+<li><del>該当signalにスクロール</del></li>
+<li><del>該当signalがフラッシング</del></li>
+</ol></li>
+<li>パターン２：通知＆クリックでスクロール <strong>採用！</strong>
+
+<ol>
+<li>ウインドウ内に通知</li>
+<li>通知をクリックすると該当のsignalにスクロール</li>
+</ol></li>
+</ul></li>
+</ul>
+
+<p><img src="/images/20180825_qauthwith2.png" alt="成果" /></p>
+
+<h2 id="%E6%87%87%E8%A6%AA%E4%BC%9A">懇親会</h2>
+
+<p>タコさんウインナーとか、もぐもぐ♪</p>
+
+<p><img src="/images/20180825_mogmog.jpg" alt="もぐもぐ" /></p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="http://doc.qt.io/qt-5/qtqml-cppintegration-interactqmlfromcpp.html">Interacting with QML Objects from C++ | Qt QML 5.11</a></li>
+<li><a href="http://doc.qt.io/qt-5/qtqml-cppintegration-overview.html#choosing-the-correct-integration-method-between-c-and-qml">Overview - QML and C++ Integration | Qt QML 5.11</a></li>
+<li><a href="https://gist.github.com/alex-spataru/cba4936a1d555372e898">Notification badge in QML</a></li>
+<li><a href="https://doc.qt.io/QtApplicationManager/qml-qtapplicationmanager-notificationmanager.html">NotificationManager QML Type | Qt Application Manager 5.11</a></li>
+<li><a href="http://doc.qt.io/qt-5/qml-qtqml-timer.html">Timer QML Type | Qt QML 5.11</a></li>
+<li><a href="http://doc.qt.io/qt-5/qml-qtquick-listview.html">ListView QML Type | Qt Quick 5.11</a></li>
+</ul>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Qt Quick メモ]]></title>
             <link href="http://www.sharkpp.net/blog/2018/08/22/qt-quick-memo.html"/>
@@ -1133,162 +1259,6 @@ USB type-C 延長、は大丈夫かわからないから、テーブルタップ
 <ul>
 <li><a href="http://www.sonymobile.co.jp/product/smartproducts/g1109/">Xperia Touch G1109 | ソニーモバイルコミュニケーションズ</a></li>
 <li><a href="http://datapro.jbmia.or.jp/data/DPJ_Guide_3rd_JP_.pdf">データプロジェクター表記ガイドライン 第３版</a></li>
-</ul>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[技術書典2に行ってきた]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/04/10/techbookfest2.html"/>
-            <updated>2017-04-10T23:50:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/04/10/techbookfest2.html</id>
-            <content type="html"><![CDATA[<p>去年から始まった技術書オンリーな同人イベント、「<a href="https://techbookfest.org/event/tbf02">技術書典２</a>」が、昨日の 4月9日に開催されました。
-今年も小雨が降る天気の中、去年の「技術書典」に引き続き行ってきました。
-これは、そのレポート、もしくは戦果報告となります。</p>
-
-<p><img src="/images/2017_0409_tf2.jpg" alt="会場前にて" /></p>
-
-<h2 id="%E5%A7%8B%E3%82%81%E3%81%AB">始めに</h2>
-
-<p>まず、去年のレポートは「<a href="/blog/2016/06/27/techbookfest.html">技術書典に行ってきた — さめたすたすのお家</a>
-」です。</p>
-
-<p>去年は、参加サークル数が 57 で、入場者数は、1400 名でした。
-今年は、場所を通運会館から秋葉原UDXホールへ移し、サークル数200？、入場者数が3100名 (<a href="https://twitter.com/TechBooster/status/850983169037697024">※</a>)と、大幅に増えています。</p>
-
-<h2 id="%E5%BD%93%E6%97%A5">当日</h2>
-
-<p>時間ピッタリで行ったら、すでに長蛇の列ができていたという去年の反省を踏まえ、かつ、公式より</p>
-
-<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E6%8A%80%E8%A1%93%E6%9B%B8%E5%85%B8?src=hash">#技術書典</a> 当日の一般入場についてお伝えします！ 11時より一般入場開始ですが、前回の反省を踏まえ秋葉原UDXでは10時より列形成開始の予定です。しかしながら、朝が一番人員繰りが厳しい時間帯なのでお手柔らかにお願いします。10時から列整理に割いている人員はわずかです…！</p>&mdash; TechBooster@超技術書典 (@TechBooster) <a href="https://twitter.com/TechBooster/status/849875400465371136">2017年4月6日</a></blockquote>
-
-<p>というアナウンスがあったので、10時に会場へ到着するよう行動しました。
-まあ、現実は非情ですでにそこそこ並んでいたわけですが。</p>
-
-<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E6%8A%80%E8%A1%93%E6%9B%B8%E5%85%B82?src=hash">#技術書典2</a> 来たけど10時の時点でエラいことに。列に並んでいると、Androidがとか、gitが、slackが、ハッカソンが、ハンダが、抵抗がとか、技術系の会話がなされてるのは興味深い <a href="https://t.co/Fd3fe2ePzx">pic.twitter.com/Fd3fe2ePzx</a></p>&mdash; ともかく、さめたすたすには気をつけて。 (@sharkpp) <a href="https://twitter.com/sharkpp/status/850878524860669957">2017年4月9日</a></blockquote>
-
-<p>で、列の待機中は、</p>
-
-<p><a href="/images/2017_0409_tf2_map.png"><img src="/thumbs/76f83f6553b2ac95822f722833c9c297-256x256.png" alt="探索マップ"></a></p>
-
-<p>こんなマップを作っていたり、つぶやいたりして時間を潰していました。
-途中、少し肌寒くトイレが近くて危なかったけど、何とかなった。</p>
-
-<p>スタッフさんの「8ビットに並んで」とか、並んでいる人の、git がーとか、Rails がーとか、言う話を BGM で聞きつつ、あぁ、技術系のイベントなんだなぁと、しみじみ。</p>
-
-<p>途中、スタッフさんが、赤い手提げバッグを持って回っているなぁと思ったら、どうやら「技術季報？？？」ってタイトルの要するにはパンフレットを配ってたので、もちろん購入。</p>
-
-<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E6%8A%80%E8%A1%93%E6%9B%B8%E5%85%B82?src=hash">#技術書典2</a> まだ開場前だけどスタッフさんが購入しませんかってまわってきたのでもちろん挙手。技術季報（￥1000）の創刊号をゲットした！超会議の情報も載っているようだ <a href="https://t.co/HjPSDf6GAN">pic.twitter.com/HjPSDf6GAN</a></p>&mdash; ともかく、さめたすたすには気をつけて。 (@sharkpp) <a href="https://twitter.com/sharkpp/status/850885307771650048">2017年4月9日</a></blockquote>
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>まあ、これは後からでも会場内で買えるのは分かっていたけど、なんとなく先に購入。
-手提げバッグだけの場合は、無料で貰えたようです。</p>
-
-<p>そうこうするうちに、半歩前へ詰め、列が更に4列加わり、あ、これはエラいことになるなと。
-どうやら最終的にビルを回り込んで反対側まで列が伸びていた様子。</p>
-
-<p>そして、開場時間を超え最終確認に数分を掛けて、ついに開場。
-８人✕２“行”ずつの入場で、自分は５番目ぐらいの“行”だったから、前に多分 70 人前後はいた計算。</p>
-
-<p>会場内に入り、早速お目当てのサークルさんを駆け巡る。</p>
-
-<p>戦利品は後ほどで。</p>
-
-<p>知り合いのサークルさんに挨拶しつつ、新刊を買いつつ、本を、時には本以外を購入していると、お金に羽が生えたように財布から飛んで行きました。</p>
-
-<p>ともかく、一時間ぐらい会場内にいたけど、入場制限をしていたため、多少は窮屈だったけどそこまでギュウギュウということはなかったので良かったかなぁ。
-まあ、企業ブース前はもう少し広く取ってほしかったけど。
-あとは、新刊落としました、とか、未だに来て射ないサークルがあったり、とか、まあそんな感じ。</p>
-
-<p>グルッと一周りして、購入忘れがないことを確認。
-知り合いのサークルさんに再度挨拶をして会場を出ました。</p>
-
-<p>最後は、去年と同じように、秋葉原のヤマト運輸営業所で荷物を発送、身軽になって帰りましたとさ。</p>
-
-<h2 id="%E6%88%A6%E5%88%A9%E5%93%81">戦利品</h2>
-
-<p>今回の戦利品</p>
-
-<p><img src="/images/2017_0409_tf2_booty.jpg" alt="戦利品" /></p>
-
-<table>
-<thead>
-<tr>
-  <th>ブース</th>
-  <th>サークル名</th>
-  <th>備考</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td></td>
-  <td>達人出版会</td>
-  <td>「技術季報 2017 SPRING」※技術書典カタログ</td>
-</tr>
-<tr>
-  <td>あ-10</td>
-  <td>docker-machine（ドッカーマシーン）</td>
-  <td>「技術者のためのやさしい数学」</td>
-</tr>
-<tr>
-  <td>い-05</td>
-  <td>空と月</td>
-  <td>「兎と亀」</td>
-</tr>
-<tr>
-  <td>い-10</td>
-  <td>TOKYO FLIP-FLOP（トーキョーフリップフロップ）</td>
-  <td>「フロッピーせんべい」「アクリル製フロッピー」２種</td>
-</tr>
-<tr>
-  <td>う-11</td>
-  <td>ひみつラボ</td>
-  <td>「RustでGBAのプログラムを作ろう！」</td>
-</tr>
-<tr>
-  <td>え-05</td>
-  <td>NP-complete（エヌピーコンプリート）</td>
-  <td>「WEBASSEMBLY USUI BOOK</td>
-</tr>
-<tr>
-  <td>え-28</td>
-  <td>理ろぐ</td>
-  <td>「Qt Quickを使いこなすクロスプラットフォームUIプログラミング2」</td>
-</tr>
-<tr>
-  <td>お-05</td>
-  <td>イプシロン</td>
-  <td>「立体写真のつくりかた解説」</td>
-</tr>
-<tr>
-  <td>お-12</td>
-  <td>めがねをかけるんだ（メガネヲカケルンダ）</td>
-  <td>「TensorFlowはじめました」</td>
-</tr>
-<tr>
-  <td>き-10</td>
-  <td>ラムダノート株式会社</td>
-  <td>「Ruby でつくる Ruby」</td>
-</tr>
-<tr>
-  <td>き-15</td>
-  <td>株式会社ブックウォーカー</td>
-  <td>「かんたん電子書籍」※無料配布</td>
-</tr>
-</tbody>
-</table>
-
-<p>※敬称略</p>
-
-<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
-
-<p>今回の教訓やメモなど</p>
-
-<ul>
-<li>公式のアナウンスをよく見ておこう。</li>
-<li>トイレは事前に済ませること。</li>
-<li>チラシがぐちゃぐちゃになるから A4 クリアファイルを持って行こう</li>
-<li>来年もあれば行こう（超会議はパスしました）</li>
 </ul>
 ]]></content>
         </entry>
