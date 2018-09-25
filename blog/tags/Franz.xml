@@ -3,11 +3,437 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/Franz.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2018-08-26T22:37:59+00:00</updated>
+    <updated>2018-09-25T16:00:39+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Franz 5 のレシピに関するメモ]]></title>
+            <link href="http://www.sharkpp.net/blog/2018/09/26/franz-recipe-memo.html"/>
+            <updated>2018-09-26T00:00:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2018/09/26/franz-recipe-memo.html</id>
+            <content type="html"><![CDATA[<p>Franz 5 用のレシピを作る際にいろいろソース読んだり調べたりしたのでそれのメモです。</p>
+
+<p>現状 Franz 5 は、まだまだベータバージョンです。
+なので仕様が変わることがあるため、ここに書かれている内容と違う動きをする場合もあります。</p>
+
+<h2 id="%E3%81%9D%E3%82%82%E3%81%9D%E3%82%82-franz-%E3%81%A8%E3%81%AF%E3%81%AA%E3%82%93%E3%81%9E%E3%82%84%EF%BC%9F">そもそも Franz とはなんぞや？</h2>
+
+<p>簡単にいうと Franz は、各種 SNS をタブでまとめて管理できるデスクトップアプリです。</p>
+
+<p><a href="https://meetfranz.com/">Franz – a free messaging app for Slack, Facebook Messenger, WhatsApp, Telegram and more</a> からダウンロードできますが、利用するにはアカウント登録が必要です。</p>
+
+<p>特徴として</p>
+
+<ul>
+<li>レシピ（＝拡張）を追加することで様々な SNS などの Webサービスに対応可能</li>
+<li>レシピごとに複数のアカウントを割り当て可能（＝マルチアカウント対応）</li>
+<li>クロスプラットフォームなデスクトップアプリ</li>
+</ul>
+
+<p>などがあります。</p>
+
+<p>まあ、仕組みとしては Webで提供されているページをタブで表示しているのでブラウザで表示できるページであれば基本はなんでも表示できます。</p>
+
+<h2 id="recipe-%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9">Recipe の作り方</h2>
+
+<p>レシピの作り方を超簡単、ざっくりと説明</p>
+
+<ol>
+<li>Franz でサポートしたいSNS等を決める</li>
+<li><a href="https://github.com/meetfranz/plugins/tree/master/docs">Franz Integration Documentation</a> をじっくりよく読む</li>
+<li>既存のレシピのソースを眺め参考にしながら対象のSNSを表示するように実装</li>
+<li>デバッグは <a href="https://github.com/meetfranz/plugins/blob/master/docs/integration.md#user-content-installation">Franz Recipe Documentation / Overview - Installation</a> を参考に</li>
+<li>完成したら <a href="https://github.com/meetfranz/plugins/issues/new?title=[Deploy]%20@@@@">New Issue - meetfranz/plugins</a> からレシピのデプロイを要望しましょう</li>
+</ol>
+
+<p>ほら簡単！</p>
+
+<h2 id="webview.js-%E3%81%AE-exports-%E9%96%A2%E6%95%B0%E3%81%AE%E7%AC%AC%EF%BC%92%E5%BC%95%E6%95%B0">webview.js の exports 関数の第２引数</h2>
+
+<p><code>webview.js</code> の <code>module.exports</code> で公開する関数の引数は通常</p>
+
+<pre><code class="javascript">      :
+module.exports = (Franz) =&gt; {
+      :
+</code></pre>
+
+<p>と、このようになっています。</p>
+
+<p><a href="https://github.com/meetfranz/plugins/blob/master/docs/frontend_api.md#usage-2">プラグインドキュメント frontend_api.md</a> でも同様です。</p>
+
+<p>この定義に、第２引数を追加し</p>
+
+<pre><code class="javascript">      :
+module.exports = (Franz, data) =&gt; {
+      :
+</code></pre>
+
+<p>と、このようにすると</p>
+
+<pre><code class="javascript">data = {
+    customUrl: "",
+    hasCrashed: false,
+    hasCustomUploadedIcon: false,
+    iconUrl: "",                                // アカウントで設定しているアイコンを指定
+    id: "0ea52f93-9c9a-4d07-a40e-876aacabce81", // サービスの識別子
+    isActive: true,                             // 現在アクティブ（表示されている）か？
+    isAttached: true,
+    isBadgeEnabled: true,                       // 通知バッジが有効？
+    isEnabled: true,                            // サービスが有効？
+    isIndirectMessageBadgeEnabled: true,        // DM用のバッチが有効？
+    isMuted: false,                             // オーディオでの通知が無効？
+    isNotificationEnabled: true,                // 通知が有効？
+    name: "hoge fuga",                          // サービスの名称（ユーザーが自由に設定）
+    order: 5,                                   // 並び順
+    recipe: {...},                              // サービスの元となる recipe
+    team: "",                                   // チーム名
+    timer: 29,
+    unreadDirectMessageCount: 0,                // 未読なDMの個数
+    unreadIndirectMessageCount: 0,              // 未読な返信の個数
+    webview: {...}
+};
+</code></pre>
+
+<p>とこのような感じで色々情報が取得できるようです。
+ただ、これらはコピーされた値のようで受け取った以後は一切更新がされないようです。
+ちなみに、呼び出し元は <code>/src/webview/plugin.js</code> の <code>initializeRecipe</code> イベントのリスナののようです。</p>
+
+<h2 id="developper-tools">Developper Tools</h2>
+
+<p>Franz には、Developper Tools が <code>index.js</code> 用と <code>webview.js</code> 用の２種類あります。</p>
+
+<p>それぞれの動作をまとめました。</p>
+
+<table>
+<thead>
+<tr>
+  <th>対象</th>
+  <th>メニュー</th>
+  <th><code>Reload Franz</code> 時の動作</th>
+  <th><code>Reload Service</code> 時の動作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>index.js</code></td>
+  <td><code>View</code> → <code>Toggle Developper Tools</code></td>
+  <td>全てのServiceで共通</td>
+  <td><code>Preserve log</code> オプションが非チェックだとログがクリアされる|影響なし</td>
+</tr>
+<tr>
+  <td><code>webview.js</code></td>
+  <td><code>View</code> → <code>Toggle Service Developper Tools</code></td>
+  <td>それぞれのServiceごと</td>
+  <td>ウインドウが破棄される|<code>Preserve log</code> オプションが非チェックだとログがクリアされる</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="%E9%80%9A%E7%9F%A5%E3%81%A8%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">通知とオーディオについて</h2>
+
+<p>Franz自体での通知の有効と無効は</p>
+
+<pre><code class="javascript">// webview.js
+
+const { ipcRenderer } = require('electron');
+
+ipcRenderer.on('settings-update', (sender, settings) =&gt; {
+  console.log(`isAppMuted = ${settings.isAppMuted}`);
+  // isAppMuted = true  = ミュート状態
+  // isAppMuted = false = ミュート解除状態
+});
+
+         :
+</code></pre>
+
+<p>と、することで確認可能。</p>
+
+<p>ただし、 <code>Franz v5.0.0 bata 18</code> 以降実装が変わったのか、最初に一回呼び出されて以後一切呼ばれなくなります。なんとなくバグっぽい気もします。</p>
+
+<p>Backend 側で <code>window.franz.stores.services</code> を定期的に参照し変化があった場合に Frontend 側に通知すれば自力で同様のことができるようです。</p>
+
+<p><a href="https://github.com/sharkpp/franz-recipe-mastodon/commit/e6e3db9ab3e04aa9f35cdac59b01bba145ae3029">この辺</a> のソースを参考に、です。</p>
+
+<p>個別のサービスの「通知を無効にする」や「オーディオの無効化」の状態は、<code>exports</code> する関数に２つ目の引数を追加することで...</p>
+
+<pre><code class="javascript">      :
+module.exports = (Franz, data) =&gt; {
+    console.log(`isMuted = ${data.isMuted}`);
+    console.log(`isNotificationEnabled = ${data.isNotificationEnabled}`);
+      :
+</code></pre>
+
+<p>どうもイベント通知で送られて来るために引数は Deep Copy された値が渡されるようです。
+そのため初期状態は取得できますが、変化があっても反映されることはありません。</p>
+
+<p>ちなみに <code>Franz.onNotify()</code> は、Franz自体の設定で「通知とオーディオを無効化」したり、それぞれのサービスで個別に「通知を無効にする」としても必ず呼び出されます。</p>
+
+<h2 id="%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97%E9%80%9A%E7%9F%A5">デスクトップ通知</h2>
+
+<p>デスクトップ通知は</p>
+
+<pre><code class="javascript">    Franz.onNotify(notification =&gt; {
+        // ToDo ...
+        return notification;
+    });
+</code></pre>
+
+<p>で実際にデスクトップに通知する直前に情報を取得できます。</p>
+
+<p>参考：<a href="https://github.com/meetfranz/plugins/blob/master/docs/frontend_api.md#onnotifyfn">frontend_api.md#onnotifyfn</a></p>
+
+<p>そして <code>return false;</code> とすることで通知を握りつぶすことができます。</p>
+
+<pre><code class="javascript">    Franz.onNotify(notification =&gt; {
+        // destroy the notification
+        return false;
+    });
+</code></pre>
+
+<h2 id="%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AE%E8%AD%98%E5%88%A5%E5%AD%90%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B">サービスの識別子を取得する</h2>
+
+<p><code>webview.js</code> の exports 関数の二つ目の引数で取得できます。</p>
+
+<pre><code class="javascript">      :
+module.exports = (Franz, data) =&gt; {
+    console.log('id = "${data.id}"'); // id = "0ea52f93-9c9a-4d07-a40e-876aacabce81"
+</code></pre>
+
+<p>この値が、 recipe からインスタンスとして起動した service の識別子となります。</p>
+
+<h2 id="backend-api-%E3%81%A7%E5%8F%97%E3%81%91%E5%8F%96%E3%82%8C%E3%82%8B%E5%90%84%E7%A8%AE%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88">Backend API で受け取れる各種イベント</h2>
+
+<p>イベントを受け取るためにどんなイベントを受け取るかあらかじめ定義します。</p>
+
+<pre><code class="javascript">module.exports = Franz =&gt; class HogeHoge extends Franz {
+
+  constructor(...args) {
+    let _temp;
+    return _temp = super(...args), this.events = {
+        // ここで受け取るイベントを定義
+        'did-navigate': 'handleDidNavigate',
+    }, _temp;
+  }
+
+  handleDidNavigate (event) {
+      // 諸々の処理を行う
+  }
+                   :
+};
+</code></pre>
+
+<p>受け取れる主なイベントはこんな感じ</p>
+
+<table>
+<thead>
+<tr>
+  <th>イベント名</th>
+  <th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>before-input-event</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>certificate-error</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>console-message</code></td>
+  <td><code>console.*</code> で表示する内容</td>
+</tr>
+<tr>
+  <td><code>context-menu</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>crashed</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>cursor-changed</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>destroyed</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>devtools-closed</code></td>
+  <td>開発者ツールが閉じられた</td>
+</tr>
+<tr>
+  <td><code>devtools-focused</code></td>
+  <td>開発者ツールがにフォーカスが当たった</td>
+</tr>
+<tr>
+  <td><code>devtools-opened</code></td>
+  <td>開発者ツールが表示された</td>
+</tr>
+<tr>
+  <td><code>devtools-reload-page</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>did-attach-webview</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>did-change-theme-color</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>did-fail-load</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>did-finish-load</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>did-frame-finish-load</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>did-get-redirect-request</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>did-get-response-details</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>did-navigate</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>did-navigate-in-page</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>did-start-loading</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>did-stop-loading</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>dom-ready</code></td>
+  <td>コンテンツのDOMの準備ができた</td>
+</tr>
+<tr>
+  <td><code>found-in-page</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>login</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>media-paused</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>media-started-playing</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>new-window</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>page-favicon-updated</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>paint</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>plugin-crashed</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>select-bluetooth-device</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>select-client-certificate</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>update-target-url</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>will-attach-webview</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>will-navigate</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>will-prevent-unload</code></td>
+  <td></td>
+</tr>
+</tbody>
+</table>
+
+<p>概要がブランクの部分はまだ調べきれていない部分です。
+まあ、イベント名でなんとなく想像はできると思います。</p>
+
+<h2 id="backend-api-%E3%81%8B%E3%82%89-frontend-api-%E3%81%B8">Backend API から Frontend API へ</h2>
+
+<p>Backend API (index.js) から Frontend API (webview.js) へのデータの受け渡しの方法。</p>
+
+<p>送り側：</p>
+
+<pre><code class="javascript">// index.js
+
+    // this は webview のインスタンスである必要があります。
+    // コンストラクタの this では WebView のインスタンスへアクセスできないようです。
+    this.send('test', { foo: 'bar' });
+</code></pre>
+
+<p>受け取り側：</p>
+
+<pre><code class="javascript">// webview.js
+
+const { ipcRenderer } = require('electron');
+
+ipcRenderer.on('test', (sender, data) =&gt; {
+    console.log(data); // { foo: 'bar' }
+});
+</code></pre>
+
+<h2 id="frontend-api-%E3%81%8B%E3%82%89-backend-api-%E3%81%B8">Frontend API から Backend API へ</h2>
+
+<p>Frontend から Backend への通知方法はまだ見つかっていません。
+おそらく出来るとは思います...</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://github.com/meetfranz/plugins">meetfranz/plugins: Official Franz Plugin Repository</a></li>
+<li><a href="https://qiita.com/kan/items/571b2f56c54e1e3b6516">Franz Pluginを作ってみよう - Qiita</a></li>
+<li><a href="https://github.com/meetfranz/recipe-rocketchat/blob/master/webview.js">recipe-rocketchat/webview.js at master · meetfranz/recipe-rocketchat</a></li>
+<li><a href="https://github.com/meetfranz/franz/blob/a4b665ef5f218313e524f0582d08cde6aa5d7049/src/webview/notifications.js">franz/notifications.js at a4b665ef5f218313e524f0582d08cde6aa5d7049 · meetfranz/franz</a></li>
+<li><a href="https://github.com/meetfranz/recipe-messenger/blob/0df2bea55d7775a70d73a93663520d1fe8982241/webview.js">recipe-messenger/webview.js at 0df2bea55d7775a70d73a93663520d1fe8982241 · meetfranz/recipe-messenger</a></li>
+<li><a href="https://github.com/meetfranz/franz/blob/a4b665ef5f218313e524f0582d08cde6aa5d7049/src/webview/lib/RecipeWebview.js">franz/RecipeWebview.js at a4b665ef5f218313e524f0582d08cde6aa5d7049 · meetfranz/franz</a></li>
+<li><a href="https://github.com/tootsuite/mastodon/blob/master/app/javascript/mastodon/actions/notifications.js">mastodon/notifications.js at master · tootsuite/mastodon</a></li>
+<li><a href="https://github.com/tsadiq/mastodon-franz/blob/master/index.js">mastodon-franz/index.js at master · tsadiq/mastodon-franz</a></li>
+<li><a href="https://github.com/kan/franz-plugin-mastodon/blob/master/webview.js">franz-plugin-mastodon/webview.js at master · kan/franz-plugin-mastodon</a></li>
+<li><a href="https://github.com/electron/electron/blob/master/docs/api/web-contents.md">electron/web-contents.md at master · electron/electron</a></li>
+<li><a href="https://electronjs.org/docs/api/webview-tag#dom-events"><webview> Tag | Electron</a></li>
+</ul>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Franz 用の Misskey レシピを作りました！]]></title>
             <link href="http://www.sharkpp.net/blog/2018/08/27/franz-recipe-misskey.html"/>
