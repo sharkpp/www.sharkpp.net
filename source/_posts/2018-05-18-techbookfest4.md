@@ -1,6 +1,7 @@
 ---
 title: "技術書典4に行ってきた"
 date: 2018-05-18 01:10
+update: 2018-09-30 16:56
 tags: [雑記, 同人誌, レポート, 技術書典, Qt]
 categories: [ブログ]
 
@@ -79,7 +80,7 @@ categories: [ブログ]
 |[か22](https://techbookfest.org/event/tbf04/circle/12820001)|[底なし沼の魔女](https://qiita.com/MegaBlackLabel)/[れいな](https://twitter.com/MegaBlackLabel)|「Libraries of React・Get ready for Next.jsのセット」|
 |[お09](https://techbookfest.org/event/tbf04/circle/16430002)|Secure旅団|「俺らの愛したセキュリティ」「ニッチ・セキュリティ - 明星へ登る」|
 |[か24](https://techbookfest.org/event/tbf04/circle/17570001)|[楽描帳](http://www.chirashiura.com/)/[@tomato360](https://twitter.com/tomato360)|「Hello Nuxt !!」「Hello!! Vue.js 最新プログレッシブフレームワーク入門」|
-|[か23](https://techbookfest.org/event/tbf04/circle/19150009)|(ねこの手@福岡](https://mya-ake.com/)/(mya-ake](https://twitter.com/mya_ake)|「知らないと損するCSS」「現場で使えるVue.js tips集」|
+|[か23](https://techbookfest.org/event/tbf04/circle/19150009)|[ねこの手@福岡](https://mya-ake.com/)/[mya-ake](https://twitter.com/mya_ake)|「知らないと損するCSS」「現場で使えるVue.js tips集」|
 |[く36](https://techbookfest.org/event/tbf04/circle/14560006)|[紙印](http://blogs.yahoo.co.jp/rem1988stores)/おたべ|「【フルセット】テスト設計入門 2018年度版」|
 |[く02](https://techbookfest.org/event/tbf04/circle/19150006)|[53鍵盤](https://www.wakamesoba98.net/circle/)/わかめそば|「初めてのsystemd-nspawn」|
 |[け15](https://techbookfest.org/event/tbf04/circle/16620002)|[お台場計算尺](https://staff.aist.go.jp/tominaga-daisuke/sliderule/rectilinear/index.html)/とみながだいすけ|「新世紀の計算尺入門」「作って使おう計算尺」|
