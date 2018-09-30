@@ -1,7 +1,7 @@
 ---
 title: "技術書典4に行ってきた"
 date: 2018-05-18 01:10
-update: 2018-09-30 16:56
+update: 2018-09-30 18:53
 tags: [雑記, 同人誌, レポート, 技術書典, Qt]
 categories: [ブログ]
 
@@ -89,7 +89,7 @@ categories: [ブログ]
 |[お08](https://techbookfest.org/event/tbf04/circle/11830001)|[Cpaw](https://twitter.com/cpaw_account)|「RustによるWebアプリケーション作成入門」|
 |[お02](https://techbookfest.org/event/tbf04/circle/18420001)|[吉川雅彦](http://yoshikawaweb.com/)|「z-indexを倒す」|
 |[い05](https://techbookfest.org/event/tbf04/circle/16430001)|[マンガでわかるWebデザイン＋Git](http://webdesign-manga.com/)/湊川あい|「マンガでわかるDocker」「マンガでわかるScrapbox【無料頒布】」|
-|[け51](https://techbookfest.org/event/tbf04/circle/14570001)|[windhole](https://www.facebook.com/windholep/)/風穴 江|「USB3.0 ホストドライバ自作入門」|
+|[け51](https://techbookfest.org/event/tbf04/circle/14570001)|[uchan](http://uchan.hateblo.jp/)|「USB3.0 ホストドライバ自作入門」|
 |[あ01](https://techbookfest.org/event/tbf04/circle/21040009)|日経BP出版局|「日経電子の本」※無料配布|
 
 ※敬称略、順不同
