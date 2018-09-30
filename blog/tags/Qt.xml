@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/Qt.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2018-09-25T16:00:39+00:00</updated>
+    <updated>2018-09-30T08:01:38+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -640,7 +640,7 @@ Window {
 </tr>
 <tr>
   <td><a href="https://techbookfest.org/event/tbf04/circle/19150009">か23</a></td>
-  <td>(ねこの手@福岡](https://mya-ake.com/)/(mya-ake](https://twitter.com/mya_ake)</td>
+  <td><a href="https://mya-ake.com/">ねこの手@福岡</a>/<a href="https://twitter.com/mya_ake">mya-ake</a></td>
   <td>「知らないと損するCSS」「現場で使えるVue.js tips集」</td>
 </tr>
 <tr>
