@@ -1,7 +1,7 @@
 ---
 title: "技術書典4に行ってきた"
 date: 2018-05-18 01:10
-update: 2018-09-30 18:53
+update: 2018-10-12 01:13
 tags: [雑記, 同人誌, レポート, 技術書典, Qt]
 categories: [ブログ]
 
@@ -20,7 +20,7 @@ categories: [ブログ]
 まず、前回のレポートは「[技術書典３にサークル手伝いとして参加してきた - さめたすたすのお家](/blog/2017/10/23/techbookfest3.html)
 」です。
 
-今回は、サークル数 246 、入場者数 6380 人だったようです。前回から二倍以上増えていて、もう人高密度が大変なことになっていました。
+今回は、サークル数 246 、入場者数 6380 人だったようです。前回から二倍以上増えていて、もう人口密度が大変なことになっていました。
 
 [![参加人数](/images/20180430_tf1_tf4_graph.png)](https://docs.google.com/spreadsheets/d/1gNVy9ukLn3kYzOC0nyOpysD-Xl3fIzHl26WSSLHC-HY/edit?usp=sharing)
 
