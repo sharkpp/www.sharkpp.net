@@ -1,6 +1,6 @@
 ---
 title: "技術書典5に行ってきた"
-date: 2018-10-15 12:50
+date: 2018-10-14 12:50
 tags: [雑記, 同人誌, レポート, 技術書典, Qt, 池袋]
 categories: [ブログ]
 
@@ -15,7 +15,7 @@ categories: [ブログ]
 <a href="http://udx-akibasquare.jp/index.php?pg=facilities">秋葉原UDX AKIBA_SQUARE</a> は 1,010m<sup>2</sup>、<a href="http://co.sunshinecity.co.jp/exhibition/hall_spec.html#04">サンシャインシティ 展示ホールD</a> は 3,341m<sup>2</sup>
 </small>
 
-[<img src="{{ thumbnail('/images/20181008_tf5.jpg', 256, 256) }}" alt="サークル入場の様子">](/images/20181008_tf5.jpg)
+[<img src="{{ thumbnail('/images/20181008_tf5.jpg', 256, 256) }}" alt="技術書典5">](/images/20181008_tf5.jpg)
 
 ## 始めに
 
