@@ -15,7 +15,7 @@ categories: [ブログ]
 <a href="http://udx-akibasquare.jp/index.php?pg=facilities">秋葉原UDX AKIBA_SQUARE</a> は 1,010m<sup>2</sup>、<a href="http://co.sunshinecity.co.jp/exhibition/hall_spec.html#04">サンシャインシティ 展示ホールD</a> は 3,341m<sup>2</sup>
 </small>
 
-[<img src="{{ thumbnail('/images/20181008_tf5.jpg', 256, 256) }}" alt="技術書典5">](/images/20181008_tf5.jpg)
+[<img src="{{ thumbnail('/images/20181008_tf5.jpg', 640, 640) }}" alt="技術書典5">](/images/20181008_tf5.jpg)
 
 ## 始めに
 
@@ -25,17 +25,17 @@ categories: [ブログ]
 会場が広がったにもかかわらず、人口密度が”今回も”大変なことになっていました。
 帰りがてら12:30頃に確認したところ、端から端まで脇目も振らず移動するのにも１０分ぐらい掛かりました。
 
-[[<img src="{{ thumbnail('/images/20181008_tf1_tf5_graph.png', 256, 256) }}" alt="参加人数">](/images/20181008_tf1_tf5_graph.png)](https://docs.google.com/spreadsheets/d/1gNVy9ukLn3kYzOC0nyOpysD-Xl3fIzHl26WSSLHC-HY/edit?usp=sharing)
+[![参加人数](/images/20181008_tf1_tf5_graph.png)](https://docs.google.com/spreadsheets/d/1gNVy9ukLn3kYzOC0nyOpysD-Xl3fIzHl26WSSLHC-HY/edit?usp=sharing)
 
 ## 当日
 
-[<img src="{{ thumbnail('/images/20181008_tf5_circle_enter.jpg', 256, 256) }}" alt="サークル入場の様子">](/images/20181008_tf5_circle_enter.jpg)
+[<img src="{{ thumbnail('/images/20181008_tf5_circle_enter.jpg', 640, 640) }}" alt="サークル入場の様子">](/images/20181008_tf5_circle_enter.jpg)
 
 当日は、前回よりも少しだけ早く09:35頃に会場に到着、がすでに目測で150人程度は並んでいました。
 どうやら、最初の人は 09:15頃から並んでいた様子。
 前回と違い、早い段階から列の形成が始まっていました。
 
-[<img src="{{ thumbnail('/images/20181008_tf5_wait_list_moving.jpg', 256, 256) }}" alt="待機列屋内移動時">](/images/20181008_tf5_wait_list_moving.jpg)
+[<img src="{{ thumbnail('/images/20181008_tf5_wait_list_moving.jpg', 640, 640) }}" alt="待機列屋内移動時">](/images/20181008_tf5_wait_list_moving.jpg)
 
 今回は整理券配布はなく、代わりに再入場券として配っていました。
 前回と同じような形＆番号も刻印されていたので急遽方針が変わったのかもしれません。
@@ -43,20 +43,20 @@ categories: [ブログ]
 
 10:00頃、待機列が動き、先頭が入り口付近まで移動。後ろも順に移動。
 
-[<img src="{{ thumbnail('/images/20181008_tf5_opening.jpg', 256, 256) }}" alt="開場">](/images/20181008_tf5_opening.jpg)
+[<img src="{{ thumbnail('/images/20181008_tf5_opening.jpg', 640, 640) }}" alt="開場">](/images/20181008_tf5_opening.jpg)
 
 11:00を過ぎたところで会場内から拍手があり、遅れて待機列からも拍手が上がり、開場しました。
 今回も待たされる事なく第一陣として入場できました。
 
 ここで、お目当の所をささっと回ってから順に回ればよかったのに順に回ってしまったので何点か購入できなかったものがありました。残念。
 
-[<img src="{{ thumbnail('/images/20181008_tf5_crowd.jpg', 256, 256) }}" alt="ひとひとひと">](/images/20181008_tf5_crowd.jpg)
+[<img src="{{ thumbnail('/images/20181008_tf5_crowd.jpg', 640, 640) }}" alt="ひとひとひと">](/images/20181008_tf5_crowd.jpg)
 
 ちょっと最初に手間取ったこともあり、かんたん後払い決済と現金とは、今回半々ぐらいの割合で利用しました。
 
 戦利品はまた後ほどです。
 
-[<img src="{{ thumbnail('/images/20181008_tf5_pe_of_tf_illust.jpg', 256, 256) }}" alt="技術書典イラスト個展">](/images/20181008_tf5_pe_of_tf_illust.jpg)
+[<img src="{{ thumbnail('/images/20181008_tf5_pe_of_tf_illust.jpg', 640, 640) }}" alt="技術書典イラスト個展">](/images/20181008_tf5_pe_of_tf_illust.jpg)
 
 会場出口直前には前回なかった見本誌の立ち見スペースがありましたが、それはもう人が多くてのぞいてくのを諦めました。
 あとは、企画展示の「技術書典イラスト個展」なるものが開かれていて、油絵のキャンパスに印刷？されたデジタル油絵の展示（サークル数が前回の数だったのでイラスト自体は前回作られたものだと思います）やそれらのストカードの販売をしてました。
@@ -67,7 +67,7 @@ categories: [ブログ]
 
 今回の戦利品
 
-[<img src="{{ thumbnail('/images/20181009_tf5_booty.jpg', 256, 256) }}" alt="戦利品">](/images/20181009_tf5_booty.jpg)
+[<img src="{{ thumbnail('/images/20181009_tf5_booty.jpg', 640, 640) }}" alt="戦利品">](/images/20181009_tf5_booty.jpg)
 
 |配置|サークル名/ペンネーム|頒布物|
 |-|-|-|
