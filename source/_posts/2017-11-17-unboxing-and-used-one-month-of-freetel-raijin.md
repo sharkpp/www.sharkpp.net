@@ -10,7 +10,7 @@ categories: [ブログ]
 
 今回は、長々と代替機で過ごしていると[某ボールを投げて何某をゲットするゲーム](https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&amp;hl=ja)が遊べないのでサクッと選びました。
 まあ、前のスマホが二年も前のなので、そこそこのスペックでほぼ同等ぐらいだからいいやと思って、[FREETEL RAIJIN](https://www.freetel.jp/product/smartphone/raijin/)を選びました。
-本当は Google PIXEL 2 がよかったんですが、あれ絶対日本では発売しないよなーと。
+本当は Google Pixel 2 がよかったんですが、あれ絶対日本では発売しないよなーと。
 
 [<img src="{{ thumbnail('/images/2017_1117_raijin_outerbox.jpg', 256, 256) }}" alt="雷神 -RAIJIN-">](/images/2017_1117_raijin_outerbox.jpg)
 
