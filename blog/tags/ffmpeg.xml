@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/ffmpeg.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2019-04-27T08:42:59+00:00</updated>
+    <updated>2019-04-27T08:59:02+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -13,6 +13,132 @@
             <link href="http://www.sharkpp.net/blog/2019/04/27/qt-nagoya-27.html"/>
             <updated>2019-04-27T17:30:00+00:00</updated>
             <id>http://www.sharkpp.net/blog/2019/04/27/qt-nagoya-27.html</id>
-            <content type="html"><![CDATA[]]></content>
+            <content type="html"><![CDATA[<p>4月27日(土) に開催された <a href="https://qt-users.connpass.com/event/128431/">Qt 勉強会 @ Nagoya #27 - connpass</a> に久しぶりに参加しました。</p>
+
+<p>そのまとめです。</p>
+
+<p><img src="/images/20190427_frame_extract.png" alt="成果" /></p>
+
+<h2 id="%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B">自己紹介</h2>
+
+<p>毎回の通り、自己紹介と本日やることを宣言。</p>
+
+<h2 id="%E8%87%AA%E5%88%86%E3%81%AE%E6%9C%AC%E6%97%A5%E3%81%AE%E3%82%84%E3%82%8B%E3%81%93%E3%81%A8">自分の本日のやること</h2>
+
+<ul>
+<li>動画からフレームを切り出し動画のメタ情報とフレーム位置に応じた時刻を設定するツールを実装</li>
+</ul>
+
+<p>機能</p>
+
+<ul>
+<li>動画から複数のフレームを選んで画像として抜き出すことができる</li>
+<li>抜き出した画像には動画のメタ情報を設定できる</li>
+<li>メタ情報としてフレームの位置に応じた時間情報を設定する</li>
+</ul>
+
+<p>課題</p>
+
+<ul>
+<li>フレームをプレビューする際の大量の画像をどうするか？</li>
+<li>フレームの抜き出しや、メタ情報の取得、設定などをどう実現するか？</li>
+<li>基本的には <code>ffmpeg</code> や <code>exiftool</code> などを使えばいいが、コマンドを叩く方向性で行くと別のプラットフォームで困るので最終的にはライブラリを使いたい</li>
+</ul>
+
+<h2 id="%E6%9C%AC%E6%97%A5%E3%81%AE%E7%9F%A5%E8%A6%8B">本日の知見</h2>
+
+<h3 id="droparea%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6"><a href="https://doc.qt.io/qt-5/qml-qtquick-droparea.html">DropArea</a>について</h3>
+
+<p><code>DropArea.keys</code> と <code>DragEvent.hasXXX</code> との関係</p>
+
+<table>
+<thead>
+<tr>
+  <th><code>DragEvent</code></th>
+  <th><code>DropArea.keys</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>.hasColor == true</code></td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>.hasHtml == true</code></td>
+  <td><code>text/html</code> たぶん</td>
+</tr>
+<tr>
+  <td><code>.hasText == true</code></td>
+  <td><code>text/plain</code></td>
+</tr>
+<tr>
+  <td><code>.hasUrls == true</code></td>
+  <td><code>text/uri-list</code></td>
+</tr>
+</tbody>
+</table>
+
+<p><code>DropArea.keys</code> は <code>DragEvent.keys</code> の値をフィルタするもの。
+ファイルの内容をもとにMIMEタイプが設定され（そもそもされない）、それをフィルタするわけではない。</p>
+
+<h3 id="qt-creator-%E3%81%A7%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E5%AF%BE%E8%B1%A1%E3%81%AE%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E4%B8%80%E3%81%A4%E3%81%AE%E3%81%BF%E8%B5%B7%E5%8B%95%E3%81%95%E3%81%9B%E3%82%8B%E6%96%B9%E6%B3%95">Qt Creator でデバッグ対象のアプリを一つのみ起動させる方法</h3>
+
+<p>Qt Creatorの「設定」→「ビルドと実行」→「ビルド前にアプリケーションを停止する」で設定できる！</p>
+
+<p><a href="/images/20190427_qtcreator_single_app_debug_config.png"><img src="/thumbs/34d43cc47a3729ad2c1d954456d24233-640x640.png" alt="ビルド前にアプリケーションを停止するの設定"></a></p>
+
+<h3 id=".qml-%E3%81%A8-.ui.qml">.qml と .ui.qml</h3>
+
+<p><code>.qml</code> はJavaScriptのコードを書いたりコンポーネントをレイアウトしたりなんでもできる。</p>
+
+<p><code>.ui.qml</code> は <code>.qml</code> でできることの一部、コードを書いたり、が制限されているが、代わりにデザインツールを使い、GUIでレイアウトを変更できる。</p>
+
+<p>デザインツールではJavaScriptでイベント処理をかけない代わりに、<a href="https://doc.qt.io/qt-5/qml-qtquick-state.html">状態遷移</a>ごとのレイアウトを設定できる。</p>
+
+<p><a href="/images/20190427_qtcreator_design_states.png"><img src="/thumbs/902276ffa87b2353c16384c6a3baa2b4-640x640.png" alt="状態遷移"></a></p>
+
+<h3 id="%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%9B%B8%E3%81%8D%E5%87%BA%E3%81%97%E3%81%AA%E3%81%97%E3%81%A7%E3%81%AE%E3%82%B5%E3%83%A0%E3%83%8D%E3%82%A4%E3%83%AB%E3%81%AE%E7%94%9F%E6%88%90">ファイル書き出しなしでのサムネイルの生成</h3>
+
+<p>どうも ffmpeg で標準出力に画像を書き出せ、かつ QML でもオンメモリにダイレクトでファイルを書き出せるらしい？</p>
+
+<h2 id="%E6%9C%AC%E6%97%A5%E3%81%AE%E9%80%B2%E6%8D%97">本日の進捗</h2>
+
+<p>思うようにファイルのドロップがうまくいかずなかなか進まなかったが、結局のところわかれば簡単なことで、要するにドキュメントはちゃんと読もうねって話だった。</p>
+
+<p>デザインツールで画面を作ってくと割とサクサク画面ができるのでもっと活用していきたい。</p>
+
+<p>あと、 <code>.qml</code> と <code>.ui.qml</code> の使い分けとかもパターン化を自分の中で作っていければ、サクサク進められそうな感じがした。</p>
+
+<p>あと、個人的には Visual Studio みたいにデバッグ対象のアプリケーションが１つのみ立ち上がってくれる設定を見つけたのが一番嬉しかったりする。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li>ファイルドロップ関連
+
+<ul>
+<li><a href="https://doc.qt.io/qt-5/qml-qtquick-droparea.html">DropArea QML Type</a></li>
+<li><a href="https://doc.qt.io/qt-5/qml-qtquick-dragevent.html">DragEvent QML Type</a></li>
+<li><a href="https://doc.qt.io/qt-5/qtquick-draganddrop-example.html">Qt Quick Examples - Drag and Drop</a></li>
+</ul></li>
+<li>その他
+
+<ul>
+<li><a href="https://doc.qt.io/qt-5/qml-qtquick-state.html">State QML Type</a></li>
+</ul></li>
+<li>設定関連
+
+<ul>
+<li><a href="https://forum.qt.io/post/309613">Running two applications in the same Qt Creator instance</a></li>
+</ul></li>
+<li>onメモリでの画像の作成など
+
+<ul>
+<li><a href="https://stackoverflow.com/questions/23667088/qtquick-dynamic-images-and-c">qml - QtQuick Dynamic Images and C++ - Stack Overflow</a></li>
+<li><a href="https://doc.qt.io/qt-5/qquickimageprovider.html">QQuickImageProvider Class</a></li>
+<li><a href="https://qiita.com/kokeiro001/items/0e321c30cccc45ae44a4#%E9%80%A3%E7%B6%9A%E3%81%97%E3%81%9F%E7%94%BB%E5%83%8F%E3%82%92%E3%83%91%E3%82%A4%E3%83%97%E3%81%A7%E5%8F%96%E3%82%8A%E5%87%BA%E3%81%99ver">ffmpegを用いて動画から画像を取り出す【C#】 - Qiita</a></li>
+</ul></li>
+</ul>
+]]></content>
         </entry>
     </feed>
