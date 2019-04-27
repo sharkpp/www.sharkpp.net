@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/ffmpeg.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2019-04-27T08:34:22+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[名古屋Qt勉強会#27 に参加しました]]></title>
+            <link href="http://www.sharkpp.net/blog/2019/04/27/qt-nagoya-27.html"/>
+            <updated>2019-04-27T17:30:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2019/04/27/qt-nagoya-27.html</id>
+            <content type="html"><![CDATA[]]></content>
+        </entry>
+    </feed>

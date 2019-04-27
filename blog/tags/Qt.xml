@@ -3,11 +3,18 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/Qt.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2019-04-23T16:23:21+00:00</updated>
+    <updated>2019-04-27T08:34:22+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[名古屋Qt勉強会#27 に参加しました]]></title>
+            <link href="http://www.sharkpp.net/blog/2019/04/27/qt-nagoya-27.html"/>
+            <updated>2019-04-27T17:30:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2019/04/27/qt-nagoya-27.html</id>
+            <content type="html"><![CDATA[]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[技術書典6に行ってきた]]></title>
             <link href="http://www.sharkpp.net/blog/2019/04/24/techbookfest6.html"/>
@@ -1356,154 +1363,6 @@ Window {
 <p>久しぶりに参加したけど、久しぶりにQt触っていろいろと忘れていたこともあった。
 けど、強制的に時間を確保しもくもくするのはやはり悪くない。
 あと、Dash コインの話もいろいろ面白かった。</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Qt 用の QDialog をベースとした吹き出し型のウィジェット]]></title>
-            <link href="http://www.sharkpp.net/blog/2018/02/27/popover-widget-for-qt.html"/>
-            <updated>2018-02-27T01:01:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2018/02/27/popover-widget-for-qt.html</id>
-            <content type="html"><![CDATA[<p>とりあえず、ネタがないので先日に公開した <a href="https://github.com/sharkpp/qtpopover">Popover - QDialog base balloon shape widget</a> の紹介。</p>
-
-<h2 id="%E4%BD%95%E3%81%8C%E3%81%A7%E3%81%8D%E3%82%8B%EF%BC%9F">何ができる？</h2>
-
-<p><img src="/images/20180227_qtpopover.png" alt="スクリーンショット" /></p>
-
-<p>こんな感じの切り欠き付きのポップアップが簡単に実装できます。</p>
-
-<p><a href="https://developer.apple.com/documentation/appkit/nspopover">NSPopover</a> みたいなやつ。</p>
-
-<h2 id="%E3%81%A9%E3%81%93%E3%81%A7%E5%88%A9%E7%94%A8%E3%81%A7%E3%81%8D%E3%82%8B%EF%BC%9F">どこで利用できる？</h2>
-
-<p>現状は macOS しか動作の確認をしてないです。
-もしかしたら Windows とか Linux でも動作するかも？</p>
-
-<h2 id="%E3%81%A9%E3%81%86%E3%82%84%E3%81%A3%E3%81%A6%E4%BD%BF%E3%81%86%EF%BC%9F">どうやって使う？</h2>
-
-<p>使い方は、</p>
-
-<ul>
-<li>ソースを組み込んで利用(a)</li>
-<li>ライブラリとしてビルドして利用(b)</li>
-</ul>
-
-<p>の２種類です。</p>
-
-<p>組み込みのサンプルは <a href="https://github.com/sharkpp/qtpopover/tree/master/examples">master/examples - qtpopover</a> あたりに。</p>
-
-<h3 id="%E7%92%B0%E5%A2%83%E4%BE%8B">環境例</h3>
-
-<table>
-<thead>
-<tr>
-  <th>項目</th>
-  <th>内容</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>アプリケーション名</td>
-  <td>test</td>
-</tr>
-<tr>
-  <td>ライブラリフォルダ</td>
-  <td><code>libs</code></td>
-</tr>
-</tbody>
-</table>
-
-<h3 id="1%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%92%E5%8F%96%E5%BE%97">1)ソースを取得</h3>
-
-<pre><code class="console"># git submodule add git@github.com:sharkpp/qtpopover.git libs/qtpopover
-# git submodule update
-</code></pre>
-
-<h3 id="2a%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%92%E5%8F%96%E3%82%8A%E8%BE%BC%E3%82%80">2a)ソースを取り込む</h3>
-
-<h4 id="2a.1%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%60.pro%60%E3%82%92%E5%A4%89%E6%9B%B4">2a.1)プロジェクトファイル(<code>.pro</code>)を変更</h4>
-
-<p>アプリケーションの <code>.pro</code> を変更する。
-プロジェクトインクルードファイル（？）を追加します。</p>
-
-<p>変更例</p>
-
-<pre><code class="diff">+ # You can also select to disable deprecated APIs only up to a certain version of Qt.
-+ #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
-+
-+ include(./libs/qtpopover/sources/popover.pri)
-+
-+ SOURCES += \
-+         main.cpp \
-+         mainwindow.cpp \
-</code></pre>
-
-<h3 id="2b%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%82%92%E5%8F%96%E3%82%8A%E8%BE%BC%E3%82%80">2b)ライブラリを取り込む</h3>
-
-<h4 id="2b.1%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%82%92%E3%83%93%E3%83%AB%E3%83%89">2b.1)ライブラリをビルド</h4>
-
-<p><code>./libs/qtpopover/popover.pro</code> を <code>Qt Creator</code> で開きビルドする。</p>
-
-<h4 id="2b.2%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%60.pro%60%E3%82%92%E5%A4%89%E6%9B%B4">2b.2)プロジェクトファイル(<code>.pro</code>)を変更</h4>
-
-<p>アプリケーションの <code>.pro</code> を変更する。</p>
-
-<p><code>POPOVER_USE_STATIC_LIB=1</code> とプロジェクトインクルードファイル（？）を追加します。</p>
-
-<p>変更例</p>
-
-<pre><code class="diff">+ # You can also select to disable deprecated APIs only up to a certain version of Qt.
-+ #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
-+
-+ POPOVER_USE_STATIC_LIB=1
-+ include(./libs/qtpopover/sources/popover.pri)
-+
-+ SOURCES += \
-+         main.cpp \
-+         mainwindow.cpp \
-</code></pre>
-
-<h3 id="3%60qdialog%60-%E3%83%99%E3%83%BC%E3%82%B9%E3%81%AE%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%92%E4%BD%9C%E3%82%8B%E3%80%82">3)<code>QDialog</code> ベースのクラスを作る。</h3>
-
-<h3 id="4%E3%82%BD%E3%83%BC%E3%82%B9%E3%81%AE%E5%A4%89%E6%9B%B4">4)ソースの変更</h3>
-
-<p>変更例</p>
-
-<pre><code class="cpp">  #include &lt;QApplication&gt;
-
-  TaskTrayPopup::TaskTrayPopup(QWidget *parent)
--     : QDialog(parent)
-+     : Popover(parent)
-      , ui(new Ui::TaskTrayPopup)
-  {
-      ui-&gt;setupUi(this);
-</code></pre>
-
-<h3 id="5%E3%83%98%E3%83%83%E3%83%80%E3%81%AE%E5%A4%89%E6%9B%B4">5)ヘッダの変更</h3>
-
-<p>変更例</p>
-
-<pre><code class="cpp">  #ifndef TASKTRAYPOPUP_H
-  #define TASKTRAYPOPUP_H
-
-+ #include "popover.h"
-
-  namespace Ui {
-  class TaskTrayPopup;
-  }
-
-  class TaskTrayPopup
--         : public QDialog
-+         : public Popover
-  {
-      Q_OBJECT
-
-</code></pre>
-
-<h2 id="%E3%81%AA%E3%81%9C%E4%BD%9C%E3%81%A3%E3%81%9F%EF%BC%9F">なぜ作った？</h2>
-
-<p>いろんなところで利用できそうな Qt のクラス作ったけど、簡単に利用できる方法がないかなと、捏ねくり回して作って見ました。</p>
-
-<p>どこかに、<code>npm i HOGE</code> とか <code>composer require HOGE</code> みたいに手軽に利用できる Qt の標準的なパッケージの仕組みはないものですかね。</p>
 ]]></content>
         </entry>
     </feed>
