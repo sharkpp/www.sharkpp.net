@@ -106,12 +106,14 @@ $ winecfg
 
 ### Wine に日本語の表示のための設定などを行う
 
-[IPAモナーフォント](http://www.geocities.jp/ipa_mona/) のページから [opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8.tar.gz](http://www.geocities.jp/ipa_mona/opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8.tar.gz) をダウンロードし `~/.wine/drive_c/windows/Fonts/` へ放り込みます。
+[IPAモナーフォント](http://web.archive.org/web/20190326123924/http://www.geocities.jp/ipa_mona/) のページから [opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8.tar.gz](http://web.archive.org/web/20190324124426/http://www.geocities.jp/ipa_mona/opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8.tar.gz) をダウンロードし `~/.wine/drive_c/windows/Fonts/` へ放り込みます。
+
+※ geocities がなくなった影響でサイトが消えてるため INTERNET ARCHIVE からのリンクに変更しました (2019年04月30日追記)
 
 コマンドラインだけでやるなら
 
 ```bash
-$ wget http://www.geocities.jp/ipa_mona/opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8.tar.gz
+$ wget http://web.archive.org/web/20190324124426/http://www.geocities.jp/ipa_mona/opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8.tar.gz
 $ tar xzf opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8.tar.gz
 $ mv opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8/fonts/ipa*.ttf ~/.wine/drive_c/windows/Fonts/
 $ rm -rf opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8
@@ -275,7 +277,7 @@ hgimg4 を利用する場合は、もう少し手間がかかります。
 * [Wine を使って Mac OS X で HSP と hgimg4 を動かしてみた](/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html)
 * [MacOSX - WineHQ Wiki](https://wiki.winehq.org/MacOSX)
 * [Google Fontsの日本語フォント「Noto Fonts」の使い方 | OXY NOTES](http://oxynotes.com/?p=10293)
-* [IPAモナーフォント](http://www.geocities.jp/ipa_mona/)
+* [IPAモナーフォント](http://web.archive.org/web/20190326123924/http://www.geocities.jp/ipa_mona/)
 * [FontSmoothing](https://technet.microsoft.com/en-us/library/cc978612.aspx)
 * [Wine 1.1.12におけるフォントのサブピクセルレンダリングについて - 試験運用中なLinux備忘録](http://d.hatena.ne.jp/kakurasan/20090107/p1)
 

@@ -17,7 +17,7 @@ categories: [ブログ]
 
 で、[Android開発環境の構築 Eclipse編][3]あたりを参考に[Pleiades][4]を入れてみた。
 
- [3]: http://sky.geocities.jp/izeefss/develop/android/env_eclipse.html
+ [3]: http://izeef.web.fc2.com/develop/android/env_eclipse.html
  [4]: http://mergedoc.sourceforge.jp/
 
 

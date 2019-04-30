@@ -97,21 +97,6 @@ Toshi's HP <img src="/images/sougo.gif" alt="相互リンク" />
 </div>
 
 <div class="link"><h3>
-アップローダー的サイト <img src="/images/sougo.gif" alt="相互リンク" />
-</h3>
-<div>
-<a href="http://www.geocities.jp/sin_a_mouse/"
-><img class="banner" src="/images/link-nobanner_pokecom.gif" alt="アップローダー的サイト" width="144" height="48"
-/><span title="管理人">FM446 さん</span
-></a>
-</div>
-  
-  <p>
-    PC-G830で動くBASICのゲーム・ツールを扱っています。<br /> ポケコンに繋ぐちょっとしたゲームコントローラーの作り方も公開されています。
-  </p>
-</div>
-
-<div class="link"><h3>
 秋日和
 </h3>
 <div>

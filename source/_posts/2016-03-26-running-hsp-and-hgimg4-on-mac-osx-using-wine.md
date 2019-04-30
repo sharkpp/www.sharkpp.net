@@ -51,12 +51,14 @@ $ WINEPREFIX=~/wine-hgimg4-test wine xxx
 以降では `~/wine-hgimg4-test` を環境として使用します。
 
 
-日本語のフォントは  [IPAモナーフォント](http://www.geocities.jp/ipa_mona/) をインストールし、利用します。
+日本語のフォントは  [IPAモナーフォント](http://web.archive.org/web/20190326123924/http://www.geocities.jp/ipa_mona/) をインストールし、利用します。
+
+※ geocities がなくなった影響でサイトが消えてるため INTERNET ARCHIVE からのリンクに変更しました (2019年04月30日追記)
 
 まずは、フォントをインストールします。
 
 ```bash
-$ wget http://www.geocities.jp/ipa_mona/opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8.tar.gz
+$ wget http://web.archive.org/web/20190324124426/http://www.geocities.jp/ipa_mona/opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8.tar.gz
 $ tar xzf opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8.tar.gz
 $ mv opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8/fonts/ipa*.ttf ~/wine-hgimg4-test/drive_c/windows/Fonts/
 $ rm -rf opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8
@@ -286,7 +288,7 @@ hgimg4 の他のサンプルや、 HSPプログラムコンテスト 2015 で hg
 
 * [【微妙】HomebrewでWineを使う | cozy attic](https://cozyattic.wordpress.com/2015/02/16/homebrew%E3%81%A7wine%E3%82%92%E4%BD%BF%E3%81%86/)
 * [Wine環境(WINEPREFIX)を分けてWindowsアプリを上手に管理する - kakurasan](http://kakurasan.blogspot.jp/2015/06/manage-winapps-using-wineprefixes.html)
-* [IPAモナーフォント](http://www.geocities.jp/ipa_mona/)
+* [IPAモナーフォント](http://web.archive.org/web/20190326123924/http://www.geocities.jp/ipa_mona/)
 * [FontSmoothing](https://technet.microsoft.com/en-us/library/cc978612.aspx)
 * [Wine 1.1.12におけるフォントのサブピクセルレンダリングについて - 試験運用中なLinux備忘録](http://d.hatena.ne.jp/kakurasan/20090107/p1)
 [OS X 10.9 OpenGL Information - OpenGL - Apple Developer](https://developer.apple.com/opengl/capabilities/GLInfo_1090.html)
