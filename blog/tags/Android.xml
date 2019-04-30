@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/Android.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2019-04-27T08:59:03+00:00</updated>
+    <updated>2019-04-30T07:44:44+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -1189,7 +1189,7 @@ comp-lzo
 
 <p>が、メニューの「インポート」や「エクスポート」や「ビューの表示」などがグレーアウトして触れなくなる現象が発生した。</p>
 
-<p>で、<a href="http://sky.geocities.jp/izeefss/develop/android/env_eclipse.html">Android開発環境の構築 Eclipse編</a>あたりを参考に<a href="http://mergedoc.sourceforge.jp/">Pleiades</a>を入れてみた。</p>
+<p>で、<a href="http://izeef.web.fc2.com/develop/android/env_eclipse.html">Android開発環境の構築 Eclipse編</a>あたりを参考に<a href="http://mergedoc.sourceforge.jp/">Pleiades</a>を入れてみた。</p>
 
 <p>そのほかには、Androidのプラグインやsubversionを使用するためにSubversive SVN Team Providerを入れている。</p>
 

@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/How%20to.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2019-04-27T08:59:03+00:00</updated>
+    <updated>2019-04-30T07:44:44+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -531,11 +531,13 @@ require 'vendor/autoload.php';
 
 <p>以降では <code>~/wine-hgimg4-test</code> を環境として使用します。</p>
 
-<p>日本語のフォントは  <a href="http://www.geocities.jp/ipa_mona/">IPAモナーフォント</a> をインストールし、利用します。</p>
+<p>日本語のフォントは  <a href="http://web.archive.org/web/20190326123924/http://www.geocities.jp/ipa_mona/">IPAモナーフォント</a> をインストールし、利用します。</p>
+
+<p>※ geocities がなくなった影響でサイトが消えてるため INTERNET ARCHIVE からのリンクに変更しました (2019年04月30日追記)</p>
 
 <p>まずは、フォントをインストールします。</p>
 
-<pre><code class="bash">$ wget http://www.geocities.jp/ipa_mona/opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8.tar.gz
+<pre><code class="bash">$ wget http://web.archive.org/web/20190324124426/http://www.geocities.jp/ipa_mona/opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8.tar.gz
 $ tar xzf opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8.tar.gz
 $ mv opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8/fonts/ipa*.ttf ~/wine-hgimg4-test/drive_c/windows/Fonts/
 $ rm -rf opfc-ModuleHP-1.1.1_withIPAMonaFonts-1.0.8
@@ -768,7 +770,7 @@ Wine build complete.
 <ul>
 <li><a href="https://cozyattic.wordpress.com/2015/02/16/homebrew%E3%81%A7wine%E3%82%92%E4%BD%BF%E3%81%86/">【微妙】HomebrewでWineを使う | cozy attic</a></li>
 <li><a href="http://kakurasan.blogspot.jp/2015/06/manage-winapps-using-wineprefixes.html">Wine環境(WINEPREFIX)を分けてWindowsアプリを上手に管理する - kakurasan</a></li>
-<li><a href="http://www.geocities.jp/ipa_mona/">IPAモナーフォント</a></li>
+<li><a href="http://web.archive.org/web/20190326123924/http://www.geocities.jp/ipa_mona/">IPAモナーフォント</a></li>
 <li><a href="https://technet.microsoft.com/en-us/library/cc978612.aspx">FontSmoothing</a></li>
 <li><a href="http://d.hatena.ne.jp/kakurasan/20090107/p1">Wine 1.1.12におけるフォントのサブピクセルレンダリングについて - 試験運用中なLinux備忘録</a>
 <a href="https://developer.apple.com/opengl/capabilities/GLInfo_1090.html">OS X 10.9 OpenGL Information - OpenGL - Apple Developer</a></li>
