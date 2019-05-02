@@ -7,10 +7,10 @@ redirect:
 ---
 
 <div class="link"><h3>
-COSMO PATROL <img src="/images/sougo.gif" alt="相互リンク" />
+COSMO PATROL
 </h3>
 <div>
-<a href="http://orange.kakiko.com/cosmopatrol/"
+<a href="http://cosmopatrol.web.fc2.com/"
 ><img class="banner" src="/images/link-cospat.gif" alt="COSMO PATROL" width="171" height="52"
 /><span title="管理人">咳めぐ さん</span
 ></a>
@@ -115,8 +115,8 @@ Toshi's HP <img src="/images/sougo.gif" alt="相互リンク" />
 おちゃめくらぶ
 </h3>
 <div>
-<a href="http://ww5.tiki.ne.jp/~ochame/"
-><img class="banner" src="http://ww5.tiki.ne.jp/~ochame/BANNER.JPG" alt="おちゃめくらぶ" width="198" height="40"
+<a href="http://ochameclub.web.fc2.com/"
+><img class="banner" src="/images/ochame-banner.jpg" alt="おちゃめくらぶ" width="200" height="40"
 /><span title="管理人">御茶目菜子 さん</span
 ></a>
 </div>
