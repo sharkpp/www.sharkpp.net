@@ -3,11 +3,214 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/atom.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2019-05-18T04:09:20+00:00</updated>
+    <updated>2019-05-18T08:20:43+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[名古屋Qt勉強会#28 に参加しました]]></title>
+            <link href="http://www.sharkpp.net/blog/2019/05/18/qt-nagoya-28.html"/>
+            <updated>2019-05-18T17:15:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2019/05/18/qt-nagoya-28.html</id>
+            <content type="html"><![CDATA[<p>5月18日(土) に開催された <a href="https://qt-users.connpass.com/event/130498/">Qt 勉強会 @ Nagoya #28 - connpass</a> へ前回に引き続き参加しました。</p>
+
+<p>そのまとめです。</p>
+
+<p><img src="/images/20190518_frame_extract.png" alt="成果" /></p>
+
+<h2 id="%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B">自己紹介</h2>
+
+<p>毎回の通り、自己紹介と本日やることを宣言。</p>
+
+<p>初めて参加の方が二人いた。
+次回以降も参加してくれるといいな。</p>
+
+<h2 id="%E8%87%AA%E5%88%86%E3%81%AE%E6%9C%AC%E6%97%A5%E3%81%AE%E3%82%84%E3%82%8B%E3%81%93%E3%81%A8">自分の本日のやること</h2>
+
+<ul>
+<li>前回の続きの動画からフレームを切り出し動画のメタ情報とフレーム位置に応じた時刻を設定するツールを実装</li>
+</ul>
+
+<p>前回までの状況</p>
+
+<ul>
+<li>ファイルドロップでファイル名などを取れるようになった</li>
+<li>画面の再構成中（これは勉強会後に自宅で実装、そして途中も途中で中断してた...）</li>
+</ul>
+
+<h2 id="%E6%9C%AC%E6%97%A5%E3%81%AE%E7%9F%A5%E8%A6%8B">本日の知見</h2>
+
+<h3 id="component-wthi-path-xxxx-could-not-be-created">Component wthi path XXXX could not be created</h3>
+
+<p><img src="/images/20190518_qtcreator_error1.png" alt="Component wthi path XXXX could not be created" /></p>
+
+<p>QMLのデザイナのナビゲータエリアで ⚠️ マークと共に <code>Component with path /path/to/qml could not be created</code> (訳: <code>パス /path/to/qml のコンポーネントを作成できませんでした</code>) と出た。</p>
+
+<p>このエラー出るパターンとして、実際にファイルがない場合と該当ファイルでなんらかのエラーが起きて読み込みに失敗した場合にも同様のメッセージが表示されるようだ。</p>
+
+<h3 id="qml%E3%81%A7%E3%81%AErow%2Fcolumn">QMLでのRow/Column</h3>
+
+<p>QMLの <a href="https://doc.qt.io/qt-5/qtquick-positioning-layouts.html">Item Positioners</a> や <a href="https://doc.qt.io/qt-5/qtquicklayouts-index.html">Qt Quick Layouts</a> を利用するとき、ちょっと直感的じゃない。</p>
+
+<p>名前はともかくとして、デザイナのエレメントエリアに存在するアイコンが正直、致命的に頭悪いと思う。</p>
+
+<table>
+<thead>
+<tr>
+  <th>QMLタイプ</th>
+  <th>デザイナ内のアイコン</th>
+  <th>実際の動き</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="https://doc.qt.io/qt-5/qml-qtquick-column.html">Column QML Type</a></td>
+  <td>縦棒３つ（＝横に並ぶ）</td>
+  <td>縦に並ぶ</td>
+</tr>
+<tr>
+  <td><a href="https://doc.qt.io/qt-5/qml-qtquick-row.html">Row QML Type</a></td>
+  <td>横棒３つ（＝縦に並ぶ）</td>
+  <td>横に並ぶ</td>
+</tr>
+<tr>
+  <td><a href="https://doc.qt.io/qt-5/qml-qtquick-layouts-columnlayout.html">ColumnLayout QML Type</a></td>
+  <td>縦棒３つ（＝横に並ぶ）</td>
+  <td>縦に並ぶ</td>
+</tr>
+<tr>
+  <td><a href="https://doc.qt.io/qt-5/qml-qtquick-layouts-rowlayout.html">RowLayout QML Type</a></td>
+  <td>横棒３つ（＝縦に並ぶ）</td>
+  <td>横に並ぶ</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="binding-loop-detected-for-property-xxxx">Binding loop detected for property XXXX</h3>
+
+<p>ログに <code>QML {component}: Binding loop detected for property "{property}"</code> と出てるけどよくわからん。</p>
+
+<p>っとおもったら以前もハマった問題にまたハマってただけだった。</p>
+
+<p>つまり、</p>
+
+<pre><code>Item {
+    id: root
+    property var fuga: null
+
+    Hoge {
+        id: hoge
+        fuga: fuga // QML Hoge: Binding loop detected for property "fuga"
+    }
+}
+</code></pre>
+
+<p>というコードで発生してた。</p>
+
+<p>スコープの関係で <code>root.fuga</code> ではなく <code>hoge.fuga</code> を参照してるのでエラーとして出てたようだ。</p>
+
+<p>まあ、確かに言われてみればそうだよねとしか...</p>
+
+<pre><code class="diff">  Item {
+      id: root
+-     property var fuga: null
++     property var fuga_: null
+
+      Hoge {
+          id: hoge
+-         fuga: fuga // QML Hoge: Binding loop detected for property "fuga"
++         fuga: fuga_
+      }
+  }
+</code></pre>
+
+<p>結局こんな感じに修正</p>
+
+<h3 id="qml%E3%81%8B%E3%82%89qt%E6%A8%99%E6%BA%96%E3%81%AE%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E3%82%92%E4%BD%BF%E3%81%86">QMLからQt標準のアイコンを使う</h3>
+
+<p>どうも現状はない（少なくとも去年の段階では無い）らしいので <code>QQuickImageProvider</code> を使って自分でアイコン用のプロバイダを作る必要があるとのこと。</p>
+
+<p>参考 <a href="https://senooken.jp/blog/2018/02/04/">QMLからQt付属の標準アイコンを使う方法</a></p>
+
+<h3 id="qml%E3%81%AE%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3">QMLのプロパティ</h3>
+
+<table>
+<thead>
+<tr>
+  <th>書き方</th>
+  <th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>property var XXX</code></td>
+  <td>プロパティ<code>XXX</code>を作成</td>
+</tr>
+<tr>
+  <td><code>property bool XXX: false</code></td>
+  <td>boolean型のプロパティ<code>XXX</code>を作成し<code>false</code>で初期化</td>
+</tr>
+<tr>
+  <td><code>property real XXX: 5</code></td>
+  <td>実数型のプロパティ<code>XXX</code>を作成し<code>5</code>で初期化</td>
+</tr>
+<tr>
+  <td><code>property alias XXX: YYY</code></td>
+  <td>id:<code>YYY</code>をプロパティ<code>XXX</code>として公開？</td>
+</tr>
+</tbody>
+</table>
+
+<p><code>alias</code> なんてキーワード初めて知った。
+<a href="https://doc.qt.io/qt-5/qtqml-syntax-objectattributes.html">QML Object Attributes</a> がドキュメントらしい。</p>
+
+<h2 id="%E6%9C%AC%E6%97%A5%E3%81%AE%E9%80%B2%E6%8D%97">本日の進捗</h2>
+
+<p>とりあえず必死になって前回の状態を記憶から掘り起こし実装を再開。</p>
+
+<p>どうやら画面の再構成が中途になってたのでその続き。</p>
+
+<p>画面を整理しながらちょっとづつ実装...</p>
+
+<pre><code>QML構造
+  main.qml ... メイン
+    AppWindow.ui.qml
+      PageVideoDrop.qml ... 動画読み込みページ
+        ComponentDropArea.ui.qml
+      PageVideoLoading.qml ... 動画読み込み中ページ
+        ComponentLoading.ui.qml
+      PageSelectFrame.qml ... 動画のフレーム選択ページ
+        ComponentThumbnailList.ui.qml
+        ComponentThumbnailSeekBar.ui.qml
+      PageExtractFrame.qml ...
+        ComponentExtract.ui.qml
+</code></pre>
+
+<p>とりあえずこんな感じで実装してみる。</p>
+
+<p>アイコンはいつもの <a href="https://material.io/tools/icons/?style=baseline">Icons - Material Design</a> から。</p>
+
+<p>なぜか画面が真っ白... からは少し進んだけど構造を変えた影響でファイルをドロップしても先に進まない...</p>
+
+<p><img src="/images/20190518_frame_extract.png" alt="成果" /></p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="/blog/2019/04/27/qt-nagoya-27.html">名古屋Qt勉強会#27 に参加しました</a></li>
+<li><a href="https://blog.qt.io/jp/2010/10/27/qml-states-2/">Qt Quick 入門 第5回: 状態遷移 - Qt Japanese Blog</a></li>
+<li><a href="https://doc.qt.io/qt-5/qtquick-positioning-layouts.html">Item Positioners | Qt Quick 5</a></li>
+<li><a href="https://doc.qt.io/qt-5/qtquicklayouts-index.html">Qt Quick Layouts | Qt Quick 5</a></li>
+<li><a href="https://senooken.jp/blog/2018/02/04/">QMLからQt付属の標準アイコンを使う方法</a></li>
+<li><a href="http://nukesaq88.hatenablog.com/entry/2013/04/12/005525">Qt デフォルトで使用可能な組み込みアイコン QStyle::StandardPixmaps - unstable diary</a></li>
+<li><a href="https://material.io/tools/icons/?style=baseline">Icons - Material Design</a></li>
+<li><a href="https://doc.qt.io/qt-5/qtdoc-demos-coffee-choosingcoffee-ui-qml.html">ChoosingCoffee.ui.qml Example File | Qt 5</a></li>
+<li><a href="https://doc.qt.io/qt-5/qtqml-syntax-objectattributes.html">QML Object Attributes | Qt QML 5.12.3</a></li>
+<li><a href="https://stackoverflow.com/questions/28250710/qt-5-4-qml-prevent-binding-loop">c++ - Qt 5.4/Qml: Prevent binding loop - Stack Overflow</a></li>
+</ul>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[名古屋Qt勉強会#27 に参加しました]]></title>
             <link href="http://www.sharkpp.net/blog/2019/04/27/qt-nagoya-27.html"/>
@@ -3031,112 +3234,6 @@ ipcRenderer.on('test', (sender, data) =&gt; {
 <li><a href="https://github.com/electron/electron/blob/master/docs/api/web-contents.md">electron/web-contents.md at master · electron/electron</a></li>
 <li><a href="https://electronjs.org/docs/api/webview-tag#dom-events"><webview> Tag | Electron</a></li>
 </ul>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Franz 用の Misskey レシピを作りました！]]></title>
-            <link href="http://www.sharkpp.net/blog/2018/08/27/franz-recipe-misskey.html"/>
-            <updated>2018-08-27T00:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2018/08/27/franz-recipe-misskey.html</id>
-            <content type="html"><![CDATA[<p>先日から話題になってた分散マイクロブログSNSであるところの <a href="https://github.com/syuilo/misskey">syuilo/misskey: A planet of fediverse ✨🐢🚀✨</a> があります。
-それに対応したクライアント <a href="https://github.com/sharkpp/franz-recipe-misskey">Franz 5 recipe for Misskey</a> を昨晩公開したので紹介します。</p>
-
-<h2 id="%E3%81%9D%E3%82%82%E3%81%9D%E3%82%82-franz-%E3%81%A8%E3%81%AF%E3%81%AA%E3%82%93%E3%81%9E%E3%82%84%EF%BC%9F">そもそも Franz とはなんぞや？</h2>
-
-<p>簡単にいうと Franz は、各種 SNS をタブでまとめて管理できるデスクトップアプリです。</p>
-
-<p><a href="https://meetfranz.com/">Franz – a free messaging app for Slack, Facebook Messenger, WhatsApp, Telegram and more</a> からダウンロードできますが、利用するにはアカウント登録が必要です。</p>
-
-<p>特徴として</p>
-
-<ul>
-<li>レシピ（＝拡張）を追加することで様々な SNS などの Webサービスに対応可能</li>
-<li>レシピごとに複数のアカウントを割り当て可能（＝マルチアカウント対応）</li>
-<li>クロスプラットフォームなデスクトップアプリ</li>
-</ul>
-
-<p>などがあります。</p>
-
-<p>まあ、要するに Webで提供されているページをタブで表示している訳です。
-そのため、LINE など Webページが存在しないサービスに対しては逆立ちしても利用できないのですが...</p>
-
-<h2 id="%E5%BF%85%E8%A6%81%E3%81%AA%E3%82%82%E3%81%AE">必要なもの</h2>
-
-<ul>
-<li><a href="https://meetfranz.com/">Franz</a> 5 以降<br />古いバージョンはサポートしていません。</li>
-<li><a href="https://joinmisskey.github.io/">Misskey</a> アカウント<br />アカウントを持っていない場合は、自分で Misskey インスタンスを立ち上げるか <a href="https://joinmisskey.github.io/ja/wiki/instances/">Misskey instances</a> から探して見てください</li>
-</ul>
-
-<h2 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95">インストール方法</h2>
-
-<h3 id="%E9%96%8B%E7%99%BA%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3">開発バージョン</h3>
-
-<ol>
-<li><code>franz-recipe-misskey</code> をダウンロードします。</li>
-<li>PC上の Franz Plugins フォルダを開きます<br />(メモ： <strong><code>dev</code> ディレクトリが存在しない場合は作成する必要があります</strong>)
-
-<ul>
-<li>Mac: <code>~/Library/Application Support/Franz/recipes/dev/</code></li>
-<li>Windows: <code>%AppData%\Franz\recipes\dev\</code></li>
-<li>Linux: <code>~/.config/Franz/recipes/dev</code></li>
-</ul></li>
-<li><code>franz-recipe-misskey</code> フォルダを plugins ディレクトリにコピーします</li>
-<li>Franz を再起動する</li>
-</ol>
-
-<p>詳しくは <a href="https://github.com/meetfranz/plugins/blob/master/docs/integration.md">Franz Recipe Documentation / Overview</a> を参照してください。</p>
-
-<h3 id="%E5%AE%89%E5%AE%9A%E7%89%88">安定版</h3>
-
-<p>準備中...</p>
-
-<p>※ <a href="https://github.com/meetfranz/plugins/issues/194">[Deploy] Misskey - Issue #194 - meetfranz/plugins</a> で公式リポジトリへの登録をリクエストをしているけど、どうなることやら</p>
-
-<h2 id="%E5%88%A9%E7%94%A8%E6%96%B9%E6%B3%95">利用方法</h2>
-
-<h3 id="%E6%96%B0%E3%81%97%E3%81%84%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B">新しいサービスを追加する</h3>
-
-<p><img src="/images/20180826_add-service.png" alt="サービスの追加" /></p>
-
-<p><em>開発バージョン</em></p>
-
-<h3 id="%E8%A8%AD%E5%AE%9A">設定</h3>
-
-<p><img src="/images/20180826_add-service-settings.png" alt="サービスの追加" /></p>
-
-<table>
-<thead>
-<tr>
-  <th>#</th>
-  <th>フィールド</th>
-  <th>説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>①</td>
-  <td>サービス名</td>
-  <td>自由に設定してください</td>
-</tr>
-<tr>
-  <td>②</td>
-  <td>Misskey インスタンスのホスト名</td>
-  <td>Misskey を実行しているホストを入力してください。 httpsのみがサポートされています</td>
-</tr>
-</tbody>
-</table>
-
-<h3 id="%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3">サインイン</h3>
-
-<p><img src="/images/20180826_misskey-signin.png" alt="" /></p>
-
-<p>登録されたアカウント情報を入力してください。</p>
-
-<h3 id="%E9%80%9A%E7%9F%A5%E3%83%90%E3%83%83%E3%82%B8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">通知バッジについて</h3>
-
-<p><img src="/images/20180826_notification-badge-example.png" alt="" /></p>
-
-<p>通知を確認すると同時にクリアされます。</p>
 ]]></content>
         </entry>
     </feed>
