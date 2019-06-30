@@ -22,7 +22,16 @@ categories: [ブログ]
 
 開封の義を今回もやったのですが写真を取り忘れてたので再現となります。
 
-▲写真
+![](/images/20190630_trueshift_002.jpg)  
+
+![](/images/20190630_trueshift_003.jpg)  
+
+![](/images/20190630_trueshift_004.jpg)  
+
+![](/images/20190630_trueshift_005.jpg)  
+
+![](/images/20190630_trueshift_006.jpg)  
+
 
 まず、イヤホンの本体左右に、充電兼用ケースは当然ですね  .
 
