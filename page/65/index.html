@@ -18,7 +18,20 @@
        ></li></ol><div class="row"><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
            href="/blog/"><i class="fa fa-archive fa-4x"></i><br />アーカイブ</a></div><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
            href="/product/"><i class="fa fa-download fa-4x"></i><br />作ったもの</a></div><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
-           href="/graffiti/"><i class="fa fa-paint-brush fa-4x"></i><br />落書き</a></div></div><hr style="border-bottom: 1px dashed #aaa; border-top: none;" /><article class="full-contents"><header><h1><a href="/blog/2009/11/25/now-release-lhaplus-x64-shell-extension-ver-1-0-1-0.html">Lhaplus x64 shell extension ver.1.0.1.0をリリースしました</a></h1></header><div><p><div class="alert alert-danger alert-dismissible" role="alert"><div class="pull-left"><i class="fa fa-warning fa-2x"></i></div><dl style="margin-bottom: 0; margin-left: 35px;"><dt>2015-06-02 追記</dt><dd>Lhaplus Version 1.70 以降のバージョンで公式に 64bit な Windows でのコンテキストメニュー表示がサポートされました。
+           href="/graffiti/"><i class="fa fa-paint-brush fa-4x"></i><br />落書き</a></div></div><hr style="border-bottom: 1px dashed #aaa; border-top: none;" /><article class="full-contents"><header><h1><a href="/blog/2009/12/13/backup-to-svn-dump-convert-script.html">バックアップファイルからSVNのダンプファイルへの変換スクリプト</a></h1></header><div><p>フォルダまるごとのバックアップからSubversionのリポジトリを作るツールを作ってみた。</p><p>過去に作ったプロジェクトをSubversionのリポジトリへ追加したかったが、それらしいツールが見つからなかった。</p><p>条件として、日付を保ったままで追加したかったのだけど、そういう特殊な用途のものは無いようで結局自作。</p><p>php(5.2以降)+mb_stringが必要です。</p><p><a href="/files/backup2svn-dump_20091213.zip">backup2svn-dump_20091213.zip</a></p><p>ダウンロード先は取り敢えずで、どこに置こうか考え中。</p><p>とりあえず、</p><ul><li>ほげ\
+
+<ul><li>v000\</li><li>v001\</li><li>v003\</li></ul></li></ul><p>とフォルダがあったら、順番にv000→v001→v003とフォルダ単位でフォルダ内(サブフォルダを含む)の一番最新のファイルの日付でコミットします。</p><p>@ファイル内のテキストをコミット時のコメントとして使用します。</p><p>あと、branch/tag機能を付けたいなー</p></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i>&nbsp;
+        <span itemprop="datePublished" content="2009-12-13">2009年12月13日</span>
+        &nbsp;/&nbsp;
+        <i class="fa fa-history"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2009-12-13-backup-to-svn-dump-convert-script.md">変更履歴</a>
+        &nbsp;/&nbsp;
+        <i class="fa fa-thumb-tack"></i>&nbsp;<a href="/blog/2009/12/13/backup-to-svn-dump-convert-script.html">Permalink</a>
+        &nbsp;/&nbsp;
+                                <span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
+                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
+        &nbsp;/&nbsp;
+                                <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:
+                        <a href="/blog/tags/php">php</a>,                         <a href="/blog/tags/Subversion">Subversion</a></span></span></div></footer></article><article class="full-contents"><header><h1><a href="/blog/2009/11/25/now-release-lhaplus-x64-shell-extension-ver-1-0-1-0.html">Lhaplus x64 shell extension ver.1.0.1.0をリリースしました</a></h1></header><div><p><div class="alert alert-danger alert-dismissible" role="alert"><div class="pull-left"><i class="fa fa-warning fa-2x"></i></div><dl style="margin-bottom: 0; margin-left: 35px;"><dt>2015-06-02 追記</dt><dd>Lhaplus Version 1.70 以降のバージョンで公式に 64bit な Windows でのコンテキストメニュー表示がサポートされました。
     非公式なこのシェル拡張をアンインストールし Lhaplus をアップデートすることをお勧めします。</dd></dl></div></p><p>DLLなし圧縮・解凍ソフト <a href="http://hoehoe.com/">Lhaplus</a> の 64bit版Windows用シェル拡張をアップデートしました。</p><p>今回のアップデートは不具合修正のみです。</p><p>フォルダツリーやナビゲーションウィンドウを表示した状態での右クリックで「圧縮」や「解凍」などのメニュー項目が表示されていなかった不具合を修正しました。</p><p>普段、フォルダツリーなんか表示していないのでまったく気が付かなかったです...とほほ</p><p>アップデートは、アンインストール→PC再起動(ログオフでもか？試してないです)→インストールの手順で行ってください。</p><p>再起動を行わないとexplorer.exeがdllをロックしたままでファイルの上書きが出来ないのでインストールに失敗してしまいます。</p><p>ダウンロードは、<a href="/blog/categories/%E3%83%84%E3%83%BC%E3%83%AB">ツール</a>からどうぞ</p></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i>&nbsp;
         <span itemprop="datePublished" content="2009-11-25">2009年11月25日</span>
         &nbsp;/&nbsp;
@@ -41,31 +54,7 @@
                         <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
         &nbsp;/&nbsp;
                                 <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:
-                        <a href="/blog/tags/HSP">HSP</a>,                         <a href="/blog/tags/HSP%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%B3%E3%83%B3%E3%83%86%E3%82%B9%E3%83%88">HSPプログラムコンテスト</a></span></span></div></footer></article><article class="full-contents"><header><h1><a href="/blog/2009/10/11/hsp-sample-wood-pattern.html">木目パターンの生成: HSPで遊ぶ 其の１</a></h1></header><div><p>今回はHSPのスクリプトです。</p><p>あるソフトで使いたかったので試しに作ってみたら意外とそれらしいのができました。</p><pre>hsvcolor 26,49,246
-boxf
-sx = ginfo_winx
-sy = ginfo_winy
-repeat 256
-hsvcolor 26,49,246+rnd(20)-10
-y=rnd(sy)
-y1=y+rnd(30)-15
-y2=y+rnd(30)-15
-repeat 1+rnd(3)
-line 0,y1+cnt,sx,y2+cnt
-loop
-loop
-</pre><p>こんなのが出来ます。</p><p><a href="/images/2009_1011_wood_pattern.jpg"><img src="/images/2009_1011_wood_pattern.png" alt="2009_1011_wood_pattern.png" /></a></p><p>これだからプログラムはいいですね</p></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i>&nbsp;
-        <span itemprop="datePublished" content="2009-10-11">2009年10月11日</span>
-        &nbsp;/&nbsp;
-        <i class="fa fa-history"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2009-10-11-hsp-sample-wood-pattern.md">変更履歴</a>
-        &nbsp;/&nbsp;
-        <i class="fa fa-thumb-tack"></i>&nbsp;<a href="/blog/2009/10/11/hsp-sample-wood-pattern.html">Permalink</a>
-        &nbsp;/&nbsp;
-                                <span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
-                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
-        &nbsp;/&nbsp;
-                                <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:
-                        <a href="/blog/tags/HSP">HSP</a>,                         <a href="/blog/tags/HSP%E3%81%A7%E9%81%8A%E3%81%B6">HSPで遊ぶ</a></span></span></div></footer></article><br /><nav><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/page/64" title=""><span class="title"><i class="fa fa-chevron-left"></i> 新しい投稿</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/page/66" title=""><span class="title">古い投稿</span><i class="fa fa-chevron-right"></i></a></li></ul></nav></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li><li><i class="fa-li fa fa-ellipsis-h"></i><a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /page/65"
+                        <a href="/blog/tags/HSP">HSP</a>,                         <a href="/blog/tags/HSP%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%B3%E3%83%B3%E3%83%86%E3%82%B9%E3%83%88">HSPプログラムコンテスト</a></span></span></div></footer></article><br /><nav><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/page/64" title=""><span class="title"><i class="fa fa-chevron-left"></i> 新しい投稿</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/page/66" title=""><span class="title">古い投稿</span><i class="fa fa-chevron-right"></i></a></li></ul></nav></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li><li><i class="fa-li fa fa-ellipsis-h"></i><a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /page/65"
                                   rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li></ul></div><div class="container text-center"><ul class="list-unstyled list-inline"><li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li><li class="text-muted">&copy; 2004-2019 sharkpp</li></ul></div><div class="container text-center text-muted"><ruby><rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
                                                             >Creative Commons Attribution 4.0 International License</a>.</rb><rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
                                                   >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp></ruby></div><div class="container text-center text-muted"><ruby><rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
