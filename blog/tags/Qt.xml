@@ -3,11 +3,75 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/Qt.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2019-06-30T15:12:35+00:00</updated>
+    <updated>2019-07-29T14:53:40+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Qt メモ]]></title>
+            <link href="http://www.sharkpp.net/blog/2019/07/29/qt-memo.html"/>
+            <updated>2019-07-29T23:50:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2019/07/29/qt-memo.html</id>
+            <content type="html"><![CDATA[<p>frame_extract を実装中に調べメモした、 Qt 関連の事を記事にしました。</p>
+
+<h2 id="%E6%96%87%E5%AD%97%E5%88%97%E3%82%92%E6%89%B1%E3%81%86%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%AA%E3%81%A9%E3%81%AE%E9%81%95%E3%81%84">文字列を扱うクラスなどの違い</h2>
+
+<table>
+<thead>
+<tr>
+  <th>型</th>
+  <th>必要なヘッダ</th>
+  <th>qmake</th>
+  <th>特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="https://doc.qt.io/qt-5/qstring.html">QString Class</a></td>
+  <td><code>#include &lt;QString&gt;</code></td>
+  <td><code>QT += core</code></td>
+  <td>UTF-16で符号化。標準的な文字列の管理方法。生成コストは <code>QLatin1String</code> より高い</td>
+</tr>
+<tr>
+  <td><a href="https://doc.qt.io/qt-5/qstring.html#QStringLiteral">QStringLiteral Macro</a></td>
+  <td><code>#include &lt;QString&gt;</code></td>
+  <td><code>QT += core</code></td>
+  <td><code>QString</code> 構築処理の一部をコンパイル時に行うため生成コストが少ない</td>
+</tr>
+<tr>
+  <td><a href="https://doc.qt.io/qt-5/qlatin1string.html">QLatin1String Class</a></td>
+  <td><code>#include &lt;QLatin1String&gt;</code></td>
+  <td><code>QT += core</code></td>
+  <td>US-ASCII/Latin-1で符号化。<code>QLatin1String</code> を扱うためのオーバーロードが提供されていない場合は暗黙に <code>QString</code> へ変換されるため生成コストがかかる。</td>
+</tr>
+<tr>
+  <td><a href="https://doc.qt.io/qt-5/qbytearray.html">QByteArray Class</a></td>
+  <td><code>#include &lt;QByteArray&gt;</code></td>
+  <td><code>QT += core</code></td>
+  <td>１バイト単位で管理。データとして文字列を管理（つまり <code>'¥0'</code> もデータの一部として管理される）</td>
+</tr>
+<tr>
+  <td><a href="https://doc.qt.io/qt-5/qbytearray.html#QByteArrayLiteral">QByteArrayLiteral Macro</a></td>
+  <td><code>#include &lt;QByteArray&gt;</code></td>
+  <td><code>QT += core</code></td>
+  <td><code>QByteArray</code> 構築処理の一部をコンパイル時に行うため生成コストが少ない</td>
+</tr>
+</tbody>
+</table>
+
+<p>まとめるとこんな感じらしい。</p>
+
+<p>サロゲートペアとかの扱いや絵文字とかの描画周りも調べて見たいところ。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://doc.qt.io/qt-5/qtquick-modelviewsdata-cppmodels.html">Using C++ Models with Qt Quick Views</a></li>
+<li><a href="https://forum.qt.io/topic/78540/qstringliteral-vs-qlatin1string/2">QStringLiteral vs QLatin1String | Qt Forum</a></li>
+</ul>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[名古屋Qt勉強会#28 に参加しました]]></title>
             <link href="http://www.sharkpp.net/blog/2019/05/18/qt-nagoya-28.html"/>
@@ -1408,187 +1472,6 @@ Window {
 <li><a href="http://doc.qt.io/qt-5/qtquickcontrols-index.html">Qt Quick Controls 5.11</a></li>
 <li><a href="https://doc.qt.io/archives/qt-5.7/qtquickcontrols2-customize.html">Customizing Qt Quick Controls 2 | Qt Quick Controls 2 5.7</a></li>
 <li><a href="http://blog.qt.io/jp/2011/03/10/qml-drawing-2/">Qt Quick 入門 第8回: QML の描画処理 - Qt Japanese Blog</a></li>
-</ul>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[技術書典4に行ってきた]]></title>
-            <link href="http://www.sharkpp.net/blog/2018/05/18/techbookfest4.html"/>
-            <updated>2018-05-18T01:10:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2018/05/18/techbookfest4.html</id>
-            <content type="html"><![CDATA[<p>一昨年から始まった技術書オンリーな同人イベント、「<a href="https://techbookfest.org/event/tbf04">技術書典４</a>」が、4月22日に開催されました。
-今回はイベントが始まって以来の快晴で運営さんも大慌てだった、とか言う話も。
-まあ、ともかく今回も昨年に引き続き「技術書典」に引き続き行ってきました。
-これは、そのレポート、もしくは戦果報告となります。
-いやはや、かなり周回遅れながらなんとかアップしました。</p>
-
-<p><img src="/images/20180422_tf4.jpg" alt="会場前にて" /></p>
-
-<h2 id="%E5%A7%8B%E3%82%81%E3%81%AB">始めに</h2>
-
-<p>まず、前回のレポートは「<a href="/blog/2017/10/23/techbookfest3.html">技術書典３にサークル手伝いとして参加してきた - さめたすたすのお家</a>
-」です。</p>
-
-<p>今回は、サークル数 246 、入場者数 6380 人だったようです。前回から二倍以上増えていて、もう人口密度が大変なことになっていました。</p>
-
-<p><a href="https://docs.google.com/spreadsheets/d/1gNVy9ukLn3kYzOC0nyOpysD-Xl3fIzHl26WSSLHC-HY/edit?usp=sharing"><img src="/images/20180430_tf1_tf4_graph.png" alt="参加人数" /></a></p>
-
-<h2 id="%E5%BD%93%E6%97%A5">当日</h2>
-
-<p>09:45ぐらいに行ったところ、すでに結構な人数が集まってました。
-まあ、集まってるとは言っても、その時点では一般参加者の列形成はされてなかったのでばらばらと散らばっている感じ。</p>
-
-<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">技術書典4 <a href="https://twitter.com/hashtag/%E6%8A%80%E8%A1%93%E6%9B%B8%E5%85%B8?src=hash&amp;ref_src=twsrc%5Etfw">#技術書典</a> 入場待機中<br>9:45ぐらいで一般参加者が集まってた <a href="https://t.co/eXsELI3LRW">pic.twitter.com/eXsELI3LRW</a></p>&mdash; 俺はさめたすたすでいく！！！ (@sharkpp) <a href="https://twitter.com/sharkpp/status/987863108789063680?ref_src=twsrc%5Etfw">2018年4月22日</a></blockquote>
-
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>そして、10:00 すこし前に一般参加者の列形成を開始。
-整理券を配ってましたがどうやら並んでないと入れない、との話が漏れ聞えて来ました。</p>
-
-<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E6%8A%80%E8%A1%93%E6%9B%B8%E5%85%B8?src=hash&amp;ref_src=twsrc%5Etfw">#技術書典</a> <a href="https://twitter.com/hashtag/%E6%8A%80%E8%A1%93%E6%9B%B8%E5%85%B84?src=hash&amp;ref_src=twsrc%5Etfw">#技術書典4</a> サークル一覧のサークル配置図がお亡くなりに <a href="https://t.co/IJBzP4d5n7">pic.twitter.com/IJBzP4d5n7</a></p>&mdash; 俺はさめたすたすでいく！！！ (@sharkpp) <a href="https://twitter.com/sharkpp/status/987869942820163585?ref_src=twsrc%5Etfw">2018年4月22日</a></blockquote>
-
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>サークル配置図を見ようとしたらお亡くなりになっていたり、トイレが近くて危なかったけど、何とかなった。
-なんか、以前も同じようなことを...</p>
-
-<p>スタッフさんが、毎度おなじみ手提げバッグを持って回っていて、今回は（前回も？）どうやら後払い公式アプリでも払えるようだったけど、時間かかりそうだったので現金払いにした。
-まあ、毎度のことながら会場内でも購入できるんだけどね。</p>
-
-<p>そして、11:00 会場内で拍手があり、ついに会場。</p>
-
-<p>「この列の人、手をあげてください！」ってスタッフさんが来たので、前後を見てなんとなく手をあげたところ、どうやら第一陣の入場対象に含まれたらしく、最初に入場することができました。</p>
-
-<p>とりあえず、最初に入場できたので、知り合いのところなどなど、早速お目当てのサークルさんを駆け巡ることに。</p>
-
-<p>なんかブースの配置が一部ぐるっと回り込まないとダメな構造だったので、買い忘れで戻った時には人が多くて大変だった。</p>
-
-<p>前回から実装された、後払い公式アプリで決済をしつつ、たまに現金払い。</p>
-
-<p>後払いは簡単に決済できるから、面白いようにお金が飛んでく...</p>
-
-<p>戦利品は後ほどで。</p>
-
-<p>最後は前回と同じように、秋葉原のヤマト運輸営業所で荷物を発送しました。</p>
-
-<p>さすがに今回は購入した量が多く、紙袋的なものだと破けそうだったので箱で送ることに。</p>
-
-<p><img src="/images/20180422_tf4_packing.jpg" alt="梱包" /></p>
-
-<p>無事発送もすんだので、今回の技術書典４を抜け、身軽になって観光しました。</p>
-
-<h2 id="%E6%88%A6%E5%88%A9%E5%93%81">戦利品</h2>
-
-<p>今回の戦利品</p>
-
-<p><img src="/images/20180429_tf4_booty.jpg" alt="戦利品" /></p>
-
-<table>
-<thead>
-<tr>
-  <th>ブース</th>
-  <th>サークル名/ペンネーム</th>
-  <th>備考</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td></td>
-  <td>達人出版会</td>
-  <td>「<a href="https://techbookfest.org/journal/3">技術季報 2018 SPRING</a>」※技術書典カタログ</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf04/circle/17450001">い15</a></td>
-  <td><a href="https://mzp.booth.pm/">SKK=さらに かしこく かわいい</a></td>
-  <td>「工場実習日記」「日本語入力を作るのに必要だった本」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf04/circle/12820001">か22</a></td>
-  <td>理ろぐ/<a href="https://twitter.com/IoriAYANE">理音伊織</a></td>
-  <td>「インストーラーで配ろう！」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf04/circle/12820001">か22</a></td>
-  <td><a href="https://qiita.com/MegaBlackLabel">底なし沼の魔女</a>/<a href="https://twitter.com/MegaBlackLabel">れいな</a></td>
-  <td>「Libraries of React・Get ready for Next.jsのセット」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf04/circle/16430002">お09</a></td>
-  <td>Secure旅団</td>
-  <td>「俺らの愛したセキュリティ」「ニッチ・セキュリティ - 明星へ登る」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf04/circle/17570001">か24</a></td>
-  <td><a href="http://www.chirashiura.com/">楽描帳</a>/<a href="https://twitter.com/tomato360">@tomato360</a></td>
-  <td>「Hello Nuxt !!」「Hello!! Vue.js 最新プログレッシブフレームワーク入門」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf04/circle/19150009">か23</a></td>
-  <td><a href="https://mya-ake.com/">ねこの手@福岡</a>/<a href="https://twitter.com/mya_ake">mya-ake</a></td>
-  <td>「知らないと損するCSS」「現場で使えるVue.js tips集」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf04/circle/14560006">く36</a></td>
-  <td><a href="http://blogs.yahoo.co.jp/rem1988stores">紙印</a>/おたべ</td>
-  <td>「【フルセット】テスト設計入門 2018年度版」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf04/circle/19150006">く02</a></td>
-  <td><a href="https://www.wakamesoba98.net/circle/">53鍵盤</a>/わかめそば</td>
-  <td>「初めてのsystemd-nspawn」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf04/circle/16620002">け15</a></td>
-  <td><a href="https://staff.aist.go.jp/tominaga-daisuke/sliderule/rectilinear/index.html">お台場計算尺</a>/とみながだいすけ</td>
-  <td>「新世紀の計算尺入門」「作って使おう計算尺」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf04/circle/21060002">き17</a></td>
-  <td>めがねをかけるんだ/<a href="https://twitter.com/keiji_ariyama">Keiji ARIYAMA</a></td>
-  <td>「本当はおそろしい商業出版！？」「茶色いトイプードルは食べ物じゃないっ！」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf04/circle/14520005">き02</a></td>
-  <td>越後屋/なかざん</td>
-  <td>「Cheap Dive into React Native」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf04/circle/11830001">お08</a></td>
-  <td><a href="https://twitter.com/cpaw_account">Cpaw</a></td>
-  <td>「RustによるWebアプリケーション作成入門」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf04/circle/18420001">お02</a></td>
-  <td><a href="http://yoshikawaweb.com/">吉川雅彦</a></td>
-  <td>「z-indexを倒す」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf04/circle/16430001">い05</a></td>
-  <td><a href="http://webdesign-manga.com/">マンガでわかるWebデザイン＋Git</a>/湊川あい</td>
-  <td>「マンガでわかるDocker」「マンガでわかるScrapbox【無料頒布】」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf04/circle/14570001">け51</a></td>
-  <td><a href="http://uchan.hateblo.jp/">uchan</a></td>
-  <td>「USB3.0 ホストドライバ自作入門」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf04/circle/21040009">あ01</a></td>
-  <td>日経BP出版局</td>
-  <td>「日経電子の本」※無料配布</td>
-</tr>
-</tbody>
-</table>
-
-<p>※敬称略、順不同</p>
-
-<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
-
-<ul>
-<li>そろそろ会場に対して人が多いのではないかと...</li>
-<li>並ぶ前にトイレを済まそう(二度目)</li>
-<li>段々と購入数が多くなっていく...</li>
-<li>公式後払いアプリ怖い（お金に羽が生えて飛んでいく的な意味で</li>
 </ul>
 ]]></content>
         </entry>
