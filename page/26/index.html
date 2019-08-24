@@ -18,7 +18,22 @@
        ></li></ol><div class="row"><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
            href="/blog/"><i class="fa fa-archive fa-4x"></i><br />アーカイブ</a></div><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
            href="/product/"><i class="fa fa-download fa-4x"></i><br />作ったもの</a></div><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
-           href="/graffiti/"><i class="fa fa-paint-brush fa-4x"></i><br />落書き</a></div></div><hr style="border-bottom: 1px dashed #aaa; border-top: none;" /><article class="full-contents"><header><h1><a href="/blog/2015/09/21/romaji-readable-domains.html">ローマ字として読むことが可能なドメインをまとめてみた</a></h1></header><div><p>よくトップレベルドメイン(TLD)を含めた状態で文字列を表現するドメイン名になっていることがあります。</p><p>たとえば、<code>about.me = "About me"</code> や <code>delicio.us = Delicious</code> とかです。
+           href="/graffiti/"><i class="fa fa-paint-brush fa-4x"></i><br />落書き</a></div></div><hr style="border-bottom: 1px dashed #aaa; border-top: none;" /><article class="full-contents"><header><h1><a href="/blog/2015/10/25/ruby-rbenv-on-mac-osx-memo.html">Mac で rbenv を使って複数バージョンの Ruby を管理するためのメモ</a></h1></header><div><h2 id="%E6%A6%82%E8%A6%81">概要</h2><p>ちょっと、いろいろなバージョンの Ruby を使用しないといけない状況に陥ったので rbenv での ruby のバージョンを管理をする方法のメモ。
+環境は、 Mac を使用しているので Homebrew を使って rbenv をインストールしています。</p><p>以前に <a href="/blog/2014/04/15/ruby-1-9-3-install-for-mac-10-8.html">Mac OS X 10.8 に Ruby 1.9.3 をインストールする方法</a> で rvm を使ってインストールしていましたが、ごっそりアインインストールをしています。</p>
+
+
+                            &hellip;&nbsp;<a href="/blog/2015/10/25/ruby-rbenv-on-mac-osx-memo.html">続きを見る</a></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i>&nbsp;
+        <span itemprop="datePublished" content="2015-10-25">2015年10月25日</span>
+        &nbsp;/&nbsp;
+        <i class="fa fa-history"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2015-10-25-ruby-rbenv-on-mac-osx-memo.md">変更履歴</a>
+        &nbsp;/&nbsp;
+        <i class="fa fa-thumb-tack"></i>&nbsp;<a href="/blog/2015/10/25/ruby-rbenv-on-mac-osx-memo.html">Permalink</a>
+        &nbsp;/&nbsp;
+                                <span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
+                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
+        &nbsp;/&nbsp;
+                                <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:
+                        <a href="/blog/tags/%E3%83%A1%E3%83%A2">メモ</a>,                         <a href="/blog/tags/Ruby">Ruby</a>,                         <a href="/blog/tags/Mac">Mac</a>,                         <a href="/blog/tags/rbenv">rbenv</a>,                         <a href="/blog/tags/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89">環境構築</a></span></span></div></footer></article><article class="full-contents"><header><h1><a href="/blog/2015/09/21/romaji-readable-domains.html">ローマ字として読むことが可能なドメインをまとめてみた</a></h1></header><div><p>よくトップレベルドメイン(TLD)を含めた状態で文字列を表現するドメイン名になっていることがあります。</p><p>たとえば、<code>about.me = "About me"</code> や <code>delicio.us = Delicious</code> とかです。
 これ、ローマ字でもできると思いませんか？</p><p>なので、ドメインの一覧のリストを作り、その中からローマ字として読めそうな TLD のまとめを作ってみました。</p><p>なお、<code>.hitachi</code> など企業が持っている物や、<code>.tokyo</code> とかのように在住者のみを対象としているドメイン、さらには維持費が月額１万を超える物などもあるので、読めたからといって取得し維持できるとは限らないですので参考程度ではありますです。</p><p>下の表は <a href="https://docs.google.com/spreadsheets/d/1dKEZFofML-d3EDDZIVOFkxbALKGMConF_RF6eck1eKs/edit?usp=sharing">ローマ字になるドメイン - Google スプレッドシート</a> から確認できます。</p>
 
 
@@ -45,21 +60,7 @@
                         <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
         &nbsp;/&nbsp;
                                 <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:
-                        <a href="/blog/tags/php">php</a></span></span></div></footer></article><article class="full-contents"><header><h1><a href="/blog/2015/09/05/release-sakura-editor-plugin-text-convert-extension-pack.html">サクラエディタ用テキスト変換拡張パックを公開</a></h1></header><div><p>サクラエディタ用のプラグインとして「テキスト変換拡張パック」を作りました。</p><p>ダウンロードは <a href="https://github.com/sharkpp/sakura-editor-plugin-text-convert-extension-pack">GitHub ページ</a> からできます。</p><p>このプラグインでは選択した文字列に対して</p><ul><li>アッパーキャメルケース(UpperCamelCase)に変換</li><li>ローワーキャメルケース(lowerCamelCase)に変換</li><li>スネークケース(snake_case)に変換</li><li>チェインケース(chain-case)に変換</li><li>単語の頭を大文字に変換</li><li>頭を大文字に変換</li><li>頭を小文字に変換</li></ul><p>と、このような変換を行った文字列へと置き換えることができます。</p>
-
-
-                            &hellip;&nbsp;<a href="/blog/2015/09/05/release-sakura-editor-plugin-text-convert-extension-pack.html">続きを見る</a></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i>&nbsp;
-        <span itemprop="datePublished" content="2015-09-05">2015年09月05日</span>
-        &nbsp;/&nbsp;
-        <i class="fa fa-history"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2015-09-05-release-sakura-editor-plugin-text-convert-extension-pack.md">変更履歴</a>
-        &nbsp;/&nbsp;
-        <i class="fa fa-thumb-tack"></i>&nbsp;<a href="/blog/2015/09/05/release-sakura-editor-plugin-text-convert-extension-pack.html">Permalink</a>
-        &nbsp;/&nbsp;
-                                <span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
-                        <a href="/blog/categories/%E3%82%B5%E3%82%AF%E3%83%A9%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF">サクラエディタ</a></span>
-        &nbsp;/&nbsp;
-                                <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:
-                        <a href="/blog/tags/%E3%82%B5%E3%82%AF%E3%83%A9%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF">サクラエディタ</a>,                         <a href="/blog/tags/%E3%82%B5%E3%82%AF%E3%83%A9%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF%E7%94%A8%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3">サクラエディタ用プラグイン</a></span></span></div></footer></article><br /><nav><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/page/25" title=""><span class="title"><i class="fa fa-chevron-left"></i> 新しい投稿</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/page/27" title=""><span class="title">古い投稿</span><i class="fa fa-chevron-right"></i></a></li></ul></nav></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li><li><i class="fa-li fa fa-ellipsis-h"></i><a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /page/26"
+                        <a href="/blog/tags/php">php</a></span></span></div></footer></article><br /><nav><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/page/25" title=""><span class="title"><i class="fa fa-chevron-left"></i> 新しい投稿</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/page/27" title=""><span class="title">古い投稿</span><i class="fa fa-chevron-right"></i></a></li></ul></nav></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li><li><i class="fa-li fa fa-ellipsis-h"></i><a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /page/26"
                                   rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li></ul></div><div class="container text-center"><ul class="list-unstyled list-inline"><li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li><li class="text-muted">&copy; 2004-2019 sharkpp</li></ul></div><div class="container text-center text-muted"><ruby><rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
                                                             >Creative Commons Attribution 4.0 International License</a>.</rb><rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
                                                   >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp></ruby></div><div class="container text-center text-muted"><ruby><rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"

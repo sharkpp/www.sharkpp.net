@@ -3,11 +3,143 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/QtQuick.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2019-07-29T14:53:40+00:00</updated>
+    <updated>2019-08-24T08:17:40+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[名古屋Qt勉強会#30.1 に参加しました]]></title>
+            <link href="http://www.sharkpp.net/blog/2019/08/24/qt-nagoya-30.html"/>
+            <updated>2019-08-24T17:13:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2019/08/24/qt-nagoya-30.html</id>
+            <content type="html"><![CDATA[<p>2019年8月24日(土) に開催された <a href="https://qt-users.connpass.com/event/143118/">Qt 勉強会 @ Nagoya #30.1 - connpass</a> へ参加しました。</p>
+
+<p>そのまとめです。</p>
+
+<p><img src="/images/20190824_frame_extract.png" alt="成果" /></p>
+
+<h2 id="%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B">自己紹介</h2>
+
+<p>毎回の通り、自己紹介と本日やることを宣言。</p>
+
+<p>初めて参加の方が一人いた。</p>
+
+<h2 id="%40kazuo_asa-%E3%81%95%E3%82%93%E3%81%AB%E3%82%88%E3%82%8B%E7%99%BA%E8%A1%A8">@kazuo_asa さんによる発表</h2>
+
+<p><a href="https://twitter.com/kazuo_asa">@kazuo_asa</a> による</p>
+
+<ul>
+<li>Yoctoを使用して、Boot2Qtをraspberry pi用に構築してみよう。</li>
+<li>Qt Creatorを使用して、raspberry piで動作するQtアプリのリモートデバックの仕方。</li>
+</ul>
+
+<p>の発表がありました。</p>
+
+<p>発表資料: <a href="https://qiita.com/sazus/items/e3c12dc67b8d38667a20">Raspberry Pi 3 で Qt 5 をビルドして動かす方法(Yocto layer Boot2Qt編)</a></p>
+
+<h2 id="%E8%87%AA%E5%88%86%E3%81%AE%E6%9C%AC%E6%97%A5%E3%81%AE%E3%82%84%E3%82%8B%E3%81%93%E3%81%A8">自分の本日のやること</h2>
+
+<ul>
+<li>前回の続きの動画からフレームを切り出し動画のメタ情報とフレーム位置に応じた時刻を設定するツールを実装</li>
+</ul>
+
+<p>前回までの状況</p>
+
+<ul>
+<li>フレームの取得の高速化（フレーム数で取得するのを諦めフレーム数とフレームレートで秒数を求めて指定するようにした）</li>
+<li>なぜかフレームデータの受け渡しでアクセス違反が... なぜだ！？</li>
+</ul>
+
+<h2 id="%E6%9C%AC%E6%97%A5%E3%81%AE%E7%9F%A5%E8%A6%8B">本日の知見</h2>
+
+<h3 id="void%2A-%E2%86%92-qvariant">void* → QVariant</h3>
+
+<p>たぶんこう。</p>
+
+<p>```c++
+    Hoge* hogePointer = this->getHoge();
+    QVariant a = QVariant::fromValue(reinterpret_cast&lt;void*>(hogePointer));</p>
+
+<pre><code><br />ただ、なんか逆がうまくいかないので Q_DECLARE_METATYPE で型を登録して利用するようにした。
+
+### QVariant で自作のクラスのポインタを扱う
+
+QVariant で自作のクラスのポインタを扱うための実装。 
+
+定義 
+
+このとき、一部だけで `Q_DECLARE_METATYPE` を使うと `static_assert failed "Type is not registered, please use the Q_DECLARE_METATYPE macro to make it known to Qt's meta-object system"` とエラーが出る。
+
+```c++
+// hoge.hpp
+
+#include &lt;QObject&gt;
+
+class Hoge {
+  // ...
+};
+
+Q_DECLARE_METATYPE(Hoge*)
+</code></pre>
+
+<p>利用方法</p>
+
+<pre><code>#include &lt;hoge.hpp&gt;
+
+void fuga() {
+
+  // to  QVariant()
+  Hoge* hoge1 = new Hoge();
+  QVariant a = QVariant::fromValue(hoge1);
+
+  // from QVariant()
+  Hoge* hoge2 = a.value&lt;Hoge*&gt;();
+}
+</code></pre>
+
+<h3 id="qqmlengine%EF%BC%9Aqml%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3%E3%81%A8%E3%81%AF%E7%95%B0%E3%81%AA%E3%82%8B%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89%E3%81%AB%E3%81%82%E3%82%8B%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%81%AA%E6%8E%A5%E7%B6%9A%E8%A9%A6%E8%A1%8C">QQmlEngine：QMLエンジンとは異なるスレッドにあるクラスへの不正な接続試行</h3>
+
+<p><code>QQmlEngine: Illegal attempt to connect to XXXXXXX(0x99999999) that is in a different thread than the QML engine QQmlApplicationEngine(0x99999999.</code> というエラーが出た。</p>
+
+<p>どうやら <code>QQmlApplicationEngine</code> とは別のスレッドで作成したインスタンスにアクセスしようとすると出るっぽい。</p>
+
+<h2 id="%E6%9C%AC%E6%97%A5%E3%81%AE%E9%80%B2%E6%8D%97">本日の進捗</h2>
+
+<p>なぜかアクセス違反で落ちると思ってたらそもそも想定した値が入ってなかった（つまるところ未初期化）
+それは落ちるわけだ... とりあえずこれは直った。</p>
+
+<p>やっとサムネイルが出るようになった。</p>
+
+<p>画面はこんな感じで行きたいな。</p>
+
+<p><img src="/images/20190824_frame_extract_ui1.png" alt="秒単位でのフレームの一覧" /> <img src="/images/20190824_frame_extract_ui2.png" alt="フレーム単位でのフレームの一覧" /></p>
+
+<p>とりあえずの成果はこんな感じ</p>
+
+<p><img src="/images/20190824_frame_extract.png" alt="成果" /></p>
+
+<h2 id="%E3%83%A1%E3%83%A2">メモ</h2>
+
+<ul>
+<li>UIどうするか？
+
+<ul>
+<li>最終的にはスマホでも動くようにしたいなぁ</li>
+</ul></li>
+<li>複数の動画をドロップして全部一度に選べると良さそう</li>
+</ul>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://qiita.com/dNaga392/items/3b32fdb3d59b3c25fa6c">QVariantを便利に使おう - Qiita</a></li>
+<li><a href="https://stackoverflow.com/questions/44501171/qvariant-with-custom-class-pointer-does-not-return-same-address">qt - QVariant with custom class pointer does not return same address - Stack Overflow</a></li>
+<li><a href="https://forum.qt.io/topic/30169/qt-5-1-qml-property-through-threads">Qt 5.1 QML property through Threads | Qt Forum</a> の翻訳→ <a href="https://codeday.me/jp/qa/20190228/335153.html">c – スレッドを通したQt 5.1 QMLプロパティ - コードログ</a></li>
+<li><a href="https://getting-started-qml-ja.readthedocs.io/ja/latest/chapter06.html">Qt C++を用いたQMLの拡張 — Getting started QML programming Japanese translation 2014.04.05 ドキュメント</a></li>
+</ul>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[名古屋Qt勉強会#28 に参加しました]]></title>
             <link href="http://www.sharkpp.net/blog/2019/05/18/qt-nagoya-28.html"/>

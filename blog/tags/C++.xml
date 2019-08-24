@@ -3,11 +3,143 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/C%2B%2B.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2019-07-29T14:53:40+00:00</updated>
+    <updated>2019-08-24T08:17:40+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[名古屋Qt勉強会#30.1 に参加しました]]></title>
+            <link href="http://www.sharkpp.net/blog/2019/08/24/qt-nagoya-30.html"/>
+            <updated>2019-08-24T17:13:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2019/08/24/qt-nagoya-30.html</id>
+            <content type="html"><![CDATA[<p>2019年8月24日(土) に開催された <a href="https://qt-users.connpass.com/event/143118/">Qt 勉強会 @ Nagoya #30.1 - connpass</a> へ参加しました。</p>
+
+<p>そのまとめです。</p>
+
+<p><img src="/images/20190824_frame_extract.png" alt="成果" /></p>
+
+<h2 id="%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B">自己紹介</h2>
+
+<p>毎回の通り、自己紹介と本日やることを宣言。</p>
+
+<p>初めて参加の方が一人いた。</p>
+
+<h2 id="%40kazuo_asa-%E3%81%95%E3%82%93%E3%81%AB%E3%82%88%E3%82%8B%E7%99%BA%E8%A1%A8">@kazuo_asa さんによる発表</h2>
+
+<p><a href="https://twitter.com/kazuo_asa">@kazuo_asa</a> による</p>
+
+<ul>
+<li>Yoctoを使用して、Boot2Qtをraspberry pi用に構築してみよう。</li>
+<li>Qt Creatorを使用して、raspberry piで動作するQtアプリのリモートデバックの仕方。</li>
+</ul>
+
+<p>の発表がありました。</p>
+
+<p>発表資料: <a href="https://qiita.com/sazus/items/e3c12dc67b8d38667a20">Raspberry Pi 3 で Qt 5 をビルドして動かす方法(Yocto layer Boot2Qt編)</a></p>
+
+<h2 id="%E8%87%AA%E5%88%86%E3%81%AE%E6%9C%AC%E6%97%A5%E3%81%AE%E3%82%84%E3%82%8B%E3%81%93%E3%81%A8">自分の本日のやること</h2>
+
+<ul>
+<li>前回の続きの動画からフレームを切り出し動画のメタ情報とフレーム位置に応じた時刻を設定するツールを実装</li>
+</ul>
+
+<p>前回までの状況</p>
+
+<ul>
+<li>フレームの取得の高速化（フレーム数で取得するのを諦めフレーム数とフレームレートで秒数を求めて指定するようにした）</li>
+<li>なぜかフレームデータの受け渡しでアクセス違反が... なぜだ！？</li>
+</ul>
+
+<h2 id="%E6%9C%AC%E6%97%A5%E3%81%AE%E7%9F%A5%E8%A6%8B">本日の知見</h2>
+
+<h3 id="void%2A-%E2%86%92-qvariant">void* → QVariant</h3>
+
+<p>たぶんこう。</p>
+
+<p>```c++
+    Hoge* hogePointer = this->getHoge();
+    QVariant a = QVariant::fromValue(reinterpret_cast&lt;void*>(hogePointer));</p>
+
+<pre><code><br />ただ、なんか逆がうまくいかないので Q_DECLARE_METATYPE で型を登録して利用するようにした。
+
+### QVariant で自作のクラスのポインタを扱う
+
+QVariant で自作のクラスのポインタを扱うための実装。 
+
+定義 
+
+このとき、一部だけで `Q_DECLARE_METATYPE` を使うと `static_assert failed "Type is not registered, please use the Q_DECLARE_METATYPE macro to make it known to Qt's meta-object system"` とエラーが出る。
+
+```c++
+// hoge.hpp
+
+#include &lt;QObject&gt;
+
+class Hoge {
+  // ...
+};
+
+Q_DECLARE_METATYPE(Hoge*)
+</code></pre>
+
+<p>利用方法</p>
+
+<pre><code>#include &lt;hoge.hpp&gt;
+
+void fuga() {
+
+  // to  QVariant()
+  Hoge* hoge1 = new Hoge();
+  QVariant a = QVariant::fromValue(hoge1);
+
+  // from QVariant()
+  Hoge* hoge2 = a.value&lt;Hoge*&gt;();
+}
+</code></pre>
+
+<h3 id="qqmlengine%EF%BC%9Aqml%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3%E3%81%A8%E3%81%AF%E7%95%B0%E3%81%AA%E3%82%8B%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89%E3%81%AB%E3%81%82%E3%82%8B%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%81%AA%E6%8E%A5%E7%B6%9A%E8%A9%A6%E8%A1%8C">QQmlEngine：QMLエンジンとは異なるスレッドにあるクラスへの不正な接続試行</h3>
+
+<p><code>QQmlEngine: Illegal attempt to connect to XXXXXXX(0x99999999) that is in a different thread than the QML engine QQmlApplicationEngine(0x99999999.</code> というエラーが出た。</p>
+
+<p>どうやら <code>QQmlApplicationEngine</code> とは別のスレッドで作成したインスタンスにアクセスしようとすると出るっぽい。</p>
+
+<h2 id="%E6%9C%AC%E6%97%A5%E3%81%AE%E9%80%B2%E6%8D%97">本日の進捗</h2>
+
+<p>なぜかアクセス違反で落ちると思ってたらそもそも想定した値が入ってなかった（つまるところ未初期化）
+それは落ちるわけだ... とりあえずこれは直った。</p>
+
+<p>やっとサムネイルが出るようになった。</p>
+
+<p>画面はこんな感じで行きたいな。</p>
+
+<p><img src="/images/20190824_frame_extract_ui1.png" alt="秒単位でのフレームの一覧" /> <img src="/images/20190824_frame_extract_ui2.png" alt="フレーム単位でのフレームの一覧" /></p>
+
+<p>とりあえずの成果はこんな感じ</p>
+
+<p><img src="/images/20190824_frame_extract.png" alt="成果" /></p>
+
+<h2 id="%E3%83%A1%E3%83%A2">メモ</h2>
+
+<ul>
+<li>UIどうするか？
+
+<ul>
+<li>最終的にはスマホでも動くようにしたいなぁ</li>
+</ul></li>
+<li>複数の動画をドロップして全部一度に選べると良さそう</li>
+</ul>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://qiita.com/dNaga392/items/3b32fdb3d59b3c25fa6c">QVariantを便利に使おう - Qiita</a></li>
+<li><a href="https://stackoverflow.com/questions/44501171/qvariant-with-custom-class-pointer-does-not-return-same-address">qt - QVariant with custom class pointer does not return same address - Stack Overflow</a></li>
+<li><a href="https://forum.qt.io/topic/30169/qt-5-1-qml-property-through-threads">Qt 5.1 QML property through Threads | Qt Forum</a> の翻訳→ <a href="https://codeday.me/jp/qa/20190228/335153.html">c – スレッドを通したQt 5.1 QMLプロパティ - コードログ</a></li>
+<li><a href="https://getting-started-qml-ja.readthedocs.io/ja/latest/chapter06.html">Qt C++を用いたQMLの拡張 — Getting started QML programming Japanese translation 2014.04.05 ドキュメント</a></li>
+</ul>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Qt メモ]]></title>
             <link href="http://www.sharkpp.net/blog/2019/07/29/qt-memo.html"/>
@@ -1093,191 +1225,6 @@ Window {
 <p>久しぶりに参加したけど、久しぶりにQt触っていろいろと忘れていたこともあった。
 けど、強制的に時間を確保しもくもくするのはやはり悪くない。
 あと、Dash コインの話もいろいろ面白かった。</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[じゅげむったーの開発日記 その８]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/10/21/jugemutter-development-diary-8th.html"/>
-            <updated>2017-10-21T17:41:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/10/21/jugemutter-development-diary-8th.html</id>
-            <content type="html"><![CDATA[<p>今回は、明日行われる <a href="https://techbookfest.org/event/tbf03">技術書典３</a> に前日入りして、<a href="https://qt-users.connpass.com/event/68878/">Qt 勉強会 @ Tokyo #52</a> に参加してきました。</p>
-
-<p>東京の勉強会はすごく久しぶりの参加でした。</p>
-
-<p>以前は、誰かしらが発表をして、それを聞く感じの会でしたが、最近はもくもくがメインのようでした。</p>
-
-<p>レポジトリは ... <a href="https://github.com/sharkpp/Jugemutter">sharkpp/Jugemutter: 長文投稿専用クライアント「じゅげむったー」</a> となります。</p>
-
-<h2 id="twitter-api-%E3%81%AE-%22could-not-authenticate-you.%22-%E5%95%8F%E9%A1%8C">Twitter API の "Could not authenticate you." 問題</h2>
-
-<p>Twitter API への要求で <code>Could not authenticate you.</code> とレスポンスが返ってくる問題、どうも <a href="https://bugreports.qt.io/browse/QTBUG-61125">[QTBUG-61125] QOAuth1 creates an invalid signature for percent encoded query - Qt Bug Tracker</a> のバグが原因ではなかった様子。</p>
-
-<p>なので、ちょっと踏み込んで調べて見ることにする。</p>
-
-<p>とりあえず、比較のために PHP で同じように Twitter API を使って見ることに。</p>
-
-<p>ライブラリは <a href="https://github.com/risan/oauth1">risan/oauth1: 🔐 OAuth 1.0 client library for PHP</a> をとりあえず試して見る。</p>
-
-<p>何はともあれ composer をインストール</p>
-
-<pre><code class="console">$ php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-$ php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-$ php composer-setup.php
-$ php -r "unlink('composer-setup.php');"
-</code></pre>
-
-<p>ライブラリをインストール</p>
-
-<pre><code class="console">$ php composer.phar require risan/oauth1
-</code></pre>
-
-<p>で、いろいろ試している..</p>
-
-<p>ソースは <a href="https://github.com/risan/oauth1#basic-usage">risan/oauth1: Basic Usage</a> を基に <code>$ sudo php -S localhost:80 -t .</code> で動かします。</p>
-
-<pre><code class="php">&lt;?php
-
-// Start session.
-session_start();
-
-// Include Composer autoload file.
-require 'vendor/autoload.php';
-
-// Create a new instance of OAuth1 client for Twitter.
-$oauth1 = new OAuth1\OAuth1([
-    'consumer_key'      =&gt; 'YOUR_TWITTER_CONSUMER_KEY',
-    'consumer_secret'   =&gt; 'YOUR_TWITTER_CONSUMER_SECRET',
-    'request_token_url' =&gt; 'https://api.twitter.com/oauth/request_token',
-    'authorize_url'     =&gt; 'https://api.twitter.com/oauth/authorize',
-    'access_token_url'  =&gt; 'https://api.twitter.com/oauth/access_token',
-    'callback_url'      =&gt; 'http://localhost:80', // Optional
-    'resource_base_url' =&gt; 'https://api.twitter.com/1.1/'
-]);
-
-// STEP 4: ACCESS PROTECTED RESOURCE.
-if (isset($_SESSION['access_token'])) {
-    // Retrieve the saved AccessToken instance (see STEP 3).
-    $accessToken = unserialize($_SESSION['access_token']);
-
-    // Set access token.
-    $oauth1-&gt;setGrantedAccessToken($accessToken);
-
-    // Get authenticated user's timeline.
-    // @return Psr\Http\Message\ResponseInterface instance
-    //$response = $oauth1-&gt;get('statuses/user_timeline.json');
-    $response = $oauth1-&gt;post('statuses/update.json', [
-        'query' =&gt; [
-        //'form_params' =&gt; [ // risan/oauth1 が対応していない様子
-            'status' =&gt; 'test',
-        ]
-    ]);
-
-    echo $response-&gt;getBody()-&gt;getContents();
-}
-
-// STEP 3: GET ACCESS TOKEN.
-elseif (isset($_GET['oauth_token']) &amp;&amp; isset($_GET['oauth_verifier'])) {
-    // Retrieve the previously generated request token (see STEP 1).
-    $requestToken = unserialize($_SESSION['request_token']);
-
-    // Get access token.
-    // @return OAuth1\Tokens\AccessToken instance
-    $accessToken = $oauth1-&gt;accessToken($requestToken, $_GET['oauth_token'], $_GET['oauth_verifier']);
-
-    // Serialize AccessToken instance and save it to session.
-    $_SESSION['access_token'] = serialize($accessToken);
-
-    // No longer need request token.
-    unset($_SESSION['request_token']);
-
-    // Reload page.
-    header("Location: {$_SERVER['PHP_SELF']}");
-    exit();
-}
-
-// STEP 1: Get request token.
-// STEP 2: Redirect to authorization page.
-else {
-    // Get request token.
-    // @return OAuth1\Tokens\RequestToken instance
-    $requestToken = $oauth1-&gt;requestToken();
-
-    // Serialize RequestToken instance and save to session.
-    $_SESSION['request_token'] = serialize($requestToken);
-
-    // Redirect to authorization url.
-    $authorizationUrl = $oauth1-&gt;buildAuthorizationUrl($requestToken);
-    header("Location: {$authorizationUrl}");
-    exit();
-}
-</code></pre>
-
-<p>あれ？</p>
-
-<p><del><code>{"code":32,"message":"Could not authenticate you."}</code> になるっぽい、なぜだろう？</del> <code>risan/oauth1</code> の実装が POST の フォームに対応していなかっただけのようだ。</p>
-
-<p>↑から、URLのクエリ形式で送れば大丈夫っぽい。</p>
-
-<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">むぅPOSTのフォームではなくURLのクエリで送れば(や%も大丈夫っぽいなぁ (おわり <a href="https://twitter.com/hashtag/qtjp?src=hash&amp;ref_src=twsrc%5Etfw">#qtjp</a> <a href="https://twitter.com/hashtag/jugemutter?src=hash&amp;ref_src=twsrc%5Etfw">#jugemutter</a></p>&mdash; これでチーム「さめたすたす」は最強だ！ (@sharkpp) <a href="https://twitter.com/sharkpp/status/921656868535021570?ref_src=twsrc%5Etfw">2017年10月21日</a></blockquote>
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>何か勘違いしているのか？</p>
-
-<p>というところでタイムアップ。</p>
-
-<h2 id="twitter-api-reference-%E3%81%AE-url-%E3%81%8C%E5%A4%89%E3%82%8F%E3%81%A3%E3%81%9F%EF%BC%9F">Twitter API reference の URL が変わった？</h2>
-
-<p>なんか、Twitter API のリファレンスページのアドレスが変わっている様子。</p>
-
-<pre><code>https://dev.twitter.com/rest/reference/post/statuses/update
-</code></pre>
-
-<p>↓</p>
-
-<pre><code>https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update
-</code></pre>
-
-<p>リダイレクトで飛ばして欲しかったなぁ。</p>
-
-<h2 id="%E5%8B%89%E5%BC%B7%E4%BC%9A">勉強会</h2>
-
-<h3 id="qt-contributors-summit-2017-%E3%81%A8-qt-world-summit-2017-%E3%81%AE%E5%A0%B1%E5%91%8A">Qt contributors summit 2017 と Qt World Summit 2017 の報告</h3>
-
-<p>2017年10月9日〜10月10日に開催された <a href="https://www1.qt.io/event/qt-contributors-summit-2017/">Qt Contributors' Summit 2017</a> および、2017年10月10日〜10月12日に開催された <a href="https://www1.qt.io/event/qt-world-summit-2017/">Qt World Summit</a> の<a href="https://twitter.com/takumiasaki">朝木卓見(@takumiasaki)</a> さんによる報告。</p>
-
-<p>関連するリンク</p>
-
-<ul>
-<li><a href="https://wiki.qt.io/Qt_contributors_summit_2017">Qt contributors summit 2017 - Qt Wiki</a></li>
-<li><a href="https://wiki.qt.io/Qt_contributors_summit_2017_Program">Qt contributors summit 2017 Program - Qt Wiki</a> - セッションプログラム一覧</li>
-<li><a href="https://wiki.qt.io/QtCS2017_QtCore">QtCS2017 QtCore - Qt Wiki</a> - 該当のセッションで出た話</li>
-<li><a href="http://blog.qt.io/blog/2017/10/11/qt-3d-studio-source-code-pre-release-snapshots-available/">Qt 3D Studio Source Code and Pre-Release Snapshots Available - Qt Blog</a></li>
-<li><a href="https://github.com/KDAB">KDAB</a></li>
-</ul>
-
-<h3 id="qt-3d-studio-%E3%81%AE%E7%B4%B9%E4%BB%8B">Qt 3D Studio の紹介</h3>
-
-<p><a href="https://twitter.com/shin1_okada">岡田 真一(@shin1_okada)</a> さんによる、Qt 3D Studio の紹介。</p>
-
-<p>現状、macOS向けは、ビルドできるけど大きなデモを動かす、Qt Creator から動作させる、などでクラッシュする、とのこと。</p>
-
-<p>関連するリンク</p>
-
-<ul>
-<li><a href="http://blog.qt.io/blog/2017/10/11/qt-3d-studio-source-code-pre-release-snapshots-available/">Qt 3D Studio Source Code and Pre-Release Snapshots Available - Qt Blog</a></li>
-<li><a href="https://codereview.qt-project.org/#/admin/projects/qt3dstudio/qt3dstudio">codereview.qt-project Code Review</a> - デフォルトだと submodule が取得されないので注意</li>
-</ul>
-
-<h2 id="%E5%8F%82%E8%80%83">参考</h2>
-
-<ul>
-<li><a href="https://qiita.com/hnw/items/d72815e2d45f898d9184">SipHashについてのメモ - Qiita</a></li>
-<li><a href="http://docs.guzzlephp.org/en/5.3/clients.html">Clients — Guzzle Documentation</a></li>
-<li><a href="https://qiita.com/k-holy/items/4362b8cce85642e477ec">Windows + Goutte 3.0でHTTPSでのリクエストで発生するSSL証明書のエラー - Qiita</a></li>
-<li><a href="https://qiita.com/mikakane/items/58c30b243bba697ec3fe">guzzle で Http通信する - Qiita</a></li>
-<li><a href="https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update">POST statuses/update — Twitter Developers</a></li>
-</ul>
 ]]></content>
         </entry>
     </feed>
