@@ -10,7 +10,7 @@ categories: [ブログ]
 「[技術書典７](https://techbookfest.org/event/tbf07)」として、2019年9月22日に開催されたので、今回も一般参加してきました。
 場所は前回と変わらず、池袋のサンシャインシティですが、今回は文化会館ビルの 展示ホールD と 展示ホールC の２ホールを使っての開催です。
 
-[<img src="{{ thumbnail('/images/20190922_tf7.jpg', 640, 640) }}" alt="技術書典7">](/images/20190922_tf7.jpg)
+[<img src="{{ thumbnail('/images/20190922_tbf7.jpg', 640, 640) }}" alt="技術書典7">](/images/20190922_tbf7.jpg)
 
 ## 始めに
 
