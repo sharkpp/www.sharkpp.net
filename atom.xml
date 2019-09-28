@@ -3,11 +3,18 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/atom.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2019-08-24T08:17:15+00:00</updated>
+    <updated>2019-09-28T09:10:09+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[技術書典7に行ってきた]]></title>
+            <link href="http://www.sharkpp.net/blog/2019/09/28/techbookfest7.html"/>
+            <updated>2019-09-28T18:02:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2019/09/28/techbookfest7.html</id>
+            <content type="html"><![CDATA[]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[名古屋Qt勉強会#30.1 に参加しました]]></title>
             <link href="http://www.sharkpp.net/blog/2019/08/24/qt-nagoya-30.html"/>
@@ -2724,42 +2731,6 @@ void fuga() {
 <ul>
 <li><a href="http://doc.qt.io/qt-5/qml-qtquick-flickable.html#interactive-prop">Flickable QML Type | Qt Quick 5.12</a></li>
 </ul>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[HAPPY NEW YEAR 2019]]></title>
-            <link href="http://www.sharkpp.net/blog/2019/01/01/happy-new-year-2019.html"/>
-            <updated>2019-01-01T09:45:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2019/01/01/happy-new-year-2019.html</id>
-            <content type="html"><![CDATA[<p>明けましておめでとうございます。</p>
-
-<p>ほむぺ開設 15 年目🎉 (たぶん)。
-今年も一年よろしくお願いします。</p>
-
-<p>では、今年の目標をば。</p>
-
-<h2 id="%E7%9B%AE%E6%A8%99">目標</h2>
-
-<ul>
-<li>定期的なホムペの更新</li>
-</ul>
-
-<h3 id="hsp%E9%96%A2%E9%80%A3">HSP関連</h3>
-
-<ul>
-<li>HSPコンテスト作品の製作！</li>
-<li><a href="http://hsp-users.jp/">HSP関連サイト</a>の定期的な更新。</li>
-<li>WINEの最新版でHSPが動くように！</li>
-</ul>
-
-<h3 id="%E3%82%A2%E3%83%97%E3%83%AA%E9%96%A2%E9%80%A3">アプリ関連</h3>
-
-<ul>
-<li><a href="https://github.com/sharkpp/TimestampFreezer">TimestampFreezer</a> のバイナリ公開</li>
-<li><a href="https://github.com/sharkpp/Jugemutter">Jugemutter</a> の完成</li>
-</ul>
-
-<p>ではでは、平成も残すところ半年を切っていますが、今年もよろしくお願いいたします。</p>
 ]]></content>
         </entry>
     </feed>
