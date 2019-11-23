@@ -26,11 +26,11 @@
     "dagre-d3": "0.3.3"
   },
   "_cacheHeaders": {
-    "ETag": "\"fb70b9742a22f8673cdd3a8d74fcbbc6ea03b432\"",
+    "ETag": "W/\"a243dd3bae3004e8f418ca9bf5b39da7a22082ddbd7aa6bf67167e7571971096\"",
     "Content-Type": "application/x-gzip",
     "Content-Disposition": "attachment; filename=mermaid-7.0.0.tar.gz"
   },
-  "_release": "e-tag:fb70b9742",
+  "_release": "e-tag:W/\"a243dd3",
   "_source": "https://github.com/knsv/mermaid/archive/7.0.0.tar.gz",
   "_target": "*",
   "_originalSource": "https://github.com/knsv/mermaid/archive/7.0.0.tar.gz"

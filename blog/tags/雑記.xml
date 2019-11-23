@@ -3,11 +3,122 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/%E9%9B%91%E8%A8%98.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2019-10-14T09:10:18+00:00</updated>
+    <updated>2019-11-23T11:25:13+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[名古屋Qt勉強会#31.1 に参加しました]]></title>
+            <link href="http://www.sharkpp.net/blog/2019/11/23/qt-nagoya-31.html"/>
+            <updated>2019-11-23T17:38:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2019/11/23/qt-nagoya-31.html</id>
+            <content type="html"><![CDATA[<p>2019年11月23日(土) に開催された <a href="https://qt-users.connpass.com/event/155325/">Qt 勉強会 @ Nagoya #31.1 - connpass</a> へ参加しました。</p>
+
+<p>そのまとめです。</p>
+
+<h2 id="%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B">自己紹介</h2>
+
+<p>毎回の通り、自己紹介と本日やることを宣言。</p>
+
+<p>初めて参加の方が一人いた。</p>
+
+<p>久しぶりの開催なのと初めての人がいるためか開催の趣旨などが説明された。</p>
+
+<h2 id="%40kazuo_asa-%E3%81%95%E3%82%93%E3%81%AB%E3%82%88%E3%82%8B%E7%99%BA%E8%A1%A8">@kazuo_asa さんによる発表</h2>
+
+<p><a href="https://twitter.com/kazuo_asa">@kazuo_asa</a> による</p>
+
+<ul>
+<li>はじめてのQt入門 シグナルとスロット</li>
+</ul>
+
+<p>の発表がありました。</p>
+
+<h2 id="%E8%87%AA%E5%88%86%E3%81%AE%E6%9C%AC%E6%97%A5%E3%81%AE%E3%82%84%E3%82%8B%E3%81%93%E3%81%A8">自分の本日のやること</h2>
+
+<ul>
+<li>前回の続きの動画からフレームを切り出し動画のメタ情報とフレーム位置に応じた時刻を設定するツールを実装</li>
+</ul>
+
+<p>前回までの状況</p>
+
+<ul>
+<li>UIの実装途中</li>
+</ul>
+
+<h2 id="%E6%9C%AC%E6%97%A5%E3%81%AE%E7%9F%A5%E8%A6%8B">本日の知見</h2>
+
+<h2 id="path%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0">PATH環境変数</h2>
+
+<p>QtCreator で値を上書きできるので、コンソールでの実行結果と違うことがある...</p>
+
+<h2 id="%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB%2F%E3%82%B9%E3%83%AD%E3%83%83%E3%83%88%E3%81%A7%E3%81%AE%E6%8E%A5%E7%B6%9A%E3%82%BF%E3%82%A4%E3%83%97">シグナル/スロットでの接続タイプ</h2>
+
+<p>オプションで指定できたみたい... 知らなかった...</p>
+
+<p><a href="https://doc.qt.io/qt-5/qt.html#ConnectionType-enum">enum Qt::ConnectionType</a> より</p>
+
+<table>
+<thead>
+<tr>
+  <th>Constant</th>
+  <th>Value</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Qt::AutoConnection</td>
+  <td>0</td>
+  <td>（デフォルト）シグナルを発信するスレッド内にレシーバーが存在する場合、Qt::DirectConnection が使用されます。それ以外の場合、Qt::QueuedConnection が使用されます。接続タイプは、信号が発信されるときに決定されます。</td>
+</tr>
+<tr>
+  <td>Qt::DirectConnection</td>
+  <td>1</td>
+  <td>スロットは、信号が発信されるとすぐに呼び出されます。スロットはシグナリングスレッドで実行されます。</td>
+</tr>
+<tr>
+  <td>Qt::QueuedConnection</td>
+  <td>2</td>
+  <td>スロットは、制御がレシーバーのスレッドのイベントループに戻るときに呼び出されます。スロットは受信者のスレッドで実行されます。</td>
+</tr>
+<tr>
+  <td>Qt::BlockingQueuedConnection</td>
+  <td>3</td>
+  <td>Qt::QueuedConnection と同じです。ただし、シグナルスレッドは、スロットが戻るまでブロックします。レシーバがシグナリングスレッドに存在する場合、この接続を使用しないでください。使用すると、アプリケーションがデッドロックします。</td>
+</tr>
+<tr>
+  <td>Qt::UniqueConnection</td>
+  <td>0x80</td>
+  <td>これは、ビット単位のORを使用して、上記の接続タイプのいずれかと組み合わせることができるフラグです。 Qt::UniqueConnection が設定されている場合、接続が既に存在する場合（つまり、同じオブジェクトの同じペアの同じスロットに同じ信号が既に接続されている場合）、QObject::connect() は失敗します。このフラグはQt 4.6で導入されました。</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="%E6%9C%AC%E6%97%A5%E3%81%AE%E9%80%B2%E6%8D%97">本日の進捗</h2>
+
+<ul>
+<li>前回の続きを思い出すところからスタート</li>
+<li>QProcess::start() で絶対パスではなく <code>ffmpeg</code> だけでコマンドが呼び出せないのを調べていたが、結局 QtCreater の設定に追加することで解決</li>
+<li>あとは QML で 思った UI の表現がうまくいかなかったのでそれを実現するためにサンプルを作ってたりしてタイムアップ</li>
+</ul>
+
+<p>なかなかに、思ったUIを作るのが難しい...</p>
+
+<h2 id="%E3%83%A1%E3%83%A2">メモ</h2>
+
+<ul>
+<li><a href="https://scoop.sh/">Scoop</a> いいぞぉ</li>
+</ul>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://doc.qt.io/qt-5/qt.html#ConnectionType-enum">Qt Namespace | Qt Core 5.13.2</a></li>
+</ul>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[技術書典7に行ってきた]]></title>
             <link href="http://www.sharkpp.net/blog/2019/09/28/techbookfest7.html"/>
@@ -1266,252 +1377,6 @@ void fuga() {
 <p>と言うあたりで今年の反省会終了です。</p>
 
 <p>来年もよろしくお願いします。</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[技術書典5に行ってきた]]></title>
-            <link href="http://www.sharkpp.net/blog/2018/10/14/techbookfest5.html"/>
-            <updated>2018-10-14T12:50:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2018/10/14/techbookfest5.html</id>
-            <content type="html"><![CDATA[<p>2016年から始まった技術書オンリーな同人イベント「<a href="https://techbookfest.org/">技術書典</a>」も数えて５回目のになります。
-その「<a href="https://techbookfest.org/event/tbf05">技術書典５</a>」が、10月08日の体育の日に開催されたので参加して来ました。
-今回は、場所を秋葉原のUDXから池袋のサンシャインシティへと移し、床面積は約３倍以上<sup><a href="#note1">*1</a></sup>、サークル数も２倍近くに規模が大きくなりつつの開催でした。
-また、NHKも取材に来ていたようで<a href="https://twitter.com/nhk_news/status/1050252562748899328">ニュース</a>になっていました。</p>
-
-<p><small id="note1">*1 
-<a href="http://udx-akibasquare.jp/index.php?pg=facilities">秋葉原UDX AKIBA_SQUARE</a> は 1,010m<sup>2</sup>、<a href="http://co.sunshinecity.co.jp/exhibition/hall_spec.html#04">サンシャインシティ 展示ホールD</a> は 3,341m<sup>2</sup>
-</small></p>
-
-<p><a href="/images/20181008_tf5.jpg"><img src="/thumbs/f5a6f1de07bdb58eb4f438b24ac46887-640x640.jpg" alt="技術書典5"></a></p>
-
-<h2 id="%E5%A7%8B%E3%82%81%E3%81%AB">始めに</h2>
-
-<p>前回のレポートは「<a href="/blog/2018/05/18/techbookfest4.html">技術書典4に行ってきた</a>」となります。</p>
-
-<p>今回は、サークル数 約470 、入場者数 10341 人だったようです。サークル関係者なども含んでいるようですが、ついに１万人の大台に乗ってしまったようですね。
-会場が広がったにもかかわらず、人口密度が”今回も”大変なことになっていました。
-帰りがてら12:30頃に確認したところ、端から端まで脇目も振らず移動するのにも１０分ぐらい掛かりました。</p>
-
-<p><a href="https://docs.google.com/spreadsheets/d/1gNVy9ukLn3kYzOC0nyOpysD-Xl3fIzHl26WSSLHC-HY/edit?usp=sharing"><img src="/images/20181008_tf1_tf5_graph.png" alt="参加人数" /></a></p>
-
-<h2 id="%E5%BD%93%E6%97%A5">当日</h2>
-
-<p><a href="/images/20181008_tf5_circle_enter.jpg"><img src="/thumbs/bfa0d63b9c83f33914e16f985548b80f-640x640.jpg" alt="サークル入場の様子"></a></p>
-
-<p>当日は、前回よりも少しだけ早く09:35頃に会場に到着、がすでに目測で150人程度は並んでいました。
-どうやら、最初の人は 09:15頃から並んでいた様子。
-前回と違い、早い段階から列の形成が始まっていました。</p>
-
-<p><a href="/images/20181008_tf5_wait_list_moving.jpg"><img src="/thumbs/ec2aa6d8db10d67e51340f242c653224-640x640.jpg" alt="待機列屋内移動時"></a></p>
-
-<p>今回は整理券配布はなく、代わりに再入場券として配っていました。
-前回と同じような形＆番号も刻印されていたので急遽方針が変わったのかもしれません。
-また、待機中の公式カタログ販売もありませんでした。</p>
-
-<p>10:00頃、待機列が動き、先頭が入り口付近まで移動。後ろも順に移動。</p>
-
-<p><a href="/images/20181008_tf5_opening.jpg"><img src="/thumbs/bb86b090f7401fb487a1a7c939dcdb49-640x640.jpg" alt="開場"></a></p>
-
-<p>11:00を過ぎたところで会場内から拍手があり、遅れて待機列からも拍手が上がり、開場しました。
-今回も待たされる事なく第一陣として入場できました。</p>
-
-<p>ここで、お目当の所をささっと回ってから順に回ればよかったのに順に回ってしまったので何点か購入できなかったものがありました。残念。</p>
-
-<p><a href="/images/20181008_tf5_crowd.jpg"><img src="/thumbs/8951105e1bba65c5b1b7ca79b6d03f9c-640x640.jpg" alt="ひとひとひと"></a></p>
-
-<p>ちょっと最初に手間取ったこともあり、かんたん後払い決済と現金とは、今回半々ぐらいの割合で利用しました。</p>
-
-<p>戦利品はまた後ほどです。</p>
-
-<p><a href="/images/20181008_tf5_pe_of_tf_illust.jpg"><img src="/thumbs/59bbceb59d9838534234a4b07ea37999-640x640.jpg" alt="技術書典イラスト個展"></a></p>
-
-<p>会場出口直前には前回なかった見本誌の立ち見スペースがありましたが、それはもう人が多くてのぞいてくのを諦めました。
-あとは、企画展示の「技術書典イラスト個展」なるものが開かれていて、油絵のキャンパスに印刷？されたデジタル油絵の展示（サークル数が前回の数だったのでイラスト自体は前回作られたものだと思います）やそれらのストカードの販売をしてました。</p>
-
-<p>結局、ぐるっと回って、最後に前回までの公式絵などのイラストが書かれたポストカードを何枚か購入し、会場を脱出しました。</p>
-
-<h2 id="%E6%88%A6%E5%88%A9%E5%93%81">戦利品</h2>
-
-<p>今回の戦利品</p>
-
-<p><a href="/images/20181009_tf5_booty.jpg"><img src="/thumbs/4bfbe88365f9b8a0800a39385e30b5e3-640x640.jpg" alt="戦利品"></a></p>
-
-<table>
-<thead>
-<tr>
-  <th>配置</th>
-  <th>サークル名/ペンネーム</th>
-  <th>頒布物</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/69020002">運01</a></td>
-  <td><a href="https://techbookfest.org/">技術書典運営事務局</a>/<a href="https://twitter.com/techbookfest">技術書典運営事務局</a></td>
-  <td>「技術季報 vol.4」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/69020002">運01</a></td>
-  <td><a href="https://techbookfest.org/">技術書典運営事務局</a>/<a href="https://twitter.com/techbookfest">技術書典運営事務局</a></td>
-  <td>「ポストカード×6」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/33160002">ス05</a></td>
-  <td>リクルートライフスタイル/リクルートライフスタイル</td>
-  <td>「ＨＯＴ ＥＮＧＩＮＥＥＲ」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/30200001">あ13</a></td>
-  <td><a href="http://mochikoastech.hatenablog.com/">mochikoAsTech</a>/<a href="https://twitter.com/mochikoAsTech">mochikoAsTech</a></td>
-  <td>「【技術書典限定】DNS&amp;AWS 2冊セット」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/47000003">あ20</a></td>
-  <td><a href="http://webdesign-manga.com/">湊川あいの、わかば家。</a>/<a href="https://twitter.com/webdesignManga">湊川あい</a></td>
-  <td>「マンガでわかるDocker② 〜開発環境を作ろう編〜」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/29530001">い17</a></td>
-  <td><a href="http://udk.blog91.fc2.com/">コンテンツマーケティング協会</a>/<a href="https://twitter.com/udk91">雨月</a></td>
-  <td>「VR／ARは美少女AIとともに。」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/28720006">い25</a></td>
-  <td><a href="http://sanya.sweetduet.info/monatxscript/">superflip</a>/<a href="https://twitter.com/sprflp">kusano_k</a></td>
-  <td>「ZIP、完全に理解した」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/26850009">い30</a></td>
-  <td><a href="http://d.hatena.ne.jp/izmktr/">GarbageCollection</a>/<a href="https://twitter.com/izmktr">出水洸太郎</a></td>
-  <td>「仮面ライダービルドの数式が分かる本」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/27470004">う21</a></td>
-  <td><a href="https://twitter.com/daphnia_class/status/914009676500447232">みじんこ組</a>/<a href="https://twitter.com/daphnia_class">みじんこ組</a></td>
-  <td>「試験に出ないSE用語 (第3版)」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/43160001">う24</a></td>
-  <td><a href="https://blog.mtb-production.info/">mtbプロジェクト</a>/<a href="https://twitter.com/mtb_beta">mtb_beta</a></td>
-  <td>「IT実務のアンチパターン プロジェクト計画編」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/41000002">う28</a></td>
-  <td>ひろ亭/<a href="https://twitter.com/hirosys_">長村ひろ</a></td>
-  <td>「むつきくんと学ぶ AWS CLI」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/39040001">う74</a></td>
-  <td><a href="https://www.konosumi.net/">このすみ堂</a>/<a href="https://twitter.com/konosumi">このすみ</a></td>
-  <td>「エンジニアアンチパターン 〜失敗に学ぶエンジニアリング〜」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/49040001">お08</a></td>
-  <td><a href="https://www.facebook.com/windholep/">windhole</a>/<a href="https://twitter.com/windhole">風穴 江</a></td>
-  <td>「Ryzen SEGV Battle」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/28500001">お24</a></td>
-  <td><a href="https://devrel.tokyo">DevRel Meetup</a>/<a href="https://twitter.com/goofmint">goofmint</a></td>
-  <td>「開発者コミュニティの光と闇のセット」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/53000003">か16</a></td>
-  <td>調布技研/<a href="https://twitter.com/nasa9084">nasa9084</a></td>
-  <td>「Kubernetesを色んなところで動かす本」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/24990003">か22</a></td>
-  <td><a href="http://nikuyoshi.hatenablog.com/">にくよし文庫</a>/<a href="https://twitter.com/nikuyoshi">nikuyoshi</a></td>
-  <td>「Ansible Roleをつくってみよう」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/35050001">か23</a></td>
-  <td><a href="https://note.mu/niwaken">技術コミュニケーション研究所</a>/<a href="https://twitter.com/niwaken">にわけん</a></td>
-  <td>「SESサバイバルガイド」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/31390001">か26</a></td>
-  <td><a href="https://nanaumi.info/">SIGNIA</a>/<a href="https://twitter.com/nana_u_mi">ななうみ</a></td>
-  <td>「機能するUIを作れるようになる本-基本のキ編-」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/41000007">き05</a></td>
-  <td><a href="http://relog.xii.jp/">理ろぐ</a>/<a href="https://twitter.com/IoriAYANE">理音伊織</a></td>
-  <td>「Qt Quickアプリの設計事情」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/41170003">き06</a></td>
-  <td><a href="https://qiita.com/argama147">エゥーゴ</a>/<a href="https://twitter.com/argama147">argama147</a></td>
-  <td>「Qt5/C++入門 マルチプラットフォーム開発を始めよう」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/28640001">き07</a></td>
-  <td><a href="http://emblog.hatenablog.jp/">eMbLog</a>/<a href="https://twitter.com/sazus">sazus</a></td>
-  <td>「PythonでGUIをつくろう〜はじめてのQt for Python〜」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/29300002">き08</a></td>
-  <td><a href="http://blog.michinari-nukazawa.com/">daisy bell</a>/<a href="https://twitter.com/MNukazawa">MNukazawa</a></td>
-  <td>「GTK Qt Electron」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/28510001">き21</a></td>
-  <td><a href="https://j74th.com/">74th</a>/<a href="https://twitter.com/74th">74th</a></td>
-  <td>「Fabric &amp; Invoke Quick Guide」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/29520011">く14</a></td>
-  <td><a href="https://twilog.org/gunjigakusyusha">軍事学習社＆帝国音楽堂</a>/<a href="https://twitter.com/gunjigakusyusha">バーバラ・アスカ</a></td>
-  <td>「土佐正道『缶ピアノの作りかた』」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/29520011">く14</a></td>
-  <td><a href="https://twilog.org/gunjigakusyusha">軍事学習社＆帝国音楽堂</a>/<a href="https://twitter.com/gunjigakusyusha">バーバラ・アスカ</a></td>
-  <td>「土佐正道『おカリーなの作りかた』」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/35170002">け48</a></td>
-  <td>四六時ハック/<a href="https://twitter.com/mqtsuo02">まつおちゃん</a></td>
-  <td>「もってけ！PWA」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/29530004">け63</a></td>
-  <td><a href="http://romly.com">romly.com</a>/<a href="https://twitter.com/Romly">Romly</a></td>
-  <td>「軸の本 Mechanical Switch Data Book EARLY ACCESS」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/43110001">こ32</a></td>
-  <td><a href="https://github.com/nakajmg/">Pony Head</a>/<a href="https://twitter.com/nakajmg">nakajmg</a></td>
-  <td>「後悔しないためのVueコンポーネント設計」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf05/circle/24720002">こ36</a></td>
-  <td><a href="http://mymarkdown.firebaseapp.com/">ザ・シメサバズ</a>/<a href="https://twitter.com/nabettu">渡邊達明</a></td>
-  <td>「ゼロから始めるNetlify」</td>
-</tr>
-</tbody>
-</table>
-
-<p>※敬称略、配置順</p>
-
-<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
-
-<p>反省点</p>
-
-<ul>
-<li>そろそろ規制が入りそうだけど、もう少しだけ早く来て列に並べばよかったかも</li>
-<li>お目当のサークルを先に回るべきだった</li>
-</ul>
-
-<p>会場が大きく、しかし入場者も多かった今回、色々と反省点はありましたが、いろんな本に出会えて楽しいイベントでした。</p>
-
-<h2 id="%E5%8F%82%E8%80%83">参考</h2>
-
-<ul>
-<li><a href="https://twitter.com/techbookfest/status/1049208448372465664">技術書典公式アカウントさんのツイート: "これにて #技術書典 閉会します。ご来場、誠にありがとうございました。総来場者数は のべ10341人、うちサークル・スタッフ等関係者は889人でした。"</a></li>
-<li><a href="https://haskell.jp/blog/posts/2018/tech-book-fest-5.html">技術書典 5 での Haskell 関連サークルのまとめ - Haskell-jp</a></li>
-</ul>
 ]]></content>
         </entry>
     </feed>
