@@ -3,11 +3,77 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/atom.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2019-11-23T11:24:48+00:00</updated>
+    <updated>2019-12-31T10:11:43+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[大晦日@2019]]></title>
+            <link href="http://www.sharkpp.net/blog/2019/12/31/new-years-eve-2019.html"/>
+            <updated>2019-12-31T19:08:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2019/12/31/new-years-eve-2019.html</id>
+            <content type="html"><![CDATA[<h2 id="1-%E5%B9%B4%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A">1 年を振り返り</h2>
+
+<p>今年も残すところ大晦日、そしてあと数時間で令和二年といったところ。
+令和最初の大晦日も暮れようとしています。</p>
+
+<p>しかし、予告ありの改元が発生するとは思わなかったですね... ほんと。</p>
+
+<p>今年は５月に令和になり、新しい時代が始まりつつ、それでも変わったものも変わらないものもたくさんあった一年でした。
+個人的には京アニの件が一番の大ニュースでしたね。</p>
+
+<p>自分自身のことについてはまあ諸々の理由があって勉強会もほとんど参加できなかったのが残念ですが、来年の後半ぐらいから多少マシになる... といいなと。</p>
+
+<p>そして、ここ数年恒例の仮想除夜の鐘アプリ「<a href="https://sharkpp.github.io/joya_no_kane/">除夜の鐘</a>」を突いてみては如何でしょうか？
+PWAとかにもできた気がしますが、ちょっと間に合わなかったです...</p>
+
+<p>とつらつらと前置きを書いたところで、今年の反省をば。</p>
+
+<h2 id="%E7%B5%90%E6%9E%9C">結果</h2>
+
+<p>まずは、今年の正月 <a href="/blog/2019/01/01/happy-new-year-2019.html">HAPPY NEW YEAR 2019</a> に掲げた目標です。</p>
+
+<ul>
+<li>定期的なホムペの更新</li>
+<li>HSPコンテスト作品の製作！</li>
+<li><a href="http://hsp-users.jp/">HSP関連サイト</a>の定期的な更新。</li>
+<li>WINEの最新版でHSPが動くように！</li>
+<li><a href="https://github.com/sharkpp/TimestampFreezer">TimestampFreezer</a> のバイナリ公開</li>
+<li><a href="https://github.com/sharkpp/Jugemutter">Jugemutter</a> の完成</li>
+</ul>
+
+<p>と、こんな感じ。</p>
+
+<p>成果としては...</p>
+
+<ul>
+<li><a href="https://github.com/sharkpp/delayedmotion">画像を揺らすと一部がなぜか遅れて揺れる画像を作るジェネレータ</a></li>
+<li><a href="https://github.com/sharkpp/amazon-price-check">sharkpp/amazon-price-check</a> ※こちらはまだ記事書いてないけど... まあ一応動く</li>
+</ul>
+
+<p>全体的にサボりぐせというか気力がなくなっている感じで、何をするにも億劫な感じ... いかんなぁとは思うのですが...</p>
+
+<p>HSPコンテストは……　見事に落としました。</p>
+
+<p>HSPの関連サイトもだめですね。</p>
+
+<p>Franz 5 recipe 関連はどうもバグっているっぽいですが、かなり放置気味。</p>
+
+<p>Qt 関連も、勉強会でわずかに進む感じ。</p>
+
+<p>今年も<a href="https://togetter.com/li/1343390">よんた@keita44_f4 さんの日本酒の感想ツイートまとめ</a>を更新してました。というか全然更新できてなかったです。
+しかし、お酒美味しそうです</p>
+
+<h2 id="%E5%8F%8D%E7%9C%81">反省</h2>
+
+<p>もう、全然全くいろいろ進めてないのでなんとかしたいなって思う今日この頃。</p>
+
+<p>と言うあたりで今年の反省会終了です。</p>
+
+<p>来年もよろしくお願いします。</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[名古屋Qt勉強会#31.1 に参加しました]]></title>
             <link href="http://www.sharkpp.net/blog/2019/11/23/qt-nagoya-31.html"/>
@@ -1556,104 +1622,6 @@ void fuga() {
 <ul>
 <li><a href="https://twitter.com/techbookfest/status/1117338472203710469">技術書典公式アカウントさんのツイート: "17時ちょうどをもちまして #技術書典 6を閉会いたしました。速報値となりますが一般参加者およびサークル参加者を合わせた参加者数は10,260名でした。うち一般参加者は9,330名でした。本日は技術書典への1万名を超えるご参加、誠にありがとうございました！"</a></li>
 </ul>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Franz 用の Google ショッピングリスト レシピを作りました！]]></title>
-            <link href="http://www.sharkpp.net/blog/2019/03/30/franz-recipe-google-shoppinglist.html"/>
-            <updated>2019-03-30T00:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2019/03/30/franz-recipe-google-shoppinglist.html</id>
-            <content type="html"><![CDATA[<p>先日(といいつつ実はすでに数ヶ月は立っているのですが) Google Home で利用している買い物リストをPCから見えるページを見つけました。
-今回は、それに対応したクライアント <a href="https://github.com/sharkpp/franz-recipe-google-shoppinglist">Franz 5 recipe for Google Shopping List</a> を公開したので紹介します。</p>
-
-<h2 id="%E3%81%9D%E3%82%82%E3%81%9D%E3%82%82-franz-%E3%81%A8%E3%81%AF%E3%81%AA%E3%82%93%E3%81%9E%E3%82%84%EF%BC%9F">そもそも Franz とはなんぞや？</h2>
-
-<p>簡単にいうと Franz は、各種 SNS をタブでまとめて管理できるデスクトップアプリです。</p>
-
-<p><a href="https://meetfranz.com/">Franz – a free messaging app for Slack, Facebook Messenger, WhatsApp, Telegram and more</a> からダウンロードできますが、利用するにはアカウント登録が必要です。</p>
-
-<p>特徴として</p>
-
-<ul>
-<li>レシピ（＝拡張）を追加することで様々な SNS などの Webサービスに対応可能</li>
-<li>レシピごとに複数のアカウントを割り当て可能（＝マルチアカウント対応）</li>
-<li>クロスプラットフォームなデスクトップアプリ</li>
-</ul>
-
-<p>などがあります。</p>
-
-<p>まあ、要するに Webで提供されているページをタブで表示している訳です。
-そのため、LINE など Webページが存在しないサービスに対しては逆立ちしても利用できないのですが...</p>
-
-<h2 id="%E5%BF%85%E8%A6%81%E3%81%AA%E3%82%82%E3%81%AE">必要なもの</h2>
-
-<ul>
-<li><a href="https://meetfranz.com/">Franz</a> 5 以降<br />古いバージョンはサポートしていません。</li>
-<li><a href="https://myaccount.google.com/">Google</a> アカウント<br />アカウントを持っていない場合は Google を作る必要があります。</li>
-</ul>
-
-<h2 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95">インストール方法</h2>
-
-<h3 id="%E9%96%8B%E7%99%BA%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3">開発バージョン</h3>
-
-<ol>
-<li><code>franz-recipe-google-shoppinglist</code> をダウンロードします。</li>
-<li>PC上の Franz Plugins フォルダを開きます<br />(メモ： <strong><code>dev</code> ディレクトリが存在しない場合は作成する必要があります</strong>)
-
-<ul>
-<li>Mac: <code>~/Library/Application Support/Franz/recipes/dev/</code></li>
-<li>Windows: <code>%AppData%\Franz\recipes\dev\</code></li>
-<li>Linux: <code>~/.config/Franz/recipes/dev</code></li>
-</ul></li>
-<li><code>franz-recipe-google-shoppinglist</code> フォルダを plugins ディレクトリにコピーします</li>
-<li>Franz を再起動する</li>
-</ol>
-
-<p>詳しくは <a href="https://github.com/meetfranz/plugins/blob/master/docs/integration.md">Franz Recipe Documentation / Overview</a> を参照してください。</p>
-
-<h3 id="%E5%AE%89%E5%AE%9A%E7%89%88">安定版</h3>
-
-<p>準備中...</p>
-
-<ul>
-<li><a href="https://github.com/meetfranz/plugins/issues/320">[Deploy] Google Shopping Lists · Issue #320 · meetfranz/plugins</a>
-で公式リポジトリへの登録をリクエストをしているけど、どうなることやら</li>
-</ul>
-
-<h2 id="%E5%88%A9%E7%94%A8%E6%96%B9%E6%B3%95">利用方法</h2>
-
-<h3 id="%E6%96%B0%E3%81%97%E3%81%84%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B">新しいサービスを追加する</h3>
-
-<p><img src="/images/20190330_add-service.png" alt="サービスの追加" /></p>
-
-<p><em>開発バージョン</em></p>
-
-<h3 id="%E8%A8%AD%E5%AE%9A">設定</h3>
-
-<p><img src="/images/20190330_add-service-settings.png" alt="サービスの追加" /></p>
-
-<table>
-<thead>
-<tr>
-  <th>#</th>
-  <th>フィールド</th>
-  <th>説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>①</td>
-  <td>サービス名</td>
-  <td>自由に設定してください</td>
-</tr>
-</tbody>
-</table>
-
-<h3 id="%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3">サインイン</h3>
-
-<p><img src="/images/20190330_shoppinglist-signin.png" alt="" /></p>
-
-<p>登録されたアカウント情報を入力してください。</p>
 ]]></content>
         </entry>
     </feed>
