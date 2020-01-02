@@ -1,10 +1,14 @@
 ---
 title: "macOS 上に Homebrew を利用して Inkscape をインストールする"
 date: 2017-04-30 23:30
+update: 2020-01-02 11:48
 tags: [Inkscape, Homebrew, macOS, Mac]
 categories: [ブログ]
 
 ---
+
+{% import 'post_alert.html' as m %}
+{{ m.alert('2020-01-02 追記', 'Homebrew 経由でのインストールはできなくなっているようです。公式から動作可能なパッケージをインストールできます。詳しくは<a href="/blog/2020/01/02/install-inkscape-for-macos-mojave-or-later.html">macOS 上に Inkscape をインストールする</a>をご覧ください。') }}
 
 開発中のアプリのアイコンを作成するために [Inkscape](https://inkscape.org/ja/) が必要だったのですが、先日に Inkscape と [XQuartz](https://www.xquartz.org/) をアップデートしてから何が悪いのか起動しなくて難儀していたところで、解決方法を見つけたのでその方法の記録です。
 
