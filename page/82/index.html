@@ -18,7 +18,272 @@
        ></li></ol><div class="row"><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
            href="/blog/"><i class="fa fa-archive fa-4x"></i><br />アーカイブ</a></div><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
            href="/product/"><i class="fa fa-download fa-4x"></i><br />作ったもの</a></div><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
-           href="/graffiti/"><i class="fa fa-paint-brush fa-4x"></i><br />落書き</a></div></div><hr style="border-bottom: 1px dashed #aaa; border-top: none;" /><article class="full-contents"><header><h1><a href="/blog/2008/09/22/hsed3-footy2-printing-test.html">HSED3(Footy2版)の印刷機能のテスト</a></h1></header><div><p>HSPのスクリプトエディタの印刷機能の機能アップのための修正のテスト実装をしました。</p><p>取り敢えず使ってみたい人は解凍してHSPと同じフォルダに入れて起動するだけです。名前は変えてあるので問題は無いと思いますが無保証ってことでよろしくお願いします。</p><p><a href="http://dev.onionsoft.net/trac/changeset/174">OpenHSP CHANGESET:174</a></p><p><a href="/files/hsed3_footy2_20080922.zip">hsed3&#95;footy2&#95;20080922.zip</a></p><p>結構、エラーで落ちたり、行番号付いていなかったり、フォント指定できなかったり、折り返しが出来なかったり、と出来ない事だらけだったのでそんな印刷機能を直してみようと奮闘中。</p><p>で、機能として</p><ul><li>行番号のON/OFF</li><li>フォントの指定</li><li>折り返し</li><li>印刷中のダイアログの変更</li><li>色分け印刷</li><li>段組</li></ul><p>ってぐらいを実装しようかともくろんでいます。</p><p>ただ、色分け印刷はエディタ部分のFooty2に機能を追加した方が早いかもとか、段組はやる気あったらで、と最後の二つは実際にやるかは不明。</p></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i>&nbsp;
+           href="/graffiti/"><i class="fa fa-paint-brush fa-4x"></i><br />落書き</a></div></div><hr style="border-bottom: 1px dashed #aaa; border-top: none;" /><article class="full-contents"><header><h1><a href="/blog/2008/09/28/hsp3-filedlg-multiple-filter-implement.html">HSP3のファイル選択ダイアログで複数ファイルフィルタを指定で出来るように修正</a></h1></header><div><p><a href="http://hsp.tv/play/pforum.php?mode=all&amp;num=19768">ファイル保存ダイアログ</a>で話題に上がっているファイル選択ダイアログで複数ファイルフィルタを指定で出来るように修正してみました。</p><pre>dialog "as",16,"ソーススクリプト"
+dialog "txt;*.exe;*.dll", 16, "色々なファイル"
+dialog "bmp|jpg;*.jpeg|png", 16, "ビットマップ|JPEG|PNG"
+dialog ";a*.txt", 16, "テキストファイル"
+dialog "bmp|jpg;*.jpegpng", 16, "ビットマップ|JPEG|PNG"
+dialog "bmp|jpg;*.jpeg|png", 16, "ビットマップ|JPEGPNG"
+dialog "bmp||jpg;*.jpeg|png", 16, "ビットマップ|aa|JPEG|PNG"
+dialog "bmp|*|jpg;*.jpeg|png", 16, "ビットマップ|aa|JPEG|PNG"
+dialog "bmp|*|jpg;*.jpeg|png", 16, "ビットマップ||JPEG|PNG"
+</pre><p>こんな感じで複数フィルタのファイルフィルタを指定します。</p><p>なんか、"\n"派の方が多いような気がしないでもないのでプリプロセッサで変更できるようにはしました。</p><p>実際どっちがいいのだろう</p><p>パッチ</p><pre>Index: filedlg.cpp
+===================================================================
+--- filedlg.cpp (revision 178)
++++ filedlg.cpp (working copy)
+@@ -7,12 +7,13 @@
+#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
++#include "../hsp3debug.h"
+static HWND hwbak;
+static OPENFILENAME ofn ;
+static char szFileName[_MAX_PATH] ;
+static char szTitleName[_MAX_FNAME + _MAX_EXT] ;
+-static char szFilter[128];
++//static char szFilter[128];
+void PopFileInitialize (HWND hwnd)
+@@ -20,7 +21,7 @@
+ofn.lStructSize       = sizeof (OPENFILENAME) ;
+ofn.hwndOwner         = hwnd ;
+ofn.hInstance         = NULL ;
+-     ofn.lpstrFilter       = szFilter ;
++//   ofn.lpstrFilter       = szFilter ;
+ofn.lpstrCustomFilter = NULL ;
+ofn.nMaxCustFilter    = 0 ;
+ofn.nFilterIndex      = 1 ;
+@@ -39,42 +40,178 @@
+ofn.lpTemplateName    = NULL ;
+}
++// SJISの1バイト目か調べる
++#define is_sjis1(c)     ( ( (c) &gt;= 0x81 && (c) &lt;= 0x9F ) || ( (c) &gt;= 0xE0 && (c) &lt;= 0xFC ) )
+void fd_ini( HWND hwnd, char *extname, char *extinfo )
+{
+-   int a,b;
+-/*
+-   rev 44
+-   sjisの全角判定と判断して修正２。(naznyark)
+-*/
+-   unsigned char a1;
+-   char fext[1024];
+-   char finf[1024];
+-   hwbak=hwnd;
++   // dialog p1,16,p3/dialog p1,17,p3 と OpenFileDialog/SaveFileDialogに渡すデータの
++   // p1(extname)      p3(extinfo)                    フィルタ用データ 
++   // "txt"            "テキストファイル"              "*.txt\0テキストファイル(*.txt)\0\0"
++   // "txt;*.text"     "テキストファイル"              "*.txt;*.text\0テキストファイル(*.txt;*.text)\0\0"
++   // "txt;*.text|log" "テキストファイル|ログファイル" "*.txt;*.text\0テキストファイル(*.txt;*.text)\0*.log\0ログファイル(*.log)\0\0"
++   // ";a*.txt"        "テキストファイル"              "a*.txt\0テキストファイル(a*.txt)\0\0"
+-   szFilter[0]=0;
++   // Shark++
++   // ※ MSも全角を推奨していたし(メニュー文字列だったけど)もう半角捨ててもいいよね...
++   // 　 ってことで"ﾌｧｲﾙ" は "ファイル" にしました。
++
++#define realloc_filter_buffer()                        \
++   pszFilterPtr = (char*)realloc(pszFilter, nFilterLen + 1); \
++   if( NULL == pszFilterPtr ) goto out_of_memory;     \
++   pszFilter = pszFilterPtr
++
++   // 区切り文字
++#if 1
++   static const char DELIMITER[]       = "|";
++   static const int  DELIMITER_LEN     = 1;
++#else  // こっちにするなら\r\nで処理しないとだめ
++   static const char DELIMITER[]       = "\r";
++   static const int  DELIMITER_LEN     = 2;
++#endif
++   static const char DEFAULT_DESC[]    = "ファイル";
++   static const char ALL_FILE_FILTER[] = "すべてのファイル (*.*)";
++
++   char *pszFilter = NULL, *pszFilterPtr;
++   int nFilterLen;
++   int nFilterSeek;
++   char *fext = NULL, *fext_next;
++   char *finf = NULL, *finf_next;
++   int fext_len;
++   int finf_len;
++   bool no_aster;
++   int nFilterIndex;
++
+szFileName[0]=0;
+szTitleName[0]=0;
+-   strcpy( fext,extname );
+-   if (fext[0]==0) strcpy( fext,"*" );
+-   sprintf( szFileName, "*.%s",fext );
++   fext = extname;
++   finf = extinfo;
+-   if (fext[0]!=42) {
+-       if (extinfo[0]==0) sprintf( finf,"%sﾌｧｲﾙ",fext );
+-                     else strcpy( finf,extinfo );
+-       sprintf( szFilter, "%s (*.%s)@*.%s@", finf, fext, fext );
++   nFilterLen = 0;
++   nFilterSeek = 0;
++
++   for(nFilterIndex = 0;;
++       fext = fext_next + DELIMITER_LEN,
++       finf = finf_next + DELIMITER_LEN,
++       nFilterIndex++)
++   {
++       // 区切り文字で分割
++       for(fext_next = fext; *fext_next && *DELIMITER != *fext_next; fext_next++) {
++           // SJISの1バイト目チェック＆2文字目を飛ばすときの'\0'チェック
++           if( is_sjis1(*fext_next) && fext_next[1] )
++               fext_next++;
++       }
++       for(finf_next = finf; *finf_next && *DELIMITER != *finf_next; finf_next++) {
++           // SJISの1バイト目チェック＆2文字目を飛ばすときの'\0'チェック
++           if( is_sjis1(*finf_next) && finf_next[1] )
++               finf_next++;
++       }
++       if( fext_next == fext && finf_next == finf ) {
++           break;
++       }
++
++       fext_len = (int)(fext_next - fext);
++       finf_len = (int)(finf_next - finf);
++
++       if( !*fext_next )
++           fext_next -= DELIMITER_LEN;
++       if( !*finf_next )
++           finf_next -= DELIMITER_LEN;
++
++       // 拡張子の先頭に';'があった場合は"*."を先頭につけないモードにする
++       no_aster = (';' == *fext);
++       if( no_aster ) {
++           fext++;
++           fext_len--;
++       }
++
++       if( 0 == fext_len ||
++           ('*' == *fext && 1 == fext_len) )
++       {
++           // 拡張子指定が空文字 or "*" の場合はフィルタに登録をしない
++           continue;
++       }
++
++       // デフォルトファイル名指定
++       if( 0 == nFilterIndex ) {
++           if( !no_aster )
++               strcat(szFileName, "*.");
++           strncat(szFileName, fext, min((size_t)fext_len, _MAX_PATH - 3/* strlen("*.")+sizeof('\0') */));
++       }
++
++       // finf + "(" + "*." + fext + ")" + "\0" + "*." + fext + "\0"
++       nFilterSeek = nFilterLen;
++       nFilterLen += finf_len + 1 + 2 + fext_len + 1 + 1 + 2 + fext_len + 1 + (no_aster ? -4 : 0);
++       if( 0 == finf_len ) {
++           // ファイルの説明が空文字の場合は拡張子+"ファイル"に
++           nFilterLen += fext_len;
++           nFilterLen += (int)strlen(DEFAULT_DESC); // ※
++       }
++       realloc_filter_buffer();
++
++       pszFilterPtr = pszFilter + nFilterSeek;
++       *pszFilterPtr = '\0';
++
++       // フィルタ説明
++       if( 0 == finf_len ) {
++           strncat(pszFilterPtr, fext, (size_t)fext_len);
++           strcat(pszFilterPtr, DEFAULT_DESC); // ※
++       } else {
++           strncat(pszFilterPtr, finf, (size_t)finf_len);
++       }
++
++       strcat(pszFilterPtr,  no_aster ? "(" : "(*.");
++       strncat(pszFilterPtr, fext, (size_t)fext_len);
++       strcat(pszFilterPtr,  ")");
++       strcat(pszFilterPtr,  DELIMITER);
++
++       // フィルタ拡張子
++       if( !no_aster )
++           strcat(pszFilterPtr, "*.");
++       strncat(pszFilterPtr, fext, (size_t)fext_len);
++       strcat(pszFilterPtr,  DELIMITER);
+}
+-   strcat( szFilter,"すべてのﾌｧｲﾙ (*.*)@*.*@@" );
+-   b=(int)strlen(szFilter);
+-   for(a=0;a&lt;b;a++) {
+-       a1=szFilter[a];
+-       if ( ( ( a1 &gt;= 0x81 ) && ( a1 &lt;= 0x9F ) ) || ( ( a1 &gt;= 0xE0 ) && ( a1 &lt;= 0xFC ) ) ) a++;
+-       else if (a1=='@') szFilter[a]=0;
++   // "すべてのファイル (*.*)" + "\0" + "*.*" + "\0" + "\0"
++   nFilterSeek = nFilterLen;
++   nFilterLen += (int)strlen(ALL_FILE_FILTER) + 1 + (int)strlen("*.*") + 1 + 1;
++   realloc_filter_buffer();
++
++   pszFilterPtr = pszFilter + nFilterSeek;
++   *pszFilterPtr = '\0';
++
++   // フィルタ説明
++   strcat(pszFilterPtr, ALL_FILE_FILTER); // ※
++   strcat(pszFilterPtr, DELIMITER);
++
++   // フィルタ拡張子
++   strcat(pszFilterPtr, "*.*");
++   strcat(pszFilterPtr, DELIMITER);
++   strcat(pszFilterPtr, DELIMITER);
++
++// for(int i = 0; i &lt; nFilterLen-1; i++) if('\0'==pszFilter[i]) pszFilter[i] = '|';
++// MessageBox(NULL,pszFilter,"",0);
++
++   // 区切り文字を'\0'に変換
++   pszFilterPtr = pszFilter;
++   for(nFilterSeek = 0; nFilterSeek &lt; nFilterLen; pszFilterPtr++, nFilterSeek++) {
++       if( is_sjis1(*pszFilterPtr) )
++           pszFilterPtr++;
++       else if( *DELIMITER == *pszFilterPtr )
++           *pszFilterPtr = '\0';
+}
++   
++   PopFileInitialize(hwnd);
++   ofn.lpstrFilter = pszFilter;
+-   PopFileInitialize(hwnd);
++#undef realloc_filter_buffer
++
++   return;
++
++out_of_memory:
++   free(pszFilter);
++   throw HSPERR_OUT_OF_MEMORY;
+}
+char *fd_getfname( void )
+@@ -84,17 +221,24 @@
+BOOL fd_dialog( HWND hwnd, int mode, char *fext, char *finf )
+{
++   BOOL bResult = FALSE;
+switch(mode) {
+case 0:
+fd_ini( hwnd, fext, finf );
+ofn.Flags = OFN_HIDEREADONLY | OFN_CREATEPROMPT ;
+-       return GetOpenFileName (&ofn) ;
++       bResult = GetOpenFileName (&ofn) ;
++       free((void*)ofn.lpstrFilter);
++       ofn.lpstrFilter = NULL;
++       break;
+case 1:
+fd_ini( hwnd, fext, finf );
+ofn.Flags = OFN_OVERWRITEPROMPT | OFN_HIDEREADONLY;
+-       return GetSaveFileName (&ofn) ;
++       bResult = GetSaveFileName (&ofn) ;
++       free((void*)ofn.lpstrFilter);
++       ofn.lpstrFilter = NULL;
++       break;
+}
+-   return 0;
++   return bResult;
+}
+</pre></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i>&nbsp;
+        <span itemprop="datePublished" content="2008-09-28">2008年09月28日</span>
+        &nbsp;/&nbsp;
+        <i class="fa fa-history"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2008-09-28-hsp3-filedlg-multiple-filter-implement.md">変更履歴</a>
+        &nbsp;/&nbsp;
+        <i class="fa fa-thumb-tack"></i>&nbsp;<a href="/blog/2008/09/28/hsp3-filedlg-multiple-filter-implement.html">Permalink</a>
+        &nbsp;/&nbsp;
+                                <span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
+                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
+        &nbsp;/&nbsp;
+                                <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:
+                        <a href="/blog/tags/HSP">HSP</a>,                         <a href="/blog/tags/HSP3">HSP3</a>,                         <a href="/blog/tags/Dialog">Dialog</a>,                         <a href="/blog/tags/Filedialog">Filedialog</a></span></span></div></footer></article><article class="full-contents"><header><h1><a href="/blog/2008/09/22/hsed3-footy2-printing-test.html">HSED3(Footy2版)の印刷機能のテスト</a></h1></header><div><p>HSPのスクリプトエディタの印刷機能の機能アップのための修正のテスト実装をしました。</p><p>取り敢えず使ってみたい人は解凍してHSPと同じフォルダに入れて起動するだけです。名前は変えてあるので問題は無いと思いますが無保証ってことでよろしくお願いします。</p><p><a href="http://dev.onionsoft.net/trac/changeset/174">OpenHSP CHANGESET:174</a></p><p><a href="/files/hsed3_footy2_20080922.zip">hsed3&#95;footy2&#95;20080922.zip</a></p><p>結構、エラーで落ちたり、行番号付いていなかったり、フォント指定できなかったり、折り返しが出来なかったり、と出来ない事だらけだったのでそんな印刷機能を直してみようと奮闘中。</p><p>で、機能として</p><ul><li>行番号のON/OFF</li><li>フォントの指定</li><li>折り返し</li><li>印刷中のダイアログの変更</li><li>色分け印刷</li><li>段組</li></ul><p>ってぐらいを実装しようかともくろんでいます。</p><p>ただ、色分け印刷はエディタ部分のFooty2に機能を追加した方が早いかもとか、段組はやる気あったらで、と最後の二つは実際にやるかは不明。</p></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i>&nbsp;
         <span itemprop="datePublished" content="2008-09-22">2008年09月22日</span>
         &nbsp;/&nbsp;
         <i class="fa fa-history"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2008-09-22-hsed3-footy2-printing-test.md">変更履歴</a>
@@ -40,18 +305,7 @@
                         <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
         &nbsp;/&nbsp;
                                 <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:
-                        <a href="/blog/tags/php">php</a>,                         <a href="/blog/tags/Frog%20CMS">Frog CMS</a>,                         <a href="/blog/tags/Comment">Comment</a></span></span></div></footer></article><article class="full-contents"><header><h1><a href="/blog/2008/09/09/greasemonkey-hspcontest-2008-logo-change.html">HSPコンテスト2008のロゴ置換</a></h1></header><div><p>HSPコンテスト2008のロゴを置換するユーザースクリプトです。</p><p><a href="/files/hspcontest_2008_logo_change.user.js">DOWNLOAD</a></p></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i>&nbsp;
-        <span itemprop="datePublished" content="2008-09-09">2008年09月09日</span>
-        &nbsp;/&nbsp;
-        <i class="fa fa-history"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2008-09-09-greasemonkey-hspcontest-2008-logo-change.md">変更履歴</a>
-        &nbsp;/&nbsp;
-        <i class="fa fa-thumb-tack"></i>&nbsp;<a href="/blog/2008/09/09/greasemonkey-hspcontest-2008-logo-change.html">Permalink</a>
-        &nbsp;/&nbsp;
-                                <span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
-                        <a href="/blog/categories/%E3%81%8C%E3%82%89%E3%81%8F%E3%81%9F">がらくた</a>,                         <a href="/blog/categories/greasemonkey">greasemonkey</a></span>
-        &nbsp;/&nbsp;
-                                <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:
-                        <a href="/blog/tags/Greasemonkey">Greasemonkey</a>,                         <a href="/blog/tags/Userscript">Userscript</a></span></span></div></footer></article><br /><nav><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/page/81" title=""><span class="title"><i class="fa fa-chevron-left"></i> 新しい投稿</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/page/83" title=""><span class="title">古い投稿</span><i class="fa fa-chevron-right"></i></a></li></ul></nav></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li><li><i class="fa-li fa fa-ellipsis-h"></i><a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /page/82"
+                        <a href="/blog/tags/php">php</a>,                         <a href="/blog/tags/Frog%20CMS">Frog CMS</a>,                         <a href="/blog/tags/Comment">Comment</a></span></span></div></footer></article><br /><nav><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/page/81" title=""><span class="title"><i class="fa fa-chevron-left"></i> 新しい投稿</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/page/83" title=""><span class="title">古い投稿</span><i class="fa fa-chevron-right"></i></a></li></ul></nav></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li><li><i class="fa-li fa fa-ellipsis-h"></i><a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /page/82"
                                   rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li></ul></div><div class="container text-center"><ul class="list-unstyled list-inline"><li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li><li class="text-muted">&copy; 2004-2020 sharkpp</li></ul></div><div class="container text-center text-muted"><ruby><rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
                                                             >Creative Commons Attribution 4.0 International License</a>.</rb><rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
                                                   >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp></ruby></div><div class="container text-center text-muted"><ruby><rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"

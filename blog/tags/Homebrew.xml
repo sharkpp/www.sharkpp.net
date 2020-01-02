@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/Homebrew.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2020-01-01T08:59:42+00:00</updated>
+    <updated>2020-01-02T02:52:13+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -13,7 +13,16 @@
             <link href="http://www.sharkpp.net/blog/2017/04/30/Install-inkscape-using-homebrew-on-macos.html"/>
             <updated>2017-04-30T23:30:00+00:00</updated>
             <id>http://www.sharkpp.net/blog/2017/04/30/Install-inkscape-using-homebrew-on-macos.html</id>
-            <content type="html"><![CDATA[<p>開発中のアプリのアイコンを作成するために <a href="https://inkscape.org/ja/">Inkscape</a> が必要だったのですが、先日に Inkscape と <a href="https://www.xquartz.org/">XQuartz</a> をアップデートしてから何が悪いのか起動しなくて難儀していたところで、解決方法を見つけたのでその方法の記録です。</p>
+            <content type="html"><![CDATA[<p></p>
+<div class="alert alert-danger alert-dismissible" role="alert">
+  <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
+  <dl style="margin-bottom: 0; margin-left: 35px;">
+    <dt>2020-01-02 追記</dt>
+    <dd>Homebrew 経由でのインストールはできなくなっているようです。公式から動作可能なパッケージをインストールできます。詳しくは<a href="/blog/2020/01/02/install-inkscape-for-macos-mojave-or-later.html">macOS 上に Inkscape をインストールする</a>をご覧ください。</dd>
+  </dl>
+</div>
+
+<p>開発中のアプリのアイコンを作成するために <a href="https://inkscape.org/ja/">Inkscape</a> が必要だったのですが、先日に Inkscape と <a href="https://www.xquartz.org/">XQuartz</a> をアップデートしてから何が悪いのか起動しなくて難儀していたところで、解決方法を見つけたのでその方法の記録です。</p>
 
 <p><img src="/thumbs/632bbe45529a94416b0f7e519f24e6bf-384x384.png" alt="Inkscape 0.92.1 version"></p>
 

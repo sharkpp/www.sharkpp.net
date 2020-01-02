@@ -3,11 +3,100 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/macOS.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2020-01-01T08:59:41+00:00</updated>
+    <updated>2020-01-02T02:52:13+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[macOS 上に Inkscape をインストールする]]></title>
+            <link href="http://www.sharkpp.net/blog/2020/01/02/install-inkscape-for-macos-mojave-or-later.html"/>
+            <updated>2020-01-02T11:48:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2020/01/02/install-inkscape-for-macos-mojave-or-later.html</id>
+            <content type="html"><![CDATA[<p>macOS を Mojave 10.14 にしてから Inkscape が起動しなくなっていた。
+が、まぁ、とりあえず使わないからいいか... と、そのままにしていたところ... 年末に急に使う事態が発生して大慌てで色々調べ入れ直したときの記録。</p>
+
+<p><a href="/blog/2017/04/30/Install-inkscape-using-homebrew-on-macos.html">以前試した方法</a>ではうまくいかなかったので調べました。</p>
+
+<p><img src="/thumbs/0d867646943062ca30f59487e83c8755-384x384.png" alt="Inkscape 1.0beta2 version"></p>
+
+<h2 id="%E7%B5%90%E8%AB%96">結論</h2>
+
+<p>結論から書くと、公式に 0.92.2 もしくは 1.0 beta 2 があるのでそちらを利用しましょうということになります。</p>
+
+<p><img src="/thumbs/7284f6bfabb921bb3c259938794f8558-256x256.png" alt="Inkscape 1.0beta2 download page"></p>
+
+<p>色々調べましたが、どうもそういうことらしいです。</p>
+
+<p><a href="https://inkscape.org/ja/release/inkscape-0.92.4/mac-os-x/dmg/dl/">Inkscape 0.92.4 - macOS : dmg | Inkscape</a> によると</p>
+
+<blockquote>
+  <p>Note:
+  There is no .dmg file for macOS for the current Inkscape version at this time.
+  Please use Inkscape 0.92.2 on macOS &lt;= 10.14. For Catalina (macOS 10.15), there is no stable version available, please use the latest beta version of Inkscape 1.0 or the development version.</p>
+  
+  <p>There will be a notarized and signed .dmg file for the upcoming Inkscape 1.0.</p>
+  
+  <blockquote>
+    <p>注：
+    現時点では、現在の Inkscape バージョンの macOS 用の .dmg ファイルはありません。
+    macOS &lt;= 10.14 では Inkscape 0.92.2 を利用してください。Catalina（macOS 10.15）の場合、利用可能な安定バージョンはありません。Inkscape 1.0 の最新ベータバージョンまたは開発バージョンを利用してください。</p>
+    
+    <p>今後の Inkscape 1.0 には、公証され署名された .dmg ファイルがあります。</p>
+  </blockquote>
+</blockquote>
+
+<p>と書かれています。</p>
+
+<p><img src="/thumbs/9b8563bd587010d545f5a46a588e4bc4-256x256.png" alt="Inkscape 1.0beta2 download page"></p>
+
+<p>Launchpad やファイルとの関連付けもできるようになって快適です。
+ただ、高確率で突然強制終了するので自動保存の設定は必須かなと、思います。</p>
+
+<p><img src="/thumbs/72f639e6f1156f3a2cbd727116bda4ac-256x256.png" alt="Inkscape 1.0beta2 download page"></p>
+
+<h2 id="homebrew-%E7%B5%8C%E7%94%B1%E3%81%A7%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">Homebrew 経由でのインストール</h2>
+
+<p><a href="/blog/2017/04/30/Install-inkscape-using-homebrew-on-macos.html">以前はできた</a> Homebrew 経由でのインストールは <code>"cxx11" is not a recognized standard</code> と怒られて、現時点ではできないようです。</p>
+
+<pre><code class="console">$ brew install caskformula/caskformula/inkscape
+==&gt; Tapping caskformula/caskformula
+Cloning into '/usr/local/Homebrew/Library/Taps/caskformula/homebrew-caskformula'...
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 5 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (5/5), done.
+Error: Invalid formula: /usr/local/Homebrew/Library/Taps/caskformula/homebrew-caskformula/Formula/inkscape.rb
+inkscape: "cxx11" is not a recognized standard
+Error: Cannot tap caskformula/caskformula: invalid syntax in tap!
+</code></pre>
+
+<p>こんな感じでエラーとなります。</p>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<ul>
+<li>現状、macOS 10.14 Mojave 以降では Homebrew でのインストールが失敗する</li>
+<li>macOS 10.15 Catalina では 1.0 beta 2 以降が唯一の選択</li>
+<li>macOS 10.14 Mojave もしくはそれ以下の macOS 10.x では、 1.0 beta 2 もしくは 0.92.2 が利用できる</li>
+<li>公式バージョンをインストールすれば Launchpad やファイルの関連付けも設定される</li>
+<li>Inkscape 1.0 beta 2 は高確率で強制終了するので自動保存の設定は必須</li>
+</ul>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://inkscape.org/release/inkscape-1.0/?latest=1">Download Inkscape 1.0beta2 | Inkscape</a></li>
+<li><a href="https://inkscape.org/ja/release/inkscape-0.92.4/mac-os-x/dmg/dl/">Inkscape 0.92.4 - macOS : dmg | Inkscape</a></li>
+<li><a href="https://github.com/caskformula/homebrew-caskformula/issues/89">brew install fails on bad "cxx11" · Issue #89 · caskformula/homebrew-caskformula</a></li>
+<li><a href="https://github.com/caskformula/homebrew-caskformula/issues/90">"cxx11" is not a recognized standard · Issue #90 · caskformula/homebrew-caskformula</a></li>
+<li><a href="https://github.com/caskformula/homebrew-caskformula/issues/74">Many brew commands fail with :cxx is disabled! There is no replacement. · Issue #74 · caskformula/homebrew-caskformula</a></li>
+<li><a href="https://trsasasusu.com/blog/58/">Error: Calling needs :cxx11 is disabled! There is no replacement. というエラーがbrewで出た話 | 水面下のブログ</a></li>
+<li><a href="/blog/2017/04/30/Install-inkscape-using-homebrew-on-macos.html">macOS 上に Homebrew を利用して Inkscape をインストールする — さめたすたすのお家</a></li>
+</ul>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Qt 用の QDialog をベースとした吹き出し型のウィジェット]]></title>
             <link href="http://www.sharkpp.net/blog/2018/02/27/popover-widget-for-qt.html"/>
@@ -669,7 +758,16 @@ public:
             <link href="http://www.sharkpp.net/blog/2017/04/30/Install-inkscape-using-homebrew-on-macos.html"/>
             <updated>2017-04-30T23:30:00+00:00</updated>
             <id>http://www.sharkpp.net/blog/2017/04/30/Install-inkscape-using-homebrew-on-macos.html</id>
-            <content type="html"><![CDATA[<p>開発中のアプリのアイコンを作成するために <a href="https://inkscape.org/ja/">Inkscape</a> が必要だったのですが、先日に Inkscape と <a href="https://www.xquartz.org/">XQuartz</a> をアップデートしてから何が悪いのか起動しなくて難儀していたところで、解決方法を見つけたのでその方法の記録です。</p>
+            <content type="html"><![CDATA[<p></p>
+<div class="alert alert-danger alert-dismissible" role="alert">
+  <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
+  <dl style="margin-bottom: 0; margin-left: 35px;">
+    <dt>2020-01-02 追記</dt>
+    <dd>Homebrew 経由でのインストールはできなくなっているようです。公式から動作可能なパッケージをインストールできます。詳しくは<a href="/blog/2020/01/02/install-inkscape-for-macos-mojave-or-later.html">macOS 上に Inkscape をインストールする</a>をご覧ください。</dd>
+  </dl>
+</div>
+
+<p>開発中のアプリのアイコンを作成するために <a href="https://inkscape.org/ja/">Inkscape</a> が必要だったのですが、先日に Inkscape と <a href="https://www.xquartz.org/">XQuartz</a> をアップデートしてから何が悪いのか起動しなくて難儀していたところで、解決方法を見つけたのでその方法の記録です。</p>
 
 <p><img src="/thumbs/632bbe45529a94416b0f7e519f24e6bf-384x384.png" alt="Inkscape 0.92.1 version"></p>
 
