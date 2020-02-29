@@ -3,11 +3,87 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/%E9%9B%91%E8%A8%98.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2020-01-02T02:52:13+00:00</updated>
+    <updated>2020-02-29T14:35:16+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[あれから16年経ったようです]]></title>
+            <link href="http://www.sharkpp.net/blog/2020/02/29/happy-anniversary-16th.html"/>
+            <updated>2020-02-29T23:30:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2020/02/29/happy-anniversary-16th.html</id>
+            <content type="html"><![CDATA[<p>世間では新型コロナウイルスによって展示会やらイベントが次々に中止や延期に追い込まれています。
+個人的な部分でもついにリモートワークが推奨になってきた感じで影響が出始めましたね。</p>
+
+<p>さて、本日はいつの間にかホームページ開設が16年を過ぎ17年目になったことに気がついて、去年何かやっておけばよかったとすこし後悔していたところで今からでも遅くないというそらみみが聞こえてきたので、このページの過去をざっくりと振り返ってみたいと思います。</p>
+
+<h2 id="%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E9%96%8B%E8%A8%AD">ホームページ開設</h2>
+
+<p>2004-02-24 ホームページを開設</p>
+
+<p>たしか、契約しているプロバイダのおまけでついてくるジオシティーズのアカウントで公開していたと思う。</p>
+
+<p>phpを動かすために、別のサービス(これもすでに閉鎖)も借りていた記憶もありますね。</p>
+
+<p>ジオシティーズも去年完全閉鎖され時代の流れを感じますのぅ。
+<a href="https://info-geocities.yahoo.co.jp/close/"><img src="/images/20200229_geocities_closed.png" alt="サービス終了のお知らせ - Yahoo!ジオシティーズ" /></a></p>
+
+<h2 id="%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E5%8F%96%E5%BE%97">ドメイン取得</h2>
+
+<p>2005-08-13 独自ドメインへ移転</p>
+
+<p>数日前の 2005-08-05 に <code>sharkpp.net</code> を取得し、独自ドメインでの運営に変更。
+この当時契約していたドメインレジストラも独自運営からGMOに買収されたりと、これまた結構変遷があります。</p>
+
+<p><a href="http://web.archive.org/">Wayback Machine</a>に残っている最古は 2005-10-20 15:34:50 でこんなデザインでした。</p>
+
+<p><a href="http://web.archive.org/web/20051020153450/http://www.sharkpp.net:80/"><img src="/images/20200229_webarc20051020153450.png" alt="2005-10-20 15:34:50 当時のページ" /></a></p>
+
+<h2 id="%E6%A7%8B%E7%AF%89%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%92%E6%89%8B%E6%89%93%E3%81%A1%E3%81%8B%E3%82%89-frog-cms-%E3%81%AB%E5%A4%89%E6%9B%B4">構築システムを手打ちから Frog CMS に変更</h2>
+
+<p>2008-08-XX 構築システムを手打ちから Frog CMS に変更</p>
+
+<p>ホームページを手打ちから <a href="https://github.com/philippe/FrogCMS">Frog CMS</a> というCMSに変更。
+この時同時に、デザインの変更や、掲示板の廃止などもしています。
+Frog CMS も更新が続くと思ってたらしばらくしたら更新されなくなりましたなぁ...</p>
+
+<p><a href="http://web.archive.org/web/20081007190559/http://www.sharkpp.net:80/"><img src="/images/20200229_webarc20081007190559.png" alt="2008-10-07 19:05:59 当時のページ" /></a></p>
+
+<h2 id="%E6%A7%8B%E7%AF%89%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%92-frog-cms-%E3%81%8B%E3%82%89-sculpin-%2B-github-pages-%E3%81%AB%E5%A4%89%E6%9B%B4">構築システムを Frog CMS から Sculpin + GitHub pages に変更</h2>
+
+<p>2015-05-31 構築システムを Frog CMS から Sculpin + GitHub pages に変更</p>
+
+<p>レンタルサーバーの仕様変更で、しばらく Frog CMS がエラーを吐いていたことやもはや保守されてないものを使うのもってことで、重い腰を上げ <a href="https://sculpin.io/">Sculpin</a> という、php で動作する静的サイトジェネレータを利用し GitHub に push したら GitHub pages で運用しているサイトが更新される仕組みを構築しました。
+その時の記録は「<a href="/blog/2015/06/28/site-reboot-by-sculpin.html">Sculpin でホムペを再構築したときのメモ</a>」として記事にしています。
+この時同時に、デザインやホームページのタイトルの変更もしています。</p>
+
+<h2 id="%E6%A7%8B%E7%AF%89%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E9%81%8B%E7%94%A8%E3%82%92-xrea-%E3%81%8B%E3%82%89-travis-ci-%E3%81%AB%E5%A4%89%E6%9B%B4">構築システムの運用を xrea から Travis CI に変更</h2>
+
+<p>2016-06-12 構築システムの運用を xrea から Travis CI に変更</p>
+
+<p>レンタルサーバーの XREA でサイトのビルドを行なっていたけど、だんだんとビルドに失敗したりすることが多くなってきたので Travis CI を使ってビルドするように変更。
+今なら、GitHub Actions を使う感じかも。
+今と違って、ヘッダ部分にカテゴリリンクがなかったりしてるけど、それはおいおいと細かく変更していった結果。</p>
+
+<p><a href="http://web.archive.org/web/20150613052025/http://www.sharkpp.net:80/"><img src="/images/20200229_webarc20150613052025.png" alt="2015-06-13 05:20:25 当時のページ" /></a></p>
+
+<h2 id="%E3%81%9D%E3%81%97%E3%81%A6%E7%8F%BE%E5%9C%A8">そして現在</h2>
+
+<p>もろもろ細かなデザインが変わったりしているけど、根本のシステムは変わらず。</p>
+
+<p><img src="/images/20200229_now.png" alt="現在のページ" /></p>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<p>とりあえず、大きな変更をざっくりとまとめてみました。
+16年も経つとオギャーといってた赤ちゃんが高校１年とか２年とかになっている感じなので、世間でも大きなところでは、携帯電話がガラゲー（フューチャーフォン）からスマホに変わったりしていますね。</p>
+
+<p>光陰矢の如しとはよくいったもので、ここ数年は一年があっという間に過ぎていく感じで、なかなかに恐ろしいです。</p>
+
+<p>まあ、そんな感じな雑な締めかたですが、16年経ち17年目を迎えた「さめたすたすのお部屋」をよろしくお願いします。</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[HAPPY NEW YEAR 2020]]></title>
             <link href="http://www.sharkpp.net/blog/2020/01/01/happy-new-year-2020.html"/>
@@ -1310,68 +1386,6 @@ void fuga() {
 
 <ul>
 <li><a href="https://twitter.com/techbookfest/status/1117338472203710469">技術書典公式アカウントさんのツイート: "17時ちょうどをもちまして #技術書典 6を閉会いたしました。速報値となりますが一般参加者およびサークル参加者を合わせた参加者数は10,260名でした。うち一般参加者は9,330名でした。本日は技術書典への1万名を超えるご参加、誠にありがとうございました！"</a></li>
-</ul>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[名古屋Qt勉強会#24 に参加しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2019/01/19/qt-nagoya-24.html"/>
-            <updated>2019-01-19T17:30:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2019/01/19/qt-nagoya-24.html</id>
-            <content type="html"><![CDATA[<p>1月19日(土) に開催された <a href="https://qt-users.connpass.com/event/113801/">Qt 勉強会 @ Nagoya #24 - connpass</a> に久しぶりに参加しました。</p>
-
-<p>そのまとめです。</p>
-
-<p><img src="/images/20190119_qauthwith1.png" alt="成果" /></p>
-
-<h2 id="%E6%9C%AC%E6%97%A5%E3%81%AE%E7%9F%A5%E8%A6%8B">本日の知見</h2>
-
-<h3 id="listview-%E3%81%AE%E8%83%8C%E6%99%AF%E3%81%AE%E3%83%9E%E3%82%A6%E3%82%B9%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%82%92%E9%80%8F%E9%81%8E">ListView の背景のマウスイベントを透過</h3>
-
-<p>ListView の背景のマウスイベントを透過する方法。
-結構、実現するのに時間がかかったけど、結局はプロパティを一つ変えるだけだった。</p>
-
-<p>まず Qt Quick の <a href="http://doc.qt.io/qt-5/qml-qtquick-listview.html">ListView</a> は次のような派生で実装されています。</p>
-
-<pre><code>QtObject
-  +- Item
-       +- Flickable
-            +- ListView
-</code></pre>
-
-<p>それでもって ListView の背景を透明にしても、その下にあるコンポーネントに対しては、マウスのホバー以外のクリックやホイール操作は渡されない。</p>
-
-<p>結局のところ色々調べたところ、 <a href="http://doc.qt.io/qt-5/qml-qtquick-flickable.html">Flickable</a> がフリック操作を検知するためにマウスのイベントを処理している様子。</p>
-
-<p>なので、答えは</p>
-
-<pre><code>    ListView {
-        interactive: false
-    }
-</code></pre>
-
-<p>と、 <code>interactive</code> プロパティを <code>false</code> にすれば良いようです。</p>
-
-<p>ちなみに、この設定を変更すると当然のことながらフリック動作が聞かなくなります。</p>
-
-<h3 id="%E3%83%A9%E3%83%A0%E3%83%80%E5%BC%8F">ラムダ式</h3>
-
-<p>スコープに注意！</p>
-
-<p>コンストラクタでラムダ式を引数に渡してメソッドを呼び出したら（実際の実行は遅延される）スコープ抜けた途端に破棄されていた。</p>
-
-<p>メンバ変数に代入して生存の時間を伸ばして解決。</p>
-
-<h2 id="%E6%87%87%E8%A6%AA%E4%BC%9A">懇親会</h2>
-
-<p>もぐもぐ</p>
-
-<p><img src="/images/20190119_mogmog.jpg" alt="もぐもぐ" /></p>
-
-<h2 id="%E5%8F%82%E8%80%83">参考</h2>
-
-<ul>
-<li><a href="http://doc.qt.io/qt-5/qml-qtquick-flickable.html#interactive-prop">Flickable QML Type | Qt Quick 5.12</a></li>
 </ul>
 ]]></content>
         </entry>
