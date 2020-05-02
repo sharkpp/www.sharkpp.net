@@ -12,7 +12,7 @@ categories: [ブログ]
 
 PC上での使い方は結構サクッと出てきたので、実際のユースケースも念頭に Android でもオレオレ証明書が正規の証明書として利用できるような設定方法も調べてみました。
 
-[<img src="{{ thumbnail('/images/20200501_local_https_secure3.png', 640, 640) }}" alt="20200501_local_https_secure3">](/images/20200501_local_https_secure3.png)
+[<img src="{{ thumbnail('/images/20200501_local_https_secure3.png', 480, 480) }}" alt="20200501_local_https_secure3">](/images/20200501_local_https_secure3.png)
 
 ## mkcert の Windows へのインストール
 
@@ -90,22 +90,21 @@ macOS の場合
 1. 「キーチェーン」を開く
 2. 左部「ログイン」を選択し `mkcert ▒▒▒▒▒▒▒▒▒▒▒▒` を探す、
 3. 右クリックメニューから「"mkcert ▒▒▒▒▒▒▒▒▒▒▒▒"を書き出す」を選んでファイルに保存
-
-保存したファイルをなんとかして Android にコピーします。
+4. 最後に、保存したファイルをなんとかして Android にコピーします。
 
 ### 証明書のインストール
 
 1. 「設定」アプリを開く
-2. 「セキュリティ」→「詳細設定」→「暗号化と認証情報」「ストレージからのインストール」 
-   [<img src="{{ thumbnail('/images/20200501_android_ser_install1.png', 320, 320) }}" alt="20200501_android_ser_install1">](/images/20200501_android_ser_install1.png) 
-   [<img src="{{ thumbnail('/images/20200501_android_ser_install2.png', 320, 320) }}" alt="20200501_android_ser_install2">](/images/20200501_android_ser_install2.png) 
+2. 「セキュリティ」→「詳細設定」→「暗号化と認証情報」「ストレージからのインストール」<br/>
+   [<img src="{{ thumbnail('/images/20200501_android_ser_install1.png', 320, 320) }}" alt="20200501_android_ser_install1">](/images/20200501_android_ser_install1.png) &nbsp; 
+   [<img src="{{ thumbnail('/images/20200501_android_ser_install2.png', 320, 320) }}" alt="20200501_android_ser_install2">](/images/20200501_android_ser_install2.png) &nbsp; 
    [<img src="{{ thumbnail('/images/20200501_android_ser_install3.png', 320, 320) }}" alt="20200501_android_ser_install3">](/images/20200501_android_ser_install3.png) 
-3. エクスポートした証明書を選択
+3. エクスポートした証明書を選択 <br/>
    [<img src="{{ thumbnail('/images/20200501_android_ser_install4.png', 320, 320) }}" alt="20200501_android_ser_install4">](/images/20200501_android_ser_install4.png) 
-4. 「証明書の名前を指定する」欄は、適用に、「認証情報の使用」欄は「VPNとアプリ」を選択 
+4. 「証明書の名前を指定する」欄は、適用に、「認証情報の使用」欄は「VPNとアプリ」を選択 <br/>
    [<img src="{{ thumbnail('/images/20200501_android_ser_install5.png', 320, 320) }}" alt="20200501_android_ser_install5">](/images/20200501_android_ser_install5.png)
-5. 「信頼できる認証局」→「ユーザー」タブを選択し、インストールした証明書が含まれていたらOK 
-   [<img src="{{ thumbnail('/images/20200501_android_ser_install6.png', 320, 320) }}" alt="20200501_android_ser_install6">](/images/20200501_android_ser_install6.png) 
+5. 「信頼できる認証局」→「ユーザー」タブを選択し、インストールした証明書が含まれていたらOK <br/>
+   [<img src="{{ thumbnail('/images/20200501_android_ser_install6.png', 320, 320) }}" alt="20200501_android_ser_install6">](/images/20200501_android_ser_install6.png) &nbsp; 
    [<img src="{{ thumbnail('/images/20200501_android_ser_install7.png', 320, 320) }}" alt="20200501_android_ser_install7">](/images/20200501_android_ser_install7.png)
 
 ## 証明書の利用
@@ -144,9 +143,7 @@ $ http-server . -S -C 0.0.0.0+3.pem -K .0.0.0.0+3-key.pem
 
 Chrome for Android で確認するとこんな感じ
 
-[<img src="{{ thumbnail('/images/20200501_local_https_secure1.png', 320, 320) }}" alt="20200501_local_https_secure1">](/images/20200501_local_https_secure1.png)
-
-[<img src="{{ thumbnail('/images/20200501_local_https_secure2.png', 320, 320) }}" alt="20200501_local_https_secure2">](/images/20200501_local_https_secure2.png)
+[<img src="{{ thumbnail('/images/20200501_local_https_secure1.png', 320, 320) }}" alt="20200501_local_https_secure1">](/images/20200501_local_https_secure1.png) [<img src="{{ thumbnail('/images/20200501_local_https_secure2.png', 320, 320) }}" alt="20200501_local_https_secure2">](/images/20200501_local_https_secure2.png)
 
 Chrome for macOS で確認するとこんな感じ
 
