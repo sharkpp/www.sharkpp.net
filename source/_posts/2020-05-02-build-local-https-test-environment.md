@@ -48,7 +48,7 @@ $ brew install nss
 
 ```console
 $ mkcert -install
-Created a new local CA at "/Users/▒▒▒▒/Library/Application Support/mkcert" 
+Created a new local CA at "/Users/****/Library/Application Support/mkcert" 
 Sudo password: ******
 The local CA is now installed in the system trust store! ⚡️
 The local CA is now installed in the Firefox trust store (requires browser restart)! 
@@ -60,7 +60,7 @@ The local CA is now installed in the Firefox trust store (requires browser resta
 
 ```console
 $ mkcert 0.0.0.0 localhost 127.0.0.1 ::1
-Using the local CA at "/Users/▒▒▒▒/Library/Application Support/mkcert" 
+Using the local CA at "/Users/****/Library/Application Support/mkcert" 
 
 Created a new certificate valid for the following names 
  - "0.0.0.0"
@@ -88,8 +88,8 @@ macOS の場合
 [<img src="{{ thumbnail('/images/20200501_ser_export_from_macos_key_chain.png', 320, 320) }}" alt="20200501_ser_export_from_macos_key_chain">](/images/20200501_ser_export_from_macos_key_chain.png)
 
 1. 「キーチェーン」を開く
-2. 左部「ログイン」を選択し `mkcert ▒▒▒▒▒▒▒▒▒▒▒▒` を探す、
-3. 右クリックメニューから「"mkcert ▒▒▒▒▒▒▒▒▒▒▒▒"を書き出す」を選んでファイルに保存
+2. 左部「ログイン」を選択し `mkcert ************` を探す、
+3. 右クリックメニューから「"mkcert ************"を書き出す」を選んでファイルに保存
 
 保存したファイルをなんとかして Android にコピーします。
 
