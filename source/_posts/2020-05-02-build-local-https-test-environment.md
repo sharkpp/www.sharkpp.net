@@ -33,7 +33,7 @@ Updating Homebrew...
 ==> Downloading from https://akamai.bintray.com/91/9100c7f044d91e6ca0c483ed572217de28daa34c04fa6e2a130116175ba162e9?__gda__=exp=1588341913~hmac=516f50b8cbb6930276b
 ######################################################################## 100.0%
 ==> Pouring mkcert-1.4.1.mojave.bottle.tar.gz
-  /usr/local/Cellar/mkcert/1.4.1: 6 files, 5.3MB
+🍺  /usr/local/Cellar/mkcert/1.4.1: 6 files, 5.3MB
 ```
 
 Firefox で利用する場合は
@@ -48,10 +48,10 @@ $ brew install nss
 
 ```console
 $ mkcert -install
-Created a new local CA at "/Users/****/Library/Application Support/mkcert" 
+Created a new local CA at "/Users/▒▒▒▒/Library/Application Support/mkcert" 💥
 Sudo password: ******
 The local CA is now installed in the system trust store! ⚡️
-The local CA is now installed in the Firefox trust store (requires browser restart)! 
+The local CA is now installed in the Firefox trust store (requires browser restart)! 🦊
 ```
 
 ## 証明書の作成
@@ -60,15 +60,15 @@ The local CA is now installed in the Firefox trust store (requires browser resta
 
 ```console
 $ mkcert 0.0.0.0 localhost 127.0.0.1 ::1
-Using the local CA at "/Users/****/Library/Application Support/mkcert" 
+Using the local CA at "/Users/▒▒▒▒/Library/Application Support/mkcert" ✨
 
-Created a new certificate valid for the following names 
+Created a new certificate valid for the following names 📜
  - "0.0.0.0"
  - "localhost"
  - "127.0.0.1"
  - "::1"
 
-The certificate is at "./0.0.0.0+3.pem" and the key at "./0.0.0.0+3-key.pem" 
+The certificate is at "./0.0.0.0+3.pem" and the key at "./0.0.0.0+3-key.pem" ✅
 ```
 
 実行時のカレントディレクトリに `*.pem` = 公開鍵、と `*-key.pem ` = 秘密鍵、が作成されるので、https として動作させる場合の公開鍵と秘密鍵として指定します。
@@ -88,8 +88,8 @@ macOS の場合
 [<img src="{{ thumbnail('/images/20200501_ser_export_from_macos_key_chain.png', 320, 320) }}" alt="20200501_ser_export_from_macos_key_chain">](/images/20200501_ser_export_from_macos_key_chain.png)
 
 1. 「キーチェーン」を開く
-2. 左部「ログイン」を選択し `mkcert ************` を探す、
-3. 右クリックメニューから「"mkcert ************"を書き出す」を選んでファイルに保存
+2. 左部「ログイン」を選択し `mkcert ▒▒▒▒▒▒▒▒▒▒▒▒` を探す、
+3. 右クリックメニューから「"mkcert ▒▒▒▒▒▒▒▒▒▒▒▒"を書き出す」を選んでファイルに保存
 
 保存したファイルをなんとかして Android にコピーします。
 
