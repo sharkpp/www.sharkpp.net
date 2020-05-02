@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ローカルのhttpsテスト環境の構築"
+title: "ローカルでの HTTPS テスト環境の構築"
 date: 2020-05-02 16:15
 tags: [macOS, https, ssl, brew, nodejs, mkcert]
 categories: [ブログ]
@@ -157,4 +157,4 @@ Chrome for macOS で確認するとこんな感じ
 
 * [ローカル環境でSSLをオレオレ証明書で行っていて警告が出てる人に朗報 - Qiita](https://qiita.com/walkers/items/b90a97a99bbb27f6550f)
 * [AndroidのCA証明書のインストールについて — Information Media Center](https://www.media.hiroshima-u.ac.jp/services/hinet/android-ca2)
-* [証明書を追加、削除する - Pixel Phone ヘルプ](https://support.google.com/pixelphone/answer/2844832?hl=ja&visit_id=637239419312335821-3938346748&rd=1)
+* [証明書を追加、削除する - Pixel Phone ヘルプ](https://support.google.com/pixelphone/answer/2844832?hl=ja)
