@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/%E9%9B%91%E8%A8%98.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2020-05-02T11:43:36+00:00</updated>
+    <updated>2020-07-29T14:51:11+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -814,6 +814,426 @@ void fuga() {
 ]]></content>
         </entry>
             <entry>
+            <title type="html"><![CDATA[Hubot アダプタを TypeScript を使って作ってみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2019/07/29/hubot-adapter-with-typescript.html"/>
+            <updated>2019-07-29T23:46:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2019/07/29/hubot-adapter-with-typescript.html</id>
+            <content type="html"><![CDATA[<h2 id="typescrpt-%E3%81%A7%E5%AE%9F%E8%A3%85%E3%81%99%E3%82%8B-hubot-%E3%82%A2%E3%83%80%E3%83%97%E3%82%BF">TypeScrpt で実装する Hubot アダプタ</h2>
+
+<p><a href="https://hubot.github.com/docs/adapters/development/">Development adapter | HUBOT</a> を参考に、起動時に bot へと生成したメッセージを受け渡すだけを行うアダプタを TypeScript で実装してみました。</p>
+
+<p>この記事では次のような名称を利用しているので適時読み替えてください。</p>
+
+<table>
+<thead>
+<tr>
+  <th>項目</th>
+  <th>名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>アダプタプロジェクト名</td>
+  <td><code>hubot-sample-adapter</code></td>
+</tr>
+<tr>
+  <td>テスト用のHubotプロジェクト名</td>
+  <td><code>hubot-test</code></td>
+</tr>
+<tr>
+  <td>アダプタプロジェクトの親フォルダ</td>
+  <td><code>~/</code></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="typescript-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">TypeScript のインストール</h3>
+
+<p>まず環境を整えていきます。</p>
+
+<pre><code class="console">$ mkdir hubot-sample-adapter
+$ cd hubot-sample-adapter
+$ npm init -y
+</code></pre>
+
+<p>追加で、</p>
+
+<pre><code class="console">$ npm install --save --dev typescript hubot @types/hubot
+$ npx tsc --init
+</code></pre>
+
+<p>として TypeScript のツール用の設定をします。</p>
+
+<h3 id="visual-studio-code-%E3%81%A7%E6%A7%8B%E6%96%87%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF">Visual Studio Code で構文チェック</h3>
+
+<p>Visual Studio Code で <a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint">ESLint</a> を使って構文チェックをできるようにします。</p>
+
+<pre><code class="console">$ npm install --save --dev eslint prettier eslint-config-airbnb-base eslint-config-prettier eslint-plugin-prettier eslint-plugin-import
+$ npm install --save --dev @typescript-eslint/parser @typescript-eslint/eslint-plugin
+</code></pre>
+
+<p>インストールを行うと <code>The ESLint extension will use 'node_modules/eslint' for validation, which is installed locally in 'hubot-sample-adapter'. If you trust this version of ESLint, press 'Allow', otherwise press 'Do Not Allow'. Press 'Cancel' to disable ESLint for this session.</code> と確認されるので <code>Allow</code> を選択します。</p>
+
+<p>とりあえず、</p>
+
+<table>
+<thead>
+<tr>
+  <th>項目</th>
+  <th>説明など</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Javascript style guide</td>
+  <td>airbnb-base</td>
+</tr>
+<tr>
+  <td>構文チェック</td>
+  <td>基本全てエラー</td>
+</tr>
+<tr>
+  <td>no-unused-vars</td>
+  <td><code>_</code> から始まる変数以外の未使用をエラーとする。(TypeScriptの構文を優先)</td>
+</tr>
+</tbody>
+</table>
+
+<p>こんな感じで、設定ファイル <code>.eslintrc.js</code> は</p>
+
+<pre><code class="javascript">module.exports = {
+    "env": {
+        "browser": false,
+        "es2020": true
+    },
+    "extends": [
+        "airbnb-base",
+        "plugin:prettier/recommended",
+        "prettier/@typescript-eslint"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 11,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "prettier"
+    ],
+    "rules": {
+        "prettier/prettier": "error",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }]
+    }
+};
+</code></pre>
+
+<p>こんな感じ。</p>
+
+<h2 id="visual-studio-code-%E3%81%A7%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E3%82%92%E8%A1%8C%E3%81%86%E3%81%9F%E3%82%81%E3%81%AE%E3%81%82%E3%82%8C%E3%81%93%E3%82%8C">Visual Studio Code でデバッグを行うためのあれこれ</h2>
+
+<p>TypeScript のソース上でブレークポイントを設定したりデバッグ実行前にソースをコンパイルするなど、デバッグのための構成を行います。</p>
+
+<ol>
+<li>デバッグ用 hubot プロジェクトの作成</li>
+<li>デバッグのための構成を追加</li>
+</ol>
+
+<h3 id="%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E7%94%A8-hubot-%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90">デバッグ用 hubot プロジェクトの作成</h3>
+
+<p><code>yo hubot</code> でテスト用の hubot を作成します。
+この時 <code>--defaults</code> オプションをつけることでオーナーなどの指定をよしなにしてくれます。
+ここではテスト用に作るため、アダプタプロジェクトの直下に作ります。</p>
+
+<pre><code class="console">$ mkdir hubot-test
+$ cd hubot-test
+$ npx yo hubot --defaults
+                     _____________________________  
+                    /                             \ 
+   //\              |      Extracting input for    |
+  ////\    _____    |   self-replication process   |
+ //////\  /_____\   \                             / 
+ ======= |[^_/\_]|   /----------------------------  
+  |   | _|___@@__|__                                
+  +===+/  ///     \_\                               
+   | |_\ /// HUBOT/\\                             
+   |___/\//      /  \\                            
+         \      /   +---+                            
+          \____/    |   |                            
+           | //|    +===+                            
+            \//      |xx|                            
+
+   create bin/hubot
+   create bin/hubot.cmd
+　　　　　　　　：
+added 92 packages from 53 contributors and audited 92 packages in 13.227s
+found 0 vulnerabilities
+
+</code></pre>
+
+<p><code>npm link path/to/hubot-adapter</code> とコマンドを実行し、アダプタへリンクを貼り テスト用の Hubot プロジェクトからアダプタが認識できるようにします。</p>
+
+<pre><code class="console">$ pwd
+
+$ npm link ../../hubot-sample-adapter
+npm WARN hubot-sample-adapter@1.0.0 No repository field.
+
+audited 373 packages in 3.58s
+
+29 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+/usr/local/lib/node_modules/hubot-sample-adapter -&gt; ~/hubot-sample-adapter
+~/hubot-sample-adapter/hubot-test/node_modules/hubot-sample-adapter -&gt; /usr/local/lib/node_modules/hubot-sample-adapter -&gt; ~/hubot-sample-adapter
+</code></pre>
+
+<p>注意点として、パスの指定は相対パスで問題ないですが、指定したパスの最後の部分を利用し node_modules にフォルダを作成しているようなので、フォルダ名を指定する必要があります。</p>
+
+<pre><code>○ $ npm link ../../hubot-sample-adapter
+× $ npm link ../
+</code></pre>
+
+<p>作成されたプロジェクトをデバッグ用にカスタマイズします。</p>
+
+<p><code>hubot-test/external-scripts.json</code> にデフォルトで設定されている外部スクリプトはデバッグの邪魔になるので除外しておきます。</p>
+
+<pre><code class="diff"> [
+-  "hubot-diagnostics",
+-  "hubot-help",
+-  "hubot-heroku-keepalive",
+-  "hubot-google-images",
+-  "hubot-google-translate",
+-  "hubot-pugme",
+-  "hubot-maps",
+-  "hubot-redis-brain",
+-  "hubot-rules",
+-  "hubot-shipit"
+ ]
+</code></pre>
+
+<p>とりあえず、この記事で実装するアダプタは起動時にメッセージを bot へ送るので、どんな内容でも受け取ってり返答する bot を <code>hubot-test/scripts/echo.coffee</code> として追加します。</p>
+
+<p>内容は適時使いやすいように書き換え可能ですが、先頭のコメント行を削除すると <code>using deprecated documentation syntax</code> と警告がログに出ます。</p>
+
+<pre><code class="coffee"># Description:
+#   echo bot
+#
+# Commands:
+#   &lt;text&gt; - Reply back with &lt;text&gt;
+
+module.exports = (robot) -&gt;
+
+  robot.hear /(.*)/i, (res) -&gt;
+    res.reply "echo \"#{res.match[1]}\""
+</code></pre>
+
+<h3 id="%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E6%A7%8B%E6%88%90%E3%82%92%E8%BF%BD%E5%8A%A0">デバッグのための構成を追加</h3>
+
+<p>Visual Studio Code で TypeScript で実装された Hubot アダプタをデバッグするため、３つのファイルでデバッグ構成を設定します。</p>
+
+<p>まず、<code>.vscode/launch.json</code> にデバッグ実行のための構成を追加します。</p>
+
+<ol>
+<li>「アクティビティーバー」の「実行」を押下し、「launch.json ファイルを作成します」を選択します。</li>
+<li>ドロップダウンで指定する環境は「Node.js」を選択します。</li>
+<li>すると <code>.vscode/launch.json</code> にプログラムを実行するための構成ファイルが生成されます。</li>
+</ol>
+
+<p>作成後のファイルを開き（確認のためファイルはオープンされています）次のような感じに変更します。</p>
+
+<p><code>"outputCapture": "std"</code> (もしくは、ユーザーの入力を受け取る必要があるなら <code>"console": "integratedTerminal"</code> )を設定しない場合、実行時のログを確認することができません。</p>
+
+<pre><code class="diff"> {
+   "version": "0.2.0",
+   "configurations": [
+     {
+-      "name": "プログラムの起動",
++      "name": "Debug Adapter",
+       "type": "node",
+       "request": "launch",
++      "preLaunchTask": "tsc: ビルド - tsconfig.json",
+       "skipFiles": [
+         "&lt;node_internals&gt;/**"
+       ],
+-      "program": "${workspaceFolder}/index.js"
++      "program": "${workspaceRoot}/hubot-test/node_modules/.bin/coffee",
++      "cwd": "${workspaceRoot}/hubot-test",
++      "outputCapture": "std",
++      "args": [
++        "${workspaceRoot}/hubot-test/node_modules/.bin/hubot",
++        "-a", "sample-adapter",
++      ],
++      "env": {
++        "HUBOT_LOG_LEVEL": "DEBUG"
++      }
+     }
+   ]
+ }
+</code></pre>
+
+<p>まず、<code>.vscode/tasks.json</code> にデバッグ実行前に TypeScript でコンパイルを行うための設定をします。
+デバッグ実行との関連付けはすでに <code>"preLaunchTask": "tsc: ビルド - tsconfig.json",</code> にて指定済みです。</p>
+
+<p>メニューから「ターミナル」→「タスクの構成...」を選択し、ドロップダウンの選択ないから「tsc: ビルド - tsconfig.json」を選択します。</p>
+
+<p>すると次のような内容が <code>.vscode/tasks.json</code> に作成されます。</p>
+
+<pre><code class="json">{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "typescript",
+            "tsconfig": "tsconfig.json",
+            "problemMatcher": [
+                "$tsc"
+            ],
+            "group": "build",
+            "label": "tsc: ビルド - tsconfig.json"
+        }
+    ]
+}
+</code></pre>
+
+<p>最後に、 <code>tsconfig.json</code> に設定することで、TypeScript のソースでブレイクポイントを設定できるようにします。</p>
+
+<p>デフォルトでは、TypeScript のソースでブレークポイントを設定してもデバッグ実行時には、コンパイル後の JavaScript のソースが実行されるため指定したブレークポイントは無効にされてしまいます。</p>
+
+<p>設定を追加することで TypeScript のソースのコンパイル時に同時にマップファイルが書き出されるようになり、結果としてブレイクポイントを設定できるようになります。</p>
+
+<p><code>tsconfig.json</code> を次のように変更します。</p>
+
+<pre><code class="diff">      // "declaration": true,                   /* Generates corresponding '.d.ts' file. */
+      // "declarationMap": true,                /* Generates a sourcemap for each corresponding '.d.ts' file. */
+-     // "sourceMap": true,                     /* Generates corresponding '.map' file. */
++     "sourceMap": true,                        /* Generates corresponding '.map' file. */
+      // "outFile": "./",                       /* Concatenate and emit output to single file. */
+      // "outDir": "./",                        /* Redirect output structure to the directory. */
+</code></pre>
+
+<h2 id="%E3%82%A2%E3%83%80%E3%83%97%E3%82%BF%E3%83%97%E3%81%AE%E5%AE%9F%E8%A3%85">アダプタプの実装</h2>
+
+<p><a href="https://hubot.github.com/docs/adapters/development/">Development adapter | HUBOT</a> の <code>src/adapter.coffee</code> を参考に TypeScript で書き換え <code>src/adapter.ts</code> を作成します。</p>
+
+<pre><code class="typescript">import { Robot, Adapter, User, TextMessage } from "hubot";
+
+class Sample extends Adapter {
+  robot!: Robot&lt;Adapter&gt;;
+
+  constructor(robot: Robot&lt;Adapter&gt;) {
+    super(robot);
+    this.robot.logger.info("Constructor");
+  }
+
+  send(envelope: any, ...strings: any[]) {
+    this.robot.logger.info("Send");
+  }
+
+  reply(envelope: any, ...strings: any[]) {
+    this.robot.logger.info("Reply");
+  }
+
+  run() {
+    this.robot.logger.info("Run");
+    this.emit("connected");
+    const user = new User("1001", { name: "Sample User", });
+    const message = new TextMessage(user, "Some Sample Message", "MSG-001");
+    this.robot.receive(message);
+  }
+}
+
+module.exports.use = function createSampleAdapter(
+  robot: Robot&lt;Adapter&gt;
+) {
+  return new Sample(robot);
+};
+</code></pre>
+
+<p>TypeScript でコンパイルすると <code>src/adapter.js</code> が作成されるので、忘れずに <code>package.json</code> に書かれているエントリポイントは <code>src/adapter.coffee</code> ではなく <code>src/adapter.js</code> にしておきましょう。</p>
+
+<h3 id="%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E5%AE%9F%E8%A1%8C%E6%99%82%E7%89%B9%E6%9C%89%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%B8%E3%81%AE%E5%AF%BE%E5%87%A6">デバッグ実行時特有の問題への対処</h3>
+
+<p>ここまでで、ほぼデバッグ実行ができるようになりますが、実はこのままだと Node.js のライブラリの読み込みの仕様が原因で <code>robot.receive()</code> から呼ばれるはずの bot の処理が実行されない状態になっています。</p>
+
+<p>原因としてはどうやら</p>
+
+<ol>
+<li><code>hubot</code> コマンドがアダプタを読み込む。</li>
+<li>アダプタが <code>hubot</code> ライブラリの読み込みを行う。</li>
+<li>パスの解決の結果、 <code>hubot-test/node_modules/hubot</code> が読み込まれることを意図しているところ、 アダプタのコンパイルに必要なため <code>node_modules/hubot</code> が存在していることから、そちらが読み込まれる。</li>
+</ol>
+
+<p>結果 <code>hubot</code> コマンド内で行われる <code>instanceof TextMessage</code> などの比較で不一致が発生し bot が処理されないようです。</p>
+
+<p>現状、対処としては動的にデバッグ実行かそうでないかを判断しライブラリの読み込みパスを変更するようにすることで意図しない動きを回避しています。</p>
+
+<pre><code class="diff">-import { Robot, Adapter, User, TextMessage } from "hubot";
++import * as Hubot from "hubot";
++import { Robot, Adapter } from "hubot";
++import * as path from "path";
++
++const isTestHubot =
++  path.join(__dirname, "..") ===
++  // @ts-ignore TS2532: Object is possibly 'undefined'.
++  path.join(require.main.filename.replace(/node_modules\/.*$/, ""), ".."); // (...)/hubot-line-local-tunnel/hubot-test/node_modules/hubot/bin/hubot
++// テスト環境での実行時はテスト用の環境に含まれる Hubot パッケージを読むように指示
++const { User, TextMessage } = !isTestHubot
++  ? Hubot
++  : require(require("path").join(__dirname, "../hubot-test/node_modules/hubot")); // eslint-disable-line import/no-dynamic-require
+
+ class Sample extends Adapter {
+   robot!: Robot&lt;Adapter&gt;;
+</code></pre>
+
+<h2 id="%E5%AE%9F%E8%A1%8C%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B">実行してみる</h2>
+
+<p><code>hubot</code> プリフェックスを除いた名前で <code>--adapter</code> オプションを指定し実行します</p>
+
+<pre><code class="console">$ npx hubot -a sample-adapter
+[Wed Jul 29 2020 23:44:09 GMT+0900] INFO Constructor
+[Wed Jul 29 2020 23:44:09 GMT+0900] INFO Run
+[Wed Jul 29 2020 23:44:09 GMT+0900] WARNING Loading scripts from hubot-scripts.json is deprecated and will be removed in 3.0 (https://github.com/github/hubot-scripts/issues/1113) in favor of packages for each script.
+
+Your hubot-scripts.json is empty, so you just need to remove it.
+[Wed Jul 29 2020 23:44:09 GMT+0900] INFO Reply
+</code></pre>
+
+<p>ログを見ると、ちゃんと <code>Constructor</code> と <code>Run</code> と <code>Reply</code> が印字されています。</p>
+
+<h2 id="%E3%83%A1%E3%83%A2">メモ</h2>
+
+<h3 id="configuration-for-rule-%22import%2Fno-cycle%22-is-invalid">Configuration for rule "import/no-cycle" is invalid</h3>
+
+<pre><code class="console">               :
+Configuration for rule "import/no-cycle" is invalid
+               :
+</code></pre>
+
+<p>と表示され eslint が正常に実行されない場合があった。</p>
+
+<p><a href="https://github.com/airbnb/javascript/issues/2227">Invalid rule configurations compiled by "eslint --print-config" on eslint-config-airbnb-typescript · Issue #2227 · airbnb/javascript</a> によると、どうやら 7.3.0 から 7.2.0 へダウングレードすることで回避できる様子。</p>
+
+<pre><code class="console">$ npm i eslint@7.2.0 --save-dev
+</code></pre>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://hubot.github.com/docs/adapters/development/">Development adapter | HUBOT</a></li>
+<li><a href="https://github.com/airbnb/javascript/issues/2227">Invalid rule configurations compiled by "eslint --print-config" on eslint-config-airbnb-typescript · Issue #2227 · airbnb/javascript</a></li>
+<li><a href="https://hiranoon.hatenablog.com/entry/2020/04/13/192746#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">TypeScript の開発環境を作る。VSCode を基本に ESLint と Prettier も添えて。 - Multi Vitamin &amp; Mineral</a></li>
+<li><a href="http://akiomik.hatenablog.jp/entry/2014/02/12/052703">hubot adapterの作り方 - おみブロZ</a></li>
+<li><a href="https://qiita.com/bouzuya/items/11c0c6da2b3ad54b827f#hubot-echo">Hubot のインストール - Qiita</a></li>
+<li><a href="https://komari.co.jp/blog/develop/frontend/355/#i-3">Visual Studio Code のデバッグコンソールにログが出力されない話 | 岡山のWEB制作はKOMARI</a></li>
+<li><a href="https://qiita.com/n0bisuke/items/12ce4df55a405a62b599">Hubotでusing deprecated documentation syntax - Qiita</a></li>
+<li><a href="https://qiita.com/mysticatea/items/f523dab04a25f617c87d">ESLint 最初の一歩 - Qiita</a></li>
+<li><a href="https://shotat.hateblo.jp/entry/2016/10/26/000912">Eslintでunderscoreから始まる変数をチェックさせない設定にする - Memento memo.</a></li>
+<li><a href="https://stackoverflow.com/questions/57802057/eslint-configuring-no-unused-vars-for-typescript">esLint-Typescriptの「no-unused-vars」の構成-スタックオーバーフロー</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
             <title type="html"><![CDATA[名古屋Qt勉強会#28 に参加しました]]></title>
             <link href="http://www.sharkpp.net/blog/2019/05/18/qt-nagoya-28.html"/>
             <updated>2019-05-18T17:15:00+00:00</updated>
@@ -1148,244 +1568,6 @@ void fuga() {
 <li><a href="https://doc.qt.io/qt-5/qquickimageprovider.html">QQuickImageProvider Class</a></li>
 <li><a href="https://qiita.com/kokeiro001/items/0e321c30cccc45ae44a4#%E9%80%A3%E7%B6%9A%E3%81%97%E3%81%9F%E7%94%BB%E5%83%8F%E3%82%92%E3%83%91%E3%82%A4%E3%83%97%E3%81%A7%E5%8F%96%E3%82%8A%E5%87%BA%E3%81%99ver">ffmpegを用いて動画から画像を取り出す【C#】 - Qiita</a></li>
 </ul></li>
-</ul>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[技術書典6に行ってきた]]></title>
-            <link href="http://www.sharkpp.net/blog/2019/04/24/techbookfest6.html"/>
-            <updated>2019-04-24T01:18:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2019/04/24/techbookfest6.html</id>
-            <content type="html"><![CDATA[<p>2016年から始まった技術書オンリーな同人イベント「<a href="https://techbookfest.org/">技術書典</a>」も数えて６回目のになりました。
-そして、その「<a href="https://techbookfest.org/event/tbf06">技術書典６</a>」が、4月14日に開催されたので参加して来ました。
-今回も開催場所は前回と同じく池袋のサンシャインシティ 展示ホールD で開催。</p>
-
-<p><a href="/images/20190414_tf6.jpg"><img src="/thumbs/5576e2472f846801b2f3f7bb26c43f5f-640x640.jpg" alt="技術書典6"></a></p>
-
-<h2 id="%E5%A7%8B%E3%82%81%E3%81%AB">始めに</h2>
-
-<p>前回のレポートは「<a href="/blog/2018/10/14/techbookfest5.html">技術書典5に行ってきた</a>」となります。</p>
-
-<p>今回は、サークル数 463、参加者数 10260 人、うち一般参加者は 9,330 人だったようです。
-今回から開場から２時間は参加入場券の購入という名のお布施をする仕組みになったようですが、まあ、人口密度はあいも変わらず”今回も”大変なことになっていました。</p>
-
-<p><a href="https://docs.google.com/spreadsheets/d/1gNVy9ukLn3kYzOC0nyOpysD-Xl3fIzHl26WSSLHC-HY/edit?usp=sharing"><img src="/images/20190418_tf1_tf6_graph.png" alt="参加人数" /></a></p>
-
-<h2 id="%E5%BD%93%E6%97%A5">当日</h2>
-
-<p><a href="/images/20190414_tf6_wait_list.jpg"><img src="/thumbs/77d0021cea0c7e974f02125c233cab3f-640x640.jpg" alt="待機列"></a></p>
-
-<p>今回は前回と同じぐらいの09:30頃に会場へと到着。
-前回はすこし迷った会場にも迷わず到着できました。
-到着時、すでに前回と同じぐらい並んでいたので、まああまり入場券制度も影響ないなって思いながら列に並んでいました。</p>
-
-<p><a href="/images/20190414_tf6_ticket.jpg"><img src="/thumbs/4590c1494778cf67a8371af818083802-640x640.jpg" alt="入場券"></a></p>
-
-<p>待機中、入場券はどうやって購入するのだろうかと思ってたら、10:00すぎに売り子さん？が列の先頭と末尾から売りにきました... なるほど。
-ちなみに、手に入れた入場券は4000番台だったのでどうやら番号は順番ではなさそうです。</p>
-
-<p><a href="/images/20190414_tf6_raise_a_ticket.jpg"><img src="/thumbs/2dfab20e014cc69cc010f7e5b765b16e-640x640.jpg" alt="チケットを掲げよ"></a></p>
-
-<p>11:00を過ぎたところで列の前あたりで歓声（もしくは雄叫び？）が上がり、しばらくすると列の移動が始まり、屋内へと進みました。
-進んでいる最中に、入場券をチェックするため券を掲げるようにとのお達し。
-割とスムーズに入場できました。</p>
-
-<p><a href="/images/20190414_tf6_crowd1.jpg"><img src="/thumbs/3a10968e38653b2351d123f417ce7879-640x640.jpg" alt="ひとひとひと"></a></p>
-
-<p>会場20分ぐらいまでは結構空いていた感じ。
-とりあえず会場直後にお目当てのところへ直行したので、だいたいは回れたのでよかったかなと。
-ただ、そこから10分もすると、どんどん人が入ってくるので、前回と同じく人がごった返す状態に。</p>
-
-<p><a href="/images/20190414_tf6_crowd2.jpg"><img src="/thumbs/adf0c90f8fd23db0ee9db7c35f13593d-640x640.jpg" alt="ひとひとひと"></a></p>
-
-<p>今回からブースの位置を示すのぼり旗が追加されてたので、いま大体どこのあたりにいるかというのはわかりやすかったかなって思います。</p>
-
-<p>戦利品はまた後ほどです。</p>
-
-<p><a href="/images/20190414_tf6_kanban.jpg"><img src="/thumbs/b181247d3987ce79cb411992f8e89e84-640x640.jpg" alt="看板"></a></p>
-
-<p>会場出口直前には前回同様の見本誌の立ち見スペースがありました。
-まあ、見本誌を見ても人が多くて戻る気が失せたので結局見ていませんが...
-今回も、運営ブースにポストカードがあったので購入。</p>
-
-<p>サークル自体をぐるっと一回りしたあと名残惜しいと思いつつ、さりとてもう一度人混みに戻る気力はなかったのでそそくさと会場を後にしました。</p>
-
-<h2 id="%E6%88%A6%E5%88%A9%E5%93%81">戦利品</h2>
-
-<p>今回の戦利品</p>
-
-<p><a href="/images/20190415_tf6_booty.jpg"><img src="/thumbs/f629fabddb4baf73aa59ac1235a1bc1f-640x640.jpg" alt="戦利品"></a></p>
-
-<table>
-<thead>
-<tr>
-  <th>配置</th>
-  <th>サークル名/ペンネーム</th>
-  <th>頒布物</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/254520002">運01</a></td>
-  <td><a href="https://techbookfest.org/">技術書典運営事務局</a>/<a href="https://twitter.com/techbookfest">技術書典運営事務局</a></td>
-  <td>「技術季報 vol.6」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/254520002">運01</a></td>
-  <td><a href="https://techbookfest.org/">技術書典運営事務局</a>/<a href="https://twitter.com/techbookfest">技術書典運営事務局</a></td>
-  <td>「ポストカード」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/42030002">あ03</a></td>
-  <td><a href="https://llminatoll.booth.pm/">湊川あいの、わかば家。</a>/<a href="https://twitter.com/webdesignManga">湊川あい</a></td>
-  <td>「マンガでわかるDocker③ 〜AWS編〜」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/44690003">い11</a></td>
-  <td><a href="https://chofu.tech/">調布技研</a>/<a href="https://twitter.com/chibiegg">chibiegg</a></td>
-  <td>「インフラ写真集 〜通信篇〜」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/44690003">い11</a></td>
-  <td><a href="https://chofu.tech/">調布技研</a>/<a href="https://twitter.com/chibiegg">chibiegg</a></td>
-  <td>「GPSと仲良くなってNTPサーバを作ろう」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/63940006">い30</a></td>
-  <td><a href="http://guppy.hatenadiary.jp/">しょ〜とらば〜ず</a>/<a href="https://twitter.com/Short_Lovers">樋口グッピー</a></td>
-  <td>「光る元号キーホルダー 令和」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/63940006">い30</a></td>
-  <td><a href="http://guppy.hatenadiary.jp/">しょ〜とらば〜ず</a>/<a href="https://twitter.com/Short_Lovers">樋口グッピー</a></td>
-  <td>「光る元号キーホルダー 平成」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/40060004">う11</a></td>
-  <td><a href="http://zob.club/">ZOB.Club</a>/<a href="https://twitter.com/yyhayami">速水 祐</a></td>
-  <td>「The Basic Assembler X64 入門編」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/40060004">う11</a></td>
-  <td><a href="http://zob.club/">ZOB.Club</a>/<a href="https://twitter.com/yyhayami">速水 祐</a></td>
-  <td>「The Advanced Assembler 386 上ノ巻」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/67790001">う40</a></td>
-  <td><a href="http://blog.hermit4.info/">Code Craft Works</a>/<a href="https://twitter.com/hermit4">緑野　翁</a></td>
-  <td>「Qtなマルチスレッドのあれこれ」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/63950001">う47</a></td>
-  <td><a href="https://haraheru.com/">おとうふ工房</a>/<a href="https://twitter.com/_a0i">あおい</a></td>
-  <td>「まんがではじめるKubernetes」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/42120001">う48</a></td>
-  <td>メンチコロッケカレー/</td>
-  <td>「k3sで始めるkubernetes」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/50340001">お30</a></td>
-  <td><a href="https://blog.mtb-production.info/">足跡出版</a>/<a href="https://twitter.com/mtb_beta">mtb_beta</a></td>
-  <td>「IT実務のアンチパターン コミュニケーション編」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/38390001">お36</a></td>
-  <td>英断議連/<a href="https://twitter.com/eidan_giren">eidan_giren</a></td>
-  <td>「受託開発会社のための初めての自社プロダクト開発」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/54540001">か02</a></td>
-  <td>豆部/<a href="https://twitter.com/shin1_okada">shin1</a></td>
-  <td>「Qt 3D を使ってみよう」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/65860002">か03</a></td>
-  <td><a href="http://emblog.hatenablog.jp/">eMbLog</a>/<a href="https://twitter.com/sazus">sazus</a></td>
-  <td>「はじめてのQt 簡単！ 多言語対応のアプリをつくろう」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/54360002">き25</a></td>
-  <td><a href="https://tech.spaceagent.co.jp/post/techbookfest6">SpaceAgent</a>/<a href="https://twitter.com/kaiba">kaiba</a></td>
-  <td>「検索だけじゃないElasticsearch入門+」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/44780002">く03</a></td>
-  <td><a href="https://suzukigu.me/">遊戯部すずき組</a>/<a href="https://twitter.com/suzukigume">MooMoo-ya</a></td>
-  <td>「文字化け神経衰弱 mojibake」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/65520002">く11</a></td>
-  <td><a href="https://handagiken.booth.pm/">半田技術研究所</a>/<a href="https://twitter.com/handagiken1">タンサクテスト</a></td>
-  <td>「探索的テストの進め方」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/34000003">け38</a></td>
-  <td><a href="https://www.oreilly.co.jp/books/">株式会社オライリー・ジャパン</a>/<a href="https://twitter.com/oreilly_japan">オライリー・ジャパン</a></td>
-  <td>「初めてのオライリーかるた」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/65490007">け56</a></td>
-  <td><a href="http://agepeanuts.strikingly.com/">揚げピーナッツ</a>/<a href="https://twitter.com/agepeanuts">nishiuchi</a></td>
-  <td>「ときならべ（IT技術編）ベータ版」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/65490007">け56</a></td>
-  <td><a href="http://agepeanuts.strikingly.com/">揚げピーナッツ</a>/<a href="https://twitter.com/agepeanuts">nishiuchi</a></td>
-  <td>「プログラム言語神経衰弱」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/65490007">け56</a></td>
-  <td><a href="http://agepeanuts.strikingly.com/">揚げピーナッツ</a>/<a href="https://twitter.com/agepeanuts">nishiuchi</a></td>
-  <td>「プログラム言語神経衰弱 拡張セット1」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/65490007">け56</a></td>
-  <td><a href="http://agepeanuts.strikingly.com/">揚げピーナッツ</a>/<a href="https://twitter.com/agepeanuts">nishiuchi</a></td>
-  <td>「プログラム言語神経衰弱 拡張セット２」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/279920002">ス01</a></td>
-  <td>Forkwell/Forkwell技術部</td>
-  <td>「ゼロから始めるアウトプット・ライフ〜える子とボクと、時々、ロボ〜」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/251830001">ス03</a></td>
-  <td><a href="https://www.mediado.jp/">株式会社メディアドゥ</a>/Tech Do Book 編集部</td>
-  <td>「Tech Do」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/277820001">ス06</a></td>
-  <td><a href="https://mixi.co.jp/recruit/">株式会社ミクシィ</a>/mixi developers</td>
-  <td>「XFLAG Tech Note #2」</td>
-</tr>
-<tr>
-  <td><a href="https://techbookfest.org/event/tbf06/circle/253880001">ス10</a></td>
-  <td><a href="https://yumenosora.co.jp/tora-lab">虎の穴ラボ</a>/<a href="https://twitter.com/toranoana_lab">虎の穴ラボ</a></td>
-  <td>「虎の穴ラボの薄い本。vol.2」</td>
-</tr>
-</tbody>
-</table>
-
-<p>※敬称略、配置順</p>
-
-<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
-
-<p>反省点</p>
-
-<ul>
-<li>諸々の影響でサークルのチェックがギリギリになってしまった</li>
-<li>戦利品を入れる袋が会場でもらった不織布のカバンしかなかったのですこしセーブしてしまった</li>
-</ul>
-
-<p>今回も早めに並んだところ、開場直後に入場でき目当てのサークルで戦利品を手に入れてホクホクでした。
-もっとも、事前に優先度を低く設定した中でも面白そうなものもあったのでなかなか難しいなと。</p>
-
-<h2 id="%E5%8F%82%E8%80%83">参考</h2>
-
-<ul>
-<li><a href="https://twitter.com/techbookfest/status/1117338472203710469">技術書典公式アカウントさんのツイート: "17時ちょうどをもちまして #技術書典 6を閉会いたしました。速報値となりますが一般参加者およびサークル参加者を合わせた参加者数は10,260名でした。うち一般参加者は9,330名でした。本日は技術書典への1万名を超えるご参加、誠にありがとうございました！"</a></li>
 </ul>
 ]]></content>
         </entry>
