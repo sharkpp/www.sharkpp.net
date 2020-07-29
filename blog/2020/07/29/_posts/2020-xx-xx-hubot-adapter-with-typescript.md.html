@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head><title>Hubot アダプタを TypeScript を使って作ってみた &mdash; さめたすたすのお家</title><meta charset="utf-8"><meta name="theme-color" content="#6877AA"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="index, follow"><meta name="keywords" content="JavaScript,TypeScript,Hubot,雑記"><link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" /><link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" /><link href="/assets/lightbox2/dist/css/lightbox.css" rel="stylesheet" type="text/css" /><link href="/css/style.min.css" rel="stylesheet" type="text/css" /><!-- HTML5 shim, for IE6-8 support of HTML5 elements --><!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--><link rel="apple-touch-startup-image" href="/images/noname/2048x2048.png"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="shortcut icon" sizes="76x76" href="/images/noname/76x76.png"><link rel="shortcut icon" sizes="120x120" href="/images/noname/120x120.png"><link rel="shortcut icon" sizes="128x128" href="/images/noname/128x128.png"><link rel="shortcut icon" sizes="152x152" href="/images/noname/152x152.png"><link rel="shortcut icon" sizes="196x196" href="/images/noname/196x196.png"><link rel="shortcut icon" sizes="512x512" href="/images/noname/512x512.png"><link rel="shortcut icon" sizes="1024x1024" href="/images/noname/1024x1024.png"><link rel="shortcut icon" sizes="2048x2048" href="/images/noname/2048x2048.png"><link rel="apple-touch-icon" sizes="76x76" href="/images/noname/76x76.png"><link rel="apple-touch-icon" sizes="120x120" href="/images/noname/120x120.png"><link rel="apple-touch-icon" sizes="128x128" href="/images/noname/128x128.png"><link rel="apple-touch-icon" sizes="152x152" href="/images/noname/152x152.png"><link rel="apple-touch-icon" sizes="196x196" href="/images/noname/196x196.png"><link rel="apple-touch-icon" sizes="512x512" href="/images/noname/512x512.png"><link rel="apple-touch-icon" sizes="1024x1024" href="/images/noname/1024x1024.png"><link rel="apple-touch-icon" sizes="2048x2048" href="/images/noname/2048x2048.png"><link rel="stylesheet" href="/assets/highlightjs/styles/github.css" /><link rel="alternate" type="application/atom+xml" href="/atom.xml" title="さめたすたすのお家 activity feed" /><style>
+        /** quick fix because bootstrap <pre> has a background-color. */
+        pre code { background-color: inherit; }
+        </style><style>
+        #go-top {
+            display: none;
+            bottom: 40px;
+            right: 30px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #fff;
+            position: fixed;
+            z-index: 999;
+        }
+        #go-top > i {
+            font-size: 36px;
+            line-height: 40px;
+        }
+        #toc {
+            margin-left: 10px;
+            margin-bottom: 10px;
+            max-width: 350px;
+            word-wrap: break-word;
+        }
+        </style></head><body><nav class="navbar navbar-inverse navbar-fixed-top"><div class="container-fluid"><!-- Brand and toggle get grouped for better mobile display --><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/">さめたすたすのお家</a></div><!-- Collect the nav links, forms, and other content for toggling --><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><ul class="nav navbar-nav pull-right"><li><a href="/blog/"><i class="fa fa-archive"></i> アーカイブ</a></li><li><a href="/blog/categories"><i class="fa fa-folder-open"></i> カテゴリ</a></li><li><a href="/blog/tags"><i class="fa fa-tags"></i> タグ</a></li><li><a href="/product/"><i class="fa fa-download"></i> 作ったもの</a></li><li><a href="/graffiti/"><i class="fa fa-paint-brush"></i> 落書き</a></li><li><a href="/link.html"><i class="fa fa-link"></i> リンク</a></li><li><a href="/about">About</a></li></ul></div><!-- /.navbar-collapse --></div><!-- /.container-fluid --></nav><div class="mainContent container"><ol class="breadcrumb" itemscope="itemscope"
+                           itemtype="http://schema.org/BreadcrumbList"><li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/"
+           ><i class="fa fa-home fa-lg"></i
+     >&nbsp;<span itemprop="name">HOME</span
+           ><meta itemprop="position" content="1"
+          /></a
+       ></li><li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/blog/2020/"
+           ><span>2020</span
+           ><meta itemprop="position" content="2"
+          /></a
+       ></li><li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/blog/2020/07/"
+           ><span>07</span
+           ><meta itemprop="position" content="3"
+          /></a
+       ></li><li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/blog/2020/07/29/"
+           ><span>29</span
+           ><meta itemprop="position" content="4"
+          /></a
+       ></li><li
+            class="active"><span 
+           ><span>Hubot アダプタを TypeScript を使って作ってみた</span
+       ></li></ol><article itemscope="itemscope" itemtype="http://schema.org/Article"><meta itemscope="itemscope" itemprop="mainEntityOfPage"
+              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net/blog/2020/07/29/_posts/2020-xx-xx-hubot-adapter-with-typescript.md.html"/><header><h1><span itemprop="headline">Hubot アダプタを TypeScript を使って作ってみた</span><small>post</small></h1></header><div id="toc" class="panel panel-default pull-right"><div class="panel-heading text-center">目次</div><div class="panel-body" style="padding: 10px;"><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#typescrpt-%E3%81%A7%E5%AE%9F%E8%A3%85%E3%81%99%E3%82%8B-hubot-%E3%82%A2%E3%83%80%E3%83%97%E3%82%BF">TypeScrpt で実装する Hubot アダプタ</a><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#typescript-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">TypeScript のインストール</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#visual-studio-code-%E3%81%A7%E6%A7%8B%E6%96%87%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF">Visual Studio Code で構文チェック</a></li></ul></li><li><i class="fa-li fa fa-paperclip"></i><a href="#visual-studio-code-%E3%81%A7%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E3%82%92%E8%A1%8C%E3%81%86%E3%81%9F%E3%82%81%E3%81%AE%E3%81%82%E3%82%8C%E3%81%93%E3%82%8C">Visual Studio Code でデバッグを行うためのあれこれ</a><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E7%94%A8-hubot-%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90">デバッグ用 hubot プロジェクトの作成</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E6%A7%8B%E6%88%90%E3%82%92%E8%BF%BD%E5%8A%A0">デバッグのための構成を追加</a></li></ul></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%82%A2%E3%83%80%E3%83%97%E3%82%BF%E3%83%97%E3%81%AE%E5%AE%9F%E8%A3%85">アダプタプの実装</a><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E5%AE%9F%E8%A1%8C%E6%99%82%E7%89%B9%E6%9C%89%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%B8%E3%81%AE%E5%AF%BE%E5%87%A6">デバッグ実行時特有の問題への対処</a></li></ul></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%AE%9F%E8%A1%8C%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B">実行してみる</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%A1%E3%83%A2">メモ</a><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#configuration-for-rule-%22import%2Fno-cycle%22-is-invalid">Configuration for rule &quot;import/no-cycle&quot; is invalid</a></li></ul></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%8F%82%E8%80%83">参考</a></ul></div></div><div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div><div itemprop="articleBody"><h2 id="typescrpt-%E3%81%A7%E5%AE%9F%E8%A3%85%E3%81%99%E3%82%8B-hubot-%E3%82%A2%E3%83%80%E3%83%97%E3%82%BF" itemprop="articleSection">TypeScrpt で実装する Hubot アダプタ</h2><p><a href="https://hubot.github.com/docs/adapters/development/">Development adapter | HUBOT</a> を参考に、起動時に bot へと生成したメッセージを受け渡すだけを行うアダプタを TypeScript で実装してみました。</p><p>この記事では次のような名称を利用しているので適時読み替えてください。</p><table><thead><tr><th>項目</th><th>名称</th></tr></thead><tbody><tr><td>アダプタプロジェクト名</td><td><code>hubot-sample-adapter</code></td></tr><tr><td>テスト用のHubotプロジェクト名</td><td><code>hubot-test</code></td></tr><tr><td>アダプタプロジェクトの親フォルダ</td><td><code>~/</code></td></tr></tbody></table><h3 id="typescript-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" itemprop="articleSection">TypeScript のインストール</h3><p>まず環境を整えていきます。</p><pre><code class="console">$ mkdir hubot-sample-adapter
+$ cd hubot-sample-adapter
+$ npm init -y
+</code></pre><p>追加で、</p><pre><code class="console">$ npm install --save --dev typescript hubot @types/hubot
+$ npx tsc --init
+</code></pre><p>として TypeScript のツール用の設定をします。</p><h3 id="visual-studio-code-%E3%81%A7%E6%A7%8B%E6%96%87%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF" itemprop="articleSection">Visual Studio Code で構文チェック</h3><p>Visual Studio Code で <a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint">ESLint</a> を使って構文チェックをできるようにします。</p><pre><code class="console">$ npm install --save --dev eslint prettier eslint-config-airbnb-base eslint-config-prettier eslint-plugin-prettier eslint-plugin-import
+$ npm install --save --dev @typescript-eslint/parser @typescript-eslint/eslint-plugin
+</code></pre><p>インストールを行うと <code>The ESLint extension will use 'node_modules/eslint' for validation, which is installed locally in 'hubot-sample-adapter'. If you trust this version of ESLint, press 'Allow', otherwise press 'Do Not Allow'. Press 'Cancel' to disable ESLint for this session.</code> と確認されるので <code>Allow</code> を選択します。</p><p>とりあえず、</p><table><thead><tr><th>項目</th><th>説明など</th></tr></thead><tbody><tr><td>Javascript style guide</td><td>airbnb-base</td></tr><tr><td>構文チェック</td><td>基本全てエラー</td></tr><tr><td>no-unused-vars</td><td><code>_</code> から始まる変数以外の未使用をエラーとする。(TypeScriptの構文を優先)</td></tr></tbody></table><p>こんな感じで、設定ファイル <code>.eslintrc.js</code> は</p><pre><code class="javascript">module.exports = {
+    "env": {
+        "browser": false,
+        "es2020": true
+    },
+    "extends": [
+        "airbnb-base",
+        "plugin:prettier/recommended",
+        "prettier/@typescript-eslint"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 11,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "prettier"
+    ],
+    "rules": {
+        "prettier/prettier": "error",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }]
+    }
+};
+</code></pre><p>こんな感じ。</p><h2 id="visual-studio-code-%E3%81%A7%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E3%82%92%E8%A1%8C%E3%81%86%E3%81%9F%E3%82%81%E3%81%AE%E3%81%82%E3%82%8C%E3%81%93%E3%82%8C" itemprop="articleSection">Visual Studio Code でデバッグを行うためのあれこれ</h2><p>TypeScript のソース上でブレークポイントを設定したりデバッグ実行前にソースをコンパイルするなど、デバッグのための構成を行います。</p><ol><li>デバッグ用 hubot プロジェクトの作成</li><li>デバッグのための構成を追加</li></ol><h3 id="%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E7%94%A8-hubot-%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90" itemprop="articleSection">デバッグ用 hubot プロジェクトの作成</h3><p><code>yo hubot</code> でテスト用の hubot を作成します。
+この時 <code>--defaults</code> オプションをつけることでオーナーなどの指定をよしなにしてくれます。
+ここではテスト用に作るため、アダプタプロジェクトの直下に作ります。</p><pre><code class="console">$ mkdir hubot-test
+$ cd hubot-test
+$ npx yo hubot --defaults
+                     _____________________________  
+                    /                             \ 
+   //\              |      Extracting input for    |
+  ////\    _____    |   self-replication process   |
+ //////\  /_____\   \                             / 
+ ======= |[^_/\_]|   /----------------------------  
+  |   | _|___@@__|__                                
+  +===+/  ///     \_\                               
+   | |_\ /// HUBOT/\\                             
+   |___/\//      /  \\                            
+         \      /   +---+                            
+          \____/    |   |                            
+           | //|    +===+                            
+            \//      |xx|                            
+
+   create bin/hubot
+   create bin/hubot.cmd
+　　　　　　　　：
+added 92 packages from 53 contributors and audited 92 packages in 13.227s
+found 0 vulnerabilities
+
+</code></pre><p><code>npm link path/to/hubot-adapter</code> とコマンドを実行し、アダプタへリンクを貼り テスト用の Hubot プロジェクトからアダプタが認識できるようにします。</p><pre><code class="console">$ pwd
+
+$ npm link ../../hubot-sample-adapter
+npm WARN hubot-sample-adapter@1.0.0 No repository field.
+
+audited 373 packages in 3.58s
+
+29 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+/usr/local/lib/node_modules/hubot-sample-adapter -&gt; ~/hubot-sample-adapter
+~/hubot-sample-adapter/hubot-test/node_modules/hubot-sample-adapter -&gt; /usr/local/lib/node_modules/hubot-sample-adapter -&gt; ~/hubot-sample-adapter
+</code></pre><p>注意点として、パスの指定は相対パスで問題ないですが、指定したパスの最後の部分を利用し node_modules にフォルダを作成しているようなので、フォルダ名を指定する必要があります。</p><pre><code>○ $ npm link ../../hubot-sample-adapter
+× $ npm link ../
+</code></pre><p>作成されたプロジェクトをデバッグ用にカスタマイズします。</p><p><code>hubot-test/external-scripts.json</code> にデフォルトで設定されている外部スクリプトはデバッグの邪魔になるので除外しておきます。</p><pre><code class="diff"> [
+-  "hubot-diagnostics",
+-  "hubot-help",
+-  "hubot-heroku-keepalive",
+-  "hubot-google-images",
+-  "hubot-google-translate",
+-  "hubot-pugme",
+-  "hubot-maps",
+-  "hubot-redis-brain",
+-  "hubot-rules",
+-  "hubot-shipit"
+ ]
+</code></pre><p>とりあえず、この記事で実装するアダプタは起動時にメッセージを bot へ送るので、どんな内容でも受け取ってり返答する bot を <code>hubot-test/scripts/echo.coffee</code> として追加します。</p><p>内容は適時使いやすいように書き換え可能ですが、先頭のコメント行を削除すると <code>using deprecated documentation syntax</code> と警告がログに出ます。</p><pre><code class="coffee"># Description:
+#   echo bot
+#
+# Commands:
+#   &lt;text&gt; - Reply back with &lt;text&gt;
+
+module.exports = (robot) -&gt;
+
+  robot.hear /(.*)/i, (res) -&gt;
+    res.reply "echo \"#{res.match[1]}\""
+</code></pre><h3 id="%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E6%A7%8B%E6%88%90%E3%82%92%E8%BF%BD%E5%8A%A0" itemprop="articleSection">デバッグのための構成を追加</h3><p>Visual Studio Code で TypeScript で実装された Hubot アダプタをデバッグするため、３つのファイルでデバッグ構成を設定します。</p><p>まず、<code>.vscode/launch.json</code> にデバッグ実行のための構成を追加します。</p><ol><li>「アクティビティーバー」の「実行」を押下し、「launch.json ファイルを作成します」を選択します。</li><li>ドロップダウンで指定する環境は「Node.js」を選択します。</li><li>すると <code>.vscode/launch.json</code> にプログラムを実行するための構成ファイルが生成されます。</li></ol><p>作成後のファイルを開き（確認のためファイルはオープンされています）次のような感じに変更します。</p><p><code>"outputCapture": "std"</code> (もしくは、ユーザーの入力を受け取る必要があるなら <code>"console": "integratedTerminal"</code> )を設定しない場合、実行時のログを確認することができません。</p><pre><code class="diff"> {
+   "version": "0.2.0",
+   "configurations": [
+     {
+-      "name": "プログラムの起動",
++      "name": "Debug Adapter",
+       "type": "node",
+       "request": "launch",
++      "preLaunchTask": "tsc: ビルド - tsconfig.json",
+       "skipFiles": [
+         "&lt;node_internals&gt;/**"
+       ],
+-      "program": "${workspaceFolder}/index.js"
++      "program": "${workspaceRoot}/hubot-test/node_modules/.bin/coffee",
++      "cwd": "${workspaceRoot}/hubot-test",
++      "outputCapture": "std",
++      "args": [
++        "${workspaceRoot}/hubot-test/node_modules/.bin/hubot",
++        "-a", "sample-adapter",
++      ],
++      "env": {
++        "HUBOT_LOG_LEVEL": "DEBUG"
++      }
+     }
+   ]
+ }
+</code></pre><p>まず、<code>.vscode/tasks.json</code> にデバッグ実行前に TypeScript でコンパイルを行うための設定をします。
+デバッグ実行との関連付けはすでに <code>"preLaunchTask": "tsc: ビルド - tsconfig.json",</code> にて指定済みです。</p><p>メニューから「ターミナル」→「タスクの構成...」を選択し、ドロップダウンの選択ないから「tsc: ビルド - tsconfig.json」を選択します。</p><p>すると次のような内容が <code>.vscode/tasks.json</code> に作成されます。</p><pre><code class="json">{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "typescript",
+            "tsconfig": "tsconfig.json",
+            "problemMatcher": [
+                "$tsc"
+            ],
+            "group": "build",
+            "label": "tsc: ビルド - tsconfig.json"
+        }
+    ]
+}
+</code></pre><p>最後に、 <code>tsconfig.json</code> に設定することで、TypeScript のソースでブレイクポイントを設定できるようにします。</p><p>デフォルトでは、TypeScript のソースでブレークポイントを設定してもデバッグ実行時には、コンパイル後の JavaScript のソースが実行されるため指定したブレークポイントは無効にされてしまいます。</p><p>設定を追加することで TypeScript のソースのコンパイル時に同時にマップファイルが書き出されるようになり、結果としてブレイクポイントを設定できるようになります。</p><p><code>tsconfig.json</code> を次のように変更します。</p><pre><code class="diff">      // "declaration": true,                   /* Generates corresponding '.d.ts' file. */
+      // "declarationMap": true,                /* Generates a sourcemap for each corresponding '.d.ts' file. */
+-     // "sourceMap": true,                     /* Generates corresponding '.map' file. */
++     "sourceMap": true,                        /* Generates corresponding '.map' file. */
+      // "outFile": "./",                       /* Concatenate and emit output to single file. */
+      // "outDir": "./",                        /* Redirect output structure to the directory. */
+</code></pre><h2 id="%E3%82%A2%E3%83%80%E3%83%97%E3%82%BF%E3%83%97%E3%81%AE%E5%AE%9F%E8%A3%85" itemprop="articleSection">アダプタプの実装</h2><p><a href="https://hubot.github.com/docs/adapters/development/">Development adapter | HUBOT</a> の <code>src/adapter.coffee</code> を参考に TypeScript で書き換え <code>src/adapter.ts</code> を作成します。</p><pre><code class="typescript">import { Robot, Adapter, User, TextMessage } from "hubot";
+
+class Sample extends Adapter {
+  robot!: Robot&lt;Adapter&gt;;
+
+  constructor(robot: Robot&lt;Adapter&gt;) {
+    super(robot);
+    this.robot.logger.info("Constructor");
+  }
+
+  send(envelope: any, ...strings: any[]) {
+    this.robot.logger.info("Send");
+  }
+
+  reply(envelope: any, ...strings: any[]) {
+    this.robot.logger.info("Reply");
+  }
+
+  run() {
+    this.robot.logger.info("Run");
+    this.emit("connected");
+    const user = new User("1001", { name: "Sample User", });
+    const message = new TextMessage(user, "Some Sample Message", "MSG-001");
+    this.robot.receive(message);
+  }
+}
+
+module.exports.use = function createSampleAdapter(
+  robot: Robot&lt;Adapter&gt;
+) {
+  return new Sample(robot);
+};
+</code></pre><p>TypeScript でコンパイルすると <code>src/adapter.js</code> が作成されるので、忘れずに <code>package.json</code> に書かれているエントリポイントは <code>src/adapter.coffee</code> ではなく <code>src/adapter.js</code> にしておきましょう。</p><h3 id="%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E5%AE%9F%E8%A1%8C%E6%99%82%E7%89%B9%E6%9C%89%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%B8%E3%81%AE%E5%AF%BE%E5%87%A6" itemprop="articleSection">デバッグ実行時特有の問題への対処</h3><p>ここまでで、ほぼデバッグ実行ができるようになりますが、実はこのままだと Node.js のライブラリの読み込みの仕様が原因で <code>robot.receive()</code> から呼ばれるはずの bot の処理が実行されない状態になっています。</p><p>原因としてはどうやら</p><ol><li><code>hubot</code> コマンドがアダプタを読み込む。</li><li>アダプタが <code>hubot</code> ライブラリの読み込みを行う。</li><li>パスの解決の結果、 <code>hubot-test/node_modules/hubot</code> が読み込まれることを意図しているところ、 アダプタのコンパイルに必要なため <code>node_modules/hubot</code> が存在していることから、そちらが読み込まれる。</li></ol><p>結果 <code>hubot</code> コマンド内で行われる <code>instanceof TextMessage</code> などの比較で不一致が発生し bot が処理されないようです。</p><p>現状、対処としては動的にデバッグ実行かそうでないかを判断しライブラリの読み込みパスを変更するようにすることで意図しない動きを回避しています。</p><pre><code class="diff">-import { Robot, Adapter, User, TextMessage } from "hubot";
++import * as Hubot from "hubot";
++import { Robot, Adapter } from "hubot";
++import * as path from "path";
++
++const isTestHubot =
++  path.join(__dirname, "..") ===
++  // @ts-ignore TS2532: Object is possibly 'undefined'.
++  path.join(require.main.filename.replace(/node_modules\/.*$/, ""), ".."); // (...)/hubot-line-local-tunnel/hubot-test/node_modules/hubot/bin/hubot
++// テスト環境での実行時はテスト用の環境に含まれる Hubot パッケージを読むように指示
++const { User, TextMessage } = !isTestHubot
++  ? Hubot
++  : require(require("path").join(__dirname, "../hubot-test/node_modules/hubot")); // eslint-disable-line import/no-dynamic-require
+
+ class Sample extends Adapter {
+   robot!: Robot&lt;Adapter&gt;;
+</code></pre><h2 id="%E5%AE%9F%E8%A1%8C%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B" itemprop="articleSection">実行してみる</h2><p><code>hubot</code> プリフェックスを除いた名前で <code>--adapter</code> オプションを指定し実行します</p><pre><code class="console">$ npx hubot -a sample-adapter
+[Wed Jul 29 2020 23:44:09 GMT+0900] INFO Constructor
+[Wed Jul 29 2020 23:44:09 GMT+0900] INFO Run
+[Wed Jul 29 2020 23:44:09 GMT+0900] WARNING Loading scripts from hubot-scripts.json is deprecated and will be removed in 3.0 (https://github.com/github/hubot-scripts/issues/1113) in favor of packages for each script.
+
+Your hubot-scripts.json is empty, so you just need to remove it.
+[Wed Jul 29 2020 23:44:09 GMT+0900] INFO Reply
+</code></pre><p>ログを見ると、ちゃんと <code>Constructor</code> と <code>Run</code> と <code>Reply</code> が印字されています。</p><h2 id="%E3%83%A1%E3%83%A2" itemprop="articleSection">メモ</h2><h3 id="configuration-for-rule-%22import%2Fno-cycle%22-is-invalid" itemprop="articleSection">Configuration for rule "import/no-cycle" is invalid</h3><pre><code class="console">               :
+Configuration for rule "import/no-cycle" is invalid
+               :
+</code></pre><p>と表示され eslint が正常に実行されない場合があった。</p><p><a href="https://github.com/airbnb/javascript/issues/2227">Invalid rule configurations compiled by "eslint --print-config" on eslint-config-airbnb-typescript · Issue #2227 · airbnb/javascript</a> によると、どうやら 7.3.0 から 7.2.0 へダウングレードすることで回避できる様子。</p><pre><code class="console">$ npm i eslint@7.2.0 --save-dev
+</code></pre><h2 id="%E5%8F%82%E8%80%83" itemprop="articleSection">参考</h2><ul><li><a href="https://hubot.github.com/docs/adapters/development/">Development adapter | HUBOT</a></li><li><a href="https://github.com/airbnb/javascript/issues/2227">Invalid rule configurations compiled by "eslint --print-config" on eslint-config-airbnb-typescript · Issue #2227 · airbnb/javascript</a></li><li><a href="https://hiranoon.hatenablog.com/entry/2020/04/13/192746#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">TypeScript の開発環境を作る。VSCode を基本に ESLint と Prettier も添えて。 - Multi Vitamin &amp; Mineral</a></li><li><a href="http://akiomik.hatenablog.jp/entry/2014/02/12/052703">hubot adapterの作り方 - おみブロZ</a></li><li><a href="https://qiita.com/bouzuya/items/11c0c6da2b3ad54b827f#hubot-echo">Hubot のインストール - Qiita</a></li><li><a href="https://komari.co.jp/blog/develop/frontend/355/#i-3">Visual Studio Code のデバッグコンソールにログが出力されない話 | 岡山のWEB制作はKOMARI</a></li><li><a href="https://qiita.com/n0bisuke/items/12ce4df55a405a62b599">Hubotでusing deprecated documentation syntax - Qiita</a></li><li><a href="https://qiita.com/mysticatea/items/f523dab04a25f617c87d">ESLint 最初の一歩 - Qiita</a></li><li><a href="https://shotat.hateblo.jp/entry/2016/10/26/000912">Eslintでunderscoreから始まる変数をチェックさせない設定にする - Memento memo.</a></li><li><a href="https://stackoverflow.com/questions/57802057/eslint-configuring-no-unused-vars-for-typescript">esLint-Typescriptの「no-unused-vars」の構成-スタックオーバーフロー</a></li></ul></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i>&nbsp;
+        <span itemprop="datePublished" content="2020-07-29">2020年07月29日</span>
+        &nbsp;/&nbsp;
+        <i class="fa fa-history"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2020-07-29-_posts/2020-xx-xx-hubot-adapter-with-typescript.md.md">変更履歴</a>
+        &nbsp;/&nbsp;
+        <i class="fa fa-thumb-tack"></i>&nbsp;<a href="/blog/2020/07/29/_posts/2020-xx-xx-hubot-adapter-with-typescript.md.html">Permalink</a>
+        &nbsp;/&nbsp;
+    </span><meta itemprop="url" content="http://www.sharkpp.net/blog/2020/07/29/_posts/2020-xx-xx-hubot-adapter-with-typescript.md.html" /><span itemprop="author" itemscope itemtype="https://schema.org/Person"
+          style="display: none;"
+       ><span itemprop="name">sharkpp</span
+   ></span><a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2020%2F07%2F29%2F_posts%2F2020-xx-xx-hubot-adapter-with-typescript.md.html"
+       class="hatena-bookmark-button"
+       data-hatena-bookmark-title="Hubot アダプタを TypeScript を使って作ってみた &mdash; さめたすたすのお家"
+       data-hatena-bookmark-layout="simple-balloon"
+       title="このエントリーをはてなブックマークに追加"
+      ><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png"
+            alt="このエントリーをはてなブックマークに追加"
+            width="20" height="20" style="border: none;" /></a
+      >&nbsp;
+    <a href="https://twitter.com/share" class="twitter-share-button"
+       data-url="http://www.sharkpp.net/blog/2020/07/29/_posts/2020-xx-xx-hubot-adapter-with-typescript.md.html" data-via="sharkpp">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><div style="line-height: 25px; height: 25px;"><span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
+                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
+        &nbsp;/&nbsp;
+                                <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:
+                        <a href="/blog/tags/JavaScript">JavaScript</a>,                         <a href="/blog/tags/TypeScript">TypeScript</a>,                         <a href="/blog/tags/Hubot">Hubot</a>,                         <a href="/blog/tags/%E9%9B%91%E8%A8%98">雑記</a></span></div></footer><hr style="border-top: none; border-bottom: 1px dashed #aaa; margin: 10px 0;" /><nav class="article"><ul class="list-unstyled row"><li class="col-md-6 text-muted"><i class="fa fa-chevron-left"></i></li><li class="col-md-6 text-right"><a class="previous" href="/blog/2020/05/02/build-local-https-test-environment.html" title="ローカルでの HTTPS テスト環境の構築"><span class="title">ローカルでの HTTPS テスト環境の構築</span><i class="fa fa-chevron-right"></i></a></li></ul></nav></article></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li><li><i class="fa-li fa fa-ellipsis-h"></i><a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /blog/2020/07/29/_posts/2020-xx-xx-hubot-adapter-with-typescript.md.html"
+                                  rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li></ul></div><div class="container text-center"><ul class="list-unstyled list-inline"><li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li><li class="text-muted">&copy; 2004-2020 sharkpp</li></ul></div><div class="container text-center text-muted"><ruby><rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                            >Creative Commons Attribution 4.0 International License</a>.</rb><rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                  >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp></ruby></div><div class="container text-center text-muted"><ruby><rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
+                                                                            >The MIT License</a>.</rb><rp>(</rp><rt>さらに、コードスニペットは <a rel="nofollow" href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license"
+                                                               >MIT ライセンス</a> の下にライセンスされています。</rt><rp>)</rp></ruby></div></div></footer><script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>')</script><script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script>$('body').modal || document.write('<script src="/assets/bootstrap/js/bootstrap.min.js"><\/script>')</script><script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-5908801-2', 'auto');
+            ga('send', 'pageview');
+        </script><script src="/assets/highlightjs/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><script type="text/javascript">
+            $('a img').each(function(){
+                var rel = ($(this).attr('src').match(/images\u002f([0-9_]{4}_[0-9_]{4})/i) ||
+                           ['','lightbox'])[1];
+                $(this).parent()
+                    .attr('data-lightbox', rel)
+                    .attr('data-title', $(this).attr('alt'))
+                    ;
+            });
+        </script><script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script><script>$(document).ready(function(){ window.lightbox || $.getScript("/assets/lightbox2/dist/js/lightbox.min.js"); });</script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.5/jquery.smooth-scroll.min.js"></script><script>$.smoothScroll || document.write('<script src="/assets/jquery-smooth-scroll/jquery.smooth-scroll.min.js"><\/script>')</script><script type="text/javascript">
+            $('#toc a')
+                .each(function(){
+                    var id = $(this).attr('href').slice(1);
+                    $(this)
+                        .smoothScroll({
+                            scrollTarget: $('[id="' + id + '"]'),
+                            offset: -50,
+                            beforeScroll: function(){ /*history.pushState({}, id, "#" + id);*/ }
+                        });
+                })
+                ;
+            $('#go-top')
+                .on('click', function() {
+                    $.smoothScroll({
+                        scrollElement: $('body'),
+                        scrollTarget: '',
+                        beforeScroll: function(){ /*history.pushState({}, "", location.href.replace(location.hash, ''));*/ },
+                        afterScroll: function(){ $('body').css('position', ''); }
+                    });
+                    return false;
+                });
+            $(window).scroll(function () {
+                var scroll   = $(this).scrollTop();
+                var visibled = $('#go-top').css('display') == 'block';
+                var next_state = $('#go-top').attr('data-next-state');
+                if (100 <= scroll && (!visibled || 'hidden' == next_state))
+                    $('#go-top')
+                        .stop(true, true)
+                        .attr('data-next-state', 'visible')
+                        .fadeIn('slow', function(){
+                            $(this).removeAttr('data-next-state');
+                        });
+                else if (scroll < 100 && (visibled || 'visible' == next_state))
+                    $('#go-top')
+                        .stop(true, true)
+                        .attr('data-next-state', 'hidden')
+                        .fadeOut('slow', function(){
+                            $(this).removeAttr('data-next-state');
+                        });
+            });
+            $(window).scroll();
+        </script><script type="text/javascript">
+            $(document).ready(function(){
+                // apply table to bootstrap css
+                $('table:not([class])')
+                    .addClass('table table-bordered table-hover table-condensed table-striped')
+                    .wrap("<div style='width:100%;overflow-x:auto;'></div>");
+             });
+        </script><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></body></html>
