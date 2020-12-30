@@ -35,7 +35,7 @@ _composer () {
   local COMPOSER_PATH=
   test -e "$(dirname $0)/composer.phar" && COMPOSER_PATH=$PHP\ $(dirname $0)/composer.phar
   composer >/dev/null 2>&1 && COMPOSER_PATH=composer
-  if [ "$GH_TOKEN" != "" ] then
+  if [ "$GH_TOKEN" != "" ]; then
     COMPOSER_PATH=$PHP\ $(dirname $0)/composer.phar
   fi
   case "$1" in
