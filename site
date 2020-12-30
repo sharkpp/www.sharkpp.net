@@ -102,7 +102,7 @@ core_init () {
   check_php
   check_libxml
   # install Component from Composer and Bower
-  _composer exist || _composer self-install
+  _composer exist || _composer self-install 1.10.19
   _composer self-update 1.10.19
   _composer install
   _bower install
@@ -200,7 +200,7 @@ exec_deploy () {
   fi
   PHP=php
   # install Component from Composer and Bower
-  _composer exist || _composer self-install
+  _composer exist || _composer self-install 1.10.19
   _composer self-update 1.10.19
   _composer install
   _bower install
@@ -312,7 +312,7 @@ exec_update () {
   # init
   check_php
   check_libxml
-  _composer exist || _composer self-install
+  _composer exist || _composer self-install 1.10.19
   _composer self-update 1.10.19
   _composer update
   _bower update
