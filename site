@@ -35,6 +35,9 @@ _composer () {
   local COMPOSER_PATH=
   test -e "$(dirname $0)/composer.phar" && COMPOSER_PATH=$PHP\ $(dirname $0)/composer.phar
   composer >/dev/null 2>&1 && COMPOSER_PATH=composer
+  if [ "$GH_TOKEN" != "" ] then
+    COMPOSER_PATH=$PHP\ $(dirname $0)/composer.phar
+  fi
   case "$1" in
     "exist"       ) test "" = "$COMPOSER_PATH" ;;
     "self-install") curl --insecure -L https://getcomposer.org/installer | $PHP ;;
@@ -200,8 +203,8 @@ exec_deploy () {
   fi
   PHP=php
   # install Component from Composer and Bower
-#  _composer exist || _composer self-install
-#  _composer self-update
+  _composer exist || _composer self-install
+  _composer self-update
   _composer install
   _bower install
   # set git config
