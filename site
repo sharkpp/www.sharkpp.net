@@ -39,7 +39,7 @@ _composer () {
     "exist"       ) test "" = "$COMPOSER_PATH" ;;
     "self-install") curl --insecure -L https://getcomposer.org/installer | $PHP ;;
     "self-update" ) ;;
-    *             ) $COMPOSER_PATH $* ;;
+    *             ) $COMPOSER_PATH self-update 1.10.19 ;;
   esac
 }
 
