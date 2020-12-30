@@ -204,8 +204,8 @@ exec_deploy () {
   PHP=php
 set -x
   # install Component from Composer and Bower
-  _composer exist || _composer self-install
-  _composer self-update
+#  _composer exist || _composer self-install
+#  _composer self-update
   _composer install
   _bower install
   # set git config
