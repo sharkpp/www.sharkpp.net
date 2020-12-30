@@ -102,8 +102,8 @@ core_init () {
   check_php
   check_libxml
   # install Component from Composer and Bower
-  _composer exist || _composer self-install 1.10.19
-  _composer self-update 1.10.19
+  _composer exist || _composer self-install
+  _composer self-update
   _composer install
   _bower install
   # create default webhook conf
@@ -200,8 +200,8 @@ exec_deploy () {
   fi
   PHP=php
   # install Component from Composer and Bower
-  _composer exist || _composer self-install 1.10.19
-  _composer self-update 1.10.19
+#  _composer exist || _composer self-install
+#  _composer self-update
   _composer install
   _bower install
   # set git config
@@ -312,8 +312,8 @@ exec_update () {
   # init
   check_php
   check_libxml
-  _composer exist || _composer self-install 1.10.19
-  _composer self-update 1.10.19
+  _composer exist || _composer self-install
+  _composer self-update
   _composer update
   _bower update
 }
