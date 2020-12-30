@@ -202,6 +202,7 @@ exec_deploy () {
     exit 0
   fi
   PHP=php
+set -x
   # install Component from Composer and Bower
   _composer exist || _composer self-install
   _composer self-update
