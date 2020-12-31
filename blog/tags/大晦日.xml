@@ -3,11 +3,70 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/%E5%A4%A7%E6%99%A6%E6%97%A5.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2020-12-30T02:25:31+00:00</updated>
+    <updated>2020-12-31T12:53:46+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[大晦日@2020]]></title>
+            <link href="http://www.sharkpp.net/blog/2020/12/31/new-years-eve-2020.html"/>
+            <updated>2020-12-31T21:49:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2020/12/31/new-years-eve-2020.html</id>
+            <content type="html"><![CDATA[<h2 id="1-%E5%B9%B4%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A">1 年を振り返り</h2>
+
+<p>今年も残すところ大晦日の今日だけとなりました。
+つまりは99.7%は終わった感じですね。</p>
+
+<p>世間的なところではコロナ禍が猛威を振るい、今だに収まらないというのは去年の今頃は全く予想できなかったです。
+それによって働き方も様変わりし、旅行やイベントも自粛ムードになるなど影響がいたるところに出ている感じですね。</p>
+
+<p>個人的なところでは、お仕事は変わらずだけど、コロナ禍の影響を受けて在宅ワークがメインになったりしました。</p>
+
+<blockquote>
+  <p>自分自身のことについてはまあ諸々の理由があって勉強会もほとんど参加できなかったのが残念ですが、来年の後半ぐらいから多少マシになる... といいなと。</p>
+</blockquote>
+
+<p>これは、まだもう少しイベントがありそうだけどなんとかしたいですね。</p>
+
+<p>そして、今年も恒例(？)の仮想除夜の鐘アプリ「<a href="https://sharkpp.github.io/joya_no_kane/">除夜の鐘</a>」のリンクを貼っておきます。</p>
+
+<p>さて、前置きいつも通り書いたところで、今年の反省をば。</p>
+
+<h2 id="%E7%B5%90%E6%9E%9C">結果</h2>
+
+<p>まずは、今年の正月 <a href="/blog/2020/01/01/happy-new-year-2020.html">HAPPY NEW YEAR 2020</a> に掲げた目標です。</p>
+
+<ul>
+<li>定期的なホムペの更新</li>
+<li>ホームページを GitHub Action ＆ GatsbyJS ベースに移行してモダーンな感じに</li>
+<li>PWAとかQtとかもろもろ勉強... というか遊ぶ</li>
+<li>Rust頑張ってみる... Rust難しい...</li>
+<li><a href="https://github.com/sharkpp/FrameExtract">FrameExtract</a> を完成させる</li>
+</ul>
+
+<p>と、こんな感じ。</p>
+
+<p>成果としては...</p>
+
+<p>ちょこちょこやっているけど、如何せん時間があまり取れずなかなか進まない感じ。</p>
+
+<p>8月から11月までブログに書けるような内容も何もできていないので、ぐぬぬ。</p>
+
+<p>今年も<a href="https://togetter.com/li/1450054">よんた@keita44_f4 さんの日本酒の感想ツイートまとめ</a>を~~更新してました~~大晦日に慌てて更新しました(汗
+お酒たくさん飲めて羨ましい...</p>
+
+<h2 id="%E5%8F%8D%E7%9C%81">反省</h2>
+
+<p>作りたいものはあるけど、なかなか時間がない、というか体力がない感じをなんとかしたい感じ。</p>
+
+<p>と言うあたりで今年の反省会終了です。</p>
+
+<p><img src="/images/20201231_herring_soba.jpg" alt="にしん蕎麦" /></p>
+
+<p>それでは来年もよろしくお願いします。</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[大晦日@2019]]></title>
             <link href="http://www.sharkpp.net/blog/2019/12/31/new-years-eve-2019.html"/>
@@ -574,57 +633,6 @@ Wineで開発完了を整えたのが功を奏したのかもしれないです�
 <p>って感じかな？</p>
 
 <p>また来年も頑張るぞー</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[大晦日@2011]]></title>
-            <link href="http://www.sharkpp.net/blog/2011/12/31/new-years-eve-of-2011.html"/>
-            <updated>2011-12-31T10:08:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2011/12/31/new-years-eve-of-2011.html</id>
-            <content type="html"><![CDATA[<h4 id="1%E5%B9%B4%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A">1年を振り返り</h4>
-
-<p>今年の正月(<a href="/blog/2011/01/01/happy-new-year-2011.html">HAPPY NEW YEAR 2011</a>)に掲げた目標</p>
-
-<p>...達成率0% orz</p>
-
-<p>まず、今年の目標</p>
-
-<ul>
-<li>HSP関連のあるサイトの立ち上げ</li>
-<li>yabuinuのHSP3.2対応</li>
-<li>このサイトのデザイン変更＆整理</li>
-<li>掲示板の設置</li>
-<li>Androidアプリの公開</li>
-<li>とあるシェル拡張の公開</li>
-<li>とあるツールの公開</li>
-<li>HSPコンテスト作品の製作</li>
-<li>音素材の公開</li>
-</ul>
-
-<p>で、出来たのは、HSPコンテスト作品の製作ぐらいでしょうか？</p>
-
-<p>とあるツールの公開は、必要なくなってしまったし、とあるシェル拡張の公開やAndroidアプリの公開は全く進んでいない、と言うか他のことに興味が移って進んでいないと言うかorz</p>
-
-<p>HSP関連のあるサイトの立ち上げは、他の人が作ってるからまあ様子見。</p>
-
-<p>メールで要望とかもらったのも全く進んでいないし何をやっているんだろうか？orz</p>
-
-<p>まあ、とりあえず、今年の総括</p>
-
-<ul>
-<li>正月はプログラムして楽しかったよ→<a href="/blog/2011/01/01/joya-no-kane.html">除夜の鐘</a></li>
-<li>pixiv始めたよ→<a href="http://www.pixiv.net/member.php?id=1547498">pixiv</a></li>
-<li>github始めたよ→<a href="https://github.com/sharkpp">github</a></li>
-<li>新しいドメイン取ったけど使ってないよorz</li>
-<li>HSPプログラムコンテストに応募(<a href="/blog/2011/08/31/entry-the-HSP-program-contest-2011.html">その1</a>,<a href="/blog/2011/09/27/entry-the-HSP-program-contest-2011-2.html">その2</a>)→<a href="/blog/2011/11/26/hsp-program-contest-2011-has-passed-the-initial-screening.html">予選突破</a>→<a href="/blog/2011/12/08/hsp-program-contest-2011-winner.html">入賞</a>したよ</li>
-<li>一度挫折したけど、またQt使い始めたよ</li>
-</ul>
-
-<p>ってぐらいかな？</p>
-
-<p>あと、東北の方は地震＆原発コンボで大変だったようだけど来年はいいことあるさ、きっと</p>
-
-<p>まあ、来年も頑張る>&lt;</p>
 ]]></content>
         </entry>
     </feed>
