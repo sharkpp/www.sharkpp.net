@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hubot アダプタを TypeScript を使って作ってみた"
-date: 2019-07-29 23:46
+date: 2020-07-29 23:46
 tags: [JavaScript, TypeScript, Hubot, 雑記]
 categories: [ブログ]
 
