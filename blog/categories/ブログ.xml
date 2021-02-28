@@ -3,11 +3,18 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2021-01-24T11:42:08+00:00</updated>
+    <updated>2021-02-28T13:50:45+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Chromecast with Google TV の開封の儀と３ヶ月ぐらい使ってみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2021/02/28/unboxing-and-used-three-month-of-chromecast-with-google-tv.html"/>
+            <updated>2021-02-28T22:45:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2021/02/28/unboxing-and-used-three-month-of-chromecast-with-google-tv.html</id>
+            <content type="html"><![CDATA[]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[HAPPY NEW YEAR 2021]]></title>
             <link href="http://www.sharkpp.net/blog/2021/01/01/happy-new-year-2021.html"/>
@@ -1104,117 +1111,6 @@ PWAとかにもできた気がしますが、ちょっと間に合わなかっ�
 <p>と言うあたりで今年の反省会終了です。</p>
 
 <p>来年もよろしくお願いします。</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[名古屋Qt勉強会#31.1 に参加しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2019/11/23/qt-nagoya-31.html"/>
-            <updated>2019-11-23T17:38:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2019/11/23/qt-nagoya-31.html</id>
-            <content type="html"><![CDATA[<p>2019年11月23日(土) に開催された <a href="https://qt-users.connpass.com/event/155325/">Qt 勉強会 @ Nagoya #31.1 - connpass</a> へ参加しました。</p>
-
-<p>そのまとめです。</p>
-
-<h2 id="%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B">自己紹介</h2>
-
-<p>毎回の通り、自己紹介と本日やることを宣言。</p>
-
-<p>初めて参加の方が一人いた。</p>
-
-<p>久しぶりの開催なのと初めての人がいるためか開催の趣旨などが説明された。</p>
-
-<h2 id="%40kazuo_asa-%E3%81%95%E3%82%93%E3%81%AB%E3%82%88%E3%82%8B%E7%99%BA%E8%A1%A8">@kazuo_asa さんによる発表</h2>
-
-<p><a href="https://twitter.com/kazuo_asa">@kazuo_asa</a> による</p>
-
-<ul>
-<li>はじめてのQt入門 シグナルとスロット</li>
-</ul>
-
-<p>の発表がありました。</p>
-
-<h2 id="%E8%87%AA%E5%88%86%E3%81%AE%E6%9C%AC%E6%97%A5%E3%81%AE%E3%82%84%E3%82%8B%E3%81%93%E3%81%A8">自分の本日のやること</h2>
-
-<ul>
-<li>前回の続きの動画からフレームを切り出し動画のメタ情報とフレーム位置に応じた時刻を設定するツールを実装</li>
-</ul>
-
-<p>前回までの状況</p>
-
-<ul>
-<li>UIの実装途中</li>
-</ul>
-
-<h2 id="%E6%9C%AC%E6%97%A5%E3%81%AE%E7%9F%A5%E8%A6%8B">本日の知見</h2>
-
-<h2 id="path%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0">PATH環境変数</h2>
-
-<p>QtCreator で値を上書きできるので、コンソールでの実行結果と違うことがある...</p>
-
-<h2 id="%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB%2F%E3%82%B9%E3%83%AD%E3%83%83%E3%83%88%E3%81%A7%E3%81%AE%E6%8E%A5%E7%B6%9A%E3%82%BF%E3%82%A4%E3%83%97">シグナル/スロットでの接続タイプ</h2>
-
-<p>オプションで指定できたみたい... 知らなかった...</p>
-
-<p><a href="https://doc.qt.io/qt-5/qt.html#ConnectionType-enum">enum Qt::ConnectionType</a> より</p>
-
-<table>
-<thead>
-<tr>
-  <th>Constant</th>
-  <th>Value</th>
-  <th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>Qt::AutoConnection</td>
-  <td>0</td>
-  <td>（デフォルト）シグナルを発信するスレッド内にレシーバーが存在する場合、Qt::DirectConnection が使用されます。それ以外の場合、Qt::QueuedConnection が使用されます。接続タイプは、信号が発信されるときに決定されます。</td>
-</tr>
-<tr>
-  <td>Qt::DirectConnection</td>
-  <td>1</td>
-  <td>スロットは、信号が発信されるとすぐに呼び出されます。スロットはシグナリングスレッドで実行されます。</td>
-</tr>
-<tr>
-  <td>Qt::QueuedConnection</td>
-  <td>2</td>
-  <td>スロットは、制御がレシーバーのスレッドのイベントループに戻るときに呼び出されます。スロットは受信者のスレッドで実行されます。</td>
-</tr>
-<tr>
-  <td>Qt::BlockingQueuedConnection</td>
-  <td>3</td>
-  <td>Qt::QueuedConnection と同じです。ただし、シグナルスレッドは、スロットが戻るまでブロックします。レシーバがシグナリングスレッドに存在する場合、この接続を使用しないでください。使用すると、アプリケーションがデッドロックします。</td>
-</tr>
-<tr>
-  <td>Qt::UniqueConnection</td>
-  <td>0x80</td>
-  <td>これは、ビット単位のORを使用して、上記の接続タイプのいずれかと組み合わせることができるフラグです。 Qt::UniqueConnection が設定されている場合、接続が既に存在する場合（つまり、同じオブジェクトの同じペアの同じスロットに同じ信号が既に接続されている場合）、QObject::connect() は失敗します。このフラグはQt 4.6で導入されました。</td>
-</tr>
-</tbody>
-</table>
-
-<h2 id="%E6%9C%AC%E6%97%A5%E3%81%AE%E9%80%B2%E6%8D%97">本日の進捗</h2>
-
-<ul>
-<li>前回の続きを思い出すところからスタート</li>
-<li>QProcess::start() で絶対パスではなく <code>ffmpeg</code> だけでコマンドが呼び出せないのを調べていたが、結局 QtCreater の設定に追加することで解決</li>
-<li>あとは QML で 思った UI の表現がうまくいかなかったのでそれを実現するためにサンプルを作ってたりしてタイムアップ</li>
-</ul>
-
-<p>なかなかに、思ったUIを作るのが難しい...</p>
-
-<h2 id="%E3%83%A1%E3%83%A2">メモ</h2>
-
-<ul>
-<li><a href="https://scoop.sh/">Scoop</a> いいぞぉ</li>
-</ul>
-
-<h2 id="%E5%8F%82%E8%80%83">参考</h2>
-
-<ul>
-<li><a href="https://doc.qt.io/qt-5/qt.html#ConnectionType-enum">Qt Namespace | Qt Core 5.13.2</a></li>
-</ul>
 ]]></content>
         </entry>
     </feed>
