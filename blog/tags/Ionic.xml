@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="http://www.sharkpp.net/blog/tags/Ionic.xml" rel="self"/>
+    <link href="http://www.sharkpp.net/"/>
+    <updated>2021-04-30T12:41:01+00:00</updated>
+    <id>http://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Ionic 5 でモバイル＆デスクトップアプリを試してみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2021/04/30/tryout-ionic-mobile-desktop.html"/>
+            <updated>2021-04-30T21:35:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2021/04/30/tryout-ionic-mobile-desktop.html</id>
+            <content type="html"><![CDATA[<p>モバイルでもウェブでもデスクトップでも動くサービスを作る方法を調べて、とりあえず React で実装できそうな <a href="https://ionicframework.com/">Ionic 5</a> を試してみることにしました。</p>
+
+<h2 id="%E6%BA%96%E5%82%99">準備</h2>
+
+<p>まず、 ionic のコンソールツールをインストールします。</p>
+
+<pre><code class="console">$ npm install -g @ionic/cli
+</code></pre>
+
+<p>ios 向けを開発する場合はさらに</p>
+
+<pre><code class="console">$ npm install -g ios-sim
+$ brew install ios-deploy
+</code></pre>
+
+<h2 id="%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90">プロジェクトの作成</h2>
+
+<p>コンソールツールがインストールできたら、プロジェクトを作成します。</p>
+
+<p>引数は次のような感じで指定します。</p>
+
+<pre><code class="console">$ ionic start &lt;アプリ名&gt; &lt;テンプレート名&gt; --type=react --capacitor
+$ cd &lt;アプリ名&gt;
+</code></pre>
+
+<p><strong>&lt;アプリ名></strong></p>
+
+<p>myApp など、プロジェクトの名前を指定</p>
+
+<p><strong>&lt;テンプレート名></strong></p>
+
+<p><code>--type=react</code> で指定可能なテンプレート名の種類</p>
+
+<table>
+<thead>
+<tr>
+  <th>テンプレート名</th>
+  <th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>blank</code></td>
+  <td>空白のスタータープロジェクト</td>
+</tr>
+<tr>
+  <td><code>list</code></td>
+  <td>リスト付きの開始プロジェクト</td>
+</tr>
+<tr>
+  <td><code>my-first-app</code></td>
+  <td>ギャラリー付きのカメラを構築するサンプルアプリケーション</td>
+</tr>
+<tr>
+  <td><code>sidemenu</code></td>
+  <td>コンテンツ領域にナビゲーションを備えたサイドメニューを備えた開始プロジェクト</td>
+</tr>
+<tr>
+  <td><code>tabs</code></td>
+  <td>シンプルなタブ付きインターフェースを備えた開始プロジェクト</td>
+</tr>
+<tr>
+  <td><code>conference</code></td>
+  <td>Ionicが提供するすべてを披露するキッチンシンク(ライブラリが提供する機能を網羅するサンプル)アプリケーション</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>その他</strong></p>
+
+<table>
+<thead>
+<tr>
+  <th>パラメータ</th>
+  <th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--capacitor</code></td>
+  <td>Capacitor(クロスプラットフォームなネイティブランタイム)を利用するため</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="capacitor-%E3%82%92%E5%88%A9%E7%94%A8%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E8%BF%BD%E5%8A%A0%E8%A8%AD%E5%AE%9A">Capacitor を利用するための追加設定</h2>
+
+<h3 id="capacitor-%E3%81%AE%E5%88%9D%E6%9C%9F%E5%8C%96">Capacitor の初期化</h3>
+
+<pre><code class="console">$ npx cap init &lt;アプリ名&gt; &lt;アプリId&gt; --web-dir=build --npm-client=yarn
+</code></pre>
+
+<p><strong>&lt;アプリ名></strong></p>
+
+<p>ionic start で指定した値と同じものを指定。</p>
+
+<p><strong>&lt;アプリId></strong></p>
+
+<p><code>com.example.app</code> みたいな値。</p>
+
+<p><strong>その他</strong></p>
+
+<table>
+<thead>
+<tr>
+  <th>パラメータ</th>
+  <th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--web-dir=build</code></td>
+  <td>プロジェクトで作成したウェブアセットのディレクトリ</td>
+</tr>
+<tr>
+  <td><code>--npm-client=yarn</code></td>
+  <td><code>npm</code> or <code>yarn</code> ※ npm 7 以降で互換性の問題が発生している模様なので Yarn を選択</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="native-%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%81%AE%E8%BF%BD%E5%8A%A0">Native プラットフォームの追加</h3>
+
+<pre><code class="console">$ ionic build
+$ npx cap add &lt;プラットフォーム&gt;
+</code></pre>
+
+<p>プラットフォームの追加前に <code>ionic build</code> が必要。</p>
+
+<p>実行しない場合、</p>
+
+<pre><code class="console">$ npx cap add electron
+[error] Capacitor could not find the web assets directory "~/test1/build".
+    Please create it, and make sure it has an index.html file. You can change
+    the path of this directory in capacitor.config.json.
+    More info: https://capacitor.ionicframework.com/docs/basics/configuring-your-app
+</code></pre>
+
+<p>とメッセージが出ます。</p>
+
+<p><strong>&lt;プラットフォーム></strong></p>
+
+<p>指定可能な値</p>
+
+<table>
+<thead>
+<tr>
+  <th>プラットフォーム</th>
+  <th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>android</code></td>
+  <td>Android 向けの構成</td>
+</tr>
+<tr>
+  <td><code>ios</code></td>
+  <td>iOS 向けの構成</td>
+</tr>
+<tr>
+  <td><code>electron</code></td>
+  <td>(Electronで実装される)デスクトップ向けの構成</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="native-%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%81%AE%E5%AE%9F%E8%A1%8C">Native プラットフォームの実行</h3>
+
+<pre><code class="console">$ ionic build
+$ npx cap copy
+$ npx cap open &lt;プラットフォーム&gt;
+</code></pre>
+
+<p><strong>&lt;プラットフォーム></strong></p>
+
+<p>npx cap add で指定可能な値と同じ</p>
+
+<h3 id="%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%83%93%E3%83%AB%E3%83%89">リリースビルド</h3>
+
+<p><strong>electron</strong></p>
+
+<p>事前に electron-packager をインストール</p>
+
+<pre><code class="console">$ npm install -g electron-packager
+</code></pre>
+
+<p>パラメータを指定して実行</p>
+
+<pre><code class="console">$ electron-packager ./electron &lt;アプリ名&gt; --platform=&lt;プラットフォーム&gt; --arch=&lt;アーキテクチャ&gt; [オプションフラグ...]
+</code></pre>
+
+<p><strong>&lt;アプリ名></strong></p>
+
+<p>ionic start で指定した値と同じものを指定。</p>
+
+<p><strong>&lt;プラットフォーム>と&lt;アーキテクチャ></strong></p>
+
+<table>
+<thead>
+<tr>
+  <th>プラットフォーム</th>
+  <th>アーキテクチャ</th>
+  <th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>darwin</code></td>
+  <td><code>x64</code></td>
+  <td>macOS</td>
+</tr>
+<tr>
+  <td><code>win32</code></td>
+  <td><code>x64</code></td>
+  <td>Windows 64ビット向け</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>[オプションフラグ]</strong></p>
+
+<table>
+<thead>
+<tr>
+  <th>オプションフラグ</th>
+  <th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>--arch=...</code></td>
+  <td><code>all</code> 、または1つ以上：<code>ia32</code>、<code>x64</code>、<code>armv7l</code>、<code>arm64</code>、<code>mips64el</code>（複数の場合はカンマ区切り）。 デフォルトはホストのアーチです</td>
+</tr>
+<tr>
+  <td><code>--icon=...</code></td>
+  <td>アプリのアイコンとして使用するアイコンファイルへのローカルパス。注：形式はプラットフォームによって異なります。</td>
+</tr>
+<tr>
+  <td><code>--overwrite</code></td>
+  <td>プラットフォームの出力ディレクトリがすでに存在する場合は、スキップするのではなく置き換えます</td>
+</tr>
+<tr>
+  <td><code>--platform=...</code></td>
+  <td><code>all</code> 、または1つ以上：<code>darwin</code>、<code>linux</code>、<code>mas</code>、<code>win32</code>（複数の場合はカンマ区切り）。デフォルトはホストのプラットフォームです</td>
+</tr>
+</tbody>
+</table>
+
+<p>その他、かなり多いので <a href="https://github.com/electron/electron-packager/blob/master/usage.txt">usage.txt</a> を参考に。</p>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<p>ざっと試したところ、テンプレートの保守がされてないのか、色々躓く所があった。</p>
+
+<p>特に、 Electron サポートは散々で、<code>blank</code> や <code>my-first-app</code> や <code>tabs</code> ぐらいしかまともに試せない感じ。
+<code>my-first-app</code> もだいたい動くけどカメラは動作していないと思う...</p>
+
+<table>
+<thead>
+<tr>
+  <th>プラットフォーム</th>
+  <th>起動</th>
+  <th>ビルド</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>ios</code></td>
+  <td><code>npx cap open ios</code></td>
+  <td>XCodeで作業 <a href="https://www.joshmorony.com/deploying-capacitor-applications-to-ios-development-distribution/">Deploying Capacitor Applications to iOS (Development &amp; Distribution)</a> を参考</td>
+</tr>
+<tr>
+  <td><code>android</code></td>
+  <td><code>npx cap open android</code></td>
+  <td><a href="https://www.joshmorony.com/deploying-capacitor-applications-to-android-development-distribution/">Deploying Capacitor Applications to Android (Development &amp; Distribution)</a> を参考</td>
+</tr>
+<tr>
+  <td><code>electron</code></td>
+  <td><code>npx cap open electron</code></td>
+  <td><code>electron-packager ./electron &lt;アプリ名&gt;</code></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://ionicframework.com/docs/intro/cli">Installing Ionic - Ionic Documentation</a></li>
+<li><a href="https://capacitorjs.com/docs/getting-started/with-ionic">Using Capacitor with Ionic - Capacitor</a></li>
+<li><a href="https://forum.ionicframework.com/t/tutorial-guide-to-build-for-ionic-react-electron-app/176872/4">Tutorial/guide to build for Ionic-React-Electron app - Capacitor - Ionic Forum</a></li>
+<li><a href="https://devdactic.com/ionic-desktop-electron/">Building Ionic Desktop Apps with Capacitor and Electron | Devdactic - Ionic Tutorials</a></li>
+<li><a href="https://forum.ionicframework.com/t/my-first-app-starter-npm-update-not-working/200076/3">My-first-app starter npm update not working - Ionic Framework - Ionic Forum</a></li>
+<li><a href="https://stackoverflow.com/questions/59921618/ionic-react-error-argument-of-type-is-not-assignable-for-correct-code">reactjs - Ionic React, error "Argument of type is not assignable" for correct code - Stack Overflow</a></li>
+<li><a href="https://github.com/electron/electron/issues/13740#issuecomment-439069134">serviceworker: Request scheme 'file' is unsupported · Issue #13740 · electron/electron · GitHub</a></li>
+<li><a href="https://ionicframework.com/docs/developing/ios#ios-sim-ios-deploy">iOS Development - Ionic Documentation</a></li>
+<li><a href="https://www.joshmorony.com/deploying-capacitor-applications-to-ios-development-distribution/">Deploying Capacitor Applications to iOS (Development &amp; Distribution) | joshmorony - Learn Ionic &amp; Build Mobile Apps with Web Tech</a></li>
+<li><a href="https://www.joshmorony.com/deploying-capacitor-applications-to-android-development-distribution/">Deploying Capacitor Applications to Android (Development &amp; Distribution) | joshmorony - Learn Ionic &amp; Build Mobile Apps with Web Tech</a></li>
+</ul>
+]]></content>
+        </entry>
+    </feed>
