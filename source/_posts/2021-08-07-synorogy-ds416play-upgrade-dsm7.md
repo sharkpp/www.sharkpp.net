@@ -14,7 +14,7 @@ categories: [ブログ]
 
 DSM の更新のページで、DSM 7 のアップグレードボタンをクリック。
 
-[<img src="{{ thumbnail('/images/20210807_ds416play_01_dsm624_upgrade.jpg', 640, 640) }}" alt="DSM 6.2">](/images/20210807_ds416play_01_dsm624_upgrade.png) [<img src="{{ thumbnail('/images/20210807_ds416play_02_dsm624_upgrade.jpg', 640, 640) }}" alt="DSM 6.2">](/images/20210807_ds416play_02_dsm624_upgrade.png)
+[<img src="{{ thumbnail('/images/20210807_ds416play_01_dsm624_upgrade.png', 640, 640) }}" alt="DSM 6.2">](/images/20210807_ds416play_01_dsm624_upgrade.png) [<img src="{{ thumbnail('/images/20210807_ds416play_02_dsm624_upgrade.png', 640, 640) }}" alt="DSM 6.2">](/images/20210807_ds416play_02_dsm624_upgrade.png)
 
 インストール中も UI が途切れることなく進めた。
 通信途切れるとページが真っ白とかになるけどそういうことはなかった。
@@ -26,27 +26,27 @@ DSM の更新のページで、DSM 7 のアップグレードボタンをクリ�
 
 の順。
 
-[<img src="{{ thumbnail('/images/20210807_ds416play_03_dsm7_install.jpg', 640, 640) }}" alt="DSMの更新中">](/images/20210807_ds416play_03_dsm7_install.png) [<img src="{{ thumbnail('/images/20210807_ds416play_04_dsm7_install.jpg', 640, 640) }}" alt="再起動中">](/images/20210807_ds416play_04_dsm7_install.png) [<img src="{{ thumbnail('/images/20210807_ds416play_05_dsm7_install.jpg', 640, 640) }}" alt="システムデータベースのアップデート">](/images/20210807_ds416play_05_dsm7_install.png) [<img src="{{ thumbnail('/images/20210807_ds416play_06_dsm7_install.jpg', 640, 640) }}" alt="パッケージの更新中">](/images/20210807_ds416play_06_dsm7_install.png)
+[<img src="{{ thumbnail('/images/20210807_ds416play_03_dsm7_install.png', 640, 640) }}" alt="DSMの更新中">](/images/20210807_ds416play_03_dsm7_install.png) [<img src="{{ thumbnail('/images/20210807_ds416play_04_dsm7_install.png', 640, 640) }}" alt="再起動中">](/images/20210807_ds416play_04_dsm7_install.png) [<img src="{{ thumbnail('/images/20210807_ds416play_05_dsm7_install.png', 640, 640) }}" alt="システムデータベースのアップデート">](/images/20210807_ds416play_05_dsm7_install.png) [<img src="{{ thumbnail('/images/20210807_ds416play_06_dsm7_install.png', 640, 640) }}" alt="パッケージの更新中">](/images/20210807_ds416play_06_dsm7_install.png)
 
 ログイン画面も変わってた。
 
-[<img src="{{ thumbnail('/images/20210807_ds416play_07_dsm7_login.jpg', 640, 640) }}" alt="ログイン画面">](/images/20210807_ds416play_07_dsm7_login.png)
+[<img src="{{ thumbnail('/images/20210807_ds416play_07_dsm7_login.png', 640, 640) }}" alt="ログイン画面">](/images/20210807_ds416play_07_dsm7_login.png)
 
 ダッシュボードも少し変わってる。
 
-[<img src="{{ thumbnail('/images/20210807_ds416play_08_dsm7_dashboard.jpg', 640, 640) }}" alt="ダッシュボード">](/images/20210807_ds416play_08_dsm7_dashboard.png)
+[<img src="{{ thumbnail('/images/20210807_ds416play_08_dsm7_dashboard.png', 640, 640) }}" alt="ダッシュボード">](/images/20210807_ds416play_08_dsm7_dashboard.png)
 
 Python3 は OS 組み込みになったようなのでアンインストール
 
-[<img src="{{ thumbnail('/images/20210807_ds416play_09_dsm7_python3_uninstall.jpg', 640, 640) }}" alt="ダッシュボード">](/images/20210807_ds416play_09_dsm7_python3_uninstall.png)
+[<img src="{{ thumbnail('/images/20210807_ds416play_09_dsm7_python3_uninstall.png', 640, 640) }}" alt="ダッシュボード">](/images/20210807_ds416play_09_dsm7_python3_uninstall.png)
 
 Moments や Photo Station は [Synology Photos](https://www.synology.com/ja-jp/DSM70/SynologyPhotos) に自動で更新された様子。
 
-[<img src="{{ thumbnail('/images/20210807_ds416play_10_dsm7_photos.jpg', 640, 640) }}" alt="Synology Photos">](/images/20210807_ds416play_10_dsm7_photos.png) [<img src="{{ thumbnail('/images/20210807_ds416play_11_dsm7_photos.jpg', 640, 640) }}" alt="Synology Photos">](/images/20210807_ds416play_11_dsm7_photos.png)
+[<img src="{{ thumbnail('/images/20210807_ds416play_10_dsm7_photos.png', 640, 640) }}" alt="Synology Photos">](/images/20210807_ds416play_10_dsm7_photos.png) [<img src="{{ thumbnail('/images/20210807_ds416play_11_dsm7_photos.png', 640, 640) }}" alt="Synology Photos">](/images/20210807_ds416play_11_dsm7_photos.png)
 
 アップデート後の情報
 
-[<img src="{{ thumbnail('/images/20210807_ds416play_12_dsm7.jpg', 640, 640) }}" alt="DSM 7.0">](/images/20210807_ds416play_12_dsm7.png)
+[<img src="{{ thumbnail('/images/20210807_ds416play_12_dsm7.png', 640, 640) }}" alt="DSM 7.0">](/images/20210807_ds416play_12_dsm7.png)
 
 # 現状気がついたこと
 
