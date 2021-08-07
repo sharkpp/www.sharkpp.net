@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/atom.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2021-08-07T13:27:37+00:00</updated>
+    <updated>2021-08-07T13:33:41+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -13,7 +13,57 @@
             <link href="http://www.sharkpp.net/blog/2021/08/07/synorogy-ds416play-upgrade-dsm7.html"/>
             <updated>2021-08-07T19:35:00+00:00</updated>
             <id>http://www.sharkpp.net/blog/2021/08/07/synorogy-ds416play-upgrade-dsm7.html</id>
-            <content type="html"><![CDATA[]]></content>
+            <content type="html"><![CDATA[<p><a href="http://web.archive.org/web/20170709043315if_/https://www.synology.com/ja-jp/products/DS216play">Synorogy DS416play</a> の OS を DSM 7.0 へアップグレードした時の記録。</p>
+
+<p>7月中旬に DSM 7.0 の正式リリースがでるも、しばらくは様子見にしていたけど、致命的な不具合もなさそうだし <a href="https://www.synology.com/ja-jp/DSM70/SynologyPhotos">Synorogy Photos</a> を使ってみたくなったのでアップグレードしてみることとした。</p>
+
+<h1 id="%E3%82%A2%E3%83%83%E3%83%97%E3%82%B0%E3%83%AC%E3%83%BC%E3%83%89">アップグレード</h1>
+
+<p>DSM の更新のページで、DSM 7 のアップグレードボタンをクリック。</p>
+
+<p><a href="/images/20210807_ds416play_01_dsm624_upgrade.png"><img src="/thumbs/188aec8942418697fa41872a185a0a40-640x640.png" alt="DSM 6.2"></a> <a href="/images/20210807_ds416play_02_dsm624_upgrade.png"><img src="/thumbs/17a18e29156680f0d987732fa442a9f2-640x640.png" alt="DSM 6.2"></a></p>
+
+<p>インストール中も UI が途切れることなく進めた。
+通信途切れるとページが真っ白とかになるけどそういうことはなかった。</p>
+
+<ol>
+<li>DSMの更新</li>
+<li>再起動</li>
+<li>システムデータベースのアップデート</li>
+<li>パッケージの更新</li>
+</ol>
+
+<p>の順。</p>
+
+<p><a href="/images/20210807_ds416play_03_dsm7_install.png"><img src="/thumbs/29df10ae6ad82b4b6814d7f42a3ccf72-640x640.png" alt="DSMの更新中"></a> <a href="/images/20210807_ds416play_04_dsm7_install.png"><img src="/thumbs/dddaa7e13f7061ae8577b50be95bcae1-640x640.png" alt="再起動中"></a> <a href="/images/20210807_ds416play_05_dsm7_install.png"><img src="/thumbs/b551480188c96166802ec0c35c4306fe-640x640.png" alt="システムデータベースのアップデート"></a> <a href="/images/20210807_ds416play_06_dsm7_install.png"><img src="/thumbs/e3fe86d4f3664cd59dd2a16eeee68f5b-640x640.png" alt="パッケージの更新中"></a></p>
+
+<p>ログイン画面も変わってた。</p>
+
+<p><a href="/images/20210807_ds416play_07_dsm7_login.png"><img src="/thumbs/da61554afd17274f152083ba81a85ef7-640x640.png" alt="ログイン画面"></a></p>
+
+<p>ダッシュボードも少し変わってる。</p>
+
+<p><a href="/images/20210807_ds416play_08_dsm7_dashboard.png"><img src="/thumbs/0083183d2ae9355e05a3a1f94fed1448-640x640.png" alt="ダッシュボード"></a></p>
+
+<p>Python3 は OS 組み込みになったようなのでアンインストール</p>
+
+<p><a href="/images/20210807_ds416play_09_dsm7_python3_uninstall.png"><img src="/thumbs/f3cfc56a747556aff9323c6ca8a010d5-640x640.png" alt="ダッシュボード"></a></p>
+
+<p>Moments や Photo Station は <a href="https://www.synology.com/ja-jp/DSM70/SynologyPhotos">Synology Photos</a> に自動で更新された様子。</p>
+
+<p><a href="/images/20210807_ds416play_10_dsm7_photos.png"><img src="/thumbs/07b82974089ba34c11617214a41eb829-640x640.png" alt="Synology Photos"></a> <a href="/images/20210807_ds416play_11_dsm7_photos.png"><img src="/thumbs/9b310ab8721da76a433f67fb7f07df66-640x640.png" alt="Synology Photos"></a></p>
+
+<p>アップデート後の情報</p>
+
+<p><a href="/images/20210807_ds416play_12_dsm7.png"><img src="/thumbs/c6f157c3dc867fed0c9c6241f94a0462-640x640.png" alt="DSM 7.0"></a></p>
+
+<h1 id="%E7%8F%BE%E7%8A%B6%E6%B0%97%E3%81%8C%E3%81%A4%E3%81%84%E3%81%9F%E3%81%93%E3%81%A8">現状気がついたこと</h1>
+
+<ul>
+<li>Chromecast with Google TV 向けの Synology Photos アプリは現状なさそう。
+Photo アプリは と接続できない様子なので表示するには <a href="https://kb.synology.com/en-my/DSM/help/SynologyPhotos/Android?version=7#b_28">Synology Knowledge Center</a> の To cast photos to TVs or external devices: を参考にキャストするしかなさそう</li>
+</ul>
+]]></content>
         </entry>
             <entry>
             <title type="html"><![CDATA[Ionic 5 でモバイル＆デスクトップアプリを試してみた]]></title>
