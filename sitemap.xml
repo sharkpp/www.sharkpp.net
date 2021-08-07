@@ -2,25 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://www.sharkpp.net</loc>
-    <lastmod>2021-04-30</lastmod>
+    <lastmod>2021-08-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://www.sharkpp.net/blog</loc>
-    <lastmod>2021-04-30T12:40:41+00:00</lastmod>
+    <lastmod>2021-08-07T12:57:23+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sharkpp.net/blog/categories</loc>
-    <lastmod>2021-04-30T12:40:41+00:00</lastmod>
+    <lastmod>2021-08-07T12:57:23+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sharkpp.net/blog/tags</loc>
-    <lastmod>2021-04-30T12:40:41+00:00</lastmod>
+    <lastmod>2021-08-07T12:57:23+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -53,6 +53,12 @@
     <lastmod>2008-08-03T17:29:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.sharkpp.net/blog/2021/08/07/synorogy-ds416play-upgrade-dsm7.html</loc>
+    <lastmod>2021-08-07T19:35:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>http://www.sharkpp.net/blog/2021/04/30/tryout-ionic-mobile-desktop.html</loc>

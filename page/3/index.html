@@ -18,7 +18,21 @@
        ></li></ol><div class="row"><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
            href="/blog/"><i class="fa fa-archive fa-4x"></i><br />アーカイブ</a></div><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
            href="/product/"><i class="fa fa-download fa-4x"></i><br />作ったもの</a></div><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
-           href="/graffiti/"><i class="fa fa-paint-brush fa-4x"></i><br />落書き</a></div></div><hr style="border-bottom: 1px dashed #aaa; border-top: none;" /><article class="full-contents"><header><h1><a href="/blog/2020/05/02/build-local-https-test-environment.html">ローカルでの HTTPS テスト環境の構築</a></h1></header><div><p>ローカルでのウェブアプリの開発では、もはや https が必須ということで動作確認に難儀していましたが、
+           href="/graffiti/"><i class="fa fa-paint-brush fa-4x"></i><br />落書き</a></div></div><hr style="border-bottom: 1px dashed #aaa; border-top: none;" /><article class="full-contents"><header><h1><a href="/blog/2020/07/29/hubot-adapter-with-typescript.html">Hubot アダプタを TypeScript を使って作ってみた</a></h1></header><div><h2 id="typescrpt-%E3%81%A7%E5%AE%9F%E8%A3%85%E3%81%99%E3%82%8B-hubot-%E3%82%A2%E3%83%80%E3%83%97%E3%82%BF">TypeScrpt で実装する Hubot アダプタ</h2><p><a href="https://hubot.github.com/docs/adapters/development/">Development adapter | HUBOT</a> を参考に、起動時に bot へと生成したメッセージを受け渡すだけを行うアダプタを TypeScript で実装してみました。</p><p>この記事では次のような名称を利用しているので適時読み替えてください。</p><table><thead><tr><th>項目</th><th>名称</th></tr></thead><tbody><tr><td>アダプタプロジェクト名</td><td><code>hubot-sample-adapter</code></td></tr><tr><td>テスト用のHubotプロジェクト名</td><td><code>hubot-test</code></td></tr><tr><td>アダプタプロジェクトの親フォルダ</td><td><code>~/</code></td></tr></tbody></table>
+
+
+                            &hellip;&nbsp;<a href="/blog/2020/07/29/hubot-adapter-with-typescript.html">続きを見る</a></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i>&nbsp;
+        <span itemprop="datePublished" content="2020-07-29">2020年07月29日</span>
+        &nbsp;/&nbsp;
+        <i class="fa fa-history"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2020-07-29-hubot-adapter-with-typescript.md">変更履歴</a>
+        &nbsp;/&nbsp;
+        <i class="fa fa-thumb-tack"></i>&nbsp;<a href="/blog/2020/07/29/hubot-adapter-with-typescript.html">Permalink</a>
+        &nbsp;/&nbsp;
+                                <span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
+                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
+        &nbsp;/&nbsp;
+                                <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:
+                        <a href="/blog/tags/JavaScript">JavaScript</a>,                         <a href="/blog/tags/TypeScript">TypeScript</a>,                         <a href="/blog/tags/Hubot">Hubot</a>,                         <a href="/blog/tags/%E9%9B%91%E8%A8%98">雑記</a></span></span></div></footer></article><article class="full-contents"><header><h1><a href="/blog/2020/05/02/build-local-https-test-environment.html">ローカルでの HTTPS テスト環境の構築</a></h1></header><div><p>ローカルでのウェブアプリの開発では、もはや https が必須ということで動作確認に難儀していましたが、
 しばらく前にローカルで認証局を簡単に設置できる <a href="https://github.com/FiloSottile/mkcert">mkcert</a> なるツールがあると知ったので、使い方を調べてみました。</p><p>PC上での使い方は結構サクッと出てきたので、実際のユースケースも念頭に Android でもオレオレ証明書が正規の証明書として利用できるような設定方法も調べてみました。</p><p><a href="/images/20200501_local_https_secure3.png"><img src="/thumbs/a68a390814458bbfe228d6e6d2fd6032-480x480.png" alt="20200501_local_https_secure3"></a></p>
 
 
@@ -48,22 +62,7 @@
                         <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
         &nbsp;/&nbsp;
                                 <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:
-                        <a href="/blog/tags/%E9%9B%91%E8%A8%98">雑記</a></span></span></div></footer></article><article class="full-contents"><header><h1><a href="/blog/2020/01/02/install-inkscape-for-macos-mojave-or-later.html">macOS 上に Inkscape をインストールする</a></h1></header><div><p>macOS を Mojave 10.14 にしてから Inkscape が起動しなくなっていた。
-が、まぁ、とりあえず使わないからいいか... と、そのままにしていたところ... 年末に急に使う事態が発生して大慌てで色々調べ入れ直したときの記録。</p><p><a href="/blog/2017/04/30/Install-inkscape-using-homebrew-on-macos.html">以前試した方法</a>ではうまくいかなかったので調べました。</p><p><img src="/thumbs/0d867646943062ca30f59487e83c8755-384x384.png" alt="Inkscape 1.0beta2 version"></p>
-
-
-                            &hellip;&nbsp;<a href="/blog/2020/01/02/install-inkscape-for-macos-mojave-or-later.html">続きを見る</a></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i>&nbsp;
-        <span itemprop="datePublished" content="2020-01-02">2020年01月02日</span>
-        &nbsp;/&nbsp;
-        <i class="fa fa-history"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2020-01-02-install-inkscape-for-macos-mojave-or-later.md">変更履歴</a>
-        &nbsp;/&nbsp;
-        <i class="fa fa-thumb-tack"></i>&nbsp;<a href="/blog/2020/01/02/install-inkscape-for-macos-mojave-or-later.html">Permalink</a>
-        &nbsp;/&nbsp;
-                                <span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
-                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
-        &nbsp;/&nbsp;
-                                <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:
-                        <a href="/blog/tags/Inkscape">Inkscape</a>,                         <a href="/blog/tags/macOS">macOS</a>,                         <a href="/blog/tags/Mac">Mac</a></span></span></div></footer></article><br /><nav><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/page/2" title=""><span class="title"><i class="fa fa-chevron-left"></i> 新しい投稿</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/page/4" title=""><span class="title">古い投稿</span><i class="fa fa-chevron-right"></i></a></li></ul></nav></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li><li><i class="fa-li fa fa-ellipsis-h"></i><a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /page/3"
+                        <a href="/blog/tags/%E9%9B%91%E8%A8%98">雑記</a></span></span></div></footer></article><br /><nav><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/page/2" title=""><span class="title"><i class="fa fa-chevron-left"></i> 新しい投稿</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/page/4" title=""><span class="title">古い投稿</span><i class="fa fa-chevron-right"></i></a></li></ul></nav></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li><li><i class="fa-li fa fa-ellipsis-h"></i><a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /page/3"
                                   rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li></ul></div><div class="container text-center"><ul class="list-unstyled list-inline"><li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li><li class="text-muted">&copy; 2004-2021 sharkpp</li></ul></div><div class="container text-center text-muted"><ruby><rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
                                                             >Creative Commons Attribution 4.0 International License</a>.</rb><rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
                                                   >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp></ruby></div><div class="container text-center text-muted"><ruby><rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"

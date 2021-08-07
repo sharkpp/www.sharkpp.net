@@ -3,11 +3,18 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/atom.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2021-04-30T12:40:41+00:00</updated>
+    <updated>2021-08-07T12:57:23+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Synorogy DS416play の OS を DSM 7.0 へアップグレードしてみた]]></title>
+            <link href="http://www.sharkpp.net/blog/2021/08/07/synorogy-ds416play-upgrade-dsm7.html"/>
+            <updated>2021-08-07T19:35:00+00:00</updated>
+            <id>http://www.sharkpp.net/blog/2021/08/07/synorogy-ds416play-upgrade-dsm7.html</id>
+            <content type="html"><![CDATA[]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Ionic 5 でモバイル＆デスクトップアプリを試してみた]]></title>
             <link href="http://www.sharkpp.net/blog/2021/04/30/tryout-ionic-mobile-desktop.html"/>
@@ -1420,31 +1427,6 @@ Error: Cannot tap caskformula/caskformula: invalid syntax in tap!
 <li><a href="https://trsasasusu.com/blog/58/">Error: Calling needs :cxx11 is disabled! There is no replacement. というエラーがbrewで出た話 | 水面下のブログ</a></li>
 <li><a href="/blog/2017/04/30/Install-inkscape-using-homebrew-on-macos.html">macOS 上に Homebrew を利用して Inkscape をインストールする — さめたすたすのお家</a></li>
 </ul>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[HAPPY NEW YEAR 2020]]></title>
-            <link href="http://www.sharkpp.net/blog/2020/01/01/happy-new-year-2020.html"/>
-            <updated>2020-01-01T17:55:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2020/01/01/happy-new-year-2020.html</id>
-            <content type="html"><![CDATA[<p>明けましておめでとうございます。</p>
-
-<p>ほむぺ開設 16 年目🎉 (たぶん)。
-今年も色々ありそうですが一年よろしくお願いします。</p>
-
-<p>では、今年の目標をば。</p>
-
-<h2 id="%E7%9B%AE%E6%A8%99">目標</h2>
-
-<ul>
-<li>定期的なホムペの更新</li>
-<li>ホームページを GitHub Action ＆ GatsbyJS ベースに移行してモダーンな感じに</li>
-<li>PWAとかQtとかもろもろ勉強... というか遊ぶ</li>
-<li>Rust頑張ってみる... Rust難しい...</li>
-<li><a href="https://github.com/sharkpp/FrameExtract">FrameExtract</a> を完成させる</li>
-</ul>
-
-<p>ではでは、今年もよろしくお願いいたします。</p>
 ]]></content>
         </entry>
     </feed>
