@@ -1,14 +1,16 @@
 ---
-title: "Synorogy DS416play の OS を DSM 7.0 へアップグレードしてみた"
+title: "Synology DS416play の OS を DSM 7.0 へアップグレードしてみた"
 date: 2021-08-07 19:35
-tags: [Synorogy, NAS, DS416play, DSM]
+tags: [Synology, NAS, DS416play, DSM]
 categories: [ブログ]
+redirect:
+    - /blog/2021/08/07/synorogy-ds416play-upgrade-dsm7.html
 
 ---
 
-[Synorogy DS416play](http://web.archive.org/web/20170709043315if_/https://www.synology.com/ja-jp/products/DS216play) の OS を DSM 7.0 へアップグレードした時の記録。
+[Synology DS416play](http://web.archive.org/web/20170709043315if_/https://www.synology.com/ja-jp/products/DS216play) の OS を DSM 7.0 へアップグレードした時の記録。
 
-7月中旬に DSM 7.0 の正式リリースがでるも、しばらくは様子見にしていたけど、致命的な不具合もなさそうだし [Synorogy Photos](https://www.synology.com/ja-jp/DSM70/SynologyPhotos) を使ってみたくなったのでアップグレードしてみることとした。
+7月中旬に DSM 7.0 の正式リリースがでるも、しばらくは様子見にしていたけど、致命的な不具合もなさそうだし [Synology Photos](https://www.synology.com/ja-jp/DSM70/SynologyPhotos) を使ってみたくなったのでアップグレードしてみることとした。
 
 # アップグレード
 
