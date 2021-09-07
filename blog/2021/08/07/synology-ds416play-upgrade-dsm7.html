@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head><title>Synology DS416play の OS を DSM 7.0 へアップグレードしてみた &mdash; さめたすたすのお家</title><meta charset="utf-8"><meta name="theme-color" content="#6877AA"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="index, follow"><meta name="keywords" content="Synology,NAS,DS416play,DSM"><link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" /><link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" /><link href="/assets/lightbox2/dist/css/lightbox.css" rel="stylesheet" type="text/css" /><link href="/css/style.min.css" rel="stylesheet" type="text/css" /><!-- HTML5 shim, for IE6-8 support of HTML5 elements --><!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--><link rel="apple-touch-startup-image" href="/images/noname/2048x2048.png"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="shortcut icon" sizes="76x76" href="/images/noname/76x76.png"><link rel="shortcut icon" sizes="120x120" href="/images/noname/120x120.png"><link rel="shortcut icon" sizes="128x128" href="/images/noname/128x128.png"><link rel="shortcut icon" sizes="152x152" href="/images/noname/152x152.png"><link rel="shortcut icon" sizes="196x196" href="/images/noname/196x196.png"><link rel="shortcut icon" sizes="512x512" href="/images/noname/512x512.png"><link rel="shortcut icon" sizes="1024x1024" href="/images/noname/1024x1024.png"><link rel="shortcut icon" sizes="2048x2048" href="/images/noname/2048x2048.png"><link rel="apple-touch-icon" sizes="76x76" href="/images/noname/76x76.png"><link rel="apple-touch-icon" sizes="120x120" href="/images/noname/120x120.png"><link rel="apple-touch-icon" sizes="128x128" href="/images/noname/128x128.png"><link rel="apple-touch-icon" sizes="152x152" href="/images/noname/152x152.png"><link rel="apple-touch-icon" sizes="196x196" href="/images/noname/196x196.png"><link rel="apple-touch-icon" sizes="512x512" href="/images/noname/512x512.png"><link rel="apple-touch-icon" sizes="1024x1024" href="/images/noname/1024x1024.png"><link rel="apple-touch-icon" sizes="2048x2048" href="/images/noname/2048x2048.png"><link rel="stylesheet" href="/assets/highlightjs/styles/github.css" /><link rel="alternate" type="application/atom+xml" href="/atom.xml" title="さめたすたすのお家 activity feed" /><style>
+        /** quick fix because bootstrap <pre> has a background-color. */
+        pre code { background-color: inherit; }
+        </style><style>
+        #go-top {
+            display: none;
+            bottom: 40px;
+            right: 30px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #fff;
+            position: fixed;
+            z-index: 999;
+        }
+        #go-top > i {
+            font-size: 36px;
+            line-height: 40px;
+        }
+        #toc {
+            margin-left: 10px;
+            margin-bottom: 10px;
+            max-width: 350px;
+            word-wrap: break-word;
+        }
+        </style></head><body><nav class="navbar navbar-inverse navbar-fixed-top"><div class="container-fluid"><!-- Brand and toggle get grouped for better mobile display --><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/">さめたすたすのお家</a></div><!-- Collect the nav links, forms, and other content for toggling --><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><ul class="nav navbar-nav pull-right"><li><a href="/blog/"><i class="fa fa-archive"></i> アーカイブ</a></li><li><a href="/blog/categories"><i class="fa fa-folder-open"></i> カテゴリ</a></li><li><a href="/blog/tags"><i class="fa fa-tags"></i> タグ</a></li><li><a href="/product/"><i class="fa fa-download"></i> 作ったもの</a></li><li><a href="/graffiti/"><i class="fa fa-paint-brush"></i> 落書き</a></li><li><a href="/link.html"><i class="fa fa-link"></i> リンク</a></li><li><a href="/about">About</a></li></ul></div><!-- /.navbar-collapse --></div><!-- /.container-fluid --></nav><div class="mainContent container"><ol class="breadcrumb" itemscope="itemscope"
+                           itemtype="http://schema.org/BreadcrumbList"><li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/"
+           ><i class="fa fa-home fa-lg"></i
+     >&nbsp;<span itemprop="name">HOME</span
+           ><meta itemprop="position" content="1"
+          /></a
+       ></li><li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/blog/2021/"
+           ><span>2021</span
+           ><meta itemprop="position" content="2"
+          /></a
+       ></li><li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/blog/2021/08/"
+           ><span>08</span
+           ><meta itemprop="position" content="3"
+          /></a
+       ></li><li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/blog/2021/08/07/"
+           ><span>07</span
+           ><meta itemprop="position" content="4"
+          /></a
+       ></li><li
+            class="active"><span 
+           ><span>Synology DS416play の OS を DSM 7.0 へアップグレードしてみた</span
+       ></li></ol><article itemscope="itemscope" itemtype="http://schema.org/Article"><meta itemscope="itemscope" itemprop="mainEntityOfPage"
+              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net/blog/2021/08/07/synology-ds416play-upgrade-dsm7.html"/><header><h1><span itemprop="headline">Synology DS416play の OS を DSM 7.0 へアップグレードしてみた</span><small>post</small></h1></header><div id="toc" class="panel panel-default pull-right"><div class="panel-heading text-center">目次</div><div class="panel-body" style="padding: 10px;"><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%82%A2%E3%83%83%E3%83%97%E3%82%B0%E3%83%AC%E3%83%BC%E3%83%89">アップグレード</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E7%8F%BE%E7%8A%B6%E6%B0%97%E3%81%8C%E3%81%A4%E3%81%84%E3%81%9F%E3%81%93%E3%81%A8">現状気がついたこと</a></ul></div></div><div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div><div itemprop="articleBody"><p><a href="http://web.archive.org/web/20170709043315if_/https://www.synology.com/ja-jp/products/DS216play">Synology DS416play</a> の OS を DSM 7.0 へアップグレードした時の記録。</p><p>7月中旬に DSM 7.0 の正式リリースがでるも、しばらくは様子見にしていたけど、致命的な不具合もなさそうだし <a href="https://www.synology.com/ja-jp/DSM70/SynologyPhotos">Synology Photos</a> を使ってみたくなったのでアップグレードしてみることとした。</p><h1 id="%E3%82%A2%E3%83%83%E3%83%97%E3%82%B0%E3%83%AC%E3%83%BC%E3%83%89" itemprop="articleSection">アップグレード</h1><p>DSM の更新のページで、DSM 7 のアップグレードボタンをクリック。</p><p><a href="/images/20210807_ds416play_01_dsm624_upgrade.png"><img src="/thumbs/188aec8942418697fa41872a185a0a40-640x640.png" alt="DSM 6.2"></a><a href="/images/20210807_ds416play_02_dsm624_upgrade.png"><img src="/thumbs/17a18e29156680f0d987732fa442a9f2-640x640.png" alt="DSM 6.2"></a></p><p>インストール中も UI が途切れることなく進めた。
+通信途切れるとページが真っ白とかになるけどそういうことはなかった。</p><ol><li>DSMの更新</li><li>再起動</li><li>システムデータベースのアップデート</li><li>パッケージの更新</li></ol><p>の順。</p><p><a href="/images/20210807_ds416play_03_dsm7_install.png"><img src="/thumbs/29df10ae6ad82b4b6814d7f42a3ccf72-640x640.png" alt="DSMの更新中"></a><a href="/images/20210807_ds416play_04_dsm7_install.png"><img src="/thumbs/dddaa7e13f7061ae8577b50be95bcae1-640x640.png" alt="再起動中"></a><a href="/images/20210807_ds416play_05_dsm7_install.png"><img src="/thumbs/b551480188c96166802ec0c35c4306fe-640x640.png" alt="システムデータベースのアップデート"></a><a href="/images/20210807_ds416play_06_dsm7_install.png"><img src="/thumbs/e3fe86d4f3664cd59dd2a16eeee68f5b-640x640.png" alt="パッケージの更新中"></a></p><p>ログイン画面も変わってた。</p><p><a href="/images/20210807_ds416play_07_dsm7_login.png"><img src="/thumbs/da61554afd17274f152083ba81a85ef7-640x640.png" alt="ログイン画面"></a></p><p>ダッシュボードも少し変わってる。</p><p><a href="/images/20210807_ds416play_08_dsm7_dashboard.png"><img src="/thumbs/0083183d2ae9355e05a3a1f94fed1448-640x640.png" alt="ダッシュボード"></a></p><p>Python3 は OS 組み込みになったようなのでアンインストール</p><p><a href="/images/20210807_ds416play_09_dsm7_python3_uninstall.png"><img src="/thumbs/f3cfc56a747556aff9323c6ca8a010d5-640x640.png" alt="ダッシュボード"></a></p><p>Moments や Photo Station は <a href="https://www.synology.com/ja-jp/DSM70/SynologyPhotos">Synology Photos</a> に自動で更新された様子。</p><p><a href="/images/20210807_ds416play_10_dsm7_photos.png"><img src="/thumbs/07b82974089ba34c11617214a41eb829-640x640.png" alt="Synology Photos"></a><a href="/images/20210807_ds416play_11_dsm7_photos.png"><img src="/thumbs/9b310ab8721da76a433f67fb7f07df66-640x640.png" alt="Synology Photos"></a></p><p>アップデート後の情報</p><p><a href="/images/20210807_ds416play_12_dsm7.png"><img src="/thumbs/c6f157c3dc867fed0c9c6241f94a0462-640x640.png" alt="DSM 7.0"></a></p><h1 id="%E7%8F%BE%E7%8A%B6%E6%B0%97%E3%81%8C%E3%81%A4%E3%81%84%E3%81%9F%E3%81%93%E3%81%A8" itemprop="articleSection">現状気がついたこと</h1><ul><li>Chromecast with Google TV 向けの Synology Photos アプリは現状なさそう。
+Photo アプリは と接続できない様子なので表示するには <a href="https://kb.synology.com/en-my/DSM/help/SynologyPhotos/Android?version=7#b_28">Synology Knowledge Center</a> の To cast photos to TVs or external devices: を参考にキャストするしかなさそう</li></ul></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa fa-calendar"></i>&nbsp;
+        <span itemprop="datePublished" content="2021-08-07">2021年08月07日</span>
+        &nbsp;/&nbsp;
+        <i class="fa fa-history"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2021-08-07-synology-ds416play-upgrade-dsm7.md">変更履歴</a>
+        &nbsp;/&nbsp;
+        <i class="fa fa-thumb-tack"></i>&nbsp;<a href="/blog/2021/08/07/synology-ds416play-upgrade-dsm7.html">Permalink</a>
+        &nbsp;/&nbsp;
+    </span><meta itemprop="url" content="http://www.sharkpp.net/blog/2021/08/07/synology-ds416play-upgrade-dsm7.html" /><span itemprop="author" itemscope itemtype="https://schema.org/Person"
+          style="display: none;"
+       ><span itemprop="name">sharkpp</span
+   ></span><a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2021%2F08%2F07%2Fsynology-ds416play-upgrade-dsm7.html"
+       class="hatena-bookmark-button"
+       data-hatena-bookmark-title="Synology DS416play の OS を DSM 7.0 へアップグレードしてみた &mdash; さめたすたすのお家"
+       data-hatena-bookmark-layout="simple-balloon"
+       title="このエントリーをはてなブックマークに追加"
+      ><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png"
+            alt="このエントリーをはてなブックマークに追加"
+            width="20" height="20" style="border: none;" /></a
+      >&nbsp;
+    <a href="https://twitter.com/share" class="twitter-share-button"
+       data-url="http://www.sharkpp.net/blog/2021/08/07/synology-ds416play-upgrade-dsm7.html" data-via="sharkpp">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><div style="line-height: 25px; height: 25px;"><span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
+                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
+        &nbsp;/&nbsp;
+                                <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:
+                        <a href="/blog/tags/Synology">Synology</a>,                         <a href="/blog/tags/NAS">NAS</a>,                         <a href="/blog/tags/DS416play">DS416play</a>,                         <a href="/blog/tags/DSM">DSM</a></span></div></footer><hr style="border-top: none; border-bottom: 1px dashed #aaa; margin: 10px 0;" /><nav class="article"><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/blog/2021/09/07/synology-package-building.html" title="Synology のパッケージのビルド方法について調べてみた"><span class="title"><i class="fa fa-chevron-left"></i> Synology のパッケージのビルド方法について調べてみた</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/blog/2021/04/30/tryout-ionic-mobile-desktop.html" title="Ionic 5 でモバイル＆デスクトップアプリを試してみた"><span class="title">Ionic 5 でモバイル＆デスクトップアプリを試してみた</span><i class="fa fa-chevron-right"></i></a></li></ul></nav></article></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa fa-rss-square fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa fa-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa fa-github fa-2x"></i></a></li><li><i class="fa-li fa fa-ellipsis-h"></i><a href="/profile"><i class="fa fa-plus-circle fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /blog/2021/08/07/synology-ds416play-upgrade-dsm7.html"
+                                  rel="nofollow"><i class="fa fa-exclamation-circle"></i> 誤字脱字などを報告</a></li></ul></div><div class="container text-center"><ul class="list-unstyled list-inline"><li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li><li class="text-muted">&copy; 2004-2021 sharkpp</li></ul></div><div class="container text-center text-muted"><ruby><rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                            >Creative Commons Attribution 4.0 International License</a>.</rb><rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                  >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp></ruby></div><div class="container text-center text-muted"><ruby><rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
+                                                                            >The MIT License</a>.</rb><rp>(</rp><rt>さらに、コードスニペットは <a rel="nofollow" href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license"
+                                                               >MIT ライセンス</a> の下にライセンスされています。</rt><rp>)</rp></ruby></div></div></footer><script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>')</script><script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script>$('body').modal || document.write('<script src="/assets/bootstrap/js/bootstrap.min.js"><\/script>')</script><script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-5908801-2', 'auto');
+            ga('send', 'pageview');
+        </script><script src="/assets/highlightjs/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><script type="text/javascript">
+            $('a img').each(function(){
+                var rel = ($(this).attr('src').match(/images\u002f([0-9_]{4}_[0-9_]{4})/i) ||
+                           ['','lightbox'])[1];
+                $(this).parent()
+                    .attr('data-lightbox', rel)
+                    .attr('data-title', $(this).attr('alt'))
+                    ;
+            });
+        </script><script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script><script>$(document).ready(function(){ window.lightbox || $.getScript("/assets/lightbox2/dist/js/lightbox.min.js"); });</script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.5/jquery.smooth-scroll.min.js"></script><script>$.smoothScroll || document.write('<script src="/assets/jquery-smooth-scroll/jquery.smooth-scroll.min.js"><\/script>')</script><script type="text/javascript">
+            $('#toc a')
+                .each(function(){
+                    var id = $(this).attr('href').slice(1);
+                    $(this)
+                        .smoothScroll({
+                            scrollTarget: $('[id="' + id + '"]'),
+                            offset: -50,
+                            beforeScroll: function(){ /*history.pushState({}, id, "#" + id);*/ }
+                        });
+                })
+                ;
+            $('#go-top')
+                .on('click', function() {
+                    $.smoothScroll({
+                        scrollElement: $('body'),
+                        scrollTarget: '',
+                        beforeScroll: function(){ /*history.pushState({}, "", location.href.replace(location.hash, ''));*/ },
+                        afterScroll: function(){ $('body').css('position', ''); }
+                    });
+                    return false;
+                });
+            $(window).scroll(function () {
+                var scroll   = $(this).scrollTop();
+                var visibled = $('#go-top').css('display') == 'block';
+                var next_state = $('#go-top').attr('data-next-state');
+                if (100 <= scroll && (!visibled || 'hidden' == next_state))
+                    $('#go-top')
+                        .stop(true, true)
+                        .attr('data-next-state', 'visible')
+                        .fadeIn('slow', function(){
+                            $(this).removeAttr('data-next-state');
+                        });
+                else if (scroll < 100 && (visibled || 'visible' == next_state))
+                    $('#go-top')
+                        .stop(true, true)
+                        .attr('data-next-state', 'hidden')
+                        .fadeOut('slow', function(){
+                            $(this).removeAttr('data-next-state');
+                        });
+            });
+            $(window).scroll();
+        </script><script type="text/javascript">
+            $(document).ready(function(){
+                // apply table to bootstrap css
+                $('table:not([class])')
+                    .addClass('table table-bordered table-hover table-condensed table-striped')
+                    .wrap("<div style='width:100%;overflow-x:auto;'></div>");
+             });
+        </script><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></body></html>
