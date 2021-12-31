@@ -1,5 +1,12 @@
 <h2 id="change-log">Change Log</h2>
 
+<h3 id="v1.2.0">v1.2.0</h3>
+
+<ul>
+<li>Trigger event on element when data is loaded (#145).</li>
+<li>Update dependencies and switch to Rollup (#144).</li>
+</ul>
+
 <h3 id="v1.1.4">v1.1.4</h3>
 
 <ul>

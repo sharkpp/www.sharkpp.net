@@ -1,11 +1,7 @@
 <h1 id="sheetrock">Sheetrock</h1>
 
 <p><a href="https://travis-ci.org/chriszarate/sheetrock"><img src="https://travis-ci.org/chriszarate/sheetrock.svg?branch=master" alt="Build status" /></a>
-<a href="https://codeclimate.com/github/chriszarate/sheetrock/coverage"><img src="https://codeclimate.com/github/chriszarate/sheetrock/badges/coverage.svg" alt="Test coverage" /></a>
-<a href="https://codeclimate.com/github/chriszarate/sheetrock/code"><img src="https://codeclimate.com/github/chriszarate/sheetrock/badges/gpa.svg" alt="Code climate" /></a>
 <a href="https://badge.fury.io/js/sheetrock"><img src="https://badge.fury.io/js/sheetrock.svg" alt="NPM version" /></a></p>
-
-<p><a href="https://saucelabs.com/u/sheetrock"><img src="https://saucelabs.com/browser-matrix/sheetrock.svg" alt="SauceLabs status" /></a></p>
 
 <p>Sheetrock is a JavaScript library for querying, retrieving, and displaying data
 from Google Sheets. In other words, use a Google spreadsheet as your database!
@@ -142,6 +138,17 @@ queries (e.g., <code>select A,B,D</code>).</p>
 example, you can use <code>document.getElementById</code> to reference a single element.
 If you are using Sheetrock with jQuery, you can use the jQuery plugin syntax
 (e.g., <code>$('#my-table').sheetrock({/* options */})</code>) and ignore this option.</p>
+
+<p>When data has been loaded and markup appended to the target element, a custom
+<code>sheetrock:loaded</code> event will be triggered on the element. You can listen for
+this event if you'd like to perform an action after the DOM is updated:</p>
+
+<pre><code class="js">$('#my-table')
+  .sheetrock({/* options */})
+  .on('sheetrock:loaded', function () {
+    /* do something */
+  });
+</code></pre>
 
 <h3 id="fetchsize">fetchSize</h3>
 
