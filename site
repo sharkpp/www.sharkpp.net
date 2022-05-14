@@ -197,7 +197,7 @@ exec_production () {
   core_generate $(get_ini $1 output_path public)
 }
 
-exec_deploy () {
+exec_deploy0 () {
   if [ "" == "$GH_TOKEN" ] ; then
     exit 0
   fi
@@ -258,6 +258,44 @@ set -x
   git add . -A
   echo $DEPLOY_MSG | git commit -F -
   git push --quiet origin $DEPLOY_BRANCH
+  popd
+  # tweet
+  return 0
+}
+
+exec_deploy () {
+set -x
+  #php composer.phpr install
+  #php .vendor/beelab/bowerphp/bin/bowerphp install
+  #
+  rm -rf output_prod
+  # xx
+  echo "imports:"          > app/config/sculpin_site_prod.yml
+  echo "- sculpin_site.yml">>app/config/sculpin_site_prod.yml
+  echo "google_analytics_tracking_id: ${GOOGLE_ANALYTICS_TRACKING_ID}">>app/config/sculpin_site_prod.yml
+  # production generate
+  PRIOD_BEGIN0=$(php -r 'echo microtime(true);')
+  PRIOD_BEGIN=$(php -r 'echo microtime(true);')
+  php .vendor/bin/sculpin generate --env=prod
+  if [ 0 -ne $? ] ; then
+    return 1
+  fi
+  PRIOD_END=$(php -r 'echo microtime(true);')
+  # check google analytics tracking id
+  if [ "" == "$(cat output_prod/index.html | grep "${GOOGLE_ANALYTICS_TRACKING_ID}")" ]; then
+    return 1
+  fi
+  # deploy message
+  DEPLOY_MSG=$(git log --pretty=format:"Deploy from https://github.com/${REPO_SLUG}/commit/%H : %s" -1)
+  # create README.md
+  pushd output_prod
+  cat ../README-generated-template.md \
+    | sed -e "s/{DATE}/$(date +'%Y')/g" \
+          -e "s/{BUILD_DATE}/$(date +'%Y-%m-%d %H:%M:%S')/g" \
+          -e "s/{BUILD_FILES}/$(find . -type f|wc -l)/g" \
+          -e "s/{BUILD_SEC}/$(echo $PRIOD_END-$PRIOD_BEGIN*2+$PRIOD_BEGIN0|bc)/g" \
+    > README.md
+  # deploy
   popd
   # tweet
   return 0
