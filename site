@@ -276,6 +276,8 @@ set -x
   # production generate
   PRIOD_BEGIN0=$(php -r 'echo microtime(true);')
   PRIOD_BEGIN=$(php -r 'echo microtime(true);')
+ls -l .
+ls -l .vendor/bin/
   php .vendor/bin/sculpin generate --env=prod
   if [ 0 -ne $? ] ; then
     return 1
