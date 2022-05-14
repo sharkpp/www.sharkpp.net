@@ -48,7 +48,7 @@ jobs:
 
     - name: composer install
       if: steps.composer-cache.outputs.cache-hit != 'true'
-      run: php ./composer.phar install -n --prefer-dist
+      run: php ./composer.phar install
 
     - name: bower install
       if: steps.bower-cache.outputs.cache-hit != 'true'

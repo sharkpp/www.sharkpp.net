@@ -1661,12 +1661,12 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Assetic": "src/"
-                },
                 "files": [
                     "src/functions.php"
-                ]
+                ],
+                "psr-0": {
+                    "Assetic": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2324,6 +2324,106 @@
             ],
             "description": "A backport of ocramius/package-versions that supports php ^5.6. Composer plugin that provides efficient querying for installed package versions (no runtime IO)",
             "time": "2016-07-21T12:03:58+00:00"
+        },
+        {
+            "name": "sculpin/sculpin",
+            "version": "2.1.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sculpin/sculpin.git",
+                "reference": "d5d412354f377d650c18096340f9b874eebd2388"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sculpin/sculpin/zipball/d5d412354f377d650c18096340f9b874eebd2388",
+                "reference": "d5d412354f377d650c18096340f9b874eebd2388",
+                "shasum": ""
+            },
+            "require": {
+                "dflydev/ant-path-matcher": "1.*",
+                "dflydev/apache-mime-types": "~1.0,>=1.0.1",
+                "dflydev/canal": "1.*",
+                "dflydev/dot-access-configuration": "v1.0.2",
+                "dflydev/embedded-composer": "^1.0@dev",
+                "dflydev/symfony-finder-factory": "1.*",
+                "doctrine/inflector": "1.0.*",
+                "michelf/php-markdown": "^1.7.0",
+                "netcarver/textile": "3.5.*",
+                "php": "^5.4|^7.0",
+                "react/http": "0.4.*",
+                "sculpin/sculpin-theme-composer-plugin": "^1.0",
+                "seld/jsonlint": "^1.4",
+                "symfony/config": "~2.3",
+                "symfony/console": "~2.3",
+                "symfony/dependency-injection": "~2.3",
+                "symfony/event-dispatcher": "~2.3",
+                "symfony/filesystem": "~2.3",
+                "symfony/finder": "~2.3",
+                "symfony/http-kernel": "~2.3",
+                "symfony/process": "~2.3",
+                "symfony/yaml": "~2.3",
+                "twig/extensions": "~1.0",
+                "twig/twig": "~1.11",
+                "webignition/internet-media-type": "^0.4"
+            },
+            "replace": {
+                "sculpin/core": "self.version",
+                "sculpin/markdown-bundle": "self.version",
+                "sculpin/markdown-twig-compat-bundle": "self.version",
+                "sculpin/posts-bundle": "self.version",
+                "sculpin/proxy-source-collection-contrib": "self.version",
+                "sculpin/sculpin-bundle": "self.version",
+                "sculpin/standalone-bundle": "self.version",
+                "sculpin/taxonomy-contrib": "self.version",
+                "sculpin/textile-bundle": "self.version",
+                "sculpin/twig-bundle": "self.version"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8",
+                "squizlabs/php_codesniffer": "^2.8",
+                "symfony/css-selector": "~2.6",
+                "symfony/dom-crawler": "~2.6"
+            },
+            "bin": [
+                "bin/sculpin",
+                "bin/sculpin.php"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1.x-dev",
+                    "dev-develop": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sculpin\\": "src/Sculpin/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dragonfly Development Inc.",
+                    "email": "info@dflydev.com",
+                    "homepage": "http://dflydev.com"
+                },
+                {
+                    "name": "Beau Simensen",
+                    "email": "beau@dflydev.com",
+                    "homepage": "http://beausimensen.com"
+                }
+            ],
+            "description": "Static Site Generator",
+            "homepage": "https://sculpin.io",
+            "keywords": [
+                "generator",
+                "site",
+                "static"
+            ],
+            "time": "2018-10-13T06:30:41+00:00"
         },
         {
             "name": "sculpin/sculpin-theme-composer-plugin",
