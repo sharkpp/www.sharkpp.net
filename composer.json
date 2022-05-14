@@ -15,7 +15,7 @@
       }
     ],
     "require": {
-        "beelab/bowerphp": "1.0.*@dev",
+        "beelab/bowerphp": "~0.5.3",
         "beryllium/icelus": "dev-impl_config_read",
         "components/bootstrap": "~3.3.4",
         "components/font-awesome": "4.*",
