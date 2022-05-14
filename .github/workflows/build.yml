@@ -58,6 +58,7 @@ jobs:
     - name: Build
       run: ./site deploy
       env:
+      　GOOGLE_ANALYTICS_TRACKING_ID: UA-5908801-2
         REPO_SLUG: sharkpp/www.sharkpp.net
 
     - name: Deploy
