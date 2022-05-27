@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2022-05-27T12:26:53+00:00</updated>
+    <updated>2022-05-27T13:20:54+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -13,7 +13,294 @@
             <link href="http://www.sharkpp.net/blog/2022/05/13/unboxing-macbook-air-2020.html"/>
             <updated>2022-05-13T21:37:00+00:00</updated>
             <id>http://www.sharkpp.net/blog/2022/05/13/unboxing-macbook-air-2020.html</id>
-            <content type="html"><![CDATA[]]></content>
+            <content type="html"><![CDATA[<p>メイン機として使っている、MacBook Air (11-inch, Mid 2012) がまだ使えるけど、そろそろZoomなどストリーミング処理が辛くなってきた感じなので新しくしたいなって思ってたところ、機会があったので... ついに...</p>
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">My New Gear <a href="https://t.co/c64XG2F565">pic.twitter.com/c64XG2F565</a></p>&mdash; さめたすたす (@sharkpp) <a href="https://twitter.com/sharkpp/status/1510520564670398465?ref_src=twsrc%5Etfw">April 3, 2022</a></blockquote>
+
+<script async src="https//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>買っちゃった...</p>
+
+<h2 id="%E9%96%8B%E5%B0%81%E3%81%AE%E5%84%80">開封の儀</h2>
+
+<p>MacBook Pro と迷ったけど、まあ前も Air だったから今回も Air にしてみた。</p>
+
+<p>箱もシンプル、中身もシンプル。</p>
+
+<p><a href="/images/20220323_box1.jpg"><img src="/thumbs/e6927e1efb0d7060232915ec14d50285-640x640.jpeg" alt="化粧箱"></a> <a href="/images/20220323_box2.jpg"><img src="/thumbs/6a3eca99bd92c9aa1aaeb3f4ba43f641-640x640.jpeg" alt="開封して中身確認"></a></p>
+
+<p>ディスプレイの表面は傷付かなように不織布が貼り付けられてる。前回はどうだったかな...？</p>
+
+<p><a href="/images/20220323_macbookair1.jpg"><img src="/thumbs/5a60e7a21ea0fa75df76faa0ec0ebd38-640x640.jpeg" alt="閉じた状態"></a> <a href="/images/20220323_macbookair2.jpg"><img src="/thumbs/98cdc1508e06dbf38919478720e7427b-640x640.jpeg" alt="パカっ！"></a></p>
+
+<p>いろんな国の「こんにちは」が最初に開けると次々に表示されるセットアップ画面。</p>
+
+<p><a href="/images/20220323_macbookair3.jpg"><img src="/thumbs/ffb023a90e0292931754d0368bc88852-640x640.jpeg" alt="こんにちは"></a></p>
+
+<p>セットアップ完了直後はこんな感じ。</p>
+
+<p><a href="/images/20220403_desktop1.png"><img src="/thumbs/613a518f7d8144bc2363e86ed9cf58ff-640x640.png" alt="インストール直後のデスクトップ"></a></p>
+
+<p>OS は Monterey 12.0.1 がインストール済みで、更新の確認をすると Monterey 12.3.1 にアップグレードできた。</p>
+
+<p><a href="/images/20220403_desktop2.png"><img src="/thumbs/c77576e409a7d762ec46a1bead8efa57-640x640.png" alt="OS バージョン"></a></p>
+
+<p>新旧の MacBook Air の比較</p>
+
+<table>
+<thead>
+<tr>
+  <th>タブ</th>
+  <th align="center">MacBook Air (13-inch Mid 2012)</th>
+  <th align="center">MacBook Air (Late 2020)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>概要</td>
+  <td align="center">macOS 10.14.6 (Build 18G9323)<br/><a href="/images/20220507_about_oldmac_summary.png"><img src="/thumbs/81cdfb48d00a88ed3b8fa8f751fc3873-96x96.png" alt="OS バージョン"></a></td>
+  <td align="center">macOS 12.3.1 (Build 21E258)<br/><a href="/images/20220503_about_mac_summary.png"><img src="/thumbs/da434d844460304fd41bac1120cefc5b-96x96.png" alt="OS バージョン"></a></td>
+</tr>
+<tr>
+  <td>ディスプレイ</td>
+  <td align="center">内臓ディスプレイ 13.3 インチ(1440 x 900)<br/><a href="/images/20220507_about_oldmac_display.png"><img src="/thumbs/e4f55c5972ab47842df8cdf1ccdbca1f-96x96.png" alt="ディスプレイ"></a></td>
+  <td align="center">内臓Retinaディスプレイ 13.3 インチ(2560 x 1600)<br/><a href="/images/20220507_about_mac_display.png"><img src="/thumbs/aad3b870f10c7119e93c7ea7b123626a-96x96.png" alt="ディスプレイ"></a></td>
+</tr>
+<tr>
+  <td>ストレージ</td>
+  <td align="center">251 GB<br/><a href="/images/20220507_about_oldmac_storage.png"><img src="/thumbs/5e695f241c1aaeb14c9e7e6d15eb714e-96x96.png" alt="OS バージョン"></a></td>
+  <td align="center">500 GB<br/><a href="/images/20220510_storag20220510_about_mac_storagee_using.png"><img src="/thumbs/d3cc6f098382e925ab24cabd37acd280-96x96.png" alt="ストレージ"></a></td>
+</tr>
+</tbody>
+</table>
+
+<p>初期インストールされたアプリ一覧。</p>
+
+<p>前回一度も使わなかったアプリが今回もちらほらありそう。</p>
+
+<p><a href="/images/20220403_apps1.png"><img src="/thumbs/5813ec6cd1e839603dbd82215a67ae7c-640x640.png" alt="アプリ一覧"></a> <a href="/images/20220403_apps2.png"><img src="/thumbs/327e5e922f657ba67095146c948dc2de-640x640.png" alt="アプリ一覧2"></a></p>
+
+<p>アクティビティーモニタの表示。種類欄がアーキテクチャの表示っぽい。初期インストールされたものは、そりゃまぁ Apple(＝M1) で動いてるね。</p>
+
+<p><a href="/images/20220403_taskmgr1.png"><img src="/thumbs/40d9ca4f802709bd311272836b0b7e0e-640x640.png" alt="アクティビティーモニタ1"></a> <a href="/images/20220403_taskmgr2.png"><img src="/thumbs/6ee77b2c8d6a37007451d1b9b67e2d55-640x640.png" alt="アクティビティーモニタ2"></a></p>
+
+<p>初期の設定だとクリックとダブルクリックの誤操作が頻発し、操作感がイマイチだったので設定を探して変更。</p>
+
+<p>「トラックパッドの設定」に該当の設定を見つけた。</p>
+
+<ul>
+<li>　 調べる＆データ検出</li>
+<li>✅ 副ボタンのクリック</li>
+<li>　 タップでクリック</li>
+</ul>
+
+<p><a href="/images/20220411_trackpad_config.png"><img src="/thumbs/1c23d8341578205f0a22d2077615b940-640x640.png" alt="トラックパッド設定"></a></p>
+
+<h2 id="geekbench-%E3%81%A7%E6%AF%94%E8%BC%83">Geekbench で比較</h2>
+
+<p><a href="https://www.geekbench.com/">Geekbench 5 Tryout</a> を使ってしてスペックを比較してみる。</p>
+
+<p>新旧の結果をまとめると...</p>
+
+<table>
+<thead>
+<tr>
+  <th>機種</th>
+  <th align="right">Single-Core</th>
+  <th align="right">Multi-Core</th>
+  <th align="right">OpenCL</th>
+  <th align="right">Metal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>MacBook Air (13-inch Mid 2012) x86 (64-bit)</td>
+  <td align="right"><a href="https://browser.geekbench.com/v5/cpu/14758525">328</a></td>
+  <td align="right"><a href="https://browser.geekbench.com/v5/cpu/14758525">951</a></td>
+  <td align="right"><a href="https://browser.geekbench.com/v5/compute/4783629">929</a></td>
+  <td align="right"><a href="https://browser.geekbench.com/v5/compute/4785033">178</a></td>
+</tr>
+<tr>
+  <td>MacBook Air (Late 2020) AArch64</td>
+  <td align="right"><a href="https://browser.geekbench.com/v5/cpu/14192043">1732</a></td>
+  <td align="right"><a href="https://browser.geekbench.com/v5/cpu/14192043">7711</a></td>
+  <td align="right"><a href="https://browser.geekbench.com/v5/compute/4630141">18824</a></td>
+  <td align="right"><a href="https://browser.geekbench.com/v5/compute/4783614">20872</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>スコアが著しくアップしていて性能の差が著しい...
+特にグラフィックの性能は顕著。</p>
+
+<p>参考にそれぞれのPCのスペックの比較</p>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th align="center">MacBook Air (13-inch Mid 2012)</th>
+  <th align="center">MacBook Air (Late 2020)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>System Information</strong></td>
+  <td align="center"></td>
+  <td align="center"></td>
+</tr>
+<tr>
+  <td>Operating System</td>
+  <td align="center">macOS 10.14.6 (Build 18G9323)</td>
+  <td align="center">macOS 12.3.1 (Build 21E258)</td>
+</tr>
+<tr>
+  <td>Model</td>
+  <td align="center">MacBook Air (13-inch Mid 2012)</td>
+  <td align="center">MacBook Air (Late 2020)</td>
+</tr>
+<tr>
+  <td>Model ID</td>
+  <td align="center">MacBookAir5,2</td>
+  <td align="center">MacBookAir10,1</td>
+</tr>
+<tr>
+  <td>Motherboard</td>
+  <td align="center">Apple Inc. Mac MacBookAir5,2</td>
+  <td align="center">MacBookAir10,1</td>
+</tr>
+<tr>
+  <td><strong>CPU Information</strong></td>
+  <td align="center"></td>
+  <td align="center"></td>
+</tr>
+<tr>
+  <td>Name</td>
+  <td align="center">Intel Core i5-3427U</td>
+  <td align="center">Apple M1</td>
+</tr>
+<tr>
+  <td>Topology</td>
+  <td align="center">1 Processor, 2 Cores, 4 Threads</td>
+  <td align="center">1 Processor, 8 Cores</td>
+</tr>
+<tr>
+  <td>Base Frequency</td>
+  <td align="center">1.80 GHz</td>
+  <td align="center">3.20 GHz</td>
+</tr>
+<tr>
+  <td>L1 Instruction Cache</td>
+  <td align="center">32.0 KB x 2</td>
+  <td align="center">128 KB x 1</td>
+</tr>
+<tr>
+  <td>L1 Data Cache</td>
+  <td align="center">32.0 KB x 2</td>
+  <td align="center">64.0 KB x 1</td>
+</tr>
+<tr>
+  <td>L2 Cache</td>
+  <td align="center">256 KB x 2</td>
+  <td align="center">4.00 MB x 1</td>
+</tr>
+<tr>
+  <td>L3 Cache</td>
+  <td align="center">3.00 MB x 1</td>
+  <td align="center"></td>
+</tr>
+<tr>
+  <td><strong>Memory Information</strong></td>
+  <td align="center"></td>
+  <td align="center"></td>
+</tr>
+<tr>
+  <td>Memory</td>
+  <td align="center">8.00 GB DDR3 1600 MT/s</td>
+  <td align="center">8.00 GB</td>
+</tr>
+<tr>
+  <td><strong>Metal Information</strong></td>
+  <td align="center"></td>
+  <td align="center"></td>
+</tr>
+<tr>
+  <td>Device Name</td>
+  <td align="center">Intel HD Graphics 4000</td>
+  <td align="center">Apple M1</td>
+</tr>
+<tr>
+  <td><strong>OpenCL Information</strong></td>
+  <td align="center"></td>
+  <td align="center"></td>
+</tr>
+<tr>
+  <td>Platform Vendor</td>
+  <td align="center">Apple</td>
+  <td align="center">Apple</td>
+</tr>
+<tr>
+  <td>Platform Name</td>
+  <td align="center">Apple</td>
+  <td align="center">Apple</td>
+</tr>
+<tr>
+  <td>Device Vendor</td>
+  <td align="center">Intel</td>
+  <td align="center">Apple</td>
+</tr>
+<tr>
+  <td>Device Name</td>
+  <td align="center">HD Graphics 4000</td>
+  <td align="center">Apple M1</td>
+</tr>
+<tr>
+  <td>Compute Units</td>
+  <td align="center">16</td>
+  <td align="center">8</td>
+</tr>
+<tr>
+  <td>Maximum Frequency</td>
+  <td align="center">1150 MHz</td>
+  <td align="center">1000 MHz</td>
+</tr>
+<tr>
+  <td>Device Memory</td>
+  <td align="center">1.50 GB</td>
+  <td align="center">5.33 GB</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%9F%E3%82%A2%E3%83%97%E3%83%AA">インストールしたアプリ</h2>
+
+<p>とりあえず最初に入れてみたアプリはこちら。
+多分大体入れた順。</p>
+
+<p>|アプリ|概要|
+|-|-|
+|Google Chrome||
+|<a href="https://code.visualstudio.com/">Visual Studio Code</a>|開発環境|
+|<a href="https://desktop.github.com/">GitHub Desktop</a>|GitHub クライアント|
+|Command Line Developer Tools|コマンドラインツールなど。touchコマンドとかこれで入る|
+<a href="https://inkscape.org/">Inkscape</a>|ドローソフト|
+<a href="https://www.gimp.org/">GIMP</a>|ペイントソフト|
+<a href="https://krita.org/">Krita</a>|ペイントソフト|
+<a href="https://www.docker.com/">Docker Desktop</a>|Docker|
+|<a href="https://www.mediaatelier.com/CheatSheet/">CheatSheet</a>|お試しで|
+|<a href="https://apps.apple.com/jp/app/the-unarchiver/id425424353?mt=12">The Unarchiver</a>|圧縮/解凍|
+|<a href="https://brew.sh/index_ja">Homebrew</a>|パッケージマネージャ|
+|<a href="https://www.blender.org/">Blender</a>|3D ソフト|
+|<a href="https://github.com/Clipy/Clipy/releases">Clipy</a>|クリップボードの履歴を取るソフト|</p>
+
+<p>他はおいおい入れてこうかな。</p>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<p>ちょっとずつ使い始めてるけど、新しいからか圧倒的にバッテリー持ちが良くなってる。</p>
+
+<p>性能もすごい良くなってるので楽しい。</p>
+]]></content>
         </entry>
             <entry>
             <title type="html"><![CDATA[HAPPY NEW YEAR 2022]]></title>
