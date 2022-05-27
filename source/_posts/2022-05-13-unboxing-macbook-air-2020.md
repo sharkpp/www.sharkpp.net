@@ -8,6 +8,9 @@ categories: [ブログ]
 
 メイン機として使っている、MacBook Air (11-inch, Mid 2012) がまだ使えるけど、そろそろZoomなどストリーミング処理が辛くなってきた感じなので新しくしたいなって思ってたところ、機会があったので... ついに...
 
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">My New Gear <a href="https://t.co/c64XG2F565">pic.twitter.com/c64XG2F565</a></p>&mdash; さめたすたす (@sharkpp) <a href="https://twitter.com/sharkpp/status/1510520564670398465?ref_src=twsrc%5Etfw">April 3, 2022</a></blockquote>
+<script async src="https//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 買っちゃった...
 
 ## 開封の儀
@@ -16,15 +19,15 @@ MacBook Pro と迷ったけど、まあ前も Air だったから今回も Air �
 
 箱もシンプル、中身もシンプル。
 
-[<img src="{{ thumbnail('/images/20220323_box1.png', 640, 640) }}" alt="化粧箱">](/images/20220323_box1.jpg) [<img src="{{ thumbnail('/images/20220323_box2.png', 640, 640) }}" alt="開封して中身確認">](/images/20220323_box2.jpg)
+[<img src="{{ thumbnail('/images/20220323_box1.jpg', 640, 640) }}" alt="化粧箱">](/images/20220323_box1.jpg) [<img src="{{ thumbnail('/images/20220323_box2.jpg', 640, 640) }}" alt="開封して中身確認">](/images/20220323_box2.jpg)
 
 ディスプレイの表面は傷付かなように不織布が貼り付けられてる。前回はどうだったかな...？
 
-[<img src="{{ thumbnail('/images/20220323_macbookair1.png', 640, 640) }}" alt="閉じた状態">](/images/20220323_macbookair1.jpg) [<img src="{{ thumbnail('/images/20220323_macbookair2.png', 640, 640) }}" alt="パカっ！">](/images/20220323_macbookair2.jpg)
+[<img src="{{ thumbnail('/images/20220323_macbookair1.jpg', 640, 640) }}" alt="閉じた状態">](/images/20220323_macbookair1.jpg) [<img src="{{ thumbnail('/images/20220323_macbookair2.jpg', 640, 640) }}" alt="パカっ！">](/images/20220323_macbookair2.jpg)
 
 いろんな国の「こんにちは」が最初に開けると次々に表示されるセットアップ画面。
 
-[<img src="{{ thumbnail('/images/20220323_macbookair3.png', 640, 640) }}" alt="こんにちは">](/images/20220323_macbookair3.jpg)
+[<img src="{{ thumbnail('/images/20220323_macbookair3.jpg', 640, 640) }}" alt="こんにちは">](/images/20220323_macbookair3.jpg)
 
 セットアップ完了直後はこんな感じ。
 
