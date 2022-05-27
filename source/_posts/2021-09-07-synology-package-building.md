@@ -57,7 +57,7 @@ macOS は残念ながら一般的なLinux環境ではないので [synology-tool
 
 出来たパッケージを試すには、Synology NAS にログインし、パッケージセンターから「手動インストール」を行うことで可能です。
 
-[<img src="{{ thumbnail('/images/20210907_dsm7_pkg_install_wizard_01.png', 640, 640) }}" alt="パッケージインストールウィザード1">](/images/20210907_dsm7_pkg_install_wizard_01.png) [<img src="{{ thumbnail('/images/20210907_dsm7_pkg_install_wizard_02.png', 640, 640) }}" alt="パッケージインストールウィザード2">](/images/20210907_dsm7_pkg_install_wizard_02.png) [<img src="{{ thumbnail('/images/20210907_dsm7_pkg_install_wizard_03.png', 640, 640) }}" alt="パッケージインストールウィザード3>](/images/20210907_dsm7_pkg_install_wizard_03.png) [<img src="{{ thumbnail('/images/20210907_dsm7_pkg_install_wizard_04.png', 640, 640) }}" alt="パッケージインストールウィザード4">](/images/20210907_dsm7_pkg_install_wizard_04.png)
+[<img src="{{ thumbnail('/images/20210907_dsm7_pkg_install_wizard_01.png', 640, 640) }}" alt="パッケージインストールウィザード1">](/images/20210907_dsm7_pkg_install_wizard_01.png) [<img src="{{ thumbnail('/images/20210907_dsm7_pkg_install_wizard_02.png', 640, 640) }}" alt="パッケージインストールウィザード2">](/images/20210907_dsm7_pkg_install_wizard_02.png) [<img src="{{ thumbnail('/images/20210907_dsm7_pkg_install_wizard_03.png', 640, 640) }}" alt="パッケージインストールウィザード3">](/images/20210907_dsm7_pkg_install_wizard_03.png) [<img src="{{ thumbnail('/images/20210907_dsm7_pkg_install_wizard_04.png', 640, 640) }}" alt="パッケージインストールウィザード4">](/images/20210907_dsm7_pkg_install_wizard_04.png)
 
 インストールすると、試した ExamplePackage では、こんな感じにアイコンなどが設置されました。
 
