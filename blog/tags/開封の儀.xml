@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/%E9%96%8B%E5%B0%81%E3%81%AE%E5%84%80.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2022-05-27T13:20:53+00:00</updated>
+    <updated>2022-05-27T13:32:46+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -277,21 +277,68 @@
 <p>とりあえず最初に入れてみたアプリはこちら。
 多分大体入れた順。</p>
 
-<p>|アプリ|概要|
-|-|-|
-|Google Chrome||
-|<a href="https://code.visualstudio.com/">Visual Studio Code</a>|開発環境|
-|<a href="https://desktop.github.com/">GitHub Desktop</a>|GitHub クライアント|
-|Command Line Developer Tools|コマンドラインツールなど。touchコマンドとかこれで入る|
-<a href="https://inkscape.org/">Inkscape</a>|ドローソフト|
-<a href="https://www.gimp.org/">GIMP</a>|ペイントソフト|
-<a href="https://krita.org/">Krita</a>|ペイントソフト|
-<a href="https://www.docker.com/">Docker Desktop</a>|Docker|
-|<a href="https://www.mediaatelier.com/CheatSheet/">CheatSheet</a>|お試しで|
-|<a href="https://apps.apple.com/jp/app/the-unarchiver/id425424353?mt=12">The Unarchiver</a>|圧縮/解凍|
-|<a href="https://brew.sh/index_ja">Homebrew</a>|パッケージマネージャ|
-|<a href="https://www.blender.org/">Blender</a>|3D ソフト|
-|<a href="https://github.com/Clipy/Clipy/releases">Clipy</a>|クリップボードの履歴を取るソフト|</p>
+<table>
+<thead>
+<tr>
+  <th>アプリ</th>
+  <th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Google Chrome</td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://code.visualstudio.com/">Visual Studio Code</a></td>
+  <td>開発環境</td>
+</tr>
+<tr>
+  <td><a href="https://desktop.github.com/">GitHub Desktop</a></td>
+  <td>GitHub クライアント</td>
+</tr>
+<tr>
+  <td>Command Line Developer Tools</td>
+  <td>コマンドラインツールなど。touchコマンドとかこれで入る</td>
+</tr>
+<tr>
+  <td><a href="https://inkscape.org/">Inkscape</a></td>
+  <td>ドローソフト</td>
+</tr>
+<tr>
+  <td><a href="https://www.gimp.org/">GIMP</a></td>
+  <td>ペイントソフト</td>
+</tr>
+<tr>
+  <td><a href="https://krita.org/">Krita</a></td>
+  <td>ペイントソフト</td>
+</tr>
+<tr>
+  <td><a href="https://www.docker.com/">Docker Desktop</a></td>
+  <td>Docker</td>
+</tr>
+<tr>
+  <td><a href="https://www.mediaatelier.com/CheatSheet/">CheatSheet</a></td>
+  <td>お試しで</td>
+</tr>
+<tr>
+  <td><a href="https://apps.apple.com/jp/app/the-unarchiver/id425424353?mt=12">The Unarchiver</a></td>
+  <td>圧縮/解凍</td>
+</tr>
+<tr>
+  <td><a href="https://brew.sh/index_ja">Homebrew</a></td>
+  <td>パッケージマネージャ</td>
+</tr>
+<tr>
+  <td><a href="https://www.blender.org/">Blender</a></td>
+  <td>3D ソフト</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Clipy/Clipy/releases">Clipy</a></td>
+  <td>クリップボードの履歴を取るソフト</td>
+</tr>
+</tbody>
+</table>
 
 <p>他はおいおい入れてこうかな。</p>
 
