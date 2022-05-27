@@ -12,9 +12,6 @@ categories: [ブログ]
 
 ## 開封の儀
 
-<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">My New Gear <a href="https://t.co/c64XG2F565">pic.twitter.com/c64XG2F565</a></p>&mdash; さめたすたす (@sharkpp) <a href="https://twitter.com/sharkpp/status/1510520564670398465?ref_src=twsrc%5Etfw">April 3, 2022</a></blockquote>
-<script async src="https//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 MacBook Pro と迷ったけど、まあ前も Air だったから今回も Air にしてみた。
 
 箱もシンプル、中身もシンプル。
