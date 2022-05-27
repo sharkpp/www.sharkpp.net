@@ -120,10 +120,10 @@ OS は Monterey 12.0.1 がインストール済みで、更新の確認をする
 |[Visual Studio Code](https://code.visualstudio.com/)|開発環境|
 |[GitHub Desktop](https://desktop.github.com/)|GitHub クライアント|
 |Command Line Developer Tools|コマンドラインツールなど。touchコマンドとかこれで入る|
-[Inkscape](https://inkscape.org/)|ドローソフト|
-[GIMP](https://www.gimp.org/)|ペイントソフト|
-[Krita](https://krita.org/)|ペイントソフト|
-[Docker Desktop](https://www.docker.com/)|Docker|
+|[Inkscape](https://inkscape.org/)|ドローソフト|
+|[GIMP](https://www.gimp.org/)|ペイントソフト|
+|[Krita](https://krita.org/)|ペイントソフト|
+|[Docker Desktop](https://www.docker.com/)|Docker|
 |[CheatSheet](https://www.mediaatelier.com/CheatSheet/)|お試しで|
 |[The Unarchiver](https://apps.apple.com/jp/app/the-unarchiver/id425424353?mt=12)|圧縮/解凍|
 |[Homebrew](https://brew.sh/index_ja)|パッケージマネージャ|
