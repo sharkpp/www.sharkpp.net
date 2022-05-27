@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="http://www.sharkpp.net/blog/tags/Docker.xml" rel="self"/>
     <link href="http://www.sharkpp.net/"/>
-    <updated>2022-05-27T08:49:08+00:00</updated>
+    <updated>2022-05-27T09:32:12+00:00</updated>
     <id>http://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -93,7 +93,7 @@
 
 <p>出来たパッケージを試すには、Synology NAS にログインし、パッケージセンターから「手動インストール」を行うことで可能です。</p>
 
-<p><a href="/images/20210907_dsm7_pkg_install_wizard_01.png"><img src="/thumbs/58b7f462919d59664f552ef77692453e-640x640.png" alt="パッケージインストールウィザード1"></a> <a href="/images/20210907_dsm7_pkg_install_wizard_02.png"><img src="/thumbs/0f35caa7d01f65a9fa3ccb4a13634cd8-640x640.png" alt="パッケージインストールウィザード2"></a> <a href="/images/20210907_dsm7_pkg_install_wizard_03.png">&lt;img src="/thumbs/9065d65d3300b28ef4d44bbeff637082-640x640.png" alt="パッケージインストールウィザード3></a> <a href="/images/20210907_dsm7_pkg_install_wizard_04.png"><img src="/thumbs/0f8b6887e5a96352c15cf2f29782e189-640x640.png" alt="パッケージインストールウィザード4"></a></p>
+<p><a href="/images/20210907_dsm7_pkg_install_wizard_01.png"><img src="/thumbs/58b7f462919d59664f552ef77692453e-640x640.png" alt="パッケージインストールウィザード1"></a> <a href="/images/20210907_dsm7_pkg_install_wizard_02.png"><img src="/thumbs/0f35caa7d01f65a9fa3ccb4a13634cd8-640x640.png" alt="パッケージインストールウィザード2"></a> <a href="/images/20210907_dsm7_pkg_install_wizard_03.png"><img src="/thumbs/9065d65d3300b28ef4d44bbeff637082-640x640.png" alt="パッケージインストールウィザード3"></a> <a href="/images/20210907_dsm7_pkg_install_wizard_04.png"><img src="/thumbs/0f8b6887e5a96352c15cf2f29782e189-640x640.png" alt="パッケージインストールウィザード4"></a></p>
 
 <p>インストールすると、試した ExamplePackage では、こんな感じにアイコンなどが設置されました。</p>
 
