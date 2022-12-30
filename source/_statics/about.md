@@ -2,13 +2,13 @@
 layout: default
 title: "このサイトについて"
 permalink: about/index.html
-date: 2008-08-03 17:29:00
+date: 2022-12-31 7:26
 
 ---
 
 ## 始めに
 
-このサイトは、Shark++ Software 改め「さめたすたす」の日常の垂れ流し、および制作物を配布する目的で作られました。
+このサイトは、Shark++ Software もしくは sharkpp 改め「さめたすたす」の日常の垂れ流し、および制作物を配布する目的で作られました。
 
 <i class="fa fa-warning"></i> このサイトに掲載されたソフト等を使用した事による損害については一切の責任を負いません。 また、このサイトに掲載されている画像・文章は一切の転載を禁止します。
 
@@ -25,7 +25,6 @@ Netscape Navigator 4.xxやInternet Explorer 5.xx/4.xx などを使っている�
 OS X 上の以下のブラウザで、デザインを確認しています。
 
   * Google Chrome *latest*
-  * Apple Safari 7
 
 ## 引用等について
 
@@ -41,9 +40,9 @@ OS X 上の以下のブラウザで、デザインを確認しています。
 
 どのページにリンクしてもかまいませんが、必ずリンクする URL がアドレスバーに現れるようにリンクしてください。 <!-- http://d.hatena.ne.jp/HiromitsuTakagi/20040426#p2 -->
 
-![[Shark++ Software's Web Page Banner]][1]
+![[さめたすたすのお家 Banner]][1]
 
-[http://www.sharkpp.net/images/banner.gif][1]
+[https://www.sharkpp.net/images/banner.gif][1]
 
 <span class="warning">なお、バナーサイズは、気まぐれで変わることがあります。
 </span>
