@@ -8,19 +8,25 @@
   </url>
   <url>
     <loc>http://www.sharkpp.net/blog</loc>
-    <lastmod>2022-12-30T22:18:29+00:00</lastmod>
+    <lastmod>2022-12-30T22:28:46+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sharkpp.net/blog/categories</loc>
-    <lastmod>2022-12-30T22:18:29+00:00</lastmod>
+    <lastmod>2022-12-30T22:28:46+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sharkpp.net/blog/tags</loc>
-    <lastmod>2022-12-30T22:18:29+00:00</lastmod>
+    <lastmod>2022-12-30T22:28:46+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.sharkpp.net/about</loc>
+    <lastmod>2022-12-31T07:26:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -45,12 +51,6 @@
   <url>
     <loc>http://www.sharkpp.net/graffiti</loc>
     <lastmod>2015-05-01T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sharkpp.net/about</loc>
-    <lastmod>2008-08-03T17:29:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
