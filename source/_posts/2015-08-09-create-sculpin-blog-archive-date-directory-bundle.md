@@ -13,7 +13,7 @@ categories: [ブログ]
 
 とりあえずは、 generator として指定されたディレクトリ以下にインデックスページをどかどかっと作成します。
 
-ようするに、 [http://www.sharkpp.net/blog/2015/](http://www.sharkpp.net/blog/2015/) とかで、この例だと 2015 年に投稿された記事の一覧が列挙されるページを作ることが出来ます。
+ようするに、 [https://www.sharkpp.net/blog/2015/](https://www.sharkpp.net/blog/2015/) とかで、この例だと 2015 年に投稿された記事の一覧が列挙されるページを作ることが出来ます。
 
 ## まず始めに
 

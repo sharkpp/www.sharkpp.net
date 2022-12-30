@@ -111,5 +111,5 @@ OAuth Consumer Key と Secret Key を指定します。
 * [Qt Network Authorization 5.8](https://doc.qt.io/qt-5/qtnetworkauth-index.html)
 * [Qt Network Authorization Examples | Qt Network Authorization 5.8](https://doc-snapshots.qt.io/qt5-5.8/examples-qtnetworkauth.html)
 * [qt/qtnetworkauth.git - Qt Network Authenticators; QtOAuth in particular](http://code.qt.io/cgit/qt/qtnetworkauth.git/)
-* [oAuth 認証を提供しているサービスをまとめてみました — さめたすたすのお家](http://www.sharkpp.net/blog/2014/03/30/oauth-providers-list.html)
+* [oAuth 認証を提供しているサービスをまとめてみました — さめたすたすのお家](/blog/2014/03/30/oauth-providers-list.html)
 

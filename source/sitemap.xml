@@ -8,7 +8,7 @@ permalink: sitemap.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://www.sharkpp.net</loc>
+    <loc>https://www.sharkpp.net</loc>
     <lastmod>{{ site.calculated_date | date('Y-m-d') }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
@@ -22,7 +22,7 @@ permalink: sitemap.xml
 {% for post in pages %}
 {% set is_blog_post = post.url|preg_match('!blog/[0-9]+/[0-9]+/[0-9]+/.+!') ? 1 : 0 %}
   <url>
-    <loc>http://www.sharkpp.net{{ post.url }}</loc>
+    <loc>https://www.sharkpp.net{{ post.url }}</loc>
     <lastmod>{{ post.date|date('c') }}</lastmod>
     <changefreq>{{ is_blog_post ? 'weekly' : 'monthly' }}</changefreq>
     <priority>{{ is_blog_post ? '1.0' : '0.6' }}</priority>

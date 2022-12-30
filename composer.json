@@ -1,11 +1,11 @@
 {
     "name": "sharkpp/www.sharkpp.net",
-    "description": "generator source of http://www.sharkpp.net/",
+    "description": "generator source of https://www.sharkpp.net/",
     "license": "MIT License",
     "authors": [
         {
             "name": "sharkpp",
-            "homepage": "http://www.sharkpp.net/"
+            "homepage": "https://www.sharkpp.net/"
         }
     ],
     "repositories": [

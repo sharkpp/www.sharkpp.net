@@ -6,7 +6,7 @@ categories: [ブログ]
 
 ---
 
-以前にも [github.com へ SVNのレポジトリを取り込んで公開する方法](http://www.sharkpp.net/blog/2014/10/19/github-import-from-svn.html) で Subversion から git へのインポート方法を調べたけど、再度調べ直してタグとかをちゃんと反映させる方法を試したメモ。
+以前にも [github.com へ SVNのレポジトリを取り込んで公開する方法](/blog/2014/10/19/github-import-from-svn.html) で Subversion から git へのインポート方法を調べたけど、再度調べ直してタグとかをちゃんと反映させる方法を試したメモ。
 
 インポート、としていますが実質やってることは移行と言っても過言ではありません。
 

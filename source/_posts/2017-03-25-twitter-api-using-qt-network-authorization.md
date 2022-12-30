@@ -19,7 +19,7 @@ categories: [ブログ]
 
 [Qt Network Authorization Examples | Qt Network Authorization 5.8](https://doc-snapshots.qt.io/qt5-5.8/examples-qtnetworkauth.html) に Twitter認証のサンプルがあるので、それを参考にしつつ [NetworkStorageAccessSample](https://github.com/sharkpp/NetworkStorageAccessSample) で実装した認証済みトークンの保存処理を実装していきました。
 
-あ、[はじめての Qt Network Authorization](http://www.sharkpp.net/blog/2017/01/28/first-impression-qt-network-authorization.html) も参考にしています。
+あ、[はじめての Qt Network Authorization](/blog/2017/01/28/first-impression-qt-network-authorization.html) も参考にしています。
 
 そろそろ、だれか Qt Network Authorization を触った記事を書いてくれないだろうか？
 
@@ -130,7 +130,7 @@ connect(this, &QOAuth1::granted, this, &Twitter::authenticated);
 
 ## 参考
 
-* [はじめての Qt Network Authorization — さめたすたすのお家](http://www.sharkpp.net/blog/2017/01/28/first-impression-qt-network-authorization.html)
+* [はじめての Qt Network Authorization — さめたすたすのお家](/blog/2017/01/28/first-impression-qt-network-authorization.html)
 * [Qt Network Authorization Examples | Qt Network Authorization 5.8](https://doc-snapshots.qt.io/qt5-5.8/examples-qtnetworkauth.html)
 * [Twitter Developer Documentation — Twitter Developers](https://dev.twitter.com/docs)
 * [sharkpp/NetworkStorageAccessSample: Qt Network Authorization "Network storage access" sample](https://github.com/sharkpp/NetworkStorageAccessSample)

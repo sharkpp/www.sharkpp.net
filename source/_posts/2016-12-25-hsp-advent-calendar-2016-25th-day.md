@@ -18,7 +18,7 @@ categories: [ブログ]
 
 |日付|執筆者|記事|
 |-|-|-|
-|12/01|[sharkpp](http://qiita.com/sharkpp)|[macOS と Wine で作る HSP 3 の開発環境](http://www.sharkpp.net/blog/2016/12/01/hsp-advent-calendar-2016-1st-day.html)|
+|12/01|[sharkpp](http://qiita.com/sharkpp)|[macOS と Wine で作る HSP 3 の開発環境](/blog/2016/12/01/hsp-advent-calendar-2016-1st-day.html)|
 |12/02|[mjhd-devlion](http://qiita.com/mjhd-devlion)|[Linux・MacでVimでHSP開発](http://qiita.com/mjhd-devlion/items/375ea9894294919380fd)|
 |12/03|[ptr-yudai](http://qiita.com/ptr-yudai)|[HSP3のチート対策いろいろ -メモリハック編-](http://qiita.com/ptr-yudai/items/3b834cd1765adb17ba96)|
 |12/04|[theoldmoon0602](http://qiita.com/theoldmoon0602)|[hsp初心者なのでゲーム作った](http://furutsuki.hatenablog.com/entry/2016/12/03/231056)|
@@ -33,7 +33,7 @@ categories: [ブログ]
 |12/13|[Jbox_sandbag](http://qiita.com/Jbox_sandbag)|[O2システムの思い出](http://hspboxinggame.blogspot.jp/2013/03/o2.html)|
 |12/14|[kureikei](http://qiita.com/kureikei)|[HSP3Dish で iOS アプリ開発を体験！](http://pronama.azurewebsites.net/2016/12/14/hsp3dish/)|
 |12/16|[skymonsters_Ks](http://qiita.com/skymonsters_Ks)|[HSPプログラムコンテストを振り返る](http://qiita.com/skymonsters_Ks/items/ad28c7a21ea55d2bbed8)|
-|12/25|[sharkpp](http://qiita.com/sharkpp)|[Hot Soup Processor Advent Calendar 2016 まとめ](http://www.sharkpp.net/blog/2016-12-25-hsp-advent-calendar-2016-25th-day.html)|
+|12/25|[sharkpp](http://qiita.com/sharkpp)|[Hot Soup Processor Advent Calendar 2016 まとめ](/blog/2016-12-25-hsp-advent-calendar-2016-25th-day.html)|
 
 ## 結果
 

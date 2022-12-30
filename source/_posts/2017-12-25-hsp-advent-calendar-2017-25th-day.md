@@ -19,7 +19,7 @@ categories: [ブログ]
 
 |日付|執筆者|記事|
 |-|-|-|
-|12/01|[sharkpp](http://qiita.com/sharkpp)|[Google Poly で公開されている素材を HSP 3 で利用してみよう](http://www.sharkpp.net/blog/2017/12/01/hsp-advent-calendar-2017-1st-day.html)|
+|12/01|[sharkpp](http://qiita.com/sharkpp)|[Google Poly で公開されている素材を HSP 3 で利用してみよう](/blog/2017/12/01/hsp-advent-calendar-2017-1st-day.html)|
 |12/02|[y_tack](http://qiita.com/y_tack)|[（エターナル化してきた）OpenHSPの書写他](https://qiita.com/y_tack/items/7eda1f2502de4611b4f7)|
 |12/03|[mjhd-devlion](http://qiita.com/mjhd-devlion)|[newlabの使い道を頑張って考えてみる](https://qiita.com/mjhd-devlion/items/44d1a919b5485629e7e8)|
 |12/04|[hta393939](http://qiita.com/hta393939)|[HSP3.5 HGIMG4 で2Dビューポート表示](https://qiita.com/hta393939/items/e6fb2399030287005b5f)|
@@ -33,7 +33,7 @@ categories: [ブログ]
 |12/19|[hta393939](http://qiita.com/hta393939)|[HSP3.5 HGIMG4 でイベント待ちを制御する](https://qiita.com/hta393939/items/99e7dd7fa81714584d94)|
 |12/20|[hta393939](http://qiita.com/hta393939)|[HSP3.5 HGIMG4 で剛体をキネティック(強制指定)モードにする](https://qiita.com/hta393939/items/a8b2d88655f9c14b1001)|
 |12/21|[hta393939](http://qiita.com/hta393939)|[HSP3.5 HGIMG4 でヘルプに書かれてないイベント動作紹介](https://qiita.com/hta393939/items/aee255aa02a508e71552)|
-|12/25|[sharkpp](http://qiita.com/sharkpp)|[Hot Soup Processor Advent Calendar 2017 まとめ](http://www.sharkpp.net/blog/2017/12/25/hsp-advent-calendar-2017-25th-day.html)|
+|12/25|[sharkpp](http://qiita.com/sharkpp)|[Hot Soup Processor Advent Calendar 2017 まとめ](/blog/2017/12/25/hsp-advent-calendar-2017-25th-day.html)|
 
 ## 結果
 

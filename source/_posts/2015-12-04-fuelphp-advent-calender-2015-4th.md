@@ -588,4 +588,4 @@ Markdown から HTML への変換処理メソッドやオブザーバー、バ�
 この投稿は **[FuelPHP Advent Calendar 2015](http://qiita.com/advent-calendar/2015/fuelphp)** の **4日目**の記事です。
 
 * 3日目の記事: [FuelPHP で TODO アプリケーションを作ってみた。](http://qiita.com/ken880guchi/items/300b16b8b8473c3b45a9)
-* 5日目の記事: [NestedSets Model を使って FuelPHP 用コメントボックスパッケージを作った話](http://www.sharkpp.net/blog/2015/12/05/fuelphp-advent-calender-2015-5th.html)
+* 5日目の記事: [NestedSets Model を使って FuelPHP 用コメントボックスパッケージを作った話](/blog/2015/12/05/fuelphp-advent-calender-2015-5th.html)
