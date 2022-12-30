@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/Markdown.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/Markdown.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[PHP で日本語を含む HTML から Markdown に変換する方法]]></title>
-            <link href="http://www.sharkpp.net/blog/2015/07/05/how-to-japanese-html-to-markdown-in-php.html"/>
+            <link href="https://www.sharkpp.net/blog/2015/07/05/how-to-japanese-html-to-markdown-in-php.html"/>
             <updated>2015-07-05T12:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2015/07/05/how-to-japanese-html-to-markdown-in-php.html</id>
+            <id>https://www.sharkpp.net/blog/2015/07/05/how-to-japanese-html-to-markdown-in-php.html</id>
             <content type="html"><![CDATA[<p>ホムペを再構築するにあたり<a href="/blog/2015/06/28/site-reboot-by-sculpin.html">Sculpin でホムペを再構築したときのメモ</a>でもサラッと書いたけど“.html をスクリプトで .md に変換＆リンクを再構成”というのが割と厄介だった。</p>
 
 <p>PHP で Markdown 記法から HTML への変換を行うライブラリ/パッケージは多数見つかるが、その逆の HTML から Markdown 記法への変換を行う物は数えるほどしかありませんでした。</p>

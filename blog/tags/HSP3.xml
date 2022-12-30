@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/HSP3.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/HSP3.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[HSP ユーザーのためのハブサイトを立上げました]]></title>
-            <link href="http://www.sharkpp.net/blog/2016/04/01/hub-site-launched-for-hsp-users.html"/>
+            <link href="https://www.sharkpp.net/blog/2016/04/01/hub-site-launched-for-hsp-users.html"/>
             <updated>2016-04-01T00:35:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2016/04/01/hub-site-launched-for-hsp-users.html</id>
+            <id>https://www.sharkpp.net/blog/2016/04/01/hub-site-launched-for-hsp-users.html</id>
             <content type="html"><![CDATA[<p>以前、某氏が公開していたドメインが、更新されず、スパムドメインになっていたのがいつの間にか手放されていたのを取得し、熟成させること 2 年ぐらい。</p>
 
 <p>ようやく、重い腰を上げサイトを公開しました。</p>
@@ -38,9 +38,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[Wine を使って Mac OS X で HSP と hgimg4 を動かしてみた]]></title>
-            <link href="http://www.sharkpp.net/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html"/>
+            <link href="https://www.sharkpp.net/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html"/>
             <updated>2016-03-26T23:43:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html</id>
+            <id>https://www.sharkpp.net/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html</id>
             <content type="html"><![CDATA[<p>HSP をどうしても Mac OS X で動かしたい！</p>
 
 <p>まあ、とりあえず Wine 使っておけばいいよね！</p>
@@ -329,9 +329,9 @@ Wine build complete.
         </entry>
             <entry>
             <title type="html"><![CDATA[HSP3用難読化＆独自スクランブル ツール ”yabuinu” を公開しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/09/30/yabuinu-the-obfuscator-and-scrambler-for-hsp3-0-0-1-0-release.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/09/30/yabuinu-the-obfuscator-and-scrambler-for-hsp3-0-0-1-0-release.html"/>
             <updated>2009-09-30T00:14:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/09/30/yabuinu-the-obfuscator-and-scrambler-for-hsp3-0-0-1-0-release.html</id>
+            <id>https://www.sharkpp.net/blog/2009/09/30/yabuinu-the-obfuscator-and-scrambler-for-hsp3-0-0-1-0-release.html</id>
             <content type="html"><![CDATA[<p>オブジェクト難読化＆独自スクランブルツールを公開しました。</p>
 
 <p>hsp3obfusの後続バージョンになります。</p>
@@ -345,9 +345,9 @@ Wine build complete.
         </entry>
             <entry>
             <title type="html"><![CDATA[OpenHSPのナイトリービルドを始めました]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/06/14/startup-openhsp-nightly-builds.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/06/14/startup-openhsp-nightly-builds.html"/>
             <updated>2009-06-14T23:42:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/06/14/startup-openhsp-nightly-builds.html</id>
+            <id>https://www.sharkpp.net/blog/2009/06/14/startup-openhsp-nightly-builds.html</id>
             <content type="html"><![CDATA[<p>まあタイトルの通りなんだけど、OpenHSPのナイトリービルドを始めました。</p>
 
 <p>毎日0時ごろにリビジョンをチェックして上がっていたら自動でビルドしてzipで固めてこのサイトにアップロードって感じのバッチファイルを組んでタスクで動かすようにしました。</p>
@@ -363,9 +363,9 @@ Wine build complete.
         </entry>
             <entry>
             <title type="html"><![CDATA[HSP3のファイル選択ダイアログで複数ファイルフィルタを指定で出来るように修正]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/09/28/hsp3-filedlg-multiple-filter-implement.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/09/28/hsp3-filedlg-multiple-filter-implement.html"/>
             <updated>2008-09-28T15:29:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/09/28/hsp3-filedlg-multiple-filter-implement.html</id>
+            <id>https://www.sharkpp.net/blog/2008/09/28/hsp3-filedlg-multiple-filter-implement.html</id>
             <content type="html"><![CDATA[<p><a href="http://hsp.tv/play/pforum.php?mode=all&amp;num=19768">ファイル保存ダイアログ</a>で話題に上がっているファイル選択ダイアログで複数ファイルフィルタを指定で出来るように修正してみました。</p>
 
 <pre>dialog "as",16,"ソーススクリプト"

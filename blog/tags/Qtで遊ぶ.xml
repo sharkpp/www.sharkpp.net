@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/Qt%E3%81%A7%E9%81%8A%E3%81%B6.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/Qt%E3%81%A7%E9%81%8A%E3%81%B6.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[続・QtQuick2でアプリ作ってみたよ]]></title>
-            <link href="http://www.sharkpp.net/blog/2013/05/19/qtquick2-taskmemgraph.html"/>
+            <link href="https://www.sharkpp.net/blog/2013/05/19/qtquick2-taskmemgraph.html"/>
             <updated>2013-05-19T18:48:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2013/05/19/qtquick2-taskmemgraph.html</id>
+            <id>https://www.sharkpp.net/blog/2013/05/19/qtquick2-taskmemgraph.html</id>
             <content type="html"><![CDATA[<p>勉強会の続きが結構かかってしまったけど何とかそれなりに形になりました。</p>
 
 <p>もしくは、力尽きたともいうorz</p>
@@ -142,9 +142,9 @@ qmlRegisterType&lt;ProcessList&gt;("ProcessLib",1,0,"ProcessList");
         </entry>
             <entry>
             <title type="html"><![CDATA[色々なメモ: Qtで遊ぶ 其の５]]></title>
-            <link href="http://www.sharkpp.net/blog/2012/01/29/play-with-qt-part-5.html"/>
+            <link href="https://www.sharkpp.net/blog/2012/01/29/play-with-qt-part-5.html"/>
             <updated>2012-01-29T18:25:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2012/01/29/play-with-qt-part-5.html</id>
+            <id>https://www.sharkpp.net/blog/2012/01/29/play-with-qt-part-5.html</id>
             <content type="html"><![CDATA[<p>過去の記事は↓</p>
 
 <p><a href="/blog/2009/10/04/play-with-qt-part-1.html">QtをVisual C++ 2008 Express Editionで使えるようにしてみる: Qtで遊ぶ 其の１</a></p>
@@ -196,9 +196,9 @@ qmlRegisterType&lt;ProcessList&gt;("ProcessLib",1,0,"ProcessList");
         </entry>
             <entry>
             <title type="html"><![CDATA[色々なメモ: Qtで遊ぶ 其の4]]></title>
-            <link href="http://www.sharkpp.net/blog/2011/10/30/play-with-qt-part-4.html"/>
+            <link href="https://www.sharkpp.net/blog/2011/10/30/play-with-qt-part-4.html"/>
             <updated>2011-10-30T21:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2011/10/30/play-with-qt-part-4.html</id>
+            <id>https://www.sharkpp.net/blog/2011/10/30/play-with-qt-part-4.html</id>
             <content type="html"><![CDATA[<p>色々メモ...</p>
 
 <p>だんだんと手抜きにorz</p>
@@ -261,9 +261,9 @@ MyItem * myObj = (static_cast&lt;MyItem*&gt;(index.internalPointer()))-&gt;child
         </entry>
             <entry>
             <title type="html"><![CDATA[色々なメモ: Qtで遊ぶ 其の3]]></title>
-            <link href="http://www.sharkpp.net/blog/2011/07/31/play-with-qt-part-3.html"/>
+            <link href="https://www.sharkpp.net/blog/2011/07/31/play-with-qt-part-3.html"/>
             <updated>2011-07-31T23:32:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2011/07/31/play-with-qt-part-3.html</id>
+            <id>https://www.sharkpp.net/blog/2011/07/31/play-with-qt-part-3.html</id>
             <content type="html"><![CDATA[<p>過去の記事は↓</p>
 
 <p><a href="/blog/2009/10/04/play-with-qt-part-1.html">QtをVisual C++ 2008 Express Editionで使えるようにしてみる: Qtで遊ぶ 其の１</a></p>
@@ -374,9 +374,9 @@ MyItem * myObj = (static_cast&lt;MyItem*&gt;(index.internalPointer()))-&gt;child
         </entry>
             <entry>
             <title type="html"><![CDATA[色々なメモ: Qtで遊ぶ 其の２]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/10/04/play-with-qt-part-2.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/10/04/play-with-qt-part-2.html"/>
             <updated>2009-10-04T17:24:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/10/04/play-with-qt-part-2.html</id>
+            <id>https://www.sharkpp.net/blog/2009/10/04/play-with-qt-part-2.html</id>
             <content type="html"><![CDATA[<p>Qtでアプリケーションを作る時のコマンドなどなどのメモ</p>
 
 <p>そのほか、其の１で書いていなかった詳細など</p>
@@ -423,9 +423,9 @@ qmake
         </entry>
             <entry>
             <title type="html"><![CDATA[QtをVisual C++ 2008 Express Editionで使えるようにしてみる: Qtで遊ぶ 其の１]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/10/04/play-with-qt-part-1.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/10/04/play-with-qt-part-1.html"/>
             <updated>2009-10-04T16:52:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/10/04/play-with-qt-part-1.html</id>
+            <id>https://www.sharkpp.net/blog/2009/10/04/play-with-qt-part-1.html</id>
             <content type="html"><![CDATA[<p>前から興味を持っていた、<a href="http://qt.nokia.com/title-jp">Qt</a>で遊び始めた。</p>
 
 <p>クロスプラットフォームでルック＆フィールがネイティブなフレームワークとしてwxWidgetsかQtか迷うところだけどとりあえずQtに手を出してみた。</p>

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/OAuth.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/OAuth.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[駆け足で Qt Network Authorization の使い方を紹介してみる]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/12/21/qt-advent-calendar-2017-21th-day.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/12/21/qt-advent-calendar-2017-21th-day.html"/>
             <updated>2017-12-21T23:45:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/12/21/qt-advent-calendar-2017-21th-day.html</id>
+            <id>https://www.sharkpp.net/blog/2017/12/21/qt-advent-calendar-2017-21th-day.html</id>
             <content type="html"><![CDATA[<p>こんにちは、こんばんは。</p>
 
 <p><a href="http://qiita.com/advent-calendar/2017/qt">Qt Advent Calendar 2017</a> の 21日目を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p>
@@ -518,9 +518,9 @@ public:
         </entry>
             <entry>
             <title type="html"><![CDATA[じゅげむったーの開発日記 その８]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/10/21/jugemutter-development-diary-8th.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/10/21/jugemutter-development-diary-8th.html"/>
             <updated>2017-10-21T17:41:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/10/21/jugemutter-development-diary-8th.html</id>
+            <id>https://www.sharkpp.net/blog/2017/10/21/jugemutter-development-diary-8th.html</id>
             <content type="html"><![CDATA[<p>今回は、明日行われる <a href="https://techbookfest.org/event/tbf03">技術書典３</a> に前日入りして、<a href="https://qt-users.connpass.com/event/68878/">Qt 勉強会 @ Tokyo #52</a> に参加してきました。</p>
 
 <p>東京の勉強会はすごく久しぶりの参加でした。</p>
@@ -703,9 +703,9 @@ else {
         </entry>
             <entry>
             <title type="html"><![CDATA[じゅげむったーの開発日記 その７]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/10/04/jugemutter-development-diary-7th.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/10/04/jugemutter-development-diary-7th.html"/>
             <updated>2017-10-04T01:05:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/10/04/jugemutter-development-diary-7th.html</id>
+            <id>https://www.sharkpp.net/blog/2017/10/04/jugemutter-development-diary-7th.html</id>
             <content type="html"><![CDATA[<p>前回に引き続き <a href="https://qt-users.connpass.com/event/67390/">Qt 勉強会 @ Nagoya No13 一区切り会 - connpass</a> に参加しました。
 とりあえず、今回でもくもく会は一旦一区切りとなるので、このあとはボチボチと進めていこうかなと思います。</p>
 
@@ -860,9 +860,9 @@ GNU gettext の <code>.po</code> と <code>.mo</code> との関係と同じで�
         </entry>
             <entry>
             <title type="html"><![CDATA[じゅげむったーの開発日記 その６]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/09/27/jugemutter-development-diary-6th.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/09/27/jugemutter-development-diary-6th.html"/>
             <updated>2017-09-27T12:40:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/09/27/jugemutter-development-diary-6th.html</id>
+            <id>https://www.sharkpp.net/blog/2017/09/27/jugemutter-development-diary-6th.html</id>
             <content type="html"><![CDATA[<p>遅くなりましたが、今月も引き続き参加した <a href="https://qt-users.connpass.com/event/65548/">Qt 勉強会 @ Nagoya No12 - connpass</a> のまとめです。</p>
 
 <p>重大発表があってちょっとびっくりでした。
@@ -962,9 +962,9 @@ $ openssl rsa -in tmp.der -inform DER -out server-key.pem -outform pem
         </entry>
             <entry>
             <title type="html"><![CDATA[じゅげむったーの開発日記 その５]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/08/23/jugemutter-development-diary-5th.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/08/23/jugemutter-development-diary-5th.html"/>
             <updated>2017-08-23T01:50:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/08/23/jugemutter-development-diary-5th.html</id>
+            <id>https://www.sharkpp.net/blog/2017/08/23/jugemutter-development-diary-5th.html</id>
             <content type="html"><![CDATA[<p>さて、今月も引き続き参加した <a href="https://qt-users.connpass.com/event/62861/">Qt 勉強会 @ Nagoya No11 - connpass</a> のまとめ。</p>
 
 <p>つぶやきは <a href="https://togetter.com/li/1146658">Qt 勉強会 @ Nagoya No11 つぶやきまとめ - Togetterまとめ</a> でまとめられています。</p>
@@ -1029,9 +1029,9 @@ $ openssl rsa -in tmp.der -inform DER -out server-key.pem -outform pem
         </entry>
             <entry>
             <title type="html"><![CDATA[じゅげむったーの開発日記 その４]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/07/16/jugemutter-development-diary-4th.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/07/16/jugemutter-development-diary-4th.html"/>
             <updated>2017-07-16T18:10:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/07/16/jugemutter-development-diary-4th.html</id>
+            <id>https://www.sharkpp.net/blog/2017/07/16/jugemutter-development-diary-4th.html</id>
             <content type="html"><![CDATA[<p>ただいま、<a href="https://github.com/sharkpp/Jugemutter">じゅげむったー</a> の実装中なのです。</p>
 
 <p>まあ、それはともかくとして、「じゅげむったー」実装中に Qt 関連で躓いた部分や発生した問題の解決方法を、メモしておいたら溜まってきたので一度放出しようかと。</p>
@@ -1264,9 +1264,9 @@ QToolBar QToolButton:pressed {
         </entry>
             <entry>
             <title type="html"><![CDATA[じゅげむったーの開発日記 その３]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/06/17/jugemutter-development-diary-3rd.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/06/17/jugemutter-development-diary-3rd.html"/>
             <updated>2017-06-17T22:57:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/06/17/jugemutter-development-diary-3rd.html</id>
+            <id>https://www.sharkpp.net/blog/2017/06/17/jugemutter-development-diary-3rd.html</id>
             <content type="html"><![CDATA[<p>さて、先月に引き続いて今月も参加した <a href="https://qt-users.connpass.com/event/58337/">Qt 勉強会 @ Nagoya No9(17.06) - connpass</a> のまとめ。</p>
 
 <p>つぶやきは <a href="https://togetter.com/li/1127556">Qt勉強会 Tokyo #48 + @Nagoya #9 つぶやきまとめ</a> でまとめられています。</p>
@@ -1340,9 +1340,9 @@ QToolBar QToolButton:pressed {
         </entry>
             <entry>
             <title type="html"><![CDATA[じゅげむったーの開発日記 その２]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/05/20/jugemutter-development-diary-2nd.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/05/20/jugemutter-development-diary-2nd.html"/>
             <updated>2017-05-20T17:04:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/05/20/jugemutter-development-diary-2nd.html</id>
+            <id>https://www.sharkpp.net/blog/2017/05/20/jugemutter-development-diary-2nd.html</id>
             <content type="html"><![CDATA[<p>さて、先月に引き続いて今月も参加した <a href="https://qt-users.connpass.com/event/57080/">Qt 勉強会 @ Nagoya No8(17.05) - connpass</a> のまとめ。</p>
 
 <p>今月も、長文投稿専用Twitterクライアントの開発の続きをしました。</p>
@@ -1384,9 +1384,9 @@ QToolBar QToolButton:pressed {
         </entry>
             <entry>
             <title type="html"><![CDATA[じゅげむったー(仮)の開発日記 その１]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/04/16/jugemutter-development-diary-1st.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/04/16/jugemutter-development-diary-1st.html"/>
             <updated>2017-04-16T23:07:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/04/16/jugemutter-development-diary-1st.html</id>
+            <id>https://www.sharkpp.net/blog/2017/04/16/jugemutter-development-diary-1st.html</id>
             <content type="html"><![CDATA[<p>さて、先月に続いて今月も参加した <a href="https://qt-users.connpass.com/event/53963/">Qt 勉強会 @ Nagoya No7(17.04) - connpass</a> のまとめ。</p>
 
 <p>つぶやきは <a href="https://togetter.com/li/1101299">Qt勉強会 Tokyo #46 + Nagoya # 7 つぶやきまとめ - Togetterまとめ</a> でまとめられています。</p>
@@ -1484,9 +1484,9 @@ QToolBar QToolButton:pressed {
         </entry>
             <entry>
             <title type="html"><![CDATA[Qt Network Authorization を使った Twitter API の利用]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/03/25/twitter-api-using-qt-network-authorization.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/03/25/twitter-api-using-qt-network-authorization.html"/>
             <updated>2017-03-25T22:59:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/03/25/twitter-api-using-qt-network-authorization.html</id>
+            <id>https://www.sharkpp.net/blog/2017/03/25/twitter-api-using-qt-network-authorization.html</id>
             <content type="html"><![CDATA[<p>さて、先月に続いて今月も参加した <a href="https://qt-users.connpass.com/event/52009/">Qt 勉強会 @ Nagoya No6(17.03)</a> のまとめ。</p>
 
 <p>今回はいつもに増して短め。</p>
@@ -1499,7 +1499,7 @@ QToolBar QToolButton:pressed {
 
 <p><a href="https://doc-snapshots.qt.io/qt5-5.8/examples-qtnetworkauth.html">Qt Network Authorization Examples | Qt Network Authorization 5.8</a> に Twitter認証のサンプルがあるので、それを参考にしつつ <a href="https://github.com/sharkpp/NetworkStorageAccessSample">NetworkStorageAccessSample</a> で実装した認証済みトークンの保存処理を実装していきました。</p>
 
-<p>あ、<a href="http://www.sharkpp.net/blog/2017/01/28/first-impression-qt-network-authorization.html">はじめての Qt Network Authorization</a> も参考にしています。</p>
+<p>あ、<a href="/blog/2017/01/28/first-impression-qt-network-authorization.html">はじめての Qt Network Authorization</a> も参考にしています。</p>
 
 <p>そろそろ、だれか Qt Network Authorization を触った記事を書いてくれないだろうか？</p>
 
@@ -1605,7 +1605,7 @@ setTokenCredentialsUrl(QUrl("https://api.twitter.com/oauth/access_token"));
 <h2 id="%E5%8F%82%E8%80%83">参考</h2>
 
 <ul>
-<li><a href="http://www.sharkpp.net/blog/2017/01/28/first-impression-qt-network-authorization.html">はじめての Qt Network Authorization — さめたすたすのお家</a></li>
+<li><a href="/blog/2017/01/28/first-impression-qt-network-authorization.html">はじめての Qt Network Authorization — さめたすたすのお家</a></li>
 <li><a href="https://doc-snapshots.qt.io/qt5-5.8/examples-qtnetworkauth.html">Qt Network Authorization Examples | Qt Network Authorization 5.8</a></li>
 <li><a href="https://dev.twitter.com/docs">Twitter Developer Documentation — Twitter Developers</a></li>
 <li><a href="https://github.com/sharkpp/NetworkStorageAccessSample">sharkpp/NetworkStorageAccessSample: Qt Network Authorization "Network storage access" sample</a></li>

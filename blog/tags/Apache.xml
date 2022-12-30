@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/Apache.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/Apache.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[QNAP TS-109II で Subversionを使う]]></title>
-            <link href="http://www.sharkpp.net/blog/2011/12/05/using-subversion-with-qnap-ts109II.html"/>
+            <link href="https://www.sharkpp.net/blog/2011/12/05/using-subversion-with-qnap-ts109II.html"/>
             <updated>2011-12-05T00:23:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2011/12/05/using-subversion-with-qnap-ts109II.html</id>
+            <id>https://www.sharkpp.net/blog/2011/12/05/using-subversion-with-qnap-ts109II.html</id>
             <content type="html"><![CDATA[<p>久しぶりに、NAS(QNAP TS-109II)の環境を作り直したのでメモ。</p>
 
 <p>元々はsubversionを入れたいがためにdebianを入れていたけど、どうもそんな小難しいことをしなくてもSubversionを動かせるって情報を見つけたので今の環境を破棄してまで試してみる。</p>

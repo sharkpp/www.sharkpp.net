@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/categories/HSP%E7%94%A8%E3%83%84%E3%83%BC%E3%83%AB.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/categories/HSP%E7%94%A8%E3%83%84%E3%83%BC%E3%83%AB.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[”yabuinu” 難読化＆独自スクランブル ツール for HSP 3.x]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/09/30/hsp-yabuinu.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/09/30/hsp-yabuinu.html"/>
             <updated>2009-09-30T00:05:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/09/30/hsp-yabuinu.html</id>
+            <id>https://www.sharkpp.net/blog/2009/09/30/hsp-yabuinu.html</id>
             <content type="html"><![CDATA[<h3 id="%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E">ソフトの説明</h3>
 
 <p>HSP3用のオブジェクト難読化＆独自スクランブルツールです。</p>
@@ -77,9 +77,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[hsp3obfus - HSP3オブジェクト難読化ツール]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/08/15/hsp-hsp3obfus.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/08/15/hsp-hsp3obfus.html"/>
             <updated>2008-08-15T01:16:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/08/15/hsp-hsp3obfus.html</id>
+            <id>https://www.sharkpp.net/blog/2008/08/15/hsp-hsp3obfus.html</id>
             <content type="html"><![CDATA[<h2 id="%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E">ソフトの説明</h2>
 
 <p>HSP 3.1用のオブジェクト難読化ツールです。</p>

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/h264.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/h264.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[GoPro HERO 6 で撮影した結果 4GB で分割されてしまった映像を繋げ Full HD H264 へエンコードする方法]]></title>
-            <link href="http://www.sharkpp.net/blog/2020/12/29/concat-gopro-4gb-files-and-encode.html"/>
+            <link href="https://www.sharkpp.net/blog/2020/12/29/concat-gopro-4gb-files-and-encode.html"/>
             <updated>2020-12-29T17:12:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2020/12/29/concat-gopro-4gb-files-and-encode.html</id>
+            <id>https://www.sharkpp.net/blog/2020/12/29/concat-gopro-4gb-files-and-encode.html</id>
             <content type="html"><![CDATA[<p>さてさて、超お久しぶりにブログを書いている sharkpp です。</p>
 
 <p>半年以上更新が止まってしまいましたが、ぼちぼちと再開をさせたいなと思ってる次第...</p>

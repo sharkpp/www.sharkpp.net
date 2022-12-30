@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/UserScript.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/UserScript.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Tumblr. extend shortcut key 作りました]]></title>
-            <link href="http://www.sharkpp.net/blog/2014/11/23/released-tumblr-extend-shortcut-key.html"/>
+            <link href="https://www.sharkpp.net/blog/2014/11/23/released-tumblr-extend-shortcut-key.html"/>
             <updated>2014-11-23T17:51:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2014/11/23/released-tumblr-extend-shortcut-key.html</id>
+            <id>https://www.sharkpp.net/blog/2014/11/23/released-tumblr-extend-shortcut-key.html</id>
             <content type="html"><![CDATA[<p><a href="https://www.tumblr.com/">Tumblr.</a>™のダッシュボードで使用できるショートカットキーを追加するスクリプトを作りました。</p>
 
 <p>レポジトリは <a href="https://github.com/sharkpp-userscripts/tumblr-extend-shortcut-key">sharkpp-userscripts/tumblr-extend-shortcut-key</a> です。</p>

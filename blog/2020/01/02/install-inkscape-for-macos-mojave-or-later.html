@@ -60,7 +60,7 @@
             class="active"><span 
            ><span>macOS 上に Inkscape をインストールする</span
        ></li></ol><article itemscope="itemscope" itemtype="http://schema.org/Article"><meta itemscope="itemscope" itemprop="mainEntityOfPage"
-              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net/blog/2020/01/02/install-inkscape-for-macos-mojave-or-later.html"/><header><h1><span itemprop="headline">macOS 上に Inkscape をインストールする</span><small>post</small></h1></header><div id="toc" class="panel panel-default pull-right"><div class="panel-heading text-center">目次</div><div class="panel-body" style="padding: 10px;"><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#%E7%B5%90%E8%AB%96">結論</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#homebrew-%E7%B5%8C%E7%94%B1%E3%81%A7%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">Homebrew 経由でのインストール</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%8F%82%E8%80%83">参考</a></ul></div></div><div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div><div itemprop="articleBody"><p>macOS を Mojave 10.14 にしてから Inkscape が起動しなくなっていた。
+              itemType="https://schema.org/WebPage" itemid="https://www.sharkpp.net/blog/2020/01/02/install-inkscape-for-macos-mojave-or-later.html"/><header><h1><span itemprop="headline">macOS 上に Inkscape をインストールする</span><small>post</small></h1></header><div id="toc" class="panel panel-default pull-right"><div class="panel-heading text-center">目次</div><div class="panel-body" style="padding: 10px;"><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#%E7%B5%90%E8%AB%96">結論</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#homebrew-%E7%B5%8C%E7%94%B1%E3%81%A7%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">Homebrew 経由でのインストール</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%8F%82%E8%80%83">参考</a></ul></div></div><div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div><div itemprop="articleBody"><p>macOS を Mojave 10.14 にしてから Inkscape が起動しなくなっていた。
 が、まぁ、とりあえず使わないからいいか... と、そのままにしていたところ... 年末に急に使う事態が発生して大慌てで色々調べ入れ直したときの記録。</p><p><a href="/blog/2017/04/30/Install-inkscape-using-homebrew-on-macos.html">以前試した方法</a>ではうまくいかなかったので調べました。</p><p><img src="/thumbs/0d867646943062ca30f59487e83c8755-384x384.png" alt="Inkscape 1.0beta2 version"></p><h2 id="%E7%B5%90%E8%AB%96" itemprop="articleSection">結論</h2><p>結論から書くと、公式に 0.92.2 もしくは 1.0 beta 2 があるのでそちらを利用しましょうということになります。</p><p><img src="/thumbs/7284f6bfabb921bb3c259938794f8558-256x256.png" alt="Inkscape 1.0beta2 download page"></p><p>色々調べましたが、どうもそういうことらしいです。</p><p><a href="https://inkscape.org/ja/release/inkscape-0.92.4/mac-os-x/dmg/dl/">Inkscape 0.92.4 - macOS : dmg | Inkscape</a> によると</p><blockquote><p>Note:
   There is no .dmg file for macOS for the current Inkscape version at this time.
   Please use Inkscape 0.92.2 on macOS &lt;= 10.14. For Catalina (macOS 10.15), there is no stable version available, please use the latest beta version of Inkscape 1.0 or the development version.</p><p>There will be a notarized and signed .dmg file for the upcoming Inkscape 1.0.</p><blockquote><p>注：
@@ -84,10 +84,10 @@ Error: Cannot tap caskformula/caskformula: invalid syntax in tap!
         &nbsp;/&nbsp;
         <i class="fa fa-thumb-tack"></i>&nbsp;<a href="/blog/2020/01/02/install-inkscape-for-macos-mojave-or-later.html">Permalink</a>
         &nbsp;/&nbsp;
-    </span><meta itemprop="url" content="http://www.sharkpp.net/blog/2020/01/02/install-inkscape-for-macos-mojave-or-later.html" /><span itemprop="author" itemscope itemtype="https://schema.org/Person"
+    </span><meta itemprop="url" content="https://www.sharkpp.net/blog/2020/01/02/install-inkscape-for-macos-mojave-or-later.html" /><span itemprop="author" itemscope itemtype="https://schema.org/Person"
           style="display: none;"
        ><span itemprop="name">sharkpp</span
-   ></span><a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2020%2F01%2F02%2Finstall-inkscape-for-macos-mojave-or-later.html"
+   ></span><a href="http://b.hatena.ne.jp/entry/https%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2020%2F01%2F02%2Finstall-inkscape-for-macos-mojave-or-later.html"
        class="hatena-bookmark-button"
        data-hatena-bookmark-title="macOS 上に Inkscape をインストールする &mdash; さめたすたすのお家"
        data-hatena-bookmark-layout="simple-balloon"
@@ -97,7 +97,7 @@ Error: Cannot tap caskformula/caskformula: invalid syntax in tap!
             width="20" height="20" style="border: none;" /></a
       >&nbsp;
     <a href="https://twitter.com/share" class="twitter-share-button"
-       data-url="http://www.sharkpp.net/blog/2020/01/02/install-inkscape-for-macos-mojave-or-later.html" data-via="sharkpp">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><div style="line-height: 25px; height: 25px;"><span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
+       data-url="https://www.sharkpp.net/blog/2020/01/02/install-inkscape-for-macos-mojave-or-later.html" data-via="sharkpp">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><div style="line-height: 25px; height: 25px;"><span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
                         <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
         &nbsp;/&nbsp;
                                 <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:

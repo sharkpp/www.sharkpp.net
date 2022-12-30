@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/brew.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/brew.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[ローカルでの HTTPS テスト環境の構築]]></title>
-            <link href="http://www.sharkpp.net/blog/2020/05/02/build-local-https-test-environment.html"/>
+            <link href="https://www.sharkpp.net/blog/2020/05/02/build-local-https-test-environment.html"/>
             <updated>2020-05-02T16:15:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2020/05/02/build-local-https-test-environment.html</id>
+            <id>https://www.sharkpp.net/blog/2020/05/02/build-local-https-test-environment.html</id>
             <content type="html"><![CDATA[<p>ローカルでのウェブアプリの開発では、もはや https が必須ということで動作確認に難儀していましたが、
 しばらく前にローカルで認証局を簡単に設置できる <a href="https://github.com/FiloSottile/mkcert">mkcert</a> なるツールがあると知ったので、使い方を調べてみました。</p>
 

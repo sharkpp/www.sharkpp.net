@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/Windows.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/Windows.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Windows 8.1 Preview から Windows 8.1 正式版への更新で消えたストアアプリのデータを復旧する方法]]></title>
-            <link href="http://www.sharkpp.net/blog/2013/11/03/win81preview-to-win81-upgrade-store-app-data-restore.html"/>
+            <link href="https://www.sharkpp.net/blog/2013/11/03/win81preview-to-win81-upgrade-store-app-data-restore.html"/>
             <updated>2013-11-03T17:39:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2013/11/03/win81preview-to-win81-upgrade-store-app-data-restore.html</id>
+            <id>https://www.sharkpp.net/blog/2013/11/03/win81preview-to-win81-upgrade-store-app-data-restore.html</id>
             <content type="html"><![CDATA[<p><strong>注意事項</strong> 下記内容を実行する場合は自己責任でお願いします。何がおきても知りません。</p>
 
 <h3 id="%E5%BA%8F%E7%AB%A0">序章</h3>
@@ -140,9 +140,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[Surface RT 購入したよ！]]></title>
-            <link href="http://www.sharkpp.net/blog/2013/03/16/bought-surface-rt.html"/>
+            <link href="https://www.sharkpp.net/blog/2013/03/16/bought-surface-rt.html"/>
             <updated>2013-03-16T01:40:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2013/03/16/bought-surface-rt.html</id>
+            <id>https://www.sharkpp.net/blog/2013/03/16/bought-surface-rt.html</id>
             <content type="html"><![CDATA[<p><a href="http://www.microsoft.com/surface/ja-jp">Surface RT</a>が日本上陸とのことなので購入してみました。</p>
 
 <p>キーボードとかは別のを使おうと思ってるので本体のみにしています。</p>
@@ -202,9 +202,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[QEmu Launcher]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/07/21/qemul.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/07/21/qemul.html"/>
             <updated>2008-07-21T00:06:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/07/21/qemul.html</id>
+            <id>https://www.sharkpp.net/blog/2008/07/21/qemul.html</id>
             <content type="html"><![CDATA[<h2 id="%E7%94%BB%E9%9D%A2">画面</h2>
 
 <p><img src="/images/2008_0721_qemul.jpg" alt="画面" /></p>

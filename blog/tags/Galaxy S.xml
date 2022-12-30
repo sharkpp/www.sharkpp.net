@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/Galaxy%20S.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/Galaxy%20S.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[QNAP TS-109II と GALAXY S(SC-02B) をOpenVPNで繋ぐ]]></title>
-            <link href="http://www.sharkpp.net/blog/2011/12/10/qnap-ts-109-galaxys-openvpn.html"/>
+            <link href="https://www.sharkpp.net/blog/2011/12/10/qnap-ts-109-galaxys-openvpn.html"/>
             <updated>2011-12-10T16:15:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2011/12/10/qnap-ts-109-galaxys-openvpn.html</id>
+            <id>https://www.sharkpp.net/blog/2011/12/10/qnap-ts-109-galaxys-openvpn.html</id>
             <content type="html"><![CDATA[<p>NAS(QNAP TS-109II)をゴニョゴニョやりながらなんとかOpenVPN使って、3G/WiFi経由でGALAXY S(SC-02B)と通信できたのでメモ。</p>
 
 <ul>

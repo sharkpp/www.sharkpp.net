@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/%E3%81%98%E3%82%85%E3%81%92%E3%82%80%E3%81%A3%E3%81%9F%E3%83%BC.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/%E3%81%98%E3%82%85%E3%81%92%E3%82%80%E3%81%A3%E3%81%9F%E3%83%BC.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[じゅげむったーの開発日記 その８]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/10/21/jugemutter-development-diary-8th.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/10/21/jugemutter-development-diary-8th.html"/>
             <updated>2017-10-21T17:41:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/10/21/jugemutter-development-diary-8th.html</id>
+            <id>https://www.sharkpp.net/blog/2017/10/21/jugemutter-development-diary-8th.html</id>
             <content type="html"><![CDATA[<p>今回は、明日行われる <a href="https://techbookfest.org/event/tbf03">技術書典３</a> に前日入りして、<a href="https://qt-users.connpass.com/event/68878/">Qt 勉強会 @ Tokyo #52</a> に参加してきました。</p>
 
 <p>東京の勉強会はすごく久しぶりの参加でした。</p>
@@ -195,9 +195,9 @@ else {
         </entry>
             <entry>
             <title type="html"><![CDATA[じゅげむったーの開発日記 その７]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/10/04/jugemutter-development-diary-7th.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/10/04/jugemutter-development-diary-7th.html"/>
             <updated>2017-10-04T01:05:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/10/04/jugemutter-development-diary-7th.html</id>
+            <id>https://www.sharkpp.net/blog/2017/10/04/jugemutter-development-diary-7th.html</id>
             <content type="html"><![CDATA[<p>前回に引き続き <a href="https://qt-users.connpass.com/event/67390/">Qt 勉強会 @ Nagoya No13 一区切り会 - connpass</a> に参加しました。
 とりあえず、今回でもくもく会は一旦一区切りとなるので、このあとはボチボチと進めていこうかなと思います。</p>
 
@@ -352,9 +352,9 @@ GNU gettext の <code>.po</code> と <code>.mo</code> との関係と同じで�
         </entry>
             <entry>
             <title type="html"><![CDATA[じゅげむったーの開発日記 その６]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/09/27/jugemutter-development-diary-6th.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/09/27/jugemutter-development-diary-6th.html"/>
             <updated>2017-09-27T12:40:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/09/27/jugemutter-development-diary-6th.html</id>
+            <id>https://www.sharkpp.net/blog/2017/09/27/jugemutter-development-diary-6th.html</id>
             <content type="html"><![CDATA[<p>遅くなりましたが、今月も引き続き参加した <a href="https://qt-users.connpass.com/event/65548/">Qt 勉強会 @ Nagoya No12 - connpass</a> のまとめです。</p>
 
 <p>重大発表があってちょっとびっくりでした。
@@ -454,9 +454,9 @@ $ openssl rsa -in tmp.der -inform DER -out server-key.pem -outform pem
         </entry>
             <entry>
             <title type="html"><![CDATA[じゅげむったーの開発日記 その５]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/08/23/jugemutter-development-diary-5th.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/08/23/jugemutter-development-diary-5th.html"/>
             <updated>2017-08-23T01:50:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/08/23/jugemutter-development-diary-5th.html</id>
+            <id>https://www.sharkpp.net/blog/2017/08/23/jugemutter-development-diary-5th.html</id>
             <content type="html"><![CDATA[<p>さて、今月も引き続き参加した <a href="https://qt-users.connpass.com/event/62861/">Qt 勉強会 @ Nagoya No11 - connpass</a> のまとめ。</p>
 
 <p>つぶやきは <a href="https://togetter.com/li/1146658">Qt 勉強会 @ Nagoya No11 つぶやきまとめ - Togetterまとめ</a> でまとめられています。</p>
@@ -521,9 +521,9 @@ $ openssl rsa -in tmp.der -inform DER -out server-key.pem -outform pem
         </entry>
             <entry>
             <title type="html"><![CDATA[じゅげむったーの開発日記 その４]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/07/16/jugemutter-development-diary-4th.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/07/16/jugemutter-development-diary-4th.html"/>
             <updated>2017-07-16T18:10:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/07/16/jugemutter-development-diary-4th.html</id>
+            <id>https://www.sharkpp.net/blog/2017/07/16/jugemutter-development-diary-4th.html</id>
             <content type="html"><![CDATA[<p>ただいま、<a href="https://github.com/sharkpp/Jugemutter">じゅげむったー</a> の実装中なのです。</p>
 
 <p>まあ、それはともかくとして、「じゅげむったー」実装中に Qt 関連で躓いた部分や発生した問題の解決方法を、メモしておいたら溜まってきたので一度放出しようかと。</p>
@@ -756,9 +756,9 @@ QToolBar QToolButton:pressed {
         </entry>
             <entry>
             <title type="html"><![CDATA[じゅげむったーの開発日記 その３]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/06/17/jugemutter-development-diary-3rd.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/06/17/jugemutter-development-diary-3rd.html"/>
             <updated>2017-06-17T22:57:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/06/17/jugemutter-development-diary-3rd.html</id>
+            <id>https://www.sharkpp.net/blog/2017/06/17/jugemutter-development-diary-3rd.html</id>
             <content type="html"><![CDATA[<p>さて、先月に引き続いて今月も参加した <a href="https://qt-users.connpass.com/event/58337/">Qt 勉強会 @ Nagoya No9(17.06) - connpass</a> のまとめ。</p>
 
 <p>つぶやきは <a href="https://togetter.com/li/1127556">Qt勉強会 Tokyo #48 + @Nagoya #9 つぶやきまとめ</a> でまとめられています。</p>
@@ -832,9 +832,9 @@ QToolBar QToolButton:pressed {
         </entry>
             <entry>
             <title type="html"><![CDATA[じゅげむったーの開発日記 その２]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/05/20/jugemutter-development-diary-2nd.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/05/20/jugemutter-development-diary-2nd.html"/>
             <updated>2017-05-20T17:04:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/05/20/jugemutter-development-diary-2nd.html</id>
+            <id>https://www.sharkpp.net/blog/2017/05/20/jugemutter-development-diary-2nd.html</id>
             <content type="html"><![CDATA[<p>さて、先月に引き続いて今月も参加した <a href="https://qt-users.connpass.com/event/57080/">Qt 勉強会 @ Nagoya No8(17.05) - connpass</a> のまとめ。</p>
 
 <p>今月も、長文投稿専用Twitterクライアントの開発の続きをしました。</p>
@@ -876,9 +876,9 @@ QToolBar QToolButton:pressed {
         </entry>
             <entry>
             <title type="html"><![CDATA[じゅげむったー(仮)の開発日記 その１]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/04/16/jugemutter-development-diary-1st.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/04/16/jugemutter-development-diary-1st.html"/>
             <updated>2017-04-16T23:07:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/04/16/jugemutter-development-diary-1st.html</id>
+            <id>https://www.sharkpp.net/blog/2017/04/16/jugemutter-development-diary-1st.html</id>
             <content type="html"><![CDATA[<p>さて、先月に続いて今月も参加した <a href="https://qt-users.connpass.com/event/53963/">Qt 勉強会 @ Nagoya No7(17.04) - connpass</a> のまとめ。</p>
 
 <p>つぶやきは <a href="https://togetter.com/li/1101299">Qt勉強会 Tokyo #46 + Nagoya # 7 つぶやきまとめ - Togetterまとめ</a> でまとめられています。</p>

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/Android.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/Android.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[FREETEL RAIJIN 開封の儀と一月ほど使ってみた感じ]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/11/17/unboxing-and-used-one-month-of-freetel-raijin.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/11/17/unboxing-and-used-one-month-of-freetel-raijin.html"/>
             <updated>2017-11-17T02:31:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/11/17/unboxing-and-used-one-month-of-freetel-raijin.html</id>
+            <id>https://www.sharkpp.net/blog/2017/11/17/unboxing-and-used-one-month-of-freetel-raijin.html</id>
             <content type="html"><![CDATA[<p>前に使っていた <a href="/blog/2015/12/07/unboxing-and-used-one-month-of-nexus-5x.html">Google Nexus 5X</a> が、巷で話題の再起動ループに陥ったので、新しいスマホを購入しました。</p>
 
 <p>今回は、長々と代替機で過ごしていると<a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&amp;hl=ja">某ボールを投げて何某をゲットするゲーム</a>が遊べないのでサクッと選びました。
@@ -263,9 +263,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[Xperia Touch 開封の儀]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/06/27/unboxing-xperia-touch.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/06/27/unboxing-xperia-touch.html"/>
             <updated>2017-06-27T00:30:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/06/27/unboxing-xperia-touch.html</id>
+            <id>https://www.sharkpp.net/blog/2017/06/27/unboxing-xperia-touch.html</id>
             <content type="html"><![CDATA[<p><a href="http://www.sonymobile.co.jp/product/smartproducts/g1109/">Xperia Touch G1109</a> を買ってみたので開封の儀を執り行いました。</p>
 
 <p>IT系のニュース記事で紹介されたときから気になっていましたが、先日の事、ついに予約開始している事に数日たってから気が付きました。
@@ -399,9 +399,9 @@ USB type-C 延長、は大丈夫かわからないから、テーブルタップ
         </entry>
             <entry>
             <title type="html"><![CDATA[Nexus 5X 開封の儀と一ヶ月ほど使ってみた感じ(追記あり)]]></title>
-            <link href="http://www.sharkpp.net/blog/2015/12/07/unboxing-and-used-one-month-of-nexus-5x.html"/>
+            <link href="https://www.sharkpp.net/blog/2015/12/07/unboxing-and-used-one-month-of-nexus-5x.html"/>
             <updated>2015-12-07T02:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2015/12/07/unboxing-and-used-one-month-of-nexus-5x.html</id>
+            <id>https://www.sharkpp.net/blog/2015/12/07/unboxing-and-used-one-month-of-nexus-5x.html</id>
             <content type="html"><![CDATA[<p>以前のスマホ、まだ使えたりするのですが、3 年以上前の機種なのでそろそろ変えようかと思い、しばし悩んだ末に Nexsu 5X を買うことにしました。</p>
 
 <p>まあ、お財布携帯とかワンセグとか全く使っていなかったので 2 年はアップデートが保証されている Nexus シリーズの最新機種にした訳です。</p>
@@ -621,9 +621,9 @@ Nexus 5 では付いていたのになんで無くしたんだろう？</li>
         </entry>
             <entry>
             <title type="html"><![CDATA[Tumbdash公開]]></title>
-            <link href="http://www.sharkpp.net/blog/2012/10/16/tumbdash.html"/>
+            <link href="https://www.sharkpp.net/blog/2012/10/16/tumbdash.html"/>
             <updated>2012-10-16T00:54:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2012/10/16/tumbdash.html</id>
+            <id>https://www.sharkpp.net/blog/2012/10/16/tumbdash.html</id>
             <content type="html"><![CDATA[<p>Android用のダッシュボード専用TumblrクライアントのTumbdashを公開しました。 初めてのAndroidアプリは、ゲームとかではなくやっぱりツール系になってしまいました(´･ω･&#96;)</p>
 
 <p><a href="http://play.google.com/store/apps/details?id=net.sharkpp.Tumbdash"><img src="http://developer.android.com/images/brand/en_app_rgb_wo_45.png" alt="Android app on Google Play" /></a></p>
@@ -642,9 +642,9 @@ Nexus 5 では付いていたのになんで無くしたんだろう？</li>
         </entry>
             <entry>
             <title type="html"><![CDATA[Titanium Mobileのメモ(その１)]]></title>
-            <link href="http://www.sharkpp.net/blog/2012/09/30/titanium-mobile-memo-1.html"/>
+            <link href="https://www.sharkpp.net/blog/2012/09/30/titanium-mobile-memo-1.html"/>
             <updated>2012-09-30T23:05:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2012/09/30/titanium-mobile-memo-1.html</id>
+            <id>https://www.sharkpp.net/blog/2012/09/30/titanium-mobile-memo-1.html</id>
             <content type="html"><![CDATA[<p>とある理由で急遽Androidのアプリを作る必要に迫られ前から興味があっTItanium Mobileに手を出した次第。</p>
 
 <p>作る過程で調べたことを色々メモ。</p>
@@ -664,9 +664,9 @@ Nexus 5 では付いていたのになんで無くしたんだろう？</li>
         </entry>
             <entry>
             <title type="html"><![CDATA[QNAP TS-109II と GALAXY S(SC-02B) をOpenVPNで繋ぐ]]></title>
-            <link href="http://www.sharkpp.net/blog/2011/12/10/qnap-ts-109-galaxys-openvpn.html"/>
+            <link href="https://www.sharkpp.net/blog/2011/12/10/qnap-ts-109-galaxys-openvpn.html"/>
             <updated>2011-12-10T16:15:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2011/12/10/qnap-ts-109-galaxys-openvpn.html</id>
+            <id>https://www.sharkpp.net/blog/2011/12/10/qnap-ts-109-galaxys-openvpn.html</id>
             <content type="html"><![CDATA[<p>NAS(QNAP TS-109II)をゴニョゴニョやりながらなんとかOpenVPN使って、3G/WiFi経由でGALAXY S(SC-02B)と通信できたのでメモ。</p>
 
 <ul>
@@ -1099,9 +1099,9 @@ comp-lzo
         </entry>
             <entry>
             <title type="html"><![CDATA[Androidアプリの開発(その3)]]></title>
-            <link href="http://www.sharkpp.net/blog/2011/03/29/android-app-develop-3.html"/>
+            <link href="https://www.sharkpp.net/blog/2011/03/29/android-app-develop-3.html"/>
             <updated>2011-03-29T01:21:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2011/03/29/android-app-develop-3.html</id>
+            <id>https://www.sharkpp.net/blog/2011/03/29/android-app-develop-3.html</id>
             <content type="html"><![CDATA[<p>色々メモ</p>
 
 <p>なんだかんだ牛歩の歩みが如しですが何だか楽しいです。</p>
@@ -1180,9 +1180,9 @@ comp-lzo
         </entry>
             <entry>
             <title type="html"><![CDATA[Androidアプリの開発(その2)]]></title>
-            <link href="http://www.sharkpp.net/blog/2010/11/25/android-app-develop-2.html"/>
+            <link href="https://www.sharkpp.net/blog/2010/11/25/android-app-develop-2.html"/>
             <updated>2010-11-25T00:18:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2010/11/25/android-app-develop-2.html</id>
+            <id>https://www.sharkpp.net/blog/2010/11/25/android-app-develop-2.html</id>
             <content type="html"><![CDATA[<h4 id="eclipse-3.6-%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%8C%96%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">eclipse 3.6 の日本語化について</h4>
 
 <p>もともと<a href="http://www.eclipsewiki.net/eclipse/index.php?Eclipse%20Babel">Eclipse Babel</a>を参考に<a href="http://www.eclipse.org/babel/downloads.php">babel</a>で日本語化をしていた(簡単なので)。</p>
@@ -1206,9 +1206,9 @@ comp-lzo
         </entry>
             <entry>
             <title type="html"><![CDATA[Androidアプリの開発(その1)]]></title>
-            <link href="http://www.sharkpp.net/blog/2010/11/10/android-app-develop-1.html"/>
+            <link href="https://www.sharkpp.net/blog/2010/11/10/android-app-develop-1.html"/>
             <updated>2010-11-10T02:05:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2010/11/10/android-app-develop-1.html</id>
+            <id>https://www.sharkpp.net/blog/2010/11/10/android-app-develop-1.html</id>
             <content type="html"><![CDATA[<p>Androidアプリ開発に必要な事柄をめもめも...</p>
 
 <p>おもにGalaxyS関連が多くなります。</p>
@@ -1245,9 +1245,9 @@ comp-lzo
         </entry>
             <entry>
             <title type="html"><![CDATA[近況(2010-10-24)]]></title>
-            <link href="http://www.sharkpp.net/blog/2010/10/24/recent-state-2010-10-24.html"/>
+            <link href="https://www.sharkpp.net/blog/2010/10/24/recent-state-2010-10-24.html"/>
             <updated>2010-10-24T21:05:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2010/10/24/recent-state-2010-10-24.html</id>
+            <id>https://www.sharkpp.net/blog/2010/10/24/recent-state-2010-10-24.html</id>
             <content type="html"><![CDATA[<p><a href="http://developer.android.com/sdk/">Android SDK</a>を入れてエミュレータを動かしてみたりとかして遊んでいます。</p>
 
 <p>相変わらず時間がorz...</p>

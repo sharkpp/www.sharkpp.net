@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/categories/game.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/categories/game.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[モグラ叩き]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/07/21/mogura.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/07/21/mogura.html"/>
             <updated>2008-07-21T00:07:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/07/21/mogura.html</id>
+            <id>https://www.sharkpp.net/blog/2008/07/21/mogura.html</id>
             <content type="html"><![CDATA[<h2 id="%E7%94%BB%E9%9D%A2">画面</h2>
 
 <p><img src="/images/2008_0721_mogura.jpg" alt="画面" /></p>
@@ -71,9 +71,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[AtomScan]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/07/21/atomscan.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/07/21/atomscan.html"/>
             <updated>2008-07-21T00:07:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/07/21/atomscan.html</id>
+            <id>https://www.sharkpp.net/blog/2008/07/21/atomscan.html</id>
             <content type="html"><![CDATA[<h2 id="%E7%94%BB%E9%9D%A2">画面</h2>
 
 <p><img src="/images/2008_0721_atomscan.jpg" alt="画面" /></p>

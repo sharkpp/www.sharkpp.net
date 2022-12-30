@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/VC%2B%2B.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/VC%2B%2B.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Microsoft Visual C++ 2008 Express Edition で64ビット版のプログラムを作る方法]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/04/26/visual-c-2008-express-edition-enable-64-program.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/04/26/visual-c-2008-express-edition-enable-64-program.html"/>
             <updated>2009-04-26T18:48:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/04/26/visual-c-2008-express-edition-enable-64-program.html</id>
+            <id>https://www.sharkpp.net/blog/2009/04/26/visual-c-2008-express-edition-enable-64-program.html</id>
             <content type="html"><![CDATA[<p>とあるソフトのシェル拡張が64bitに対応しておらず使いづらかったので、誰も作っていないようなので作ってみようかなと思い Visual C++ Express Edition で64ビット版のプログラムを作る方法がないか調べてみました。</p>
 
 <p>すると Visual C++ 2008 Express Edition であれば出来そうなのでやってみました。</p>

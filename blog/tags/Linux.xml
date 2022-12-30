@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/Linux.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/Linux.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Synology のパッケージのビルド方法について調べてみた]]></title>
-            <link href="http://www.sharkpp.net/blog/2021/09/07/synology-package-building.html"/>
+            <link href="https://www.sharkpp.net/blog/2021/09/07/synology-package-building.html"/>
             <updated>2021-09-07T22:05:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2021/09/07/synology-package-building.html</id>
+            <id>https://www.sharkpp.net/blog/2021/09/07/synology-package-building.html</id>
             <content type="html"><![CDATA[<p>Synology の NAS で利用可能なパッケージを作ってみようと思い、色々と調べてみました。
 調べている最中に DSM 7.0 も正式リリースされたので、合わせてそのバージョンも調査の対象としました。</p>
 
@@ -467,9 +467,9 @@ $ pkgscripts/PkgCreate.py -v 7.0 -p braswell -c ExamplePackage
         </entry>
             <entry>
             <title type="html"><![CDATA[Sculpin を実行するために xrea.com 上で libxml2 を構築する方法]]></title>
-            <link href="http://www.sharkpp.net/blog/2015/05/31/how-to-build-libxml2-on-xrea-com-for-sculpin.html"/>
+            <link href="https://www.sharkpp.net/blog/2015/05/31/how-to-build-libxml2-on-xrea-com-for-sculpin.html"/>
             <updated>2015-05-31T21:30:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2015/05/31/how-to-build-libxml2-on-xrea-com-for-sculpin.html</id>
+            <id>https://www.sharkpp.net/blog/2015/05/31/how-to-build-libxml2-on-xrea-com-for-sculpin.html</id>
             <content type="html"><![CDATA[<p>Sculpin を xrea.com で動かそうとしたら、</p>
 
 <pre><code class="bash"># php55cli sculpin.phar self-update
@@ -848,9 +848,9 @@ drwxr-xr-x  4 guest users 96 2015-05-31 21:16 man
         </entry>
             <entry>
             <title type="html"><![CDATA[QNAP TS-109II への syslog-ng の導入メモ]]></title>
-            <link href="http://www.sharkpp.net/blog/2013/01/27/install-qnap-ts-109ii-syslog-ng.html"/>
+            <link href="https://www.sharkpp.net/blog/2013/01/27/install-qnap-ts-109ii-syslog-ng.html"/>
             <updated>2013-01-27T13:27:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2013/01/27/install-qnap-ts-109ii-syslog-ng.html</id>
+            <id>https://www.sharkpp.net/blog/2013/01/27/install-qnap-ts-109ii-syslog-ng.html</id>
             <content type="html"><![CDATA[<p>なんか今使ってるNASも古くなってきたけど、まだまだ現役です。</p>
 
 <p>ってことで、ルーターのログを取るために QNAP TS-109II への syslog-ng の導入をしたときのメモです。</p>
@@ -1036,9 +1036,9 @@ compress
         </entry>
             <entry>
             <title type="html"><![CDATA[QNAP TS-109II と GALAXY S(SC-02B) をOpenVPNで繋ぐ]]></title>
-            <link href="http://www.sharkpp.net/blog/2011/12/10/qnap-ts-109-galaxys-openvpn.html"/>
+            <link href="https://www.sharkpp.net/blog/2011/12/10/qnap-ts-109-galaxys-openvpn.html"/>
             <updated>2011-12-10T16:15:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2011/12/10/qnap-ts-109-galaxys-openvpn.html</id>
+            <id>https://www.sharkpp.net/blog/2011/12/10/qnap-ts-109-galaxys-openvpn.html</id>
             <content type="html"><![CDATA[<p>NAS(QNAP TS-109II)をゴニョゴニョやりながらなんとかOpenVPN使って、3G/WiFi経由でGALAXY S(SC-02B)と通信できたのでメモ。</p>
 
 <ul>
@@ -1471,9 +1471,9 @@ comp-lzo
         </entry>
             <entry>
             <title type="html"><![CDATA[QNAP TS-109II で Subversionを使う]]></title>
-            <link href="http://www.sharkpp.net/blog/2011/12/05/using-subversion-with-qnap-ts109II.html"/>
+            <link href="https://www.sharkpp.net/blog/2011/12/05/using-subversion-with-qnap-ts109II.html"/>
             <updated>2011-12-05T00:23:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2011/12/05/using-subversion-with-qnap-ts109II.html</id>
+            <id>https://www.sharkpp.net/blog/2011/12/05/using-subversion-with-qnap-ts109II.html</id>
             <content type="html"><![CDATA[<p>久しぶりに、NAS(QNAP TS-109II)の環境を作り直したのでメモ。</p>
 
 <p>元々はsubversionを入れたいがためにdebianを入れていたけど、どうもそんな小難しいことをしなくてもSubversionを動かせるって情報を見つけたので今の環境を破棄してまで試してみる。</p>

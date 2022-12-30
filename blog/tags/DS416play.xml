@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/DS416play.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/DS416play.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Synology DS416play の OS を DSM 7.0 へアップグレードしてみた]]></title>
-            <link href="http://www.sharkpp.net/blog/2021/08/07/synology-ds416play-upgrade-dsm7.html"/>
+            <link href="https://www.sharkpp.net/blog/2021/08/07/synology-ds416play-upgrade-dsm7.html"/>
             <updated>2021-08-07T19:35:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2021/08/07/synology-ds416play-upgrade-dsm7.html</id>
+            <id>https://www.sharkpp.net/blog/2021/08/07/synology-ds416play-upgrade-dsm7.html</id>
             <content type="html"><![CDATA[<p><a href="http://web.archive.org/web/20170709043315if_/https://www.synology.com/ja-jp/products/DS216play">Synology DS416play</a> の OS を DSM 7.0 へアップグレードした時の記録。</p>
 
 <p>7月中旬に DSM 7.0 の正式リリースがでるも、しばらくは様子見にしていたけど、致命的な不具合もなさそうだし <a href="https://www.synology.com/ja-jp/DSM70/SynologyPhotos">Synology Photos</a> を使ってみたくなったのでアップグレードしてみることとした。</p>

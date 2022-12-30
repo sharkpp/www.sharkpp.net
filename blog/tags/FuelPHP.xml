@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/FuelPHP.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/FuelPHP.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[NestedSets Model を使って FuelPHP 用コメントボックスパッケージを作った話]]></title>
-            <link href="http://www.sharkpp.net/blog/2015/12/05/fuelphp-advent-calender-2015-5th.html"/>
+            <link href="https://www.sharkpp.net/blog/2015/12/05/fuelphp-advent-calender-2015-5th.html"/>
             <updated>2015-12-05T01:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2015/12/05/fuelphp-advent-calender-2015-5th.html</id>
+            <id>https://www.sharkpp.net/blog/2015/12/05/fuelphp-advent-calender-2015-5th.html</id>
             <content type="html"><![CDATA[<p>こんにちは、こんばんは、昨日に引き続き <a href="http://qiita.com/advent-calendar/2015/fuelphp">FuelPHP Advent Calendar 2015</a> の 5 日目を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p>
 
 <p>今回は、一番最後に追加された <a href="http://fuelphp.com/docs/packages/orm/model/nestedset.html">NestedSets Model</a> (日本語訳は <a href="http://fuelphp.jp/docs/1.8/packages/orm/model/nestedset.html">NestedSets Model @ fuelphp.jp</a> を参照) を使って <a href="https://disqus.com/">Disqus</a> や <a href="https://developers.facebook.com/docs/plugins/comments">Facebook Comments</a> のようなものを貼り付けられる FuelPHP パッケージを作ってみた話をしようかと思います。</p>
@@ -201,16 +201,16 @@ class Model_Commentbox extends \Orm\Model_Nestedset
 <p>この投稿は <strong><a href="http://qiita.com/advent-calendar/2015/fuelphp">FuelPHP Advent Calendar 2015</a></strong> の <strong>5日目</strong>の記事です。</p>
 
 <ul>
-<li>4日目の記事: <a href="http://www.sharkpp.net/blog/2015/12/04/fuelphp-advent-calender-2015-4th.html">Markdown Wiki を通して Model_Temporal の使い方を覚えよう</a></li>
+<li>4日目の記事: <a href="/blog/2015/12/04/fuelphp-advent-calender-2015-4th.html">Markdown Wiki を通して Model_Temporal の使い方を覚えよう</a></li>
 <li>6日目の記事: <a href="http://qiita.com/wata/items/22bf3ad75a854aa8f119">DBUnit拡張を使ったFuelPHPのテストを考える</a></li>
 </ul>
 ]]></content>
         </entry>
             <entry>
             <title type="html"><![CDATA[Markdown Wiki を通して Temporal Model の使い方を覚えよう]]></title>
-            <link href="http://www.sharkpp.net/blog/2015/12/04/fuelphp-advent-calender-2015-4th.html"/>
+            <link href="https://www.sharkpp.net/blog/2015/12/04/fuelphp-advent-calender-2015-4th.html"/>
             <updated>2015-12-04T02:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2015/12/04/fuelphp-advent-calender-2015-4th.html</id>
+            <id>https://www.sharkpp.net/blog/2015/12/04/fuelphp-advent-calender-2015-4th.html</id>
             <content type="html"><![CDATA[<p>こんにちは、こんばんは、<a href="http://qiita.com/advent-calendar/2015/fuelphp">FuelPHP Advent Calendar 2015</a> の 4 日目を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p>
 
 <p>今回は Temporal Model を使って Markdown で記述できる簡易 Wiki を作ってみることにします。</p>
@@ -799,15 +799,15 @@ $ php oil g model page title:string body:text body_html:text brief:string --temp
 
 <ul>
 <li>3日目の記事: <a href="http://qiita.com/ken880guchi/items/300b16b8b8473c3b45a9">FuelPHP で TODO アプリケーションを作ってみた。</a></li>
-<li>5日目の記事: <a href="http://www.sharkpp.net/blog/2015/12/05/fuelphp-advent-calender-2015-5th.html">NestedSets Model を使って FuelPHP 用コメントボックスパッケージを作った話</a></li>
+<li>5日目の記事: <a href="/blog/2015/12/05/fuelphp-advent-calender-2015-5th.html">NestedSets Model を使って FuelPHP 用コメントボックスパッケージを作った話</a></li>
 </ul>
 ]]></content>
         </entry>
             <entry>
             <title type="html"><![CDATA[FuelPHP ドキュメント翻訳のための git メモ]]></title>
-            <link href="http://www.sharkpp.net/blog/2015/11/03/git-memo-for-fuel-docs-trans.html"/>
+            <link href="https://www.sharkpp.net/blog/2015/11/03/git-memo-for-fuel-docs-trans.html"/>
             <updated>2015-11-03T08:54:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2015/11/03/git-memo-for-fuel-docs-trans.html</id>
+            <id>https://www.sharkpp.net/blog/2015/11/03/git-memo-for-fuel-docs-trans.html</id>
             <content type="html"><![CDATA[<p><a href="/blog/2013/06/01/first-github-fork-and-fuelphp-docs-jp.html">初めてのForkとFuelPHP 1.6 翻訳ウィーク参加</a> で git の操作方法をメモってたけど色々おかしかったので新たにメモ。</p>
 
 <p>それ以外にも関連する事柄をメモ。</p>
@@ -928,9 +928,9 @@ $ git push origin &lt;NEW_BRANCH_NAME&gt;
         </entry>
             <entry>
             <title type="html"><![CDATA[FuelPHPのメモ]]></title>
-            <link href="http://www.sharkpp.net/blog/2015/08/23/fuelphp-memo.html"/>
+            <link href="https://www.sharkpp.net/blog/2015/08/23/fuelphp-memo.html"/>
             <updated>2015-08-23T18:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2015/08/23/fuelphp-memo.html</id>
+            <id>https://www.sharkpp.net/blog/2015/08/23/fuelphp-memo.html</id>
             <content type="html"><![CDATA[<p>落ち葉拾い的な？</p>
 
 <p>SSDの肥やしになっていたのをサルベージしてきました。</p>
@@ -1072,9 +1072,9 @@ Tests: 1, Assertions: 0, Errors: 1.
         </entry>
             <entry>
             <title type="html"><![CDATA[ひとり FuelPHP ドキュメント翻訳月間 お疲れ様でした]]></title>
-            <link href="http://www.sharkpp.net/blog/2015/06/22/fuelphp-documents-translation-month-alone.html"/>
+            <link href="https://www.sharkpp.net/blog/2015/06/22/fuelphp-documents-translation-month-alone.html"/>
             <updated>2015-06-22T00:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2015/06/22/fuelphp-documents-translation-month-alone.html</id>
+            <id>https://www.sharkpp.net/blog/2015/06/22/fuelphp-documents-translation-month-alone.html</id>
             <content type="html"><![CDATA[<p>３月と４月はひとり FuelPHP ドキュメント翻訳月間な感じでした。</p>
 
 <p>、、、ってのを 4 月頭に公開しようとしたらホムペ吹っ飛んでて公開できなかったので今頃公開しますよってことで。</p>
@@ -1175,9 +1175,9 @@ Tests: 1, Assertions: 0, Errors: 1.
         </entry>
             <entry>
             <title type="html"><![CDATA[Request_Curlにまつわるエトセトラ]]></title>
-            <link href="http://www.sharkpp.net/blog/2013/12/14/fuelphp-advent-calendar-2013-14th-day.html"/>
+            <link href="https://www.sharkpp.net/blog/2013/12/14/fuelphp-advent-calendar-2013-14th-day.html"/>
             <updated>2013-12-14T22:26:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2013/12/14/fuelphp-advent-calendar-2013-14th-day.html</id>
+            <id>https://www.sharkpp.net/blog/2013/12/14/fuelphp-advent-calendar-2013-14th-day.html</id>
             <content type="html"><![CDATA[<p><a href="http://atnd.org/events/45096">FuelPHP Advent Calendar 2013</a> 14日目。</p>
 
 <p><a href="https://twitter.com/sharkpp">@sharkpp</a>です。</p>
@@ -1318,9 +1318,9 @@ foreach ($header as $key =&gt; $value) { $curl-&gt;set_header($key, $value); }
         </entry>
             <entry>
             <title type="html"><![CDATA[FuelPHPをphar化してポータブルに！]]></title>
-            <link href="http://www.sharkpp.net/blog/2013/12/01/fuelphp-advent-calendar-2013-1st-day.html"/>
+            <link href="https://www.sharkpp.net/blog/2013/12/01/fuelphp-advent-calendar-2013-1st-day.html"/>
             <updated>2013-12-01T14:57:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2013/12/01/fuelphp-advent-calendar-2013-1st-day.html</id>
+            <id>https://www.sharkpp.net/blog/2013/12/01/fuelphp-advent-calendar-2013-1st-day.html</id>
             <content type="html"><![CDATA[<p><a href="http://atnd.org/events/45096">FuelPHP Advent Calendar 2013</a> 1日目の参加記事です。</p>
 
 <p>初めましての方もご存知の方も、よろしくお願いします。</p>
@@ -1676,9 +1676,9 @@ AddType application/x-httpd-php .phar
         </entry>
             <entry>
             <title type="html"><![CDATA[FuelPHP 勉強会 東海 vol.5 に参加しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2013/10/26/fuelphp-workshop-in-tokai-vol-5.html"/>
+            <link href="https://www.sharkpp.net/blog/2013/10/26/fuelphp-workshop-in-tokai-vol-5.html"/>
             <updated>2013-10-26T20:52:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2013/10/26/fuelphp-workshop-in-tokai-vol-5.html</id>
+            <id>https://www.sharkpp.net/blog/2013/10/26/fuelphp-workshop-in-tokai-vol-5.html</id>
             <content type="html"><![CDATA[<p><a href="http://connpass.com/event/3573/">FuelPHP 勉強会 東海 vol.5</a>に行ってきました。</p>
 
 <p>久しぶりの FuelPHP の勉強会です。 会場は先週と同じニューキャストさんのセミナールームでした。</p>
@@ -1752,9 +1752,9 @@ AddType application/x-httpd-php .phar
         </entry>
             <entry>
             <title type="html"><![CDATA[Archelon をGitHubに公開しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2013/09/30/archelon-publish-to-github.html"/>
+            <link href="https://www.sharkpp.net/blog/2013/09/30/archelon-publish-to-github.html"/>
             <updated>2013-09-30T00:14:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2013/09/30/archelon-publish-to-github.html</id>
+            <id>https://www.sharkpp.net/blog/2013/09/30/archelon-publish-to-github.html</id>
             <content type="html"><![CDATA[<p>ここ最近、久々にウェブアプリを作ってました。 相変わらず作業時間が厳しかったですがまあそれなりに動くようになってきたのでとりあえずgithubに公開しました。</p>
 
 <p>動かなかったらごめんなさいorz</p>
@@ -1832,9 +1832,9 @@ AddType application/x-httpd-php .phar
         </entry>
             <entry>
             <title type="html"><![CDATA[初めてのForkとFuelPHP 1.6 翻訳ウィーク参加(追記あり)]]></title>
-            <link href="http://www.sharkpp.net/blog/2013/06/01/first-github-fork-and-fuelphp-docs-jp.html"/>
+            <link href="https://www.sharkpp.net/blog/2013/06/01/first-github-fork-and-fuelphp-docs-jp.html"/>
             <updated>2013-06-01T00:24:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2013/06/01/first-github-fork-and-fuelphp-docs-jp.html</id>
+            <id>https://www.sharkpp.net/blog/2013/06/01/first-github-fork-and-fuelphp-docs-jp.html</id>
             <content type="html"><![CDATA[<p><div class="alert alert-danger alert-dismissible" role="alert">
   <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
   <dl style="margin-bottom: 0; margin-left: 35px;">

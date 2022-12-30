@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/Electron.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/Electron.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Ionic 5 でモバイル＆デスクトップアプリを試してみた]]></title>
-            <link href="http://www.sharkpp.net/blog/2021/04/30/tryout-ionic-mobile-desktop.html"/>
+            <link href="https://www.sharkpp.net/blog/2021/04/30/tryout-ionic-mobile-desktop.html"/>
             <updated>2021-04-30T21:35:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2021/04/30/tryout-ionic-mobile-desktop.html</id>
+            <id>https://www.sharkpp.net/blog/2021/04/30/tryout-ionic-mobile-desktop.html</id>
             <content type="html"><![CDATA[<p>モバイルでもウェブでもデスクトップでも動くサービスを作る方法を調べて、とりあえず React で実装できそうな <a href="https://ionicframework.com/">Ionic 5</a> を試してみることにしました。</p>
 
 <h2 id="%E6%BA%96%E5%82%99">準備</h2>

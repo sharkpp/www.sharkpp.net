@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/Subversion.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/Subversion.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[git メモ：Subversion からのインポート]]></title>
-            <link href="http://www.sharkpp.net/blog/2016/02/21/git-memo-import-from-svn.html"/>
+            <link href="https://www.sharkpp.net/blog/2016/02/21/git-memo-import-from-svn.html"/>
             <updated>2016-02-21T16:48:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2016/02/21/git-memo-import-from-svn.html</id>
-            <content type="html"><![CDATA[<p>以前にも <a href="http://www.sharkpp.net/blog/2014/10/19/github-import-from-svn.html">github.com へ SVNのレポジトリを取り込んで公開する方法</a> で Subversion から git へのインポート方法を調べたけど、再度調べ直してタグとかをちゃんと反映させる方法を試したメモ。</p>
+            <id>https://www.sharkpp.net/blog/2016/02/21/git-memo-import-from-svn.html</id>
+            <content type="html"><![CDATA[<p>以前にも <a href="/blog/2014/10/19/github-import-from-svn.html">github.com へ SVNのレポジトリを取り込んで公開する方法</a> で Subversion から git へのインポート方法を調べたけど、再度調べ直してタグとかをちゃんと反映させる方法を試したメモ。</p>
 
 <p>インポート、としていますが実質やってることは移行と言っても過言ではありません。</p>
 
@@ -145,9 +145,9 @@ $ git branch -a
         </entry>
             <entry>
             <title type="html"><![CDATA[github.com へ SVNのレポジトリを取り込んで公開する方法]]></title>
-            <link href="http://www.sharkpp.net/blog/2014/10/19/github-import-from-svn.html"/>
+            <link href="https://www.sharkpp.net/blog/2014/10/19/github-import-from-svn.html"/>
             <updated>2014-10-19T13:48:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2014/10/19/github-import-from-svn.html</id>
+            <id>https://www.sharkpp.net/blog/2014/10/19/github-import-from-svn.html</id>
             <content type="html"><![CDATA[<p>svn のレポジトリを既存の github レポジトリに取り込む手順をメモ。 多分、既存の git に取り込むのにも使えるはず。</p>
 
 <p>ちなみに取り込むとログに <code>git-svn-id: 〜</code> の用な感じで SVN のリポジトリパスが残るのでパスを秘密にしたい場合は諦めてファイルコピーで取り込んだ方がいいと思います。</p>
@@ -216,9 +216,9 @@ $ rm -rf tmp
         </entry>
             <entry>
             <title type="html"><![CDATA[QNAP TS-109II で Subversionを使う]]></title>
-            <link href="http://www.sharkpp.net/blog/2011/12/05/using-subversion-with-qnap-ts109II.html"/>
+            <link href="https://www.sharkpp.net/blog/2011/12/05/using-subversion-with-qnap-ts109II.html"/>
             <updated>2011-12-05T00:23:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2011/12/05/using-subversion-with-qnap-ts109II.html</id>
+            <id>https://www.sharkpp.net/blog/2011/12/05/using-subversion-with-qnap-ts109II.html</id>
             <content type="html"><![CDATA[<p>久しぶりに、NAS(QNAP TS-109II)の環境を作り直したのでメモ。</p>
 
 <p>元々はsubversionを入れたいがためにdebianを入れていたけど、どうもそんな小難しいことをしなくてもSubversionを動かせるって情報を見つけたので今の環境を破棄してまで試してみる。</p>
@@ -386,9 +386,9 @@ $ rm -rf tmp
         </entry>
             <entry>
             <title type="html"><![CDATA[githubを使い始めました]]></title>
-            <link href="http://www.sharkpp.net/blog/2011/09/18/started-using-the-github.html"/>
+            <link href="https://www.sharkpp.net/blog/2011/09/18/started-using-the-github.html"/>
             <updated>2011-09-18T12:16:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2011/09/18/started-using-the-github.html</id>
+            <id>https://www.sharkpp.net/blog/2011/09/18/started-using-the-github.html</id>
             <content type="html"><![CDATA[<p>githubを今更ながら始めました。</p>
 
 <p>食わず嫌いってほどでは無いですが、Windowsをメインにしている関係で、Subversion + TortoiseSVN のコンボが最強すぎてなかなか使い始める機会が無かったです。</p>
@@ -445,9 +445,9 @@ $ rm -rf tmp
         </entry>
             <entry>
             <title type="html"><![CDATA[バックアップファイルからSVNのダンプファイルへの変換スクリプト その２]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/12/27/backup-to-svn-dump-convert-script-2.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/12/27/backup-to-svn-dump-convert-script-2.html"/>
             <updated>2009-12-27T13:49:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/12/27/backup-to-svn-dump-convert-script-2.html</id>
+            <id>https://www.sharkpp.net/blog/2009/12/27/backup-to-svn-dump-convert-script-2.html</id>
             <content type="html"><![CDATA[<p><a href="/blog/2009/12/13/backup-to-svn-dump-convert-script.html">フォルダまるごとのバックアップからSubversionのリポジトリを作るツールを作ってみた。</a>の続き。</p>
 
 <p>trunkフォルダの自動生成とチープコピー機能をつけた。</p>
@@ -461,9 +461,9 @@ $ rm -rf tmp
         </entry>
             <entry>
             <title type="html"><![CDATA[バックアップファイルからSVNのダンプファイルへの変換スクリプト]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/12/13/backup-to-svn-dump-convert-script.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/12/13/backup-to-svn-dump-convert-script.html"/>
             <updated>2009-12-13T23:58:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/12/13/backup-to-svn-dump-convert-script.html</id>
+            <id>https://www.sharkpp.net/blog/2009/12/13/backup-to-svn-dump-convert-script.html</id>
             <content type="html"><![CDATA[<p>フォルダまるごとのバックアップからSubversionのリポジトリを作るツールを作ってみた。</p>
 
 <p>過去に作ったプロジェクトをSubversionのリポジトリへ追加したかったが、それらしいツールが見つからなかった。</p>

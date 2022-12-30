@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/JavaScript.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/JavaScript.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Hubot アダプタを TypeScript を使って作ってみた]]></title>
-            <link href="http://www.sharkpp.net/blog/2020/07/29/hubot-adapter-with-typescript.html"/>
+            <link href="https://www.sharkpp.net/blog/2020/07/29/hubot-adapter-with-typescript.html"/>
             <updated>2020-07-29T23:46:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2020/07/29/hubot-adapter-with-typescript.html</id>
+            <id>https://www.sharkpp.net/blog/2020/07/29/hubot-adapter-with-typescript.html</id>
             <content type="html"><![CDATA[<h2 id="typescrpt-%E3%81%A7%E5%AE%9F%E8%A3%85%E3%81%99%E3%82%8B-hubot-%E3%82%A2%E3%83%80%E3%83%97%E3%82%BF">TypeScrpt で実装する Hubot アダプタ</h2>
 
 <p><a href="https://hubot.github.com/docs/adapters/development/">Development adapter | HUBOT</a> を参考に、起動時に bot へと生成したメッセージを受け渡すだけを行うアダプタを TypeScript で実装してみました。</p>
@@ -430,9 +430,9 @@ Configuration for rule "import/no-cycle" is invalid
         </entry>
             <entry>
             <title type="html"><![CDATA[Reactでウェブアプリを作ってみた]]></title>
-            <link href="http://www.sharkpp.net/blog/2019/10/14/webapp-made-by-reactjs.html"/>
+            <link href="https://www.sharkpp.net/blog/2019/10/14/webapp-made-by-reactjs.html"/>
             <updated>2019-10-14T18:05:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2019/10/14/webapp-made-by-reactjs.html</id>
+            <id>https://www.sharkpp.net/blog/2019/10/14/webapp-made-by-reactjs.html</id>
             <content type="html"><![CDATA[<p>React を利用してオフラインでも簡単な画像編集をできる１画面ウェブアプリを作ってみました。</p>
 
 <p>作ったものは<a href="https://sharkpp.github.io/delayedmotion/">揺れる<ruby>※<rp>(</rp><rt>ちょめ</rt><rp>)</rp>※<rp>(</rp><rt>ちょめ</rt><rp>)</rp></ruby>画像ジェネレータ</a>です。
@@ -705,9 +705,9 @@ true
         </entry>
             <entry>
             <title type="html"><![CDATA[JSDoc 3 用のプラグインをまとめてみた]]></title>
-            <link href="http://www.sharkpp.net/blog/2016/08/30/list-of-jsdoc3-plugins.html"/>
+            <link href="https://www.sharkpp.net/blog/2016/08/30/list-of-jsdoc3-plugins.html"/>
             <updated>2016-08-30T01:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2016/08/30/list-of-jsdoc3-plugins.html</id>
+            <id>https://www.sharkpp.net/blog/2016/08/30/list-of-jsdoc3-plugins.html</id>
             <content type="html"><![CDATA[<p>世の中には「ソースコードが仕様書」という話を聞いたりします。</p>
 
 <p>まあ、ソースコードと仕様書を同期して更新するなんて大変ですよね。</p>
@@ -881,9 +881,9 @@ true
         </entry>
             <entry>
             <title type="html"><![CDATA[JavaScript や CSS の CDN サービスについて調べてみた]]></title>
-            <link href="http://www.sharkpp.net/blog/2016/03/06/research-of-javascript-and-css-cdn.html"/>
+            <link href="https://www.sharkpp.net/blog/2016/03/06/research-of-javascript-and-css-cdn.html"/>
             <updated>2016-03-06T21:30:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2016/03/06/research-of-javascript-and-css-cdn.html</id>
+            <id>https://www.sharkpp.net/blog/2016/03/06/research-of-javascript-and-css-cdn.html</id>
             <content type="html"><![CDATA[<p>jQuery や Bootstrap などの一般的なライブラリを使うときは自分のサイトに設置する以外に、 Content Delivery Network 略して CDN サービスで配信されているものを利用することもあります、というかこのページでも使っています。</p>
 
 <p>ということで、 CDN サービスを調べてみました。</p>
@@ -1671,9 +1671,9 @@ Google Hosted Libraries の場合は、最新バージョンのライブラリ�
         </entry>
             <entry>
             <title type="html"><![CDATA[除夜の鐘をブログパーツにしてみた]]></title>
-            <link href="http://www.sharkpp.net/blog/2015/12/31/joya-no-kane-for-blog-parts.html"/>
+            <link href="https://www.sharkpp.net/blog/2015/12/31/joya-no-kane-for-blog-parts.html"/>
             <updated>2015-12-31T12:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2015/12/31/joya-no-kane-for-blog-parts.html</id>
+            <id>https://www.sharkpp.net/blog/2015/12/31/joya-no-kane-for-blog-parts.html</id>
             <content type="html"><![CDATA[<p>この季節の風物詩、「除夜の鐘」がブログパーツになって帰ってきた！</p>
 
 <p>ってな感じの更新を行ったのでその紹介。</p>
@@ -1724,9 +1724,9 @@ Google Hosted Libraries の場合は、最新バージョンのライブラリ�
         </entry>
             <entry>
             <title type="html"><![CDATA[JavaScript の選択範囲関連のメモ]]></title>
-            <link href="http://www.sharkpp.net/blog/2015/08/29/javascript-memo-selection-object.html"/>
+            <link href="https://www.sharkpp.net/blog/2015/08/29/javascript-memo-selection-object.html"/>
             <updated>2015-08-29T23:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2015/08/29/javascript-memo-selection-object.html</id>
+            <id>https://www.sharkpp.net/blog/2015/08/29/javascript-memo-selection-object.html</id>
             <content type="html"><![CDATA[<p>以前に作った <a href="https://greasyfork.org/ja/scripts/9647-calculation-of-selection-length">calculation of selection length</a> (ソースは<a href="https://github.com/sharkpp-userscripts/calculation-of-selection-length">GitHub</a>) を作る時に内容は選択された文字列の扱い関連について調べたことをメモメモです。
 Chrome でのみ確認している。</p>
 
@@ -1786,9 +1786,9 @@ Chrome でのみ確認している。</p>
         </entry>
             <entry>
             <title type="html"><![CDATA[SNSの共有ボタンを設置できる jQuery (他も含む) プラグインをまとめてみた]]></title>
-            <link href="http://www.sharkpp.net/blog/2015/06/14/collection-of-social-share-button-plugin.html"/>
+            <link href="https://www.sharkpp.net/blog/2015/06/14/collection-of-social-share-button-plugin.html"/>
             <updated>2015-06-14T16:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2015/06/14/collection-of-social-share-button-plugin.html</id>
+            <id>https://www.sharkpp.net/blog/2015/06/14/collection-of-social-share-button-plugin.html</id>
             <content type="html"><![CDATA[<p>記事ページに Twitter とか Facebook とかの共有ボタンを設置したいなぁと思い、 AddThis で試しに追加してみると、、、なんと言うことでしょう、 AdBlock でボタンが消えてしまうではないですかorz</p>
 
 <p>ということで、公式のコードをぺたりんこするか jQuery などのプラグインで設置するかを悩み、また、ボタンのデザインをカスタマイズできないかと jQuery を使って設置できるプラグインを調べてまとめてみました。</p>
@@ -1820,9 +1820,9 @@ Chrome でのみ確認している。</p>
         </entry>
             <entry>
             <title type="html"><![CDATA[Tumblr. extend shortcut key 作りました]]></title>
-            <link href="http://www.sharkpp.net/blog/2014/11/23/released-tumblr-extend-shortcut-key.html"/>
+            <link href="https://www.sharkpp.net/blog/2014/11/23/released-tumblr-extend-shortcut-key.html"/>
             <updated>2014-11-23T17:51:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2014/11/23/released-tumblr-extend-shortcut-key.html</id>
+            <id>https://www.sharkpp.net/blog/2014/11/23/released-tumblr-extend-shortcut-key.html</id>
             <content type="html"><![CDATA[<p><a href="https://www.tumblr.com/">Tumblr.</a>™のダッシュボードで使用できるショートカットキーを追加するスクリプトを作りました。</p>
 
 <p>レポジトリは <a href="https://github.com/sharkpp-userscripts/tumblr-extend-shortcut-key">sharkpp-userscripts/tumblr-extend-shortcut-key</a> です。</p>

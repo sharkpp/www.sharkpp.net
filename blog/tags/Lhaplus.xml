@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/Lhaplus.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/Lhaplus.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[HAPPY NEW YEAR 2010]]></title>
-            <link href="http://www.sharkpp.net/blog/2010/01/01/happy-new-year-2010.html"/>
+            <link href="https://www.sharkpp.net/blog/2010/01/01/happy-new-year-2010.html"/>
             <updated>2010-01-01T01:48:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2010/01/01/happy-new-year-2010.html</id>
+            <id>https://www.sharkpp.net/blog/2010/01/01/happy-new-year-2010.html</id>
             <content type="html"><![CDATA[<p>さよなら2009年、そして、HAPPY NEW YEAR 2010</p>
 
 <p>ってことで</p>
@@ -49,9 +49,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[Lhaplus x64 shell extension ver.1.0.1.0をリリースしました]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/11/25/now-release-lhaplus-x64-shell-extension-ver-1-0-1-0.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/11/25/now-release-lhaplus-x64-shell-extension-ver-1-0-1-0.html"/>
             <updated>2009-11-25T01:58:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/11/25/now-release-lhaplus-x64-shell-extension-ver-1-0-1-0.html</id>
+            <id>https://www.sharkpp.net/blog/2009/11/25/now-release-lhaplus-x64-shell-extension-ver-1-0-1-0.html</id>
             <content type="html"><![CDATA[<p><div class="alert alert-danger alert-dismissible" role="alert">
   <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
   <dl style="margin-bottom: 0; margin-left: 35px;">
@@ -79,9 +79,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[Lhaplus x64 shell extension ver.1.0.0.0をリリースしました]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/08/23/now-release-lhaplus-x64-shell-extension-ver-1-0-0-0.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/08/23/now-release-lhaplus-x64-shell-extension-ver-1-0-0-0.html"/>
             <updated>2009-08-23T16:44:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/08/23/now-release-lhaplus-x64-shell-extension-ver-1-0-0-0.html</id>
+            <id>https://www.sharkpp.net/blog/2009/08/23/now-release-lhaplus-x64-shell-extension-ver-1-0-0-0.html</id>
             <content type="html"><![CDATA[<p><div class="alert alert-danger alert-dismissible" role="alert">
   <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
   <dl style="margin-bottom: 0; margin-left: 35px;">
@@ -103,9 +103,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[Lhaplus x64 shell extension]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/08/23/lhaplus-x64-shell-extension.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/08/23/lhaplus-x64-shell-extension.html"/>
             <updated>2009-08-23T16:31:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/08/23/lhaplus-x64-shell-extension.html</id>
+            <id>https://www.sharkpp.net/blog/2009/08/23/lhaplus-x64-shell-extension.html</id>
             <content type="html"><![CDATA[<p><div class="alert alert-danger alert-dismissible" role="alert">
   <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
   <dl style="margin-bottom: 0; margin-left: 35px;">

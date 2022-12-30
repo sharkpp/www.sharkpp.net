@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/Qt.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/Qt.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[名古屋Qt勉強会#31.1 に参加しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2019/11/23/qt-nagoya-31.html"/>
+            <link href="https://www.sharkpp.net/blog/2019/11/23/qt-nagoya-31.html"/>
             <updated>2019-11-23T17:38:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2019/11/23/qt-nagoya-31.html</id>
+            <id>https://www.sharkpp.net/blog/2019/11/23/qt-nagoya-31.html</id>
             <content type="html"><![CDATA[<p>2019年11月23日(土) に開催された <a href="https://qt-users.connpass.com/event/155325/">Qt 勉強会 @ Nagoya #31.1 - connpass</a> へ参加しました。</p>
 
 <p>そのまとめです。</p>
@@ -121,9 +121,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[技術書典7に行ってきた]]></title>
-            <link href="http://www.sharkpp.net/blog/2019/09/28/techbookfest7.html"/>
+            <link href="https://www.sharkpp.net/blog/2019/09/28/techbookfest7.html"/>
             <updated>2019-09-28T18:02:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2019/09/28/techbookfest7.html</id>
+            <id>https://www.sharkpp.net/blog/2019/09/28/techbookfest7.html</id>
             <content type="html"><![CDATA[<p>2016年から始まった技術書オンリーな同人イベント「<a href="https://techbookfest.org/">技術書典</a>」が、
 「<a href="https://techbookfest.org/event/tbf07">技術書典７</a>」として、2019年9月22日に開催されたので、今回も一般参加してきました。
 場所は前回と変わらず、池袋のサンシャインシティですが、今回は文化会館ビルの 展示ホールD と 展示ホールC の２ホールを使っての開催です。</p>
@@ -452,9 +452,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[名古屋Qt勉強会#30.1 に参加しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2019/08/24/qt-nagoya-30.html"/>
+            <link href="https://www.sharkpp.net/blog/2019/08/24/qt-nagoya-30.html"/>
             <updated>2019-08-24T17:13:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2019/08/24/qt-nagoya-30.html</id>
+            <id>https://www.sharkpp.net/blog/2019/08/24/qt-nagoya-30.html</id>
             <content type="html"><![CDATA[<p>2019年8月24日(土) に開催された <a href="https://qt-users.connpass.com/event/143118/">Qt 勉強会 @ Nagoya #30.1 - connpass</a> へ参加しました。</p>
 
 <p>そのまとめです。</p>
@@ -584,9 +584,9 @@ void fuga() {
         </entry>
             <entry>
             <title type="html"><![CDATA[Qt メモ]]></title>
-            <link href="http://www.sharkpp.net/blog/2019/07/29/qt-memo.html"/>
+            <link href="https://www.sharkpp.net/blog/2019/07/29/qt-memo.html"/>
             <updated>2019-07-29T23:50:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2019/07/29/qt-memo.html</id>
+            <id>https://www.sharkpp.net/blog/2019/07/29/qt-memo.html</id>
             <content type="html"><![CDATA[<p>frame_extract を実装中に調べメモした、 Qt 関連の事を記事にしました。</p>
 
 <h2 id="%E6%96%87%E5%AD%97%E5%88%97%E3%82%92%E6%89%B1%E3%81%86%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%AA%E3%81%A9%E3%81%AE%E9%81%95%E3%81%84">文字列を扱うクラスなどの違い</h2>
@@ -648,9 +648,9 @@ void fuga() {
         </entry>
             <entry>
             <title type="html"><![CDATA[名古屋Qt勉強会#28 に参加しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2019/05/18/qt-nagoya-28.html"/>
+            <link href="https://www.sharkpp.net/blog/2019/05/18/qt-nagoya-28.html"/>
             <updated>2019-05-18T17:15:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2019/05/18/qt-nagoya-28.html</id>
+            <id>https://www.sharkpp.net/blog/2019/05/18/qt-nagoya-28.html</id>
             <content type="html"><![CDATA[<p>5月18日(土) に開催された <a href="https://qt-users.connpass.com/event/130498/">Qt 勉強会 @ Nagoya #28 - connpass</a> へ前回に引き続き参加しました。</p>
 
 <p>そのまとめです。</p>
@@ -851,9 +851,9 @@ void fuga() {
         </entry>
             <entry>
             <title type="html"><![CDATA[名古屋Qt勉強会#27 に参加しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2019/04/27/qt-nagoya-27.html"/>
+            <link href="https://www.sharkpp.net/blog/2019/04/27/qt-nagoya-27.html"/>
             <updated>2019-04-27T17:30:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2019/04/27/qt-nagoya-27.html</id>
+            <id>https://www.sharkpp.net/blog/2019/04/27/qt-nagoya-27.html</id>
             <content type="html"><![CDATA[<p>4月27日(土) に開催された <a href="https://qt-users.connpass.com/event/128431/">Qt 勉強会 @ Nagoya #27 - connpass</a> に久しぶりに参加しました。</p>
 
 <p>そのまとめです。</p>
@@ -986,9 +986,9 @@ void fuga() {
         </entry>
             <entry>
             <title type="html"><![CDATA[技術書典6に行ってきた]]></title>
-            <link href="http://www.sharkpp.net/blog/2019/04/24/techbookfest6.html"/>
+            <link href="https://www.sharkpp.net/blog/2019/04/24/techbookfest6.html"/>
             <updated>2019-04-24T01:18:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2019/04/24/techbookfest6.html</id>
+            <id>https://www.sharkpp.net/blog/2019/04/24/techbookfest6.html</id>
             <content type="html"><![CDATA[<p>2016年から始まった技術書オンリーな同人イベント「<a href="https://techbookfest.org/">技術書典</a>」も数えて６回目のになりました。
 そして、その「<a href="https://techbookfest.org/event/tbf06">技術書典６</a>」が、4月14日に開催されたので参加して来ました。
 今回も開催場所は前回と同じく池袋のサンシャインシティ 展示ホールD で開催。</p>
@@ -1224,9 +1224,9 @@ void fuga() {
         </entry>
             <entry>
             <title type="html"><![CDATA[名古屋Qt勉強会#24 に参加しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2019/01/19/qt-nagoya-24.html"/>
+            <link href="https://www.sharkpp.net/blog/2019/01/19/qt-nagoya-24.html"/>
             <updated>2019-01-19T17:30:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2019/01/19/qt-nagoya-24.html</id>
+            <id>https://www.sharkpp.net/blog/2019/01/19/qt-nagoya-24.html</id>
             <content type="html"><![CDATA[<p>1月19日(土) に開催された <a href="https://qt-users.connpass.com/event/113801/">Qt 勉強会 @ Nagoya #24 - connpass</a> に久しぶりに参加しました。</p>
 
 <p>そのまとめです。</p>
@@ -1286,9 +1286,9 @@ void fuga() {
         </entry>
             <entry>
             <title type="html"><![CDATA[技術書典5に行ってきた]]></title>
-            <link href="http://www.sharkpp.net/blog/2018/10/14/techbookfest5.html"/>
+            <link href="https://www.sharkpp.net/blog/2018/10/14/techbookfest5.html"/>
             <updated>2018-10-14T12:50:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2018/10/14/techbookfest5.html</id>
+            <id>https://www.sharkpp.net/blog/2018/10/14/techbookfest5.html</id>
             <content type="html"><![CDATA[<p>2016年から始まった技術書オンリーな同人イベント「<a href="https://techbookfest.org/">技術書典</a>」も数えて５回目のになります。
 その「<a href="https://techbookfest.org/event/tbf05">技術書典５</a>」が、10月08日の体育の日に開催されたので参加して来ました。
 今回は、場所を秋葉原のUDXから池袋のサンシャインシティへと移し、床面積は約３倍以上<sup><a href="#note1">*1</a></sup>、サークル数も２倍近くに規模が大きくなりつつの開催でした。
@@ -1532,9 +1532,9 @@ void fuga() {
         </entry>
             <entry>
             <title type="html"><![CDATA[名古屋Qt勉強会#19 に参加しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2018/08/26/qt-nagoya-19.html"/>
+            <link href="https://www.sharkpp.net/blog/2018/08/26/qt-nagoya-19.html"/>
             <updated>2018-08-26T09:57:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2018/08/26/qt-nagoya-19.html</id>
+            <id>https://www.sharkpp.net/blog/2018/08/26/qt-nagoya-19.html</id>
             <content type="html"><![CDATA[<p>8月25日(土) に開催された <a href="https://qt-users.connpass.com/event/98190/">Qt 勉強会 @ Nagoya #19 - connpass</a> に参加しました。</p>
 
 <p>そのまとめなどです。</p>

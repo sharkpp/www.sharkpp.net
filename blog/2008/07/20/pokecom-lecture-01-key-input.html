@@ -53,7 +53,7 @@
             class="active"><span 
            ><span>C言語講座 第一回 キー入力</span
        ></li></ol><article itemscope="itemscope" itemtype="http://schema.org/Article"><meta itemscope="itemscope" itemprop="mainEntityOfPage"
-              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net/blog/2008/07/20/pokecom-lecture-01-key-input.html"/><header><h1><span itemprop="headline">C言語講座 第一回 キー入力</span><small>post</small></h1></header><div id="toc" class="panel panel-default pull-right"><div class="panel-heading text-center">目次</div><div class="panel-body" style="padding: 10px;"><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%A7%8B%E3%82%81%E3%81%AB">始めに</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%85%B6%E3%81%AE%E5%A3%B1">其の壱</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%85%B6%E3%81%AE%E5%BC%90">其の弐</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%85%B6%E3%81%AE%E5%8F%82">其の参</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E6%9C%80%E5%BE%8C%E3%81%AB">最後に</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%B1%A5%E6%AD%B4">履歴</a></ul></div></div><div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div><div itemprop="articleBody"><h2 id="%E5%A7%8B%E3%82%81%E3%81%AB" itemprop="articleSection">始めに</h2><!-- 20050206 --><p>ポケコンの、BASIC には INKEY$ があるのに、Ｃ言語には、<code>getch()</code> と <code>kbhit()</code> しかないんじゃ? というわけで、第一回のＣ言語 講座は、キー入力を扱うことにします。</p><h2 id="%E5%85%B6%E3%81%AE%E5%A3%B1" itemprop="articleSection">其の壱</h2><!-- 20050206 --><p>まず、<code>getch()</code> と <code>kbhit()</code> を組み合わせて、</p><pre>int inkey()
+              itemType="https://schema.org/WebPage" itemid="https://www.sharkpp.net/blog/2008/07/20/pokecom-lecture-01-key-input.html"/><header><h1><span itemprop="headline">C言語講座 第一回 キー入力</span><small>post</small></h1></header><div id="toc" class="panel panel-default pull-right"><div class="panel-heading text-center">目次</div><div class="panel-body" style="padding: 10px;"><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%A7%8B%E3%82%81%E3%81%AB">始めに</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%85%B6%E3%81%AE%E5%A3%B1">其の壱</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%85%B6%E3%81%AE%E5%BC%90">其の弐</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%85%B6%E3%81%AE%E5%8F%82">其の参</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E6%9C%80%E5%BE%8C%E3%81%AB">最後に</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%B1%A5%E6%AD%B4">履歴</a></ul></div></div><div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div><div itemprop="articleBody"><h2 id="%E5%A7%8B%E3%82%81%E3%81%AB" itemprop="articleSection">始めに</h2><!-- 20050206 --><p>ポケコンの、BASIC には INKEY$ があるのに、Ｃ言語には、<code>getch()</code> と <code>kbhit()</code> しかないんじゃ? というわけで、第一回のＣ言語 講座は、キー入力を扱うことにします。</p><h2 id="%E5%85%B6%E3%81%AE%E5%A3%B1" itemprop="articleSection">其の壱</h2><!-- 20050206 --><p>まず、<code>getch()</code> と <code>kbhit()</code> を組み合わせて、</p><pre>int inkey()
 {
 if(kbhit())
 return getch();
@@ -108,10 +108,10 @@ return call((unsigned)p,0);
         &nbsp;/&nbsp;
         <i class="fa fa-thumb-tack"></i>&nbsp;<a href="/blog/2008/07/20/pokecom-lecture-01-key-input.html">Permalink</a>
         &nbsp;/&nbsp;
-    </span><meta itemprop="url" content="http://www.sharkpp.net/blog/2008/07/20/pokecom-lecture-01-key-input.html" /><span itemprop="author" itemscope itemtype="https://schema.org/Person"
+    </span><meta itemprop="url" content="https://www.sharkpp.net/blog/2008/07/20/pokecom-lecture-01-key-input.html" /><span itemprop="author" itemscope itemtype="https://schema.org/Person"
           style="display: none;"
        ><span itemprop="name">sharkpp</span
-   ></span><a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2008%2F07%2F20%2Fpokecom-lecture-01-key-input.html"
+   ></span><a href="http://b.hatena.ne.jp/entry/https%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2008%2F07%2F20%2Fpokecom-lecture-01-key-input.html"
        class="hatena-bookmark-button"
        data-hatena-bookmark-title="C言語講座 第一回 キー入力 &mdash; さめたすたすのお家"
        data-hatena-bookmark-layout="simple-balloon"
@@ -121,7 +121,7 @@ return call((unsigned)p,0);
             width="20" height="20" style="border: none;" /></a
       >&nbsp;
     <a href="https://twitter.com/share" class="twitter-share-button"
-       data-url="http://www.sharkpp.net/blog/2008/07/20/pokecom-lecture-01-key-input.html" data-via="sharkpp">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><div style="line-height: 25px; height: 25px;"><span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
+       data-url="https://www.sharkpp.net/blog/2008/07/20/pokecom-lecture-01-key-input.html" data-via="sharkpp">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><div style="line-height: 25px; height: 25px;"><span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
                         <a href="/blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3">ポケコン</a>,                         <a href="/blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3%E8%AC%9B%E5%BA%A7">ポケコン講座</a></span>
         &nbsp;/&nbsp;
                                 <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:

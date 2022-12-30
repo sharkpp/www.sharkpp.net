@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/Dropbox.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/Dropbox.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Qt Network Authorization を使った Dropbox API　の利用]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/02/28/dropbox-api-using-qt-network-authorization.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/02/28/dropbox-api-using-qt-network-authorization.html"/>
             <updated>2017-02-28T01:45:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/02/28/dropbox-api-using-qt-network-authorization.html</id>
+            <id>https://www.sharkpp.net/blog/2017/02/28/dropbox-api-using-qt-network-authorization.html</id>
             <content type="html"><![CDATA[<p>さて、今月も参加した <a href="https://qt-users.connpass.com/event/50191/">Qt 勉強会 @ Nagoya No5(17.02)</a> のまとめ。</p>
 
 <p>※ <a href="https://togetter.com/li/1092293">Qt 勉強会 @ Nagoya No5(17.02) - Togetterまとめ</a> で当日のつぶやきがまとめられています。</p>

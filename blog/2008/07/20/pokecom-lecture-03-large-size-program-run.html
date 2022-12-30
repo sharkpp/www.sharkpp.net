@@ -53,7 +53,7 @@
             class="active"><span 
            ><span>C言語講座 第三回 巨大なプログラムの実行</span
        ></li></ol><article itemscope="itemscope" itemtype="http://schema.org/Article"><meta itemscope="itemscope" itemprop="mainEntityOfPage"
-              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net/blog/2008/07/20/pokecom-lecture-03-large-size-program-run.html"/><header><h1><span itemprop="headline">C言語講座 第三回 巨大なプログラムの実行</span><small>post</small></h1></header><div id="toc" class="panel panel-default pull-right"><div class="panel-heading text-center">目次</div><div class="panel-body" style="padding: 10px;"><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%A7%8B%E3%82%81%E3%81%AB">始めに</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%85%B6%E3%81%AE%E5%A3%B1">其の壱</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%85%B6%E3%81%AE%E5%BC%90">其の弐</a></ul></div></div><div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div><div itemprop="articleBody"><h2 id="%E5%A7%8B%E3%82%81%E3%81%AB" itemprop="articleSection">始めに</h2><!-- 20050206 --><p>第三回のＣ言語 講座は、巨大なプログラムの実行を扱うことにします。</p><p>前回の講座でファイルサイズの縮小を扱いましたが、それでも限界があります。</p><p>ゲームを作ろうとすると、すぐにサイズが1000バイトを超えてしまい、さらに、5000バイトになることもまれではないと思います。</p><p>開発するには、ファイルを読込んでコンパイルをしなければいけませんが、ゲームなどのプログラムを実行するだけなら、なんと大きいファイルを読込まなくてもコンパイル＆実行が出来てしまうのです。</p><h2 id="%E5%85%B6%E3%81%AE%E5%A3%B1" itemprop="articleSection">其の壱</h2><p>前提条件</p><ul><li><p>プログラムを読込む事は出来るが、コンパイルできない</p><p>(比較的、プログラムの後ろのほうで <code>Memory full</code> エラーがでる場合) </div></p></li></ul><h2 id="%E5%85%B6%E3%81%AE%E5%BC%90" itemprop="articleSection">其の弐</h2><p>&lt;</p><p>div></p><p>
+              itemType="https://schema.org/WebPage" itemid="https://www.sharkpp.net/blog/2008/07/20/pokecom-lecture-03-large-size-program-run.html"/><header><h1><span itemprop="headline">C言語講座 第三回 巨大なプログラムの実行</span><small>post</small></h1></header><div id="toc" class="panel panel-default pull-right"><div class="panel-heading text-center">目次</div><div class="panel-body" style="padding: 10px;"><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%A7%8B%E3%82%81%E3%81%AB">始めに</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%85%B6%E3%81%AE%E5%A3%B1">其の壱</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%85%B6%E3%81%AE%E5%BC%90">其の弐</a></ul></div></div><div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div><div itemprop="articleBody"><h2 id="%E5%A7%8B%E3%82%81%E3%81%AB" itemprop="articleSection">始めに</h2><!-- 20050206 --><p>第三回のＣ言語 講座は、巨大なプログラムの実行を扱うことにします。</p><p>前回の講座でファイルサイズの縮小を扱いましたが、それでも限界があります。</p><p>ゲームを作ろうとすると、すぐにサイズが1000バイトを超えてしまい、さらに、5000バイトになることもまれではないと思います。</p><p>開発するには、ファイルを読込んでコンパイルをしなければいけませんが、ゲームなどのプログラムを実行するだけなら、なんと大きいファイルを読込まなくてもコンパイル＆実行が出来てしまうのです。</p><h2 id="%E5%85%B6%E3%81%AE%E5%A3%B1" itemprop="articleSection">其の壱</h2><p>前提条件</p><ul><li><p>プログラムを読込む事は出来るが、コンパイルできない</p><p>(比較的、プログラムの後ろのほうで <code>Memory full</code> エラーがでる場合) </div></p></li></ul><h2 id="%E5%85%B6%E3%81%AE%E5%BC%90" itemprop="articleSection">其の弐</h2><p>&lt;</p><p>div></p><p>
 まず、ポケコンで実行したいプログラム(例えばゲーム)を転送してください。<br /> サイズにもよりますが、3000バイトのもので、4・5本ぐらい(たぶん)は転送できると思います。<br /> BASICプログラムでC言語プログラムが実行できない場合にもこのテクニックは使えます。<br /> また、転送できて、保存は出来たけど、別のプログラムをロードしてもコンパイルできないときにも使えます。
 </p><p>
 次に、以下のソースを打ち込んでください。<br /><em>"実行したいプログラム名"</em> の部分には <code>"poyopoyo.c"</code> などとコンパイルできないプログラム名を指定してください。
@@ -74,10 +74,10 @@
         &nbsp;/&nbsp;
         <i class="fa fa-thumb-tack"></i>&nbsp;<a href="/blog/2008/07/20/pokecom-lecture-03-large-size-program-run.html">Permalink</a>
         &nbsp;/&nbsp;
-    </span><meta itemprop="url" content="http://www.sharkpp.net/blog/2008/07/20/pokecom-lecture-03-large-size-program-run.html" /><span itemprop="author" itemscope itemtype="https://schema.org/Person"
+    </span><meta itemprop="url" content="https://www.sharkpp.net/blog/2008/07/20/pokecom-lecture-03-large-size-program-run.html" /><span itemprop="author" itemscope itemtype="https://schema.org/Person"
           style="display: none;"
        ><span itemprop="name">sharkpp</span
-   ></span><a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2008%2F07%2F20%2Fpokecom-lecture-03-large-size-program-run.html"
+   ></span><a href="http://b.hatena.ne.jp/entry/https%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2008%2F07%2F20%2Fpokecom-lecture-03-large-size-program-run.html"
        class="hatena-bookmark-button"
        data-hatena-bookmark-title="C言語講座 第三回 巨大なプログラムの実行 &mdash; さめたすたすのお家"
        data-hatena-bookmark-layout="simple-balloon"
@@ -87,7 +87,7 @@
             width="20" height="20" style="border: none;" /></a
       >&nbsp;
     <a href="https://twitter.com/share" class="twitter-share-button"
-       data-url="http://www.sharkpp.net/blog/2008/07/20/pokecom-lecture-03-large-size-program-run.html" data-via="sharkpp">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><div style="line-height: 25px; height: 25px;"><span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
+       data-url="https://www.sharkpp.net/blog/2008/07/20/pokecom-lecture-03-large-size-program-run.html" data-via="sharkpp">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><div style="line-height: 25px; height: 25px;"><span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
                         <a href="/blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3">ポケコン</a>,                         <a href="/blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3%E8%AC%9B%E5%BA%A7">ポケコン講座</a></span>
         &nbsp;/&nbsp;
                                 <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:

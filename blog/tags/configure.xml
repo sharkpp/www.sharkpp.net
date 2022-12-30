@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/configure.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/configure.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Sculpin を実行するために xrea.com 上で libxml2 を構築する方法]]></title>
-            <link href="http://www.sharkpp.net/blog/2015/05/31/how-to-build-libxml2-on-xrea-com-for-sculpin.html"/>
+            <link href="https://www.sharkpp.net/blog/2015/05/31/how-to-build-libxml2-on-xrea-com-for-sculpin.html"/>
             <updated>2015-05-31T21:30:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2015/05/31/how-to-build-libxml2-on-xrea-com-for-sculpin.html</id>
+            <id>https://www.sharkpp.net/blog/2015/05/31/how-to-build-libxml2-on-xrea-com-for-sculpin.html</id>
             <content type="html"><![CDATA[<p>Sculpin を xrea.com で動かそうとしたら、</p>
 
 <pre><code class="bash"># php55cli sculpin.phar self-update

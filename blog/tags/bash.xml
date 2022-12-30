@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/bash.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/bash.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[日付を文字列にするための書式を比較してみた (php と Ruby 編)]]></title>
-            <link href="http://www.sharkpp.net/blog/2016/05/28/compare-format-for-date-to-string-php-and-ruby.html"/>
+            <link href="https://www.sharkpp.net/blog/2016/05/28/compare-format-for-date-to-string-php-and-ruby.html"/>
             <updated>2016-05-28T22:50:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2016/05/28/compare-format-for-date-to-string-php-and-ruby.html</id>
+            <id>https://www.sharkpp.net/blog/2016/05/28/compare-format-for-date-to-string-php-and-ruby.html</id>
             <content type="html"><![CDATA[<p>php を使っている時に、日付を書式化する場合、 <code>date()</code> 関数と <code>strftime()</code> 関数があって、どっち使うべきだろうか、とか片方のフォーマットは他方でどれだっけ？とか、まあようするになんでに種類あるんだろう？って思うわけです。</p>
 
 <p>で、対応をまとめてみました。</p>

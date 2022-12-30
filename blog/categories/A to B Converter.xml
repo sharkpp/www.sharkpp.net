@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/categories/A%20to%20B%20Converter.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/categories/A%20to%20B%20Converter.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[KiSS CEL Export Library]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/07/21/abc-exkiss.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/07/21/abc-exkiss.html"/>
             <updated>2008-07-21T00:14:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/07/21/abc-exkiss.html</id>
+            <id>https://www.sharkpp.net/blog/2008/07/21/abc-exkiss.html</id>
             <content type="html"><![CDATA[<div><a href="/files/exks001c.lzh">DOWNLOAD</a> 2004/02/24
 </div>
 

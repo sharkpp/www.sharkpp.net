@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/Chef.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/Chef.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Opscode Community に自作の Cookbook を登録してみた]]></title>
-            <link href="http://www.sharkpp.net/blog/2014/06/30/publish-cookbook-to-opscode.html"/>
+            <link href="https://www.sharkpp.net/blog/2014/06/30/publish-cookbook-to-opscode.html"/>
             <updated>2014-06-30T00:20:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2014/06/30/publish-cookbook-to-opscode.html</id>
+            <id>https://www.sharkpp.net/blog/2014/06/30/publish-cookbook-to-opscode.html</id>
             <content type="html"><![CDATA[<p>必要に迫られて作成した <a href="https://github.com/sharkpp-cookbooks/ya-piwik">ya-piwik</a> を &#91;Opscode Community&#93; (http://community.opscode.com/) に登録してみました。 もしか、動かなかったりするかもですがそのときはタイミングを見て直そうかと思います。 とりあえず自分所では動いています。</p>
 
 <p>登録した Cookbook は <a href="http://community.opscode.com/cookbooks/ya-piwik">Chef Cookbook: ya-piwik - Opscode Community</a> から確認できます。</p>
@@ -75,9 +75,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[はじめてのChef]]></title>
-            <link href="http://www.sharkpp.net/blog/2014/04/18/first-step-chef.html"/>
+            <link href="https://www.sharkpp.net/blog/2014/04/18/first-step-chef.html"/>
             <updated>2014-04-18T23:15:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2014/04/18/first-step-chef.html</id>
+            <id>https://www.sharkpp.net/blog/2014/04/18/first-step-chef.html</id>
             <content type="html"><![CDATA[<h2 id="%E7%9B%AE%E6%A8%99">目標</h2>
 
 <p>母艦であるところの Mac から、VirtualBox で構築した VM や VPS に対して環境を構築したい。 が、最初は、 <a href="http://www.getchef.com/">Chef</a> で遊んでみることに。</p>

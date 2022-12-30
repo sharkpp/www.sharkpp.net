@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/Wine.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/Wine.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[macOS と Wine で作る HSP 3 の開発環境]]></title>
-            <link href="http://www.sharkpp.net/blog/2016/12/01/hsp-advent-calendar-2016-1st-day.html"/>
+            <link href="https://www.sharkpp.net/blog/2016/12/01/hsp-advent-calendar-2016-1st-day.html"/>
             <updated>2016-12-01T01:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2016/12/01/hsp-advent-calendar-2016-1st-day.html</id>
+            <id>https://www.sharkpp.net/blog/2016/12/01/hsp-advent-calendar-2016-1st-day.html</id>
             <content type="html"><![CDATA[<p>こんにちは、こんばんは。</p>
 
 <p><a href="http://qiita.com/advent-calendar/2016/hsp">Hot Soup Processor Advent Calendar 2016</a> の 初日を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p>
@@ -313,9 +313,9 @@ $ rm -f NotoSansCJKjp-hinted.zip LICENSE_OFL.txt
         </entry>
             <entry>
             <title type="html"><![CDATA[Wine を使って Mac OS X で HSP と hgimg4 を動かしてみた]]></title>
-            <link href="http://www.sharkpp.net/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html"/>
+            <link href="https://www.sharkpp.net/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html"/>
             <updated>2016-03-26T23:43:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html</id>
+            <id>https://www.sharkpp.net/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html</id>
             <content type="html"><![CDATA[<p>HSP をどうしても Mac OS X で動かしたい！</p>
 
 <p>まあ、とりあえず Wine 使っておけばいいよね！</p>
@@ -604,9 +604,9 @@ Wine build complete.
         </entry>
             <entry>
             <title type="html"><![CDATA[Mac OS X での Wine のビルドの仕方]]></title>
-            <link href="http://www.sharkpp.net/blog/2016/01/31/building-wine-on-mac-osx.html"/>
+            <link href="https://www.sharkpp.net/blog/2016/01/31/building-wine-on-mac-osx.html"/>
             <updated>2016-01-31T12:30:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2016/01/31/building-wine-on-mac-osx.html</id>
+            <id>https://www.sharkpp.net/blog/2016/01/31/building-wine-on-mac-osx.html</id>
             <content type="html"><![CDATA[<p>Mac で Wine を使うには、まあ普通に公式の <a href="https://wiki.winehq.org/MacOSX">MacOSX</a> からビルド済みバイナリをインストールしたほうが早いのだけれど、どうしてもソースからビルドしないといけない場合のビルドの仕方をメモ。</p>
 
 <p>環境は</p>

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/Develop.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/Develop.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[composer で github.com の API 制限を突破せよ]]></title>
-            <link href="http://www.sharkpp.net/blog/2015/02/28/composer-github-api-limit-break.html"/>
+            <link href="https://www.sharkpp.net/blog/2015/02/28/composer-github-api-limit-break.html"/>
             <updated>2015-02-28T23:38:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2015/02/28/composer-github-api-limit-break.html</id>
+            <id>https://www.sharkpp.net/blog/2015/02/28/composer-github-api-limit-break.html</id>
             <content type="html"><![CDATA[<p>github のレポジトリを参照している場合に composer で update 時に</p>
 
 <pre><code>$ php composer.phar update
@@ -49,9 +49,9 @@ Loading composer repositories with package information
         </entry>
             <entry>
             <title type="html"><![CDATA[Tumblr. extend shortcut key 作りました]]></title>
-            <link href="http://www.sharkpp.net/blog/2014/11/23/released-tumblr-extend-shortcut-key.html"/>
+            <link href="https://www.sharkpp.net/blog/2014/11/23/released-tumblr-extend-shortcut-key.html"/>
             <updated>2014-11-23T17:51:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2014/11/23/released-tumblr-extend-shortcut-key.html</id>
+            <id>https://www.sharkpp.net/blog/2014/11/23/released-tumblr-extend-shortcut-key.html</id>
             <content type="html"><![CDATA[<p><a href="https://www.tumblr.com/">Tumblr.</a>™のダッシュボードで使用できるショートカットキーを追加するスクリプトを作りました。</p>
 
 <p>レポジトリは <a href="https://github.com/sharkpp-userscripts/tumblr-extend-shortcut-key">sharkpp-userscripts/tumblr-extend-shortcut-key</a> です。</p>
@@ -112,9 +112,9 @@ Loading composer repositories with package information
         </entry>
             <entry>
             <title type="html"><![CDATA[github.com へ SVNのレポジトリを取り込んで公開する方法]]></title>
-            <link href="http://www.sharkpp.net/blog/2014/10/19/github-import-from-svn.html"/>
+            <link href="https://www.sharkpp.net/blog/2014/10/19/github-import-from-svn.html"/>
             <updated>2014-10-19T13:48:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2014/10/19/github-import-from-svn.html</id>
+            <id>https://www.sharkpp.net/blog/2014/10/19/github-import-from-svn.html</id>
             <content type="html"><![CDATA[<p>svn のレポジトリを既存の github レポジトリに取り込む手順をメモ。 多分、既存の git に取り込むのにも使えるはず。</p>
 
 <p>ちなみに取り込むとログに <code>git-svn-id: 〜</code> の用な感じで SVN のリポジトリパスが残るのでパスを秘密にしたい場合は諦めてファイルコピーで取り込んだ方がいいと思います。</p>
@@ -183,9 +183,9 @@ $ rm -rf tmp
         </entry>
             <entry>
             <title type="html"><![CDATA[OAuth 認証を提供しているサービスをまとめてみました]]></title>
-            <link href="http://www.sharkpp.net/blog/2014/03/30/oauth-providers-list.html"/>
+            <link href="https://www.sharkpp.net/blog/2014/03/30/oauth-providers-list.html"/>
             <updated>2014-03-30T23:35:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2014/03/30/oauth-providers-list.html</id>
+            <id>https://www.sharkpp.net/blog/2014/03/30/oauth-providers-list.html</id>
             <content type="html"><![CDATA[<p>OAuth 認証を提供しているサービスをまとめてみました。</p>
 
 <p>どちらかというと Opauth で使えそうなサービス一覧、が正しいのかもしれません。</p>
@@ -704,9 +704,9 @@ OpenID
         </entry>
             <entry>
             <title type="html"><![CDATA[phpでオブジェクトの継承元のメソッドを別のクラスから呼び出す方法]]></title>
-            <link href="http://www.sharkpp.net/blog/2013/11/24/call-parent-class-method-by-other-class-in-php.html"/>
+            <link href="https://www.sharkpp.net/blog/2013/11/24/call-parent-class-method-by-other-class-in-php.html"/>
             <updated>2013-11-24T13:40:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2013/11/24/call-parent-class-method-by-other-class-in-php.html</id>
+            <id>https://www.sharkpp.net/blog/2013/11/24/call-parent-class-method-by-other-class-in-php.html</id>
             <content type="html"><![CDATA[<p>phpで実装上どうしてもタイトルのような事をしないといけなかったのでその方法のメモ。 そもそもの話、実装がまずいって事のような気がすご???くするんだけど、それは置いておこう。</p>
 
 <h2 id="%E5%89%8D%E6%8F%90">前提</h2>
@@ -785,9 +785,9 @@ echo $b-&gt;test('test') . "\n";
         </entry>
             <entry>
             <title type="html"><![CDATA[FuelPHP 日本語言語パッケージ 作ってみたよ]]></title>
-            <link href="http://www.sharkpp.net/blog/2013/04/27/fuel-language-pack-ja.html"/>
+            <link href="https://www.sharkpp.net/blog/2013/04/27/fuel-language-pack-ja.html"/>
             <updated>2013-04-27T00:36:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2013/04/27/fuel-language-pack-ja.html</id>
+            <id>https://www.sharkpp.net/blog/2013/04/27/fuel-language-pack-ja.html</id>
             <content type="html"><![CDATA[<p>FuelPHPのパッケージも３つ目となりました、ValidationクラスやDateクラスなどの英語のメッセージを日本語で表示してくれるパッケージを作ってみました。</p>
 
 <p><a href="https://github.com/sharkpp/fuel-language-pack-ja">sharkpp/fuel-language-pack-ja - GitHub</a></p>
@@ -811,9 +811,9 @@ echo $b-&gt;test('test') . "\n";
         </entry>
             <entry>
             <title type="html"><![CDATA[OUIを検索するFuelPHP用のパッケージを作ったよ]]></title>
-            <link href="http://www.sharkpp.net/blog/2013/03/11/release-ouisearch-fuelphp.html"/>
+            <link href="https://www.sharkpp.net/blog/2013/03/11/release-ouisearch-fuelphp.html"/>
             <updated>2013-03-11T01:57:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2013/03/11/release-ouisearch-fuelphp.html</id>
+            <id>https://www.sharkpp.net/blog/2013/03/11/release-ouisearch-fuelphp.html</id>
             <content type="html"><![CDATA[<p>OUIを検索するFuelPHP用のパッケージを作ったよってことで、、、誰得なんでしょうか？</p>
 
 <p>何が出来るかというと、<a href="http://standards.ieee.org/develop/regauth/oui/public.html">IEEE-SA - Registration Authority OUI Public Listing</a>で 公開されているOUI(Organizationally Unique Identifier)のリストを使いOUIから組織名の取得、あるいは、その逆を行います。</p>
@@ -934,9 +934,9 @@ echo $b-&gt;test('test') . "\n";
         </entry>
             <entry>
             <title type="html"><![CDATA[ANSI Escape Sequences Emulator作ったよ]]></title>
-            <link href="http://www.sharkpp.net/blog/2013/03/10/aese-command.html"/>
+            <link href="https://www.sharkpp.net/blog/2013/03/10/aese-command.html"/>
             <updated>2013-03-10T00:30:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2013/03/10/aese-command.html</id>
+            <id>https://www.sharkpp.net/blog/2013/03/10/aese-command.html</id>
             <content type="html"><![CDATA[<p>ふと思いついて、ANSIエスケープシーケンスエミュレータなるものを作ってみました。</p>
 
 <p>ソースは <a href="https://github.com/sharkpp/AnsiEscapeSequencesEmulator">sharkpp/AnsiEscapeSequencesEmulator - GitHub</a> に公開してあります。</p>
@@ -981,9 +981,9 @@ echo $b-&gt;test('test') . "\n";
         </entry>
             <entry>
             <title type="html"><![CDATA[Tumbdash公開]]></title>
-            <link href="http://www.sharkpp.net/blog/2012/10/16/tumbdash.html"/>
+            <link href="https://www.sharkpp.net/blog/2012/10/16/tumbdash.html"/>
             <updated>2012-10-16T00:54:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2012/10/16/tumbdash.html</id>
+            <id>https://www.sharkpp.net/blog/2012/10/16/tumbdash.html</id>
             <content type="html"><![CDATA[<p>Android用のダッシュボード専用TumblrクライアントのTumbdashを公開しました。 初めてのAndroidアプリは、ゲームとかではなくやっぱりツール系になってしまいました(´･ω･&#96;)</p>
 
 <p><a href="http://play.google.com/store/apps/details?id=net.sharkpp.Tumbdash"><img src="http://developer.android.com/images/brand/en_app_rgb_wo_45.png" alt="Android app on Google Play" /></a></p>
@@ -1002,9 +1002,9 @@ echo $b-&gt;test('test') . "\n";
         </entry>
             <entry>
             <title type="html"><![CDATA[Titanium Mobileのメモ(その１)]]></title>
-            <link href="http://www.sharkpp.net/blog/2012/09/30/titanium-mobile-memo-1.html"/>
+            <link href="https://www.sharkpp.net/blog/2012/09/30/titanium-mobile-memo-1.html"/>
             <updated>2012-09-30T23:05:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2012/09/30/titanium-mobile-memo-1.html</id>
+            <id>https://www.sharkpp.net/blog/2012/09/30/titanium-mobile-memo-1.html</id>
             <content type="html"><![CDATA[<p>とある理由で急遽Androidのアプリを作る必要に迫られ前から興味があっTItanium Mobileに手を出した次第。</p>
 
 <p>作る過程で調べたことを色々メモ。</p>

@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3%E3%83%AA%E3%83%B3%E3%82%AF.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3%E3%83%AA%E3%83%B3%E3%82%AF.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[CASIO系]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/08/14/pokecom-link-casio.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/08/14/pokecom-link-casio.html"/>
             <updated>2008-08-14T02:19:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/08/14/pokecom-link-casio.html</id>
+            <id>https://www.sharkpp.net/blog/2008/08/14/pokecom-link-casio.html</id>
             <content type="html"><![CDATA[]]></content>
         </entry>
             <entry>
             <title type="html"><![CDATA[SHARP 系 その他]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/08/14/pokecom-link-sharp-other.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/08/14/pokecom-link-sharp-other.html"/>
             <updated>2008-08-14T02:15:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/08/14/pokecom-link-sharp-other.html</id>
+            <id>https://www.sharkpp.net/blog/2008/08/14/pokecom-link-sharp-other.html</id>
             <content type="html"><![CDATA[]]></content>
         </entry>
             <entry>
             <title type="html"><![CDATA[SHARP PC-E 系]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/08/14/pokecom-link-sharp-pc-e-series.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/08/14/pokecom-link-sharp-pc-e-series.html"/>
             <updated>2008-08-14T01:30:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/08/14/pokecom-link-sharp-pc-e-series.html</id>
+            <id>https://www.sharkpp.net/blog/2008/08/14/pokecom-link-sharp-pc-e-series.html</id>
             <content type="html"><![CDATA[]]></content>
         </entry>
             <entry>
             <title type="html"><![CDATA[SHARP 1xxx系]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/08/14/pokecom-link-sharp-1xxx-series.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/08/14/pokecom-link-sharp-1xxx-series.html"/>
             <updated>2008-08-14T01:30:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/08/14/pokecom-link-sharp-1xxx-series.html</id>
+            <id>https://www.sharkpp.net/blog/2008/08/14/pokecom-link-sharp-1xxx-series.html</id>
             <content type="html"><![CDATA[]]></content>
         </entry>
             <entry>
             <title type="html"><![CDATA[SHARP PC-G 系]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/08/14/pokecom-link-sharp-pc-g-series.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/08/14/pokecom-link-sharp-pc-g-series.html"/>
             <updated>2008-08-14T01:27:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/08/14/pokecom-link-sharp-pc-g-series.html</id>
+            <id>https://www.sharkpp.net/blog/2008/08/14/pokecom-link-sharp-pc-g-series.html</id>
             <content type="html"><![CDATA[]]></content>
         </entry>
     </feed>

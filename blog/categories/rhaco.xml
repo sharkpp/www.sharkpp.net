@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/categories/rhaco.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/categories/rhaco.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[rhaco2ってどうやって使うの？]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/02/01/rhaco-how-to-use-rhaco2.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/02/01/rhaco-how-to-use-rhaco2.html"/>
             <updated>2009-02-01T17:45:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/02/01/rhaco-how-to-use-rhaco2.html</id>
+            <id>https://www.sharkpp.net/blog/2009/02/01/rhaco-how-to-use-rhaco2.html</id>
             <content type="html"><![CDATA[<p>2009年12月31日 追記</p>
 
 <p>以下の内容は、2009年02月01日の時点でのリポジトリ最新版で確認した記述です。</p>
@@ -88,9 +88,9 @@ print($template-&gt;read("foo.html"));
         </entry>
             <entry>
             <title type="html"><![CDATA[テンプレート構文メモ tag/TemplateParserの構文に関してのメモ]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/01/10/rhaco-template-syntax-memo.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/01/10/rhaco-template-syntax-memo.html"/>
             <updated>2009-01-10T18:37:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/01/10/rhaco-template-syntax-memo.html</id>
+            <id>https://www.sharkpp.net/blog/2009/01/10/rhaco-template-syntax-memo.html</id>
             <content type="html"><![CDATA[<p>参考:<a href="http://blog.shigepon.com/snippet53" title="rhacoアプリ開発日誌 - 逆引きrhaco53: rhacoのテンプレートで使用するタグまとめ">rhacoアプリ開発日誌 - 逆引きrhaco53: rhacoのテンプレートで使用するタグまとめ</a></p>
 
 <p>※整形中orz</p>

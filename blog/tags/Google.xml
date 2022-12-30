@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/Google.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/Google.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Franz 用の Google ショッピングリスト レシピを作りました！]]></title>
-            <link href="http://www.sharkpp.net/blog/2019/03/30/franz-recipe-google-shoppinglist.html"/>
+            <link href="https://www.sharkpp.net/blog/2019/03/30/franz-recipe-google-shoppinglist.html"/>
             <updated>2019-03-30T00:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2019/03/30/franz-recipe-google-shoppinglist.html</id>
+            <id>https://www.sharkpp.net/blog/2019/03/30/franz-recipe-google-shoppinglist.html</id>
             <content type="html"><![CDATA[<p>先日(といいつつ実はすでに数ヶ月は立っているのですが) Google Home で利用している買い物リストをPCから見えるページを見つけました。
 今回は、それに対応したクライアント <a href="https://github.com/sharkpp/franz-recipe-google-shoppinglist">Franz 5 recipe for Google Shopping List</a> を公開したので紹介します。</p>
 
@@ -108,9 +108,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[PHP と Sheets API を利用して Google Spread Sheets を操作する方法]]></title>
-            <link href="http://www.sharkpp.net/blog/2016/09/22/how-to-use-google-spreadsheets-api-for-php.html"/>
+            <link href="https://www.sharkpp.net/blog/2016/09/22/how-to-use-google-spreadsheets-api-for-php.html"/>
             <updated>2016-09-22T20:50:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2016/09/22/how-to-use-google-spreadsheets-api-for-php.html</id>
+            <id>https://www.sharkpp.net/blog/2016/09/22/how-to-use-google-spreadsheets-api-for-php.html</id>
             <content type="html"><![CDATA[<p>bot 的な何かで諸々集計して、Google スプレッドシートへ内容を保存しようと思い、いろいろ調べてみたところ、見つかった情報が古くなっていたので多少試行錯誤して動くようにした結果をまとめてみました。</p>
 
 <p>PHP を開発言語としていますが、認証キーの登録などの部分は共通なので、他の言語でも多少参考になると思います。</p>

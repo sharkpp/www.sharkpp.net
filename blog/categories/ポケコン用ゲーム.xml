@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3%E7%94%A8%E3%82%B2%E3%83%BC%E3%83%A0.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3%E7%94%A8%E3%82%B2%E3%83%BC%E3%83%A0.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[ぱたぱた]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/07/21/pokecom-game-patapata.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/07/21/pokecom-game-patapata.html"/>
             <updated>2008-07-21T00:01:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/07/21/pokecom-game-patapata.html</id>
+            <id>https://www.sharkpp.net/blog/2008/07/21/pokecom-game-patapata.html</id>
             <content type="html"><![CDATA[<h2 id="%E7%94%BB%E9%9D%A2">画面</h2>
 
 <p><img src="/images/2008_0721_patapata.gif" alt="動作画面" /></p>
@@ -75,9 +75,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[迷路]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/07/21/pokecom-game-maze.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/07/21/pokecom-game-maze.html"/>
             <updated>2008-07-21T00:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/07/21/pokecom-game-maze.html</id>
+            <id>https://www.sharkpp.net/blog/2008/07/21/pokecom-game-maze.html</id>
             <content type="html"><![CDATA[<h2 id="%E7%94%BB%E9%9D%A2">画面</h2>
 
 <p><img src="/images/2008_0721_maze.gif" alt="動作画面" /></p>
@@ -143,9 +143,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[BlockBreak]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/07/21/pokecom-game-bb.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/07/21/pokecom-game-bb.html"/>
             <updated>2008-07-21T00:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/07/21/pokecom-game-bb.html</id>
+            <id>https://www.sharkpp.net/blog/2008/07/21/pokecom-game-bb.html</id>
             <content type="html"><![CDATA[<h2 id="%E7%94%BB%E9%9D%A2">画面</h2>
 
 <p><img src="/images/2008_0721_bb.gif" alt="動作画面" /></p>
@@ -238,9 +238,9 @@ SCORE+
         </entry>
             <entry>
             <title type="html"><![CDATA[ポヨポヨ]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/07/20/pokecom-game-poyopoyo.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/07/20/pokecom-game-poyopoyo.html"/>
             <updated>2008-07-20T23:59:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/07/20/pokecom-game-poyopoyo.html</id>
+            <id>https://www.sharkpp.net/blog/2008/07/20/pokecom-game-poyopoyo.html</id>
             <content type="html"><![CDATA[<h2 id="%E7%94%BB%E9%9D%A2">画面</h2>
 
 <p><img src="/images/2008_0720_poyopoyo.gif" alt="動作画面" /></p>
@@ -307,9 +307,9 @@ END：    ゲーム終了
         </entry>
             <entry>
             <title type="html"><![CDATA[ジャンケンゲーム]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/07/20/pokecom-game-janken.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/07/20/pokecom-game-janken.html"/>
             <updated>2008-07-20T23:43:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/07/20/pokecom-game-janken.html</id>
+            <id>https://www.sharkpp.net/blog/2008/07/20/pokecom-game-janken.html</id>
             <content type="html"><![CDATA[<h2 id="%E7%94%BB%E9%9D%A2">画面</h2>
 
 <p><img src="/images/2008_0720_janken.gif" alt="動作画面" /></p>
@@ -352,9 +352,9 @@ END：    ゲーム終了
         </entry>
             <entry>
             <title type="html"><![CDATA[Escape]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/07/20/pokecom-game-escape.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/07/20/pokecom-game-escape.html"/>
             <updated>2008-07-20T23:42:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/07/20/pokecom-game-escape.html</id>
+            <id>https://www.sharkpp.net/blog/2008/07/20/pokecom-game-escape.html</id>
             <content type="html"><![CDATA[<h2 id="%E7%94%BB%E9%9D%A2">画面</h2>
 
 <p><img src="/images/2008_0720_escape.gif" alt="動作画面" /></p>
@@ -391,9 +391,9 @@ END：    ゲーム終了
         </entry>
             <entry>
             <title type="html"><![CDATA[KeyHiter]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/07/20/pokecom-game-keyhiter.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/07/20/pokecom-game-keyhiter.html"/>
             <updated>2008-07-20T23:41:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/07/20/pokecom-game-keyhiter.html</id>
+            <id>https://www.sharkpp.net/blog/2008/07/20/pokecom-game-keyhiter.html</id>
             <content type="html"><![CDATA[<h2 id="%E7%94%BB%E9%9D%A2">画面</h2>
 
 <p><img src="/images/2008_0720_keyhit.gif" alt="動作画面" /></p>

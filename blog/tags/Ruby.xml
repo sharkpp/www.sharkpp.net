@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/Ruby.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/Ruby.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Mac で rbenv を使って複数バージョンの Ruby を管理するためのメモ]]></title>
-            <link href="http://www.sharkpp.net/blog/2015/10/25/ruby-rbenv-on-mac-osx-memo.html"/>
+            <link href="https://www.sharkpp.net/blog/2015/10/25/ruby-rbenv-on-mac-osx-memo.html"/>
             <updated>2015-10-25T12:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2015/10/25/ruby-rbenv-on-mac-osx-memo.html</id>
+            <id>https://www.sharkpp.net/blog/2015/10/25/ruby-rbenv-on-mac-osx-memo.html</id>
             <content type="html"><![CDATA[<h2 id="%E6%A6%82%E8%A6%81">概要</h2>
 
 <p>ちょっと、いろいろなバージョンの Ruby を使用しないといけない状況に陥ったので rbenv での ruby のバージョンを管理をする方法のメモ。
@@ -161,9 +161,9 @@ ruby 1.9.3p551 (2014-11-13 revision 48407) [x86_64-darwin13.4.0]
         </entry>
             <entry>
             <title type="html"><![CDATA[Mac OS X 10.8 に Ruby 1.9.3 をインストールする方法]]></title>
-            <link href="http://www.sharkpp.net/blog/2014/04/15/ruby-1-9-3-install-for-mac-10-8.html"/>
+            <link href="https://www.sharkpp.net/blog/2014/04/15/ruby-1-9-3-install-for-mac-10-8.html"/>
             <updated>2014-04-15T16:18:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2014/04/15/ruby-1-9-3-install-for-mac-10-8.html</id>
+            <id>https://www.sharkpp.net/blog/2014/04/15/ruby-1-9-3-install-for-mac-10-8.html</id>
             <content type="html"><![CDATA[<p><code>gem install chef</code> しようとしたら <code>mime-types requires Ruby version &gt;= 1.9.2.</code> って怒られたので Ruby 1.9.3 を Mac にインストールしたときのメモです。</p>
 
 <p>もしかしたら、 make や patch が無いと怒られるかもなので、 MacPorts などでインストールしておいてください。</p>

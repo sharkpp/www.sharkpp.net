@@ -60,7 +60,7 @@
             class="active"><span 
            ><span>git メモ：ローカルとリモートのブランチ名を変更する</span
        ></li></ol><article itemscope="itemscope" itemtype="http://schema.org/Article"><meta itemscope="itemscope" itemprop="mainEntityOfPage"
-              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net/blog/2016/02/11/git-memo-rename-branches-local-and-remote.html"/><header><h1><span itemprop="headline">git メモ：ローカルとリモートのブランチ名を変更する</span><small>post</small></h1></header><div id="toc" class="panel panel-default pull-right"><div class="panel-heading text-center">目次</div><div class="panel-body" style="padding: 10px;"><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6">前提条件</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%82%84%E3%82%8A%E6%96%B9">やり方</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%8F%82%E8%80%83">参考</a></ul></div></div><div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div><div itemprop="articleBody"><p>git のブランチ名を変えたい場合のやりかたメモ。</p><p>ある所に</p><ol><li>master から別のブランチ名にブランチを切りました</li><li>特定フォルダだけ必要なので subtree (<code>git subtree push --prefix public/ . sub-branch</code>) で push しています。</li><li>でも、よく考えたら一手間かかるし、もういっそのこと構造を変更しそのまま master ブランチを名前変えて使えばイイじゃん</li></ol><p>と考えた男がいました。</p><h2 id="%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6" itemprop="articleSection">前提条件</h2><p>ということで、まずは条件を設定。</p><table><thead><tr><th>ローカル</th><th>リモート</th></tr></thead><tbody><tr><td>master</td><td>master</td></tr><tr><td>gh-pages</td><td>gh-pages</td></tr></tbody></table><p>と設定します。</p><pre><code class="bash">$ git branch --all
+              itemType="https://schema.org/WebPage" itemid="https://www.sharkpp.net/blog/2016/02/11/git-memo-rename-branches-local-and-remote.html"/><header><h1><span itemprop="headline">git メモ：ローカルとリモートのブランチ名を変更する</span><small>post</small></h1></header><div id="toc" class="panel panel-default pull-right"><div class="panel-heading text-center">目次</div><div class="panel-body" style="padding: 10px;"><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6">前提条件</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%82%84%E3%82%8A%E6%96%B9">やり方</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%8F%82%E8%80%83">参考</a></ul></div></div><div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div><div itemprop="articleBody"><p>git のブランチ名を変えたい場合のやりかたメモ。</p><p>ある所に</p><ol><li>master から別のブランチ名にブランチを切りました</li><li>特定フォルダだけ必要なので subtree (<code>git subtree push --prefix public/ . sub-branch</code>) で push しています。</li><li>でも、よく考えたら一手間かかるし、もういっそのこと構造を変更しそのまま master ブランチを名前変えて使えばイイじゃん</li></ol><p>と考えた男がいました。</p><h2 id="%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6" itemprop="articleSection">前提条件</h2><p>ということで、まずは条件を設定。</p><table><thead><tr><th>ローカル</th><th>リモート</th></tr></thead><tbody><tr><td>master</td><td>master</td></tr><tr><td>gh-pages</td><td>gh-pages</td></tr></tbody></table><p>と設定します。</p><pre><code class="bash">$ git branch --all
   gh-pages
 * master
   remotes/origin/gh-pages
@@ -112,10 +112,10 @@ $ git push origin :master
         &nbsp;/&nbsp;
         <i class="fa fa-thumb-tack"></i>&nbsp;<a href="/blog/2016/02/11/git-memo-rename-branches-local-and-remote.html">Permalink</a>
         &nbsp;/&nbsp;
-    </span><meta itemprop="url" content="http://www.sharkpp.net/blog/2016/02/11/git-memo-rename-branches-local-and-remote.html" /><span itemprop="author" itemscope itemtype="https://schema.org/Person"
+    </span><meta itemprop="url" content="https://www.sharkpp.net/blog/2016/02/11/git-memo-rename-branches-local-and-remote.html" /><span itemprop="author" itemscope itemtype="https://schema.org/Person"
           style="display: none;"
        ><span itemprop="name">sharkpp</span
-   ></span><a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2016%2F02%2F11%2Fgit-memo-rename-branches-local-and-remote.html"
+   ></span><a href="http://b.hatena.ne.jp/entry/https%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2016%2F02%2F11%2Fgit-memo-rename-branches-local-and-remote.html"
        class="hatena-bookmark-button"
        data-hatena-bookmark-title="git メモ：ローカルとリモートのブランチ名を変更する &mdash; さめたすたすのお家"
        data-hatena-bookmark-layout="simple-balloon"
@@ -125,7 +125,7 @@ $ git push origin :master
             width="20" height="20" style="border: none;" /></a
       >&nbsp;
     <a href="https://twitter.com/share" class="twitter-share-button"
-       data-url="http://www.sharkpp.net/blog/2016/02/11/git-memo-rename-branches-local-and-remote.html" data-via="sharkpp">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><div style="line-height: 25px; height: 25px;"><span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
+       data-url="https://www.sharkpp.net/blog/2016/02/11/git-memo-rename-branches-local-and-remote.html" data-via="sharkpp">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><div style="line-height: 25px; height: 25px;"><span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
                         <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
         &nbsp;/&nbsp;
                                 <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:

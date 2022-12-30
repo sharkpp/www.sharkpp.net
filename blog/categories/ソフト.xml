@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/categories/%E3%82%BD%E3%83%95%E3%83%88.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/categories/%E3%82%BD%E3%83%95%E3%83%88.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[除夜の鐘]]></title>
-            <link href="http://www.sharkpp.net/blog/2011/01/01/joya-no-kane.html"/>
+            <link href="https://www.sharkpp.net/blog/2011/01/01/joya-no-kane.html"/>
             <updated>2011-01-01T02:32:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2011/01/01/joya-no-kane.html</id>
+            <id>https://www.sharkpp.net/blog/2011/01/01/joya-no-kane.html</id>
             <content type="html"><![CDATA[<h3 id="%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E">ソフトの説明</h3>
 
 <p><img src="/images/2011_0101_joya_no_kane.jpg" alt="画面" /></p>
@@ -53,9 +53,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[Lhaplus x64 shell extension]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/08/23/lhaplus-x64-shell-extension.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/08/23/lhaplus-x64-shell-extension.html"/>
             <updated>2009-08-23T16:31:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/08/23/lhaplus-x64-shell-extension.html</id>
+            <id>https://www.sharkpp.net/blog/2009/08/23/lhaplus-x64-shell-extension.html</id>
             <content type="html"><![CDATA[<p><div class="alert alert-danger alert-dismissible" role="alert">
   <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
   <dl style="margin-bottom: 0; margin-left: 35px;">
@@ -117,9 +117,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[PuTTY command line interface proxy for TeraTerm]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/07/24/puttydummy.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/07/24/puttydummy.html"/>
             <updated>2009-07-24T01:04:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/07/24/puttydummy.html</id>
+            <id>https://www.sharkpp.net/blog/2009/07/24/puttydummy.html</id>
             <content type="html"><![CDATA[<h3 id="%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E">ソフトの説明</h3>
 
 <p><a href="http://winscp.net/">WinSCP</a>のPuTTY呼び出しボタンで<a href="http://ttssh2.sourceforge.jp/">TeraTerm</a>を呼び出せるようにする、中継アプリです。</p>
@@ -162,9 +162,9 @@ TeraTermをデフォルトでインストールしている場合は、"C:\Progr
         </entry>
             <entry>
             <title type="html"><![CDATA[IRC Channel encode convert plugin]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/04/12/cotton-chenc.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/04/12/cotton-chenc.html"/>
             <updated>2009-04-12T23:01:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/04/12/cotton-chenc.html</id>
+            <id>https://www.sharkpp.net/blog/2009/04/12/cotton-chenc.html</id>
             <content type="html"><![CDATA[<div><a href="/files/chenc001.zip">DOWNLOAD</a> 2009/04/12
 </div>
 
@@ -175,9 +175,9 @@ TeraTermをデフォルトでインストールしている場合は、"C:\Progr
         </entry>
             <entry>
             <title type="html"><![CDATA[Project-μ Bitmap to DIB Filter]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/07/21/susie-ifktmkr.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/07/21/susie-ifktmkr.html"/>
             <updated>2008-07-21T00:14:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/07/21/susie-ifktmkr.html</id>
+            <id>https://www.sharkpp.net/blog/2008/07/21/susie-ifktmkr.html</id>
             <content type="html"><![CDATA[<div><a href="/files/ifktm001.lzh">DOWNLOAD</a> 2004/02/24
 </div>
 
@@ -197,9 +197,9 @@ Project-μ形式の BMPファイルを読み込む機能を追加するプラグ
         </entry>
             <entry>
             <title type="html"><![CDATA[KiSS CEL Export Library]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/07/21/abc-exkiss.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/07/21/abc-exkiss.html"/>
             <updated>2008-07-21T00:14:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/07/21/abc-exkiss.html</id>
+            <id>https://www.sharkpp.net/blog/2008/07/21/abc-exkiss.html</id>
             <content type="html"><![CDATA[<div><a href="/files/exks001c.lzh">DOWNLOAD</a> 2004/02/24
 </div>
 
@@ -219,9 +219,9 @@ KiSS パレットを出力できます(256×1×24bitColor の画像から)
         </entry>
             <entry>
             <title type="html"><![CDATA[D-Angel Archive extract plug-in]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/07/21/susie-axdangel.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/07/21/susie-axdangel.html"/>
             <updated>2008-07-21T00:13:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/07/21/susie-axdangel.html</id>
+            <id>https://www.sharkpp.net/blog/2008/07/21/susie-axdangel.html</id>
             <content type="html"><![CDATA[<div><a href="/files/axda003.lzh">DOWNLOAD</a> 2004/02/24
 </div>
 
@@ -247,9 +247,9 @@ D-Angel 形式のアーカイブファイルを読み込む機能を追加する
         </entry>
             <entry>
             <title type="html"><![CDATA[Adv&#039;s extract plug-in]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/07/21/susie-axadvs.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/07/21/susie-axadvs.html"/>
             <updated>2008-07-21T00:13:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/07/21/susie-axadvs.html</id>
+            <id>https://www.sharkpp.net/blog/2008/07/21/susie-axadvs.html</id>
             <content type="html"><![CDATA[<div><a href="/files/axadv001.lzh">DOWNLOAD</a> 2004/02/24
 </div>
 
@@ -272,9 +272,9 @@ RYO 氏のアドベンチャーゲーム製作支援ソフト『Adv'S』のア�
         </entry>
             <entry>
             <title type="html"><![CDATA[KiSS CEL to DIB Filter]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/07/21/susie-ifcel.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/07/21/susie-ifcel.html"/>
             <updated>2008-07-21T00:12:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/07/21/susie-ifcel.html</id>
+            <id>https://www.sharkpp.net/blog/2008/07/21/susie-ifcel.html</id>
             <content type="html"><![CDATA[<div><a href="/files/ifcl003a.lzh">DOWNLOAD</a> 2004/02/24
 </div>
 
@@ -300,9 +300,9 @@ CKISS CELファイル(フルカラー)<br />模様との半透明合成も出来
         </entry>
             <entry>
             <title type="html"><![CDATA[TeraPad Temporary Tool]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/07/21/terapad-tptemp.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/07/21/terapad-tptemp.html"/>
             <updated>2008-07-21T00:11:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/07/21/terapad-tptemp.html</id>
+            <id>https://www.sharkpp.net/blog/2008/07/21/terapad-tptemp.html</id>
             <content type="html"><![CDATA[<h2 id="%E8%A9%B3%E7%B4%B0">詳細</h2>
 
 <h2 id="%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E">ソフトの説明</h2>

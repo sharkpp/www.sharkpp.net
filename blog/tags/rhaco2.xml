@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/rhaco2.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/rhaco2.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[rhaco2ってどうやって使うの？]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/02/01/how-to-use-rhaco2.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/02/01/how-to-use-rhaco2.html"/>
             <updated>2009-02-01T17:56:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/02/01/how-to-use-rhaco2.html</id>
+            <id>https://www.sharkpp.net/blog/2009/02/01/how-to-use-rhaco2.html</id>
             <content type="html"><![CDATA[<p>Rhaco2を少し触りだしたのでまず、初期設定関連のメモを書いてみた</p>
 
 <p>Lingerからお目当てのものを検索かけても出てこず1日ごとに戻りながら探していって時間を食ってしまった</p>
@@ -24,9 +24,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[rhaco2ってどうやって使うの？]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/02/01/rhaco-how-to-use-rhaco2.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/02/01/rhaco-how-to-use-rhaco2.html"/>
             <updated>2009-02-01T17:45:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/02/01/rhaco-how-to-use-rhaco2.html</id>
+            <id>https://www.sharkpp.net/blog/2009/02/01/rhaco-how-to-use-rhaco2.html</id>
             <content type="html"><![CDATA[<p>2009年12月31日 追記</p>
 
 <p>以下の内容は、2009年02月01日の時点でのリポジトリ最新版で確認した記述です。</p>

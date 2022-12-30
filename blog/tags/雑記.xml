@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/%E9%9B%91%E8%A8%98.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/%E9%9B%91%E8%A8%98.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[大晦日@2022]]></title>
-            <link href="http://www.sharkpp.net/blog/2022/12/31/new-years-eve-2022.html"/>
+            <link href="https://www.sharkpp.net/blog/2022/12/31/new-years-eve-2022.html"/>
             <updated>2022-12-31T07:10:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2022/12/31/new-years-eve-2022.html</id>
+            <id>https://www.sharkpp.net/blog/2022/12/31/new-years-eve-2022.html</id>
             <content type="html"><![CDATA[<h2 id="1-%E5%B9%B4%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A">1 年を振り返り</h2>
 
 <p>今年も本日が大晦日、今年最後の日になりました。</p>
@@ -53,9 +53,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[MacBook Air (M1, 2020) 開封の儀]]></title>
-            <link href="http://www.sharkpp.net/blog/2022/05/13/unboxing-macbook-air-2020.html"/>
+            <link href="https://www.sharkpp.net/blog/2022/05/13/unboxing-macbook-air-2020.html"/>
             <updated>2022-05-13T21:37:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2022/05/13/unboxing-macbook-air-2020.html</id>
+            <id>https://www.sharkpp.net/blog/2022/05/13/unboxing-macbook-air-2020.html</id>
             <content type="html"><![CDATA[<p>メイン機として使っている、MacBook Air (11-inch, Mid 2012) がまだ使えるけど、そろそろZoomなどストリーミング処理が辛くなってきた感じなので新しくしたいなって思ってたところ、機会があったので... ついに...</p>
 
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">My New Gear <a href="https://t.co/c64XG2F565">pic.twitter.com/c64XG2F565</a></p>&mdash; さめたすたす (@sharkpp) <a href="https://twitter.com/sharkpp/status/1510520564670398465?ref_src=twsrc%5Etfw">April 3, 2022</a></blockquote>
@@ -394,9 +394,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[HAPPY NEW YEAR 2022]]></title>
-            <link href="http://www.sharkpp.net/blog/2022/01/01/happy-new-year-2022.html"/>
+            <link href="https://www.sharkpp.net/blog/2022/01/01/happy-new-year-2022.html"/>
             <updated>2022-01-01T20:02:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2022/01/01/happy-new-year-2022.html</id>
+            <id>https://www.sharkpp.net/blog/2022/01/01/happy-new-year-2022.html</id>
             <content type="html"><![CDATA[<p>明けましておめでとうございます。</p>
 
 <p>まだまだ新型コロナは油断ならないですが、今年も良いとしてあってほしいですね。</p>
@@ -426,9 +426,9 @@ GatsbyJS + GitHub Action でビルドできるといい感じかなと。</p>
         </entry>
             <entry>
             <title type="html"><![CDATA[大晦日@2021]]></title>
-            <link href="http://www.sharkpp.net/blog/2021/12/31/new-years-eve-2021.html"/>
+            <link href="https://www.sharkpp.net/blog/2021/12/31/new-years-eve-2021.html"/>
             <updated>2021-12-31T10:13:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2021/12/31/new-years-eve-2021.html</id>
+            <id>https://www.sharkpp.net/blog/2021/12/31/new-years-eve-2021.html</id>
             <content type="html"><![CDATA[<h2 id="1-%E5%B9%B4%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A">1 年を振り返り</h2>
 
 <p>今年も毎度のこと大晦日の今日だけとなりました。</p>
@@ -477,9 +477,9 @@ GatsbyJS + GitHub Action でビルドできるといい感じかなと。</p>
         </entry>
             <entry>
             <title type="html"><![CDATA[Chromecast with Google TV の開封の儀と３ヶ月ぐらい使ってみた]]></title>
-            <link href="http://www.sharkpp.net/blog/2021/02/28/unboxing-and-used-three-month-of-chromecast-with-google-tv.html"/>
+            <link href="https://www.sharkpp.net/blog/2021/02/28/unboxing-and-used-three-month-of-chromecast-with-google-tv.html"/>
             <updated>2021-02-28T22:45:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2021/02/28/unboxing-and-used-three-month-of-chromecast-with-google-tv.html</id>
+            <id>https://www.sharkpp.net/blog/2021/02/28/unboxing-and-used-three-month-of-chromecast-with-google-tv.html</id>
             <content type="html"><![CDATA[<p>10月1日に発表され、これは欲しいって思いつつ日本発売の情報が流れずやきもきしていたところで、
 やっと11月25日に発売された <a href="https://store.google.com/jp/product/chromecast_google_tv">Chromecast with Google TV</a> を
 しばらく使ってみた感想などを毎度のごとくの開封の儀とともに記事にしました。</p>
@@ -578,9 +578,9 @@ GatsbyJS + GitHub Action でビルドできるといい感じかなと。</p>
         </entry>
             <entry>
             <title type="html"><![CDATA[HAPPY NEW YEAR 2021]]></title>
-            <link href="http://www.sharkpp.net/blog/2021/01/01/happy-new-year-2021.html"/>
+            <link href="https://www.sharkpp.net/blog/2021/01/01/happy-new-year-2021.html"/>
             <updated>2021-01-01T22:30:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2021/01/01/happy-new-year-2021.html</id>
+            <id>https://www.sharkpp.net/blog/2021/01/01/happy-new-year-2021.html</id>
             <content type="html"><![CDATA[<p>明けましておめでとうございます。</p>
 
 <p>今年もまだまだ新型コロナは収まりそうになさそうですが、それに負けることなく過ごせればと思います。</p>
@@ -631,9 +631,9 @@ GatsbyJS + GitHub Action でビルドできるといい感じかなと。</p>
         </entry>
             <entry>
             <title type="html"><![CDATA[大晦日@2020]]></title>
-            <link href="http://www.sharkpp.net/blog/2020/12/31/new-years-eve-2020.html"/>
+            <link href="https://www.sharkpp.net/blog/2020/12/31/new-years-eve-2020.html"/>
             <updated>2020-12-31T21:49:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2020/12/31/new-years-eve-2020.html</id>
+            <id>https://www.sharkpp.net/blog/2020/12/31/new-years-eve-2020.html</id>
             <content type="html"><![CDATA[<h2 id="1-%E5%B9%B4%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A">1 年を振り返り</h2>
 
 <p>今年も残すところ大晦日の今日だけとなりました。
@@ -690,9 +690,9 @@ GatsbyJS + GitHub Action でビルドできるといい感じかなと。</p>
         </entry>
             <entry>
             <title type="html"><![CDATA[Hubot アダプタを TypeScript を使って作ってみた]]></title>
-            <link href="http://www.sharkpp.net/blog/2020/07/29/hubot-adapter-with-typescript.html"/>
+            <link href="https://www.sharkpp.net/blog/2020/07/29/hubot-adapter-with-typescript.html"/>
             <updated>2020-07-29T23:46:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2020/07/29/hubot-adapter-with-typescript.html</id>
+            <id>https://www.sharkpp.net/blog/2020/07/29/hubot-adapter-with-typescript.html</id>
             <content type="html"><![CDATA[<h2 id="typescrpt-%E3%81%A7%E5%AE%9F%E8%A3%85%E3%81%99%E3%82%8B-hubot-%E3%82%A2%E3%83%80%E3%83%97%E3%82%BF">TypeScrpt で実装する Hubot アダプタ</h2>
 
 <p><a href="https://hubot.github.com/docs/adapters/development/">Development adapter | HUBOT</a> を参考に、起動時に bot へと生成したメッセージを受け渡すだけを行うアダプタを TypeScript で実装してみました。</p>
@@ -1110,9 +1110,9 @@ Configuration for rule "import/no-cycle" is invalid
         </entry>
             <entry>
             <title type="html"><![CDATA[あれから16年経ったようです]]></title>
-            <link href="http://www.sharkpp.net/blog/2020/02/29/happy-anniversary-16th.html"/>
+            <link href="https://www.sharkpp.net/blog/2020/02/29/happy-anniversary-16th.html"/>
             <updated>2020-02-29T23:30:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2020/02/29/happy-anniversary-16th.html</id>
+            <id>https://www.sharkpp.net/blog/2020/02/29/happy-anniversary-16th.html</id>
             <content type="html"><![CDATA[<p>世間では新型コロナウイルスによって展示会やらイベントが次々に中止や延期に追い込まれています。
 個人的な部分でもついにリモートワークが推奨になってきた感じで影響が出始めましたね。</p>
 
@@ -1186,9 +1186,9 @@ Frog CMS も更新が続くと思ってたらしばらくしたら更新され�
         </entry>
             <entry>
             <title type="html"><![CDATA[HAPPY NEW YEAR 2020]]></title>
-            <link href="http://www.sharkpp.net/blog/2020/01/01/happy-new-year-2020.html"/>
+            <link href="https://www.sharkpp.net/blog/2020/01/01/happy-new-year-2020.html"/>
             <updated>2020-01-01T17:55:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2020/01/01/happy-new-year-2020.html</id>
+            <id>https://www.sharkpp.net/blog/2020/01/01/happy-new-year-2020.html</id>
             <content type="html"><![CDATA[<p>明けましておめでとうございます。</p>
 
 <p>ほむぺ開設 16 年目🎉 (たぶん)。

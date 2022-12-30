@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/HSP.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/HSP.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Hot Soup Processor Advent Calendar 2017 まとめ]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/12/25/hsp-advent-calendar-2017-25th-day.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/12/25/hsp-advent-calendar-2017-25th-day.html"/>
             <updated>2017-12-25T23:45:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/12/25/hsp-advent-calendar-2017-25th-day.html</id>
+            <id>https://www.sharkpp.net/blog/2017/12/25/hsp-advent-calendar-2017-25th-day.html</id>
             <content type="html"><![CDATA[<p>こんにちは、こんばんは。</p>
 
 <p><a href="http://qiita.com/advent-calendar/2017/hsp">Hot Soup Processor Advent Calendar 2017</a> の 最終日を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p>
@@ -36,7 +36,7 @@
 <tr>
   <td>12/01</td>
   <td><a href="http://qiita.com/sharkpp">sharkpp</a></td>
-  <td><a href="http://www.sharkpp.net/blog/2017/12/01/hsp-advent-calendar-2017-1st-day.html">Google Poly で公開されている素材を HSP 3 で利用してみよう</a></td>
+  <td><a href="/blog/2017/12/01/hsp-advent-calendar-2017-1st-day.html">Google Poly で公開されている素材を HSP 3 で利用してみよう</a></td>
 </tr>
 <tr>
   <td>12/02</td>
@@ -106,7 +106,7 @@
 <tr>
   <td>12/25</td>
   <td><a href="http://qiita.com/sharkpp">sharkpp</a></td>
-  <td><a href="http://www.sharkpp.net/blog/2017/12/25/hsp-advent-calendar-2017-25th-day.html">Hot Soup Processor Advent Calendar 2017 まとめ</a></td>
+  <td><a href="/blog/2017/12/25/hsp-advent-calendar-2017-25th-day.html">Hot Soup Processor Advent Calendar 2017 まとめ</a></td>
 </tr>
 </tbody>
 </table>
@@ -177,9 +177,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[Google Poly で公開されている素材を HSP 3 で利用してみよう]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/12/01/hsp-advent-calendar-2017-1st-day.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/12/01/hsp-advent-calendar-2017-1st-day.html"/>
             <updated>2017-12-01T23:25:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/12/01/hsp-advent-calendar-2017-1st-day.html</id>
+            <id>https://www.sharkpp.net/blog/2017/12/01/hsp-advent-calendar-2017-1st-day.html</id>
             <content type="html"><![CDATA[<p>こんにちは、こんばんは。</p>
 
 <p><a href="http://qiita.com/advent-calendar/2017/hsp">Hot Soup Processor Advent Calendar 2017</a> の 初日を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p>
@@ -423,9 +423,9 @@ loop
         </entry>
             <entry>
             <title type="html"><![CDATA[Hot Soup Processor Advent Calendar 2016 まとめ]]></title>
-            <link href="http://www.sharkpp.net/blog/2016/12/25/hsp-advent-calendar-2016-25th-day.html"/>
+            <link href="https://www.sharkpp.net/blog/2016/12/25/hsp-advent-calendar-2016-25th-day.html"/>
             <updated>2016-12-25T15:40:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2016/12/25/hsp-advent-calendar-2016-25th-day.html</id>
+            <id>https://www.sharkpp.net/blog/2016/12/25/hsp-advent-calendar-2016-25th-day.html</id>
             <content type="html"><![CDATA[<p>こんにちは、こんばんは。</p>
 
 <p><a href="http://qiita.com/advent-calendar/2016/hsp">Hot Soup Processor Advent Calendar 2016</a> の 最終日を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p>
@@ -448,7 +448,7 @@ loop
 <tr>
   <td>12/01</td>
   <td><a href="http://qiita.com/sharkpp">sharkpp</a></td>
-  <td><a href="http://www.sharkpp.net/blog/2016/12/01/hsp-advent-calendar-2016-1st-day.html">macOS と Wine で作る HSP 3 の開発環境</a></td>
+  <td><a href="/blog/2016/12/01/hsp-advent-calendar-2016-1st-day.html">macOS と Wine で作る HSP 3 の開発環境</a></td>
 </tr>
 <tr>
   <td>12/02</td>
@@ -523,7 +523,7 @@ loop
 <tr>
   <td>12/25</td>
   <td><a href="http://qiita.com/sharkpp">sharkpp</a></td>
-  <td><a href="http://www.sharkpp.net/blog/2016-12-25-hsp-advent-calendar-2016-25th-day.html">Hot Soup Processor Advent Calendar 2016 まとめ</a></td>
+  <td><a href="/blog/2016-12-25-hsp-advent-calendar-2016-25th-day.html">Hot Soup Processor Advent Calendar 2016 まとめ</a></td>
 </tr>
 </tbody>
 </table>
@@ -784,9 +784,9 @@ HSPCVといえば実装がされたHSP公開数日後(もしかしたら翌日�
         </entry>
             <entry>
             <title type="html"><![CDATA[macOS と Wine で作る HSP 3 の開発環境]]></title>
-            <link href="http://www.sharkpp.net/blog/2016/12/01/hsp-advent-calendar-2016-1st-day.html"/>
+            <link href="https://www.sharkpp.net/blog/2016/12/01/hsp-advent-calendar-2016-1st-day.html"/>
             <updated>2016-12-01T01:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2016/12/01/hsp-advent-calendar-2016-1st-day.html</id>
+            <id>https://www.sharkpp.net/blog/2016/12/01/hsp-advent-calendar-2016-1st-day.html</id>
             <content type="html"><![CDATA[<p>こんにちは、こんばんは。</p>
 
 <p><a href="http://qiita.com/advent-calendar/2016/hsp">Hot Soup Processor Advent Calendar 2016</a> の 初日を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p>
@@ -1087,9 +1087,9 @@ $ rm -f NotoSansCJKjp-hinted.zip LICENSE_OFL.txt
         </entry>
             <entry>
             <title type="html"><![CDATA[HSP の Advent Calendar を作ってみたよ]]></title>
-            <link href="http://www.sharkpp.net/blog/2016/11/28/advent-calendar-for-hsp-2016.html"/>
+            <link href="https://www.sharkpp.net/blog/2016/11/28/advent-calendar-for-hsp-2016.html"/>
             <updated>2016-11-28T13:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2016/11/28/advent-calendar-for-hsp-2016.html</id>
+            <id>https://www.sharkpp.net/blog/2016/11/28/advent-calendar-for-hsp-2016.html</id>
             <content type="html"><![CDATA[<p>みなさま、今年も Advent Calendar の季節がやってきました。
 本来はキリスト教のお祭りであるところのクリスマスまでの日数を、わくわくしながら一日一日を指折り数える行事だったようですが、最近はクリスマスまでの毎日をあるテーマに沿ってやってみよう、みたいなイベントになっているようです。
 これに関していえば、まあ世界中でそんな感じのようなので、別に日本人が節操なし、とかそういう類ではないと思います、はい。</p>
@@ -1143,9 +1143,9 @@ $ rm -f NotoSansCJKjp-hinted.zip LICENSE_OFL.txt
         </entry>
             <entry>
             <title type="html"><![CDATA[HSP プログラムコンテスト 2016 へ応募しました(５年ぶり)]]></title>
-            <link href="http://www.sharkpp.net/blog/2016/10/31/entry-the-HSP-program-contest-2016.html"/>
+            <link href="https://www.sharkpp.net/blog/2016/10/31/entry-the-HSP-program-contest-2016.html"/>
             <updated>2016-10-31T01:20:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2016/10/31/entry-the-HSP-program-contest-2016.html</id>
+            <id>https://www.sharkpp.net/blog/2016/10/31/entry-the-HSP-program-contest-2016.html</id>
             <content type="html"><![CDATA[<p>５年前を最後に、毎年今年は応募するぞー、ぞー、ぞー、で、結局何もできずに歯がゆい思いをしていましたが、今年はなんとか滑り込みで応募できました。</p>
 
 <p><a href="http://dev.onionsoft.net/seed/info.ax?user=74">作者ページ</a> <a href="http://dev.onionsoft.net/seed/info.ax?id=1274">作品ページ</a></p>
@@ -1314,9 +1314,9 @@ $ rm -f NotoSansCJKjp-hinted.zip LICENSE_OFL.txt
         </entry>
             <entry>
             <title type="html"><![CDATA[HSP ユーザーのためのハブサイトを立上げました]]></title>
-            <link href="http://www.sharkpp.net/blog/2016/04/01/hub-site-launched-for-hsp-users.html"/>
+            <link href="https://www.sharkpp.net/blog/2016/04/01/hub-site-launched-for-hsp-users.html"/>
             <updated>2016-04-01T00:35:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2016/04/01/hub-site-launched-for-hsp-users.html</id>
+            <id>https://www.sharkpp.net/blog/2016/04/01/hub-site-launched-for-hsp-users.html</id>
             <content type="html"><![CDATA[<p>以前、某氏が公開していたドメインが、更新されず、スパムドメインになっていたのがいつの間にか手放されていたのを取得し、熟成させること 2 年ぐらい。</p>
 
 <p>ようやく、重い腰を上げサイトを公開しました。</p>
@@ -1342,9 +1342,9 @@ $ rm -f NotoSansCJKjp-hinted.zip LICENSE_OFL.txt
         </entry>
             <entry>
             <title type="html"><![CDATA[Wine を使って Mac OS X で HSP と hgimg4 を動かしてみた]]></title>
-            <link href="http://www.sharkpp.net/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html"/>
+            <link href="https://www.sharkpp.net/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html"/>
             <updated>2016-03-26T23:43:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html</id>
+            <id>https://www.sharkpp.net/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html</id>
             <content type="html"><![CDATA[<p>HSP をどうしても Mac OS X で動かしたい！</p>
 
 <p>まあ、とりあえず Wine 使っておけばいいよね！</p>
@@ -1633,9 +1633,9 @@ Wine build complete.
         </entry>
             <entry>
             <title type="html"><![CDATA[除夜の鐘をブログパーツにしてみた]]></title>
-            <link href="http://www.sharkpp.net/blog/2015/12/31/joya-no-kane-for-blog-parts.html"/>
+            <link href="https://www.sharkpp.net/blog/2015/12/31/joya-no-kane-for-blog-parts.html"/>
             <updated>2015-12-31T12:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2015/12/31/joya-no-kane-for-blog-parts.html</id>
+            <id>https://www.sharkpp.net/blog/2015/12/31/joya-no-kane-for-blog-parts.html</id>
             <content type="html"><![CDATA[<p>この季節の風物詩、「除夜の鐘」がブログパーツになって帰ってきた！</p>
 
 <p>ってな感じの更新を行ったのでその紹介。</p>
@@ -1686,9 +1686,9 @@ Wine build complete.
         </entry>
             <entry>
             <title type="html"><![CDATA[ほむぺ開設から10年が経ちました]]></title>
-            <link href="http://www.sharkpp.net/blog/2014/02/28/the-10th-anniversary.html"/>
+            <link href="https://www.sharkpp.net/blog/2014/02/28/the-10th-anniversary.html"/>
             <updated>2014-02-28T10:21:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2014/02/28/the-10th-anniversary.html</id>
+            <id>https://www.sharkpp.net/blog/2014/02/28/the-10th-anniversary.html</id>
             <content type="html"><![CDATA[<p>早い物でこのほむぺを開設から１０年が経ってしまいました。</p>
 
 <p>まったくもって、時が経つのは早い物です(´・ω・｀)</p>

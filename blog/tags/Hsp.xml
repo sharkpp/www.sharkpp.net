@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/Hsp.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/Hsp.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[趣味のページにHSPを追加しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/08/17/published-hsp-page-in-hobby-page.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/08/17/published-hsp-page-in-hobby-page.html"/>
             <updated>2008-08-17T01:55:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/08/17/published-hsp-page-in-hobby-page.html</id>
+            <id>https://www.sharkpp.net/blog/2008/08/17/published-hsp-page-in-hobby-page.html</id>
             <content type="html"><![CDATA[<p>趣味のページにHSPを追加しました。</p>
 
 <p>HSP用のプラグインやツールも合わせて公開しています。</p>

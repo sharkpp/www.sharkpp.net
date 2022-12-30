@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/categories/HSP.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/categories/HSP.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[クールなメニュー表示モジュール]]></title>
-            <link href="http://www.sharkpp.net/blog/2011/06/29/hsp-cool-menu.html"/>
+            <link href="https://www.sharkpp.net/blog/2011/06/29/hsp-cool-menu.html"/>
             <updated>2011-06-29T01:08:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2011/06/29/hsp-cool-menu.html</id>
+            <id>https://www.sharkpp.net/blog/2011/06/29/hsp-cool-menu.html</id>
             <content type="html"><![CDATA[<p>何を言っているのか分からない名前が付いていますがスクリーンショットを見てもらえば一目瞭然かと思います。</p>
 
 <p>MS Office等でよく見かけるアイコン付き＆影付きメニューをHSPのモジュールで実装しました。</p>
@@ -30,9 +30,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[point指定font命令モジュール]]></title>
-            <link href="http://www.sharkpp.net/blog/2011/06/29/hsp-point-size-font.html"/>
+            <link href="https://www.sharkpp.net/blog/2011/06/29/hsp-point-size-font.html"/>
             <updated>2011-06-29T00:57:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2011/06/29/hsp-point-size-font.html</id>
+            <id>https://www.sharkpp.net/blog/2011/06/29/hsp-point-size-font.html</id>
             <content type="html"><![CDATA[<p>HSP標準のfont命令はピクセル指定のようなので、ポイント指定でフォントを生成するモジュールを作りました。</p>
 
 <p>待ったく何の役に立つのやら....</p>
@@ -46,9 +46,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[現在位置取得モジュール]]></title>
-            <link href="http://www.sharkpp.net/blog/2011/06/29/hsp-location-module.html"/>
+            <link href="https://www.sharkpp.net/blog/2011/06/29/hsp-location-module.html"/>
             <updated>2011-06-29T00:43:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2011/06/29/hsp-location-module.html</id>
+            <id>https://www.sharkpp.net/blog/2011/06/29/hsp-location-module.html</id>
             <content type="html"><![CDATA[<p>何に役立つか分からないHSP用モジュールを作っちゃったので公開します。</p>
 
 <p>仕組みとしては、googleのページを自力で解析して表示しているだけなので、いつまで使えるかはgoogle次第な無責任モジュールです。</p>
@@ -62,9 +62,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[HSPプログラムコンテスト統計]]></title>
-            <link href="http://www.sharkpp.net/blog/2010/12/12/HSP-program-contest-summary.html"/>
+            <link href="https://www.sharkpp.net/blog/2010/12/12/HSP-program-contest-summary.html"/>
             <updated>2010-12-12T22:22:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2010/12/12/HSP-program-contest-summary.html</id>
+            <id>https://www.sharkpp.net/blog/2010/12/12/HSP-program-contest-summary.html</id>
             <content type="html"><![CDATA[<table>
 <thead>
 <tr>
@@ -209,9 +209,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[”yabuinu” 難読化＆独自スクランブル ツール for HSP 3.x]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/09/30/hsp-yabuinu.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/09/30/hsp-yabuinu.html"/>
             <updated>2009-09-30T00:05:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/09/30/hsp-yabuinu.html</id>
+            <id>https://www.sharkpp.net/blog/2009/09/30/hsp-yabuinu.html</id>
             <content type="html"><![CDATA[<h3 id="%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E">ソフトの説明</h3>
 
 <p>HSP3用のオブジェクト難読化＆独自スクランブルツールです。</p>
@@ -276,9 +276,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[ナイトリービルド]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/06/14/openhsp-nightly.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/06/14/openhsp-nightly.html"/>
             <updated>2009-06-14T22:26:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/06/14/openhsp-nightly.html</id>
+            <id>https://www.sharkpp.net/blog/2009/06/14/openhsp-nightly.html</id>
             <content type="html"><![CDATA[<ul>
 <li><a href="/files/OpenHSP_20090627_r330.zip" title="OpenHSP_20090627_r330.zip">OpenHSP&#95;20090627&#95;r330.zip</a> (3866 KB)</li>
 <li><a href="/files/OpenHSP_20090729_r342.zip" title="OpenHSP_20090729_r342.zip">OpenHSP&#95;20090729&#95;r342.zip</a> (4489 KB)</li>
@@ -299,9 +299,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[PCB Software製プラグインの再配布]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/09/06/pcbsoft.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/09/06/pcbsoft.html"/>
             <updated>2008-09-06T01:52:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/09/06/pcbsoft.html</id>
+            <id>https://www.sharkpp.net/blog/2008/09/06/pcbsoft.html</id>
             <content type="html"><![CDATA[<p>PCB Software(高橋 周平)さんが店じまいしてしまったので公開していたプラグインやツールの再配布を行っています。</p>
 
 <p>再配布しているファイルは公開当時の内容のままです。</p>
@@ -318,9 +318,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[pcbnet2 改変版]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/09/06/hsp-pcbnet2.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/09/06/hsp-pcbnet2.html"/>
             <updated>2008-09-06T01:42:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/09/06/hsp-pcbnet2.html</id>
+            <id>https://www.sharkpp.net/blog/2008/09/06/hsp-pcbnet2.html</id>
             <content type="html"><![CDATA[<p>PCB Software(高橋 周平)さん作のpcbnet2の再配布およびバグ修正などをしています。</p>
 
 <h2 id="%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89">ダウンロード</h2>
@@ -340,9 +340,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[pcbnet2 付属サンプルのHSP3対応修正]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/08/20/hsp-pcbnet2-sample-hsp3-fix.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/08/20/hsp-pcbnet2-sample-hsp3-fix.html"/>
             <updated>2008-08-20T23:54:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/08/20/hsp-pcbnet2-sample-hsp3-fix.html</id>
+            <id>https://www.sharkpp.net/blog/2008/08/20/hsp-pcbnet2-sample-hsp3-fix.html</id>
             <content type="html"><![CDATA[<h2 id="%E8%AA%AC%E6%98%8E">説明</h2>
 
 <p>pcbnet2に付属のサンプルはHSP2の書式で書かれているのでこれをHSP3で実行できるように修正を行いました。</p>
@@ -361,9 +361,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[hsp3obfus - HSP3オブジェクト難読化ツール]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/08/15/hsp-hsp3obfus.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/08/15/hsp-hsp3obfus.html"/>
             <updated>2008-08-15T01:16:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/08/15/hsp-hsp3obfus.html</id>
+            <id>https://www.sharkpp.net/blog/2008/08/15/hsp-hsp3obfus.html</id>
             <content type="html"><![CDATA[<h2 id="%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E">ソフトの説明</h2>
 
 <p>HSP 3.1用のオブジェクト難読化ツールです。</p>

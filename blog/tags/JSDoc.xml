@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/JSDoc.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/JSDoc.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[JSDoc 3 用のプラグインをまとめてみた]]></title>
-            <link href="http://www.sharkpp.net/blog/2016/08/30/list-of-jsdoc3-plugins.html"/>
+            <link href="https://www.sharkpp.net/blog/2016/08/30/list-of-jsdoc3-plugins.html"/>
             <updated>2016-08-30T01:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2016/08/30/list-of-jsdoc3-plugins.html</id>
+            <id>https://www.sharkpp.net/blog/2016/08/30/list-of-jsdoc3-plugins.html</id>
             <content type="html"><![CDATA[<p>世の中には「ソースコードが仕様書」という話を聞いたりします。</p>
 
 <p>まあ、ソースコードと仕様書を同期して更新するなんて大変ですよね。</p>

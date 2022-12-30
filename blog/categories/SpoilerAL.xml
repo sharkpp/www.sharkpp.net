@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/categories/SpoilerAL.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/categories/SpoilerAL.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[「ライグルの野望」用SSG]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/08/09/spal-rigle.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/08/09/spal-rigle.html"/>
             <updated>2008-08-09T10:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/08/09/spal-rigle.html</id>
+            <id>https://www.sharkpp.net/blog/2008/08/09/spal-rigle.html</id>
             <content type="html"><![CDATA[<p>PHAME 氏作の「TransForm ～ ライグルの野望」のトスのステータスを書き換えます。</p>
 
 <p>ソフト入手先:<a href="http://hp.vector.co.jp/authors/VA012182/">グラビティー・スペース</a></p>
@@ -25,9 +25,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[電卓 No.01]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/08/09/spal-calc01.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/08/09/spal-calc01.html"/>
             <updated>2008-08-09T09:59:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/08/09/spal-calc01.html</id>
+            <id>https://www.sharkpp.net/blog/2008/08/09/spal-calc01.html</id>
             <content type="html"><![CDATA[<p>SpoilerAL の電卓デザインを変更</p>
 
 <p><img src="/images/2008_0809_calc01.gif" alt="電卓No.01 画面" /></p>

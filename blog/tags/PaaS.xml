@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/PaaS.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/PaaS.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[SqaleでFuelPHPを動かしてみました]]></title>
-            <link href="http://www.sharkpp.net/blog/2013/03/17/fuelphp-on-sqale.html"/>
+            <link href="https://www.sharkpp.net/blog/2013/03/17/fuelphp-on-sqale.html"/>
             <updated>2013-03-17T01:34:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2013/03/17/fuelphp-on-sqale.html</id>
+            <id>https://www.sharkpp.net/blog/2013/03/17/fuelphp-on-sqale.html</id>
             <content type="html"><![CDATA[<p></p>
 <div class="alert alert-danger alert-dismissible" role="alert">
   <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
@@ -126,9 +126,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[eXcaleでFuelPHPをpublicサブディレクトリなしで動かしてみた(追記あり)]]></title>
-            <link href="http://www.sharkpp.net/blog/2013/02/17/fuelphp-on-excale.html"/>
+            <link href="https://www.sharkpp.net/blog/2013/02/17/fuelphp-on-excale.html"/>
             <updated>2013-02-17T23:30:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2013/02/17/fuelphp-on-excale.html</id>
+            <id>https://www.sharkpp.net/blog/2013/02/17/fuelphp-on-excale.html</id>
             <content type="html"><![CDATA[<p></p>
 <div class="alert alert-danger alert-dismissible" role="alert">
   <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>

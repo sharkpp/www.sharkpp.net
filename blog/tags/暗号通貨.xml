@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/%E6%9A%97%E5%8F%B7%E9%80%9A%E8%B2%A8.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/%E6%9A%97%E5%8F%B7%E9%80%9A%E8%B2%A8.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[名古屋Qt勉強会#15 に参加しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2018/04/21/qt-nagoya-15.html"/>
+            <link href="https://www.sharkpp.net/blog/2018/04/21/qt-nagoya-15.html"/>
             <updated>2018-04-21T05:50:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2018/04/21/qt-nagoya-15.html</id>
+            <id>https://www.sharkpp.net/blog/2018/04/21/qt-nagoya-15.html</id>
             <content type="html"><![CDATA[<p>つい先日 4月14日(土) に開催された <a href="https://qt-users.connpass.com/event/84048/">Qt 勉強会 @ Nagoya #15 - connpass</a> に参加しました。</p>
 
 <p>まとめは <a href="https://togetter.com/li/1218135">Qt 勉強会 @ Nagoya # 15 まとめ - Togetter</a> です。</p>

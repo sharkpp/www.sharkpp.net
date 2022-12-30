@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/Safari%20%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/Safari%20%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Safari 3とSafari 4をWindowsで共存させる方法]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/02/26/safari3-and-safari4-side-by-side-on-windows.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/02/26/safari3-and-safari4-side-by-side-on-windows.html"/>
             <updated>2009-02-26T01:40:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/02/26/safari3-and-safari4-side-by-side-on-windows.html</id>
+            <id>https://www.sharkpp.net/blog/2009/02/26/safari3-and-safari4-side-by-side-on-windows.html</id>
             <content type="html"><![CDATA[<p>巷では、Safari 4<sup>BATA</sup>が公開されたことでお祭りムードになっているようでそれに便乗してみます。</p>
 
 <p>MacOS X ではSafariを共存させる方法として<a href="http://michelf.com/projects/multi-safari/">Multi-Safari</a>見たいなものがあります。</p>

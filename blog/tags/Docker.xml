@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/Docker.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/Docker.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Synology のパッケージのビルド方法について調べてみた]]></title>
-            <link href="http://www.sharkpp.net/blog/2021/09/07/synology-package-building.html"/>
+            <link href="https://www.sharkpp.net/blog/2021/09/07/synology-package-building.html"/>
             <updated>2021-09-07T22:05:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2021/09/07/synology-package-building.html</id>
+            <id>https://www.sharkpp.net/blog/2021/09/07/synology-package-building.html</id>
             <content type="html"><![CDATA[<p>Synology の NAS で利用可能なパッケージを作ってみようと思い、色々と調べてみました。
 調べている最中に DSM 7.0 も正式リリースされたので、合わせてそのバージョンも調査の対象としました。</p>
 

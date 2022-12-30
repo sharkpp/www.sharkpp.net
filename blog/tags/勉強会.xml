@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[名古屋Qt勉強会#31.1 に参加しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2019/11/23/qt-nagoya-31.html"/>
+            <link href="https://www.sharkpp.net/blog/2019/11/23/qt-nagoya-31.html"/>
             <updated>2019-11-23T17:38:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2019/11/23/qt-nagoya-31.html</id>
+            <id>https://www.sharkpp.net/blog/2019/11/23/qt-nagoya-31.html</id>
             <content type="html"><![CDATA[<p>2019年11月23日(土) に開催された <a href="https://qt-users.connpass.com/event/155325/">Qt 勉強会 @ Nagoya #31.1 - connpass</a> へ参加しました。</p>
 
 <p>そのまとめです。</p>
@@ -121,9 +121,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[名古屋Qt勉強会#30.1 に参加しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2019/08/24/qt-nagoya-30.html"/>
+            <link href="https://www.sharkpp.net/blog/2019/08/24/qt-nagoya-30.html"/>
             <updated>2019-08-24T17:13:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2019/08/24/qt-nagoya-30.html</id>
+            <id>https://www.sharkpp.net/blog/2019/08/24/qt-nagoya-30.html</id>
             <content type="html"><![CDATA[<p>2019年8月24日(土) に開催された <a href="https://qt-users.connpass.com/event/143118/">Qt 勉強会 @ Nagoya #30.1 - connpass</a> へ参加しました。</p>
 
 <p>そのまとめです。</p>
@@ -253,9 +253,9 @@ void fuga() {
         </entry>
             <entry>
             <title type="html"><![CDATA[名古屋Qt勉強会#28 に参加しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2019/05/18/qt-nagoya-28.html"/>
+            <link href="https://www.sharkpp.net/blog/2019/05/18/qt-nagoya-28.html"/>
             <updated>2019-05-18T17:15:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2019/05/18/qt-nagoya-28.html</id>
+            <id>https://www.sharkpp.net/blog/2019/05/18/qt-nagoya-28.html</id>
             <content type="html"><![CDATA[<p>5月18日(土) に開催された <a href="https://qt-users.connpass.com/event/130498/">Qt 勉強会 @ Nagoya #28 - connpass</a> へ前回に引き続き参加しました。</p>
 
 <p>そのまとめです。</p>
@@ -456,9 +456,9 @@ void fuga() {
         </entry>
             <entry>
             <title type="html"><![CDATA[名古屋Qt勉強会#27 に参加しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2019/04/27/qt-nagoya-27.html"/>
+            <link href="https://www.sharkpp.net/blog/2019/04/27/qt-nagoya-27.html"/>
             <updated>2019-04-27T17:30:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2019/04/27/qt-nagoya-27.html</id>
+            <id>https://www.sharkpp.net/blog/2019/04/27/qt-nagoya-27.html</id>
             <content type="html"><![CDATA[<p>4月27日(土) に開催された <a href="https://qt-users.connpass.com/event/128431/">Qt 勉強会 @ Nagoya #27 - connpass</a> に久しぶりに参加しました。</p>
 
 <p>そのまとめです。</p>
@@ -591,9 +591,9 @@ void fuga() {
         </entry>
             <entry>
             <title type="html"><![CDATA[名古屋Qt勉強会#24 に参加しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2019/01/19/qt-nagoya-24.html"/>
+            <link href="https://www.sharkpp.net/blog/2019/01/19/qt-nagoya-24.html"/>
             <updated>2019-01-19T17:30:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2019/01/19/qt-nagoya-24.html</id>
+            <id>https://www.sharkpp.net/blog/2019/01/19/qt-nagoya-24.html</id>
             <content type="html"><![CDATA[<p>1月19日(土) に開催された <a href="https://qt-users.connpass.com/event/113801/">Qt 勉強会 @ Nagoya #24 - connpass</a> に久しぶりに参加しました。</p>
 
 <p>そのまとめです。</p>
@@ -653,9 +653,9 @@ void fuga() {
         </entry>
             <entry>
             <title type="html"><![CDATA[名古屋Qt勉強会#19 に参加しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2018/08/26/qt-nagoya-19.html"/>
+            <link href="https://www.sharkpp.net/blog/2018/08/26/qt-nagoya-19.html"/>
             <updated>2018-08-26T09:57:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2018/08/26/qt-nagoya-19.html</id>
+            <id>https://www.sharkpp.net/blog/2018/08/26/qt-nagoya-19.html</id>
             <content type="html"><![CDATA[<p>8月25日(土) に開催された <a href="https://qt-users.connpass.com/event/98190/">Qt 勉強会 @ Nagoya #19 - connpass</a> に参加しました。</p>
 
 <p>そのまとめなどです。</p>
@@ -779,9 +779,9 @@ void Hoge::bind(QObject* object)
         </entry>
             <entry>
             <title type="html"><![CDATA[名古屋Qt勉強会#18 に参加しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2018/07/21/qt-nagoya-18.html"/>
+            <link href="https://www.sharkpp.net/blog/2018/07/21/qt-nagoya-18.html"/>
             <updated>2018-07-21T17:35:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2018/07/21/qt-nagoya-18.html</id>
+            <id>https://www.sharkpp.net/blog/2018/07/21/qt-nagoya-18.html</id>
             <content type="html"><![CDATA[<p>7月21日(土) に開催された <a href="https://qt-users.connpass.com/event/94197/">Qt 勉強会 @ Nagoya #18 - connpass</a> に参加しました。</p>
 
 <p>そのまとめなどです。</p>
@@ -969,9 +969,9 @@ Window {
         </entry>
             <entry>
             <title type="html"><![CDATA[名古屋Qt勉強会#16 に参加しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2018/05/26/qt-nagoya-16.html"/>
+            <link href="https://www.sharkpp.net/blog/2018/05/26/qt-nagoya-16.html"/>
             <updated>2018-05-26T23:26:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2018/05/26/qt-nagoya-16.html</id>
+            <id>https://www.sharkpp.net/blog/2018/05/26/qt-nagoya-16.html</id>
             <content type="html"><![CDATA[<p>5月26日(土) に開催された <a href="https://qt-users.connpass.com/event/88524/">Qt 勉強会 @ Nagoya #16 - connpass</a> に参加しました。</p>
 
 <p>そのまとめ。</p>
@@ -1035,9 +1035,9 @@ Window {
         </entry>
             <entry>
             <title type="html"><![CDATA[名古屋Qt勉強会#15 に参加しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2018/04/21/qt-nagoya-15.html"/>
+            <link href="https://www.sharkpp.net/blog/2018/04/21/qt-nagoya-15.html"/>
             <updated>2018-04-21T05:50:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2018/04/21/qt-nagoya-15.html</id>
+            <id>https://www.sharkpp.net/blog/2018/04/21/qt-nagoya-15.html</id>
             <content type="html"><![CDATA[<p>つい先日 4月14日(土) に開催された <a href="https://qt-users.connpass.com/event/84048/">Qt 勉強会 @ Nagoya #15 - connpass</a> に参加しました。</p>
 
 <p>まとめは <a href="https://togetter.com/li/1218135">Qt 勉強会 @ Nagoya # 15 まとめ - Togetter</a> です。</p>
@@ -1139,9 +1139,9 @@ Window {
         </entry>
             <entry>
             <title type="html"><![CDATA[じゅげむったーの開発日記 その８]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/10/21/jugemutter-development-diary-8th.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/10/21/jugemutter-development-diary-8th.html"/>
             <updated>2017-10-21T17:41:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/10/21/jugemutter-development-diary-8th.html</id>
+            <id>https://www.sharkpp.net/blog/2017/10/21/jugemutter-development-diary-8th.html</id>
             <content type="html"><![CDATA[<p>今回は、明日行われる <a href="https://techbookfest.org/event/tbf03">技術書典３</a> に前日入りして、<a href="https://qt-users.connpass.com/event/68878/">Qt 勉強会 @ Tokyo #52</a> に参加してきました。</p>
 
 <p>東京の勉強会はすごく久しぶりの参加でした。</p>

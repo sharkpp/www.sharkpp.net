@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/%E3%82%B2%E3%83%BC%E3%83%A0.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/%E3%82%B2%E3%83%BC%E3%83%A0.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[HSP プログラムコンテスト 2016 へ応募しました(５年ぶり)]]></title>
-            <link href="http://www.sharkpp.net/blog/2016/10/31/entry-the-HSP-program-contest-2016.html"/>
+            <link href="https://www.sharkpp.net/blog/2016/10/31/entry-the-HSP-program-contest-2016.html"/>
             <updated>2016-10-31T01:20:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2016/10/31/entry-the-HSP-program-contest-2016.html</id>
+            <id>https://www.sharkpp.net/blog/2016/10/31/entry-the-HSP-program-contest-2016.html</id>
             <content type="html"><![CDATA[<p>５年前を最後に、毎年今年は応募するぞー、ぞー、ぞー、で、結局何もできずに歯がゆい思いをしていましたが、今年はなんとか滑り込みで応募できました。</p>
 
 <p><a href="http://dev.onionsoft.net/seed/info.ax?user=74">作者ページ</a> <a href="http://dev.onionsoft.net/seed/info.ax?id=1274">作品ページ</a></p>
@@ -181,9 +181,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[ジグソーパズルを作ってました]]></title>
-            <link href="http://www.sharkpp.net/blog/2010/07/25/make-jigsaw-puzzles-games.html"/>
+            <link href="https://www.sharkpp.net/blog/2010/07/25/make-jigsaw-puzzles-games.html"/>
             <updated>2010-07-25T23:42:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2010/07/25/make-jigsaw-puzzles-games.html</id>
+            <id>https://www.sharkpp.net/blog/2010/07/25/make-jigsaw-puzzles-games.html</id>
             <content type="html"><![CDATA[<p>作っていたソフトの作成を中断し、ここ一ヶ月間パズルゲームを作っていた。</p>
 
 <p>定番のパズルといっても良いあのジグソーパズルだ。</p>

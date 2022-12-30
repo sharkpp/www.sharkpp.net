@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/Misskey.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/Misskey.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Franz 用の Misskey レシピを作りました！]]></title>
-            <link href="http://www.sharkpp.net/blog/2018/08/27/franz-recipe-misskey.html"/>
+            <link href="https://www.sharkpp.net/blog/2018/08/27/franz-recipe-misskey.html"/>
             <updated>2018-08-27T00:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2018/08/27/franz-recipe-misskey.html</id>
+            <id>https://www.sharkpp.net/blog/2018/08/27/franz-recipe-misskey.html</id>
             <content type="html"><![CDATA[<p>先日から話題になってた分散マイクロブログSNSであるところの <a href="https://github.com/syuilo/misskey">syuilo/misskey: A planet of fediverse ✨🐢🚀✨</a> があります。
 それに対応したクライアント <a href="https://github.com/sharkpp/franz-recipe-misskey">Franz 5 recipe for Misskey</a> を昨晩公開したので紹介します。</p>
 

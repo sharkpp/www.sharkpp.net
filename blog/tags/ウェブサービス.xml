@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[PasteBin/Snippet系サービスまとめ]]></title>
-            <link href="http://www.sharkpp.net/blog/2015/06/06/pastebin-snippet-web-service-list.html"/>
+            <link href="https://www.sharkpp.net/blog/2015/06/06/pastebin-snippet-web-service-list.html"/>
             <updated>2015-06-06T07:51:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2015/06/06/pastebin-snippet-web-service-list.html</id>
+            <id>https://www.sharkpp.net/blog/2015/06/06/pastebin-snippet-web-service-list.html</id>
             <content type="html"><![CDATA[<p>以前にTwitterでつぶやいた <a href="https://docs.google.com/spreadsheets/d/1TNov1uXtnPERVAFiUvkzvJ5BfZfghO2A_h2rwgY9qNg/edit?usp=sharing">pastebin/Snippet系サービスまとめ</a> をここでもメモ</p>
 
 <p>テキスト系は色々ありますが RUN CODE が出来るプログラミング系は数えるほどしか無い印象。</p>
@@ -26,9 +26,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[OAuth 認証を提供しているサービスをまとめてみました]]></title>
-            <link href="http://www.sharkpp.net/blog/2014/03/30/oauth-providers-list.html"/>
+            <link href="https://www.sharkpp.net/blog/2014/03/30/oauth-providers-list.html"/>
             <updated>2014-03-30T23:35:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2014/03/30/oauth-providers-list.html</id>
+            <id>https://www.sharkpp.net/blog/2014/03/30/oauth-providers-list.html</id>
             <content type="html"><![CDATA[<p>OAuth 認証を提供しているサービスをまとめてみました。</p>
 
 <p>どちらかというと Opauth で使えそうなサービス一覧、が正しいのかもしれません。</p>
@@ -547,9 +547,9 @@ OpenID
         </entry>
             <entry>
             <title type="html"><![CDATA[*-users.jp(?ユーザのためのハブサイト)のその後を追跡調査(2013-12-29版)]]></title>
-            <link href="http://www.sharkpp.net/blog/2013/12/29/user-jp-follow-up2.html"/>
+            <link href="https://www.sharkpp.net/blog/2013/12/29/user-jp-follow-up2.html"/>
             <updated>2013-12-29T14:46:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2013/12/29/user-jp-follow-up2.html</id>
+            <id>https://www.sharkpp.net/blog/2013/12/29/user-jp-follow-up2.html</id>
             <content type="html"><![CDATA[<p><a href="/blog/2013/01/24/user-jp-follow-up.html">*-user.jp(?ユーザのためのハブサイト)のその後を追跡調査</a>の追跡調査をしてみました。</p>
 
 <p>まあ、何がきっかけって hsp-users.jp がスパムサイトに使われていたのがドメイン切れしたっぽいので取得してみたのと他どうなっているかな？って思ったので確認してみました。</p>
@@ -1044,9 +1044,9 @@ OpenID
         </entry>
             <entry>
             <title type="html"><![CDATA[*-user.jp(?ユーザのためのハブサイト)のその後を追跡調査]]></title>
-            <link href="http://www.sharkpp.net/blog/2013/01/24/user-jp-follow-up.html"/>
+            <link href="https://www.sharkpp.net/blog/2013/01/24/user-jp-follow-up.html"/>
             <updated>2013-01-24T01:48:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2013/01/24/user-jp-follow-up.html</id>
+            <id>https://www.sharkpp.net/blog/2013/01/24/user-jp-follow-up.html</id>
             <content type="html"><![CDATA[<p>ふと、hsp-user.jp がドメイン切れ→乗っ取られで健康食品のページになって久しいなと思い出して、他のサイトたちはどうなっているんだろうと調べてみました。</p>
 
 <p>とりあえず、技術系の *-users.jp に絞って列挙してみました。</p>

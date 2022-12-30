@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/OS%20X.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/OS%20X.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Qt 用の QDialog をベースとした吹き出し型のウィジェット]]></title>
-            <link href="http://www.sharkpp.net/blog/2018/02/27/popover-widget-for-qt.html"/>
+            <link href="https://www.sharkpp.net/blog/2018/02/27/popover-widget-for-qt.html"/>
             <updated>2018-02-27T01:01:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2018/02/27/popover-widget-for-qt.html</id>
+            <id>https://www.sharkpp.net/blog/2018/02/27/popover-widget-for-qt.html</id>
             <content type="html"><![CDATA[<p>とりあえず、ネタがないので先日に公開した <a href="https://github.com/sharkpp/qtpopover">Popover - QDialog base balloon shape widget</a> の紹介。</p>
 
 <h2 id="%E4%BD%95%E3%81%8C%E3%81%A7%E3%81%8D%E3%82%8B%EF%BC%9F">何ができる？</h2>
@@ -158,9 +158,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[駆け足で Qt Network Authorization の使い方を紹介してみる]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/12/21/qt-advent-calendar-2017-21th-day.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/12/21/qt-advent-calendar-2017-21th-day.html"/>
             <updated>2017-12-21T23:45:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/12/21/qt-advent-calendar-2017-21th-day.html</id>
+            <id>https://www.sharkpp.net/blog/2017/12/21/qt-advent-calendar-2017-21th-day.html</id>
             <content type="html"><![CDATA[<p>こんにちは、こんばんは。</p>
 
 <p><a href="http://qiita.com/advent-calendar/2017/qt">Qt Advent Calendar 2017</a> の 21日目を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p>
@@ -666,9 +666,9 @@ public:
         </entry>
             <entry>
             <title type="html"><![CDATA[QMacCocoaViewContainer を使ってみる]]></title>
-            <link href="http://www.sharkpp.net/blog/2016/12/10/qt-advent-calendar-2016-10th-day.html"/>
+            <link href="https://www.sharkpp.net/blog/2016/12/10/qt-advent-calendar-2016-10th-day.html"/>
             <updated>2016-12-10T17:25:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2016/12/10/qt-advent-calendar-2016-10th-day.html</id>
+            <id>https://www.sharkpp.net/blog/2016/12/10/qt-advent-calendar-2016-10th-day.html</id>
             <content type="html"><![CDATA[<p>こんにちは、こんばんは。</p>
 
 <p><a href="http://qiita.com/advent-calendar/2016/qt">Qt Advent Calendar 2016</a> の 10日目を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p>
@@ -845,9 +845,9 @@ void CocoaButton::resizeEvent(QResizeEvent *event)
         </entry>
             <entry>
             <title type="html"><![CDATA[macOS と Wine で作る HSP 3 の開発環境]]></title>
-            <link href="http://www.sharkpp.net/blog/2016/12/01/hsp-advent-calendar-2016-1st-day.html"/>
+            <link href="https://www.sharkpp.net/blog/2016/12/01/hsp-advent-calendar-2016-1st-day.html"/>
             <updated>2016-12-01T01:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2016/12/01/hsp-advent-calendar-2016-1st-day.html</id>
+            <id>https://www.sharkpp.net/blog/2016/12/01/hsp-advent-calendar-2016-1st-day.html</id>
             <content type="html"><![CDATA[<p>こんにちは、こんばんは。</p>
 
 <p><a href="http://qiita.com/advent-calendar/2016/hsp">Hot Soup Processor Advent Calendar 2016</a> の 初日を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p>

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/Trckback.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/Trckback.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Frog CMSにトラックバックプラグインを実装中]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/08/25/implement-trackback-plugin-for-frog-cms.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/08/25/implement-trackback-plugin-for-frog-cms.html"/>
             <updated>2008-08-25T01:28:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/08/25/implement-trackback-plugin-for-frog-cms.html</id>
+            <id>https://www.sharkpp.net/blog/2008/08/25/implement-trackback-plugin-for-frog-cms.html</id>
             <content type="html"><![CDATA[<p>いまはトラックバックをPEAR::Services_Trackbackを使って実装中。</p>
 
 <p>うーん結構めんどい。</p>

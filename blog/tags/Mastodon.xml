@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/Mastodon.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/Mastodon.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Franz 用の Mastodon レシピを作りました！]]></title>
-            <link href="http://www.sharkpp.net/blog/2018/03/27/franz-recipe-mastodon.html"/>
+            <link href="https://www.sharkpp.net/blog/2018/03/27/franz-recipe-mastodon.html"/>
             <updated>2018-03-27T01:10:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2018/03/27/franz-recipe-mastodon.html</id>
+            <id>https://www.sharkpp.net/blog/2018/03/27/franz-recipe-mastodon.html</id>
             <content type="html"><![CDATA[<p>ネタがない... ことはないけど、これまた先日公開した <a href="https://github.com/sharkpp/franz-recipe-mastodon">Franz 5 recipe for Mastodon</a> の紹介です。</p>
 
 <h2 id="%E3%81%9D%E3%82%82%E3%81%9D%E3%82%82-franz-%E3%81%A8%E3%81%AF%E3%81%AA%E3%82%93%E3%81%9E%E3%82%84%EF%BC%9F">そもそも Franz とはなんぞや？</h2>

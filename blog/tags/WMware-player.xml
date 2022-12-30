@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/WMware-player.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/WMware-player.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Ubuntu-ja-10.04をVMware Player 3で動かすときのメモ]]></title>
-            <link href="http://www.sharkpp.net/blog/2010/05/30/ubuntu-ja-10-04-on-vmware-player-3-memo.html"/>
+            <link href="https://www.sharkpp.net/blog/2010/05/30/ubuntu-ja-10-04-on-vmware-player-3-memo.html"/>
             <updated>2010-05-30T18:41:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2010/05/30/ubuntu-ja-10-04-on-vmware-player-3-memo.html</id>
+            <id>https://www.sharkpp.net/blog/2010/05/30/ubuntu-ja-10-04-on-vmware-player-3-memo.html</id>
             <content type="html"><![CDATA[<p>ハードディスクも増設しUbuntu-ja-10.04も出たのでVMware Player 2.5をVMware Player 3.1にアップグレードしてインストールしてみた。</p>
 
 <p><a href="/blog/2009/01/10/ubuntu-ja-8-10-on-vmware-player-2-memo.html">Ubuntu-ja-8.10をVMware Player 2で動かすときのメモ</a>の続編みたいな感じ。</p>
@@ -91,9 +91,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[Ubuntu-ja-8.10をVMware Player 2で動かすときのメモ]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/01/10/ubuntu-ja-8-10-on-vmware-player-2-memo.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/01/10/ubuntu-ja-8-10-on-vmware-player-2-memo.html"/>
             <updated>2009-01-10T17:20:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/01/10/ubuntu-ja-8-10-on-vmware-player-2-memo.html</id>
+            <id>https://www.sharkpp.net/blog/2009/01/10/ubuntu-ja-8-10-on-vmware-player-2-memo.html</id>
             <content type="html"><![CDATA[<p>Ubuntu-ja-8.10 on VMware Player 2 で色々はまったのでメモ</p>
 
 <h3 id="openoffice.org%E3%81%AF%E8%A6%81%E3%82%89%E3%81%AA%E3%81%84%E3%81%AE%E3%81%A7%E6%B6%88%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F">OpenOffice.orgは要らないので消しました</h3>

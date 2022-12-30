@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/HSPlet.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/HSPlet.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[HSPLetについて]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/09/02/about-hsplet.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/09/02/about-hsplet.html"/>
             <updated>2008-09-02T01:35:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/09/02/about-hsplet.html</id>
+            <id>https://www.sharkpp.net/blog/2008/09/02/about-hsplet.html</id>
             <content type="html"><![CDATA[<p>1ヶ月ぐらい前の記事だけどfujidigさんの所でHSPLetの挙動について書かれていたのでトラックバックのテストついでに書いてみる。</p>
 
 <p><a href="http://d.hatena.ne.jp/chaperatta/20080805/1217938231">HSPLet あれこれ</a></p>

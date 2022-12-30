@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/TeraPad.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/TeraPad.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[TeraPad Temporary Tool]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/07/21/terapad-tptemp.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/07/21/terapad-tptemp.html"/>
             <updated>2008-07-21T00:11:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/07/21/terapad-tptemp.html</id>
+            <id>https://www.sharkpp.net/blog/2008/07/21/terapad-tptemp.html</id>
             <content type="html"><![CDATA[<h2 id="%E8%A9%B3%E7%B4%B0">詳細</h2>
 
 <h2 id="%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E">ソフトの説明</h2>
@@ -135,9 +135,9 @@ C:\TeraPad\tool\TpTemp.exe<br /><br /> ※実行ファイルのパスは解凍�
         </entry>
             <entry>
             <title type="html"><![CDATA[TeraPad KeyWord Get Tool]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/07/21/terapad-tpkwget.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/07/21/terapad-tpkwget.html"/>
             <updated>2008-07-21T00:10:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/07/21/terapad-tpkwget.html</id>
+            <id>https://www.sharkpp.net/blog/2008/07/21/terapad-tpkwget.html</id>
             <content type="html"><![CDATA[<h2 id="%E8%A9%B3%E7%B4%B0">詳細</h2>
 
 <h2 id="%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E">ソフトの説明</h2>
@@ -242,9 +242,9 @@ C:\TeraPad\tool\TpkwGet.exe<br /><br /> ※実行ファイルのパスは解凍�
         </entry>
             <entry>
             <title type="html"><![CDATA[TeraPad KeyWord Help Tool]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/07/21/terapad-tpkwhelp.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/07/21/terapad-tpkwhelp.html"/>
             <updated>2008-07-21T00:09:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/07/21/terapad-tpkwhelp.html</id>
+            <id>https://www.sharkpp.net/blog/2008/07/21/terapad-tpkwhelp.html</id>
             <content type="html"><![CDATA[<h2 id="%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E">ソフトの説明</h2>
 
 <p>TeraPad でキー 一発でキーワードヘルプを呼び出し表示するソフトです</p>
@@ -351,9 +351,9 @@ C:\TeraPad\tool\TpkwHelp.exe<br /><br /> ※実行ファイルのパスは解凍
         </entry>
             <entry>
             <title type="html"><![CDATA[TeraPad Jump Tool]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/07/21/terapad-tpjump.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/07/21/terapad-tpjump.html"/>
             <updated>2008-07-21T00:08:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/07/21/terapad-tpjump.html</id>
+            <id>https://www.sharkpp.net/blog/2008/07/21/terapad-tpjump.html</id>
             <content type="html"><![CDATA[<h2 id="%E7%94%BB%E9%9D%A2">画面</h2>
 
 <p><img src="/images/2008_0721_tpjump.jpg" alt="画面" /></p>

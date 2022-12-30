@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/PWA.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/PWA.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Reactでウェブアプリを作ってみた]]></title>
-            <link href="http://www.sharkpp.net/blog/2019/10/14/webapp-made-by-reactjs.html"/>
+            <link href="https://www.sharkpp.net/blog/2019/10/14/webapp-made-by-reactjs.html"/>
             <updated>2019-10-14T18:05:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2019/10/14/webapp-made-by-reactjs.html</id>
+            <id>https://www.sharkpp.net/blog/2019/10/14/webapp-made-by-reactjs.html</id>
             <content type="html"><![CDATA[<p>React を利用してオフラインでも簡単な画像編集をできる１画面ウェブアプリを作ってみました。</p>
 
 <p>作ったものは<a href="https://sharkpp.github.io/delayedmotion/">揺れる<ruby>※<rp>(</rp><rt>ちょめ</rt><rp>)</rp>※<rp>(</rp><rt>ちょめ</rt><rp>)</rp></ruby>画像ジェネレータ</a>です。

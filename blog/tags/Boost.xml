@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/Boost.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/Boost.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Boost.勉強会 #11 東京 に参加しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2013/06/01/boost-11-in-tokyo.html"/>
+            <link href="https://www.sharkpp.net/blog/2013/06/01/boost-11-in-tokyo.html"/>
             <updated>2013-06-01T22:47:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2013/06/01/boost-11-in-tokyo.html</id>
+            <id>https://www.sharkpp.net/blog/2013/06/01/boost-11-in-tokyo.html</id>
             <content type="html"><![CDATA[<p>久しぶりのboost勉強会でした。 早速ですが、レポートというかメモというかをドーゾです。</p>
 
 <ul>
@@ -428,9 +428,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[Boost.勉強会 #10 東京 に参加しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2012/07/30/boost-workshop-10-in-tokyo.html"/>
+            <link href="https://www.sharkpp.net/blog/2012/07/30/boost-workshop-10-in-tokyo.html"/>
             <updated>2012-07-30T00:49:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2012/07/30/boost-workshop-10-in-tokyo.html</id>
+            <id>https://www.sharkpp.net/blog/2012/07/30/boost-workshop-10-in-tokyo.html</id>
             <content type="html"><![CDATA[<p>一昨日、Boost.勉強会 #10 東京 に参加しました。</p>
 
 <h2 id="%E5%85%A5%E5%A0%B4">入場</h2>
@@ -687,9 +687,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[インストール: boostで遊ぶ 其の１]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/08/23/play-with-boost-part-1.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/08/23/play-with-boost-part-1.html"/>
             <updated>2009-08-23T13:48:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/08/23/play-with-boost-part-1.html</id>
+            <id>https://www.sharkpp.net/blog/2009/08/23/play-with-boost-part-1.html</id>
             <content type="html"><![CDATA[<p>最近、といっても数日前から<a href="http://www.boost.org/">boost</a>を触り始めた。</p>
 
 <p>主に、<a href="http://www.kmonos.net/alang/boost/">Let's boost</a>を参考にしています。</p>

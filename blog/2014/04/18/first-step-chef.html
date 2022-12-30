@@ -60,7 +60,7 @@
             class="active"><span 
            ><span>はじめてのChef</span
        ></li></ol><article itemscope="itemscope" itemtype="http://schema.org/Article"><meta itemscope="itemscope" itemprop="mainEntityOfPage"
-              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net/blog/2014/04/18/first-step-chef.html"/><header><h1><span itemprop="headline">はじめてのChef</span><small>post</small></h1></header><div id="toc" class="panel panel-default pull-right"><div class="panel-heading text-center">目次</div><div class="panel-body" style="padding: 10px;"><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#%E7%9B%AE%E6%A8%99">目標</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E6%BA%96%E5%82%99">準備</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#knife-configure">knife configure</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%AC%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%AE%E4%BD%9C%E6%88%90">レポジトリの作成</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%8F%82%E8%80%83">参考</a></ul></div></div><div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div><div itemprop="articleBody"><h2 id="%E7%9B%AE%E6%A8%99" itemprop="articleSection">目標</h2><p>母艦であるところの Mac から、VirtualBox で構築した VM や VPS に対して環境を構築したい。 が、最初は、 <a href="http://www.getchef.com/">Chef</a> で遊んでみることに。</p><h2 id="%E6%BA%96%E5%82%99" itemprop="articleSection">準備</h2><p>とりあえず、 VirtualBox で VM を立ち上げて確認してみる。</p><p>母艦であるところの Mac 側で、 Chef と knife-solo と berkshelf をインストールします。</p><p>VM 側は、後で Mac 側からインストールするので特に何もインストールする必要はないですが、SSHの設定はやっておくのが吉っぽいです。</p><p>まず始めに、</p><pre><code>$ gem install chef
+              itemType="https://schema.org/WebPage" itemid="https://www.sharkpp.net/blog/2014/04/18/first-step-chef.html"/><header><h1><span itemprop="headline">はじめてのChef</span><small>post</small></h1></header><div id="toc" class="panel panel-default pull-right"><div class="panel-heading text-center">目次</div><div class="panel-body" style="padding: 10px;"><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#%E7%9B%AE%E6%A8%99">目標</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E6%BA%96%E5%82%99">準備</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#knife-configure">knife configure</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%AC%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%AE%E4%BD%9C%E6%88%90">レポジトリの作成</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%8F%82%E8%80%83">参考</a></ul></div></div><div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div><div itemprop="articleBody"><h2 id="%E7%9B%AE%E6%A8%99" itemprop="articleSection">目標</h2><p>母艦であるところの Mac から、VirtualBox で構築した VM や VPS に対して環境を構築したい。 が、最初は、 <a href="http://www.getchef.com/">Chef</a> で遊んでみることに。</p><h2 id="%E6%BA%96%E5%82%99" itemprop="articleSection">準備</h2><p>とりあえず、 VirtualBox で VM を立ち上げて確認してみる。</p><p>母艦であるところの Mac 側で、 Chef と knife-solo と berkshelf をインストールします。</p><p>VM 側は、後で Mac 側からインストールするので特に何もインストールする必要はないですが、SSHの設定はやっておくのが吉っぽいです。</p><p>まず始めに、</p><pre><code>$ gem install chef
 </code></pre><p>したら</p><pre><code>You don't have write permissions into the /Library/Ruby/Gems/1.8 directory.
 </code></pre><p>ってしばらくして怒られたので、権限を与えて実行</p><pre><code>$ sudo gem install chef
 </code></pre><p>で、やっぱりしばらくしたら、</p><pre><code>ERROR:  Error installing chef:
@@ -148,10 +148,10 @@ tcp        0      0 ::1:25                      :::*                        LIST
         &nbsp;/&nbsp;
         <i class="fa fa-thumb-tack"></i>&nbsp;<a href="/blog/2014/04/18/first-step-chef.html">Permalink</a>
         &nbsp;/&nbsp;
-    </span><meta itemprop="url" content="http://www.sharkpp.net/blog/2014/04/18/first-step-chef.html" /><span itemprop="author" itemscope itemtype="https://schema.org/Person"
+    </span><meta itemprop="url" content="https://www.sharkpp.net/blog/2014/04/18/first-step-chef.html" /><span itemprop="author" itemscope itemtype="https://schema.org/Person"
           style="display: none;"
        ><span itemprop="name">sharkpp</span
-   ></span><a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2014%2F04%2F18%2Ffirst-step-chef.html"
+   ></span><a href="http://b.hatena.ne.jp/entry/https%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2014%2F04%2F18%2Ffirst-step-chef.html"
        class="hatena-bookmark-button"
        data-hatena-bookmark-title="はじめてのChef &mdash; さめたすたすのお家"
        data-hatena-bookmark-layout="simple-balloon"
@@ -161,7 +161,7 @@ tcp        0      0 ::1:25                      :::*                        LIST
             width="20" height="20" style="border: none;" /></a
       >&nbsp;
     <a href="https://twitter.com/share" class="twitter-share-button"
-       data-url="http://www.sharkpp.net/blog/2014/04/18/first-step-chef.html" data-via="sharkpp">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><div style="line-height: 25px; height: 25px;"><span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
+       data-url="https://www.sharkpp.net/blog/2014/04/18/first-step-chef.html" data-via="sharkpp">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><div style="line-height: 25px; height: 25px;"><span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
                         <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
         &nbsp;/&nbsp;
                                 <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:

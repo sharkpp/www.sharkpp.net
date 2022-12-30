@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/categories/%E3%83%AA%E3%83%B3%E3%82%AF.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/categories/%E3%83%AA%E3%83%B3%E3%82%AF.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[その他]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/08/10/link-misc.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/08/10/link-misc.html"/>
             <updated>2008-08-10T16:34:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/08/10/link-misc.html</id>
+            <id>https://www.sharkpp.net/blog/2008/08/10/link-misc.html</id>
             <content type="html"><![CDATA[<div class="link"><h3>
 とほほのＷＷＷ入門 <img src="/images/sougo.gif" alt="相互リンク" />
 </h3>
@@ -61,9 +61,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[Hot Soup Processor]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/08/10/link-hsp.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/08/10/link-hsp.html"/>
             <updated>2008-08-10T16:07:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/08/10/link-hsp.html</id>
+            <id>https://www.sharkpp.net/blog/2008/08/10/link-hsp.html</id>
             <content type="html"><![CDATA[<div class="link"><h3>
 HSPTV!
 </h3>
@@ -103,9 +103,9 @@ HSPTV!
         </entry>
             <entry>
             <title type="html"><![CDATA[ポケコン]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/08/10/link-pokecom.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/08/10/link-pokecom.html"/>
             <updated>2008-08-10T14:11:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/08/10/link-pokecom.html</id>
+            <id>https://www.sharkpp.net/blog/2008/08/10/link-pokecom.html</id>
             <content type="html"><![CDATA[<div class="link"><h3>
 COSMO PATROL
 </h3>

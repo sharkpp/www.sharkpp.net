@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/categories/cotton.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/categories/cotton.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[IRC Channel encode convert plugin]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/04/12/cotton-chenc.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/04/12/cotton-chenc.html"/>
             <updated>2009-04-12T23:01:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/04/12/cotton-chenc.html</id>
+            <id>https://www.sharkpp.net/blog/2009/04/12/cotton-chenc.html</id>
             <content type="html"><![CDATA[<div><a href="/files/chenc001.zip">DOWNLOAD</a> 2009/04/12
 </div>
 

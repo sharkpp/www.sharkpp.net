@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/VR.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/VR.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Google Poly で公開されている素材を HSP 3 で利用してみよう]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/12/01/hsp-advent-calendar-2017-1st-day.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/12/01/hsp-advent-calendar-2017-1st-day.html"/>
             <updated>2017-12-01T23:25:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/12/01/hsp-advent-calendar-2017-1st-day.html</id>
+            <id>https://www.sharkpp.net/blog/2017/12/01/hsp-advent-calendar-2017-1st-day.html</id>
             <content type="html"><![CDATA[<p>こんにちは、こんばんは。</p>
 
 <p><a href="http://qiita.com/advent-calendar/2017/hsp">Hot Soup Processor Advent Calendar 2017</a> の 初日を担当する <a href="https://twitter.com/sharkpp">@sharkpp</a> です。</p>

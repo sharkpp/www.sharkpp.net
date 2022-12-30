@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/HSP%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%B3%E3%83%B3%E3%83%86%E3%82%B9%E3%83%88.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/HSP%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%B3%E3%83%B3%E3%83%86%E3%82%B9%E3%83%88.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[HSP プログラムコンテスト 2016 へ応募しました(５年ぶり)]]></title>
-            <link href="http://www.sharkpp.net/blog/2016/10/31/entry-the-HSP-program-contest-2016.html"/>
+            <link href="https://www.sharkpp.net/blog/2016/10/31/entry-the-HSP-program-contest-2016.html"/>
             <updated>2016-10-31T01:20:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2016/10/31/entry-the-HSP-program-contest-2016.html</id>
+            <id>https://www.sharkpp.net/blog/2016/10/31/entry-the-HSP-program-contest-2016.html</id>
             <content type="html"><![CDATA[<p>５年前を最後に、毎年今年は応募するぞー、ぞー、ぞー、で、結局何もできずに歯がゆい思いをしていましたが、今年はなんとか滑り込みで応募できました。</p>
 
 <p><a href="http://dev.onionsoft.net/seed/info.ax?user=74">作者ページ</a> <a href="http://dev.onionsoft.net/seed/info.ax?id=1274">作品ページ</a></p>
@@ -181,9 +181,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[HSPプログラムコンテスト2011入賞しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2011/12/08/hsp-program-contest-2011-winner.html"/>
+            <link href="https://www.sharkpp.net/blog/2011/12/08/hsp-program-contest-2011-winner.html"/>
             <updated>2011-12-08T23:00:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2011/12/08/hsp-program-contest-2011-winner.html</id>
+            <id>https://www.sharkpp.net/blog/2011/12/08/hsp-program-contest-2011-winner.html</id>
             <content type="html"><![CDATA[<p>少し時間がたってしまいましたが報告。</p>
 
 <p>HSPプログラムコンテスト2011でロジテック株式会社賞を受賞しました。</p>
@@ -201,9 +201,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[HSPプログラムコンテスト2011一次審査通過しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2011/11/26/hsp-program-contest-2011-has-passed-the-initial-screening.html"/>
+            <link href="https://www.sharkpp.net/blog/2011/11/26/hsp-program-contest-2011-has-passed-the-initial-screening.html"/>
             <updated>2011-11-26T00:53:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2011/11/26/hsp-program-contest-2011-has-passed-the-initial-screening.html</id>
+            <id>https://www.sharkpp.net/blog/2011/11/26/hsp-program-contest-2011-has-passed-the-initial-screening.html</id>
             <content type="html"><![CDATA[<p>遅まきながら、HSPプログラムコンテスト2011一次審査通過しました。</p>
 
 <p><a href="http://hsp.tv/contest2011/cntst_result.html">HSPプログラムコンテスト2011　一次審査結果</a></p>
@@ -227,9 +227,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[HSPプログラムコンテスト2011へ応募(その２)]]></title>
-            <link href="http://www.sharkpp.net/blog/2011/09/27/entry-the-HSP-program-contest-2011-2.html"/>
+            <link href="https://www.sharkpp.net/blog/2011/09/27/entry-the-HSP-program-contest-2011-2.html"/>
             <updated>2011-09-27T00:38:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2011/09/27/entry-the-HSP-program-contest-2011-2.html</id>
+            <id>https://www.sharkpp.net/blog/2011/09/27/entry-the-HSP-program-contest-2011-2.html</id>
             <content type="html"><![CDATA[<p>HSPプログラムコンテストへ２作品目を応募しました。</p>
 
 <p>制限があるほうが燃えるので１作品目と同じくHSPTV部門のエントリーです。</p>
@@ -253,9 +253,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[昨年に引き続き今年もHSPプログラムコンテスト2011へ応募しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2011/08/31/entry-the-HSP-program-contest-2011.html"/>
+            <link href="https://www.sharkpp.net/blog/2011/08/31/entry-the-HSP-program-contest-2011.html"/>
             <updated>2011-08-31T23:27:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2011/08/31/entry-the-HSP-program-contest-2011.html</id>
+            <id>https://www.sharkpp.net/blog/2011/08/31/entry-the-HSP-program-contest-2011.html</id>
             <content type="html"><![CDATA[<p>今年も相変わらず懲りずにHSPプログラムコンテスト2011へ応募しました。</p>
 
 <p>今回の作品はゲームではなくどちらかというとツールになります。</p>
@@ -275,9 +275,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[HSPプログラムコンテスト2010まとめなどなど]]></title>
-            <link href="http://www.sharkpp.net/blog/2010/12/12/HSP-program-contest-2010-summary.html"/>
+            <link href="https://www.sharkpp.net/blog/2010/12/12/HSP-program-contest-2010-summary.html"/>
             <updated>2010-12-12T22:22:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2010/12/12/HSP-program-contest-2010-summary.html</id>
+            <id>https://www.sharkpp.net/blog/2010/12/12/HSP-program-contest-2010-summary.html</id>
             <content type="html"><![CDATA[<p>ありがたいことに、今年もコンテストで入賞しました。</p>
 
 <p><a href="http://hsp.tv/contest2010/cntst_fresult.html#91">HSPプログラムコンテスト2010　入賞作品詳細</a></p>
@@ -289,9 +289,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[昨年に引き続き今年もHSPプログラムコンテスト2010へ応募しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2010/08/29/enter-the-HSP-program-contest-2010.html"/>
+            <link href="https://www.sharkpp.net/blog/2010/08/29/enter-the-HSP-program-contest-2010.html"/>
             <updated>2010-08-29T13:25:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2010/08/29/enter-the-HSP-program-contest-2010.html</id>
+            <id>https://www.sharkpp.net/blog/2010/08/29/enter-the-HSP-program-contest-2010.html</id>
             <content type="html"><![CDATA[<p>今年も懲りずにHSPプログラムコンテスト2010へ応募しました。</p>
 
 <p><a href="http://hsp.tv/contest2010/entry.php?id=5&amp;mode=author">作者ページ</a> <a href="http://hsp.tv/contest2010/entry.php?id=91">作品ページ</a></p>
@@ -309,9 +309,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[ジグソーパズルを作ってました]]></title>
-            <link href="http://www.sharkpp.net/blog/2010/07/25/make-jigsaw-puzzles-games.html"/>
+            <link href="https://www.sharkpp.net/blog/2010/07/25/make-jigsaw-puzzles-games.html"/>
             <updated>2010-07-25T23:42:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2010/07/25/make-jigsaw-puzzles-games.html</id>
+            <id>https://www.sharkpp.net/blog/2010/07/25/make-jigsaw-puzzles-games.html</id>
             <content type="html"><![CDATA[<p>作っていたソフトの作成を中断し、ここ一ヶ月間パズルゲームを作っていた。</p>
 
 <p>定番のパズルといっても良いあのジグソーパズルだ。</p>
@@ -335,9 +335,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[HSPプログラムコンテスト2009へ応募しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/11/02/applies-for-HSP-program-contest-2009.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/11/02/applies-for-HSP-program-contest-2009.html"/>
             <updated>2009-11-02T00:56:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/11/02/applies-for-HSP-program-contest-2009.html</id>
+            <id>https://www.sharkpp.net/blog/2009/11/02/applies-for-HSP-program-contest-2009.html</id>
             <content type="html"><![CDATA[<p>10月頭からゴリゴリとHSPのプログラムコンテストに応募するためのプログラム書いていました。</p>
 
 <p>で、何とか期限内に応募できました。 <a href="http://hsp.tv/contest2009/list_s2.html#id239">動物将棋</a>です。</p>

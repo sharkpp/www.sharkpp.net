@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/Dialog.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/Dialog.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[HSP3のファイル選択ダイアログで複数ファイルフィルタを指定で出来るように修正]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/09/28/hsp3-filedlg-multiple-filter-implement.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/09/28/hsp3-filedlg-multiple-filter-implement.html"/>
             <updated>2008-09-28T15:29:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/09/28/hsp3-filedlg-multiple-filter-implement.html</id>
+            <id>https://www.sharkpp.net/blog/2008/09/28/hsp3-filedlg-multiple-filter-implement.html</id>
             <content type="html"><![CDATA[<p><a href="http://hsp.tv/play/pforum.php?mode=all&amp;num=19768">ファイル保存ダイアログ</a>で話題に上がっているファイル選択ダイアログで複数ファイルフィルタを指定で出来るように修正してみました。</p>
 
 <pre>dialog "as",16,"ソーススクリプト"

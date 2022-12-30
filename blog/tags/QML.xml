@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/QML.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/QML.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[名古屋Qt勉強会#8に行ってきたよ＆QtQuick2でアプリ作ってみたよ]]></title>
-            <link href="http://www.sharkpp.net/blog/2013/04/28/qt-nagoya-8-and-qtquick2.html"/>
+            <link href="https://www.sharkpp.net/blog/2013/04/28/qt-nagoya-8-and-qtquick2.html"/>
             <updated>2013-04-28T00:07:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2013/04/28/qt-nagoya-8-and-qtquick2.html</id>
+            <id>https://www.sharkpp.net/blog/2013/04/28/qt-nagoya-8-and-qtquick2.html</id>
             <content type="html"><![CDATA[<p>久しぶりの名古屋Qt勉強会でした。</p>
 
 <p><a href="http://www.zusaar.com/event/607003">名古屋Qt勉強会#8 4/27</a></p>

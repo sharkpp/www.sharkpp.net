@@ -1,2083 +1,2083 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://www.sharkpp.net</loc>
+    <loc>https://www.sharkpp.net</loc>
     <lastmod>2022-12-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog</loc>
-    <lastmod>2022-12-30T22:28:46+00:00</lastmod>
+    <loc>https://www.sharkpp.net/blog</loc>
+    <lastmod>2022-12-30T22:37:55+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/categories</loc>
-    <lastmod>2022-12-30T22:28:46+00:00</lastmod>
+    <loc>https://www.sharkpp.net/blog/categories</loc>
+    <lastmod>2022-12-30T22:37:55+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/tags</loc>
-    <lastmod>2022-12-30T22:28:46+00:00</lastmod>
+    <loc>https://www.sharkpp.net/blog/tags</loc>
+    <lastmod>2022-12-30T22:37:55+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/about</loc>
+    <loc>https://www.sharkpp.net/about</loc>
     <lastmod>2022-12-31T07:26:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/profile/</loc>
+    <loc>https://www.sharkpp.net/profile/</loc>
     <lastmod>2017-04-15T01:50:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/product</loc>
+    <loc>https://www.sharkpp.net/product</loc>
     <lastmod>2016-11-27T12:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/link.html</loc>
+    <loc>https://www.sharkpp.net/link.html</loc>
     <lastmod>2015-08-30T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/graffiti</loc>
+    <loc>https://www.sharkpp.net/graffiti</loc>
     <lastmod>2015-05-01T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2022/12/31/new-years-eve-2022.html</loc>
+    <loc>https://www.sharkpp.net/blog/2022/12/31/new-years-eve-2022.html</loc>
     <lastmod>2022-12-31T07:10:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2022/05/13/unboxing-macbook-air-2020.html</loc>
+    <loc>https://www.sharkpp.net/blog/2022/05/13/unboxing-macbook-air-2020.html</loc>
     <lastmod>2022-05-13T21:37:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2022/01/01/happy-new-year-2022.html</loc>
+    <loc>https://www.sharkpp.net/blog/2022/01/01/happy-new-year-2022.html</loc>
     <lastmod>2022-01-01T20:02:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2021/12/31/new-years-eve-2021.html</loc>
+    <loc>https://www.sharkpp.net/blog/2021/12/31/new-years-eve-2021.html</loc>
     <lastmod>2021-12-31T10:13:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2021/09/07/synology-package-building.html</loc>
+    <loc>https://www.sharkpp.net/blog/2021/09/07/synology-package-building.html</loc>
     <lastmod>2021-09-07T22:05:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2021/08/07/synology-ds416play-upgrade-dsm7.html</loc>
+    <loc>https://www.sharkpp.net/blog/2021/08/07/synology-ds416play-upgrade-dsm7.html</loc>
     <lastmod>2021-08-07T19:35:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2021/04/30/tryout-ionic-mobile-desktop.html</loc>
+    <loc>https://www.sharkpp.net/blog/2021/04/30/tryout-ionic-mobile-desktop.html</loc>
     <lastmod>2021-04-30T21:35:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2021/02/28/unboxing-and-used-three-month-of-chromecast-with-google-tv.html</loc>
+    <loc>https://www.sharkpp.net/blog/2021/02/28/unboxing-and-used-three-month-of-chromecast-with-google-tv.html</loc>
     <lastmod>2021-02-28T22:45:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2021/01/01/happy-new-year-2021.html</loc>
+    <loc>https://www.sharkpp.net/blog/2021/01/01/happy-new-year-2021.html</loc>
     <lastmod>2021-01-01T22:30:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2020/12/31/new-years-eve-2020.html</loc>
+    <loc>https://www.sharkpp.net/blog/2020/12/31/new-years-eve-2020.html</loc>
     <lastmod>2020-12-31T21:49:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2020/12/29/concat-gopro-4gb-files-and-encode.html</loc>
+    <loc>https://www.sharkpp.net/blog/2020/12/29/concat-gopro-4gb-files-and-encode.html</loc>
     <lastmod>2020-12-29T17:12:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2020/07/29/hubot-adapter-with-typescript.html</loc>
+    <loc>https://www.sharkpp.net/blog/2020/07/29/hubot-adapter-with-typescript.html</loc>
     <lastmod>2020-07-29T23:46:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2020/05/02/build-local-https-test-environment.html</loc>
+    <loc>https://www.sharkpp.net/blog/2020/05/02/build-local-https-test-environment.html</loc>
     <lastmod>2020-05-02T16:15:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2020/02/29/happy-anniversary-16th.html</loc>
+    <loc>https://www.sharkpp.net/blog/2020/02/29/happy-anniversary-16th.html</loc>
     <lastmod>2020-02-29T23:30:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2020/01/02/install-inkscape-for-macos-mojave-or-later.html</loc>
+    <loc>https://www.sharkpp.net/blog/2020/01/02/install-inkscape-for-macos-mojave-or-later.html</loc>
     <lastmod>2020-01-02T11:48:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2020/01/01/happy-new-year-2020.html</loc>
+    <loc>https://www.sharkpp.net/blog/2020/01/01/happy-new-year-2020.html</loc>
     <lastmod>2020-01-01T17:55:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2019/12/31/new-years-eve-2019.html</loc>
+    <loc>https://www.sharkpp.net/blog/2019/12/31/new-years-eve-2019.html</loc>
     <lastmod>2019-12-31T19:08:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2019/11/23/qt-nagoya-31.html</loc>
+    <loc>https://www.sharkpp.net/blog/2019/11/23/qt-nagoya-31.html</loc>
     <lastmod>2019-11-23T17:38:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2019/10/14/webapp-made-by-reactjs.html</loc>
+    <loc>https://www.sharkpp.net/blog/2019/10/14/webapp-made-by-reactjs.html</loc>
     <lastmod>2019-10-14T18:05:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2019/09/28/techbookfest7.html</loc>
+    <loc>https://www.sharkpp.net/blog/2019/09/28/techbookfest7.html</loc>
     <lastmod>2019-09-28T18:02:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2019/08/24/qt-nagoya-30.html</loc>
+    <loc>https://www.sharkpp.net/blog/2019/08/24/qt-nagoya-30.html</loc>
     <lastmod>2019-08-24T17:13:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2019/07/29/qt-memo.html</loc>
+    <loc>https://www.sharkpp.net/blog/2019/07/29/qt-memo.html</loc>
     <lastmod>2019-07-29T23:50:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2019/06/30/unboxing-soundpeats-trueshift.html</loc>
+    <loc>https://www.sharkpp.net/blog/2019/06/30/unboxing-soundpeats-trueshift.html</loc>
     <lastmod>2019-06-30T23:55:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2019/05/18/qt-nagoya-28.html</loc>
+    <loc>https://www.sharkpp.net/blog/2019/05/18/qt-nagoya-28.html</loc>
     <lastmod>2019-05-18T17:15:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2019/04/27/qt-nagoya-27.html</loc>
+    <loc>https://www.sharkpp.net/blog/2019/04/27/qt-nagoya-27.html</loc>
     <lastmod>2019-04-27T17:30:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2019/04/24/techbookfest6.html</loc>
+    <loc>https://www.sharkpp.net/blog/2019/04/24/techbookfest6.html</loc>
     <lastmod>2019-04-24T01:18:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2019/03/30/franz-recipe-google-shoppinglist.html</loc>
+    <loc>https://www.sharkpp.net/blog/2019/03/30/franz-recipe-google-shoppinglist.html</loc>
     <lastmod>2019-03-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2019/02/07/list-of-franz-recipe.html</loc>
+    <loc>https://www.sharkpp.net/blog/2019/02/07/list-of-franz-recipe.html</loc>
     <lastmod>2019-02-07T00:10:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2019/01/19/qt-nagoya-24.html</loc>
+    <loc>https://www.sharkpp.net/blog/2019/01/19/qt-nagoya-24.html</loc>
     <lastmod>2019-01-19T17:30:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2019/01/01/happy-new-year-2019.html</loc>
+    <loc>https://www.sharkpp.net/blog/2019/01/01/happy-new-year-2019.html</loc>
     <lastmod>2019-01-01T09:45:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2018/12/31/new-years-eve-2018.html</loc>
+    <loc>https://www.sharkpp.net/blog/2018/12/31/new-years-eve-2018.html</loc>
     <lastmod>2018-12-31T17:55:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2018/10/14/techbookfest5.html</loc>
+    <loc>https://www.sharkpp.net/blog/2018/10/14/techbookfest5.html</loc>
     <lastmod>2018-10-14T12:50:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2018/09/26/franz-recipe-memo.html</loc>
+    <loc>https://www.sharkpp.net/blog/2018/09/26/franz-recipe-memo.html</loc>
     <lastmod>2018-09-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2018/08/27/franz-recipe-misskey.html</loc>
+    <loc>https://www.sharkpp.net/blog/2018/08/27/franz-recipe-misskey.html</loc>
     <lastmod>2018-08-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2018/08/26/qt-nagoya-19.html</loc>
+    <loc>https://www.sharkpp.net/blog/2018/08/26/qt-nagoya-19.html</loc>
     <lastmod>2018-08-26T09:57:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2018/08/22/qt-quick-memo.html</loc>
+    <loc>https://www.sharkpp.net/blog/2018/08/22/qt-quick-memo.html</loc>
     <lastmod>2018-08-22T00:40:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2018/07/21/qt-nagoya-18.html</loc>
+    <loc>https://www.sharkpp.net/blog/2018/07/21/qt-nagoya-18.html</loc>
     <lastmod>2018-07-21T17:35:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2018/05/26/qt-nagoya-16.html</loc>
+    <loc>https://www.sharkpp.net/blog/2018/05/26/qt-nagoya-16.html</loc>
     <lastmod>2018-05-26T23:26:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2018/05/18/techbookfest4.html</loc>
+    <loc>https://www.sharkpp.net/blog/2018/05/18/techbookfest4.html</loc>
     <lastmod>2018-05-18T01:10:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2018/04/21/qt-nagoya-15.html</loc>
+    <loc>https://www.sharkpp.net/blog/2018/04/21/qt-nagoya-15.html</loc>
     <lastmod>2018-04-21T05:50:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2018/03/27/franz-recipe-mastodon.html</loc>
+    <loc>https://www.sharkpp.net/blog/2018/03/27/franz-recipe-mastodon.html</loc>
     <lastmod>2018-03-27T01:10:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2018/02/27/popover-widget-for-qt.html</loc>
+    <loc>https://www.sharkpp.net/blog/2018/02/27/popover-widget-for-qt.html</loc>
     <lastmod>2018-02-27T01:01:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2018/01/01/happy-new-year-2018.html</loc>
+    <loc>https://www.sharkpp.net/blog/2018/01/01/happy-new-year-2018.html</loc>
     <lastmod>2018-01-01T17:35:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2017/12/31/new-years-eve-2017.html</loc>
+    <loc>https://www.sharkpp.net/blog/2017/12/31/new-years-eve-2017.html</loc>
     <lastmod>2017-12-31T22:10:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2017/12/25/hsp-advent-calendar-2017-25th-day.html</loc>
+    <loc>https://www.sharkpp.net/blog/2017/12/25/hsp-advent-calendar-2017-25th-day.html</loc>
     <lastmod>2017-12-25T23:45:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2017/12/21/qt-advent-calendar-2017-21th-day.html</loc>
+    <loc>https://www.sharkpp.net/blog/2017/12/21/qt-advent-calendar-2017-21th-day.html</loc>
     <lastmod>2017-12-21T23:45:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2017/12/01/hsp-advent-calendar-2017-1st-day.html</loc>
+    <loc>https://www.sharkpp.net/blog/2017/12/01/hsp-advent-calendar-2017-1st-day.html</loc>
     <lastmod>2017-12-01T23:25:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2017/11/17/unboxing-and-used-one-month-of-freetel-raijin.html</loc>
+    <loc>https://www.sharkpp.net/blog/2017/11/17/unboxing-and-used-one-month-of-freetel-raijin.html</loc>
     <lastmod>2017-11-17T02:31:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2017/10/23/techbookfest3.html</loc>
+    <loc>https://www.sharkpp.net/blog/2017/10/23/techbookfest3.html</loc>
     <lastmod>2017-10-23T02:30:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2017/10/21/jugemutter-development-diary-8th.html</loc>
+    <loc>https://www.sharkpp.net/blog/2017/10/21/jugemutter-development-diary-8th.html</loc>
     <lastmod>2017-10-21T17:41:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2017/10/04/jugemutter-development-diary-7th.html</loc>
+    <loc>https://www.sharkpp.net/blog/2017/10/04/jugemutter-development-diary-7th.html</loc>
     <lastmod>2017-10-04T01:05:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2017/09/27/jugemutter-development-diary-6th.html</loc>
+    <loc>https://www.sharkpp.net/blog/2017/09/27/jugemutter-development-diary-6th.html</loc>
     <lastmod>2017-09-27T12:40:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2017/08/23/jugemutter-development-diary-5th.html</loc>
+    <loc>https://www.sharkpp.net/blog/2017/08/23/jugemutter-development-diary-5th.html</loc>
     <lastmod>2017-08-23T01:50:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2017/07/16/jugemutter-development-diary-4th.html</loc>
+    <loc>https://www.sharkpp.net/blog/2017/07/16/jugemutter-development-diary-4th.html</loc>
     <lastmod>2017-07-16T18:10:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2017/06/27/unboxing-xperia-touch.html</loc>
+    <loc>https://www.sharkpp.net/blog/2017/06/27/unboxing-xperia-touch.html</loc>
     <lastmod>2017-06-27T00:30:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2017/06/17/jugemutter-development-diary-3rd.html</loc>
+    <loc>https://www.sharkpp.net/blog/2017/06/17/jugemutter-development-diary-3rd.html</loc>
     <lastmod>2017-06-17T22:57:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2017/05/20/jugemutter-development-diary-2nd.html</loc>
+    <loc>https://www.sharkpp.net/blog/2017/05/20/jugemutter-development-diary-2nd.html</loc>
     <lastmod>2017-05-20T17:04:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2017/04/30/Install-inkscape-using-homebrew-on-macos.html</loc>
+    <loc>https://www.sharkpp.net/blog/2017/04/30/Install-inkscape-using-homebrew-on-macos.html</loc>
     <lastmod>2017-04-30T23:30:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2017/04/16/jugemutter-development-diary-1st.html</loc>
+    <loc>https://www.sharkpp.net/blog/2017/04/16/jugemutter-development-diary-1st.html</loc>
     <lastmod>2017-04-16T23:07:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2017/04/10/techbookfest2.html</loc>
+    <loc>https://www.sharkpp.net/blog/2017/04/10/techbookfest2.html</loc>
     <lastmod>2017-04-10T23:50:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2017/03/25/twitter-api-using-qt-network-authorization.html</loc>
+    <loc>https://www.sharkpp.net/blog/2017/03/25/twitter-api-using-qt-network-authorization.html</loc>
     <lastmod>2017-03-25T22:59:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2017/02/28/dropbox-api-using-qt-network-authorization.html</loc>
+    <loc>https://www.sharkpp.net/blog/2017/02/28/dropbox-api-using-qt-network-authorization.html</loc>
     <lastmod>2017-02-28T01:45:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2017/01/28/first-impression-qt-network-authorization.html</loc>
+    <loc>https://www.sharkpp.net/blog/2017/01/28/first-impression-qt-network-authorization.html</loc>
     <lastmod>2017-01-28T16:50:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2017/01/01/happy-new-year-2017.html</loc>
+    <loc>https://www.sharkpp.net/blog/2017/01/01/happy-new-year-2017.html</loc>
     <lastmod>2017-01-01T10:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2016/12/31/new-years-eve-2016.html</loc>
+    <loc>https://www.sharkpp.net/blog/2016/12/31/new-years-eve-2016.html</loc>
     <lastmod>2016-12-31T12:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2016/12/25/hsp-advent-calendar-2016-25th-day.html</loc>
+    <loc>https://www.sharkpp.net/blog/2016/12/25/hsp-advent-calendar-2016-25th-day.html</loc>
     <lastmod>2016-12-25T15:40:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2016/12/10/qt-advent-calendar-2016-10th-day.html</loc>
+    <loc>https://www.sharkpp.net/blog/2016/12/10/qt-advent-calendar-2016-10th-day.html</loc>
     <lastmod>2016-12-10T17:25:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2016/12/01/hsp-advent-calendar-2016-1st-day.html</loc>
+    <loc>https://www.sharkpp.net/blog/2016/12/01/hsp-advent-calendar-2016-1st-day.html</loc>
     <lastmod>2016-12-01T01:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2016/11/28/advent-calendar-for-hsp-2016.html</loc>
+    <loc>https://www.sharkpp.net/blog/2016/11/28/advent-calendar-for-hsp-2016.html</loc>
     <lastmod>2016-11-28T13:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2016/10/31/entry-the-HSP-program-contest-2016.html</loc>
+    <loc>https://www.sharkpp.net/blog/2016/10/31/entry-the-HSP-program-contest-2016.html</loc>
     <lastmod>2016-10-31T01:20:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2016/09/22/how-to-use-google-spreadsheets-api-for-php.html</loc>
+    <loc>https://www.sharkpp.net/blog/2016/09/22/how-to-use-google-spreadsheets-api-for-php.html</loc>
     <lastmod>2016-09-22T20:50:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2016/09/03/list-of-sculpin-bundles.html</loc>
+    <loc>https://www.sharkpp.net/blog/2016/09/03/list-of-sculpin-bundles.html</loc>
     <lastmod>2016-09-03T13:20:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2016/08/30/list-of-jsdoc3-plugins.html</loc>
+    <loc>https://www.sharkpp.net/blog/2016/08/30/list-of-jsdoc3-plugins.html</loc>
     <lastmod>2016-08-30T01:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2016/07/31/file-drop-buffer-release.html</loc>
+    <loc>https://www.sharkpp.net/blog/2016/07/31/file-drop-buffer-release.html</loc>
     <lastmod>2016-07-31T23:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2016/06/27/techbookfest.html</loc>
+    <loc>https://www.sharkpp.net/blog/2016/06/27/techbookfest.html</loc>
     <lastmod>2016-06-27T00:50:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2016/06/12/using-sculpin-redirect-bundle.html</loc>
+    <loc>https://www.sharkpp.net/blog/2016/06/12/using-sculpin-redirect-bundle.html</loc>
     <lastmod>2016-06-12T13:01:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2016/05/28/compare-format-for-date-to-string-php-and-ruby.html</loc>
+    <loc>https://www.sharkpp.net/blog/2016/05/28/compare-format-for-date-to-string-php-and-ruby.html</loc>
     <lastmod>2016-05-28T22:50:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2016/04/30/file-extension-domains.html</loc>
+    <loc>https://www.sharkpp.net/blog/2016/04/30/file-extension-domains.html</loc>
     <lastmod>2016-04-30T17:45:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2016/04/01/hub-site-launched-for-hsp-users.html</loc>
+    <loc>https://www.sharkpp.net/blog/2016/04/01/hub-site-launched-for-hsp-users.html</loc>
     <lastmod>2016-04-01T00:35:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html</loc>
+    <loc>https://www.sharkpp.net/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html</loc>
     <lastmod>2016-03-26T23:43:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2016/03/19/git-memo-change-committed-email-and-history-repair.html</loc>
+    <loc>https://www.sharkpp.net/blog/2016/03/19/git-memo-change-committed-email-and-history-repair.html</loc>
     <lastmod>2016-03-19T00:47:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2016/03/06/research-of-javascript-and-css-cdn.html</loc>
+    <loc>https://www.sharkpp.net/blog/2016/03/06/research-of-javascript-and-css-cdn.html</loc>
     <lastmod>2016-03-06T21:30:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2016/02/21/git-memo-import-from-svn.html</loc>
+    <loc>https://www.sharkpp.net/blog/2016/02/21/git-memo-import-from-svn.html</loc>
     <lastmod>2016-02-21T16:48:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2016/02/20/sculpin-tips-year-month-calendar-posts.html</loc>
+    <loc>https://www.sharkpp.net/blog/2016/02/20/sculpin-tips-year-month-calendar-posts.html</loc>
     <lastmod>2016-02-20T22:29:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2016/02/11/git-memo-rename-branches-local-and-remote.html</loc>
+    <loc>https://www.sharkpp.net/blog/2016/02/11/git-memo-rename-branches-local-and-remote.html</loc>
     <lastmod>2016-02-11T17:35:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2016/01/31/building-wine-on-mac-osx.html</loc>
+    <loc>https://www.sharkpp.net/blog/2016/01/31/building-wine-on-mac-osx.html</loc>
     <lastmod>2016-01-31T12:30:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2016/01/01/happy-new-year-2016.html</loc>
+    <loc>https://www.sharkpp.net/blog/2016/01/01/happy-new-year-2016.html</loc>
     <lastmod>2016-01-01T10:50:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2015/12/31/new-years-eve-2015.html</loc>
+    <loc>https://www.sharkpp.net/blog/2015/12/31/new-years-eve-2015.html</loc>
     <lastmod>2015-12-31T18:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2015/12/31/joya-no-kane-for-blog-parts.html</loc>
+    <loc>https://www.sharkpp.net/blog/2015/12/31/joya-no-kane-for-blog-parts.html</loc>
     <lastmod>2015-12-31T12:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2015/12/29/sculpin-tips-auto-more-link.html</loc>
+    <loc>https://www.sharkpp.net/blog/2015/12/29/sculpin-tips-auto-more-link.html</loc>
     <lastmod>2015-12-29T23:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2015/12/07/unboxing-and-used-one-month-of-nexus-5x.html</loc>
+    <loc>https://www.sharkpp.net/blog/2015/12/07/unboxing-and-used-one-month-of-nexus-5x.html</loc>
     <lastmod>2015-12-07T02:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2015/12/05/fuelphp-advent-calender-2015-5th.html</loc>
+    <loc>https://www.sharkpp.net/blog/2015/12/05/fuelphp-advent-calender-2015-5th.html</loc>
     <lastmod>2015-12-05T01:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2015/12/04/fuelphp-advent-calender-2015-4th.html</loc>
+    <loc>https://www.sharkpp.net/blog/2015/12/04/fuelphp-advent-calender-2015-4th.html</loc>
     <lastmod>2015-12-04T02:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2015/11/03/git-memo-for-fuel-docs-trans.html</loc>
+    <loc>https://www.sharkpp.net/blog/2015/11/03/git-memo-for-fuel-docs-trans.html</loc>
     <lastmod>2015-11-03T08:54:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2015/11/02/using-sculpin-thumbnail-generator-icelus.html</loc>
+    <loc>https://www.sharkpp.net/blog/2015/11/02/using-sculpin-thumbnail-generator-icelus.html</loc>
     <lastmod>2015-11-02T12:50:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2015/10/25/ruby-rbenv-on-mac-osx-memo.html</loc>
+    <loc>https://www.sharkpp.net/blog/2015/10/25/ruby-rbenv-on-mac-osx-memo.html</loc>
     <lastmod>2015-10-25T12:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2015/09/21/romaji-readable-domains.html</loc>
+    <loc>https://www.sharkpp.net/blog/2015/09/21/romaji-readable-domains.html</loc>
     <lastmod>2015-09-21T19:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2015/09/20/publish-php-local-pastebin.html</loc>
+    <loc>https://www.sharkpp.net/blog/2015/09/20/publish-php-local-pastebin.html</loc>
     <lastmod>2015-09-20T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2015/09/05/release-sakura-editor-plugin-text-convert-extension-pack.html</loc>
+    <loc>https://www.sharkpp.net/blog/2015/09/05/release-sakura-editor-plugin-text-convert-extension-pack.html</loc>
     <lastmod>2015-09-05T14:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2015/08/29/javascript-memo-selection-object.html</loc>
+    <loc>https://www.sharkpp.net/blog/2015/08/29/javascript-memo-selection-object.html</loc>
     <lastmod>2015-08-29T23:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2015/08/23/fuelphp-memo.html</loc>
+    <loc>https://www.sharkpp.net/blog/2015/08/23/fuelphp-memo.html</loc>
     <lastmod>2015-08-23T18:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2015/08/09/create-sculpin-blog-archive-date-directory-bundle.html</loc>
+    <loc>https://www.sharkpp.net/blog/2015/08/09/create-sculpin-blog-archive-date-directory-bundle.html</loc>
     <lastmod>2015-08-09T22:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2015/07/05/how-to-japanese-html-to-markdown-in-php.html</loc>
+    <loc>https://www.sharkpp.net/blog/2015/07/05/how-to-japanese-html-to-markdown-in-php.html</loc>
     <lastmod>2015-07-05T12:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2015/06/28/site-reboot-by-sculpin.html</loc>
+    <loc>https://www.sharkpp.net/blog/2015/06/28/site-reboot-by-sculpin.html</loc>
     <lastmod>2015-06-28T18:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2015/06/22/fuelphp-documents-translation-month-alone.html</loc>
+    <loc>https://www.sharkpp.net/blog/2015/06/22/fuelphp-documents-translation-month-alone.html</loc>
     <lastmod>2015-06-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2015/06/14/collection-of-social-share-button-plugin.html</loc>
+    <loc>https://www.sharkpp.net/blog/2015/06/14/collection-of-social-share-button-plugin.html</loc>
     <lastmod>2015-06-14T16:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2015/06/07/revelation-new-mascot-and-update-favicon.html</loc>
+    <loc>https://www.sharkpp.net/blog/2015/06/07/revelation-new-mascot-and-update-favicon.html</loc>
     <lastmod>2015-06-07T20:45:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2015/06/06/pastebin-snippet-web-service-list.html</loc>
+    <loc>https://www.sharkpp.net/blog/2015/06/06/pastebin-snippet-web-service-list.html</loc>
     <lastmod>2015-06-06T07:51:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2015/05/31/how-to-build-libxml2-on-xrea-com-for-sculpin.html</loc>
+    <loc>https://www.sharkpp.net/blog/2015/05/31/how-to-build-libxml2-on-xrea-com-for-sculpin.html</loc>
     <lastmod>2015-05-31T21:30:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2015/05/27/qt-japan-summit-2015.html</loc>
+    <loc>https://www.sharkpp.net/blog/2015/05/27/qt-japan-summit-2015.html</loc>
     <lastmod>2015-05-27T20:58:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2015/02/28/composer-github-api-limit-break.html</loc>
+    <loc>https://www.sharkpp.net/blog/2015/02/28/composer-github-api-limit-break.html</loc>
     <lastmod>2015-02-28T23:38:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2015/01/01/happy-new-year-2015.html</loc>
+    <loc>https://www.sharkpp.net/blog/2015/01/01/happy-new-year-2015.html</loc>
     <lastmod>2015-01-01T14:29:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2014/12/31/new-years-eve-2014.html</loc>
+    <loc>https://www.sharkpp.net/blog/2014/12/31/new-years-eve-2014.html</loc>
     <lastmod>2014-12-31T17:04:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2014/11/23/released-tumblr-extend-shortcut-key.html</loc>
+    <loc>https://www.sharkpp.net/blog/2014/11/23/released-tumblr-extend-shortcut-key.html</loc>
     <lastmod>2014-11-23T17:51:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2014/10/19/github-import-from-svn.html</loc>
+    <loc>https://www.sharkpp.net/blog/2014/10/19/github-import-from-svn.html</loc>
     <lastmod>2014-10-19T13:48:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2014/06/30/publish-cookbook-to-opscode.html</loc>
+    <loc>https://www.sharkpp.net/blog/2014/06/30/publish-cookbook-to-opscode.html</loc>
     <lastmod>2014-06-30T00:20:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2014/05/20/qt-developer-day-2014-tokyo.html</loc>
+    <loc>https://www.sharkpp.net/blog/2014/05/20/qt-developer-day-2014-tokyo.html</loc>
     <lastmod>2014-05-20T22:19:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2014/04/18/first-step-chef.html</loc>
+    <loc>https://www.sharkpp.net/blog/2014/04/18/first-step-chef.html</loc>
     <lastmod>2014-04-18T23:15:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2014/04/15/ruby-1-9-3-install-for-mac-10-8.html</loc>
+    <loc>https://www.sharkpp.net/blog/2014/04/15/ruby-1-9-3-install-for-mac-10-8.html</loc>
     <lastmod>2014-04-15T16:18:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2014/03/30/oauth-providers-list.html</loc>
+    <loc>https://www.sharkpp.net/blog/2014/03/30/oauth-providers-list.html</loc>
     <lastmod>2014-03-30T23:35:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2014/02/28/the-10th-anniversary.html</loc>
+    <loc>https://www.sharkpp.net/blog/2014/02/28/the-10th-anniversary.html</loc>
     <lastmod>2014-02-28T10:21:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2014/01/25/qt-nagoya-11.html</loc>
+    <loc>https://www.sharkpp.net/blog/2014/01/25/qt-nagoya-11.html</loc>
     <lastmod>2014-01-25T17:47:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2014/01/01/happy-new-year-2014.html</loc>
+    <loc>https://www.sharkpp.net/blog/2014/01/01/happy-new-year-2014.html</loc>
     <lastmod>2014-01-01T16:52:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/12/31/new-years-eve-2013.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/12/31/new-years-eve-2013.html</loc>
     <lastmod>2013-12-31T18:27:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/12/29/user-jp-follow-up2.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/12/29/user-jp-follow-up2.html</loc>
     <lastmod>2013-12-29T14:46:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/12/14/fuelphp-advent-calendar-2013-14th-day.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/12/14/fuelphp-advent-calendar-2013-14th-day.html</loc>
     <lastmod>2013-12-14T22:26:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/12/14/ngk2013b.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/12/14/ngk2013b.html</loc>
     <lastmod>2013-12-14T20:28:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/12/01/fuelphp-advent-calendar-2013-1st-day.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/12/01/fuelphp-advent-calendar-2013-1st-day.html</loc>
     <lastmod>2013-12-01T14:57:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/11/24/call-parent-class-method-by-other-class-in-php.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/11/24/call-parent-class-method-by-other-class-in-php.html</loc>
     <lastmod>2013-11-24T13:40:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/11/03/win81preview-to-win81-upgrade-store-app-data-restore.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/11/03/win81preview-to-win81-upgrade-store-app-data-restore.html</loc>
     <lastmod>2013-11-03T17:39:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/10/26/fuelphp-workshop-in-tokai-vol-5.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/10/26/fuelphp-workshop-in-tokai-vol-5.html</loc>
     <lastmod>2013-10-26T20:52:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/10/20/qt-nagoya-10.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/10/20/qt-nagoya-10.html</loc>
     <lastmod>2013-10-20T17:12:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/09/30/archelon-publish-to-github.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/09/30/archelon-publish-to-github.html</loc>
     <lastmod>2013-09-30T00:14:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/08/11/qt-2-tokyo.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/08/11/qt-2-tokyo.html</loc>
     <lastmod>2013-08-11T09:19:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/07/13/qt-nagoya-9.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/07/13/qt-nagoya-9.html</loc>
     <lastmod>2013-07-13T22:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/06/29/react-and-composer.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/06/29/react-and-composer.html</loc>
     <lastmod>2013-06-29T20:28:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/06/01/boost-11-in-tokyo.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/06/01/boost-11-in-tokyo.html</loc>
     <lastmod>2013-06-01T22:47:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/06/01/first-github-fork-and-fuelphp-docs-jp.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/06/01/first-github-fork-and-fuelphp-docs-jp.html</loc>
     <lastmod>2013-06-01T00:24:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/05/25/first-step-php-bug-report.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/05/25/first-step-php-bug-report.html</loc>
     <lastmod>2013-05-25T13:58:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/05/19/qtquick2-taskmemgraph.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/05/19/qtquick2-taskmemgraph.html</loc>
     <lastmod>2013-05-19T18:48:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/04/28/qt-nagoya-8-and-qtquick2.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/04/28/qt-nagoya-8-and-qtquick2.html</loc>
     <lastmod>2013-04-28T00:07:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/04/27/fuel-language-pack-ja.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/04/27/fuel-language-pack-ja.html</loc>
     <lastmod>2013-04-27T00:36:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/03/17/fuelphp-on-sqale.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/03/17/fuelphp-on-sqale.html</loc>
     <lastmod>2013-03-17T01:34:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/03/16/bought-surface-rt.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/03/16/bought-surface-rt.html</loc>
     <lastmod>2013-03-16T01:40:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/03/11/release-ouisearch-fuelphp.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/03/11/release-ouisearch-fuelphp.html</loc>
     <lastmod>2013-03-11T01:57:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/03/10/aese-command.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/03/10/aese-command.html</loc>
     <lastmod>2013-03-10T00:30:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/02/17/fuelphp-on-excale.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/02/17/fuelphp-on-excale.html</loc>
     <lastmod>2013-02-17T23:30:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/02/17/fuelphp-workshop-in-osu-vol-3.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/02/17/fuelphp-workshop-in-osu-vol-3.html</loc>
     <lastmod>2013-02-17T20:09:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/01/27/install-qnap-ts-109ii-syslog-ng.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/01/27/install-qnap-ts-109ii-syslog-ng.html</loc>
     <lastmod>2013-01-27T13:27:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/01/24/user-jp-follow-up.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/01/24/user-jp-follow-up.html</loc>
     <lastmod>2013-01-24T01:48:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2013/01/01/happy-new-year-2013.html</loc>
+    <loc>https://www.sharkpp.net/blog/2013/01/01/happy-new-year-2013.html</loc>
     <lastmod>2013-01-01T00:48:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2012/12/31/new-years-eve-2012.html</loc>
+    <loc>https://www.sharkpp.net/blog/2012/12/31/new-years-eve-2012.html</loc>
     <lastmod>2012-12-31T17:33:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2012/12/24/buy-raspberry-pi-at-farnell-distributor-of-japan.html</loc>
+    <loc>https://www.sharkpp.net/blog/2012/12/24/buy-raspberry-pi-at-farnell-distributor-of-japan.html</loc>
     <lastmod>2012-12-24T12:05:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2012/12/17/cho-workshop-2012.html</loc>
+    <loc>https://www.sharkpp.net/blog/2012/12/17/cho-workshop-2012.html</loc>
     <lastmod>2012-12-17T22:55:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2012/11/20/buy-the-amazon-kindle-paperwhite.html</loc>
+    <loc>https://www.sharkpp.net/blog/2012/11/20/buy-the-amazon-kindle-paperwhite.html</loc>
     <lastmod>2012-11-20T00:54:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2012/10/16/tumbdash.html</loc>
+    <loc>https://www.sharkpp.net/blog/2012/10/16/tumbdash.html</loc>
     <lastmod>2012-10-16T00:54:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2012/09/30/titanium-mobile-memo-1.html</loc>
+    <loc>https://www.sharkpp.net/blog/2012/09/30/titanium-mobile-memo-1.html</loc>
     <lastmod>2012-09-30T23:05:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2012/08/06/qt-workshop-in-nagoya-5.html</loc>
+    <loc>https://www.sharkpp.net/blog/2012/08/06/qt-workshop-in-nagoya-5.html</loc>
     <lastmod>2012-08-06T00:34:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2012/07/30/boost-workshop-10-in-tokyo.html</loc>
+    <loc>https://www.sharkpp.net/blog/2012/07/30/boost-workshop-10-in-tokyo.html</loc>
     <lastmod>2012-07-30T00:49:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2012/07/25/fuelphp-workshop-in-osu-vol-2.html</loc>
+    <loc>https://www.sharkpp.net/blog/2012/07/25/fuelphp-workshop-in-osu-vol-2.html</loc>
     <lastmod>2012-07-25T00:06:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2012/07/13/got-macbook-air.html</loc>
+    <loc>https://www.sharkpp.net/blog/2012/07/13/got-macbook-air.html</loc>
     <lastmod>2012-07-13T03:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2012/05/13/osc-2012-nagoya.html</loc>
+    <loc>https://www.sharkpp.net/blog/2012/05/13/osc-2012-nagoya.html</loc>
     <lastmod>2012-05-13T14:53:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2012/03/15/list-of-xbyak-sample-and-using-software.html</loc>
+    <loc>https://www.sharkpp.net/blog/2012/03/15/list-of-xbyak-sample-and-using-software.html</loc>
     <lastmod>2012-03-15T23:31:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2012/01/29/play-with-qt-part-5.html</loc>
+    <loc>https://www.sharkpp.net/blog/2012/01/29/play-with-qt-part-5.html</loc>
     <lastmod>2012-01-29T18:25:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2012/01/05/happy-new-year-2012.html</loc>
+    <loc>https://www.sharkpp.net/blog/2012/01/05/happy-new-year-2012.html</loc>
     <lastmod>2012-01-05T23:28:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2011/12/31/new-years-eve-of-2011.html</loc>
+    <loc>https://www.sharkpp.net/blog/2011/12/31/new-years-eve-of-2011.html</loc>
     <lastmod>2011-12-31T10:08:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2011/12/10/qnap-ts-109-galaxys-openvpn.html</loc>
+    <loc>https://www.sharkpp.net/blog/2011/12/10/qnap-ts-109-galaxys-openvpn.html</loc>
     <lastmod>2011-12-10T16:15:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2011/12/08/hsp-program-contest-2011-winner.html</loc>
+    <loc>https://www.sharkpp.net/blog/2011/12/08/hsp-program-contest-2011-winner.html</loc>
     <lastmod>2011-12-08T23:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2011/12/05/using-subversion-with-qnap-ts109II.html</loc>
+    <loc>https://www.sharkpp.net/blog/2011/12/05/using-subversion-with-qnap-ts109II.html</loc>
     <lastmod>2011-12-05T00:23:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2011/11/26/hsp-program-contest-2011-has-passed-the-initial-screening.html</loc>
+    <loc>https://www.sharkpp.net/blog/2011/11/26/hsp-program-contest-2011-has-passed-the-initial-screening.html</loc>
     <lastmod>2011-11-26T00:53:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2011/10/30/play-with-qt-part-4.html</loc>
+    <loc>https://www.sharkpp.net/blog/2011/10/30/play-with-qt-part-4.html</loc>
     <lastmod>2011-10-30T21:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2011/09/27/entry-the-HSP-program-contest-2011-2.html</loc>
+    <loc>https://www.sharkpp.net/blog/2011/09/27/entry-the-HSP-program-contest-2011-2.html</loc>
     <lastmod>2011-09-27T00:38:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2011/09/18/started-using-the-github.html</loc>
+    <loc>https://www.sharkpp.net/blog/2011/09/18/started-using-the-github.html</loc>
     <lastmod>2011-09-18T12:16:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2011/08/31/entry-the-HSP-program-contest-2011.html</loc>
+    <loc>https://www.sharkpp.net/blog/2011/08/31/entry-the-HSP-program-contest-2011.html</loc>
     <lastmod>2011-08-31T23:27:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2011/08/21/recent-state-2011-08-21.html</loc>
+    <loc>https://www.sharkpp.net/blog/2011/08/21/recent-state-2011-08-21.html</loc>
     <lastmod>2011-08-21T22:26:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2011/07/31/play-with-qt-part-3.html</loc>
+    <loc>https://www.sharkpp.net/blog/2011/07/31/play-with-qt-part-3.html</loc>
     <lastmod>2011-07-31T23:32:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2011/06/29/recent-state-2011-06-29.html</loc>
+    <loc>https://www.sharkpp.net/blog/2011/06/29/recent-state-2011-06-29.html</loc>
     <lastmod>2011-06-29T01:24:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2011/06/29/hsp-cool-menu.html</loc>
+    <loc>https://www.sharkpp.net/blog/2011/06/29/hsp-cool-menu.html</loc>
     <lastmod>2011-06-29T01:08:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2011/06/29/hsp-point-size-font.html</loc>
+    <loc>https://www.sharkpp.net/blog/2011/06/29/hsp-point-size-font.html</loc>
     <lastmod>2011-06-29T00:57:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2011/06/29/hsp-location-module.html</loc>
+    <loc>https://www.sharkpp.net/blog/2011/06/29/hsp-location-module.html</loc>
     <lastmod>2011-06-29T00:43:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2011/05/01/making-of-magic-circle-3.html</loc>
+    <loc>https://www.sharkpp.net/blog/2011/05/01/making-of-magic-circle-3.html</loc>
     <lastmod>2011-05-01T00:27:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2011/04/17/making-of-magic-circle-2.html</loc>
+    <loc>https://www.sharkpp.net/blog/2011/04/17/making-of-magic-circle-2.html</loc>
     <lastmod>2011-04-17T12:52:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2011/03/29/android-app-develop-3.html</loc>
+    <loc>https://www.sharkpp.net/blog/2011/03/29/android-app-develop-3.html</loc>
     <lastmod>2011-03-29T01:21:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2011/02/23/library-for-IC-driving-license-card.html</loc>
+    <loc>https://www.sharkpp.net/blog/2011/02/23/library-for-IC-driving-license-card.html</loc>
     <lastmod>2011-02-23T00:04:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2011/01/27/hsp-location-module.html</loc>
+    <loc>https://www.sharkpp.net/blog/2011/01/27/hsp-location-module.html</loc>
     <lastmod>2011-01-27T01:23:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2011/01/01/happy-new-year-2011.html</loc>
+    <loc>https://www.sharkpp.net/blog/2011/01/01/happy-new-year-2011.html</loc>
     <lastmod>2011-01-01T02:49:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2011/01/01/joya-no-kane.html</loc>
+    <loc>https://www.sharkpp.net/blog/2011/01/01/joya-no-kane.html</loc>
     <lastmod>2011-01-01T02:32:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2010/12/31/new-years-eve-of-2010.html</loc>
+    <loc>https://www.sharkpp.net/blog/2010/12/31/new-years-eve-of-2010.html</loc>
     <lastmod>2010-12-31T02:40:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2010/12/12/HSP-program-contest-summary.html</loc>
+    <loc>https://www.sharkpp.net/blog/2010/12/12/HSP-program-contest-summary.html</loc>
     <lastmod>2010-12-12T22:22:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2010/12/12/HSP-program-contest-2010-summary.html</loc>
+    <loc>https://www.sharkpp.net/blog/2010/12/12/HSP-program-contest-2010-summary.html</loc>
     <lastmod>2010-12-12T22:22:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2010/12/12/secure-email-settings.html</loc>
+    <loc>https://www.sharkpp.net/blog/2010/12/12/secure-email-settings.html</loc>
     <lastmod>2010-12-12T20:39:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2010/11/25/android-app-develop-2.html</loc>
+    <loc>https://www.sharkpp.net/blog/2010/11/25/android-app-develop-2.html</loc>
     <lastmod>2010-11-25T00:18:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2010/11/10/android-app-develop-1.html</loc>
+    <loc>https://www.sharkpp.net/blog/2010/11/10/android-app-develop-1.html</loc>
     <lastmod>2010-11-10T02:05:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2010/10/24/recent-state-2010-10-24.html</loc>
+    <loc>https://www.sharkpp.net/blog/2010/10/24/recent-state-2010-10-24.html</loc>
     <lastmod>2010-10-24T21:05:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2010/10/17/recent-state-2010-10-17.html</loc>
+    <loc>https://www.sharkpp.net/blog/2010/10/17/recent-state-2010-10-17.html</loc>
     <lastmod>2010-10-17T22:54:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2010/09/14/developing-EdMax-mailbox-to-Unix-mailbox-format-converter.html</loc>
+    <loc>https://www.sharkpp.net/blog/2010/09/14/developing-EdMax-mailbox-to-Unix-mailbox-format-converter.html</loc>
     <lastmod>2010-09-14T06:59:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2010/08/29/enter-the-HSP-program-contest-2010.html</loc>
+    <loc>https://www.sharkpp.net/blog/2010/08/29/enter-the-HSP-program-contest-2010.html</loc>
     <lastmod>2010-08-29T13:25:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2010/07/25/make-jigsaw-puzzles-games.html</loc>
+    <loc>https://www.sharkpp.net/blog/2010/07/25/make-jigsaw-puzzles-games.html</loc>
     <lastmod>2010-07-25T23:42:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2010/06/28/Giving-money-to-the-Ballmer.html</loc>
+    <loc>https://www.sharkpp.net/blog/2010/06/28/Giving-money-to-the-Ballmer.html</loc>
     <lastmod>2010-06-28T01:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2010/05/30/ubuntu-ja-10-04-on-vmware-player-3-memo.html</loc>
+    <loc>https://www.sharkpp.net/blog/2010/05/30/ubuntu-ja-10-04-on-vmware-player-3-memo.html</loc>
     <lastmod>2010-05-30T18:41:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2010/05/24/userscript-wide-style-for-mediawiki-0-2-0-released.html</loc>
+    <loc>https://www.sharkpp.net/blog/2010/05/24/userscript-wide-style-for-mediawiki-0-2-0-released.html</loc>
     <lastmod>2010-05-24T06:53:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2010/05/17/making-of-magic-circle.html</loc>
+    <loc>https://www.sharkpp.net/blog/2010/05/17/making-of-magic-circle.html</loc>
     <lastmod>2010-05-17T00:52:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2010/04/29/made-sample-display-tool.html</loc>
+    <loc>https://www.sharkpp.net/blog/2010/04/29/made-sample-display-tool.html</loc>
     <lastmod>2010-04-29T10:48:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2010/04/01/published-hsp3-decompiler.html</loc>
+    <loc>https://www.sharkpp.net/blog/2010/04/01/published-hsp3-decompiler.html</loc>
     <lastmod>2010-04-01T00:13:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2010/03/28/wide-style-for-mediawiki-published.html</loc>
+    <loc>https://www.sharkpp.net/blog/2010/03/28/wide-style-for-mediawiki-published.html</loc>
     <lastmod>2010-03-28T16:48:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2010/03/28/greasemonkey-wide-style-for-mediawiki.html</loc>
+    <loc>https://www.sharkpp.net/blog/2010/03/28/greasemonkey-wide-style-for-mediawiki.html</loc>
     <lastmod>2010-03-28T16:41:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2010/03/21/OpenHSP-nightly-build-has-been-organized.html</loc>
+    <loc>https://www.sharkpp.net/blog/2010/03/21/OpenHSP-nightly-build-has-been-organized.html</loc>
     <lastmod>2010-03-21T00:32:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2010/02/28/update-tumblr-popup-editor-0-2-0.html</loc>
+    <loc>https://www.sharkpp.net/blog/2010/02/28/update-tumblr-popup-editor-0-2-0.html</loc>
     <lastmod>2010-02-28T22:06:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2010/01/17/hsp-like-icons.html</loc>
+    <loc>https://www.sharkpp.net/blog/2010/01/17/hsp-like-icons.html</loc>
     <lastmod>2010-01-17T21:56:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2010/01/05/google-trands-hot-searches-insert-graph.html</loc>
+    <loc>https://www.sharkpp.net/blog/2010/01/05/google-trands-hot-searches-insert-graph.html</loc>
     <lastmod>2010-01-05T01:24:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2010/01/05/greasemonkey-google-trends-hot-searches-insert-graph.html</loc>
+    <loc>https://www.sharkpp.net/blog/2010/01/05/greasemonkey-google-trends-hot-searches-insert-graph.html</loc>
     <lastmod>2010-01-05T01:16:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2010/01/01/happy-new-year-2010.html</loc>
+    <loc>https://www.sharkpp.net/blog/2010/01/01/happy-new-year-2010.html</loc>
     <lastmod>2010-01-01T01:48:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/12/31/new-years-eve-of-2009.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/12/31/new-years-eve-of-2009.html</loc>
     <lastmod>2009-12-31T01:13:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/12/27/backup-to-svn-dump-convert-script-2.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/12/27/backup-to-svn-dump-convert-script-2.html</loc>
     <lastmod>2009-12-27T13:49:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/12/13/backup-to-svn-dump-convert-script.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/12/13/backup-to-svn-dump-convert-script.html</loc>
     <lastmod>2009-12-13T23:58:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/11/25/now-release-lhaplus-x64-shell-extension-ver-1-0-1-0.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/11/25/now-release-lhaplus-x64-shell-extension-ver-1-0-1-0.html</loc>
     <lastmod>2009-11-25T01:58:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/11/02/applies-for-HSP-program-contest-2009.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/11/02/applies-for-HSP-program-contest-2009.html</loc>
     <lastmod>2009-11-02T00:56:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/10/11/hsp-sample-wood-pattern.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/10/11/hsp-sample-wood-pattern.html</loc>
     <lastmod>2009-10-11T22:48:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/10/04/play-with-qt-part-2.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/10/04/play-with-qt-part-2.html</loc>
     <lastmod>2009-10-04T17:24:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/10/04/play-with-qt-part-1.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/10/04/play-with-qt-part-1.html</loc>
     <lastmod>2009-10-04T16:52:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/09/30/yabuinu-the-obfuscator-and-scrambler-for-hsp3-0-0-1-0-release.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/09/30/yabuinu-the-obfuscator-and-scrambler-for-hsp3-0-0-1-0-release.html</loc>
     <lastmod>2009-09-30T00:14:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/09/30/hsp-yabuinu.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/09/30/hsp-yabuinu.html</loc>
     <lastmod>2009-09-30T00:05:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/08/23/now-release-lhaplus-x64-shell-extension-ver-1-0-0-0.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/08/23/now-release-lhaplus-x64-shell-extension-ver-1-0-0-0.html</loc>
     <lastmod>2009-08-23T16:44:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/08/23/lhaplus-x64-shell-extension.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/08/23/lhaplus-x64-shell-extension.html</loc>
     <lastmod>2009-08-23T16:31:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/08/23/play-with-boost-part-1.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/08/23/play-with-boost-part-1.html</loc>
     <lastmod>2009-08-23T13:48:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/07/25/puttydummyputty-command-line-interface-proxy-for-teraterm-ver-0-1-0-1-.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/07/25/puttydummyputty-command-line-interface-proxy-for-teraterm-ver-0-1-0-1-.html</loc>
     <lastmod>2009-07-25T16:47:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/07/24/now-release-puttydummy-0-1-0-0.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/07/24/now-release-puttydummy-0-1-0-0.html</loc>
     <lastmod>2009-07-24T01:21:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/07/24/puttydummy.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/07/24/puttydummy.html</loc>
     <lastmod>2009-07-24T01:04:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/07/19/publishing-two-greasemonkey-userscript-for-tumblr.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/07/19/publishing-two-greasemonkey-userscript-for-tumblr.html</loc>
     <lastmod>2009-07-19T23:41:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/07/19/greasemonkey-tumblr-easily-modify-publishing.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/07/19/greasemonkey-tumblr-easily-modify-publishing.html</loc>
     <lastmod>2009-07-19T23:31:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/07/19/greasemonkey-tumblr-popup-editor.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/07/19/greasemonkey-tumblr-popup-editor.html</loc>
     <lastmod>2009-07-19T16:47:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/06/23/openhsp-modcfunc-patch.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/06/23/openhsp-modcfunc-patch.html</loc>
     <lastmod>2009-06-23T01:04:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/06/14/startup-openhsp-nightly-builds.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/06/14/startup-openhsp-nightly-builds.html</loc>
     <lastmod>2009-06-14T23:42:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/06/14/openhsp-nightly.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/06/14/openhsp-nightly.html</loc>
     <lastmod>2009-06-14T22:26:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/06/10/frog-cms-tag-assist.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/06/10/frog-cms-tag-assist.html</loc>
     <lastmod>2009-06-10T00:28:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/06/10/frog-cms-tag-assist-plugin-1-0-0-release.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/06/10/frog-cms-tag-assist-plugin-1-0-0-release.html</loc>
     <lastmod>2009-06-10T00:28:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/05/31/frog-cms-trackback-plugin-1-1-0-release.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/05/31/frog-cms-trackback-plugin-1-1-0-release.html</loc>
     <lastmod>2009-05-31T17:15:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/05/07/windows-7-rc1-publicly-availabled.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/05/07/windows-7-rc1-publicly-availabled.html</loc>
     <lastmod>2009-05-07T01:47:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/05/03/make-frog-cms-tools.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/05/03/make-frog-cms-tools.html</loc>
     <lastmod>2009-05-03T10:16:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/04/26/visual-c-2008-express-edition-enable-64-program.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/04/26/visual-c-2008-express-edition-enable-64-program.html</loc>
     <lastmod>2009-04-26T18:48:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/04/12/cotton-chenc.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/04/12/cotton-chenc.html</loc>
     <lastmod>2009-04-12T23:01:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/04/05/hsed-footy2-nightly-build-20090405.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/04/05/hsed-footy2-nightly-build-20090405.html</loc>
     <lastmod>2009-04-05T23:13:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/03/31/add-pc-g850vs-pictures.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/03/31/add-pc-g850vs-pictures.html</loc>
     <lastmod>2009-03-31T02:18:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/03/29/got-pc-g850vs.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/03/29/got-pc-g850vs.html</loc>
     <lastmod>2009-03-29T23:56:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/03/29/pokecom-pcg850vs.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/03/29/pokecom-pcg850vs.html</loc>
     <lastmod>2009-03-29T23:42:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/03/10/frog-cms-snippet-paster.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/03/10/frog-cms-snippet-paster.html</loc>
     <lastmod>2009-03-10T15:17:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/03/08/sakura-editor-php-keyword.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/03/08/sakura-editor-php-keyword.html</loc>
     <lastmod>2009-03-08T15:20:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/02/26/safari3-and-safari4-side-by-side-on-windows.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/02/26/safari3-and-safari4-side-by-side-on-windows.html</loc>
     <lastmod>2009-02-26T01:40:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/02/10/JST-UNIX-time-will-reach-1234567890.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/02/10/JST-UNIX-time-will-reach-1234567890.html</loc>
     <lastmod>2009-02-10T23:10:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/02/01/how-to-use-rhaco2.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/02/01/how-to-use-rhaco2.html</loc>
     <lastmod>2009-02-01T17:56:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/02/01/rhaco-how-to-use-rhaco2.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/02/01/rhaco-how-to-use-rhaco2.html</loc>
     <lastmod>2009-02-01T17:45:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/01/10/rhaco-template-syntax-memo.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/01/10/rhaco-template-syntax-memo.html</loc>
     <lastmod>2009-01-10T18:37:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/01/10/ubuntu-ja-8-10-on-vmware-player-2-memo.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/01/10/ubuntu-ja-8-10-on-vmware-player-2-memo.html</loc>
     <lastmod>2009-01-10T17:20:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2009/01/10/happy-new-year-2009.html</loc>
+    <loc>https://www.sharkpp.net/blog/2009/01/10/happy-new-year-2009.html</loc>
     <lastmod>2009-01-10T01:03:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/10/15/frog-cms-trackback-plugin-1-0-0-release.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/10/15/frog-cms-trackback-plugin-1-0-0-release.html</loc>
     <lastmod>2008-10-15T00:35:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/10/12/broken-clipboard-by-hsed3-operation.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/10/12/broken-clipboard-by-hsed3-operation.html</loc>
     <lastmod>2008-10-12T19:57:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/10/11/trackback-plugin-many-function-implemented.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/10/11/trackback-plugin-many-function-implemented.html</loc>
     <lastmod>2008-10-11T02:21:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/09/28/hsp3-filedlg-multiple-filter-implement.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/09/28/hsp3-filedlg-multiple-filter-implement.html</loc>
     <lastmod>2008-09-28T15:29:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/09/22/hsed3-footy2-printing-test.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/09/22/hsed3-footy2-printing-test.html</loc>
     <lastmod>2008-09-22T01:36:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/09/15/frog-cms-comment-plugin-test.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/09/15/frog-cms-comment-plugin-test.html</loc>
     <lastmod>2008-09-15T07:51:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/09/09/greasemonkey-hspcontest-2008-logo-change.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/09/09/greasemonkey-hspcontest-2008-logo-change.html</loc>
     <lastmod>2008-09-09T00:57:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/09/09/greasemonkey-gigazine-auto-continue.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/09/09/greasemonkey-gigazine-auto-continue.html</loc>
     <lastmod>2008-09-09T00:57:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/09/09/greasemonkey-vector-download-info-skip.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/09/09/greasemonkey-vector-download-info-skip.html</loc>
     <lastmod>2008-09-09T00:56:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/09/09/greasemonkey-hsp3bbs-ip-display.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/09/09/greasemonkey-hsp3bbs-ip-display.html</loc>
     <lastmod>2008-09-09T00:56:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/09/09/greasemonkey-slashdot-small-font.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/09/09/greasemonkey-slashdot-small-font.html</loc>
     <lastmod>2008-09-09T00:55:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/09/09/greasemonkey-doxygen-jp-sample-redirect.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/09/09/greasemonkey-doxygen-jp-sample-redirect.html</loc>
     <lastmod>2008-09-09T00:55:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/09/09/greasemonkey-add-backup-link-for-pukiwiki.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/09/09/greasemonkey-add-backup-link-for-pukiwiki.html</loc>
     <lastmod>2008-09-09T00:54:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/09/09/greasemonkey-google-enlarge-result.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/09/09/greasemonkey-google-enlarge-result.html</loc>
     <lastmod>2008-09-09T00:54:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/09/09/greasemonkey-google-expand-find-box.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/09/09/greasemonkey-google-expand-find-box.html</loc>
     <lastmod>2008-09-09T00:50:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/09/08/frog-cms-trackback-plugin.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/09/08/frog-cms-trackback-plugin.html</loc>
     <lastmod>2008-09-08T01:13:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/09/07/trackback-plugin-temporarily-completed.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/09/07/trackback-plugin-temporarily-completed.html</loc>
     <lastmod>2008-09-07T23:17:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/09/06/redistribution-pcbsoft-plugin.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/09/06/redistribution-pcbsoft-plugin.html</loc>
     <lastmod>2008-09-06T02:01:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/09/06/pcbsoft.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/09/06/pcbsoft.html</loc>
     <lastmod>2008-09-06T01:52:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/09/06/hsp-pcbnet2.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/09/06/hsp-pcbnet2.html</loc>
     <lastmod>2008-09-06T01:42:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/09/03/memo-chart-library-and-feed-paser-library.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/09/03/memo-chart-library-and-feed-paser-library.html</loc>
     <lastmod>2008-09-03T00:46:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/09/03/implement-trackback-plugin-for-frog-cms-2.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/09/03/implement-trackback-plugin-for-frog-cms-2.html</loc>
     <lastmod>2008-09-03T00:39:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/09/02/about-hsplet.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/09/02/about-hsplet.html</loc>
     <lastmod>2008-09-02T01:35:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/09/01/test-of-trackback.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/09/01/test-of-trackback.html</loc>
     <lastmod>2008-09-01T00:24:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/25/implement-trackback-plugin-for-frog-cms.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/25/implement-trackback-plugin-for-frog-cms.html</loc>
     <lastmod>2008-08-25T01:28:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/21/pcbnet2-sample-modified-for-hsp3-syntax.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/21/pcbnet2-sample-modified-for-hsp3-syntax.html</loc>
     <lastmod>2008-08-21T00:15:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/20/hsp-pcbnet2-sample-hsp3-fix.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/20/hsp-pcbnet2-sample-hsp3-fix.html</loc>
     <lastmod>2008-08-20T23:54:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/17/published-hsp-page-in-hobby-page.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/17/published-hsp-page-in-hobby-page.html</loc>
     <lastmod>2008-08-17T01:55:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/15/frog-cms-import-export-plugin.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/15/frog-cms-import-export-plugin.html</loc>
     <lastmod>2008-08-15T01:38:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/15/frog-cms-ja-message.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/15/frog-cms-ja-message.html</loc>
     <lastmod>2008-08-15T01:32:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/15/hsp-hsp3obfus.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/15/hsp-hsp3obfus.html</loc>
     <lastmod>2008-08-15T01:16:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/15/hsp-memfile-hpi.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/15/hsp-memfile-hpi.html</loc>
     <lastmod>2008-08-15T01:03:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/14/pokecom-link-casio.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/14/pokecom-link-casio.html</loc>
     <lastmod>2008-08-14T02:19:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/14/pokecom-link-sharp-other.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/14/pokecom-link-sharp-other.html</loc>
     <lastmod>2008-08-14T02:15:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/14/pokecom-link-sharp-pc-e-series.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/14/pokecom-link-sharp-pc-e-series.html</loc>
     <lastmod>2008-08-14T01:30:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/14/pokecom-link-sharp-1xxx-series.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/14/pokecom-link-sharp-1xxx-series.html</loc>
     <lastmod>2008-08-14T01:30:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/14/pokecom-link-sharp-pc-g-series.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/14/pokecom-link-sharp-pc-g-series.html</loc>
     <lastmod>2008-08-14T01:27:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/13/updating.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/13/updating.html</loc>
     <lastmod>2008-08-13T01:58:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/11/new-design.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/11/new-design.html</loc>
     <lastmod>2008-08-11T01:39:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/10/link-misc.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/10/link-misc.html</loc>
     <lastmod>2008-08-10T16:34:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/10/link-hsp.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/10/link-hsp.html</loc>
     <lastmod>2008-08-10T16:07:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/10/link-pokecom.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/10/link-pokecom.html</loc>
     <lastmod>2008-08-10T14:11:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/10/patch-vfic.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/10/patch-vfic.html</loc>
     <lastmod>2008-08-10T02:29:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/10/patch-vaporcd.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/10/patch-vaporcd.html</loc>
     <lastmod>2008-08-10T02:27:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/10/patch-wkiss.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/10/patch-wkiss.html</loc>
     <lastmod>2008-08-10T02:27:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/10/patch-iconshop.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/10/patch-iconshop.html</loc>
     <lastmod>2008-08-10T02:26:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/10/patch-cpcache.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/10/patch-cpcache.html</loc>
     <lastmod>2008-08-10T02:25:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/10/patch-pusame.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/10/patch-pusame.html</loc>
     <lastmod>2008-08-10T02:23:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/09/spal-rigle.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/09/spal-rigle.html</loc>
     <lastmod>2008-08-09T10:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/09/spal-calc01.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/09/spal-calc01.html</loc>
     <lastmod>2008-08-09T09:59:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/09/uwsc-torigame.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/09/uwsc-torigame.html</loc>
     <lastmod>2008-08-09T09:57:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/09/uwsc-alcut.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/09/uwsc-alcut.html</loc>
     <lastmod>2008-08-09T09:57:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/09/uwsc-mogura.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/09/uwsc-mogura.html</loc>
     <lastmod>2008-08-09T09:56:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/06/rss.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/06/rss.html</loc>
     <lastmod>2008-08-06T00:44:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/08/06/gifcat.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/08/06/gifcat.html</loc>
     <lastmod>2008-08-06T00:41:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/21/susie-ifktmkr.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/21/susie-ifktmkr.html</loc>
     <lastmod>2008-07-21T00:14:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/21/abc-exkiss.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/21/abc-exkiss.html</loc>
     <lastmod>2008-07-21T00:14:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/21/susie-axdangel.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/21/susie-axdangel.html</loc>
     <lastmod>2008-07-21T00:13:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/21/susie-axadvs.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/21/susie-axadvs.html</loc>
     <lastmod>2008-07-21T00:13:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/21/susie-ifcel.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/21/susie-ifcel.html</loc>
     <lastmod>2008-07-21T00:12:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/21/terapad-tptemp.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/21/terapad-tptemp.html</loc>
     <lastmod>2008-07-21T00:11:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/21/terapad-tpkwget.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/21/terapad-tpkwget.html</loc>
     <lastmod>2008-07-21T00:10:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/21/terapad-tpkwhelp.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/21/terapad-tpkwhelp.html</loc>
     <lastmod>2008-07-21T00:09:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/21/terapad-tpjump.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/21/terapad-tpjump.html</loc>
     <lastmod>2008-07-21T00:08:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/21/mogura.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/21/mogura.html</loc>
     <lastmod>2008-07-21T00:07:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/21/atomscan.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/21/atomscan.html</loc>
     <lastmod>2008-07-21T00:07:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/21/w2m-ema.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/21/w2m-ema.html</loc>
     <lastmod>2008-07-21T00:06:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/21/qemul.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/21/qemul.html</loc>
     <lastmod>2008-07-21T00:06:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/21/timekeep.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/21/timekeep.html</loc>
     <lastmod>2008-07-21T00:05:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/21/sendclipboard.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/21/sendclipboard.html</loc>
     <lastmod>2008-07-21T00:04:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/21/killtime.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/21/killtime.html</loc>
     <lastmod>2008-07-21T00:03:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/21/pokecom-game-patapata.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/21/pokecom-game-patapata.html</loc>
     <lastmod>2008-07-21T00:01:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/21/pokecom-game-maze.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/21/pokecom-game-maze.html</loc>
     <lastmod>2008-07-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/21/pokecom-game-bb.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/21/pokecom-game-bb.html</loc>
     <lastmod>2008-07-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/20/pokecom-game-poyopoyo.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/20/pokecom-game-poyopoyo.html</loc>
     <lastmod>2008-07-20T23:59:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/20/pokecom-game-janken.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/20/pokecom-game-janken.html</loc>
     <lastmod>2008-07-20T23:43:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/20/pokecom-game-escape.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/20/pokecom-game-escape.html</loc>
     <lastmod>2008-07-20T23:42:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/20/pokecom-game-keyhiter.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/20/pokecom-game-keyhiter.html</loc>
     <lastmod>2008-07-20T23:41:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/20/pokecom-program-rand-h.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/20/pokecom-program-rand-h.html</loc>
     <lastmod>2008-07-20T23:40:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/20/pokecom-program-inkey-h.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/20/pokecom-program-inkey-h.html</loc>
     <lastmod>2008-07-20T23:39:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/20/pokecom-lecture-03-large-size-program-run.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/20/pokecom-lecture-03-large-size-program-run.html</loc>
     <lastmod>2008-07-20T23:37:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/20/pokecom-lecture-02-file-size-compact.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/20/pokecom-lecture-02-file-size-compact.html</loc>
     <lastmod>2008-07-20T23:36:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/20/pokecom-lecture-01-key-input.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/20/pokecom-lecture-01-key-input.html</loc>
     <lastmod>2008-07-20T23:36:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.sharkpp.net/blog/2008/07/20/pokecom-pcg850v.html</loc>
+    <loc>https://www.sharkpp.net/blog/2008/07/20/pokecom-pcg850v.html</loc>
     <lastmod>2008-07-20T23:32:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>

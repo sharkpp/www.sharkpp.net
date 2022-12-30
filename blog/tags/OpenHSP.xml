@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/OpenHSP.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/OpenHSP.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[OpenHSPナイトリービルドを適当に整理しました]]></title>
-            <link href="http://www.sharkpp.net/blog/2010/03/21/OpenHSP-nightly-build-has-been-organized.html"/>
+            <link href="https://www.sharkpp.net/blog/2010/03/21/OpenHSP-nightly-build-has-been-organized.html"/>
             <updated>2010-03-21T00:32:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2010/03/21/OpenHSP-nightly-build-has-been-organized.html</id>
+            <id>https://www.sharkpp.net/blog/2010/03/21/OpenHSP-nightly-build-has-been-organized.html</id>
             <content type="html"><![CDATA[<p>最近リビジョンアップする間隔が短くてzipファイルがたまってきたのでOpenHSPナイトリービルドを適当に整理しました。</p>
 
 <p>ローカルには全て保存してあるので、ほしい方がいればうｐりますが、いないですよね多分...</p>
@@ -24,9 +24,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[OpenHSP #modcfuncパッチ]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/06/23/openhsp-modcfunc-patch.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/06/23/openhsp-modcfunc-patch.html"/>
             <updated>2009-06-23T01:04:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/06/23/openhsp-modcfunc-patch.html</id>
+            <id>https://www.sharkpp.net/blog/2009/06/23/openhsp-modcfunc-patch.html</id>
             <content type="html"><![CDATA[<p>OpenHSP用の#modcfuncパッチを作ってみた。</p>
 
 <p>コンパイルは出来たのでそんなには間違っていないと思うが未保障。</p>
@@ -76,9 +76,9 @@ return res;
         </entry>
             <entry>
             <title type="html"><![CDATA[OpenHSPのナイトリービルドを始めました]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/06/14/startup-openhsp-nightly-builds.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/06/14/startup-openhsp-nightly-builds.html"/>
             <updated>2009-06-14T23:42:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/06/14/startup-openhsp-nightly-builds.html</id>
+            <id>https://www.sharkpp.net/blog/2009/06/14/startup-openhsp-nightly-builds.html</id>
             <content type="html"><![CDATA[<p>まあタイトルの通りなんだけど、OpenHSPのナイトリービルドを始めました。</p>
 
 <p>毎日0時ごろにリビジョンをチェックして上がっていたら自動でビルドしてzipで固めてこのサイトにアップロードって感じのバッチファイルを組んでタスクで動かすようにしました。</p>

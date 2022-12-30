@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/%E3%83%A1%E3%83%BC%E3%83%AB.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/%E3%83%A1%E3%83%BC%E3%83%AB.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[セキュアな電子メールの設定(追記あり)]]></title>
-            <link href="http://www.sharkpp.net/blog/2010/12/12/secure-email-settings.html"/>
+            <link href="https://www.sharkpp.net/blog/2010/12/12/secure-email-settings.html"/>
             <updated>2010-12-12T20:39:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2010/12/12/secure-email-settings.html</id>
+            <id>https://www.sharkpp.net/blog/2010/12/12/secure-email-settings.html</id>
             <content type="html"><![CDATA[<p></p>
 <div class="alert alert-danger alert-dismissible" role="alert">
   <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>

@@ -60,7 +60,7 @@
             class="active"><span 
            ><span>Mac で rbenv を使って複数バージョンの Ruby を管理するためのメモ</span
        ></li></ol><article itemscope="itemscope" itemtype="http://schema.org/Article"><meta itemscope="itemscope" itemprop="mainEntityOfPage"
-              itemType="https://schema.org/WebPage" itemid="http://www.sharkpp.net/blog/2015/10/25/ruby-rbenv-on-mac-osx-memo.html"/><header><h1><span itemprop="headline">Mac で rbenv を使って複数バージョンの Ruby を管理するためのメモ</span><small>post</small></h1></header><div id="toc" class="panel panel-default pull-right"><div class="panel-heading text-center">目次</div><div class="panel-body" style="padding: 10px;"><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#%E6%A6%82%E8%A6%81">概要</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">アンインストール</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E7%AE%A1%E7%90%86">バージョン管理</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%8F%82%E8%80%83">参考</a></ul></div></div><div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div><div itemprop="articleBody"><h2 id="%E6%A6%82%E8%A6%81" itemprop="articleSection">概要</h2><p>ちょっと、いろいろなバージョンの Ruby を使用しないといけない状況に陥ったので rbenv での ruby のバージョンを管理をする方法のメモ。
+              itemType="https://schema.org/WebPage" itemid="https://www.sharkpp.net/blog/2015/10/25/ruby-rbenv-on-mac-osx-memo.html"/><header><h1><span itemprop="headline">Mac で rbenv を使って複数バージョンの Ruby を管理するためのメモ</span><small>post</small></h1></header><div id="toc" class="panel panel-default pull-right"><div class="panel-heading text-center">目次</div><div class="panel-body" style="padding: 10px;"><ul class="fa-ul"><li><i class="fa-li fa fa-paperclip"></i><a href="#%E6%A6%82%E8%A6%81">概要</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">アンインストール</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E7%AE%A1%E7%90%86">バージョン管理</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a></li><li><i class="fa-li fa fa-paperclip"></i><a href="#%E5%8F%82%E8%80%83">参考</a></ul></div></div><div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div><div itemprop="articleBody"><h2 id="%E6%A6%82%E8%A6%81" itemprop="articleSection">概要</h2><p>ちょっと、いろいろなバージョンの Ruby を使用しないといけない状況に陥ったので rbenv での ruby のバージョンを管理をする方法のメモ。
 環境は、 Mac を使用しているので Homebrew を使って rbenv をインストールしています。</p><p>以前に <a href="/blog/2014/04/15/ruby-1-9-3-install-for-mac-10-8.html">Mac OS X 10.8 に Ruby 1.9.3 をインストールする方法</a> で rvm を使ってインストールしていましたが、ごっそりアインインストールをしています。</p><h2 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" itemprop="articleSection">インストール</h2><p>まず rbenv と ruby-build をインストール</p><pre><code class="bash">$ brew install rbenv ruby-build
 </code></pre><p>パスを通す＆設定反映</p><pre><code class="bash">$ echo 'eval "$(rbenv init -)"' &amp;gt;&amp;gt; ~/.bash_profile
 $ source ~/.bash_profile
@@ -105,10 +105,10 @@ ruby 1.9.3p551 (2014-11-13 revision 48407) [x86_64-darwin13.4.0]
         &nbsp;/&nbsp;
         <i class="fa fa-thumb-tack"></i>&nbsp;<a href="/blog/2015/10/25/ruby-rbenv-on-mac-osx-memo.html">Permalink</a>
         &nbsp;/&nbsp;
-    </span><meta itemprop="url" content="http://www.sharkpp.net/blog/2015/10/25/ruby-rbenv-on-mac-osx-memo.html" /><span itemprop="author" itemscope itemtype="https://schema.org/Person"
+    </span><meta itemprop="url" content="https://www.sharkpp.net/blog/2015/10/25/ruby-rbenv-on-mac-osx-memo.html" /><span itemprop="author" itemscope itemtype="https://schema.org/Person"
           style="display: none;"
        ><span itemprop="name">sharkpp</span
-   ></span><a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2015%2F10%2F25%2Fruby-rbenv-on-mac-osx-memo.html"
+   ></span><a href="http://b.hatena.ne.jp/entry/https%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2015%2F10%2F25%2Fruby-rbenv-on-mac-osx-memo.html"
        class="hatena-bookmark-button"
        data-hatena-bookmark-title="Mac で rbenv を使って複数バージョンの Ruby を管理するためのメモ &mdash; さめたすたすのお家"
        data-hatena-bookmark-layout="simple-balloon"
@@ -118,7 +118,7 @@ ruby 1.9.3p551 (2014-11-13 revision 48407) [x86_64-darwin13.4.0]
             width="20" height="20" style="border: none;" /></a
       >&nbsp;
     <a href="https://twitter.com/share" class="twitter-share-button"
-       data-url="http://www.sharkpp.net/blog/2015/10/25/ruby-rbenv-on-mac-osx-memo.html" data-via="sharkpp">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><div style="line-height: 25px; height: 25px;"><span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
+       data-url="https://www.sharkpp.net/blog/2015/10/25/ruby-rbenv-on-mac-osx-memo.html" data-via="sharkpp">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><div style="line-height: 25px; height: 25px;"><span class="categories"><i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
                         <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
         &nbsp;/&nbsp;
                                 <span class="tags"><i class="fa fa-tag"></i>&nbsp;タグ:

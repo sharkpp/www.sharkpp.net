@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/CSS.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/CSS.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[JavaScript や CSS の CDN サービスについて調べてみた]]></title>
-            <link href="http://www.sharkpp.net/blog/2016/03/06/research-of-javascript-and-css-cdn.html"/>
+            <link href="https://www.sharkpp.net/blog/2016/03/06/research-of-javascript-and-css-cdn.html"/>
             <updated>2016-03-06T21:30:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2016/03/06/research-of-javascript-and-css-cdn.html</id>
+            <id>https://www.sharkpp.net/blog/2016/03/06/research-of-javascript-and-css-cdn.html</id>
             <content type="html"><![CDATA[<p>jQuery や Bootstrap などの一般的なライブラリを使うときは自分のサイトに設置する以外に、 Content Delivery Network 略して CDN サービスで配信されているものを利用することもあります、というかこのページでも使っています。</p>
 
 <p>ということで、 CDN サービスを調べてみました。</p>

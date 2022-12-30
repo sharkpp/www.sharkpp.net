@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/SSL.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/SSL.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[じゅげむったーの開発日記 その６]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/09/27/jugemutter-development-diary-6th.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/09/27/jugemutter-development-diary-6th.html"/>
             <updated>2017-09-27T12:40:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/09/27/jugemutter-development-diary-6th.html</id>
+            <id>https://www.sharkpp.net/blog/2017/09/27/jugemutter-development-diary-6th.html</id>
             <content type="html"><![CDATA[<p>遅くなりましたが、今月も引き続き参加した <a href="https://qt-users.connpass.com/event/65548/">Qt 勉強会 @ Nagoya No12 - connpass</a> のまとめです。</p>
 
 <p>重大発表があってちょっとびっくりでした。
@@ -112,9 +112,9 @@ $ openssl rsa -in tmp.der -inform DER -out server-key.pem -outform pem
         </entry>
             <entry>
             <title type="html"><![CDATA[じゅげむったーの開発日記 その５]]></title>
-            <link href="http://www.sharkpp.net/blog/2017/08/23/jugemutter-development-diary-5th.html"/>
+            <link href="https://www.sharkpp.net/blog/2017/08/23/jugemutter-development-diary-5th.html"/>
             <updated>2017-08-23T01:50:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2017/08/23/jugemutter-development-diary-5th.html</id>
+            <id>https://www.sharkpp.net/blog/2017/08/23/jugemutter-development-diary-5th.html</id>
             <content type="html"><![CDATA[<p>さて、今月も引き続き参加した <a href="https://qt-users.connpass.com/event/62861/">Qt 勉強会 @ Nagoya No11 - connpass</a> のまとめ。</p>
 
 <p>つぶやきは <a href="https://togetter.com/li/1146658">Qt 勉強会 @ Nagoya No11 つぶやきまとめ - Togetterまとめ</a> でまとめられています。</p>

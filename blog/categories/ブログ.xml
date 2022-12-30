@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:48+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:57+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[大晦日@2022]]></title>
-            <link href="http://www.sharkpp.net/blog/2022/12/31/new-years-eve-2022.html"/>
+            <link href="https://www.sharkpp.net/blog/2022/12/31/new-years-eve-2022.html"/>
             <updated>2022-12-31T07:10:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2022/12/31/new-years-eve-2022.html</id>
+            <id>https://www.sharkpp.net/blog/2022/12/31/new-years-eve-2022.html</id>
             <content type="html"><![CDATA[<h2 id="1-%E5%B9%B4%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A">1 年を振り返り</h2>
 
 <p>今年も本日が大晦日、今年最後の日になりました。</p>
@@ -53,9 +53,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[MacBook Air (M1, 2020) 開封の儀]]></title>
-            <link href="http://www.sharkpp.net/blog/2022/05/13/unboxing-macbook-air-2020.html"/>
+            <link href="https://www.sharkpp.net/blog/2022/05/13/unboxing-macbook-air-2020.html"/>
             <updated>2022-05-13T21:37:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2022/05/13/unboxing-macbook-air-2020.html</id>
+            <id>https://www.sharkpp.net/blog/2022/05/13/unboxing-macbook-air-2020.html</id>
             <content type="html"><![CDATA[<p>メイン機として使っている、MacBook Air (11-inch, Mid 2012) がまだ使えるけど、そろそろZoomなどストリーミング処理が辛くなってきた感じなので新しくしたいなって思ってたところ、機会があったので... ついに...</p>
 
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">My New Gear <a href="https://t.co/c64XG2F565">pic.twitter.com/c64XG2F565</a></p>&mdash; さめたすたす (@sharkpp) <a href="https://twitter.com/sharkpp/status/1510520564670398465?ref_src=twsrc%5Etfw">April 3, 2022</a></blockquote>
@@ -394,9 +394,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[HAPPY NEW YEAR 2022]]></title>
-            <link href="http://www.sharkpp.net/blog/2022/01/01/happy-new-year-2022.html"/>
+            <link href="https://www.sharkpp.net/blog/2022/01/01/happy-new-year-2022.html"/>
             <updated>2022-01-01T20:02:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2022/01/01/happy-new-year-2022.html</id>
+            <id>https://www.sharkpp.net/blog/2022/01/01/happy-new-year-2022.html</id>
             <content type="html"><![CDATA[<p>明けましておめでとうございます。</p>
 
 <p>まだまだ新型コロナは油断ならないですが、今年も良いとしてあってほしいですね。</p>
@@ -426,9 +426,9 @@ GatsbyJS + GitHub Action でビルドできるといい感じかなと。</p>
         </entry>
             <entry>
             <title type="html"><![CDATA[大晦日@2021]]></title>
-            <link href="http://www.sharkpp.net/blog/2021/12/31/new-years-eve-2021.html"/>
+            <link href="https://www.sharkpp.net/blog/2021/12/31/new-years-eve-2021.html"/>
             <updated>2021-12-31T10:13:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2021/12/31/new-years-eve-2021.html</id>
+            <id>https://www.sharkpp.net/blog/2021/12/31/new-years-eve-2021.html</id>
             <content type="html"><![CDATA[<h2 id="1-%E5%B9%B4%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A">1 年を振り返り</h2>
 
 <p>今年も毎度のこと大晦日の今日だけとなりました。</p>
@@ -477,9 +477,9 @@ GatsbyJS + GitHub Action でビルドできるといい感じかなと。</p>
         </entry>
             <entry>
             <title type="html"><![CDATA[Synology のパッケージのビルド方法について調べてみた]]></title>
-            <link href="http://www.sharkpp.net/blog/2021/09/07/synology-package-building.html"/>
+            <link href="https://www.sharkpp.net/blog/2021/09/07/synology-package-building.html"/>
             <updated>2021-09-07T22:05:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2021/09/07/synology-package-building.html</id>
+            <id>https://www.sharkpp.net/blog/2021/09/07/synology-package-building.html</id>
             <content type="html"><![CDATA[<p>Synology の NAS で利用可能なパッケージを作ってみようと思い、色々と調べてみました。
 調べている最中に DSM 7.0 も正式リリースされたので、合わせてそのバージョンも調査の対象としました。</p>
 
@@ -934,9 +934,9 @@ $ pkgscripts/PkgCreate.py -v 7.0 -p braswell -c ExamplePackage
         </entry>
             <entry>
             <title type="html"><![CDATA[Synology DS416play の OS を DSM 7.0 へアップグレードしてみた]]></title>
-            <link href="http://www.sharkpp.net/blog/2021/08/07/synology-ds416play-upgrade-dsm7.html"/>
+            <link href="https://www.sharkpp.net/blog/2021/08/07/synology-ds416play-upgrade-dsm7.html"/>
             <updated>2021-08-07T19:35:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2021/08/07/synology-ds416play-upgrade-dsm7.html</id>
+            <id>https://www.sharkpp.net/blog/2021/08/07/synology-ds416play-upgrade-dsm7.html</id>
             <content type="html"><![CDATA[<p><a href="http://web.archive.org/web/20170709043315if_/https://www.synology.com/ja-jp/products/DS216play">Synology DS416play</a> の OS を DSM 7.0 へアップグレードした時の記録。</p>
 
 <p>7月中旬に DSM 7.0 の正式リリースがでるも、しばらくは様子見にしていたけど、致命的な不具合もなさそうだし <a href="https://www.synology.com/ja-jp/DSM70/SynologyPhotos">Synology Photos</a> を使ってみたくなったのでアップグレードしてみることとした。</p>
@@ -991,9 +991,9 @@ Photo アプリは と接続できない様子なので表示するには <a hre
         </entry>
             <entry>
             <title type="html"><![CDATA[Ionic 5 でモバイル＆デスクトップアプリを試してみた]]></title>
-            <link href="http://www.sharkpp.net/blog/2021/04/30/tryout-ionic-mobile-desktop.html"/>
+            <link href="https://www.sharkpp.net/blog/2021/04/30/tryout-ionic-mobile-desktop.html"/>
             <updated>2021-04-30T21:35:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2021/04/30/tryout-ionic-mobile-desktop.html</id>
+            <id>https://www.sharkpp.net/blog/2021/04/30/tryout-ionic-mobile-desktop.html</id>
             <content type="html"><![CDATA[<p>モバイルでもウェブでもデスクトップでも動くサービスを作る方法を調べて、とりあえず React で実装できそうな <a href="https://ionicframework.com/">Ionic 5</a> を試してみることにしました。</p>
 
 <h2 id="%E6%BA%96%E5%82%99">準備</h2>
@@ -1297,9 +1297,9 @@ $ npx cap open &lt;プラットフォーム&gt;
         </entry>
             <entry>
             <title type="html"><![CDATA[Chromecast with Google TV の開封の儀と３ヶ月ぐらい使ってみた]]></title>
-            <link href="http://www.sharkpp.net/blog/2021/02/28/unboxing-and-used-three-month-of-chromecast-with-google-tv.html"/>
+            <link href="https://www.sharkpp.net/blog/2021/02/28/unboxing-and-used-three-month-of-chromecast-with-google-tv.html"/>
             <updated>2021-02-28T22:45:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2021/02/28/unboxing-and-used-three-month-of-chromecast-with-google-tv.html</id>
+            <id>https://www.sharkpp.net/blog/2021/02/28/unboxing-and-used-three-month-of-chromecast-with-google-tv.html</id>
             <content type="html"><![CDATA[<p>10月1日に発表され、これは欲しいって思いつつ日本発売の情報が流れずやきもきしていたところで、
 やっと11月25日に発売された <a href="https://store.google.com/jp/product/chromecast_google_tv">Chromecast with Google TV</a> を
 しばらく使ってみた感想などを毎度のごとくの開封の儀とともに記事にしました。</p>
@@ -1398,9 +1398,9 @@ $ npx cap open &lt;プラットフォーム&gt;
         </entry>
             <entry>
             <title type="html"><![CDATA[HAPPY NEW YEAR 2021]]></title>
-            <link href="http://www.sharkpp.net/blog/2021/01/01/happy-new-year-2021.html"/>
+            <link href="https://www.sharkpp.net/blog/2021/01/01/happy-new-year-2021.html"/>
             <updated>2021-01-01T22:30:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2021/01/01/happy-new-year-2021.html</id>
+            <id>https://www.sharkpp.net/blog/2021/01/01/happy-new-year-2021.html</id>
             <content type="html"><![CDATA[<p>明けましておめでとうございます。</p>
 
 <p>今年もまだまだ新型コロナは収まりそうになさそうですが、それに負けることなく過ごせればと思います。</p>
@@ -1451,9 +1451,9 @@ $ npx cap open &lt;プラットフォーム&gt;
         </entry>
             <entry>
             <title type="html"><![CDATA[大晦日@2020]]></title>
-            <link href="http://www.sharkpp.net/blog/2020/12/31/new-years-eve-2020.html"/>
+            <link href="https://www.sharkpp.net/blog/2020/12/31/new-years-eve-2020.html"/>
             <updated>2020-12-31T21:49:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2020/12/31/new-years-eve-2020.html</id>
+            <id>https://www.sharkpp.net/blog/2020/12/31/new-years-eve-2020.html</id>
             <content type="html"><![CDATA[<h2 id="1-%E5%B9%B4%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A">1 年を振り返り</h2>
 
 <p>今年も残すところ大晦日の今日だけとなりました。

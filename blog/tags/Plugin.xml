@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[さめたすたすのお家]]></title>
-    <link href="http://www.sharkpp.net/blog/tags/Plugin.xml" rel="self"/>
-    <link href="http://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:28:49+00:00</updated>
-    <id>http://www.sharkpp.net/</id>
+    <link href="https://www.sharkpp.net/blog/tags/Plugin.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2022-12-30T22:37:58+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Frog CMS用タグ入力補助プラグインの1.0.0をリリース]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/06/10/frog-cms-tag-assist-plugin-1-0-0-release.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/06/10/frog-cms-tag-assist-plugin-1-0-0-release.html"/>
             <updated>2009-06-10T00:28:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/06/10/frog-cms-tag-assist-plugin-1-0-0-release.html</id>
+            <id>https://www.sharkpp.net/blog/2009/06/10/frog-cms-tag-assist-plugin-1-0-0-release.html</id>
             <content type="html"><![CDATA[<p>Frog CMS用タグ入力補助プラグインの1.0.0をリリースしました。</p>
 
 <p>Frog CMSは入力の補助、特にすでにあるタグの一覧が出てこないのでタグ入力がすごくめんどくさかった。</p>
@@ -28,9 +28,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[Frog CMS用トラックバックプラグインの1.1.0をリリース]]></title>
-            <link href="http://www.sharkpp.net/blog/2009/05/31/frog-cms-trackback-plugin-1-1-0-release.html"/>
+            <link href="https://www.sharkpp.net/blog/2009/05/31/frog-cms-trackback-plugin-1-1-0-release.html"/>
             <updated>2009-05-31T17:15:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2009/05/31/frog-cms-trackback-plugin-1-1-0-release.html</id>
+            <id>https://www.sharkpp.net/blog/2009/05/31/frog-cms-trackback-plugin-1-1-0-release.html</id>
             <content type="html"><![CDATA[<p>Frog CMS用トラックバックプラグインの1.1.0をリリースしました。</p>
 
 <p>今回はFrog CMS 0.9.5対応などです。</p>
@@ -42,9 +42,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[Frog CMS用トラックバックプラグインの1.0.0をリリース]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/10/15/frog-cms-trackback-plugin-1-0-0-release.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/10/15/frog-cms-trackback-plugin-1-0-0-release.html"/>
             <updated>2008-10-15T00:35:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/10/15/frog-cms-trackback-plugin-1-0-0-release.html</id>
+            <id>https://www.sharkpp.net/blog/2008/10/15/frog-cms-trackback-plugin-1-0-0-release.html</id>
             <content type="html"><![CDATA[<p>少し遅くなりましたが、Frog CMS用トラックバックプラグインの1.0.0をリリースしました。</p>
 
 <p>機能は予告どおりでトラックバックの承認・排除。削除を管理できるようになりました。</p>
@@ -58,9 +58,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[Frog CMSのトラックバックプラグインに機能を色々実装]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/10/11/trackback-plugin-many-function-implemented.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/10/11/trackback-plugin-many-function-implemented.html"/>
             <updated>2008-10-11T02:21:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/10/11/trackback-plugin-many-function-implemented.html</id>
+            <id>https://www.sharkpp.net/blog/2008/10/11/trackback-plugin-many-function-implemented.html</id>
             <content type="html"><![CDATA[<p>時間が無くて少しずつしか作れなかったけどFrog CMSのトラックバックプラグインに機能を色々追加。</p>
 
 <p>機能自体はコメントプラグインを参考にしてトラックバックの承認・排除。削除などを実装してみました。</p>
@@ -72,9 +72,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[Frog CMSのトラックバックプラグインは取り敢えず完成]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/09/07/trackback-plugin-temporarily-completed.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/09/07/trackback-plugin-temporarily-completed.html"/>
             <updated>2008-09-07T23:17:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/09/07/trackback-plugin-temporarily-completed.html</id>
+            <id>https://www.sharkpp.net/blog/2008/09/07/trackback-plugin-temporarily-completed.html</id>
             <content type="html"><![CDATA[<p>プラグインはとりあえず完成です。</p>
 
 <p>スパムのブロックとかはないですがそれはそのうち実装かな。</p>
@@ -99,9 +99,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[PCB Software製プラグインの再配布]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/09/06/redistribution-pcbsoft-plugin.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/09/06/redistribution-pcbsoft-plugin.html"/>
             <updated>2008-09-06T02:01:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/09/06/redistribution-pcbsoft-plugin.html</id>
+            <id>https://www.sharkpp.net/blog/2008/09/06/redistribution-pcbsoft-plugin.html</id>
             <content type="html"><![CDATA[<p>PCB Software(高橋 周平)さんが店じまいをしてしまい、ドメインももうすぐ<s>切れそうな</s>切れたので取り敢えず再配布するようにしてみました。</p>
 
 <p>それと、pcbnet2の方はmd5命令の動作に不具合があったのでそちらも直したものを公開しました。</p>
@@ -113,9 +113,9 @@
         </entry>
             <entry>
             <title type="html"><![CDATA[pcbnet2 改変版]]></title>
-            <link href="http://www.sharkpp.net/blog/2008/09/06/hsp-pcbnet2.html"/>
+            <link href="https://www.sharkpp.net/blog/2008/09/06/hsp-pcbnet2.html"/>
             <updated>2008-09-06T01:42:00+00:00</updated>
-            <id>http://www.sharkpp.net/blog/2008/09/06/hsp-pcbnet2.html</id>
+            <id>https://www.sharkpp.net/blog/2008/09/06/hsp-pcbnet2.html</id>
             <content type="html"><![CDATA[<p>PCB Software(高橋 周平)さん作のpcbnet2の再配布およびバグ修正などをしています。</p>
 
 <h2 id="%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89">ダウンロード</h2>
