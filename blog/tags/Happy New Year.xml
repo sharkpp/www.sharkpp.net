@@ -3,11 +3,45 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="https://www.sharkpp.net/blog/tags/Happy%20New%20Year.xml" rel="self"/>
     <link href="https://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:37:57+00:00</updated>
+    <updated>2022-12-31T15:18:59+00:00</updated>
     <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[HAPPY NEW YEAR 2023]]></title>
+            <link href="https://www.sharkpp.net/blog/2023/01/01/happy-new-year-2023.html"/>
+            <updated>2023-01-01T00:17:00+00:00</updated>
+            <id>https://www.sharkpp.net/blog/2023/01/01/happy-new-year-2023.html</id>
+            <content type="html"><![CDATA[<p>明けましておめでとうございます。</p>
+
+<p>新型コロナ、身近な人に感染者が出てくるようになって、これ終わりが来るのだろうかって感じですが、
+体に気をつけ、今年も良いとしてあってほしいですね。</p>
+
+<p>では、今年の目標をば。</p>
+
+<h2 id="%E7%9B%AE%E6%A8%99">目標</h2>
+
+<h3 id="%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0">ホームページの更新</h3>
+
+<p>ここ数年、かなり更新頻度が乱れたので、今年こそは月一ぐらいは更新したいです。
+ネタとしては、IonicやSynology NAS 関連とか。
+ネタはあるので何かアプリ作ってみたいですね。</p>
+
+<h3 id="%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E6%94%B9%E5%96%84">ホームページのビルドシステムの改善</h3>
+
+<p>こちらも、全くできていないので、何とかしたい。
+GatsbyJS + GitHub Action でビルドできるといい感じかなと。</p>
+
+<p>https化は年末にチェックボックス一つでできたのでそこは嬉しい。</p>
+
+<p><a href="/images/20221231-github-pages-enforce-https.png">Enforce HTTPS in GitHub</a></p>
+
+<h2 id="%E3%81%82%E3%81%91%E3%81%8A%E3%82%81%E3%81%93%E3%81%A8%E3%82%88%E3%82%8D">あけおめことよろ</h2>
+
+<p>今年もまた一年、よろしくお願いいたします。</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[HAPPY NEW YEAR 2022]]></title>
             <link href="https://www.sharkpp.net/blog/2022/01/01/happy-new-year-2022.html"/>
@@ -345,55 +379,6 @@ GatsbyJS + GitHub Action でビルドできるといい感じかなと。</p>
 <p>今年の２月ぐらいで10年目に突入みたいなのでできればリニューアルもそのころに合わせたいけど、、、難しいかな？やっぱり</p>
 
 <p>では、では、また一年よろしくお願いいたします。</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[HAPPY NEW YEAR 2013]]></title>
-            <link href="https://www.sharkpp.net/blog/2013/01/01/happy-new-year-2013.html"/>
-            <updated>2013-01-01T00:48:00+00:00</updated>
-            <id>https://www.sharkpp.net/blog/2013/01/01/happy-new-year-2013.html</id>
-            <content type="html"><![CDATA[<p>明けましておめでとうございます。</p>
-
-<p>また今年一年よろしくお願いします。</p>
-
-<p>タスクが消費できていない一昨年からすこし減らすことができた昨年ですが、今年はもっと減らすことができるように頑張ります。</p>
-
-<p>とりあえず、</p>
-
-<h3 id="%E6%9C%80%E5%84%AA%E5%85%88">最優先</h3>
-
-<ul>
-<li><a href="https://play.google.com/store/apps/details?id=net.sharkpp.Tumbdash">Tumbdash</a>のアップデート</li>
-<li>HSPコンテスト作品の製作←今年は落とさないようにしないと</li>
-</ul>
-
-<h3 id="%E9%A0%91%E5%BC%B5%E3%82%8B">頑張る</h3>
-
-<ul>
-<li><a href="https://github.com/sharkpp/hspide">HSP IDE</a>の公開←引き続き機能実装</li>
-<li>Raspberry Pi で何か作る</li>
-</ul>
-
-<h3 id="%E3%81%A7%E3%81%8D%E3%81%9F%E3%82%89%E3%81%84%E3%81%84%E3%81%AA">できたらいいな</h3>
-
-<ul>
-<li>HSP関連のあるサイトの立ち上げ</li>
-<li>yabuinuのHSP3.3対応</li>
-<li>このサイトのデザイン変更＆整理</li>
-<li>掲示板の設置</li>
-<li>とあるシェル拡張の公開</li>
-<li>とあるツールの公開←なんだっけこれ？</li>
-<li>音素材の公開</li>
-<li>QtのTipsをまとめる</li>
-</ul>
-
-<p>こんな感じです。</p>
-
-<p>あ、あと、今年の２月ぐらいで９年目に突入みたいですね、何だかんだでまだ９年目かって印象ですが、まあ、色々ありました。</p>
-
-<p>では、今年一年よろしくお願いいたします。</p>
-
-<p>ツイッターやっているのでよろしくです→<a href="https://twitter.com/sharkpp">@sharkpp</a></p>
 ]]></content>
         </entry>
     </feed>

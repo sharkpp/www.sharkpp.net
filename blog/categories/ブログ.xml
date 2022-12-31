@@ -3,11 +3,45 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="https://www.sharkpp.net/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0.xml" rel="self"/>
     <link href="https://www.sharkpp.net/"/>
-    <updated>2022-12-30T22:37:57+00:00</updated>
+    <updated>2022-12-31T15:18:58+00:00</updated>
     <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[HAPPY NEW YEAR 2023]]></title>
+            <link href="https://www.sharkpp.net/blog/2023/01/01/happy-new-year-2023.html"/>
+            <updated>2023-01-01T00:17:00+00:00</updated>
+            <id>https://www.sharkpp.net/blog/2023/01/01/happy-new-year-2023.html</id>
+            <content type="html"><![CDATA[<p>明けましておめでとうございます。</p>
+
+<p>新型コロナ、身近な人に感染者が出てくるようになって、これ終わりが来るのだろうかって感じですが、
+体に気をつけ、今年も良いとしてあってほしいですね。</p>
+
+<p>では、今年の目標をば。</p>
+
+<h2 id="%E7%9B%AE%E6%A8%99">目標</h2>
+
+<h3 id="%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0">ホームページの更新</h3>
+
+<p>ここ数年、かなり更新頻度が乱れたので、今年こそは月一ぐらいは更新したいです。
+ネタとしては、IonicやSynology NAS 関連とか。
+ネタはあるので何かアプリ作ってみたいですね。</p>
+
+<h3 id="%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E6%94%B9%E5%96%84">ホームページのビルドシステムの改善</h3>
+
+<p>こちらも、全くできていないので、何とかしたい。
+GatsbyJS + GitHub Action でビルドできるといい感じかなと。</p>
+
+<p>https化は年末にチェックボックス一つでできたのでそこは嬉しい。</p>
+
+<p><a href="/images/20221231-github-pages-enforce-https.png">Enforce HTTPS in GitHub</a></p>
+
+<h2 id="%E3%81%82%E3%81%91%E3%81%8A%E3%82%81%E3%81%93%E3%81%A8%E3%82%88%E3%82%8D">あけおめことよろ</h2>
+
+<p>今年もまた一年、よろしくお願いいたします。</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[大晦日@2022]]></title>
             <link href="https://www.sharkpp.net/blog/2022/12/31/new-years-eve-2022.html"/>
@@ -1447,65 +1481,6 @@ $ npx cap open &lt;プラットフォーム&gt;
 <p>ではでは、今年もまた一年、よろしくお願いいたします。</p>
 
 <p><img src="/images/20210101_first_sunrise.jpg" alt="2021年の初日の出" /></p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[大晦日@2020]]></title>
-            <link href="https://www.sharkpp.net/blog/2020/12/31/new-years-eve-2020.html"/>
-            <updated>2020-12-31T21:49:00+00:00</updated>
-            <id>https://www.sharkpp.net/blog/2020/12/31/new-years-eve-2020.html</id>
-            <content type="html"><![CDATA[<h2 id="1-%E5%B9%B4%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A">1 年を振り返り</h2>
-
-<p>今年も残すところ大晦日の今日だけとなりました。
-つまりは99.7%は終わった感じですね。</p>
-
-<p>世間的なところではコロナ禍が猛威を振るい、今だに収まらないというのは去年の今頃は全く予想できなかったです。
-それによって働き方も様変わりし、旅行やイベントも自粛ムードになるなど影響がいたるところに出ている感じですね。</p>
-
-<p>個人的なところでは、お仕事は変わらずだけど、コロナ禍の影響を受けて在宅ワークがメインになったりしました。</p>
-
-<blockquote>
-  <p>自分自身のことについてはまあ諸々の理由があって勉強会もほとんど参加できなかったのが残念ですが、来年の後半ぐらいから多少マシになる... といいなと。</p>
-</blockquote>
-
-<p>これは、まだもう少しイベントがありそうだけどなんとかしたいですね。</p>
-
-<p>そして、今年も恒例(？)の仮想除夜の鐘アプリ「<a href="https://sharkpp.github.io/joya_no_kane/">除夜の鐘</a>」のリンクを貼っておきます。</p>
-
-<p>さて、前置きいつも通り書いたところで、今年の反省をば。</p>
-
-<h2 id="%E7%B5%90%E6%9E%9C">結果</h2>
-
-<p>まずは、今年の正月 <a href="/blog/2020/01/01/happy-new-year-2020.html">HAPPY NEW YEAR 2020</a> に掲げた目標です。</p>
-
-<ul>
-<li>定期的なホムペの更新</li>
-<li>ホームページを GitHub Action ＆ GatsbyJS ベースに移行してモダーンな感じに</li>
-<li>PWAとかQtとかもろもろ勉強... というか遊ぶ</li>
-<li>Rust頑張ってみる... Rust難しい...</li>
-<li><a href="https://github.com/sharkpp/FrameExtract">FrameExtract</a> を完成させる</li>
-</ul>
-
-<p>と、こんな感じ。</p>
-
-<p>成果としては...</p>
-
-<p>ちょこちょこやっているけど、如何せん時間があまり取れずなかなか進まない感じ。</p>
-
-<p>8月から11月までブログに書けるような内容も何もできていないので、ぐぬぬ。</p>
-
-<p>今年も<a href="https://togetter.com/li/1450054">よんた@keita44_f4 さんの日本酒の感想ツイートまとめ</a>を~~更新してました~~大晦日に慌てて更新しました(汗
-お酒たくさん飲めて羨ましい...</p>
-
-<h2 id="%E5%8F%8D%E7%9C%81">反省</h2>
-
-<p>作りたいものはあるけど、なかなか時間がない、というか体力がない感じをなんとかしたい感じ。</p>
-
-<p>と言うあたりで今年の反省会終了です。</p>
-
-<p><img src="/images/20201231_herring_soba.jpg" alt="にしん蕎麦" /></p>
-
-<p>それでは来年もよろしくお願いします。</p>
 ]]></content>
         </entry>
     </feed>
