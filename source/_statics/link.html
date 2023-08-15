@@ -33,7 +33,7 @@ links:
         owner: "Kain さん"
         url: "http://wikiwiki.jp/orzlabo/"
         twitter: "orzlabo"
-        cross: true
+        cross: false
         banner: 
         comments: "Easy3Dを使用してネットワーク対戦対応の３Ｄロボットゲームを作られています。"
   -
@@ -79,13 +79,13 @@ links:
         cross: true
         banner: 
         comments: "残念ながらポケコン用のゲームなどは無くなってしまいましたがポケコン関連のツールを扱っています。"
-      -
-        caption: "ぽけ ガーデン"
-        owner: "ながい さん"
-        url: "http://www.k2.dion.ne.jp/~nagai/"
-        cross: true
-        banner: 
-        comments: "ポケコンの周辺機器製作や、アセンブラ教室があります。<br/>PCG850Vだけでなく、グラフ電卓・数式処理電卓 Voyage200 も扱っています。"
+#     -
+#       caption: "ぽけ ガーデン"
+#       owner: "ながい さん"
+#       url: "http://www.k2.dion.ne.jp/~nagai/"
+#       cross: true
+#       banner: 
+#       comments: "ポケコンの周辺機器製作や、アセンブラ教室があります。<br/>PCG850Vだけでなく、グラフ電卓・数式処理電卓 Voyage200 も扱っています。"
 #     -
 #       caption: "アップローダー的サイト"
 #       owner: "FM446 さん"
@@ -97,7 +97,7 @@ links:
         caption: "秋日和"
         owner: "あきひ さん"
         url: "http://ha9.seikyou.ne.jp/home/akihi/"
-        cross: true
+        cross: false
         banner: 
         comments: "PC-G850のポート資料がすこしあります。<br/>コミケにぽけこんのほんを出しています。"
       -
@@ -156,7 +156,7 @@ links:
     <p>{{ link.comments|raw }}</p>
 </blockquote>
 
-<div><samp><a href="{{ link.url }}">{{ link.url }}</a></samp> <i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+<div><samp><a href="{{ link.url }}">{{ link.url }}</a></samp> &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></div>
 
 {% endfor %}
 
