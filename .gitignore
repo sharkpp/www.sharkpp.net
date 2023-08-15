@@ -16,3 +16,4 @@ output_*/
 webhook.conf
 *.stackdump
 .DS_Store
+**/tmp
