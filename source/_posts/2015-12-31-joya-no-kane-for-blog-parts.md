@@ -39,11 +39,11 @@ HSPDish.js そのままでブログパーツにしたので、この程度なら
 ## その他リンク
 
 <ul class="fa-ul">
-<li><span class="fa-li"><i class="fa-solid fa-arrow-up-right-from-square"></i><a href="https://github.com/sharkpp/joya_no_kane">ソースコード</a></span></li>
-<li><span class="fa-li"><i class="fa-solid fa-arrow-up-right-from-square"></i><a href="http://sharkpp.github.io/joya_no_kane/">GitHubページ</a></span></li>
-<li><span class="fa-li"><i class="fa-solid fa-arrow-up-right-from-square"></i><a href="http://hsproom.me/program/view/?p=146">HSP部屋(β)</a></span></li>
-<li><span class="fa-li"><i class="fa-solid fa-download"></i><a href="/files/bells100.zip">Windows版ダウンロード</a></span></li>
-<li><span class="fa-li"><i class="fa-solid fa-download"></i><a href="https://github.com/sharkpp/joya_no_kane/zipball/master">HTML/ブログパーツ版ダウンロード</a></span></li>
+<li><span class="fa-li"><i class="fa-solid fa-arrow-up-right-from-square"></i></span><a href="https://github.com/sharkpp/joya_no_kane">ソースコード</a></li>
+<li><span class="fa-li"><i class="fa-solid fa-arrow-up-right-from-square"></i></span><a href="http://sharkpp.github.io/joya_no_kane/">GitHubページ</a></li>
+<li><span class="fa-li"><i class="fa-solid fa-arrow-up-right-from-square"></i></span><a href="http://hsproom.me/program/view/?p=146">HSP部屋(β)</a></li>
+<li><span class="fa-li"><i class="fa-solid fa-download"></i></span><a href="/files/bells100.zip">Windows版ダウンロード</a></li>
+<li><span class="fa-li"><i class="fa-solid fa-download"></i></span><a href="https://github.com/sharkpp/joya_no_kane/zipball/master">HTML/ブログパーツ版ダウンロード</a></li>
 </ul>
 
 ## 参考

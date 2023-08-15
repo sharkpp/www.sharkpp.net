@@ -415,20 +415,20 @@ products:
     <p style="padding-bottom: 5px; border-bottom: 1px dashed #999;">{{ product.description }}</p>
     <ul class="fa-ul" style="margin-left: 2em; margin-bottom: -5px;">
 {% if product.tags %}
-      <li class="fa-li"><i class="fa-solid fa-tag"></i>
+      <li><span class="fa-li"><i class="fa-solid fa-tag"></i></span>
 {% for tag in product.tags %}
         <a href="{{ site.url }}/blog/tags/{{ tag }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
 {% endfor %}
       </li>
 {% endif %}
 {% if product.source %}
-      <li class="fa-li"><i class="fa-brands fa-github"></i> <a href="{{ product.source }}">ソースコード</a></li>
+      <li><span class="fa-li"><i class="fa-brands fa-github"></i></span> <a href="{{ product.source }}">ソースコード</a></li>
 {%   endif %}
 {% if product.download %}
-      <li class="fa-li"><i class="fa-solid fa-file-arrow-down"></i> <a href="{{ product.download }}">ダウンロード</a></li>
+      <li><span class="fa-li"><i class="fa-solid fa-file-arrow-down"></i></span> <a href="{{ product.download }}">ダウンロード</a></li>
 {% endif %}
 {% if product.install %}
-      <li class="fa-li"><i class="fa-solid fa-bolt"></i> <a href="{{ product.install }}">インストール</a></li>
+      <li><span class="fa-li"><i class="fa-solid fa-bolt"></i></span> <a href="{{ product.install }}">インストール</a></li>
 {% endif %}
     </ul>
   </div>
