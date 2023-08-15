@@ -25,14 +25,12 @@ HSPDish.js そのままでブログパーツにしたので、この程度なら
 すぐに表示させる場合は、このような感じ。
 
 ```html
-<iframe src="https://cdn.rawgit.com/sharkpp/joya_no_kane/v1.0.1/widget.html"
+<iframe src="https://sharkpp.github.io/joya_no_kane/widget.html"
 　　　　　width="128" height="128" frameborder="0" scrolling="no"></iframe>
 ```
 
-<iframe src="https://cdn.rawgit.com/sharkpp/joya_no_kane/v1.0.1/widget.html"
+<iframe src="https://sharkpp.github.io/joya_no_kane/widget.html"
         width="128" height="128" frameborder="0" scrolling="no"></iframe>
-
-<i class="fa-solid fa-arrow-up-right-from-square"></i> [RawGit](https://rawgit.com/) を利用しています。
 
 <i class="fa-solid fa-triangle-exclamation"></i> ランタイムやリソースを含めたサイズの合計が 1MB 程度あるので注意が必要です。
 
