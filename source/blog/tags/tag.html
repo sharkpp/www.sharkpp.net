@@ -55,14 +55,14 @@ pagination:
     <nav class="article clearfix">
         <ul class="list-unstyled row">
             {% if page.pagination.previous_page %}
-                <li class="col-md-6 text-left"><a class="previous" href="{{ site.url }}{{ page.pagination.previous_page.url }}" title="前のページ"><span class="title"><i class="fa fa-chevron-left"></i> 前のページ</span></a></li>
+                <li class="col-md-6 text-left"><a class="previous" href="{{ site.url }}{{ page.pagination.previous_page.url }}" title="前のページ"><span class="title"><i class="fa-solid fa-chevron-left"></i> 前のページ</span></a></li>
             {% else %}
-                <li class="col-md-6 text-muted"> <i class="fa fa-chevron-left"></i> 前のページ</li>
+                <li class="col-md-6 text-muted"> <i class="fa-solid fa-chevron-left"></i> 前のページ</li>
             {% endif %}
             {% if page.pagination.next_page %}
-                <li class="col-md-6 text-right"><a class="next" href="{{ site.url }}{{ page.pagination.next_page.url }}" title="次のページ"><span class="title">次のページ</span> <i class="fa fa-chevron-right"></i></a></li>
+                <li class="col-md-6 text-right"><a class="next" href="{{ site.url }}{{ page.pagination.next_page.url }}" title="次のページ"><span class="title">次のページ</span> <i class="fa-solid fa-chevron-right"></i></a></li>
             {% else %}
-                <li class="col-md-6 text-muted"> <i class="fa fa-chevron-right"></i> 次のページ</li>
+                <li class="col-md-6 text-muted"> <i class="fa-solid fa-chevron-right"></i> 次のページ</li>
             {% endif %}
         </ul>
     </nav>

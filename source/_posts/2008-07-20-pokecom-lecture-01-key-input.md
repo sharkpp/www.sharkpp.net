@@ -183,7 +183,7 @@ H レジスタは、呼び出し時に 0 になっているので結果的に L 
 <tr><th>A</th><td><span>TAB</span></td><td><span>M+</span></td><td>*</td><td>:</td><td>J</td><td>Z</td><td>j</td><td>z</td><td></td></tr>
 <tr><th>B</th><td><span>CA</span></td><td><span>M-</span></td><td>+</td><td>;</td><td>K</td><td>[</td><td>k</td><td>{</td><td>”</td></tr>
 <tr><th>C</th><td><span>CLS</span></td><td>→</td><td>,</td><td><</td><td>L</td><td>\</td><td>l</td><td>|</td><td></td></tr>
-<tr><th>D</th><td><span class="fa fa-reply fa-flip-vertical" title="RETURN"></span></td><td>←</td><td>-</td><td>=</td><td>M</td><td>]</td><td>m</td><td>}</td><td></td></tr>
+<tr><th>D</th><td><i class="fa-solid fa-reply fa-flip-vertical" title="RETURN"></i></td><td>←</td><td>-</td><td>=</td><td>M</td><td>]</td><td>m</td><td>}</td><td></td></tr>
 <tr><th>E</th><td><span>DIGIT</span></td><td>↑</td><td>.</td><td>></td><td>N</td><td>^</td><td>n</td><td>~</td><td>他のキー</td></tr>
 <tr><th>F</th><td><span>F⇔E</span></td><td>↓</td><td>/</td><td>?</td><td>O</td><td>_</td><td>o</td><td></td><td>゜</td><td></td></tr>
 </table>

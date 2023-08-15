@@ -388,7 +388,7 @@ products:
 {% for product in page.products %}{% for v in product.tags %}{% set tags = tags | merge({(v):v}) %}{% endfor %}{% endfor %}
 
 <div>
-  <i style="line-height: 30px; height: 30px;" class="fa fa-tags fa-lg pull-left"></i>
+  <i style="line-height: 30px; height: 30px;" class="fa-solid fa-tags fa-lg pull-left"></i>
   <div id="tags" style="margin-left: 30px;">
 {% for tag in tags %}
     <button style="margin-bottom: 5px;" class="btn btn-default btn-sm" type="button" data-filter="{{ tag }}">{{ tag }}</button>&nbsp;
@@ -415,20 +415,20 @@ products:
     <p style="padding-bottom: 5px; border-bottom: 1px dashed #999;">{{ product.description }}</p>
     <ul class="fa-ul" style="margin-left: 2em; margin-bottom: -5px;">
 {% if product.tags %}
-      <li><i class="fa-li fa fa-tag"></i>
+      <li class="fa-li"><i class="fa-solid fa-tag"></i>
 {% for tag in product.tags %}
         <a href="{{ site.url }}/blog/tags/{{ tag }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
 {% endfor %}
       </li>
 {% endif %}
 {% if product.source %}
-      <li><i class="fa-li fa fa-github"></i> <a href="{{ product.source }}">ソースコード</a></li>
+      <li class="fa-li"><i class="fa-brands fa-github"></i> <a href="{{ product.source }}">ソースコード</a></li>
 {%   endif %}
 {% if product.download %}
-      <li><i class="fa-li fa fa-download"></i> <a href="{{ product.download }}">ダウンロード</a></li>
+      <li class="fa-li"><i class="fa-solid fa-file-arrow-down"></i> <a href="{{ product.download }}">ダウンロード</a></li>
 {% endif %}
 {% if product.install %}
-      <li><i class="fa-li fa fa-bolt"></i> <a href="{{ product.install }}">インストール</a></li>
+      <li class="fa-li"><i class="fa-solid fa-bolt"></i> <a href="{{ product.install }}">インストール</a></li>
 {% endif %}
     </ul>
   </div>

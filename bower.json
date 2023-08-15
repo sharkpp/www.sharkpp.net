@@ -8,12 +8,14 @@
     ],
     "private": true,
     "dependencies": {
-        "lightbox2": "2.7.*",
+    },
+    "dependencies_": {
+        "lightbox2": "https:\/\/github.com\/lokesh\/lightbox2.git#~2.11.4",
         "imagesloaded": "~3.1.8",
         "wookmark-jquery": "https:\/\/github.com\/germanysbestkeptsecret\/Wookmark-jQuery.git#~2.0.0",
-        "mermaid": "https:/\/github.com\/knsv\/mermaid\/archive\/7.0.0.tar.gz",
-        "jquery-smooth-scroll": "*",
-        "jquery-sheetrock": "*"
+        "mermaid": "https:\/\/github.com\/knsv\/mermaid.git#~7.0.0",
+        "jquery-smooth-scroll": "~1.5.5",
+        "jquery-sheetrock": "~1.0.0"
     },
     "resolutions": {
         "jquery": ">=1.8.0"

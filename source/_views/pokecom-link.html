@@ -99,10 +99,10 @@
         <meta itemscope="itemscope" itemprop="mainEntityOfPage"
               itemType="https://schema.org/WebPage" itemid="https://www.sharkpp.net{{ page.url }}"/>
         <header>
-            <h1>{% if page.draft %}<i class="fa fa-pencil-square-o"></i> {% endif %}<span itemprop="headline">{{ page.title }}</span></h1>
+            <h1>{% if page.draft %}<i class="fa-solid fa-pen-to-square"></i> {% endif %}<span itemprop="headline">{{ page.title }}</span></h1>
         </header>
 
-<div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div>
+<div id="go-top"><i class="fa-regular fa-circle-up fa-3x"></i></div>
 
         <div itemprop="articleBody">
 
@@ -119,18 +119,18 @@
 
     <td><ul class="fa-ul" style="margin: 0;">
 {% if link.url|preg_match('/archive\.org/') %}
-            <i class="fa fa-university" aria-hidden="true"></i>
+            <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
 {% else %}
-            <i class="fa fa-external-link" aria-hidden="true"></i>
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
 {% endif %}
             <a href="{{ link.url }}">{{ link.title|e }}</a>
 {% if link.sub_link %}
             <ul class="fa-ul">
 {% for sub in link.sub_link %}
 {% if sub.url|preg_match('/archive\.org/') %}
-                <li><i class="fa fa-university" aria-hidden="true"></i>
+                <li><i class="fa-solid fa-building-columns" aria-hidden="true"></i>
 {% else %}
-                <li><i class="fa fa-external-link" aria-hidden="true"></i>
+                <li><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
 {% endif %}
                 <a href="{{ sub.url }}">{{ sub.title|e }}</a></li>
 {% endfor %}
@@ -143,24 +143,24 @@
 {% if not link.sub_link %}
     <td>
 {% if link.url|preg_match('/archive\.org/') %}
-    <i class="fa fa-university" aria-hidden="true"></i> <a href="{{ link.url }}">{{ link.title|e }}</a>
+    <i class="fa-solid fa-building-columns" aria-hidden="true"></i> <a href="{{ link.url }}">{{ link.title|e }}</a>
 {% else %}
-    <i class="fa fa-external-link" aria-hidden="true"></i> <a href="{{ link.url }}">{{ link.title|e }}</a>
+    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> <a href="{{ link.url }}">{{ link.title|e }}</a>
 {% endif %}
     </td>
 {% else %}
     <td><ul class="list-unstyled" style="margin-bottom: 0;">
 {% if link.url|preg_match('/archive\.org/') %}
-            <li><i class="fa fa-university" aria-hidden="true"></i> <a href="{{ link.url }}">{{ link.title|e }}</a>
+            <li><i class="fa-solid fa-building-columns" aria-hidden="true"></i> <a href="{{ link.url }}">{{ link.title|e }}</a>
 {% else %}
-            <li><i class="fa fa-external-link" aria-hidden="true"></i> <a href="{{ link.url }}">{{ link.title|e }}</a>
+            <li><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> <a href="{{ link.url }}">{{ link.title|e }}</a>
 {% endif %}
                 <ul class="list-unstyled" style="padding-left: 1em;">
 {% for sub in link.sub_link %}
 {% if link.url|preg_match('/archive\.org/') %}
-                    <li><i class="fa fa-university" aria-hidden="true"></i> <a href="{{ sub.url }}">{{ sub.title|e }}</a></li>
+                    <li><i class="fa-solid fa-building-columns" aria-hidden="true"></i> <a href="{{ sub.url }}">{{ sub.title|e }}</a></li>
 {% else %}
-                    <li><i class="fa fa-external-link" aria-hidden="true"></i> <a href="{{ sub.url }}">{{ sub.title|e }}</a></li>
+                    <li><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> <a href="{{ sub.url }}">{{ sub.title|e }}</a></li>
 {% endif %}
 {% endfor %}
                 </ul>
@@ -199,14 +199,14 @@
             <nav class="article">
                 <ul class="list-unstyled row">
                     {% if page.next_post %}
-                        <li class="col-md-6 text-left"><a class="next" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}"><span class="title"><i class="fa fa-chevron-left"></i> {{ page.next_post.title }}</span></a></li>
+                        <li class="col-md-6 text-left"><a class="next" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}"><span class="title"><i class="fa-solid fa-chevron-left"></i> {{ page.next_post.title }}</span></a></li>
                     {% else %}
-                        <li class="col-md-6 text-muted"> <i class="fa fa-chevron-left"></i></li>
+                        <li class="col-md-6 text-muted"> <i class="fa-solid fa-chevron-left"></i></li>
                     {% endif %}
                     {% if page.previous_post %}
-                        <li class="col-md-6 text-right"><a class="previous" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">{{ page.previous_post.title }}</span> <i class="fa fa-chevron-right"></i></a></li>
+                        <li class="col-md-6 text-right"><a class="previous" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">{{ page.previous_post.title }}</span> <i class="fa-solid fa-chevron-right"></i></a></li>
                     {% else %}
-                        <li class="col-md-6 text-muted"> <i class="fa fa-chevron-right"></i></li>
+                        <li class="col-md-6 text-muted"> <i class="fa-solid fa-chevron-right"></i></li>
                     {% endif %}
                 </ul>
             </nav>

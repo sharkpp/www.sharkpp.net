@@ -20,7 +20,7 @@ permalink: sitemap.html
 <div>
 <ul class="fa-ul">
 {% for i,post in pages if not(post.url|preg_match('!blog/[0-9]+/[0-9]+/[0-9]+/.+!')) %}
-    <li><i class="fa-li fa fa-arrow-circle-right"></i><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
+    <li class="fa-li"><i class="fa-solid fa-circle-arrow-right"></i><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
 </div>

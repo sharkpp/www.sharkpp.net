@@ -103,7 +103,7 @@
         <meta itemscope="itemscope" itemprop="mainEntityOfPage"
               itemType="https://schema.org/WebPage" itemid="https://www.sharkpp.net{{ page.url }}"/>
         <header>
-            <h1>{% if page.draft %}<i class="fa fa-pencil-square-o"></i> {% endif %}<span itemprop="headline">{{ page.title }}</span> <small>post</small></h1>
+            <h1>{% if page.draft %}<i class="fa-solid fa-pen-to-square"></i> {% endif %}<span itemprop="headline">{{ page.title }}</span> <small>post</small></h1>
         </header>
 
 {% set toc_items = [ '<h1>' ~ page.title ~ '</h1>' ] %}
@@ -126,7 +126,7 @@
 {%   if not(loop.first) %}
 {%     if toc_level < toc_prev_level %}</li></ul></li>{% elseif toc_prev_level < toc_level %}<ul class="fa-ul">{% else %}</li>{% endif %}
 {%   endif %}
-            <li><i class="fa-li fa fa-paperclip"></i><a href="#{{ toc_title | striptags | replace({' ':'-','(':'',')':'','&amp;':'&'}) | lower | url_encode }}">{{ toc_title | striptags | replace({'&amp;':'&'}) }}</a>
+            <li class="fa-li"><i class="fa-solid fa-paperclip"></i><a href="#{{ toc_title | striptags | replace({' ':'-','(':'',')':'','&amp;':'&'}) | lower | url_encode }}">{{ toc_title | striptags | replace({'&amp;':'&'}) }}</a>
 {%   set toc_prev_level = toc_level %}
 {% endfor %}
 {% for toc_level in 2..9 %}
@@ -139,7 +139,7 @@
 </div>
 {% endif %}
 
-<div id="go-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></div>
+<div id="go-top"><i class="fa-regular fa-circle-up fa-3x"></i></div>
 
         <div itemprop="articleBody">
             {{ page.blocks.content|preg_replace('!<((h[0-9]).+?)>(.+?)</(.+?)>!', '<$1 itemprop="articleSection">$3</$4>')|raw }}
@@ -154,14 +154,14 @@
             <nav class="article">
                 <ul class="list-unstyled row">
                     {% if page.next_post %}
-                        <li class="col-md-6 text-left"><a class="next" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}"><span class="title"><i class="fa fa-chevron-left"></i> {{ page.next_post.title }}</span></a></li>
+                        <li class="col-md-6 text-left"><a class="next" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}"><span class="title"><i class="fa-solid fa-chevron-left"></i> {{ page.next_post.title }}</span></a></li>
                     {% else %}
-                        <li class="col-md-6 text-muted"> <i class="fa fa-chevron-left"></i></li>
+                        <li class="col-md-6 text-muted"> <i class="fa-solid fa-chevron-left"></i></li>
                     {% endif %}
                     {% if page.previous_post %}
-                        <li class="col-md-6 text-right"><a class="previous" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">{{ page.previous_post.title }}</span> <i class="fa fa-chevron-right"></i></a></li>
+                        <li class="col-md-6 text-right"><a class="previous" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">{{ page.previous_post.title }}</span> <i class="fa-solid fa-chevron-right"></i></a></li>
                     {% else %}
-                        <li class="col-md-6 text-muted"> <i class="fa fa-chevron-right"></i></li>
+                        <li class="col-md-6 text-muted"> <i class="fa-solid fa-chevron-right"></i></li>
                     {% endif %}
                 </ul>
             </nav>

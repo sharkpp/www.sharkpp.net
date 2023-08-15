@@ -1,7 +1,7 @@
         {% if page.categories or post.meta.categories %}
             {% set categories = page.categories ? page.categories : post.meta.categories %}
             <span class="categories">
-            <i class="fa fa-folder-open"></i>&nbsp;カテゴリ:
+            <i class="fa-solid fa-folder-open"></i>&nbsp;カテゴリ:
             {% for category in categories %}
             <a href="{{ site.url }}/blog/categories/{{ category|url_encode(true) }}">{{ category }}</a>{% if not loop.last %}, {% endif %}
             {% endfor %}

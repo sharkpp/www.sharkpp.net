@@ -18,7 +18,7 @@
         "beelab/bowerphp": "~0.5.3",
         "beryllium/icelus": "dev-impl_config_read",
         "components/bootstrap": "~3.3.4",
-        "components/font-awesome": "4.*",
+        "components/font-awesome": "6.*",
         "components/highlightjs": "~7.3.0",
         "components/jquery": "~1.9.1",
         "dflydev/embedded-composer": "@dev",

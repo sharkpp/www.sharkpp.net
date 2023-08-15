@@ -48,12 +48,12 @@
            ><a itemprop="item" href="{{ breadcrumb_url }}"
 {% endif %}
 {% set breadcrumb_icon = "" %}
-{% if site.url ~ "/"                == breadcrumb_url %}{% set breadcrumb_icon = "home" %}{% endif %}
-{% if site.url ~ "/blog"            == breadcrumb_url %}{% set breadcrumb_icon = "archive" %}{% endif %}
+{% if site.url ~ "/"                == breadcrumb_url %}{% set breadcrumb_icon = "house-chimney" %}{% endif %}
+{% if site.url ~ "/blog"            == breadcrumb_url %}{% set breadcrumb_icon = "box-archive" %}{% endif %}
 {% if site.url ~ "/blog/tags"       == breadcrumb_url %}{% set breadcrumb_icon = "tags" %}{% endif %}
 {% if site.url ~ "/blog/categories" == breadcrumb_url %}{% set breadcrumb_icon = "folder-open" %}{% endif %}
 {% if breadcrumb_icon %}
-           ><i class="fa fa-{{ breadcrumb_icon }} fa-lg"></i
+           ><i class="fa-solid fa-{{ breadcrumb_icon }} fa-lg"></i
      >&nbsp;<span itemprop="name">{{ breadcrumb.caption }}</span
 {% else %}
            ><span>{{ breadcrumb.caption }}</span

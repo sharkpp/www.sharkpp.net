@@ -3,12 +3,12 @@
 {% set categories = page.categories ? page.categories : post.meta.categories %}
 {% set tags = page.tags ? page.tags : post.meta.tags %}
 {% set post_ = post ? post : page %}
-        <i class="fa fa-calendar"></i>&nbsp;
+        <i class="fa-regular fa-calendar-days"></i>&nbsp;
         <span itemprop="datePublished" content="{{ post_.date | date("Y-m-d") }}">{{ post_.date | date("Y年m月d日") }}</span>
         &nbsp;/&nbsp;
-        <i class="fa fa-history"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/{{ post_.url | preg_replace('!^/.+?/(.+?)/(.+?)/(.+?)/(.+)\.html$!', '$1-$2-$3-$4.md') }}">変更履歴</a>
+        <i class="fa-solid fa-clock-rotate-left"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/{{ post_.url | preg_replace('!^/.+?/(.+?)/(.+?)/(.+?)/(.+)\.html$!', '$1-$2-$3-$4.md') }}">変更履歴</a>
         &nbsp;/&nbsp;
-        <i class="fa fa-thumb-tack"></i>&nbsp;<a href="{{ site.url }}{{ post_.url }}">Permalink</a>
+        <i class="fa-solid fa-thumbtack"></i>&nbsp;<a href="{{ site.url }}{{ post_.url }}">Permalink</a>
 {% if not(share_button) %}
 {%   if categories or tags %}
         &nbsp;/&nbsp;

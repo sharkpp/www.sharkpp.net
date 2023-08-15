@@ -41,7 +41,7 @@ END：    ゲーム終了
 	  
 ６キーで落下
 	  
-<span class="fa fa-reply fa-flip-vertical" title="RETURN"></span>キーで決定
+<i class="fa-solid fa-reply fa-flip-vertical" title="RETURN"></i>キーで決定
   
 
 

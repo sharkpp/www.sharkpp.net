@@ -207,7 +207,7 @@ graffities:
 {% else %}
                     title="{{ graffiti.caption }}"
 {% endif %}
-                    ><i class="fa fa-search-plus fa-2x"></i
+                    ><i class="fa-solid fa-magnifying-glass-plus fa-2x"></i
 {% else %}
                 <a href="" style="display: none"
 {% endif %}
@@ -217,7 +217,7 @@ graffities:
                     class="btn btn-sm btn-default"
                     title="{{ graffiti.download[0] | preg_get('!([^/]+)$!') }} をダウンロード"
                     download="{{ graffiti.download[0] | preg_get('!([^/]+)$!') }}"
-                    ><i class="fa fa-save fa-2x"></i
+                    ><i class="fa-regular fa-floppy-disk fa-2x"></i
 {% endif %}
 {% if graffiti.link %}
 {% for link in graffiti.link %}
@@ -226,10 +226,10 @@ graffities:
                     class="btn btn-sm btn-default"
 {%   if link | preg_match('!^/!') %}
                     title="もっと詳しく"
-                    ><i class="fa fa-plus-circle fa-2x"></i
+                    ><i class="fa-solid fa-circle-plus fa-2x"></i
 {%   else %}
                     title="{{ link | preg_replace('!^http://(.+?)/.*$!sm', '$1') }} へ移動"
-                    ><i class="fa fa-external-link fa-2x"></i
+                    ><i class="fa-solid fa-arrow-up-right-from-square fa-lx"></i
 {%   endif %}
 {% endfor %}
 {% endif %}

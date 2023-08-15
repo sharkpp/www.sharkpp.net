@@ -11,15 +11,15 @@ use:
 <div class="row">
     <div class="jump-button col-md-4 col-sm-4 col-xs-4">
         <a type="button" class="btn btn-default btn-lg btn-block"
-           href="{{ site.url }}/blog/"><i class="fa fa-archive fa-4x"></i><br />アーカイブ</a>
+           href="{{ site.url }}/blog/"><i class="fa-solid fa-box-archive fa-4x"></i><br />アーカイブ</a>
     </div>
     <div class="jump-button col-md-4 col-sm-4 col-xs-4">
         <a type="button" class="btn btn-default btn-lg btn-block"
-           href="{{ site.url }}/product/"><i class="fa fa-download fa-4x"></i><br />作ったもの</a>
+           href="{{ site.url }}/product/"><i class="fa-solid fa-download fa-4x"></i><br />作ったもの</a>
     </div>
     <div class="jump-button col-md-4 col-sm-4 col-xs-4">
         <a type="button" class="btn btn-default btn-lg btn-block"
-           href="{{ site.url }}/graffiti/"><i class="fa fa-paint-brush fa-4x"></i><br />落書き</a>
+           href="{{ site.url }}/graffiti/"><i class="fa-solid fa-paintbrush fa-4x"></i><br />落書き</a>
     </div>
 </div>
 
@@ -28,7 +28,7 @@ use:
 {% for post in page.pagination.items %}
     <article class="full-contents">
         <header>
-            <h1><a href="{{ site.url }}{{ post.url }}">{% if post.draft %}<i class="fa fa-pencil-square-o"></i> {% endif %}{{ post.title }}</a></h1>
+            <h1><a href="{{ site.url }}{{ post.url }}">{% if post.draft %}<i class="fa-solid fa-pen-to-square"></i> {% endif %}{{ post.title }}</a></h1>
         </header>
         <div>
             {{ post.blocks.content | preg_replace('!^(.+?)(<h.*)?$!sm', '$1') | raw }}
@@ -47,14 +47,14 @@ use:
     <nav>
         <ul class="list-unstyled row">
             {% if page.pagination.previous_page %}
-                <li class="col-md-6 text-left"><a class="next" href="{{ site.url }}{{ page.pagination.previous_page.url }}" title="{{ page.next_post.title }}"><span class="title"><i class="fa fa-chevron-left"></i> 新しい投稿</span></a></li>
+                <li class="col-md-6 text-left"><a class="next" href="{{ site.url }}{{ page.pagination.previous_page.url }}" title="{{ page.next_post.title }}"><span class="title"><i class="fa-solid fa-chevron-left"></i> 新しい投稿</span></a></li>
             {% else %}
-                <li class="col-md-6 text-muted"> <i class="fa fa-chevron-left"></i> 新しい投稿</li>
+                <li class="col-md-6 text-muted"> <i class="fa-solid fa-chevron-left"></i> 新しい投稿</li>
             {% endif %}
             {% if page.pagination.next_page %}
-                <li class="col-md-6 text-right"><a class="previous" href="{{ site.url }}{{ page.pagination.next_page.url }}" title="{{ page.previous_post.title }}"><span class="title">古い投稿</span> <i class="fa fa-chevron-right"></i></a></li>
+                <li class="col-md-6 text-right"><a class="previous" href="{{ site.url }}{{ page.pagination.next_page.url }}" title="{{ page.previous_post.title }}"><span class="title">古い投稿</span> <i class="fa-solid fa-chevron-right"></i></a></li>
             {% else %}
-                <li class="col-md-6 text-muted"> <i class="fa fa-chevron-right"></i> 古い投稿</li>
+                <li class="col-md-6 text-muted"> <i class="fa-solid fa-chevron-right"></i> 古い投稿</li>
             {% endif %}
         </ul>
     </nav>

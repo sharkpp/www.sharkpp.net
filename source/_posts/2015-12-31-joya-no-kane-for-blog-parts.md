@@ -32,18 +32,18 @@ HSPDish.js そのままでブログパーツにしたので、この程度なら
 <iframe src="https://cdn.rawgit.com/sharkpp/joya_no_kane/v1.0.1/widget.html"
         width="128" height="128" frameborder="0" scrolling="no"></iframe>
 
-<i class="fa fa-external-link-square"></i> [RawGit](https://rawgit.com/) を利用しています。
+<i class="fa-solid fa-arrow-up-right-from-square"></i> [RawGit](https://rawgit.com/) を利用しています。
 
-<i class="fa fa-exclamation-triangle"></i> ランタイムやリソースを含めたサイズの合計が 1MB 程度あるので注意が必要です。
+<i class="fa-solid fa-triangle-exclamation"></i> ランタイムやリソースを含めたサイズの合計が 1MB 程度あるので注意が必要です。
 
 ## その他リンク
 
 <ul class="fa-ul">
-<li><i class="fa-li fa fa-external-link-square"></i><a href="https://github.com/sharkpp/joya_no_kane">ソースコード</a></li>
-<li><i class="fa-li fa fa-external-link-square"></i><a href="http://sharkpp.github.io/joya_no_kane/">GitHubページ</a></li>
-<li><i class="fa-li fa fa-external-link-square"></i><a href="http://hsproom.me/program/view/?p=146">HSP部屋(β)</a></li>
-<li><i class="fa-li fa fa-download"></i><a href="/files/bells100.zip">Windows版ダウンロード</a></li>
-<li><i class="fa-li fa fa-download"></i><a href="https://github.com/sharkpp/joya_no_kane/zipball/master">HTML/ブログパーツ版ダウンロード</a></li>
+<li><span class="fa-li"><i class="fa-solid fa-arrow-up-right-from-square"></i><a href="https://github.com/sharkpp/joya_no_kane">ソースコード</a></span></li>
+<li><span class="fa-li"><i class="fa-solid fa-arrow-up-right-from-square"></i><a href="http://sharkpp.github.io/joya_no_kane/">GitHubページ</a></span></li>
+<li><span class="fa-li"><i class="fa-solid fa-arrow-up-right-from-square"></i><a href="http://hsproom.me/program/view/?p=146">HSP部屋(β)</a></span></li>
+<li><span class="fa-li"><i class="fa-solid fa-download"></i><a href="/files/bells100.zip">Windows版ダウンロード</a></span></li>
+<li><span class="fa-li"><i class="fa-solid fa-download"></i><a href="https://github.com/sharkpp/joya_no_kane/zipball/master">HTML/ブログパーツ版ダウンロード</a></span></li>
 </ul>
 
 ## 参考

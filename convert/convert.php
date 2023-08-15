@@ -352,7 +352,7 @@ foreach ($files as $path) {
 		}, $markdown);
 
 	$markdown = str_replace('xxxx-fa-reply-fa-flip-vertical-xxxx',
-	                        '<span class="fa fa-reply fa-flip-vertical" title="RETURN"></span>', $markdown);
+	                        '<i class="fa-solid fa-reply fa-flip-vertical" title="RETURN"></i>', $markdown);
 
 	// 定義済みリストをMarkdownに変換
 	$markdown = preg_replace_callback('!<dl.*?>(.+?)</dl>!ms', function($m) {
