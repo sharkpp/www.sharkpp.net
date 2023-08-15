@@ -21,7 +21,7 @@ accounts:
     url: https://packagist.org/users/sharkpp/
     icon: fa-solid fa-box-open
   -
-    caption: "Chef Supermarket"
+    caption: "Chef/Supermarket"
     url: https://supermarket.chef.io/users/sharkpp
     icon: icon-chef
   -
@@ -125,17 +125,21 @@ accounts:
     url: https://ifttt.com/p/sharkpp/shared
     icon: icon-ifttt
   -
-    caption: "Mastodon@mstdn.jp"
+    caption: "Mastodon/@mstdn.jp"
     url: https://mstdn.jp/@sharkpp
     icon: fa-brands fa-mastodon
   -
-    caption: "Mastodon@mastodon.juggler.jp"
+    caption: "Mastodon/@juggler.jp"
     url: https://mastodon.juggler.jp/@sharkpp
     icon: fa-brands fa-mastodon
   -
-    caption: "Mastodon@pawoo.net"
+    caption: "Mastodon/@pawoo.net"
     url: https://pawoo.net/@sharkpp
     icon: fa-brands fa-mastodon
+  -
+    caption: "Misskey"
+    url: https://misskey.io/@sharkpp
+    icon: fa-solid fa-square
 
 ---
 
@@ -147,8 +151,15 @@ accounts:
 {% block content_wrapper %}
 {{ parent() }}
 {% for account in page.accounts %}
-<a href="{{ account.url }}" class="btn btn-default btn-lg" role="button" style="margin-bottom: 5px">
-    <span class="{{ account.icon }} fa-lg"></span> {{ account.caption }}
+<a href="{{ account.url }}" class="btn btn-default btn-lg" role="button" style="margin-bottom: 5px; margin-right: 5px; padding: 6px 8px; width: 6em;">
+    <i class="{{ account.icon }} fa-3x" style="display: block"></i>
+    <hr style="border-color: #ccc; margin: 8px -8px 4px -8px;" />
+{% if 1 < account.caption | split('/') | length %}
+  <div style="font-size: 14px; line-height: 13px;height: 14px;">{{ account.caption | split('/') | slice(0, 1) | join('') }}</div>
+  <div style="font-size: 14px; line-height: 13px;height: 14px;">{{ account.caption | split('/') | slice(1, 1) | join('') }}</div>
+{% else %}
+  <div style="font-size: 14px; line-height: 28px;height: 28px;">{{ account.caption }}</div>
+{% endif %}
 </a>
 {% endfor %}
 {% endblock %}
