@@ -41,7 +41,7 @@ HSPDish.js そのままでブログパーツにしたので、この程度なら
 <ul class="fa-ul">
 <li><span class="fa-li"><i class="fa-solid fa-arrow-up-right-from-square"></i></span><a href="https://github.com/sharkpp/joya_no_kane">ソースコード</a></li>
 <li><span class="fa-li"><i class="fa-solid fa-arrow-up-right-from-square"></i></span><a href="http://sharkpp.github.io/joya_no_kane/">GitHubページ</a></li>
-<li><span class="fa-li"><i class="fa-solid fa-arrow-up-right-from-square"></i></span><a href="http://hsproom.me/program/view/?p=146">HSP部屋(β)</a></li>
+<li><span class="fa-li"><i class="fa-solid fa-arrow-up-right-from-square"></i></span><span href="http://hsproom.me/program/view/?p=146" style="    text-decoration: line-through; color: gray;">HSP部屋(β)</span></li>
 <li><span class="fa-li"><i class="fa-solid fa-download"></i></span><a href="/files/bells100.zip">Windows版ダウンロード</a></li>
 <li><span class="fa-li"><i class="fa-solid fa-download"></i></span><a href="https://github.com/sharkpp/joya_no_kane/zipball/master">HTML/ブログパーツ版ダウンロード</a></li>
 </ul>
@@ -49,7 +49,7 @@ HSPDish.js そのままでブログパーツにしたので、この程度なら
 ## 参考
 
 * [TEST CORDING » GithubからJavaScriptを読み込み時は専用のドメインから！](http://testcording.com/?p=1259)
-* [ヘルプ - HSP部屋(β)](http://hsproom.me/help/#ブログパーツ)
+* <del>[ヘルプ - HSP部屋(β)](https://web.archive.org/web/20201101170951/http://hsproom.me/help/#ブログパーツ)</del>
 * [HSP3Dish WebGL/JavaScript版(hsp3dish.js)プログラミングガイド](http://www.onionsoft.net/hsp/v34/doclib/hsp3dish_js.htm)
 
 

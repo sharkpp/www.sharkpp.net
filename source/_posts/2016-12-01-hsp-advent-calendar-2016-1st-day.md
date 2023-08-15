@@ -265,7 +265,7 @@ hgimg4 を利用する場合は、もう少し手間がかかります。
   * これは、Wine側の問題ではないかと思うので、少し調べてみたいと思います。
 * HSP Help Library が動作しない
   * Wine に IE をインストールするのは難しいようなので諦めたほうがいいかも。
-  * 公式で動作していたものはいつの間にかサーバーエラーとなるようなので [@mjhd_devlion](https://twitter.com/mjhd_devlion) さんの [ohdl.hsproom.me](http://ohdl.hsproom.me/) で確認するのがいいと思います。
+  * 公式で動作していたものはいつの間にかサーバーエラーとなるようなので <del>@mjhd_devlion</del> さんの <del>[ohdl.hsproom.me](http://web.archive.org/web/20210116160808/http://ohdl.hsproom.me/)</del> で確認するのがいいと思います。
   * Wine-Gecko なる IE 互換のアプリがあるようなのですが、はたして。
 * hgimg4 が動作しない。
   * [Wine を使って Mac OS X で HSP と hgimg4 を動かしてみた](/blog/2016/03/26/running-hsp-and-hgimg4-on-mac-osx-using-wine.html) を見ながら頑張りましょう。
