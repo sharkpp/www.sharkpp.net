@@ -11,11 +11,12 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
 
-    - name: ls php
-      run: sudo ls -l /usr/bin/php*
-
-    - name: Setup PHP 8.1
-      run: sudo update-alternatives --set php /usr/bin/php8.1
+    - name: Setup PHP 7.4
+      run:
+        sudo env LC_ALL=C.UTF-8 add-apt-repository --yes ppa:ondrej/php &&
+        sudo apt-get install php7.4-fpm php7.4-common php7.4-dev php7.4-curl php7.4-gd php7.4-json php7.4-mysql php7.4-odbc php7.4-pgsql php7.4-pspell php7.4-readline php7.4-sqlite3 php7.4-tidy php7.4-xml php7.4-xmlrpc php7.4-bcmath php7.4-bz2 php7.4-intl php7.4-mbstring php7.4-phpdbg php7.4-soap php7.4-zip php-imagick php-redis php-memcached &&
+        sudo ls -l /usr/bin/php* &&
+        sudo update-alternatives --set php /usr/bin/php7.4
 
     - name: setup node
       uses: actions/setup-node@v1
