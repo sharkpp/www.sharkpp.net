@@ -60,11 +60,11 @@ accounts:
     caption: "twilog"
     url: http://twilog.org/sharkpp
     icon: fa-brands fa-square-x-twitter
-  -
-    caption: "Bitly."
-    url: https://bitly.com/u/sharkpp
-    icon: icon-bitly
-  -
+#  -
+#    caption: "Bitly."
+#    url: https://bitly.com/u/sharkpp
+#    icon: icon-bitly
+#  -
     caption: "youtube"
     url: http://www.youtube.com/user/sharkpp1
     icon: fa-brands fa-youtube
@@ -140,6 +140,10 @@ accounts:
     caption: "Misskey"
     url: https://misskey.io/@sharkpp
     icon: fa-solid fa-square
+  -
+    caption: "Threads"
+    url: https://www.threads.net/@sharkpp
+    icon: fa-solid fa-threads
 
 ---
 
@@ -151,7 +155,7 @@ accounts:
 {% block content_wrapper %}
 {{ parent() }}
 {% for account in page.accounts %}
-<a href="{{ account.url }}" class="btn btn-default btn-lg" role="button" style="margin-bottom: 5px; margin-right: 5px; padding: 6px 8px; width: 6em;">
+<a href="{{ account.url }}" class="btn btn-default btn-lg" role="button" style="margin-bottom: 5px; margin-right: 5px; padding: 6px 8px; width: 5.7em;">
     <i class="{{ account.icon }} fa-3x" style="display: block"></i>
     <hr style="border-color: #ccc; margin: 8px -8px 4px -8px;" />
 {% if 1 < account.caption | split('/') | length %}
