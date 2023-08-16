@@ -12,6 +12,7 @@ h4 small
 html {
     position: relative;
     min-height: 100%;
+    background-color: rgb(34, 34, 34);
 }
 
 body {
