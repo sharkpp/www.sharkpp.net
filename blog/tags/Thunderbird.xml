@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="https://www.sharkpp.net/blog/tags/Thunderbird.xml" rel="self"/>
     <link href="https://www.sharkpp.net/"/>
-    <updated>2022-12-31T23:15:27+00:00</updated>
+    <updated>2023-08-16T13:18:13+00:00</updated>
     <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -15,7 +15,7 @@
             <id>https://www.sharkpp.net/blog/2010/12/12/secure-email-settings.html</id>
             <content type="html"><![CDATA[<p></p>
 <div class="alert alert-danger alert-dismissible" role="alert">
-  <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
+  <div class="pull-left"><i class="fa-solid fa-triangle-exclamation fa-2x"></i></div>
   <dl style="margin-bottom: 0; margin-left: 35px;">
     <dt>2015-11-07 追記</dt>
     <dd>inter7.jp は 2014年12月20日 12時00分 にサービスの提供を終了しました。そのため下記の該当内容は過去の参考としてのみ残してあります。</dd>

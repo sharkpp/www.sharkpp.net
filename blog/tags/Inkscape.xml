@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="https://www.sharkpp.net/blog/tags/Inkscape.xml" rel="self"/>
     <link href="https://www.sharkpp.net/"/>
-    <updated>2022-12-31T23:15:26+00:00</updated>
+    <updated>2023-08-16T13:18:12+00:00</updated>
     <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -104,7 +104,7 @@ Error: Cannot tap caskformula/caskformula: invalid syntax in tap!
             <id>https://www.sharkpp.net/blog/2017/04/30/Install-inkscape-using-homebrew-on-macos.html</id>
             <content type="html"><![CDATA[<p></p>
 <div class="alert alert-danger alert-dismissible" role="alert">
-  <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
+  <div class="pull-left"><i class="fa-solid fa-triangle-exclamation fa-2x"></i></div>
   <dl style="margin-bottom: 0; margin-left: 35px;">
     <dt>2020-01-02 追記</dt>
     <dd>Homebrew 経由でのインストールはできなくなっているようです。公式から動作可能なパッケージをインストールできます。詳しくは<a href="/blog/2020/01/02/install-inkscape-for-macos-mojave-or-later.html">macOS 上に Inkscape をインストールする</a>をご覧ください。</dd>

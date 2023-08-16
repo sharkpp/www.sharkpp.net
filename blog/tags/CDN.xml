@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="https://www.sharkpp.net/blog/tags/CDN.xml" rel="self"/>
     <link href="https://www.sharkpp.net/"/>
-    <updated>2022-12-31T23:15:27+00:00</updated>
+    <updated>2023-08-16T13:18:13+00:00</updated>
     <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -13,7 +13,9 @@
             <link href="https://www.sharkpp.net/blog/2016/03/06/research-of-javascript-and-css-cdn.html"/>
             <updated>2016-03-06T21:30:00+00:00</updated>
             <id>https://www.sharkpp.net/blog/2016/03/06/research-of-javascript-and-css-cdn.html</id>
-            <content type="html"><![CDATA[<p>jQuery や Bootstrap などの一般的なライブラリを使うときは自分のサイトに設置する以外に、 Content Delivery Network 略して CDN サービスで配信されているものを利用することもあります、というかこのページでも使っています。</p>
+            <content type="html"><![CDATA[<p></p>
+
+<p>jQuery や Bootstrap などの一般的なライブラリを使うときは自分のサイトに設置する以外に、 Content Delivery Network 略して CDN サービスで配信されているものを利用することもあります、というかこのページでも使っています。</p>
 
 <p>ということで、 CDN サービスを調べてみました。</p>
 
@@ -761,8 +763,15 @@ Google Hosted Libraries の場合は、最新バージョンのライブラリ�
 <h2 id="%E3%81%8A%E3%81%BE%E3%81%91">おまけ</h2>
 
 <h3 id="%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%84%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%81%8C%E9%85%8D%E4%BF%A1%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%EF%BC%81">使いたいライブラリが配信されていない！</h3>
+<div class="alert alert-danger alert-dismissible" role="alert">
+  <div class="pull-left"><i class="fa-solid fa-triangle-exclamation fa-2x"></i></div>
+  <dl style="margin-bottom: 0; margin-left: 35px;">
+    <dt>2023-08-15 追記</dt>
+    <dd><a src="https://rawgit.com/">RawGit</a> は 2018年10月8日をもってサービスを終了されています。<br/>代替案として<ul></li><li>jsDelivr</li><li><a src="https://pages.github.com/">GitHub Pages</a></li><li><a src="https://codesandbox.io/">CodeSandbox</a></li><li><a src="https://unpkg.com/">unpkg</a></li></ul>が提案されています。</dd>
+  </dl>
+</div>
 
-<p>また、どうしても CDN を利用したい、でもライブラリがマイナーすぎて CDN で配信されていない、という場合は GitHub でライブラリが公開されている場合に限り  <a href="http://rawgit.com/">RawGit</a> を利用することもできます。</p>
+<p><del>また、どうしても CDN を利用したい、でもライブラリがマイナーすぎて CDN で配信されていない、という場合は GitHub でライブラリが公開されている場合に限り  <!--[RawGit](http://rawgit.com/)-->RawGit を利用することもできます。</del></p>
 
 <p>まあ、その他の場合は諦めて素直に自分のサーバーのファイルを参照しましょう。</p>
 

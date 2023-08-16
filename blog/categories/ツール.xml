@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="https://www.sharkpp.net/blog/categories/%E3%83%84%E3%83%BC%E3%83%AB.xml" rel="self"/>
     <link href="https://www.sharkpp.net/"/>
-    <updated>2022-12-31T23:15:26+00:00</updated>
+    <updated>2023-08-16T13:18:12+00:00</updated>
     <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -57,7 +57,7 @@
             <updated>2009-08-23T16:31:00+00:00</updated>
             <id>https://www.sharkpp.net/blog/2009/08/23/lhaplus-x64-shell-extension.html</id>
             <content type="html"><![CDATA[<p><div class="alert alert-danger alert-dismissible" role="alert">
-  <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
+  <div class="pull-left"><i class="fa-solid fa-triangle-exclamation fa-2x"></i></div>
   <dl style="margin-bottom: 0; margin-left: 35px;">
     <dt>2015-06-02 追記</dt>
     <dd>Lhaplus Version 1.70 以降のバージョンで公式に 64bit な Windows でのコンテキストメニュー表示がサポートされました。

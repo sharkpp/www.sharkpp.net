@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="https://www.sharkpp.net/blog/tags/GitHub.xml" rel="self"/>
     <link href="https://www.sharkpp.net/"/>
-    <updated>2022-12-31T23:15:27+00:00</updated>
+    <updated>2023-08-16T13:18:13+00:00</updated>
     <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -416,7 +416,7 @@ $ rm -rf tmp
             <updated>2013-06-01T00:24:00+00:00</updated>
             <id>https://www.sharkpp.net/blog/2013/06/01/first-github-fork-and-fuelphp-docs-jp.html</id>
             <content type="html"><![CDATA[<p><div class="alert alert-danger alert-dismissible" role="alert">
-  <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
+  <div class="pull-left"><i class="fa-solid fa-triangle-exclamation fa-2x"></i></div>
   <dl style="margin-bottom: 0; margin-left: 35px;">
     <dt>2015-11-03 追記</dt>
     <dd>不適切な内容が書かれているため参考程度に止めてください。

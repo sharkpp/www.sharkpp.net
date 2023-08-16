@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="https://www.sharkpp.net/blog/tags/Blender.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2023-08-16T13:18:12+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Blender の User Translate を MacOS で使ってみた]]></title>
+            <link href="https://www.sharkpp.net/blog/2022/05/01/how-to-use-blender-user-translation.html"/>
+            <updated>2022-05-01T11:00:00+00:00</updated>
+            <id>https://www.sharkpp.net/blog/2022/05/01/how-to-use-blender-user-translation.html</id>
+            <content type="html"><![CDATA[<p>新しい Mac book Air を手に入れたので、以前のだとスペック不足で使いずらかった <a href="https://www.blender.org/">Blender</a> を入れて、環境を整えてみた。</p>
+
+<p>とりあえず Blender 自体、日本語の表示に対応しているみたいだけど、アドオンを日本語にできる <a href="https://blendermarket.com/products/user-translate">User Translate</a> アドオンを Mac OS で使ってみました。</p>
+
+<ol>
+<li>Blender のインストールと日本語表示の設定を行う</li>
+<li>CAD Sketcher のインストールと、非公式アドオンのインストールの仕方の説明</li>
+<li>User Translate のインストールと CAD Sketcher の日本語表示の仕方の説明</li>
+</ol>
+
+<p>をこの記事では扱っています。</p>
+
+<h2 id="blender-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8ui%E3%82%92%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%8C%96">Blender のインストールとUIを日本語化</h2>
+
+<p>インストールは<a href="https://www.blender.org/">公式ページ</a>からダウンロード。
+最近、メジャーなソフトだとUAとかみて自動で最適なインストーラやパッケージを選んでくれるサイトが多い印象。</p>
+
+<p><img src="/images/202205xx_blender_site.png" alt="Blender公式サイト" /></p>
+
+<p>そしてインストールするだけ。簡単。</p>
+
+<p><img src="/images/202205xx_blender_install.png" alt="Blenderインストール" /></p>
+
+<p>日本語のメニューにするには...</p>
+
+<p>「Edit」→「Preferences」をメニューから選んで...</p>
+
+<p><img src="/images/202205xx_blender_preference.png" alt="Blenderの設定" /></p>
+
+<p>「Intaface」→「Translation」から「日本語(Japanese)」を選ぶだけ</p>
+
+<p><img src="/images/202205xx_blender_translation.png" alt="Blenderの翻訳設定" /></p>
+
+<h2 id="cad-sketcher-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">CAD Sketcher をインストール</h2>
+
+<p><a href="https://makertales.gumroad.com/l/CADsketcher">CAD Sketcher</a> から指示に従ってインストールします。</p>
+
+<p>ZIPアーカイブをダウンロードします（ダウンロード後に解凍しないでください）</p>
+
+<p>Blenderを開き、「編集」→「設定」→「アドオン」→「インストール...」ボタンを押します。</p>
+
+<p><img src="/images/202205xx_blender_addon_install.png" alt="Blenderのアドオンのインストール" /></p>
+
+<p>ダウンロードした <code>main.zip</code> を参照して選択し、[アドオンのインストール]を押します。</p>
+
+<p><img src="/images/202205xx_blender_addon_select.png" alt="Blenderのアドオンの選択" /></p>
+
+<p>チェックボックスを押してアドオンを有効にします。</p>
+
+<p><img src="/images/202205xx_blender_addon_enable.png" alt="Blenderのアドオンの有効化" /></p>
+
+<p>CAD Sketcher は <a href="https://pypi.org/project/py-slvs/">solvespace python module</a> が必要となるため、アドオンの設定内で、"Solver Module" タブをチェックして、モジュールがすでに使用可能かどうかを確認します。</p>
+
+<p><code>Module isn't Registered</code> と表示が出ている場合は "Install from PIP" ボタンを押してインストールします。</p>
+
+<p><img src="/images/202205xx_cad_sketcher_ui.png" alt="CAD Sketcherの画面" /></p>
+
+<h2 id="user-translation-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">User Translation をインストール</h2>
+
+<p><a href="https://bookyakuno.gumroad.com/l/user-translate">User Translate</a> からアドオンのZIPファイルをダウンロードしてインストール。</p>
+
+<p>手順は先ほどと同じ。</p>
+
+<p>翻訳するためのテーブルは <code>/Users/{ユーザー名}/Library/Application Support/Blender/{Blenderバージョン}/scripts/addons/user_translate/user_files</code> (以下 <code>user_files</code>) に存在します。現状、「フォルダーを開く」が効かなかった...</p>
+
+<p>パスの一部は環境によって違うので</p>
+
+<table>
+<thead>
+<tr>
+  <th>変数</th>
+  <th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>{ユーザー名}</code></td>
+  <td>コンピュータを使用中のユーザー名</td>
+</tr>
+<tr>
+  <td><code>{Blenderバージョン}</code></td>
+  <td>インストールした Blender のバージョン。 <code>3.1</code> など</td>
+</tr>
+</tbody>
+</table>
+
+<p>それぞれ自分の環境に置き換えてください。</p>
+
+<p><code>user_files</code> フォルダへのアクセスは、Finder で <code>Command</code> + <code>Shift</code> + <code>G</code> を入力し「フォルダへ移動」を表示し上記のパスを入力します。</p>
+
+<p><img src="/images/202205xx_move_to_user_translate_addon_folder.png" alt="フォルダへ移動" /></p>
+
+<p>デフォルトでは <code>sample.csv</code> のみ存在します。</p>
+
+<p><img src="/images/202205xx_default_user_translate_addon_folder.png" alt="デフォルトの中身" /></p>
+
+<h2 id="cad-sketcher-%E3%82%92%E7%BF%BB%E8%A8%B3%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B">CAD Sketcher を翻訳してみる</h2>
+
+<p><a href="https://studiogamma.booth.pm/items/2966402">日本語化【CAD_Sketcher】翻訳ファイル - Studio GAMMA - BOOTH</a> から <code>CAD_Sketcher_v0.20.0用_v1.01.zip</code> をダウンロードします。</p>
+
+<p>ZIPファイルを展開し、<code>CAD_Sketcher_v0.20.0.csv</code> を取り出し、<code>user_files</code> に設置します。</p>
+
+<p>設置すると自動的に翻訳が適用されます。</p>
+
+<p><img src="/images/202205xx_cad_sketcher_ui_ja.png" alt="CAD Sketcherの画面(日本語)" /></p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://bookyakuno.com/user-translate/">【User Translate / 英語のアドオンを日本語化】半自動・手動でユーザー翻訳辞書が作れるアドオン【Blenderアドオン】 – 忘却まとめ</a></li>
+<li><a href="https://makertales.gumroad.com/l/CADsketcher">CAD Sketcher [ Blender Addon ]</a></li>
+<li><a href="https://modelinghappy.com/archives/43418">CAD SketcherブレンダーでCADと似たように数値入力してモデリング出来る無料アドオン - 3DCG最新情報サイト MODELING HAPPY</a></li>
+</ul>
+]]></content>
+        </entry>
+    </feed>

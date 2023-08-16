@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="https://www.sharkpp.net/blog/tags/OS%20X.xml" rel="self"/>
     <link href="https://www.sharkpp.net/"/>
-    <updated>2022-12-31T23:15:26+00:00</updated>
+    <updated>2023-08-16T13:18:13+00:00</updated>
     <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -1109,7 +1109,7 @@ $ rm -f NotoSansCJKjp-hinted.zip LICENSE_OFL.txt
 
 <ul>
 <li>Wine に IE をインストールするのは難しいようなので諦めたほうがいいかも。</li>
-<li>公式で動作していたものはいつの間にかサーバーエラーとなるようなので <a href="https://twitter.com/mjhd_devlion">@mjhd_devlion</a> さんの <a href="http://ohdl.hsproom.me/">ohdl.hsproom.me</a> で確認するのがいいと思います。</li>
+<li>公式で動作していたものはいつの間にかサーバーエラーとなるようなので <del>@mjhd_devlion</del> さんの <del><a href="http://web.archive.org/web/20210116160808/http://ohdl.hsproom.me/">ohdl.hsproom.me</a></del> で確認するのがいいと思います。</li>
 <li>Wine-Gecko なる IE 互換のアプリがあるようなのですが、はたして。</li>
 </ul></li>
 <li>hgimg4 が動作しない。

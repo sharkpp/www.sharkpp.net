@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="https://www.sharkpp.net/blog/tags/%E5%AD%A3%E7%AF%80%E7%89%A9.xml" rel="self"/>
     <link href="https://www.sharkpp.net/"/>
-    <updated>2022-12-31T23:15:27+00:00</updated>
+    <updated>2023-08-16T13:18:13+00:00</updated>
     <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -31,32 +31,30 @@
 
 <p>すぐに表示させる場合は、このような感じ。</p>
 
-<pre><code class="html">&lt;iframe src="https://cdn.rawgit.com/sharkpp/joya_no_kane/v1.0.1/widget.html"
+<pre><code class="html">&lt;iframe src="https://sharkpp.github.io/joya_no_kane/widget.html"
 　　　　　width="128" height="128" frameborder="0" scrolling="no"&gt;&lt;/iframe&gt;
 </code></pre>
 
-<iframe src="https://cdn.rawgit.com/sharkpp/joya_no_kane/v1.0.1/widget.html"
+<iframe src="https://sharkpp.github.io/joya_no_kane/widget.html"
         width="128" height="128" frameborder="0" scrolling="no"></iframe>
 
-<p><i class="fa fa-external-link-square"></i> <a href="https://rawgit.com/">RawGit</a> を利用しています。</p>
-
-<p><i class="fa fa-exclamation-triangle"></i> ランタイムやリソースを含めたサイズの合計が 1MB 程度あるので注意が必要です。</p>
+<p><i class="fa-solid fa-triangle-exclamation"></i> ランタイムやリソースを含めたサイズの合計が 1MB 程度あるので注意が必要です。</p>
 
 <h2 id="%E3%81%9D%E3%81%AE%E4%BB%96%E3%83%AA%E3%83%B3%E3%82%AF">その他リンク</h2>
 
 <ul class="fa-ul">
-<li><i class="fa-li fa fa-external-link-square"></i><a href="https://github.com/sharkpp/joya_no_kane">ソースコード</a></li>
-<li><i class="fa-li fa fa-external-link-square"></i><a href="http://sharkpp.github.io/joya_no_kane/">GitHubページ</a></li>
-<li><i class="fa-li fa fa-external-link-square"></i><a href="http://hsproom.me/program/view/?p=146">HSP部屋(β)</a></li>
-<li><i class="fa-li fa fa-download"></i><a href="/files/bells100.zip">Windows版ダウンロード</a></li>
-<li><i class="fa-li fa fa-download"></i><a href="https://github.com/sharkpp/joya_no_kane/zipball/master">HTML/ブログパーツ版ダウンロード</a></li>
+<li><span class="fa-li"><i class="fa-solid fa-arrow-up-right-from-square"></i></span><a href="https://github.com/sharkpp/joya_no_kane">ソースコード</a></li>
+<li><span class="fa-li"><i class="fa-solid fa-arrow-up-right-from-square"></i></span><a href="http://sharkpp.github.io/joya_no_kane/">GitHubページ</a></li>
+<li><span class="fa-li"><i class="fa-solid fa-arrow-up-right-from-square"></i></span><span href="http://hsproom.me/program/view/?p=146" style="    text-decoration: line-through; color: gray;">HSP部屋(β)</span></li>
+<li><span class="fa-li"><i class="fa-solid fa-download"></i></span><a href="/files/bells100.zip">Windows版ダウンロード</a></li>
+<li><span class="fa-li"><i class="fa-solid fa-download"></i></span><a href="https://github.com/sharkpp/joya_no_kane/zipball/master">HTML/ブログパーツ版ダウンロード</a></li>
 </ul>
 
 <h2 id="%E5%8F%82%E8%80%83">参考</h2>
 
 <ul>
 <li><a href="http://testcording.com/?p=1259">TEST CORDING » GithubからJavaScriptを読み込み時は専用のドメインから！</a></li>
-<li><a href="http://hsproom.me/help/#ブログパーツ">ヘルプ - HSP部屋(β)</a></li>
+<li><del><a href="https://web.archive.org/web/20201101170951/http://hsproom.me/help/#ブログパーツ">ヘルプ - HSP部屋(β)</a></del></li>
 <li><a href="http://www.onionsoft.net/hsp/v34/doclib/hsp3dish_js.htm">HSP3Dish WebGL/JavaScript版(hsp3dish.js)プログラミングガイド</a></li>
 </ul>
 ]]></content>

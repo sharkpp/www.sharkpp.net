@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head><title>Python 3 のメモ諸々 &mdash; さめたすたすのお家</title><meta charset="utf-8"><meta name="theme-color" content="#6877AA"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="index, follow"><meta name="keywords" content="Python,Python3"><link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" /><link href="/assets/font-awesome/css/all.min.css" rel="stylesheet" type="text/css" /><link href="/assets/libs/lightbox2/dist/css/lightbox.css" rel="stylesheet" type="text/css" /><link href="/css/style.min.css" rel="stylesheet" type="text/css" /><!-- HTML5 shim, for IE6-8 support of HTML5 elements --><!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--><link rel="apple-touch-startup-image" href="/images/noname/2048x2048.png"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="shortcut icon" sizes="76x76" href="/images/noname/76x76.png"><link rel="shortcut icon" sizes="120x120" href="/images/noname/120x120.png"><link rel="shortcut icon" sizes="128x128" href="/images/noname/128x128.png"><link rel="shortcut icon" sizes="152x152" href="/images/noname/152x152.png"><link rel="shortcut icon" sizes="196x196" href="/images/noname/196x196.png"><link rel="shortcut icon" sizes="512x512" href="/images/noname/512x512.png"><link rel="shortcut icon" sizes="1024x1024" href="/images/noname/1024x1024.png"><link rel="shortcut icon" sizes="2048x2048" href="/images/noname/2048x2048.png"><link rel="apple-touch-icon" sizes="76x76" href="/images/noname/76x76.png"><link rel="apple-touch-icon" sizes="120x120" href="/images/noname/120x120.png"><link rel="apple-touch-icon" sizes="128x128" href="/images/noname/128x128.png"><link rel="apple-touch-icon" sizes="152x152" href="/images/noname/152x152.png"><link rel="apple-touch-icon" sizes="196x196" href="/images/noname/196x196.png"><link rel="apple-touch-icon" sizes="512x512" href="/images/noname/512x512.png"><link rel="apple-touch-icon" sizes="1024x1024" href="/images/noname/1024x1024.png"><link rel="apple-touch-icon" sizes="2048x2048" href="/images/noname/2048x2048.png"><link rel="stylesheet" href="/assets/highlightjs/styles/github.css" /><link rel="alternate" type="application/atom+xml" href="/atom.xml" title="さめたすたすのお家 activity feed" /><style>
+        /** quick fix because bootstrap <pre> has a background-color. */
+        pre code { background-color: inherit; }
+        </style><style>
+        #go-top {
+            display: none;
+            bottom: 40px;
+            right: 30px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #fff;
+            position: fixed;
+            z-index: 999;
+        }
+        #go-top > i {
+            font-size: 36px;
+            line-height: 40px;
+        }
+        #toc {
+            margin-left: 10px;
+            margin-bottom: 10px;
+            max-width: 350px;
+            word-wrap: break-word;
+        }
+        </style></head><body><nav class="navbar navbar-inverse navbar-fixed-top"><div class="container-fluid"><!-- Brand and toggle get grouped for better mobile display --><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/">さめたすたすのお家</a></div><!-- Collect the nav links, forms, and other content for toggling --><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><ul class="nav navbar-nav pull-right"><li><a href="/blog/"><i class="fa-solid fa-archive"></i> アーカイブ</a></li><li><a href="/blog/categories"><i class="fa-solid fa-folder-open"></i> カテゴリ</a></li><li><a href="/blog/tags"><i class="fa-solid fa-tags"></i> タグ</a></li><li><a href="/product/"><i class="fa-solid fa-download"></i> 作ったもの</a></li><li><a href="/graffiti/"><i class="fa-solid fa-paintbrush"></i> 落書き</a></li><li><a href="/link.html"><i class="fa-solid fa-link"></i> リンク</a></li><li><a href="/about">About</a></li></ul></div><!-- /.navbar-collapse --></div><!-- /.container-fluid --></nav><div class="mainContent container"><ol class="breadcrumb" itemscope="itemscope"
+                           itemtype="http://schema.org/BreadcrumbList"><li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/"
+           ><i class="fa-solid fa-house-chimney fa-lg"></i
+     >&nbsp;<span itemprop="name">HOME</span
+           ><meta itemprop="position" content="1"
+          /></a
+       ></li><li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/blog/2022/"
+           ><span>2022</span
+           ><meta itemprop="position" content="2"
+          /></a
+       ></li><li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/blog/2022/08/"
+           ><span>08</span
+           ><meta itemprop="position" content="3"
+          /></a
+       ></li><li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/blog/2022/08/01/"
+           ><span>01</span
+           ><meta itemprop="position" content="4"
+          /></a
+       ></li><li
+            class="active"><span 
+           ><span>Python 3 のメモ諸々</span
+       ></li></ol><article itemscope="itemscope" itemtype="http://schema.org/Article"><meta itemscope="itemscope" itemprop="mainEntityOfPage"
+              itemType="https://schema.org/WebPage" itemid="https://www.sharkpp.net/blog/2022/08/01/python3-memo.html"/><header><h1><span itemprop="headline">Python 3 のメモ諸々</span><small>post</small></h1></header><div id="toc" class="panel panel-default pull-right"><div class="panel-heading text-center">目次</div><div class="panel-body" style="padding: 10px;"><ul class="fa-ul"><li><span class="fa-li"><i class="fa-solid fa-paperclip"></i></span><a href="#%E9%96%8B%E7%99%BA%E9%96%A2%E4%BF%82">開発関係</a><ul class="fa-ul"><li><span class="fa-li"><i class="fa-solid fa-paperclip"></i></span><a href="#venv-%E3%82%92%E4%BD%BF%E3%81%8A%E3%81%86">venv を使おう</a></li><li><span class="fa-li"><i class="fa-solid fa-paperclip"></i></span><a href="#requirements.txt">requirements.txt</a></li></ul></li><li><span class="fa-li"><i class="fa-solid fa-paperclip"></i></span><a href="#requests">requests</a><ul class="fa-ul"><li><span class="fa-li"><i class="fa-solid fa-paperclip"></i></span><a href="#%E4%BD%BF%E3%81%84%E6%96%B9">使い方</a></li><li><span class="fa-li"><i class="fa-solid fa-paperclip"></i></span><a href="#%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E5%87%A6%E7%90%86">リダイレクト処理</a></li><li><span class="fa-li"><i class="fa-solid fa-paperclip"></i></span><a href="#cookie">Cookie</a></li></ul></li><li><span class="fa-li"><i class="fa-solid fa-paperclip"></i></span><a href="#%E5%8F%82%E8%80%83">参考</a></ul></div></div><div id="go-top"><i class="fa-regular fa-circle-up fa-3x"></i></div><div itemprop="articleBody"><p>Python 3 を最近ちゃんと触っている。
+その途中で知ったこと雑多な諸々をメモ。</p><h2 id="%E9%96%8B%E7%99%BA%E9%96%A2%E4%BF%82" itemprop="articleSection">開発関係</h2><h3 id="venv-%E3%82%92%E4%BD%BF%E3%81%8A%E3%81%86" itemprop="articleSection">venv を使おう</h3><p>Python 3 でプログラム書くときは、 venv を使おう。</p><p>v3 から virtualenv と同等の機能として <a href="https://docs.python.org/ja/3/library/venv.html">venv</a> が組み込まれているのでそれを使ってパッケージを管理するとGOOD</p><p>使い方は</p><pre><code class="console">$ python3 -m venv .venv
+</code></pre><p>で実行環境を .venv として作成。
+名前は任意の名前だけど、git に登録しないよって意味がわかりやすいように .env としています。</p><pre><code class="console">$ source .venv/bin/active
+(.venv) $
+</code></pre><p>で PATH などを適用し利用できるようにする。</p><pre><code class="console">(.venv) $ deactivate
+</code></pre><p>で、専用の環境を解除。</p><h3 id="requirements.txt" itemprop="articleSection">requirements.txt</h3><p><code>requirements.txt</code> でパッケージを管理する場合は <code>requirements.lock</code> を作るといい感じ。</p><p><a href="https://zenn.dev/yhay81/articles/yhay81-202102-piplock">pipでもlockで依存パッケージバージョンを管理しよう</a> を参考にした。</p><pre><code class="bash">#!/bin/bash
+REQUIREMENTS=$1
+if [ "" == "$REQUIREMENTS" ]; then
+  REQUIREMENTS=requirements.txt
+fi
+VENV_DIR=.venv_temp_$(date +%s)
+python3 -m venv $VENV_DIR
+source $VENV_DIR/bin/activate
+pip3 install -U pip wheel
+pip3 install -r $REQUIREMENTS
+(
+echo "# auto generated by update-pip-lock.sh"
+pip3 freeze
+) &gt;| $(basename $REQUIREMENTS .txt).lock
+rm -rf $VENV_DIR
+</code></pre><p>こんな感じ。</p><p>また、開発時のみに必要なパッケージをインストールするための <code>requirements.dev.txt</code> と <code>requirements.dev.lock</code> も作成。</p><pre><code># common packages
+-r requirements.txt
+# dev only packages
+sphinx
+</code></pre><p><code>-r FILENAME</code> とすることで別のリストを読み込めるので、それを利用して記述を最小にする。</p><h2 id="requests" itemprop="articleSection">requests</h2><p>HTTP/HTTPS クライアントライブラリ <a href="https://requests-docs-ja.readthedocs.io/en/latest/">requests</a> のメモ</p><h3 id="%E4%BD%BF%E3%81%84%E6%96%B9" itemprop="articleSection">使い方</h3><pre><code class="console">$ pip install requests
+</code></pre><pre><code class="python">import requests
+res = requests.get('https://example.net/hoge/fuga')
+print(res.json) # content-type: application/json のみ
+print(res.request.url) # 要求した URL
+print(res.request.headers) # 要求したヘッダ
+print(res.request.body) # 要求したコンテンツ内容
+print(res.status_code) # 応答されたステータスコード
+print(res.headers) # 応答されたヘッダ
+print(res.cookies) # クッキー
+print(res.content) # コンテンツ内容(bytes 型)
+print(res.text) # コンテンツ内容(str 型)
+print(res.history) # リダイレクト処理がされた場合の要求履歴
+</code></pre><h3 id="%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E5%87%A6%E7%90%86" itemprop="articleSection">リダイレクト処理</h3><p>requests 標準ではリダイレクトは自動で処理される。
+が... リダイレクト処理の流れを取得したり、COOKIEの指定を途中でしたい場合はオプションで指定する必要がある。</p><pre><code class="python">import requests
+res = requests.get("http://google.co.jp/")
+print(res.history[0])                     # &lt;Response [301]&gt;
+print(res.history[0].url)                 # 'http://google.co.jp/'
+print(res.history[0].headers["Location"]) # 'http://www.google.co.jp/'
+print(res.history[0].status_code)         # 301
+print(res.url)                            # 'http://www.google.co.jp/'
+print(res.status_code)                    # 200
+</code></pre><p><code>allow_redirects</code> オプションでリダイレクトの自動処理を無効にできる。</p><pre><code class="python">import requests
+res = requests.get("http://google.co.jp/", allow_redirects=False)
+print(res.url)                 # 'http://google.co.jp/'
+print(res.headers["Location"]) # 'http://www.google.co.jp/'
+print(res.status_code)         # 301
+res2 = requests.get(res.headers["Location"], allow_redirects=False)
+print(res2.url)                            # 'http://www.google.co.jp/'
+print(res2.status_code)                    # 200
+</code></pre><h3 id="cookie" itemprop="articleSection">Cookie</h3><p>ログイン処理などを行う場合はセッションを使う、みたいなことを書いてあるところもあるが、クッキーを受け渡すだけで十分処理できそう。</p><pre><code class="python">import requests
+# Cookieを取得
+res = requests.get('http://httpbin.org/cookies/set/foo/bar?domain=mydomain.com&amp;path=%2F&amp;httponly=true&amp;secure=true')
+print(res.cookies['foo']) # 'bar'
+# Cookieを設定
+res2 = requests.get('http://httpbin.org/cookies', cookies=res.cookies)
+print(res2.text) # '{"cookies": {"foo": "bar"}}'
+# マージしたCookieを設定
+res3 = requests.get('http://httpbin.org/cookies/set/hoge/fuga')
+print(res3.cookies['hoge']) # 'fuga'
+res3.cookies.update(res.cookies)
+res4 = requests.get('http://httpbin.org/cookies', cookies=res3.cookies)
+print(res4.text) # '{"cookies": {"foo": "bar","hoge": "fuga"}}'
+</code></pre><h2 id="%E5%8F%82%E8%80%83" itemprop="articleSection">参考</h2><ul><li><a href="https://docs.python.org/ja/3/library/venv.html">venv --- 仮想環境の作成 — Python 3.10.6 ドキュメント</a></li><li><a href="https://requests-docs-ja.readthedocs.io/en/latest/">Requests: 人間のためのHTTP — requests-docs-ja 1.0.4 documentation</a></li><li><a href="https://dot-blog.jp/news/python-requests-redirect-url-status-code-get/">Pythonの『requests』でリダイレクト時、履歴情報の取得や無効設定｜dot blog</a></li><li><a href="https://requests-docs-ja.readthedocs.io/en/latest/user/quickstart/#id11">リダイレクトと履歴 — requests-docs-ja 1.0.4 documentation</a></li><li><a href="https://requests-docs-ja.readthedocs.io/en/latest/user/quickstart/#id10">クッキー — requests-docs-ja 1.0.4 documentation</a></li><li><a href="https://zenn.dev/yhay81/articles/yhay81-202102-piplock">pipでもlockで依存パッケージバージョンを管理しよう</a></li><li><a href="https://qiita.com/key/items/3684ec013c9798c0f02c">requirements.txtを分割する - Qiita</a></li></ul></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa-regular fa-calendar-days"></i>&nbsp;
+        <span itemprop="datePublished" content="2022-08-01">2022年08月01日</span>
+        &nbsp;/&nbsp;
+        <i class="fa-solid fa-clock-rotate-left"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2022-08-01-python3-memo.md">変更履歴</a>
+        &nbsp;/&nbsp;
+        <i class="fa-solid fa-thumbtack"></i>&nbsp;<a href="/blog/2022/08/01/python3-memo.html">Permalink</a>
+        &nbsp;/&nbsp;
+    </span><meta itemprop="url" content="https://www.sharkpp.net/blog/2022/08/01/python3-memo.html" /><span itemprop="author" itemscope itemtype="https://schema.org/Person"
+          style="display: none;"
+       ><span itemprop="name">sharkpp</span
+   ></span><a href="http://b.hatena.ne.jp/entry/https%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2022%2F08%2F01%2Fpython3-memo.html"
+       class="hatena-bookmark-button"
+       data-hatena-bookmark-title="Python 3 のメモ諸々 &mdash; さめたすたすのお家"
+       data-hatena-bookmark-layout="simple-balloon"
+       title="このエントリーをはてなブックマークに追加"
+      ><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png"
+            alt="このエントリーをはてなブックマークに追加"
+            width="20" height="20" style="border: none;" /></a
+      >&nbsp;
+    <a href="https://twitter.com/share" class="twitter-share-button"
+       data-url="https://www.sharkpp.net/blog/2022/08/01/python3-memo.html" data-via="sharkpp">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><div style="line-height: 25px; height: 25px;"><span class="categories"><i class="fa-solid fa-folder-open"></i>&nbsp;カテゴリ:
+                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
+        &nbsp;/&nbsp;
+                                <span class="tags"><i class="fa-solid fa-tag"></i>&nbsp;タグ:
+                        <a href="/blog/tags/Python">Python</a>,                         <a href="/blog/tags/Python3">Python3</a></span></div></footer><hr style="border-top: none; border-bottom: 1px dashed #aaa; margin: 10px 0;" /><nav class="article"><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/blog/2022/12/31/new-years-eve-2022.html" title="大晦日@2022"><span class="title"><i class="fa-solid fa-chevron-left"></i> 大晦日@2022</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/blog/2022/05/13/unboxing-macbook-air-2020.html" title="MacBook Air (M1, 2020) 開封の儀"><span class="title">MacBook Air (M1, 2020) 開封の儀</span><i class="fa-solid fa-chevron-right"></i></a></li></ul></nav></article></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa-solid fa-square-rss fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa-brands fa-x-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa-brands fa-github fa-2x"></i></a></li><li><a href="/profile"         ><i class="fa-solid fa-circle-plus fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /blog/2022/08/01/python3-memo.html"
+                                  rel="nofollow"><i class="fa-solid fa-bug"></i> 誤字脱字などを報告</a></li></ul></div><div class="container text-center"><ul class="list-unstyled list-inline"><li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li><li class="text-muted">&copy; 2004-2023 sharkpp</li></ul></div><div class="container text-center text-muted"><ruby><rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                            >Creative Commons Attribution 4.0 International License</a>.</rb><rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                  >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp></ruby></div><div class="container text-center text-muted"><ruby><rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
+                                                                            >The MIT License</a>.</rb><rp>(</rp><rt>さらに、コードスニペットは <a rel="nofollow" href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license"
+                                                               >MIT ライセンス</a> の下にライセンスされています。</rt><rp>)</rp></ruby></div></div></footer><script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>')</script><script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script>$('body').modal || document.write('<script src="/assets/bootstrap/js/bootstrap.min.js"><\/script>')</script><script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-5908801-2', 'auto');
+            ga('send', 'pageview');
+        </script><script src="/assets/highlightjs/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><script type="text/javascript">
+            $('a img').each(function(){
+                var rel = ($(this).attr('src').match(/images\u002f([0-9_]{4}_[0-9_]{4})/i) ||
+                           ['','lightbox'])[1];
+                $(this).parent()
+                    .attr('data-lightbox', rel)
+                    .attr('data-title', $(this).attr('alt'))
+                    ;
+            });
+        </script><script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script><script>$(document).ready(function(){ window.lightbox || $.getScript("/assets/libs/lightbox2/dist/js/lightbox.min.js"); });</script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.5/jquery.smooth-scroll.min.js"></script><script>$.smoothScroll || document.write('<script src="/assets/libs/jquery-smooth-scroll/jquery.smooth-scroll.min.js"><\/script>')</script><script type="text/javascript">
+            $('#toc a')
+                .each(function(){
+                    var id = $(this).attr('href').slice(1);
+                    $(this)
+                        .smoothScroll({
+                            scrollTarget: $('[id="' + id + '"]'),
+                            offset: -50,
+                            beforeScroll: function(){ /*history.pushState({}, id, "#" + id);*/ }
+                        });
+                })
+                ;
+            $('#go-top')
+                .on('click', function() {
+                    $.smoothScroll({
+                        scrollElement: $('body'),
+                        scrollTarget: '',
+                        beforeScroll: function(){ /*history.pushState({}, "", location.href.replace(location.hash, ''));*/ },
+                        afterScroll: function(){ $('body').css('position', ''); }
+                    });
+                    return false;
+                });
+            $(window).scroll(function () {
+                var scroll   = $(this).scrollTop();
+                var visibled = $('#go-top').css('display') == 'block';
+                var next_state = $('#go-top').attr('data-next-state');
+                if (100 <= scroll && (!visibled || 'hidden' == next_state))
+                    $('#go-top')
+                        .stop(true, true)
+                        .attr('data-next-state', 'visible')
+                        .fadeIn('slow', function(){
+                            $(this).removeAttr('data-next-state');
+                        });
+                else if (scroll < 100 && (visibled || 'visible' == next_state))
+                    $('#go-top')
+                        .stop(true, true)
+                        .attr('data-next-state', 'hidden')
+                        .fadeOut('slow', function(){
+                            $(this).removeAttr('data-next-state');
+                        });
+            });
+            $(window).scroll();
+        </script><script type="text/javascript">
+            $(document).ready(function(){
+                // apply table to bootstrap css
+                $('table:not([class])')
+                    .addClass('table table-bordered table-hover table-condensed table-striped')
+                    .wrap("<div style='width:100%;overflow-x:auto;'></div>");
+             });
+        </script><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></body></html>

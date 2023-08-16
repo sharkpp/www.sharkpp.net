@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="https://www.sharkpp.net/blog/tags/PaaS.xml" rel="self"/>
     <link href="https://www.sharkpp.net/"/>
-    <updated>2022-12-31T23:15:27+00:00</updated>
+    <updated>2023-08-16T13:18:13+00:00</updated>
     <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -15,7 +15,7 @@
             <id>https://www.sharkpp.net/blog/2013/03/17/fuelphp-on-sqale.html</id>
             <content type="html"><![CDATA[<p></p>
 <div class="alert alert-danger alert-dismissible" role="alert">
-  <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
+  <div class="pull-left"><i class="fa-solid fa-triangle-exclamation fa-2x"></i></div>
   <dl style="margin-bottom: 0; margin-left: 35px;">
     <dt>2017-06-02 追記</dt>
     <dd>Sqaleは 2017年05月31日 にサービスの提供が終了しました。そのため下記内容は過去の参考としてのみ残してあります。</dd>
@@ -131,7 +131,7 @@
             <id>https://www.sharkpp.net/blog/2013/02/17/fuelphp-on-excale.html</id>
             <content type="html"><![CDATA[<p></p>
 <div class="alert alert-danger alert-dismissible" role="alert">
-  <div class="pull-left"><i class="fa fa-warning fa-2x"></i></div>
+  <div class="pull-left"><i class="fa-solid fa-triangle-exclamation fa-2x"></i></div>
   <dl style="margin-bottom: 0; margin-left: 35px;">
     <dt>2015-06-10 追記</dt>
     <dd>eXcale(エクスケール) は 2014年11月28日 にサービスの提供が終了しました。そのため下記内容は過去の参考としてのみ残してあります。</dd>

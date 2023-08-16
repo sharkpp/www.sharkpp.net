@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="https://www.sharkpp.net/blog/tags/jsdoc.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2023-08-16T13:18:13+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[JSDoc を macOS で使ってみる]]></title>
+            <link href="https://www.sharkpp.net/blog/1970/01/01/tryout-jsdoc-on-macos.html"/>
+            <updated>2023-08-16T13:18:13+00:00</updated>
+            <id>https://www.sharkpp.net/blog/1970/01/01/tryout-jsdoc-on-macos.html</id>
+            <content type="html"><![CDATA[<p>JavaScript で書かれたドキュメントがないライブラリのドキュメントをが必要となったので、ドキュメントジェネレータである JSDoc を試してみる。</p>
+
+<p>インストールは Homebrew で <code>[brew install jsdoc3](https://formulae.brew.sh/formula/jsdoc3)</code> としてインストールすれば簡単。</p>
+
+<pre><code class="console">% jsdoc --help
+JSDoc 4.0.0 (Thu, 03 Nov 2022 18:37:15 GMT)
+
+Options:
+    -a, --access &lt;value&gt;         Only display symbols with the given access: "package", public", "protected", "private" or "undefined", or "all" for
+                                 all access levels. Default: all except "private"
+    -c, --configure &lt;value&gt;      The path to the configuration file. Default: path/to/jsdoc/conf.json
+    -d, --destination &lt;value&gt;    The path to the output folder. Default: ./out/
+    --debug                      Log information for debugging JSDoc.
+    -e, --encoding &lt;value&gt;       Assume this encoding when reading all source files. Default: utf8
+    -h, --help                   Print this message and quit.
+    --match &lt;value&gt;              When running tests, only use specs whose names contain &lt;value&gt;.
+    --nocolor                    When running tests, do not use color in console output.
+    -p, --private                Display symbols marked with the @private tag. Equivalent to "--access all". Default: false
+    -P, --package &lt;value&gt;        The path to the project's package file. Default: path/to/sourcefiles/package.json
+    --pedantic                   Treat errors as fatal errors, and treat warnings as errors. Default: false
+    -q, --query &lt;value&gt;          A query string to parse and store in jsdoc.env.opts.query. Example: foo=bar&amp;baz=true
+    -r, --recurse                Recurse into subdirectories when scanning for source files and tutorials.
+    -R, --readme &lt;value&gt;         The path to the project's README file. Default: path/to/sourcefiles/README.md
+    -t, --template &lt;value&gt;       The path to the template to use. Default: path/to/jsdoc/templates/default
+    -T, --test                   Run all tests and quit.
+    -u, --tutorials &lt;value&gt;      Directory in which JSDoc should search for tutorials.
+    -v, --version                Display the version number and quit.
+    --verbose                    Log detailed information to the console as JSDoc runs.
+    -X, --explain                Dump all found doclet internals to console and quit.
+
+Visit https://jsdoc.app/ for more information.
+</code></pre>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://qiita.com/opengl-8080/items/a36679f7926f4cac0a81">JSDoc使い方メモ - Qiita</a></li>
+<li><a href="https://jsdoc.app/howto-es2015-classes.html">Use JSDoc: ES 2015 Classes</a></li>
+<li><a href="https://stackoverflow.com/questions/20907501/how-can-i-omit-the-source-links-in-jsdoc">jsdoc3 - How can I omit the source links in JsDoc? - Stack Overflow</a></li>
+</ul>
+]]></content>
+        </entry>
+    </feed>
