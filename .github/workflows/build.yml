@@ -8,14 +8,14 @@ on:
 jobs:
   build-deploy:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
 
     - name: ls php
       run: sudo ls -l /usr/bin/php*
 
-    - name: Setup PHP 7.4
-      run: sudo update-alternatives --set php /usr/bin/php7.4
+    - name: Setup PHP 8.1
+      run: sudo update-alternatives --set php /usr/bin/php8.1
 
     - name: setup node
       uses: actions/setup-node@v1
