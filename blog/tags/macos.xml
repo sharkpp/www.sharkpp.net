@@ -3,15 +3,121 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="https://www.sharkpp.net/blog/tags/macos.xml" rel="self"/>
     <link href="https://www.sharkpp.net/"/>
-    <updated>2023-08-16T14:20:08+00:00</updated>
+    <updated>2023-09-24T14:55:23+00:00</updated>
     <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
+            <title type="html"><![CDATA[macOS M1 上の Visual Studio Code で Flutter の開発環境を作ってみた]]></title>
+            <link href="https://www.sharkpp.net/blog/2023/09/24/flutter-setup-on-macos.html"/>
+            <updated>2023-09-24T23:52:00+00:00</updated>
+            <id>https://www.sharkpp.net/blog/2023/09/24/flutter-setup-on-macos.html</id>
+            <content type="html"><![CDATA[<p>Flutter を使ってみようと思い立って、macOS 上の Visual Studio Code で開発できるよう整えてみた記録。</p>
+
+<h2 id="flutter-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">Flutter のインストール</h2>
+
+<p><a href="https://docs.flutter.dev/get-started/install/macos">macOS install</a> を参考にインストール。</p>
+
+<p>使っているのは M1 の MacBook Air なので</p>
+
+<pre><code class="console">$ sudo softwareupdate --install-rosetta --agree-to-license
+</code></pre>
+
+<p>も必要</p>
+
+<h3 id="sdk-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">SDK のインストール</h3>
+
+<pre><code class="console">% curl -O https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_arm64_3.13.1-stable.zip
+% unzip flutter_macos_arm64_3.13.1-stable.zip
+% mv flutter_macos_arm64_3.13.1-stable /opt/flutter
+% echo 'export PATH="/opt/flutter/bin:$PATH"' &gt;&gt; ~/.zshrc
+</code></pre>
+
+<h3 id="flutter-doctor-%E3%81%A7%E7%92%B0%E5%A2%83%E3%82%92%E8%AA%BF%E6%9F%BB">flutter doctor で環境を調査</h3>
+
+<p><code>flutter doctor</code> を実行して <code>No issues found!</code> と表示されればOK</p>
+
+<p><code>Doctor found issues in 2 categories.</code> 等と表示されている場合は指示に従いパッケージなどをインストールします。</p>
+
+<p>※ 不要なプラットフォームの場合は警告を無視して問題ないです</p>
+
+<pre><code class="console">% flutter doctor
+Doctor summary (to see all details, run flutter doctor -v):
+[✓] Flutter (Channel stable, 3.13.1, on macOS 13.4.1 22F770820d darwin-arm64, locale ja-JP)
+[✓] Android toolchain - develop for Android devices (Android SDK version 34.0.0)
+[✓] Xcode - develop for iOS and macOS (Xcode 14.3.1)
+[✓] Chrome - develop for the web
+[✓] Android Studio (version 2022.3)
+[✓] VS Code (version 1.66.1)
+[✓] Connected device (2 available)
+[✓] Network resources
+
+• No issues found!
+</code></pre>
+
+<h3 id="flutter-upgrade-%E3%81%A7%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88">flutter upgrade でアップデート</h3>
+
+<p><code>A new version of Flutter is available!</code> 等とメッセージが出た場合や最新版がある事がわかっている場合は次のコマンドで更新できます。</p>
+
+<pre><code class="console">% flutter upgrade
+</code></pre>
+
+<h2 id="%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97">開発環境のセットアップ</h2>
+
+<p><a href="https://docs.flutter.dev/get-started/editor">Set up an editor</a> を参考に Visual Studio Code の環境を整えます。</p>
+
+<p><a href="https://zenn.dev/hagakun_dev/articles/2f2eb65b892bea">Flutter開発を高速化するVSCode拡張機能を5つ紹介🎉</a> を参考に拡張も入れます。</p>
+
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter">Flutter</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=marcelovelasquez.flutter-tree">Flutter Tree</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=alexisvt.flutter-snippets">Flutter Widget Snippets</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=Nash.awesome-flutter-snippets">Awesome Flutter Snippets</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=davidwoo.flutter-auto-import">Flutter-Auto-Import</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens">Error Lens</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=circlecodesolution.ccs-flutter-color">Flutter Color</a></li>
+</ul>
+
+<h2 id="%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E4%BD%9C%E3%82%8B">アプリを作る</h2>
+
+<p><a href="https://docs.flutter.dev/get-started/test-drive">Test drive</a> を参考にアプリを作ります。</p>
+
+<ul>
+<li><code>Command + Shift + P</code> でコマンドパレットを呼び出し <code>flutter</code> と入力し、<strong>Flutter: New Project</strong> を選択します。</li>
+<li><strong>Application</strong> を選択します。</li>
+<li>新しいプロジェクト フォルダーの親ディレクトリを作成または選択します。</li>
+<li>プロジェクト名 (my_app など) を入力し、Enter を押します。</li>
+<li>プロジェクトの作成が完了し、 main.dart ファイルが表示されるまで待ちます。</li>
+</ul>
+
+<h2 id="%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E5%AE%9F%E8%A1%8C">アプリの実行</h2>
+
+<p><a href="/images/20230828-flutter-demo-select-device.png"><img src="/thumbs/cbc8b6e51e330ec99fb85fdba1ae17b3-640x640.png" alt="flutter-demo-select-device"></a></p>
+
+<ul>
+<li><strong>デバイス セレクター</strong> 領域からデバイスを選択します。</li>
+<li><strong>実行</strong> > <strong>デバッグの開始</strong> を呼び出すか、F5 を押します。</li>
+</ul>
+
+<p>とりあえず macOS で確認できる全種を起動してみました。</p>
+
+<p><a href="/images/20230828-flutter-demo-android-sim.png"><img src="/thumbs/fc2c6b1bd016e6d0388df1a7db20166a-640x640.png" alt="flutter-demo-android-sim"></a> <a href="/images/20230828-flutter-demo-ios-sim.png"><img src="/thumbs/517e0e4e321ab7e3083e7cbb4b4d39d8-640x640.png" alt="flutter-demo-ios-sim"></a> <a href="/images/20230828-flutter-demo-web.png"><img src="/thumbs/6e5554ba899150e4f3f333d98ce15bd4-640x640.png" alt="flutter-demo-web"></a> <a href="/images/20230828-flutter-demo-macos.png"><img src="/thumbs/5159c12cd246ad51036509d939bf4aaa-640x640.png" alt="flutter-demo-macos"></a></p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://docs.flutter.dev/get-started/install/macos">macOS install</a></li>
+<li><a href="https://zenn.dev/kboy/books/ca6a9c93fd23f3/viewer/5232dc">Flutterの環境構築(Mac編)｜Flutter基礎入門 by Flutter大学</a></li>
+<li><a href="https://zenn.dev/hagakun_dev/articles/2f2eb65b892bea">Flutter開発を高速化するVSCode拡張機能を5つ紹介🎉</a></li>
+<li><a href="https://zenn.dev/imasaka0909/articles/00ebfaf74f9cea">【Mac M1】「flutter doctor」実行時の「cmdline-tools component is missing」の解決法</a></li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
             <title type="html"><![CDATA[JSDoc を macOS で使ってみる]]></title>
             <link href="https://www.sharkpp.net/blog/1970/01/01/tryout-jsdoc-on-macos.html"/>
-            <updated>2023-08-16T14:20:08+00:00</updated>
+            <updated>2023-09-24T14:55:23+00:00</updated>
             <id>https://www.sharkpp.net/blog/1970/01/01/tryout-jsdoc-on-macos.html</id>
             <content type="html"><![CDATA[<p>JavaScript で書かれたドキュメントがないライブラリのドキュメントをが必要となったので、ドキュメントジェネレータである JSDoc を試してみる。</p>
 

@@ -3,11 +3,117 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="https://www.sharkpp.net/blog/tags/%E9%9B%91%E8%A8%98.xml" rel="self"/>
     <link href="https://www.sharkpp.net/"/>
-    <updated>2023-08-16T14:20:08+00:00</updated>
+    <updated>2023-09-24T14:55:23+00:00</updated>
     <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[macOS M1 上の Visual Studio Code で Flutter の開発環境を作ってみた]]></title>
+            <link href="https://www.sharkpp.net/blog/2023/09/24/flutter-setup-on-macos.html"/>
+            <updated>2023-09-24T23:52:00+00:00</updated>
+            <id>https://www.sharkpp.net/blog/2023/09/24/flutter-setup-on-macos.html</id>
+            <content type="html"><![CDATA[<p>Flutter を使ってみようと思い立って、macOS 上の Visual Studio Code で開発できるよう整えてみた記録。</p>
+
+<h2 id="flutter-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">Flutter のインストール</h2>
+
+<p><a href="https://docs.flutter.dev/get-started/install/macos">macOS install</a> を参考にインストール。</p>
+
+<p>使っているのは M1 の MacBook Air なので</p>
+
+<pre><code class="console">$ sudo softwareupdate --install-rosetta --agree-to-license
+</code></pre>
+
+<p>も必要</p>
+
+<h3 id="sdk-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">SDK のインストール</h3>
+
+<pre><code class="console">% curl -O https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_arm64_3.13.1-stable.zip
+% unzip flutter_macos_arm64_3.13.1-stable.zip
+% mv flutter_macos_arm64_3.13.1-stable /opt/flutter
+% echo 'export PATH="/opt/flutter/bin:$PATH"' &gt;&gt; ~/.zshrc
+</code></pre>
+
+<h3 id="flutter-doctor-%E3%81%A7%E7%92%B0%E5%A2%83%E3%82%92%E8%AA%BF%E6%9F%BB">flutter doctor で環境を調査</h3>
+
+<p><code>flutter doctor</code> を実行して <code>No issues found!</code> と表示されればOK</p>
+
+<p><code>Doctor found issues in 2 categories.</code> 等と表示されている場合は指示に従いパッケージなどをインストールします。</p>
+
+<p>※ 不要なプラットフォームの場合は警告を無視して問題ないです</p>
+
+<pre><code class="console">% flutter doctor
+Doctor summary (to see all details, run flutter doctor -v):
+[✓] Flutter (Channel stable, 3.13.1, on macOS 13.4.1 22F770820d darwin-arm64, locale ja-JP)
+[✓] Android toolchain - develop for Android devices (Android SDK version 34.0.0)
+[✓] Xcode - develop for iOS and macOS (Xcode 14.3.1)
+[✓] Chrome - develop for the web
+[✓] Android Studio (version 2022.3)
+[✓] VS Code (version 1.66.1)
+[✓] Connected device (2 available)
+[✓] Network resources
+
+• No issues found!
+</code></pre>
+
+<h3 id="flutter-upgrade-%E3%81%A7%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88">flutter upgrade でアップデート</h3>
+
+<p><code>A new version of Flutter is available!</code> 等とメッセージが出た場合や最新版がある事がわかっている場合は次のコマンドで更新できます。</p>
+
+<pre><code class="console">% flutter upgrade
+</code></pre>
+
+<h2 id="%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97">開発環境のセットアップ</h2>
+
+<p><a href="https://docs.flutter.dev/get-started/editor">Set up an editor</a> を参考に Visual Studio Code の環境を整えます。</p>
+
+<p><a href="https://zenn.dev/hagakun_dev/articles/2f2eb65b892bea">Flutter開発を高速化するVSCode拡張機能を5つ紹介🎉</a> を参考に拡張も入れます。</p>
+
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter">Flutter</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=marcelovelasquez.flutter-tree">Flutter Tree</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=alexisvt.flutter-snippets">Flutter Widget Snippets</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=Nash.awesome-flutter-snippets">Awesome Flutter Snippets</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=davidwoo.flutter-auto-import">Flutter-Auto-Import</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens">Error Lens</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=circlecodesolution.ccs-flutter-color">Flutter Color</a></li>
+</ul>
+
+<h2 id="%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E4%BD%9C%E3%82%8B">アプリを作る</h2>
+
+<p><a href="https://docs.flutter.dev/get-started/test-drive">Test drive</a> を参考にアプリを作ります。</p>
+
+<ul>
+<li><code>Command + Shift + P</code> でコマンドパレットを呼び出し <code>flutter</code> と入力し、<strong>Flutter: New Project</strong> を選択します。</li>
+<li><strong>Application</strong> を選択します。</li>
+<li>新しいプロジェクト フォルダーの親ディレクトリを作成または選択します。</li>
+<li>プロジェクト名 (my_app など) を入力し、Enter を押します。</li>
+<li>プロジェクトの作成が完了し、 main.dart ファイルが表示されるまで待ちます。</li>
+</ul>
+
+<h2 id="%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E5%AE%9F%E8%A1%8C">アプリの実行</h2>
+
+<p><a href="/images/20230828-flutter-demo-select-device.png"><img src="/thumbs/cbc8b6e51e330ec99fb85fdba1ae17b3-640x640.png" alt="flutter-demo-select-device"></a></p>
+
+<ul>
+<li><strong>デバイス セレクター</strong> 領域からデバイスを選択します。</li>
+<li><strong>実行</strong> > <strong>デバッグの開始</strong> を呼び出すか、F5 を押します。</li>
+</ul>
+
+<p>とりあえず macOS で確認できる全種を起動してみました。</p>
+
+<p><a href="/images/20230828-flutter-demo-android-sim.png"><img src="/thumbs/fc2c6b1bd016e6d0388df1a7db20166a-640x640.png" alt="flutter-demo-android-sim"></a> <a href="/images/20230828-flutter-demo-ios-sim.png"><img src="/thumbs/517e0e4e321ab7e3083e7cbb4b4d39d8-640x640.png" alt="flutter-demo-ios-sim"></a> <a href="/images/20230828-flutter-demo-web.png"><img src="/thumbs/6e5554ba899150e4f3f333d98ce15bd4-640x640.png" alt="flutter-demo-web"></a> <a href="/images/20230828-flutter-demo-macos.png"><img src="/thumbs/5159c12cd246ad51036509d939bf4aaa-640x640.png" alt="flutter-demo-macos"></a></p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://docs.flutter.dev/get-started/install/macos">macOS install</a></li>
+<li><a href="https://zenn.dev/kboy/books/ca6a9c93fd23f3/viewer/5232dc">Flutterの環境構築(Mac編)｜Flutter基礎入門 by Flutter大学</a></li>
+<li><a href="https://zenn.dev/hagakun_dev/articles/2f2eb65b892bea">Flutter開発を高速化するVSCode拡張機能を5つ紹介🎉</a></li>
+<li><a href="https://zenn.dev/imasaka0909/articles/00ebfaf74f9cea">【Mac M1】「flutter doctor」実行時の「cmdline-tools component is missing」の解決法</a></li>
+</ul>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[HAPPY NEW YEAR 2023]]></title>
             <link href="https://www.sharkpp.net/blog/2023/01/01/happy-new-year-2023.html"/>
@@ -1140,82 +1246,6 @@ Configuration for rule "import/no-cycle" is invalid
 <li><a href="https://shotat.hateblo.jp/entry/2016/10/26/000912">Eslintでunderscoreから始まる変数をチェックさせない設定にする - Memento memo.</a></li>
 <li><a href="https://stackoverflow.com/questions/57802057/eslint-configuring-no-unused-vars-for-typescript">esLint-Typescriptの「no-unused-vars」の構成-スタックオーバーフロー</a></li>
 </ul>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[あれから16年経ったようです]]></title>
-            <link href="https://www.sharkpp.net/blog/2020/02/29/happy-anniversary-16th.html"/>
-            <updated>2020-02-29T23:30:00+00:00</updated>
-            <id>https://www.sharkpp.net/blog/2020/02/29/happy-anniversary-16th.html</id>
-            <content type="html"><![CDATA[<p>世間では新型コロナウイルスによって展示会やらイベントが次々に中止や延期に追い込まれています。
-個人的な部分でもついにリモートワークが推奨になってきた感じで影響が出始めましたね。</p>
-
-<p>さて、本日はいつの間にかホームページ開設が16年を過ぎ17年目になったことに気がついて、去年何かやっておけばよかったとすこし後悔していたところで今からでも遅くないというそらみみが聞こえてきたので、このページの過去をざっくりと振り返ってみたいと思います。</p>
-
-<h2 id="%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E9%96%8B%E8%A8%AD">ホームページ開設</h2>
-
-<p>2004-02-24 ホームページを開設</p>
-
-<p>たしか、契約しているプロバイダのおまけでついてくるジオシティーズのアカウントで公開していたと思う。</p>
-
-<p>phpを動かすために、別のサービス(これもすでに閉鎖)も借りていた記憶もありますね。</p>
-
-<p>ジオシティーズも去年完全閉鎖され時代の流れを感じますのぅ。
-<a href="https://info-geocities.yahoo.co.jp/close/"><img src="/images/20200229_geocities_closed.png" alt="サービス終了のお知らせ - Yahoo!ジオシティーズ" /></a></p>
-
-<h2 id="%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E5%8F%96%E5%BE%97">ドメイン取得</h2>
-
-<p>2005-08-13 独自ドメインへ移転</p>
-
-<p>数日前の 2005-08-05 に <code>sharkpp.net</code> を取得し、独自ドメインでの運営に変更。
-この当時契約していたドメインレジストラも独自運営からGMOに買収されたりと、これまた結構変遷があります。</p>
-
-<p><a href="http://web.archive.org/">Wayback Machine</a>に残っている最古は 2005-10-20 15:34:50 でこんなデザインでした。</p>
-
-<p><a href="http://web.archive.org/web/20051020153450/http://www.sharkpp.net:80/"><img src="/images/20200229_webarc20051020153450.png" alt="2005-10-20 15:34:50 当時のページ" /></a></p>
-
-<h2 id="%E6%A7%8B%E7%AF%89%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%92%E6%89%8B%E6%89%93%E3%81%A1%E3%81%8B%E3%82%89-frog-cms-%E3%81%AB%E5%A4%89%E6%9B%B4">構築システムを手打ちから Frog CMS に変更</h2>
-
-<p>2008-08-XX 構築システムを手打ちから Frog CMS に変更</p>
-
-<p>ホームページを手打ちから <a href="https://github.com/philippe/FrogCMS">Frog CMS</a> というCMSに変更。
-この時同時に、デザインの変更や、掲示板の廃止などもしています。
-Frog CMS も更新が続くと思ってたらしばらくしたら更新されなくなりましたなぁ...</p>
-
-<p><a href="http://web.archive.org/web/20081007190559/http://www.sharkpp.net:80/"><img src="/images/20200229_webarc20081007190559.png" alt="2008-10-07 19:05:59 当時のページ" /></a></p>
-
-<h2 id="%E6%A7%8B%E7%AF%89%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%92-frog-cms-%E3%81%8B%E3%82%89-sculpin-%2B-github-pages-%E3%81%AB%E5%A4%89%E6%9B%B4">構築システムを Frog CMS から Sculpin + GitHub pages に変更</h2>
-
-<p>2015-05-31 構築システムを Frog CMS から Sculpin + GitHub pages に変更</p>
-
-<p>レンタルサーバーの仕様変更で、しばらく Frog CMS がエラーを吐いていたことやもはや保守されてないものを使うのもってことで、重い腰を上げ <a href="https://sculpin.io/">Sculpin</a> という、php で動作する静的サイトジェネレータを利用し GitHub に push したら GitHub pages で運用しているサイトが更新される仕組みを構築しました。
-その時の記録は「<a href="/blog/2015/06/28/site-reboot-by-sculpin.html">Sculpin でホムペを再構築したときのメモ</a>」として記事にしています。
-この時同時に、デザインやホームページのタイトルの変更もしています。</p>
-
-<h2 id="%E6%A7%8B%E7%AF%89%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E9%81%8B%E7%94%A8%E3%82%92-xrea-%E3%81%8B%E3%82%89-travis-ci-%E3%81%AB%E5%A4%89%E6%9B%B4">構築システムの運用を xrea から Travis CI に変更</h2>
-
-<p>2016-06-12 構築システムの運用を xrea から Travis CI に変更</p>
-
-<p>レンタルサーバーの XREA でサイトのビルドを行なっていたけど、だんだんとビルドに失敗したりすることが多くなってきたので Travis CI を使ってビルドするように変更。
-今なら、GitHub Actions を使う感じかも。
-今と違って、ヘッダ部分にカテゴリリンクがなかったりしてるけど、それはおいおいと細かく変更していった結果。</p>
-
-<p><a href="http://web.archive.org/web/20150613052025/http://www.sharkpp.net:80/"><img src="/images/20200229_webarc20150613052025.png" alt="2015-06-13 05:20:25 当時のページ" /></a></p>
-
-<h2 id="%E3%81%9D%E3%81%97%E3%81%A6%E7%8F%BE%E5%9C%A8">そして現在</h2>
-
-<p>もろもろ細かなデザインが変わったりしているけど、根本のシステムは変わらず。</p>
-
-<p><img src="/images/20200229_now.png" alt="現在のページ" /></p>
-
-<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
-
-<p>とりあえず、大きな変更をざっくりとまとめてみました。
-16年も経つとオギャーといってた赤ちゃんが高校１年とか２年とかになっている感じなので、世間でも大きなところでは、携帯電話がガラゲー（フューチャーフォン）からスマホに変わったりしていますね。</p>
-
-<p>光陰矢の如しとはよくいったもので、ここ数年は一年があっという間に過ぎていく感じで、なかなかに恐ろしいです。</p>
-
-<p>まあ、そんな感じな雑な締めかたですが、16年経ち17年目を迎えた「さめたすたすのお部屋」をよろしくお願いします。</p>
 ]]></content>
         </entry>
     </feed>

@@ -18,7 +18,21 @@
        ></li></ol><div class="row"><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
            href="/blog/"><i class="fa-solid fa-box-archive fa-4x"></i><br />アーカイブ</a></div><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
            href="/product/"><i class="fa-solid fa-download fa-4x"></i><br />作ったもの</a></div><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
-           href="/graffiti/"><i class="fa-solid fa-paintbrush fa-4x"></i><br />落書き</a></div></div><hr style="border-bottom: 1px dashed #aaa; border-top: none;" /><article class="full-contents"><header><h1><a href="/blog/2008/07/20/pokecom-lecture-01-key-input.html">C言語講座 第一回 キー入力</a></h1></header><div><h2 id="%E5%A7%8B%E3%82%81%E3%81%AB">始めに</h2><!-- 20050206 --><p>ポケコンの、BASIC には INKEY$ があるのに、Ｃ言語には、<code>getch()</code> と <code>kbhit()</code> しかないんじゃ? というわけで、第一回のＣ言語 講座は、キー入力を扱うことにします。</p>
+           href="/graffiti/"><i class="fa-solid fa-paintbrush fa-4x"></i><br />落書き</a></div></div><hr style="border-bottom: 1px dashed #aaa; border-top: none;" /><article class="full-contents"><header><h1><a href="/blog/2008/07/20/pokecom-lecture-02-file-size-compact.html">C言語講座 第二回 ファイルサイズの縮小</a></h1></header><div><h2 id="%E5%A7%8B%E3%82%81%E3%81%AB">始めに</h2><!-- 20050206 --><p>第二回のＣ言語 講座は、ファイルサイズの縮小を扱うことにします。</p><p>ポケコンでＣ言語のプログラムを作成するメリットは、「BASICプログラムよりも実行速度が速い」ことが挙げられます。 当然ですが、マシン語には実行速度はかないません(プログラム言語の中では最速です)。<span>←当たり前だ</span></p><p>ただ、Ｃ言語でプログラムを作ったことがある人は、分かると思いますが、BASICに比べてファイルサイズが大きすぎるのです。</p>
+
+
+                            &hellip;&nbsp;<a href="/blog/2008/07/20/pokecom-lecture-02-file-size-compact.html">続きを見る</a></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa-regular fa-calendar-days"></i>&nbsp;
+        <span itemprop="datePublished" content="2008-07-20">2008年07月20日</span>
+        &nbsp;/&nbsp;
+        <i class="fa-solid fa-clock-rotate-left"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2008-07-20-pokecom-lecture-02-file-size-compact.md">変更履歴</a>
+        &nbsp;/&nbsp;
+        <i class="fa-solid fa-thumbtack"></i>&nbsp;<a href="/blog/2008/07/20/pokecom-lecture-02-file-size-compact.html">Permalink</a>
+        &nbsp;/&nbsp;
+                                <span class="categories"><i class="fa-solid fa-folder-open"></i>&nbsp;カテゴリ:
+                        <a href="/blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3">ポケコン</a>,                         <a href="/blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3%E8%AC%9B%E5%BA%A7">ポケコン講座</a></span>
+        &nbsp;/&nbsp;
+                                <span class="tags"><i class="fa-solid fa-tag"></i>&nbsp;タグ:
+                        <a href="/blog/tags/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3">ポケコン</a></span></span></div></footer></article><article class="full-contents"><header><h1><a href="/blog/2008/07/20/pokecom-lecture-01-key-input.html">C言語講座 第一回 キー入力</a></h1></header><div><h2 id="%E5%A7%8B%E3%82%81%E3%81%AB">始めに</h2><!-- 20050206 --><p>ポケコンの、BASIC には INKEY$ があるのに、Ｃ言語には、<code>getch()</code> と <code>kbhit()</code> しかないんじゃ? というわけで、第一回のＣ言語 講座は、キー入力を扱うことにします。</p>
 
 
                             &hellip;&nbsp;<a href="/blog/2008/07/20/pokecom-lecture-01-key-input.html">続きを見る</a></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa-regular fa-calendar-days"></i>&nbsp;
@@ -46,48 +60,7 @@
                         <a href="/blog/categories/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3">ポケコン</a></span>
         &nbsp;/&nbsp;
                                 <span class="tags"><i class="fa-solid fa-tag"></i>&nbsp;タグ:
-                        <a href="/blog/tags/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3">ポケコン</a></span></span></div></footer></article><article class="full-contents"><header><h1><a href="/blog/1970/01/01/tryout-jsdoc-on-macos.html">JSDoc を macOS で使ってみる</a></h1></header><div><p>JavaScript で書かれたドキュメントがないライブラリのドキュメントをが必要となったので、ドキュメントジェネレータである JSDoc を試してみる。</p><p>インストールは Homebrew で <code>[brew install jsdoc3](https://formulae.brew.sh/formula/jsdoc3)</code> としてインストールすれば簡単。</p><pre><code class="console">% jsdoc --help
-JSDoc 4.0.0 (Thu, 03 Nov 2022 18:37:15 GMT)
-
-Options:
-    -a, --access &lt;value&gt;         Only display symbols with the given access: "package", public", "protected", "private" or "undefined", or "all" for
-                                 all access levels. Default: all except "private"
-    -c, --configure &lt;value&gt;      The path to the configuration file. Default: path/to/jsdoc/conf.json
-    -d, --destination &lt;value&gt;    The path to the output folder. Default: ./out/
-    --debug                      Log information for debugging JSDoc.
-    -e, --encoding &lt;value&gt;       Assume this encoding when reading all source files. Default: utf8
-    -h, --help                   Print this message and quit.
-    --match &lt;value&gt;              When running tests, only use specs whose names contain &lt;value&gt;.
-    --nocolor                    When running tests, do not use color in console output.
-    -p, --private                Display symbols marked with the @private tag. Equivalent to "--access all". Default: false
-    -P, --package &lt;value&gt;        The path to the project's package file. Default: path/to/sourcefiles/package.json
-    --pedantic                   Treat errors as fatal errors, and treat warnings as errors. Default: false
-    -q, --query &lt;value&gt;          A query string to parse and store in jsdoc.env.opts.query. Example: foo=bar&amp;baz=true
-    -r, --recurse                Recurse into subdirectories when scanning for source files and tutorials.
-    -R, --readme &lt;value&gt;         The path to the project's README file. Default: path/to/sourcefiles/README.md
-    -t, --template &lt;value&gt;       The path to the template to use. Default: path/to/jsdoc/templates/default
-    -T, --test                   Run all tests and quit.
-    -u, --tutorials &lt;value&gt;      Directory in which JSDoc should search for tutorials.
-    -v, --version                Display the version number and quit.
-    --verbose                    Log detailed information to the console as JSDoc runs.
-    -X, --explain                Dump all found doclet internals to console and quit.
-
-Visit https://jsdoc.app/ for more information.
-</code></pre>
-
-
-                            &hellip;&nbsp;<a href="/blog/1970/01/01/tryout-jsdoc-on-macos.html">続きを見る</a></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa-regular fa-calendar-days"></i>&nbsp;
-        <span itemprop="datePublished" content="2023-08-16">2023年08月16日</span>
-        &nbsp;/&nbsp;
-        <i class="fa-solid fa-clock-rotate-left"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/1970-01-01-tryout-jsdoc-on-macos.md">変更履歴</a>
-        &nbsp;/&nbsp;
-        <i class="fa-solid fa-thumbtack"></i>&nbsp;<a href="/blog/1970/01/01/tryout-jsdoc-on-macos.html">Permalink</a>
-        &nbsp;/&nbsp;
-                                <span class="categories"><i class="fa-solid fa-folder-open"></i>&nbsp;カテゴリ:
-                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
-        &nbsp;/&nbsp;
-                                <span class="tags"><i class="fa-solid fa-tag"></i>&nbsp;タグ:
-                        <a href="/blog/tags/%E9%9B%91%E8%A8%98">雑記</a>,                         <a href="/blog/tags/jsdoc">jsdoc</a>,                         <a href="/blog/tags/macos">macos</a>,                         <a href="/blog/tags/homebrew">homebrew</a></span></span></div></footer></article><br /><nav><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/page/113" title=""><span class="title"><i class="fa-solid fa-chevron-left"></i> 新しい投稿</span></a></li><li class="col-md-6 text-muted"><i class="fa-solid fa-chevron-right"></i> 古い投稿</li></ul></nav></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa-solid fa-square-rss fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa-brands fa-x-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa-brands fa-github fa-2x"></i></a></li><li><a href="/profile"         ><i class="fa-solid fa-ellipsis fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /page/114"
+                        <a href="/blog/tags/%E3%83%9D%E3%82%B1%E3%82%B3%E3%83%B3">ポケコン</a></span></span></div></footer></article><br /><nav><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/page/113" title=""><span class="title"><i class="fa-solid fa-chevron-left"></i> 新しい投稿</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/page/115" title=""><span class="title">古い投稿</span><i class="fa-solid fa-chevron-right"></i></a></li></ul></nav></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa-solid fa-square-rss fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa-brands fa-x-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa-brands fa-github fa-2x"></i></a></li><li><a href="/profile"         ><i class="fa-solid fa-ellipsis fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /page/114"
                                   rel="nofollow"><i class="fa-solid fa-bug"></i> 誤字脱字などを報告</a></li></ul></div><div class="container text-center"><ul class="list-unstyled list-inline"><li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li><li class="text-muted">&copy; 2004-2023 sharkpp</li></ul></div><div class="container text-center text-muted"><ruby><rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
                                                             >Creative Commons Attribution 4.0 International License</a>.</rb><rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
                                                   >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp></ruby></div><div class="container text-center text-muted"><ruby><rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"

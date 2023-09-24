@@ -18,7 +18,76 @@
        ></li></ol><div class="row"><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
            href="/blog/"><i class="fa-solid fa-box-archive fa-4x"></i><br />アーカイブ</a></div><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
            href="/product/"><i class="fa-solid fa-download fa-4x"></i><br />作ったもの</a></div><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
-           href="/graffiti/"><i class="fa-solid fa-paintbrush fa-4x"></i><br />落書き</a></div></div><hr style="border-bottom: 1px dashed #aaa; border-top: none;" /><article class="full-contents"><header><h1><a href="/blog/2014/02/28/the-10th-anniversary.html">ほむぺ開設から10年が経ちました</a></h1></header><div><p>早い物でこのほむぺを開設から１０年が経ってしまいました。</p><p>まったくもって、時が経つのは早い物です(´・ω・｀)</p><p>また、10年も無事で過ごせこのほむぺも続けていけたら良いなと思います。</p><p>この後は、覚えてることをメモ書き程度に書き綴っていきますので、興味ない方は読み飛ばしてしまってかまいません。</p>
+           href="/graffiti/"><i class="fa-solid fa-paintbrush fa-4x"></i><br />落書き</a></div></div><hr style="border-bottom: 1px dashed #aaa; border-top: none;" /><article class="full-contents"><header><h1><a href="/blog/2014/03/30/oauth-providers-list.html">OAuth 認証を提供しているサービスをまとめてみました</a></h1></header><div><p>OAuth 認証を提供しているサービスをまとめてみました。</p><p>どちらかというと Opauth で使えそうなサービス一覧、が正しいのかもしれません。</p><p>ついでに、ステータスやアプリケーションの登録を行うためのサイトも全てではないですが調べてあります。</p><p>一覧は <a href="http://opauth.org/">Opauth - Multi-provider authentication framework for PHP</a> や <a href="https://packagist.org/packages/opauth/">Packagist</a> などを参考にしています。</p><table><tr><th align="center">
+Opauth
+</th><th align="left">
+プロバイダ
+</th><th align="center">
+OAuth
+</th><th align="left">
+開発サイト(アプリ登録など)
+</th><th align="left">
+ステータスの確認ページ
+</th></tr><tr><td align="center"><a href="https://packagist.org/packages/opauth/asana">○</a></td><td align="left"><a href="https://asana.com/">Asana</a></td><td align="center"><a href="http://tools.ietf.org/html/draft-ietf-oauth-v2-31">2.0 draft 31</a></td><td align="left"><a href="http://developer.asana.com/documentation/#AsanaConnect">API Documentation at Asana Developers</a></td><td align="left"><a href="https://asana.com/status">Asana - Status</a></td></tr><tr><td align="center"><a href="https://packagist.org/packages/opauth/bitbucket">○</a></td><td align="left"><a href="https://bitbucket.org/">Bitbucket</a></td><td align="center">
+1.0a
+</td><td align="left"><a href="https://confluence.atlassian.com/display/BITBUCKET/OAuth+on+Bitbucket">Atlassian Documentation</a></td><td align="left"><a href="http://status.bitbucket.org/">Atlassian Bitbucket Status</a></td></tr><tr><td align="center"><a href="https://github.com/rasa/opauth-disqus">○</a></td><td align="left"><a href="http://disqus.com/">Disqus</a></td><td align="center"><a href="http://tools.ietf.org/html/draft-ietf-oauth-v2-30">2.0 draft 30</a></td><td align="left"><a href="http://disqus.com/api/docs/auth/">Authentication - API - Disqus</a></td><td align="left"><a href="http://status.disqus.com/">Disqus Status</a></td></tr><tr><td align="center"><a href="https://github.com/arbales/opauth-do">○</a></td><td align="left"><a href="http://www.do.com/">Do</a></td><td align="center"></td><td align="left"></td><td align="left"></td></tr><tr><td align="center"><a href="https://packagist.org/packages/opauth/evernote">○</a></td><td align="left"><a href="http://evernote.com/">Evernote</a></td><td align="center">
+1.0a
+</td><td align="left"><a href="http://dev.evernote.com/intl/jp/appcenter/">Evernote Developers</a></td><td align="left"><a href="http://status.evernote.com/">Evernote Status | Evernote Corporation</a></td></tr><tr><td align="center"><a href="https://packagist.org/packages/opauth/facebook">○</a></td><td align="left"><a href="https://www.facebook.com/">Facebook</a></td><td align="center">
+2.0
+</td><td align="left"><a href="https://developers.facebook.com/apps/">Apps - Facebook Developers</a></td><td align="left"><a href="https://developers.facebook.com/status/">プラットフォームの現在の状態</a></td></tr><tr><td align="center"><a href="https://packagist.org/packages/opauth/flickr">○</a></td><td align="left"><a href="https://www.flickr.com/">Flickr</a></td><td align="center">
+1.0a
+</td><td align="left"><a href="http://www.flickr.com/services/api/auth.oauth.html">Flickr Services</a></td><td align="left"></td></tr><tr><td align="center"><a href="https://packagist.org/packages/opauth/frype">○</a></td><td align="left"><a href="http://www.frype.com/">Frype</a></td><td align="center"></td><td align="left"></td><td align="left"></td></tr><tr><td align="center"><a href="https://packagist.org/packages/opauth/foursquare">○</a></td><td align="left"><a href="https://ja.foursquare.com/?">Foursquare</a></td><td align="center"></td><td align="left"><a href="https://developer.foursquare.com/overview/auth#registration">foursquare for Developers</a></td><td align="left"><a href="http://status.foursquare.com/">Foursquare Status</a></td></tr><tr><td align="center"><a href="https://packagist.org/packages/opauth/github">○</a></td><td align="left"><a href="https://github.com/">GitHub</a></td><td align="center"></td><td align="left"><a href="https://github.com/settings/applications/new">New OAuth Application</a></td><td align="left"><a href="https://status.github.com/">GitHub System Status</a></td></tr><tr><td align="center"><a href="https://packagist.org/packages/opauth/google">○</a></td><td align="left"><a href="https://www.google.com/">Google</a></td><td align="center">
+2.0
+</td><td align="left"><a href="https://console.developers.google.com/">Google Cloud Console</a></td><td align="left"></td></tr><tr><td align="center">
+×
+</td><td align="left"><a href="http://gree.jp/">GREE</a></td><td align="center">
+1.0
+</td><td align="left"><a href="https://docs.developer.gree.net/ja/globaltechnicalspecs/oauth">GREE Developer Center</a></td><td align="left"></td></tr><tr><td align="center"><a href="https://packagist.org/packages/opauth/instagram">○</a></td><td align="left"><a href="http://instagram.com/">Instagram</a></td><td align="center">
+2.0
+</td><td align="left"><a href="http://instagram.com/developer/register/">Instagram開発者ドキュメント</a></td><td align="left"></td></tr><tr><td align="center"><a href="https://packagist.org/packages/opauth/linkedin">○</a></td><td align="left"><a href="https://www.linkedin.com/">LinkedIn</a></td><td align="center">
+2.0
+</td><td align="left"><a href="https://www.linkedin.com/secure/developer">LinkedIn Developer Network</a></td><td align="left"></td></tr><tr><td align="center"><a href="https://packagist.org/packages/opauth/live">○</a></td><td align="left"><a href="https://www.live.com">Windows Live</a></td><td align="center">
+2.0
+</td><td align="left"><a href="https://account.live.com/developers/applications">Live</a></td><td align="left"><a href="https://status.live.com">Service Status - Microsoft services</a></td></tr><tr><td align="center"><a href="https://packagist.org/packages/opauth/mailru">○</a></td><td align="left"><a href="http://mail.ru/">Mail.Ru</a></td><td align="center"></td><td align="left"></td><td align="left"></td></tr><tr><td align="center"><a href="https://packagist.org/packages/opauth/meetup">○</a></td><td align="left"><a href="http://www.meetup.com/">Meetup</a></td><td align="center">
+2.0
+</td><td align="left"><a href="https://secure.meetup.com/meetup_api/oauth_consumers/create">Your OAuth Consumers - Meetup</a></td><td align="left"></td></tr><tr><td align="center"><a href="https://packagist.org/packages/opauth/mixi">○</a></td><td align="left"><a href="https://mixi.jp/">mixi</a></td><td align="center">
+2.0
+</td><td align="left"><a href="https://sap.mixi.jp/home.pl">mixi</a></td><td align="left"></td></tr><tr><td align="center"><a href="https://packagist.org/packages/opauth/openid">○</a></td><td align="left">
+OpenID
+</td><td align="center"></td><td align="left"></td><td align="left"></td></tr><tr><td align="center"><a href="https://packagist.org/packages/opauth/paypal">○</a></td><td align="left"><a href="https://www.paypal.com/">PayPal</a></td><td align="center"></td><td align="left"><a href="https://developer.paypal.com/webapps/developer/applications">PayPal Developer</a></td><td align="left"></td></tr><tr><td align="center"><a href="https://packagist.org/packages/opauth/probook">○</a></td><td align="left"><a href="http://probook.bg/">Probook</a></td><td align="center">
+2.0
+</td><td align="left"></td><td align="left"></td></tr><tr><td align="center">
+×
+</td><td align="left"><a href="https://www.tumblr.com/">Tumblr</a></td><td align="center">
+1.0a
+</td><td align="left"><a href="https://www.tumblr.com/oauth/apps">Tumblr</a></td><td align="left"></td></tr><tr><td align="center"><a href="https://packagist.org/packages/opauth/sinaweibo">○</a></td><td align="left"><a href="http://weibo.com/">Sina Weibo (新浪微博)</a></td><td align="center"></td><td align="left"></td><td align="left"></td></tr><tr><td align="center"><a href="https://packagist.org/packages/opauth/thecity">○</a></td><td align="left"><a href="http://www.onthecity.org/">The City</a></td><td align="center">
+2.0
+</td><td align="left"><a href="https://api.onthecity.org/docs/apps">The City - API Docs</a></td><td align="left"></td></tr><tr><td align="center"><a href="https://packagist.org/packages/opauth/twitter">○</a></td><td align="left"><a href="https://twitter.com/">Twitter</a></td><td align="center">
+2.0
+</td><td align="left"><a href="https://dev.twitter.com/">Twitter Developers</a></td><td align="left"><a href="https://dev.twitter.com/status">API Status | Twitter Developers</a></td></tr><tr><td align="center"><a href="https://packagist.org/packages/opauth/vkontakte">○</a></td><td align="left"><a href="https://vk.com/">VKontakte</a></td><td align="center">
+2.0
+</td><td align="left"><a href="http://vk.com/developers.php">Developers｜VK</a></td><td align="left"></td></tr><tr><td align="center">
+×
+</td><td align="left"><a href="https://www.yahoo.com">Yahoo</a></td><td align="center"></td><td align="left"><a href="http://developer.yahoo.com/oauth/">Yahoo! Developer Network</a></td><td align="left"></td></tr><tr><td align="center"><a href="https://packagist.org/packages/opauth/yahoojp">○</a></td><td align="left"><a href="http://www.yahoo.co.jp/">Yahoo! Japan</a></td><td align="center">
+2.0
+</td><td align="left"><a href="https://e.developer.yahoo.co.jp/dashboard/">アプリケーションの管理</a></td><td align="left"></td></tr><tr><td align="center"><a href="https://packagist.org/packages/opauth/yandex">○</a></td><td align="left"><a href="http://www.yandex.ru/">yandex</a></td><td align="center"></td><td align="left"></td><td align="left"></td></tr><tr><td align="center">
+×
+</td><td align="left"><a href="http://www.hatena.ne.jp/">はてな</a></td><td align="center"></td><td align="left"><a href="http://developer.hatena.ne.jp/ja/documents/auth/apis/oauth/consumer">Hatena Developer Center</a></td><td align="left">
+なし
+</td></tr><tr><td align="center">
+×
+</td><td align="left"><a href="http://www.rakuten.co.jp/">楽天</a></td><td align="center"></td><td align="left"><a href="https://webservice.rakuten.co.jp/document/oauth">楽天ウェブサービス(RAKUTEN WEBSERVICE)</a></td><td align="left"><a href="https://webservice.rakuten.co.jp/status">楽天ウェブサービス: APIモニター</a></td></tr></table></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa-regular fa-calendar-days"></i>&nbsp;
+        <span itemprop="datePublished" content="2014-03-30">2014年03月30日</span>
+        &nbsp;/&nbsp;
+        <i class="fa-solid fa-clock-rotate-left"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2014-03-30-oauth-providers-list.md">変更履歴</a>
+        &nbsp;/&nbsp;
+        <i class="fa-solid fa-thumbtack"></i>&nbsp;<a href="/blog/2014/03/30/oauth-providers-list.html">Permalink</a>
+        &nbsp;/&nbsp;
+                                <span class="categories"><i class="fa-solid fa-folder-open"></i>&nbsp;カテゴリ:
+                        <a href="/blog/categories/%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a>,                         <a href="/blog/categories/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9">ウェブサービス</a></span>
+        &nbsp;/&nbsp;
+                                <span class="tags"><i class="fa-solid fa-tag"></i>&nbsp;タグ:
+                        <a href="/blog/tags/%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a>,                         <a href="/blog/tags/php">php</a>,                         <a href="/blog/tags/Develop">Develop</a>,                         <a href="/blog/tags/OAuth">OAuth</a>,                         <a href="/blog/tags/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9">ウェブサービス</a></span></span></div></footer></article><article class="full-contents"><header><h1><a href="/blog/2014/02/28/the-10th-anniversary.html">ほむぺ開設から10年が経ちました</a></h1></header><div><p>早い物でこのほむぺを開設から１０年が経ってしまいました。</p><p>まったくもって、時が経つのは早い物です(´・ω・｀)</p><p>また、10年も無事で過ごせこのほむぺも続けていけたら良いなと思います。</p><p>この後は、覚えてることをメモ書き程度に書き綴っていきますので、興味ない方は読み飛ばしてしまってかまいません。</p>
 
 
                             &hellip;&nbsp;<a href="/blog/2014/02/28/the-10th-anniversary.html">続きを見る</a></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa-regular fa-calendar-days"></i>&nbsp;
@@ -46,21 +115,7 @@
                         <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
         &nbsp;/&nbsp;
                                 <span class="tags"><i class="fa-solid fa-tag"></i>&nbsp;タグ:
-                        <a href="/blog/tags/C%2B%2B">C++</a>,                         <a href="/blog/tags/Qt">Qt</a>,                         <a href="/blog/tags/%E9%9B%91%E8%A8%98">雑記</a>,                         <a href="/blog/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A">勉強会</a></span></span></div></footer></article><article class="full-contents"><header><h1><a href="/blog/2014/01/01/happy-new-year-2014.html">HAPPY NEW YEAR 2014</a></h1></header><div><p>明けましておめでとうございます。</p><p>また今年一年よろしくお願いします。</p><p>ここ数年タスクはたまっていく一方でどうしようかと頭を抱えている感じなのですorz</p><p>とりあえず、</p>
-
-
-                            &hellip;&nbsp;<a href="/blog/2014/01/01/happy-new-year-2014.html">続きを見る</a></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa-regular fa-calendar-days"></i>&nbsp;
-        <span itemprop="datePublished" content="2014-01-01">2014年01月01日</span>
-        &nbsp;/&nbsp;
-        <i class="fa-solid fa-clock-rotate-left"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2014-01-01-happy-new-year-2014.md">変更履歴</a>
-        &nbsp;/&nbsp;
-        <i class="fa-solid fa-thumbtack"></i>&nbsp;<a href="/blog/2014/01/01/happy-new-year-2014.html">Permalink</a>
-        &nbsp;/&nbsp;
-                                <span class="categories"><i class="fa-solid fa-folder-open"></i>&nbsp;カテゴリ:
-                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
-        &nbsp;/&nbsp;
-                                <span class="tags"><i class="fa-solid fa-tag"></i>&nbsp;タグ:
-                        <a href="/blog/tags/%E9%9B%91%E8%A8%98">雑記</a>,                         <a href="/blog/tags/Happy%20New%20Year">Happy New Year</a></span></span></div></footer></article><br /><nav><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/page/41" title=""><span class="title"><i class="fa-solid fa-chevron-left"></i> 新しい投稿</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/page/43" title=""><span class="title">古い投稿</span><i class="fa-solid fa-chevron-right"></i></a></li></ul></nav></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa-solid fa-square-rss fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa-brands fa-x-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa-brands fa-github fa-2x"></i></a></li><li><a href="/profile"         ><i class="fa-solid fa-ellipsis fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /page/42"
+                        <a href="/blog/tags/C%2B%2B">C++</a>,                         <a href="/blog/tags/Qt">Qt</a>,                         <a href="/blog/tags/%E9%9B%91%E8%A8%98">雑記</a>,                         <a href="/blog/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A">勉強会</a></span></span></div></footer></article><br /><nav><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/page/41" title=""><span class="title"><i class="fa-solid fa-chevron-left"></i> 新しい投稿</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/page/43" title=""><span class="title">古い投稿</span><i class="fa-solid fa-chevron-right"></i></a></li></ul></nav></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa-solid fa-square-rss fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa-brands fa-x-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa-brands fa-github fa-2x"></i></a></li><li><a href="/profile"         ><i class="fa-solid fa-ellipsis fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /page/42"
                                   rel="nofollow"><i class="fa-solid fa-bug"></i> 誤字脱字などを報告</a></li></ul></div><div class="container text-center"><ul class="list-unstyled list-inline"><li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li><li class="text-muted">&copy; 2004-2023 sharkpp</li></ul></div><div class="container text-center text-muted"><ruby><rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
                                                             >Creative Commons Attribution 4.0 International License</a>.</rb><rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
                                                   >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp></ruby></div><div class="container text-center text-muted"><ruby><rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
