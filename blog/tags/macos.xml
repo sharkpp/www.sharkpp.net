@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="https://www.sharkpp.net/blog/tags/macos.xml" rel="self"/>
     <link href="https://www.sharkpp.net/"/>
-    <updated>2023-09-24T14:55:23+00:00</updated>
+    <updated>2023-12-09T13:59:59+00:00</updated>
     <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -63,6 +63,19 @@ Doctor summary (to see all details, run flutter doctor -v):
 <pre><code class="console">% flutter upgrade
 </code></pre>
 
+<p><code>flutter upgrade</code> を実行した時に <code>Unknown flutter tag.</code> と出る場合は</p>
+
+<pre><code class="console">% flutter upgrade
+Unknown flutter tag. Abandoning upgrade to avoid destroying local changes. It is recommended to use git directly if not working on an official channel.
+</code></pre>
+
+<p>順に次のコマンドを実行すればアップデート可能になるようです。</p>
+
+<pre><code class="console">% flutter channel stable
+% flutter channel
+% flutter upgrade --force
+</code></pre>
+
 <h2 id="%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97">開発環境のセットアップ</h2>
 
 <p><a href="https://docs.flutter.dev/get-started/editor">Set up an editor</a> を参考に Visual Studio Code の環境を整えます。</p>
@@ -111,13 +124,14 @@ Doctor summary (to see all details, run flutter doctor -v):
 <li><a href="https://zenn.dev/kboy/books/ca6a9c93fd23f3/viewer/5232dc">Flutterの環境構築(Mac編)｜Flutter基礎入門 by Flutter大学</a></li>
 <li><a href="https://zenn.dev/hagakun_dev/articles/2f2eb65b892bea">Flutter開発を高速化するVSCode拡張機能を5つ紹介🎉</a></li>
 <li><a href="https://zenn.dev/imasaka0909/articles/00ebfaf74f9cea">【Mac M1】「flutter doctor」実行時の「cmdline-tools component is missing」の解決法</a></li>
+<li><a href="https://zenn.dev/flutternyumon/articles/a196bb3f0761e8">Flutter upgradeでUnknown flutter tag ***と表示される際の対処法</a></li>
 </ul>
 ]]></content>
         </entry>
             <entry>
             <title type="html"><![CDATA[JSDoc を macOS で使ってみる]]></title>
             <link href="https://www.sharkpp.net/blog/1970/01/01/tryout-jsdoc-on-macos.html"/>
-            <updated>2023-09-24T14:55:23+00:00</updated>
+            <updated>2023-12-09T13:59:59+00:00</updated>
             <id>https://www.sharkpp.net/blog/1970/01/01/tryout-jsdoc-on-macos.html</id>
             <content type="html"><![CDATA[<p>JavaScript で書かれたドキュメントがないライブラリのドキュメントをが必要となったので、ドキュメントジェネレータである JSDoc を試してみる。</p>
 
