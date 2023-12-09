@@ -60,6 +60,21 @@ Doctor summary (to see all details, run flutter doctor -v):
 % flutter upgrade
 ```
 
+`flutter upgrade` を実行した時に `Unknown flutter tag.` と出る場合は
+
+```console
+% flutter upgrade
+Unknown flutter tag. Abandoning upgrade to avoid destroying local changes. It is recommended to use git directly if not working on an official channel.
+```
+
+順に次のコマンドを実行すればアップデート可能になるようです。
+
+```console
+% flutter channel stable
+% flutter channel
+% flutter upgrade --force
+```
+
 ## 開発環境のセットアップ
 
 [Set up an editor](https://docs.flutter.dev/get-started/editor) を参考に Visual Studio Code の環境を整えます。
@@ -101,3 +116,5 @@ Doctor summary (to see all details, run flutter doctor -v):
 * [Flutterの環境構築(Mac編)｜Flutter基礎入門 by Flutter大学](https://zenn.dev/kboy/books/ca6a9c93fd23f3/viewer/5232dc)
 * [Flutter開発を高速化するVSCode拡張機能を5つ紹介🎉](https://zenn.dev/hagakun_dev/articles/2f2eb65b892bea)
 * [【Mac M1】「flutter doctor」実行時の「cmdline-tools component is missing」の解決法](https://zenn.dev/imasaka0909/articles/00ebfaf74f9cea)
+* [Flutter upgradeでUnknown flutter tag ***と表示される際の対処法](https://zenn.dev/flutternyumon/articles/a196bb3f0761e8)
+
