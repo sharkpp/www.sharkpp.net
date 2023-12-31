@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="https://www.sharkpp.net/blog/tags/jsdoc.xml" rel="self"/>
     <link href="https://www.sharkpp.net/"/>
-    <updated>2023-12-31T10:05:57+00:00</updated>
+    <updated>2023-12-31T15:03:07+00:00</updated>
     <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -11,7 +11,7 @@
             <entry>
             <title type="html"><![CDATA[JSDoc を macOS で使ってみる]]></title>
             <link href="https://www.sharkpp.net/blog/1970/01/01/tryout-jsdoc-on-macos.html"/>
-            <updated>2023-12-31T10:05:57+00:00</updated>
+            <updated>2023-12-31T15:03:07+00:00</updated>
             <id>https://www.sharkpp.net/blog/1970/01/01/tryout-jsdoc-on-macos.html</id>
             <content type="html"><![CDATA[<p>JavaScript で書かれたドキュメントがないライブラリのドキュメントをが必要となったので、ドキュメントジェネレータである JSDoc を試してみる。</p>
 
