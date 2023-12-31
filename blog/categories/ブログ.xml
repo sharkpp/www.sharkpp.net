@@ -3,11 +3,57 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="https://www.sharkpp.net/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0.xml" rel="self"/>
     <link href="https://www.sharkpp.net/"/>
-    <updated>2023-12-09T13:59:59+00:00</updated>
+    <updated>2023-12-31T10:05:57+00:00</updated>
     <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[大晦日@2023]]></title>
+            <link href="https://www.sharkpp.net/blog/2023/12/31/new-years-eve-2023.html"/>
+            <updated>2023-12-31T19:05:00+00:00</updated>
+            <id>https://www.sharkpp.net/blog/2023/12/31/new-years-eve-2023.html</id>
+            <content type="html"><![CDATA[<h2 id="1-%E5%B9%B4%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A">1 年を振り返り</h2>
+
+<p>2023年も今日が最後の日、大晦日になりました。</p>
+
+<p>この一年、悪いニュースも良いなニュースも色々ありました。</p>
+
+<p>相変わらず仕事も家庭も忙しくなかなか趣味の時間が取れなくて残念な一年でした。</p>
+
+<p>今年も恒例(？)の仮想除夜の鐘アプリを設置しておきます。
+そろそろリメイクしたいな。</p>
+
+<iframe src="/files/joya_no_kane.html" width="128" height="128" frameborder="0" scrolling="no"></iframe>
+
+<h2 id="%E7%B5%90%E6%9E%9C">結果</h2>
+
+<p>まずは、今年の正月 <a href="/blog/2023/01/01/happy-new-year-2023.html">HAPPY NEW YEAR 2023</a> に掲げた目標です。</p>
+
+<ul>
+<li>ホームページの更新</li>
+</ul>
+
+<p>今年も全くできてない...
+頑張ろう...</p>
+
+<ul>
+<li>ホームページのビルドシステムの改善</li>
+</ul>
+
+<p>こちらも出来てない... けど Jekyll でもいいかもと思いつつある。</p>
+
+<h2 id="%E5%8F%8D%E7%9C%81">反省</h2>
+
+<p>来年は新しいことに挑戦していきたいところ。</p>
+
+<p>という感じで、今年の反省会終了です。</p>
+
+<p><img src="/images/20231230_kamonanban_soba.jpg" alt="鴨南蛮蕎麦" /></p>
+
+<p>それでは来年もよろしくお願いします。</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[macOS M1 上の Visual Studio Code で Flutter の開発環境を作ってみた]]></title>
             <link href="https://www.sharkpp.net/blog/2023/09/24/flutter-setup-on-macos.html"/>
@@ -1355,63 +1401,6 @@ $ pkgscripts/PkgCreate.py -v 7.0 -p braswell -c ExamplePackage
 <li><a href="https://kb.synology.com/ja-jp/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have">Synology NAS に搭載されている CPU の種類は？ - Synology ナレッジセンター</a></li>
 <li><a href="https://global.download.synology.com/download/Document/Software/DeveloperGuide/Firmware/DSM/7.0/enu/DSM_Developer_Guide_7_0_Beta.pdf">DSM Developer Guide 7.0 BETA</a></li>
 <li><a href="https://global.download.synology.com/download/Document/Software/DeveloperGuide/Firmware/DSM/6.0/enu/DSM_Developer_Guide_6_0.pdf">Synology DSM6.0 Developer Guide</a></li>
-</ul>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Synology DS416play の OS を DSM 7.0 へアップグレードしてみた]]></title>
-            <link href="https://www.sharkpp.net/blog/2021/08/07/synology-ds416play-upgrade-dsm7.html"/>
-            <updated>2021-08-07T19:35:00+00:00</updated>
-            <id>https://www.sharkpp.net/blog/2021/08/07/synology-ds416play-upgrade-dsm7.html</id>
-            <content type="html"><![CDATA[<p><a href="http://web.archive.org/web/20170709043315if_/https://www.synology.com/ja-jp/products/DS216play">Synology DS416play</a> の OS を DSM 7.0 へアップグレードした時の記録。</p>
-
-<p>7月中旬に DSM 7.0 の正式リリースがでるも、しばらくは様子見にしていたけど、致命的な不具合もなさそうだし <a href="https://www.synology.com/ja-jp/DSM70/SynologyPhotos">Synology Photos</a> を使ってみたくなったのでアップグレードしてみることとした。</p>
-
-<h1 id="%E3%82%A2%E3%83%83%E3%83%97%E3%82%B0%E3%83%AC%E3%83%BC%E3%83%89">アップグレード</h1>
-
-<p>DSM の更新のページで、DSM 7 のアップグレードボタンをクリック。</p>
-
-<p><a href="/images/20210807_ds416play_01_dsm624_upgrade.png"><img src="/thumbs/188aec8942418697fa41872a185a0a40-640x640.png" alt="DSM 6.2"></a> <a href="/images/20210807_ds416play_02_dsm624_upgrade.png"><img src="/thumbs/17a18e29156680f0d987732fa442a9f2-640x640.png" alt="DSM 6.2"></a></p>
-
-<p>インストール中も UI が途切れることなく進めた。
-通信途切れるとページが真っ白とかになるけどそういうことはなかった。</p>
-
-<ol>
-<li>DSMの更新</li>
-<li>再起動</li>
-<li>システムデータベースのアップデート</li>
-<li>パッケージの更新</li>
-</ol>
-
-<p>の順。</p>
-
-<p><a href="/images/20210807_ds416play_03_dsm7_install.png"><img src="/thumbs/29df10ae6ad82b4b6814d7f42a3ccf72-640x640.png" alt="DSMの更新中"></a> <a href="/images/20210807_ds416play_04_dsm7_install.png"><img src="/thumbs/dddaa7e13f7061ae8577b50be95bcae1-640x640.png" alt="再起動中"></a> <a href="/images/20210807_ds416play_05_dsm7_install.png"><img src="/thumbs/b551480188c96166802ec0c35c4306fe-640x640.png" alt="システムデータベースのアップデート"></a> <a href="/images/20210807_ds416play_06_dsm7_install.png"><img src="/thumbs/e3fe86d4f3664cd59dd2a16eeee68f5b-640x640.png" alt="パッケージの更新中"></a></p>
-
-<p>ログイン画面も変わってた。</p>
-
-<p><a href="/images/20210807_ds416play_07_dsm7_login.png"><img src="/thumbs/da61554afd17274f152083ba81a85ef7-640x640.png" alt="ログイン画面"></a></p>
-
-<p>ダッシュボードも少し変わってる。</p>
-
-<p><a href="/images/20210807_ds416play_08_dsm7_dashboard.png"><img src="/thumbs/0083183d2ae9355e05a3a1f94fed1448-640x640.png" alt="ダッシュボード"></a></p>
-
-<p>Python3 は OS 組み込みになったようなのでアンインストール</p>
-
-<p><a href="/images/20210807_ds416play_09_dsm7_python3_uninstall.png"><img src="/thumbs/f3cfc56a747556aff9323c6ca8a010d5-640x640.png" alt="ダッシュボード"></a></p>
-
-<p>Moments や Photo Station は <a href="https://www.synology.com/ja-jp/DSM70/SynologyPhotos">Synology Photos</a> に自動で更新された様子。</p>
-
-<p><a href="/images/20210807_ds416play_10_dsm7_photos.png"><img src="/thumbs/07b82974089ba34c11617214a41eb829-640x640.png" alt="Synology Photos"></a> <a href="/images/20210807_ds416play_11_dsm7_photos.png"><img src="/thumbs/9b310ab8721da76a433f67fb7f07df66-640x640.png" alt="Synology Photos"></a></p>
-
-<p>アップデート後の情報</p>
-
-<p><a href="/images/20210807_ds416play_12_dsm7.png"><img src="/thumbs/c6f157c3dc867fed0c9c6241f94a0462-640x640.png" alt="DSM 7.0"></a></p>
-
-<h1 id="%E7%8F%BE%E7%8A%B6%E6%B0%97%E3%81%8C%E3%81%A4%E3%81%84%E3%81%9F%E3%81%93%E3%81%A8">現状気がついたこと</h1>
-
-<ul>
-<li>Chromecast with Google TV 向けの Synology Photos アプリは現状なさそう。
-Photo アプリは と接続できない様子なので表示するには <a href="https://kb.synology.com/en-my/DSM/help/SynologyPhotos/Android?version=7#b_28">Synology Knowledge Center</a> の To cast photos to TVs or external devices: を参考にキャストするしかなさそう</li>
 </ul>
 ]]></content>
         </entry>
