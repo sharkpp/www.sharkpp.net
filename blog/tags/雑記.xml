@@ -3,11 +3,64 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="https://www.sharkpp.net/blog/tags/%E9%9B%91%E8%A8%98.xml" rel="self"/>
     <link href="https://www.sharkpp.net/"/>
-    <updated>2023-12-31T15:03:06+00:00</updated>
+    <updated>2024-12-31T10:59:09+00:00</updated>
     <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[大晦日@2024]]></title>
+            <link href="https://www.sharkpp.net/blog/2024/12/31/new-years-eve-2024.html"/>
+            <updated>2024-12-31T19:55:00+00:00</updated>
+            <id>https://www.sharkpp.net/blog/2024/12/31/new-years-eve-2024.html</id>
+            <content type="html"><![CDATA[<h2 id="1-%E5%B9%B4%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A">1 年を振り返り</h2>
+
+<p>2024年も今日が最後の日、大晦日になりました。</p>
+
+<p>今年は元日に大地震があり、悪い意味での驚きとともに始まった一年でした。
+また、ドラマやアニメで活躍しているのを見ていた有名人が続々と亡くなり、自分も年をくってきたなという感想を持ったところ。</p>
+
+<p>相変わらず仕事も家庭も忙しいままでどうにかならんもんかと。</p>
+
+<p>今年も恒例(？)の仮想除夜の鐘アプリを設置しておきます。</p>
+
+<iframe src="/files/joya_no_kane.html" width="128" height="128" frameborder="0" scrolling="no"></iframe>
+
+<p>今年、震災に遭われた方々は来年はよい年でありますように。</p>
+
+<h2 id="%E7%B5%90%E6%9E%9C">結果</h2>
+
+<p>まずは、今年の正月 <a href="/blog/2024/01/01/happy-new-year-2024.html">HAPPY NEW YEAR 2024</a> に掲げた目標です。</p>
+
+<ul>
+<li>ホームページの更新</li>
+</ul>
+
+<p>今年も全くできてない...
+頑張ろう...</p>
+
+<ul>
+<li>何かアプリを作りたい</li>
+</ul>
+
+<p>こちらも出来てない...</p>
+
+<p>一つは、大晦日から元日が少し楽しくなりそうなアプリだけど、毎回年末に思い出して作れない感じ。</p>
+
+<p>あとは、年末にふと思いついて今必死こいて作っている感じ。
+多分、この年末年始の休みでやらないとまずいので頑張る...</p>
+
+<h2 id="%E5%8F%8D%E7%9C%81">反省</h2>
+
+<p>来年こそ新しいことに挑戦していきたいところ。</p>
+
+<p>という感じで、今年の反省会終了です。</p>
+
+<p><img src="/images/20241231_tempura_zarusoba.jpg" alt="天麩羅ざる蕎麦" /></p>
+
+<p>それでは来年もよろしくお願いします。</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[HAPPY NEW YEAR 2024]]></title>
             <link href="https://www.sharkpp.net/blog/2024/01/01/happy-new-year-2024.html"/>
@@ -802,59 +855,6 @@ GatsbyJS + GitHub Action でビルドできるといい感じかなと。</p>
 <p>現状は、ほぼアニメでたまに映画とかみてるけど、買ってよかったガジェットにランクインな感じ。</p>
 
 <p>7000円ぐらいするけど、元は十分取れると思う。</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[HAPPY NEW YEAR 2021]]></title>
-            <link href="https://www.sharkpp.net/blog/2021/01/01/happy-new-year-2021.html"/>
-            <updated>2021-01-01T22:30:00+00:00</updated>
-            <id>https://www.sharkpp.net/blog/2021/01/01/happy-new-year-2021.html</id>
-            <content type="html"><![CDATA[<p>明けましておめでとうございます。</p>
-
-<p>今年もまだまだ新型コロナは収まりそうになさそうですが、それに負けることなく過ごせればと思います。</p>
-
-<p>では、今年の目標をば。</p>
-
-<h2 id="%E7%9B%AE%E6%A8%99">目標</h2>
-
-<h3 id="%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0">ホームページの更新</h3>
-
-<p>最低でも月一ぐらいでは更新したいと思います。
-つまるところ、それには何かしらネタを仕込む必要があるかなと。</p>
-
-<p>とりあえず、ReactJSを使ってウェブアプリをちょこちょこ作りつつ、Qtでも何か作ってみようかなと。</p>
-
-<p>あとは、React native とかも気になっているところ。</p>
-
-<h3 id="%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E6%94%B9%E5%96%84">ホームページのビルドシステムの改善</h3>
-
-<p>現状、php 製の Sculpin でホームページをビルドしてます。
-が、年末に記事を書いたらビルドが失敗して慌てて応急手当てをした感じで、さすがにこれはなんとかしないとって感じをひしひしと。
-で、 Sculpin もそこそこ更新はされているのでいいかもだけど、せっかくなので GatsbyJS で構築してみようかと。
-まあ、思い立ったのは去年のことだけど...</p>
-
-<p>あと、CI も GitHub Action に変えて GitHub のみで完結できそうなので変更したいところ。</p>
-
-<p>あとは、今更 http もないだろうから https にもしてみたいな。</p>
-
-<h3 id="%E3%81%9D%E3%81%AE%E4%BB%96">その他</h3>
-
-<p>その他には...</p>
-
-<ul>
-<li>ガジェットの記事</li>
-<li>DIYの記事</li>
-</ul>
-
-<p>とかも随時していきたいところ。</p>
-
-<p>ああ、あとは、お金貯めて Apple MacBook Air (13", M1, 2020) とか欲しいな... そろそろノートPC買い換えたい...</p>
-
-<h2 id="%E3%81%82%E3%81%91%E3%81%8A%E3%82%81%E3%81%93%E3%81%A8%E3%82%88%E3%82%8D">あけおめことよろ</h2>
-
-<p>ではでは、今年もまた一年、よろしくお願いいたします。</p>
-
-<p><img src="/images/20210101_first_sunrise.jpg" alt="2021年の初日の出" /></p>
 ]]></content>
         </entry>
     </feed>

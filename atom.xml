@@ -3,11 +3,64 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="https://www.sharkpp.net/atom.xml" rel="self"/>
     <link href="https://www.sharkpp.net/"/>
-    <updated>2023-12-31T15:03:05+00:00</updated>
+    <updated>2024-12-31T10:59:08+00:00</updated>
     <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[大晦日@2024]]></title>
+            <link href="https://www.sharkpp.net/blog/2024/12/31/new-years-eve-2024.html"/>
+            <updated>2024-12-31T19:55:00+00:00</updated>
+            <id>https://www.sharkpp.net/blog/2024/12/31/new-years-eve-2024.html</id>
+            <content type="html"><![CDATA[<h2 id="1-%E5%B9%B4%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A">1 年を振り返り</h2>
+
+<p>2024年も今日が最後の日、大晦日になりました。</p>
+
+<p>今年は元日に大地震があり、悪い意味での驚きとともに始まった一年でした。
+また、ドラマやアニメで活躍しているのを見ていた有名人が続々と亡くなり、自分も年をくってきたなという感想を持ったところ。</p>
+
+<p>相変わらず仕事も家庭も忙しいままでどうにかならんもんかと。</p>
+
+<p>今年も恒例(？)の仮想除夜の鐘アプリを設置しておきます。</p>
+
+<a href="/files/joya_no_kane.html">/files/joya_no_kane.html</a>
+
+<p>今年、震災に遭われた方々は来年はよい年でありますように。</p>
+
+<h2 id="%E7%B5%90%E6%9E%9C">結果</h2>
+
+<p>まずは、今年の正月 <a href="/blog/2024/01/01/happy-new-year-2024.html">HAPPY NEW YEAR 2024</a> に掲げた目標です。</p>
+
+<ul>
+<li>ホームページの更新</li>
+</ul>
+
+<p>今年も全くできてない...
+頑張ろう...</p>
+
+<ul>
+<li>何かアプリを作りたい</li>
+</ul>
+
+<p>こちらも出来てない...</p>
+
+<p>一つは、大晦日から元日が少し楽しくなりそうなアプリだけど、毎回年末に思い出して作れない感じ。</p>
+
+<p>あとは、年末にふと思いついて今必死こいて作っている感じ。
+多分、この年末年始の休みでやらないとまずいので頑張る...</p>
+
+<h2 id="%E5%8F%8D%E7%9C%81">反省</h2>
+
+<p>来年こそ新しいことに挑戦していきたいところ。</p>
+
+<p>という感じで、今年の反省会終了です。</p>
+
+<p><img src="/images/20241231_tempura_zarusoba.jpg" alt="天麩羅ざる蕎麦" /></p>
+
+<p>それでは来年もよろしくお願いします。</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[HAPPY NEW YEAR 2024]]></title>
             <link href="https://www.sharkpp.net/blog/2024/01/01/happy-new-year-2024.html"/>
@@ -922,57 +975,6 @@ GatsbyJS + GitHub Action でビルドできるといい感じかなと。</p>
 <h2 id="%E3%81%82%E3%81%91%E3%81%8A%E3%82%81%E3%81%93%E3%81%A8%E3%82%88%E3%82%8D">あけおめことよろ</h2>
 
 <p>今年もまた一年、よろしくお願いいたします。</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[大晦日@2021]]></title>
-            <link href="https://www.sharkpp.net/blog/2021/12/31/new-years-eve-2021.html"/>
-            <updated>2021-12-31T10:13:00+00:00</updated>
-            <id>https://www.sharkpp.net/blog/2021/12/31/new-years-eve-2021.html</id>
-            <content type="html"><![CDATA[<h2 id="1-%E5%B9%B4%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A">1 年を振り返り</h2>
-
-<p>今年も毎度のこと大晦日の今日だけとなりました。</p>
-
-<p>今年の年末は新型コロナも一時的に下火となり、久方ぶりにコミケも開催中だとのこと。
-まあ、コミケ行ってないですが...</p>
-
-<p>個人的な文でいうと、働き方も引き続き在宅がメインとなって色々時間も作りやすく... なってないんだなぁこれが... 
-なかなか時間が取れず(＆MP不足で)、４本５本ぐらいの記事をまとめきれてない...</p>
-
-<blockquote>
-  <p>自分自身のことについてはまあ諸々の理由があって勉強会もほとんど参加できなかったのが残念ですが、来年の後半ぐらいから多少マシになる... といいなと。</p>
-  
-  <p>これは、まだもう少しイベントがありそうだけどなんとかしたいですね。</p>
-</blockquote>
-
-<p>去年の年末に書いた件はまあ何とかイベントが消化（追加のイベントもあったけど）したので、来年こそはなんとか時間を作っていきたいなってところ。</p>
-
-<p>今年も恒例(？)の仮想除夜の鐘アプリを設置しておきます。</p>
-
-<a href="/files/joya_no_kane.html">/files/joya_no_kane.html</a>
-
-<h2 id="%E7%B5%90%E6%9E%9C">結果</h2>
-
-<p>まずは、今年の正月 <a href="/blog/2021/01/01/happy-new-year-2021.html">HAPPY NEW YEAR 2021</a> に掲げた目標です。</p>
-
-<ul>
-<li>ホームページの更新</li>
-<li>ホームページのビルドシステムの改善</li>
-</ul>
-
-<p>うん、全くできてないね...
-頑張ろう...</p>
-
-<h2 id="%E5%8F%8D%E7%9C%81">反省</h2>
-
-<p>なかなかに、HPもMPも低空飛行、つらぽよだなぁと。</p>
-
-<p>来年こそ頑張ろう。
-という感じで、今年の反省会終了です。</p>
-
-<p><img src="/images/20211229_toshikoshi_soba.jpg" alt="年越しそば" /></p>
-
-<p>それでは来年もよろしくお願いします。</p>
 ]]></content>
         </entry>
     </feed>

@@ -2,25 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.sharkpp.net</loc>
-    <lastmod>2023-12-31</lastmod>
+    <lastmod>2024-12-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.sharkpp.net/blog</loc>
-    <lastmod>2023-12-31T15:03:05+00:00</lastmod>
+    <lastmod>2024-12-31T10:59:08+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.sharkpp.net/blog/categories</loc>
-    <lastmod>2023-12-31T15:03:05+00:00</lastmod>
+    <lastmod>2024-12-31T10:59:08+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.sharkpp.net/blog/tags</loc>
-    <lastmod>2023-12-31T15:03:05+00:00</lastmod>
+    <lastmod>2024-12-31T10:59:08+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -53,6 +53,12 @@
     <lastmod>2015-05-01T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.sharkpp.net/blog/2024/12/31/new-years-eve-2024.html</loc>
+    <lastmod>2024-12-31T19:55:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.sharkpp.net/blog/2024/01/01/happy-new-year-2024.html</loc>
@@ -2120,7 +2126,7 @@
   </url>
   <url>
     <loc>https://www.sharkpp.net/blog/1970/01/01/tryout-jsdoc-on-macos.html</loc>
-    <lastmod>2023-12-31T15:03:05+00:00</lastmod>
+    <lastmod>2024-12-31T10:59:08+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
