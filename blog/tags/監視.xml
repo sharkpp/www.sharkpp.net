@@ -3,7 +3,7 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="https://www.sharkpp.net/blog/tags/%E7%9B%A3%E8%A6%96.xml" rel="self"/>
     <link href="https://www.sharkpp.net/"/>
-    <updated>2025-04-27T15:39:45+00:00</updated>
+    <updated>2025-04-27T15:55:58+00:00</updated>
     <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
@@ -182,7 +182,7 @@
      name: Upptime
 </code></pre>
 
-<p>こんな感じに設定したので、 https://upptime.sharkpp.net/ で確認できるようになった。</p>
+<p>こんな感じに設定したので、 <a href="https://upptime.sharkpp.net/">upptime.sharkpp.net</a> で確認できるようになった。</p>
 
 <h2 id="github-actions-%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%AE%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D">GitHub Actions ワークフローの動作確認</h2>
 
@@ -204,7 +204,7 @@ Error: Unable to find workflow 'Graphs CI' in sharkpp/upptime 😥
 
 <h2 id="%E7%B5%90%E6%9E%9C">結果</h2>
 
-<p>正常に動作し始め https://upptime.sharkpp.net/ で確認できるようになった。</p>
+<p>正常に動作し始め <a href="https://upptime.sharkpp.net/">upptime.sharkpp.net</a> で確認できるようになった。</p>
 
 <p><img src="/images/20250428_05_status_page.png" alt="status page" /></p>
 
