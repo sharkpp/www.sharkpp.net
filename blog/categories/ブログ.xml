@@ -3,11 +3,219 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="https://www.sharkpp.net/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0.xml" rel="self"/>
     <link href="https://www.sharkpp.net/"/>
-    <updated>2025-01-01T10:58:25+00:00</updated>
+    <updated>2025-04-27T15:39:44+00:00</updated>
     <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Upptime を試してみた]]></title>
+            <link href="https://www.sharkpp.net/blog/2025/04/28/install-upptime.html"/>
+            <updated>2025-04-28T00:35:00+00:00</updated>
+            <id>https://www.sharkpp.net/blog/2025/04/28/install-upptime.html</id>
+            <content type="html"><![CDATA[<p><a href="https://upptime.js.org/">Upptime</a> という、OSSを偶然見つけたので、試しに使ってみることに。</p>
+
+<p>Upptime は、ウェブサイトの死活監視をするツールで、自分でセルフホストする形式で、サーバーも GitHub Actions を使うのでお手軽に運用できる感じ。</p>
+
+<h2 id="%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97">セットアップ</h2>
+
+<p>基本的には <a href="https://upptime.js.org/docs/get-started">Getting started | Upptime</a> を元にセットアップします。</p>
+
+<h3 id="%E3%83%AC%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%82%92%E3%83%95%E3%82%A9%E3%83%BC%E3%82%AF">レポジトリをフォーク</h3>
+
+<p><a href="https://github.com/upptime/upptime">upptime/upptime</a> を <code>Use this template</code> ➡️ <code>Create a new repository</code> からレポジトリを fork します。</p>
+
+<p><img src="/images/20250428_01_repository_fork.png" alt="repository fork" /></p>
+
+<p>この時、<code>Repository name</code> 蘭は任意の値を設定すれば問題ないが、 <code>Include all branches</code> のチェックは必ず必要。</p>
+
+<p>また、特に理由がない場合、レポジトリは <code>Public</code> がおすすめ。これは Upptime は仕組み上、毎月数千分のビルド時間(デフォルト設定では約3,000分)を使用するため、<code>Private</code> の場合、その分の利用料が生じるため。</p>
+
+<h3 id="%E3%83%95%E3%82%A9%E3%83%BC%E3%82%AF%E5%BE%8C%E3%81%AE%E4%BD%9C%E6%A5%AD">フォーク後の作業</h3>
+
+<p>GitHub Pages は、<code>Include all branches</code> をチェックしていれば、自動で有効になるはず。</p>
+
+<h3 id="%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%82%B7%E3%83%BC%E3%82%AF%E3%83%AC%E3%83%83%E3%83%88%E3%82%92%E4%BD%9C%E6%88%90%EF%BC%86%E8%A8%AD%E5%AE%9A">リポジトリシークレットを作成＆設定</h3>
+
+<p>アカウントの <code>Settings</code> ➡️ <code>Developer settings</code> ➡️ <code>Personal access tokens</code> ➡️ <code>Fine-grained personal access tokens</code> ➡️ <code>Generate new token</code> からリポジトリシークレットを作成。</p>
+
+<table>
+<thead>
+<tr>
+  <th>種類</th>
+  <th>値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>Expiration</code></td>
+  <td>90日などに設定</td>
+</tr>
+<tr>
+  <td><code>Repository Access</code></td>
+  <td><code>Only select repositories</code> で fork したレポジトリを選択</td>
+</tr>
+<tr>
+  <td><code>Permissions</code></td>
+  <td>下記参照</td>
+</tr>
+</tbody>
+</table>
+
+<p><img src="/images/20250428_02_create_repository_secret.png" alt="create repository secret" /></p>
+
+<p><code>Permissions</code> で必要なのは、</p>
+
+<table>
+<thead>
+<tr>
+  <th>種類</th>
+  <th>権限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>Actions</code></td>
+  <td><code>Read and Write</code></td>
+</tr>
+<tr>
+  <td><code>Contents</code></td>
+  <td><code>Read and Write</code></td>
+</tr>
+<tr>
+  <td><code>Issues</code></td>
+  <td><code>Read and Write</code></td>
+</tr>
+<tr>
+  <td><code>Workflows</code></td>
+  <td><code>Read and Write</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>が、説明として書かれていますが、Setup CI の STEP <code>Update summary in README</code> で、</p>
+
+<pre><code class="code">RequestError [HttpError]: Resource not accessible by personal access token
+    at /home/runner/work/_actions/upptime/uptime-monitor/v1.40.1/webpack:/@upptime/uptime-monitor/node_modules/@octokit/request/dist-node/index.js:86:1
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at generateSummary (/home/runner/work/_actions/upptime/uptime-monitor/v1.40.1/webpack:/@upptime/uptime-monitor/dist/summary.js:143:1) {
+  status: 403,
+</code></pre>
+
+<p>のようなエラーログが出るようです。</p>
+
+<p>なので、</p>
+
+<table>
+<thead>
+<tr>
+  <th>種類</th>
+  <th>権限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>Actions</code></td>
+  <td><code>Read and Write</code></td>
+</tr>
+<tr>
+  <td><code>Contents</code></td>
+  <td><code>Read and Write</code></td>
+</tr>
+<tr>
+  <td><code>Issues</code></td>
+  <td><code>Read and Write</code></td>
+</tr>
+<tr>
+  <td><code>Workflows</code></td>
+  <td><code>Read and Write</code></td>
+</tr>
+<tr>
+  <td><code>Administration</code></td>
+  <td><code>Read and Write</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>が、現状(2025/04/27時点)では、Setup CI の実行には必要なようです。</p>
+
+<p>レポジトリの <code>Settings</code> ➡️ <code>Secrets and variables</code> ➡️ <code>Actions</code> ➡️ <code>New repository secret</code> からリポジトリシークレットを <code>GH_PAT</code> という名前で追加。</p>
+
+<p><img src="/images/20250428_03_add_repository_secret.png" alt="add repository secret" /></p>
+
+<h2 id="%E8%A8%AD%E5%AE%9A%E3%81%AE%E6%9B%B4%E6%96%B0">設定の更新</h2>
+
+<p>レポジトリ直下の <code>.upptimerc.yml</code> を変更して設定を変えます。</p>
+
+<p>主に、監視対象の追加や、ステータスの公開先の設定をします。</p>
+
+<pre><code class="diff">   # Change these first
+-  owner: upptime # Your GitHub organization or username, where this repository   lives
+-  repo: upptime # The name of this repository
++  owner: sharkpp # ユーザー名か組織名
++  repo: upptime # レポジトリの名前
+
+   sites:
+-    - name: Google
+-      url: https://www.google.com
+-    - name: Wikipedia
+-      url: https://en.wikipedia.org
+-    - name: Hacker News
+-      url: https://news.ycombinator.com
+-    - name: Test Broken Site
+-      url: https://thissitedoesnotexist.koj.co
+-    - name: IPv6 test
+-      url: forwardemail.net
+-      port: 80
+-      check: "tcp-ping"
+-      ipv6: true
++    - name: www.sharkpp.net
++      url: https://www.sharkpp.net
+
+   status-website:
+     # Add your custom domain name, or remove the `cname` line if you don't have a   domain
+     # Uncomment the `baseUrl` line if you don't have a custom domain and add your   repo name there
+-    cname: demo.upptime.js.org
++    cname: upptime.sharkpp.net
+     # baseUrl: /your-repo-name
+     logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/  static/img/icon.svg
+     name: Upptime
+</code></pre>
+
+<p>こんな感じに設定したので、 https://upptime.sharkpp.net/ で確認できるようになった。</p>
+
+<h2 id="github-actions-%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%AE%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D">GitHub Actions ワークフローの動作確認</h2>
+
+<p>まず、 <code>.github/workflows</code> に存在する各ワークフローが、GitHub Actions に表示されているか確認。
+表示されていないものがあった場合は、動作に影響がない範囲で編集(空行にスペースを追加するなど)を加えてコミットすると表示されるようです。
+おそらく、fork 時にちゃんとGitHub Actions が列挙してくれないのだと思う。</p>
+
+<pre><code>Generate graphs                                0s
+Run benc-uk/workflow-dispatch@v1
+🏃 Workflow Dispatch Action v1.2.4
+Error: Unable to find workflow 'Graphs CI' in sharkpp/upptime 😥
+</code></pre>
+
+<p>アークフローが表示されていない場合、Setup CI の STEPの途中でこのようなエラーが出ます。</p>
+
+<p><img src="/images/20250428_04_setup_ci.png" alt="setup ci" /></p>
+
+<p>Setup CI の実行に成功するまで、各STEPのエラーなどを確認し修正する感じ。</p>
+
+<h2 id="%E7%B5%90%E6%9E%9C">結果</h2>
+
+<p>正常に動作し始め https://upptime.sharkpp.net/ で確認できるようになった。</p>
+
+<p><img src="/images/20250428_05_status_page.png" alt="status page" /></p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://upptime.js.org/docs/get-started#add-repository-secrets">Getting started | Upptime</a></li>
+<li>[Unable to find workflow 'Graphs CI' · Issue #995 · upptime/upptime](https://  github.com/upptime/upptime/issues/995#issuecomment-2327757107)</li>
+</ul>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[HAPPY NEW YEAR 2025]]></title>
             <link href="https://www.sharkpp.net/blog/2025/01/01/happy-new-year-2025.html"/>
@@ -853,126 +1061,6 @@ print(res4.text) # '{"cookies": {"foo": "bar","hoge": "fuga"}}'
 <p>ちょっとずつ使い始めてるけど、新しいからか圧倒的にバッテリー持ちが良くなってる。</p>
 
 <p>性能もすごい良くなってるので楽しい。</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Blender の User Translate を MacOS で使ってみた]]></title>
-            <link href="https://www.sharkpp.net/blog/2022/05/01/how-to-use-blender-user-translation.html"/>
-            <updated>2022-05-01T11:00:00+00:00</updated>
-            <id>https://www.sharkpp.net/blog/2022/05/01/how-to-use-blender-user-translation.html</id>
-            <content type="html"><![CDATA[<p>新しい Mac book Air を手に入れたので、以前のだとスペック不足で使いずらかった <a href="https://www.blender.org/">Blender</a> を入れて、環境を整えてみた。</p>
-
-<p>とりあえず Blender 自体、日本語の表示に対応しているみたいだけど、アドオンを日本語にできる <a href="https://blendermarket.com/products/user-translate">User Translate</a> アドオンを Mac OS で使ってみました。</p>
-
-<ol>
-<li>Blender のインストールと日本語表示の設定を行う</li>
-<li>CAD Sketcher のインストールと、非公式アドオンのインストールの仕方の説明</li>
-<li>User Translate のインストールと CAD Sketcher の日本語表示の仕方の説明</li>
-</ol>
-
-<p>をこの記事では扱っています。</p>
-
-<h2 id="blender-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8ui%E3%82%92%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%8C%96">Blender のインストールとUIを日本語化</h2>
-
-<p>インストールは<a href="https://www.blender.org/">公式ページ</a>からダウンロード。
-最近、メジャーなソフトだとUAとかみて自動で最適なインストーラやパッケージを選んでくれるサイトが多い印象。</p>
-
-<p><img src="/images/202205xx_blender_site.png" alt="Blender公式サイト" /></p>
-
-<p>そしてインストールするだけ。簡単。</p>
-
-<p><img src="/images/202205xx_blender_install.png" alt="Blenderインストール" /></p>
-
-<p>日本語のメニューにするには...</p>
-
-<p>「Edit」→「Preferences」をメニューから選んで...</p>
-
-<p><img src="/images/202205xx_blender_preference.png" alt="Blenderの設定" /></p>
-
-<p>「Intaface」→「Translation」から「日本語(Japanese)」を選ぶだけ</p>
-
-<p><img src="/images/202205xx_blender_translation.png" alt="Blenderの翻訳設定" /></p>
-
-<h2 id="cad-sketcher-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">CAD Sketcher をインストール</h2>
-
-<p><a href="https://makertales.gumroad.com/l/CADsketcher">CAD Sketcher</a> から指示に従ってインストールします。</p>
-
-<p>ZIPアーカイブをダウンロードします（ダウンロード後に解凍しないでください）</p>
-
-<p>Blenderを開き、「編集」→「設定」→「アドオン」→「インストール...」ボタンを押します。</p>
-
-<p><img src="/images/202205xx_blender_addon_install.png" alt="Blenderのアドオンのインストール" /></p>
-
-<p>ダウンロードした <code>main.zip</code> を参照して選択し、[アドオンのインストール]を押します。</p>
-
-<p><img src="/images/202205xx_blender_addon_select.png" alt="Blenderのアドオンの選択" /></p>
-
-<p>チェックボックスを押してアドオンを有効にします。</p>
-
-<p><img src="/images/202205xx_blender_addon_enable.png" alt="Blenderのアドオンの有効化" /></p>
-
-<p>CAD Sketcher は <a href="https://pypi.org/project/py-slvs/">solvespace python module</a> が必要となるため、アドオンの設定内で、"Solver Module" タブをチェックして、モジュールがすでに使用可能かどうかを確認します。</p>
-
-<p><code>Module isn't Registered</code> と表示が出ている場合は "Install from PIP" ボタンを押してインストールします。</p>
-
-<p><img src="/images/202205xx_cad_sketcher_ui.png" alt="CAD Sketcherの画面" /></p>
-
-<h2 id="user-translation-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">User Translation をインストール</h2>
-
-<p><a href="https://bookyakuno.gumroad.com/l/user-translate">User Translate</a> からアドオンのZIPファイルをダウンロードしてインストール。</p>
-
-<p>手順は先ほどと同じ。</p>
-
-<p>翻訳するためのテーブルは <code>/Users/{ユーザー名}/Library/Application Support/Blender/{Blenderバージョン}/scripts/addons/user_translate/user_files</code> (以下 <code>user_files</code>) に存在します。現状、「フォルダーを開く」が効かなかった...</p>
-
-<p>パスの一部は環境によって違うので</p>
-
-<table>
-<thead>
-<tr>
-  <th>変数</th>
-  <th>概要</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td><code>{ユーザー名}</code></td>
-  <td>コンピュータを使用中のユーザー名</td>
-</tr>
-<tr>
-  <td><code>{Blenderバージョン}</code></td>
-  <td>インストールした Blender のバージョン。 <code>3.1</code> など</td>
-</tr>
-</tbody>
-</table>
-
-<p>それぞれ自分の環境に置き換えてください。</p>
-
-<p><code>user_files</code> フォルダへのアクセスは、Finder で <code>Command</code> + <code>Shift</code> + <code>G</code> を入力し「フォルダへ移動」を表示し上記のパスを入力します。</p>
-
-<p><img src="/images/202205xx_move_to_user_translate_addon_folder.png" alt="フォルダへ移動" /></p>
-
-<p>デフォルトでは <code>sample.csv</code> のみ存在します。</p>
-
-<p><img src="/images/202205xx_default_user_translate_addon_folder.png" alt="デフォルトの中身" /></p>
-
-<h2 id="cad-sketcher-%E3%82%92%E7%BF%BB%E8%A8%B3%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B">CAD Sketcher を翻訳してみる</h2>
-
-<p><a href="https://studiogamma.booth.pm/items/2966402">日本語化【CAD_Sketcher】翻訳ファイル - Studio GAMMA - BOOTH</a> から <code>CAD_Sketcher_v0.20.0用_v1.01.zip</code> をダウンロードします。</p>
-
-<p>ZIPファイルを展開し、<code>CAD_Sketcher_v0.20.0.csv</code> を取り出し、<code>user_files</code> に設置します。</p>
-
-<p>設置すると自動的に翻訳が適用されます。</p>
-
-<p><img src="/images/202205xx_cad_sketcher_ui_ja.png" alt="CAD Sketcherの画面(日本語)" /></p>
-
-<h2 id="%E5%8F%82%E8%80%83">参考</h2>
-
-<ul>
-<li><a href="https://bookyakuno.com/user-translate/">【User Translate / 英語のアドオンを日本語化】半自動・手動でユーザー翻訳辞書が作れるアドオン【Blenderアドオン】 – 忘却まとめ</a></li>
-<li><a href="https://makertales.gumroad.com/l/CADsketcher">CAD Sketcher [ Blender Addon ]</a></li>
-<li><a href="https://modelinghappy.com/archives/43418">CAD SketcherブレンダーでCADと似たように数値入力してモデリング出来る無料アドオン - 3DCG最新情報サイト MODELING HAPPY</a></li>
-</ul>
 ]]></content>
         </entry>
     </feed>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[さめたすたすのお家]]></title>
+    <link href="https://www.sharkpp.net/blog/tags/%E7%9B%A3%E8%A6%96.xml" rel="self"/>
+    <link href="https://www.sharkpp.net/"/>
+    <updated>2025-04-27T15:39:45+00:00</updated>
+    <id>https://www.sharkpp.net/</id>
+            <author>
+            <name><![CDATA[sharkpp]]></name>                    </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Upptime を試してみた]]></title>
+            <link href="https://www.sharkpp.net/blog/2025/04/28/install-upptime.html"/>
+            <updated>2025-04-28T00:35:00+00:00</updated>
+            <id>https://www.sharkpp.net/blog/2025/04/28/install-upptime.html</id>
+            <content type="html"><![CDATA[<p><a href="https://upptime.js.org/">Upptime</a> という、OSSを偶然見つけたので、試しに使ってみることに。</p>
+
+<p>Upptime は、ウェブサイトの死活監視をするツールで、自分でセルフホストする形式で、サーバーも GitHub Actions を使うのでお手軽に運用できる感じ。</p>
+
+<h2 id="%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97">セットアップ</h2>
+
+<p>基本的には <a href="https://upptime.js.org/docs/get-started">Getting started | Upptime</a> を元にセットアップします。</p>
+
+<h3 id="%E3%83%AC%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%82%92%E3%83%95%E3%82%A9%E3%83%BC%E3%82%AF">レポジトリをフォーク</h3>
+
+<p><a href="https://github.com/upptime/upptime">upptime/upptime</a> を <code>Use this template</code> ➡️ <code>Create a new repository</code> からレポジトリを fork します。</p>
+
+<p><img src="/images/20250428_01_repository_fork.png" alt="repository fork" /></p>
+
+<p>この時、<code>Repository name</code> 蘭は任意の値を設定すれば問題ないが、 <code>Include all branches</code> のチェックは必ず必要。</p>
+
+<p>また、特に理由がない場合、レポジトリは <code>Public</code> がおすすめ。これは Upptime は仕組み上、毎月数千分のビルド時間(デフォルト設定では約3,000分)を使用するため、<code>Private</code> の場合、その分の利用料が生じるため。</p>
+
+<h3 id="%E3%83%95%E3%82%A9%E3%83%BC%E3%82%AF%E5%BE%8C%E3%81%AE%E4%BD%9C%E6%A5%AD">フォーク後の作業</h3>
+
+<p>GitHub Pages は、<code>Include all branches</code> をチェックしていれば、自動で有効になるはず。</p>
+
+<h3 id="%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%82%B7%E3%83%BC%E3%82%AF%E3%83%AC%E3%83%83%E3%83%88%E3%82%92%E4%BD%9C%E6%88%90%EF%BC%86%E8%A8%AD%E5%AE%9A">リポジトリシークレットを作成＆設定</h3>
+
+<p>アカウントの <code>Settings</code> ➡️ <code>Developer settings</code> ➡️ <code>Personal access tokens</code> ➡️ <code>Fine-grained personal access tokens</code> ➡️ <code>Generate new token</code> からリポジトリシークレットを作成。</p>
+
+<table>
+<thead>
+<tr>
+  <th>種類</th>
+  <th>値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>Expiration</code></td>
+  <td>90日などに設定</td>
+</tr>
+<tr>
+  <td><code>Repository Access</code></td>
+  <td><code>Only select repositories</code> で fork したレポジトリを選択</td>
+</tr>
+<tr>
+  <td><code>Permissions</code></td>
+  <td>下記参照</td>
+</tr>
+</tbody>
+</table>
+
+<p><img src="/images/20250428_02_create_repository_secret.png" alt="create repository secret" /></p>
+
+<p><code>Permissions</code> で必要なのは、</p>
+
+<table>
+<thead>
+<tr>
+  <th>種類</th>
+  <th>権限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>Actions</code></td>
+  <td><code>Read and Write</code></td>
+</tr>
+<tr>
+  <td><code>Contents</code></td>
+  <td><code>Read and Write</code></td>
+</tr>
+<tr>
+  <td><code>Issues</code></td>
+  <td><code>Read and Write</code></td>
+</tr>
+<tr>
+  <td><code>Workflows</code></td>
+  <td><code>Read and Write</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>が、説明として書かれていますが、Setup CI の STEP <code>Update summary in README</code> で、</p>
+
+<pre><code class="code">RequestError [HttpError]: Resource not accessible by personal access token
+    at /home/runner/work/_actions/upptime/uptime-monitor/v1.40.1/webpack:/@upptime/uptime-monitor/node_modules/@octokit/request/dist-node/index.js:86:1
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at generateSummary (/home/runner/work/_actions/upptime/uptime-monitor/v1.40.1/webpack:/@upptime/uptime-monitor/dist/summary.js:143:1) {
+  status: 403,
+</code></pre>
+
+<p>のようなエラーログが出るようです。</p>
+
+<p>なので、</p>
+
+<table>
+<thead>
+<tr>
+  <th>種類</th>
+  <th>権限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>Actions</code></td>
+  <td><code>Read and Write</code></td>
+</tr>
+<tr>
+  <td><code>Contents</code></td>
+  <td><code>Read and Write</code></td>
+</tr>
+<tr>
+  <td><code>Issues</code></td>
+  <td><code>Read and Write</code></td>
+</tr>
+<tr>
+  <td><code>Workflows</code></td>
+  <td><code>Read and Write</code></td>
+</tr>
+<tr>
+  <td><code>Administration</code></td>
+  <td><code>Read and Write</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>が、現状(2025/04/27時点)では、Setup CI の実行には必要なようです。</p>
+
+<p>レポジトリの <code>Settings</code> ➡️ <code>Secrets and variables</code> ➡️ <code>Actions</code> ➡️ <code>New repository secret</code> からリポジトリシークレットを <code>GH_PAT</code> という名前で追加。</p>
+
+<p><img src="/images/20250428_03_add_repository_secret.png" alt="add repository secret" /></p>
+
+<h2 id="%E8%A8%AD%E5%AE%9A%E3%81%AE%E6%9B%B4%E6%96%B0">設定の更新</h2>
+
+<p>レポジトリ直下の <code>.upptimerc.yml</code> を変更して設定を変えます。</p>
+
+<p>主に、監視対象の追加や、ステータスの公開先の設定をします。</p>
+
+<pre><code class="diff">   # Change these first
+-  owner: upptime # Your GitHub organization or username, where this repository   lives
+-  repo: upptime # The name of this repository
++  owner: sharkpp # ユーザー名か組織名
++  repo: upptime # レポジトリの名前
+
+   sites:
+-    - name: Google
+-      url: https://www.google.com
+-    - name: Wikipedia
+-      url: https://en.wikipedia.org
+-    - name: Hacker News
+-      url: https://news.ycombinator.com
+-    - name: Test Broken Site
+-      url: https://thissitedoesnotexist.koj.co
+-    - name: IPv6 test
+-      url: forwardemail.net
+-      port: 80
+-      check: "tcp-ping"
+-      ipv6: true
++    - name: www.sharkpp.net
++      url: https://www.sharkpp.net
+
+   status-website:
+     # Add your custom domain name, or remove the `cname` line if you don't have a   domain
+     # Uncomment the `baseUrl` line if you don't have a custom domain and add your   repo name there
+-    cname: demo.upptime.js.org
++    cname: upptime.sharkpp.net
+     # baseUrl: /your-repo-name
+     logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/  static/img/icon.svg
+     name: Upptime
+</code></pre>
+
+<p>こんな感じに設定したので、 https://upptime.sharkpp.net/ で確認できるようになった。</p>
+
+<h2 id="github-actions-%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%AE%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D">GitHub Actions ワークフローの動作確認</h2>
+
+<p>まず、 <code>.github/workflows</code> に存在する各ワークフローが、GitHub Actions に表示されているか確認。
+表示されていないものがあった場合は、動作に影響がない範囲で編集(空行にスペースを追加するなど)を加えてコミットすると表示されるようです。
+おそらく、fork 時にちゃんとGitHub Actions が列挙してくれないのだと思う。</p>
+
+<pre><code>Generate graphs                                0s
+Run benc-uk/workflow-dispatch@v1
+🏃 Workflow Dispatch Action v1.2.4
+Error: Unable to find workflow 'Graphs CI' in sharkpp/upptime 😥
+</code></pre>
+
+<p>アークフローが表示されていない場合、Setup CI の STEPの途中でこのようなエラーが出ます。</p>
+
+<p><img src="/images/20250428_04_setup_ci.png" alt="setup ci" /></p>
+
+<p>Setup CI の実行に成功するまで、各STEPのエラーなどを確認し修正する感じ。</p>
+
+<h2 id="%E7%B5%90%E6%9E%9C">結果</h2>
+
+<p>正常に動作し始め https://upptime.sharkpp.net/ で確認できるようになった。</p>
+
+<p><img src="/images/20250428_05_status_page.png" alt="status page" /></p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://upptime.js.org/docs/get-started#add-repository-secrets">Getting started | Upptime</a></li>
+<li>[Unable to find workflow 'Graphs CI' · Issue #995 · upptime/upptime](https://  github.com/upptime/upptime/issues/995#issuecomment-2327757107)</li>
+</ul>
+]]></content>
+        </entry>
+    </feed>
