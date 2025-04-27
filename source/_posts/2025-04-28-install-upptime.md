@@ -116,7 +116,7 @@ RequestError [HttpError]: Resource not accessible by personal access token
      name: Upptime
 ```
 
-こんな感じに設定したので、 https://upptime.sharkpp.net/ で確認できるようになった。
+こんな感じに設定したので、 [upptime.sharkpp.net](https://upptime.sharkpp.net/) で確認できるようになった。
 
 ## GitHub Actions ワークフローの動作確認
 
@@ -139,7 +139,7 @@ Setup CI の実行に成功するまで、各STEPのエラーなどを確認し�
 
 ## 結果
 
-正常に動作し始め https://upptime.sharkpp.net/ で確認できるようになった。
+正常に動作し始め [upptime.sharkpp.net](https://upptime.sharkpp.net/) で確認できるようになった。
 
 ![status page](/images/20250428_05_status_page.png)
 
