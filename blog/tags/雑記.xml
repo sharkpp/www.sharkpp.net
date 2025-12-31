@@ -3,11 +3,65 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="https://www.sharkpp.net/blog/tags/%E9%9B%91%E8%A8%98.xml" rel="self"/>
     <link href="https://www.sharkpp.net/"/>
-    <updated>2025-04-27T15:55:58+00:00</updated>
+    <updated>2025-12-31T12:55:49+00:00</updated>
     <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[大晦日@2025]]></title>
+            <link href="https://www.sharkpp.net/blog/2025/12/31/new-years-eve-2025.html"/>
+            <updated>2025-12-31T21:52:00+00:00</updated>
+            <id>https://www.sharkpp.net/blog/2025/12/31/new-years-eve-2025.html</id>
+            <content type="html"><![CDATA[<h2 id="1-%E5%B9%B4%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A">1 年を振り返り</h2>
+
+<p>2025年も大晦日を残すところになりました。</p>
+
+<p>とりあえず、毎年のことながら、作ったものなどが余りなくて寂しいところ。</p>
+
+<p>変わらず仕事も家庭も忙しいまま...</p>
+
+<p>今年も恒例(？)の仮想除夜の鐘アプリのリンクを貼っておきます。
+除夜の鐘、お寺さんによって音色が多少違うらしいです。</p>
+
+<iframe src="/files/joya_no_kane.html" width="128" height="128" frameborder="0" scrolling="no"></iframe>
+
+<h2 id="%E7%B5%90%E6%9E%9C">結果</h2>
+
+<p>まずは、今年の正月 <a href="/blog/2025/01/01/happy-new-year-2025.html">HAPPY NEW YEAR 2025</a> に掲げた目標です。</p>
+
+<ul>
+<li>ホームページの更新</li>
+</ul>
+
+<p>今年も全くできてない...
+頑張ろう...</p>
+
+<ul>
+<li>何かアプリを作りたい</li>
+</ul>
+
+<p>一つは、大晦日から元日が少し楽しくなりそうなアプリだけど、毎回年末に思い出して作れない感じ。</p>
+
+<p>去年末から <a href="https://sharkpp.github.io/easy-pdf-calendar/">簡単PDFカレンダー</a> という、カレンダーを作れるウェブアプリを作ってました。
+選んだデザインのカレンダーをPDFに書き出して、家庭用プリンタで印刷したりできるアプリです。</p>
+
+<p>あとは、ReactjsのUIコンポーネントの比較ができるページを作ってますが、こちらはまだ進捗まだです状態。</p>
+
+<h2 id="%E5%8F%8D%E7%9C%81">反省</h2>
+
+<p>もうちょっと色々作ってみたいものとかあるけど、来年からさらに家庭で時間が取れなくなるので今から戦々恐々。
+それでも新しいことに挑戦していきたいところ。</p>
+
+<p>という感じで、今年の反省会終了です。</p>
+
+<p>最後に、恒例の年越しそばの写真を置いておきます。</p>
+
+<p><img src="/images/20251231_toshikoshi_soba_ebi2hon.jpg" alt="天麩羅ざる蕎麦" /></p>
+
+<p>それでは来年もよろしくお願いします。</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Upptime を試してみた]]></title>
             <link href="https://www.sharkpp.net/blog/2025/04/28/install-upptime.html"/>
@@ -909,38 +963,6 @@ GatsbyJS + GitHub Action でビルドできるといい感じかなと。</p>
 <p>ちょっとずつ使い始めてるけど、新しいからか圧倒的にバッテリー持ちが良くなってる。</p>
 
 <p>性能もすごい良くなってるので楽しい。</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[HAPPY NEW YEAR 2022]]></title>
-            <link href="https://www.sharkpp.net/blog/2022/01/01/happy-new-year-2022.html"/>
-            <updated>2022-01-01T20:02:00+00:00</updated>
-            <id>https://www.sharkpp.net/blog/2022/01/01/happy-new-year-2022.html</id>
-            <content type="html"><![CDATA[<p>明けましておめでとうございます。</p>
-
-<p>まだまだ新型コロナは油断ならないですが、今年も良いとしてあってほしいですね。</p>
-
-<p>では、今年の目標をば。</p>
-
-<h2 id="%E7%9B%AE%E6%A8%99">目標</h2>
-
-<h3 id="%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0">ホームページの更新</h3>
-
-<p>昨年はかなり更新が乱れたので、今年は月一ぐらいは更新したいです。
-ネタとしては、IonicやSynology NAS 関連とか。</p>
-
-<h3 id="%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E6%94%B9%E5%96%84">ホームページのビルドシステムの改善</h3>
-
-<p>こちらも、去年も全くできていないので、何とかしたい。
-GatsbyJS + GitHub Action でビルドできるといい感じかなと。</p>
-
-<h3 id="%E3%81%9D%E3%81%AE%E4%BB%96">その他</h3>
-
-<p>お金貯まってきたので Apple MacBook Air とか欲しいな... そろそろノートPC買い換えたい...</p>
-
-<h2 id="%E3%81%82%E3%81%91%E3%81%8A%E3%82%81%E3%81%93%E3%81%A8%E3%82%88%E3%82%8D">あけおめことよろ</h2>
-
-<p>今年もまた一年、よろしくお願いいたします。</p>
 ]]></content>
         </entry>
     </feed>
