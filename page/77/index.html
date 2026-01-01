@@ -18,7 +18,31 @@
        ></li></ol><div class="row"><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
            href="/blog/"><i class="fa-solid fa-box-archive fa-4x"></i><br />アーカイブ</a></div><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
            href="/product/"><i class="fa-solid fa-download fa-4x"></i><br />作ったもの</a></div><div class="jump-button col-md-4 col-sm-4 col-xs-4"><a type="button" class="btn btn-default btn-lg btn-block"
-           href="/graffiti/"><i class="fa-solid fa-paintbrush fa-4x"></i><br />落書き</a></div></div><hr style="border-bottom: 1px dashed #aaa; border-top: none;" /><article class="full-contents"><header><h1><a href="/blog/2009/10/04/play-with-qt-part-2.html">色々なメモ: Qtで遊ぶ 其の２</a></h1></header><div><p>Qtでアプリケーションを作る時のコマンドなどなどのメモ</p><p>そのほか、其の１で書いていなかった詳細など</p><p>要するに忘れないようにするためのメモ書き</p>
+           href="/graffiti/"><i class="fa-solid fa-paintbrush fa-4x"></i><br />落書き</a></div></div><hr style="border-bottom: 1px dashed #aaa; border-top: none;" /><article class="full-contents"><header><h1><a href="/blog/2009/10/11/hsp-sample-wood-pattern.html">木目パターンの生成: HSPで遊ぶ 其の１</a></h1></header><div><p>今回はHSPのスクリプトです。</p><p>あるソフトで使いたかったので試しに作ってみたら意外とそれらしいのができました。</p><pre>hsvcolor 26,49,246
+boxf
+sx = ginfo_winx
+sy = ginfo_winy
+repeat 256
+hsvcolor 26,49,246+rnd(20)-10
+y=rnd(sy)
+y1=y+rnd(30)-15
+y2=y+rnd(30)-15
+repeat 1+rnd(3)
+line 0,y1+cnt,sx,y2+cnt
+loop
+loop
+</pre><p>こんなのが出来ます。</p><p><a href="/images/2009_1011_wood_pattern.jpg"><img src="/images/2009_1011_wood_pattern.png" alt="2009_1011_wood_pattern.png" /></a></p><p>これだからプログラムはいいですね</p></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa-regular fa-calendar-days"></i>&nbsp;
+        <span itemprop="datePublished" content="2009-10-11">2009年10月11日</span>
+        &nbsp;/&nbsp;
+        <i class="fa-solid fa-clock-rotate-left"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2009-10-11-hsp-sample-wood-pattern.md">変更履歴</a>
+        &nbsp;/&nbsp;
+        <i class="fa-solid fa-thumbtack"></i>&nbsp;<a href="/blog/2009/10/11/hsp-sample-wood-pattern.html">Permalink</a>
+        &nbsp;/&nbsp;
+                                <span class="categories"><i class="fa-solid fa-folder-open"></i>&nbsp;カテゴリ:
+                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
+        &nbsp;/&nbsp;
+                                <span class="tags"><i class="fa-solid fa-tag"></i>&nbsp;タグ:
+                        <a href="/blog/tags/HSP">HSP</a>,                         <a href="/blog/tags/HSP%E3%81%A7%E9%81%8A%E3%81%B6">HSPで遊ぶ</a></span></span></div></footer></article><article class="full-contents"><header><h1><a href="/blog/2009/10/04/play-with-qt-part-2.html">色々なメモ: Qtで遊ぶ 其の２</a></h1></header><div><p>Qtでアプリケーションを作る時のコマンドなどなどのメモ</p><p>そのほか、其の１で書いていなかった詳細など</p><p>要するに忘れないようにするためのメモ書き</p>
 
 
                             &hellip;&nbsp;<a href="/blog/2009/10/04/play-with-qt-part-2.html">続きを見る</a></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa-regular fa-calendar-days"></i>&nbsp;
@@ -72,19 +96,8 @@ Z:\Qt&gt;
                         <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
         &nbsp;/&nbsp;
                                 <span class="tags"><i class="fa-solid fa-tag"></i>&nbsp;タグ:
-                        <a href="/blog/tags/C%2B%2B">C++</a>,                         <a href="/blog/tags/Qt">Qt</a>,                         <a href="/blog/tags/Qt%E3%81%A7%E9%81%8A%E3%81%B6">Qtで遊ぶ</a></span></span></div></footer></article><article class="full-contents"><header><h1><a href="/blog/2009/09/30/yabuinu-the-obfuscator-and-scrambler-for-hsp3-0-0-1-0-release.html">HSP3用難読化＆独自スクランブル ツール ”yabuinu” を公開しました</a></h1></header><div><p>オブジェクト難読化＆独自スクランブルツールを公開しました。</p><p>hsp3obfusの後続バージョンになります。</p><p>HSP3の他バージョン用も簡単に実装できそうですが、とりあえず、HSP3.1用を実装してみました。</p><p>ダウンロードは詳細ページからどうぞ。</p><p><a href="http:/blog/2009/09/30/hsp-yabuinu.html" title="”yabuinu” 難読化＆独自スクランブル ツール for HSP 3.x">”yabuinu” 難読化＆独自スクランブル ツール for HSP 3.x</a></p></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa-regular fa-calendar-days"></i>&nbsp;
-        <span itemprop="datePublished" content="2009-09-30">2009年09月30日</span>
-        &nbsp;/&nbsp;
-        <i class="fa-solid fa-clock-rotate-left"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2009-09-30-yabuinu-the-obfuscator-and-scrambler-for-hsp3-0-0-1-0-release.md">変更履歴</a>
-        &nbsp;/&nbsp;
-        <i class="fa-solid fa-thumbtack"></i>&nbsp;<a href="/blog/2009/09/30/yabuinu-the-obfuscator-and-scrambler-for-hsp3-0-0-1-0-release.html">Permalink</a>
-        &nbsp;/&nbsp;
-                                <span class="categories"><i class="fa-solid fa-folder-open"></i>&nbsp;カテゴリ:
-                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
-        &nbsp;/&nbsp;
-                                <span class="tags"><i class="fa-solid fa-tag"></i>&nbsp;タグ:
-                        <a href="/blog/tags/Develop">Develop</a>,                         <a href="/blog/tags/HSP">HSP</a>,                         <a href="/blog/tags/HSP3">HSP3</a>,                         <a href="/blog/tags/%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9">リリース</a></span></span></div></footer></article><br /><nav><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/page/76" title=""><span class="title"><i class="fa-solid fa-chevron-left"></i> 新しい投稿</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/page/78" title=""><span class="title">古い投稿</span><i class="fa-solid fa-chevron-right"></i></a></li></ul></nav></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa-solid fa-square-rss fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa-brands fa-x-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa-brands fa-github fa-2x"></i></a></li><li><a href="/profile"         ><i class="fa-solid fa-ellipsis fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /page/77"
-                                  rel="nofollow"><i class="fa-solid fa-bug"></i> 誤字脱字などを報告</a></li></ul></div><div class="container text-center"><ul class="list-unstyled list-inline"><li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li><li class="text-muted">&copy; 2004-2025 sharkpp</li></ul></div><div class="container text-center text-muted"><ruby><rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                        <a href="/blog/tags/C%2B%2B">C++</a>,                         <a href="/blog/tags/Qt">Qt</a>,                         <a href="/blog/tags/Qt%E3%81%A7%E9%81%8A%E3%81%B6">Qtで遊ぶ</a></span></span></div></footer></article><br /><nav><ul class="list-unstyled row"><li class="col-md-6 text-left"><a class="next" href="/page/76" title=""><span class="title"><i class="fa-solid fa-chevron-left"></i> 新しい投稿</span></a></li><li class="col-md-6 text-right"><a class="previous" href="/page/78" title=""><span class="title">古い投稿</span><i class="fa-solid fa-chevron-right"></i></a></li></ul></nav></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa-solid fa-square-rss fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa-brands fa-x-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa-brands fa-github fa-2x"></i></a></li><li><a href="/profile"         ><i class="fa-solid fa-ellipsis fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /page/77"
+                                  rel="nofollow"><i class="fa-solid fa-bug"></i> 誤字脱字などを報告</a></li></ul></div><div class="container text-center"><ul class="list-unstyled list-inline"><li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li><li class="text-muted">&copy; 2004-2026 sharkpp</li></ul></div><div class="container text-center text-muted"><ruby><rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
                                                             >Creative Commons Attribution 4.0 International License</a>.</rb><rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
                                                   >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp></ruby></div><div class="container text-center text-muted"><ruby><rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
                                                                             >The MIT License</a>.</rb><rp>(</rp><rt>さらに、コードスニペットは <a rel="nofollow" href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license"
