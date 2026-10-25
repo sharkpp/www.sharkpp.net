@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head><title>新しいNASを構築した &mdash; さめたすたすのお家</title><meta charset="utf-8"><meta name="theme-color" content="#6877AA"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="index, follow"><meta name="keywords" content="雑記,NAS,OpemMediaVault8"><link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" /><link href="/assets/font-awesome/css/all.min.css" rel="stylesheet" type="text/css" /><link href="/assets/libs/lightbox2/dist/css/lightbox.css" rel="stylesheet" type="text/css" /><link href="/css/style.min.css" rel="stylesheet" type="text/css" /><!-- HTML5 shim, for IE6-8 support of HTML5 elements --><!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--><link rel="apple-touch-startup-image" href="/images/noname/2048x2048.png"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="shortcut icon" sizes="76x76" href="/images/noname/76x76.png"><link rel="shortcut icon" sizes="120x120" href="/images/noname/120x120.png"><link rel="shortcut icon" sizes="128x128" href="/images/noname/128x128.png"><link rel="shortcut icon" sizes="152x152" href="/images/noname/152x152.png"><link rel="shortcut icon" sizes="196x196" href="/images/noname/196x196.png"><link rel="shortcut icon" sizes="512x512" href="/images/noname/512x512.png"><link rel="shortcut icon" sizes="1024x1024" href="/images/noname/1024x1024.png"><link rel="shortcut icon" sizes="2048x2048" href="/images/noname/2048x2048.png"><link rel="apple-touch-icon" sizes="76x76" href="/images/noname/76x76.png"><link rel="apple-touch-icon" sizes="120x120" href="/images/noname/120x120.png"><link rel="apple-touch-icon" sizes="128x128" href="/images/noname/128x128.png"><link rel="apple-touch-icon" sizes="152x152" href="/images/noname/152x152.png"><link rel="apple-touch-icon" sizes="196x196" href="/images/noname/196x196.png"><link rel="apple-touch-icon" sizes="512x512" href="/images/noname/512x512.png"><link rel="apple-touch-icon" sizes="1024x1024" href="/images/noname/1024x1024.png"><link rel="apple-touch-icon" sizes="2048x2048" href="/images/noname/2048x2048.png"><link rel="stylesheet" href="/assets/highlightjs/styles/github.css" /><link rel="alternate" type="application/atom+xml" href="/atom.xml" title="さめたすたすのお家 activity feed" /><style>
+        /** quick fix because bootstrap <pre> has a background-color. */
+        pre code { background-color: inherit; }
+        </style><style>
+        #go-top {
+            display: none;
+            bottom: 40px;
+            right: 30px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #fff;
+            position: fixed;
+            z-index: 999;
+        }
+        #go-top > i {
+            font-size: 36px;
+            line-height: 40px;
+        }
+        #toc {
+            margin-left: 10px;
+            margin-bottom: 10px;
+            max-width: 350px;
+            word-wrap: break-word;
+        }
+        </style></head><body><nav class="navbar navbar-inverse navbar-fixed-top"><div class="container-fluid"><!-- Brand and toggle get grouped for better mobile display --><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/">さめたすたすのお家</a></div><!-- Collect the nav links, forms, and other content for toggling --><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><ul class="nav navbar-nav pull-right"><li><a href="/blog/"><i class="fa-solid fa-archive"></i> アーカイブ</a></li><li><a href="/blog/categories"><i class="fa-solid fa-folder-open"></i> カテゴリ</a></li><li><a href="/blog/tags"><i class="fa-solid fa-tags"></i> タグ</a></li><li><a href="/product/"><i class="fa-solid fa-download"></i> 作ったもの</a></li><li><a href="/graffiti/"><i class="fa-solid fa-paintbrush"></i> 落書き</a></li><li><a href="/link.html"><i class="fa-solid fa-link"></i> リンク</a></li><li><a href="/about">About</a></li></ul></div><!-- /.navbar-collapse --></div><!-- /.container-fluid --></nav><div class="mainContent container"><ol class="breadcrumb" itemscope="itemscope"
+                           itemtype="http://schema.org/BreadcrumbList"><li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/"
+           ><i class="fa-solid fa-house-chimney fa-lg"></i
+     >&nbsp;<span itemprop="name">HOME</span
+           ><meta itemprop="position" content="1"
+          /></a
+       ></li><li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/blog/2026/"
+           ><span>2026</span
+           ><meta itemprop="position" content="2"
+          /></a
+       ></li><li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/blog/2026/10/"
+           ><span>10</span
+           ><meta itemprop="position" content="3"
+          /></a
+       ></li><li
+　　　　　    itemscope="itemscope" itemprop="itemListElement"
+　　　　　    itemtype="http://schema.org/ListItem"
+           ><a itemprop="item" href="/blog/2026/10/25/"
+           ><span>25</span
+           ><meta itemprop="position" content="4"
+          /></a
+       ></li><li
+            class="active"><span 
+           ><span>新しいNASを構築した</span
+       ></li></ol><article itemscope="itemscope" itemtype="http://schema.org/Article"><meta itemscope="itemscope" itemprop="mainEntityOfPage"
+              itemType="https://schema.org/WebPage" itemid="https://www.sharkpp.net/blog/2026/10/25/setup-new-nas.html"/><header><h1><span itemprop="headline">新しいNASを構築した</span><small>post</small></h1></header><div id="toc" class="panel panel-default pull-right"><div class="panel-heading text-center">目次</div><div class="panel-body" style="padding: 10px;"><ul class="fa-ul"><li><span class="fa-li"><i class="fa-solid fa-paperclip"></i></span><a href="#%E8%87%AA%E5%AE%85nas%E3%81%AE%E6%AD%B4%E5%8F%B2">自宅NASの歴史</a></li><li><span class="fa-li"><i class="fa-solid fa-paperclip"></i></span><a href="#%E4%BB%8A%E5%9B%9E%E4%BD%BF%E3%81%A3%E3%81%9F%E6%A9%9F%E6%9D%90">今回使った機材</a></li><li><span class="fa-li"><i class="fa-solid fa-paperclip"></i></span><a href="#nas%E3%81%AE%E6%A7%8B%E7%AF%89">NASの構築</a><ul class="fa-ul"><li><span class="fa-li"><i class="fa-solid fa-paperclip"></i></span><a href="#%E3%83%96%E3%83%BC%E3%83%88%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%82%92%E4%BD%9C%E6%88%90">ブートメディアを作成</a></li><li><span class="fa-li"><i class="fa-solid fa-paperclip"></i></span><a href="#openmediavault-8-%E3%82%92%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97">OpenMediaVault 8 をセットアップ</a><ul class="fa-ul"><li><span class="fa-li"><i class="fa-solid fa-paperclip"></i></span><a href="#omv-firstaid-%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">omv-firstaid コマンドについて</a></li></ul></li><li><span class="fa-li"><i class="fa-solid fa-paperclip"></i></span><a href="#hdd-%E3%82%92%E3%82%B1%E3%83%BC%E3%82%B9%E3%81%AB%E8%A3%85%E7%9D%80%E3%81%97pc%E3%81%AB%E6%8E%A5%E7%B6%9A">HDD をケースに装着しPCに接続</a></li><li><span class="fa-li"><i class="fa-solid fa-paperclip"></i></span><a href="#hdd-%E3%81%AE-s.m.a.r.t.">HDD の S.M.A.R.T.</a></li></ul></li><li><span class="fa-li"><i class="fa-solid fa-paperclip"></i></span><a href="#omv%E3%81%AE%E8%A8%AD%E5%AE%9A%E8%AB%B8%E3%80%85">OMVの設定諸々</a><ul class="fa-ul"><li><span class="fa-li"><i class="fa-solid fa-paperclip"></i></span><a href="#%E3%83%80%E3%83%83%E3%82%B7%E3%83%A5%E3%83%9C%E3%83%BC%E3%83%89">ダッシュボード</a></li><li><span class="fa-li"><i class="fa-solid fa-paperclip"></i></span><a href="#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0-%E2%96%B6%EF%B8%8E-%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3">システム ▶︎ プラグイン</a></li><li><span class="fa-li"><i class="fa-solid fa-paperclip"></i></span><a href="#%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8-%E2%96%B6%EF%B8%8E-%E5%85%B1%E6%9C%89%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80">ストレージ ▶︎ 共有フォルダ</a></li></ul></li><li><span class="fa-li"><i class="fa-solid fa-paperclip"></i></span><a href="#%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a></li><li><span class="fa-li"><i class="fa-solid fa-paperclip"></i></span><a href="#%E5%8F%82%E8%80%83">参考</a></ul></div></div><div id="go-top"><i class="fa-regular fa-circle-up fa-3x"></i></div><div itemprop="articleBody"><p>現行NAS環境も稼働が９年を超えて動きも怪しくなっていたので新調することにしました。</p><p>実は昨年の夏頃から部材は集めてたんですが、HDDだけちょっと高いなーって思ってて様子見てたらあれよあれよというまに２倍ぐらいになってしまいましたね...</p><p>SynologyのNASケースも検討したけど、高いのとHDDが限定されるのでミニPCとケースで運用してみることにしました。</p><p><img src="/images/20261025_omv8_dashboard.png" alt="omv-dashboard" /></p><h2 id="%E8%87%AA%E5%AE%85nas%E3%81%AE%E6%AD%B4%E5%8F%B2" itemprop="articleSection">自宅NASの歴史</h2><table><thead><tr><th>日付</th><th>機種</th><th>備考</th></tr></thead><tbody><tr><td>2011-12-05</td><td>QNAP TS-109Ⅱ</td><td>1ベイで運用 ※運用開始はもっと前</td></tr><tr><td>2017-01-15</td><td>Synology DS416play</td><td>4ベイ</td></tr><tr><td>2026-10-10</td><td>ミニPC + OpenMediaVault 8 + UGREEN 5ベイHDDケース</td><td>5ベイ、HDDは４台換装</td></tr></tbody></table><h2 id="%E4%BB%8A%E5%9B%9E%E4%BD%BF%E3%81%A3%E3%81%9F%E6%A9%9F%E6%9D%90" itemprop="articleSection">今回使った機材</h2><ul><li>GMKtec NucBox G3 Plus (CPU: Intel N150 / MEM: 16GB / : SSD 512GB)</li><li>UGREEN CM646 UGREEN HDD ケース(5ベイ / RAID機能付き)</li><li>HDD WD Red × 4</li><li>JetKVM IP KVM</li><li>USB メモリ 128GB</li><li>OpenMediaVault 8</li></ul><h2 id="nas%E3%81%AE%E6%A7%8B%E7%AF%89" itemprop="articleSection">NASの構築</h2><h3 id="%E3%83%96%E3%83%BC%E3%83%88%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%82%92%E4%BD%9C%E6%88%90" itemprop="articleSection">ブートメディアを作成</h3><ol><li>USB メモリを <a href="https://www.ventoy.net/en/">ventoy</a> で初期化</li><li>OpenMediaVault 8 の ISO を <a href="https://www.openmediavault.org/download.html">ここ</a> からダウンロードし、USB メモリに保存</li><li>（Rescuezilla の ISO を <a href="https://rescuezilla.com/download">ここ</a> からダウンロードし、USB メモリに保存）</li></ol><h3 id="openmediavault-8-%E3%82%92%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97" itemprop="articleSection">OpenMediaVault 8 をセットアップ</h3><p>ウィザードに沿って進めるだけで特に問題なく終了。
+１点、GMKtec NucBox G3 Plus はすでにWindowsがインストール済みなので、そこの領域を上書きする形でインストールします。</p><p>PCのセットアップでは JetKVM を使ってキーボードとモニタを使わずにセットアップしてみた。
+OMVセットアップ中、KVMのウェブ画面上でモニタの接続が切れた旨、表示されることがあった。
+原因は入力がなかったので画面がスリープしていただけだったので、キー入力をしたら表示された。</p><p>なぜかNICのインターフェースがONになっていなかったので、viで設定を変えてなんとかONにした。
+が、どうやら <code>omv-firstaid</code> コマンドで設定できたようだ。</p><h4 id="omv-firstaid-%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" itemprop="articleSection">omv-firstaid コマンドについて</h4><p><img src="/images/20261025_omv8_firstaid.png" alt="omv-firstaid" /></p><p>ヘルプで出る利用できる機能の一覧を日本語訳</p><ol><li>Configure network interface (ネットワークインターフェースの設定)</li><li>Configure time zone (タイムゾーンの設定)</li><li>Configure workbench (ワークベンチの設定)</li><li>Change Workbench administrator password (ワークベンチ管理者パスワードの変更)</li><li>Reset failed login attempt counter (ログイン失敗回数カウンターのリセット)</li><li>Restore configuration backup (設定バックアップの復元)</li><li>Check configuration status file (設定ステータスファイルの確認)</li><li>Check RRD database (RRDデータベースの確認)</li><li>Refresh APT package lists and clean caches (APTパッケージリストの更新とキャッシュのクリーンアップ)</li><li>Clear local upload package repository (ローカルアップロードパッケージリポジトリのクリア)</li></ol><h3 id="hdd-%E3%82%92%E3%82%B1%E3%83%BC%E3%82%B9%E3%81%AB%E8%A3%85%E7%9D%80%E3%81%97pc%E3%81%AB%E6%8E%A5%E7%B6%9A" itemprop="articleSection">HDD をケースに装着しPCに接続</h3><ol><li>HDDを順番にトレイにねじ止めし挿入する</li><li>dip スイッチ で RAID 5 に設定し、所定操作で反映。</li><li>PCにケーブルを繋ぎ、電源をON</li><li>OMVのウェブ画面でHDDが認識されていることを確認。DDの情報でRAID 5 となっていることを確認</li></ol><p>OS側でソフトレイドにしないのは、パフォーマンス的なところと、PCフリーズでRAIDが壊れると困るなってところでケースのRAID機能を使うことにした。
+これが吉と出るか凶と出るか...</p><p>HDD ケースのRAIDの切り替え方法は <a href="https://www.amazon.co.jp/dp/B0H6F6473K">Amazonの販売ページ</a> によると、</p><blockquote><p>RAID モードの切り替え方法：
+  電源オフの状態でRAID紹介表を参考して、 dip スイッチを利用したい RAID モードを選定。
+  針の孔のリセットボタンを長押しながら、電源ボタンを 3 秒くらい押し、ハードデスクLEDインジケーターが白く点滅してRAID設定完了。リセットボタンを離します。
+  ディスク管理で新しいハードディスクをフォーマットします。[PC]> [ デバイスの管理 ]> に移動し、現在の RAID モードを確認します。</p><p>PM 以外のモードは、モード切り替える前に dip スイッチをPM モードに戻して、RAID モードの切り替え設定する必要があります。</p></blockquote><p>となっているが... 取説と記載が違うんですよね...</p><p>RAIDモードを設定して、起動するもすぐFANが止まり、初期不良か電力不足か？と色々試してたので、結局どちらが正しいか不明。
+結局、原因は付属の USB Type C ↔︎ Type C / Type A の変則的なケーブルが外れてたので、PC側が電源が切れたとHDD ケースが判断しスリープになってたからのよう。
+HDD ケースはアクセスがないとスリープモードになるらしいので、NASとして運用していて支障があるなら変更予定。</p><h3 id="hdd-%E3%81%AE-s.m.a.r.t." itemprop="articleSection">HDD の S.M.A.R.T.</h3><p>今回、HDDケースのRAID機能を使っているので、普通に取得すると</p><pre><code class="console"># smartctl -a -d sat /dev/sda
+
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-7.2.6+deb13-amd64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Device Model:     Ugreen Raid 5
+Serial Number:    6M29BNX0DYXH░░░░░░░░
+Firmware Version: 1003
+User Capacity:    24,004,572,217,344 bytes [24.0 TB]
+Sector Size:      512 bytes logical/physical
+Device is:        Not in smartctl database 7.3/6157
+ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
+Local Time is:    Sun Oct 11 21:49:51 2026 JST
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+                     ：
+</code></pre><p>となり、HDDそれぞれの情報が取れない。</p><p><code>lsusb</code> を実行すると、</p><pre><code class="console">Bus 002 Device 003: ID 174c:1153 ASMedia Technology Inc. ASM1153E Drive Dock
+Bus 002 Device 004: ID 152d:0567 JMicron Technology Corp. / JMicron USA Technology Corp. JMS567
+</code></pre><p>このように出てくる。それぞれ</p><table><thead><tr><th>メーカー / チップ系列</th><th>lsusb 表記・IDの傾向</th><th>試すべき smartctl オプション</th></tr></thead><tbody><tr><td>ASMedia (ASM1352R等)</td><td><code>174c:...</code> / ASMedia</td><td><code>sudo smartctl -a -d usbasm1352r,0 /dev/sdasudo smartctl -a -d usbasm1352r,1 /dev/sda</code></td></tr><tr><td>JMicron (JMB39x等)</td><td><code>152d:...</code> / JMicron</td><td><code>sudo smartctl -a -d jmb39x,0 /dev/sda</code><br /><code>sudo smartctl -a -d jmb39x,1 /dev/sda</code></td></tr><tr><td>ASMedia (NVMe/SATA複合)</td><td><code>174c:...</code> / ASMedia</td><td><code>sudo smartctl -a -d sntasmedia /dev/sda</code></td></tr><tr><td>JMicron (NVMe/SATA複合)</td><td><code>152d:...</code> / JMicron</td><td><code>sudo smartctl -a -d sntjmicron /dev/sda</code></td></tr></tbody></table><p>このような感じで試してみると良さそう。</p><p>うちのは、<code>jmb39x</code>で取得できた。</p><pre><code class="console"># smartctl -a -d jmb39x,1 /dev/sda
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-7.2.6+deb13-amd64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Family:     Western Digital Red Plus
+Device Model:     WDC WD80EFPX-68C4ZN0
+Serial Number:    WD-░░░░░░░░
+LU WWN Device Id: 5 0014ee 2░░░░░░░░
+Firmware Version: 81.00A81
+User Capacity:    8,001,563,222,016 bytes [8.00 TB]
+Sector Sizes:     512 bytes logical, 4096 bytes physical
+Rotation Rate:    5640 rpm
+Form Factor:      3.5 inches
+Device is:        In smartctl database 7.3/6157
+ATA Version is:   ACS-3 T13/2161-D revision 5
+SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
+Local Time is:    Sun Oct 11 21:49:21 2026 JST
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+                     ：
+</code></pre><p>問題は、これをそのまま標準のUIで列挙し監視することができなさそう。
+どうしたものかと考え中。</p><h2 id="omv%E3%81%AE%E8%A8%AD%E5%AE%9A%E8%AB%B8%E3%80%85" itemprop="articleSection">OMVの設定諸々</h2><table><thead><tr><th>NAV</th><th></th><th></th></tr></thead><tbody><tr><td>ダッシュボード</td><td></td><td></td></tr><tr><td>🏠 ▶︎ システム ▶︎ 日付と時刻</td><td>NTPサーバを使用する</td><td>☑️</td></tr><tr><td>🏠 ▶︎ システム ▶︎ 日付と時刻</td><td>時刻サーバ</td><td><code>pool.ntp.org</code></td></tr><tr><td>🏠 ▶︎ システム ▶︎ 通知 ▶︎ 設定</td><td>有効</td><td>有効にしてgmailに送信。認証は<a href="https://myaccount.google.com/apppasswords">アプリ パスワード</a>で設定</td></tr><tr><td>🏠 ▶︎ システム ▶︎ モニタリング</td><td>有効</td><td>☑️</td></tr><tr><td>🏠 ▶︎ システム ▶︎ プラグイン</td><td></td><td></td></tr><tr><td>🏠 ▶︎ ストレージ ▶︎ S.M.A.R.T. ▶︎ 設定</td><td>有効</td><td>☑️</td></tr><tr><td>🏠 ▶︎ ストレージ ▶︎ 共有フォルダ</td><td></td><td></td></tr><tr><td>🏠 ▶︎ サービス ▶︎ SMB/CIFS ▶︎ 設定</td><td>有効</td><td>☑️</td></tr><tr><td>🏠 ▶︎ サービス ▶︎ SMB/CIFS ▶︎ 設定 §ホームディレクトリ</td><td>有効</td><td>☑️</td></tr><tr><td>🏠 ▶︎ サービス ▶︎ SMB/CIFS ▶︎ 設定 §ホームディレクトリ</td><td>ごみ箱を有効化</td><td>☑️</td></tr><tr><td>🏠 ▶︎ ユーザー ▶︎ 設定(ユーザーマネジメント) §ユーザーのホームディレクトリ</td><td>有効</td><td>☑️</td></tr><tr><td>🏠 ▶︎ ユーザー ▶︎ 設定(ユーザーマネジメント) §ユーザーのホームディレクトリ</td><td>ロケーション</td><td><code>homes</code></td></tr><tr><td>🏠 ▶︎ ユーザー ▶︎ ユーザー</td><td></td><td>※uidが1000以上のものが列挙されるっぽい</td></tr></tbody></table><h3 id="%E3%83%80%E3%83%83%E3%82%B7%E3%83%A5%E3%83%9C%E3%83%BC%E3%83%89" itemprop="articleSection">ダッシュボード</h3><p>あとで編集するには、アカウントからダッシュボードを選ぶ。</p><p><img src="/images/20261025_omv8_customize_dashboard.png" alt="omv8 customize dashboard" /></p><h3 id="%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0-%E2%96%B6%EF%B8%8E-%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3" itemprop="articleSection">システム ▶︎ プラグイン</h3><table><thead><tr><th>プラグイン名</th><th>備考</th></tr></thead><tbody><tr><td><a href="https://wiki.omv-extras.org/doku.php?id=omv8:omv8">openmediavault-omvextrasorg</a></td><td></td></tr><tr><td><a href="https://wiki.omv-extras.org/doku.php?id=omv8:omv8_plugins:docker_compose">openmediavault-compose</a></td><td>※omvextrasorgに含まれる</td></tr><tr><td>openmediavault-cterm</td><td>※自動で入っていたかも？</td></tr><tr><td>openmediavault-photoprism</td><td></td></tr><tr><td>openmediavault-sharerootfs</td><td></td></tr><tr><td><a href="https://wiki.omv-extras.org/doku.php?id=omv8:omv8_plugins:tempmon">openmediavault-tempmon</a></td><td></td></tr></tbody></table><ul><li><a href="https://wiki.omv-extras.org/doku.php?id=omv8:omv8_plugins:filemanager">openmediavault-filebrowser</a> も入れてみたけど動かなかった＆どうも利用している <a href="https://github.com/filebrowser/filebrowser">filebrowser/filebrowser</a>が更新停止で非推奨になったようだ。</li></ul><h3 id="%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8-%E2%96%B6%EF%B8%8E-%E5%85%B1%E6%9C%89%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80" itemprop="articleSection">ストレージ ▶︎ 共有フォルダ</h3><p><code>Apps/{アプリケーション名}</code> を用意して、各アプリの設定などを保存するようにしてある。</p><p>あとは、 <code>public</code>、<code>videos</code>、<code>photos</code>、などをsamba共有用に用意。</p><h2 id="%E3%81%BE%E3%81%A8%E3%82%81" itemprop="articleSection">まとめ</h2><p>一通り動かしてみた感じ、サクサク設定などできる感じで良さそう、という感想を持った。
+アプリケーションは Synology と比べそこまで多くはなさそうだけど、Dockerで動かすことで拡張できるので色々試していこうと思う。</p><p>入れたアプリについては順次記事でまとめていきたい。</p><h2 id="%E5%8F%82%E8%80%83" itemprop="articleSection">参考</h2><ul><li><a href="https://upptime.js.org/docs/get-started#add-repository-secrets">Getting started | Upptime</a></li><li>[Unable to find workflow 'Graphs CI' · Issue #995 · upptime/upptime](https://  github.com/upptime/upptime/issues/995#issuecomment-2327757107)</li><li><a href="https://wifi-manual.net/openmediavault-extras-plugins/">OpenMediaVaultの標準/拡張プラグイン全機能(検証作業中メモ)</a></li></ul></div><hr style="border-top: none; border-bottom: none; height: 5px; margin: 10px 0;" /><footer><div style="line-height: 25px; height: 25px;"><span style="display: inline-block; vertical-align: top;"><i class="fa-regular fa-calendar-days"></i>&nbsp;
+        <span itemprop="datePublished" content="2026-10-25">2026年10月25日</span>
+        &nbsp;/&nbsp;
+        <i class="fa-solid fa-clock-rotate-left"></i>&nbsp;<a href="https://github.com/sharkpp/www.sharkpp.net/commits/master/source/_posts/2026-10-25-setup-new-nas.md">変更履歴</a>
+        &nbsp;/&nbsp;
+        <i class="fa-solid fa-thumbtack"></i>&nbsp;<a href="/blog/2026/10/25/setup-new-nas.html">Permalink</a>
+        &nbsp;/&nbsp;
+    </span><meta itemprop="url" content="https://www.sharkpp.net/blog/2026/10/25/setup-new-nas.html" /><span itemprop="author" itemscope itemtype="https://schema.org/Person"
+          style="display: none;"
+       ><span itemprop="name">sharkpp</span
+   ></span><a href="http://b.hatena.ne.jp/entry/https%3A%2F%2Fwww.sharkpp.net%2Fblog%2F2026%2F10%2F25%2Fsetup-new-nas.html"
+       class="hatena-bookmark-button"
+       data-hatena-bookmark-title="新しいNASを構築した &mdash; さめたすたすのお家"
+       data-hatena-bookmark-layout="simple-balloon"
+       title="このエントリーをはてなブックマークに追加"
+      ><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png"
+            alt="このエントリーをはてなブックマークに追加"
+            width="20" height="20" style="border: none;" /></a
+      >&nbsp;
+    <a href="https://twitter.com/share" class="twitter-share-button"
+       data-url="https://www.sharkpp.net/blog/2026/10/25/setup-new-nas.html" data-via="sharkpp">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><div style="line-height: 25px; height: 25px;"><span class="categories"><i class="fa-solid fa-folder-open"></i>&nbsp;カテゴリ:
+                        <a href="/blog/categories/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a></span>
+        &nbsp;/&nbsp;
+                                <span class="tags"><i class="fa-solid fa-tag"></i>&nbsp;タグ:
+                        <a href="/blog/tags/%E9%9B%91%E8%A8%98">雑記</a>,                         <a href="/blog/tags/NAS">NAS</a>,                         <a href="/blog/tags/OpemMediaVault8">OpemMediaVault8</a></span></div></footer><hr style="border-top: none; border-bottom: 1px dashed #aaa; margin: 10px 0;" /><nav class="article"><ul class="list-unstyled row"><li class="col-md-6 text-muted"><i class="fa-solid fa-chevron-left"></i></li><li class="col-md-6 text-right"><a class="previous" href="/blog/2026/01/01/happy-new-year-2026.html" title="HAPPY NEW YEAR 2026"><span class="title">HAPPY NEW YEAR 2026</span><i class="fa-solid fa-chevron-right"></i></a></li></ul></nav></article></div><footer class="footer"><dev class="overflow"><div class="container text-center"><ul class="list-unstyled list-inline"><li><a href="/atom.xml"        ><i class="fa-solid fa-square-rss fa-2x"></i></a></li><li><a href="https://www.twitter.com/sharkpp"><i class="fa-brands fa-x-twitter fa-2x"></i></a></li><li><a href="https://github.com/sharkpp"     ><i class="fa-brands fa-github fa-2x"></i></a></li><li><a href="/profile"         ><i class="fa-solid fa-ellipsis fa-2x"></i></a></li><li> / <a href="https://github.com/sharkpp/www.sharkpp.net/issues/new?body=via /blog/2026/10/25/setup-new-nas.html"
+                                  rel="nofollow"><i class="fa-solid fa-bug"></i> 誤字脱字などを報告</a></li></ul></div><div class="container text-center"><ul class="list-unstyled list-inline"><li class="text-muted">Powerd by <a href="http://sculpin.io/">Sculpin</a></li><li class="text-muted">&copy; 2004-2026 sharkpp</li></ul></div><div class="container text-center text-muted"><ruby><rb>This page is licensed under a <a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                            >Creative Commons Attribution 4.0 International License</a>.</rb><rp>(</rp><rt>このページは<a rel="nofollow" href="http://creativecommons.org/licenses/by/4.0/"
+                                                  >クリエイティブ・コモンズ 表示 4.0 国際 ライセンス</a>の下に提供されています。</rt><rp>)</rp></ruby></div><div class="container text-center text-muted"><ruby><rb>Code snippets are additionally licensed under <a rel="nofollow" href="http://opensource.org/licenses/MIT"
+                                                                            >The MIT License</a>.</rb><rp>(</rp><rt>さらに、コードスニペットは <a rel="nofollow" href="http://osdn.jp/projects/opensource/wiki/licenses%2FMIT_license"
+                                                               >MIT ライセンス</a> の下にライセンスされています。</rt><rp>)</rp></ruby></div></div></footer><script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>')</script><script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script>$('body').modal || document.write('<script src="/assets/bootstrap/js/bootstrap.min.js"><\/script>')</script><script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-5908801-2', 'auto');
+            ga('send', 'pageview');
+        </script><script src="/assets/highlightjs/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><script type="text/javascript">
+            $('a img').each(function(){
+                var rel = ($(this).attr('src').match(/images\u002f([0-9_]{4}_[0-9_]{4})/i) ||
+                           ['','lightbox'])[1];
+                $(this).parent()
+                    .attr('data-lightbox', rel)
+                    .attr('data-title', $(this).attr('alt'))
+                    ;
+            });
+        </script><script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script><script>$(document).ready(function(){ window.lightbox || $.getScript("/assets/libs/lightbox2/dist/js/lightbox.min.js"); });</script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.5/jquery.smooth-scroll.min.js"></script><script>$.smoothScroll || document.write('<script src="/assets/libs/jquery-smooth-scroll/jquery.smooth-scroll.min.js"><\/script>')</script><script type="text/javascript">
+            $('#toc a')
+                .each(function(){
+                    var id = $(this).attr('href').slice(1);
+                    $(this)
+                        .smoothScroll({
+                            scrollTarget: $('[id="' + id + '"]'),
+                            offset: -50,
+                            beforeScroll: function(){ /*history.pushState({}, id, "#" + id);*/ }
+                        });
+                })
+                ;
+            $('#go-top')
+                .on('click', function() {
+                    $.smoothScroll({
+                        scrollElement: $('body'),
+                        scrollTarget: '',
+                        beforeScroll: function(){ /*history.pushState({}, "", location.href.replace(location.hash, ''));*/ },
+                        afterScroll: function(){ $('body').css('position', ''); }
+                    });
+                    return false;
+                });
+            $(window).scroll(function () {
+                var scroll   = $(this).scrollTop();
+                var visibled = $('#go-top').css('display') == 'block';
+                var next_state = $('#go-top').attr('data-next-state');
+                if (100 <= scroll && (!visibled || 'hidden' == next_state))
+                    $('#go-top')
+                        .stop(true, true)
+                        .attr('data-next-state', 'visible')
+                        .fadeIn('slow', function(){
+                            $(this).removeAttr('data-next-state');
+                        });
+                else if (scroll < 100 && (visibled || 'visible' == next_state))
+                    $('#go-top')
+                        .stop(true, true)
+                        .attr('data-next-state', 'hidden')
+                        .fadeOut('slow', function(){
+                            $(this).removeAttr('data-next-state');
+                        });
+            });
+            $(window).scroll();
+        </script><script type="text/javascript">
+            $(document).ready(function(){
+                // apply table to bootstrap css
+                $('table:not([class])')
+                    .addClass('table table-bordered table-hover table-condensed table-striped')
+                    .wrap("<div style='width:100%;overflow-x:auto;'></div>");
+             });
+        </script><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></body></html>

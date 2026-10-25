@@ -3,11 +3,382 @@
     <title><![CDATA[さめたすたすのお家]]></title>
     <link href="https://www.sharkpp.net/atom.xml" rel="self"/>
     <link href="https://www.sharkpp.net/"/>
-    <updated>2026-01-01T14:41:04+00:00</updated>
+    <updated>2026-10-25T09:56:47+00:00</updated>
     <id>https://www.sharkpp.net/</id>
             <author>
             <name><![CDATA[sharkpp]]></name>                    </author>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[新しいNASを構築した]]></title>
+            <link href="https://www.sharkpp.net/blog/2026/10/25/setup-new-nas.html"/>
+            <updated>2026-10-25T18:50:00+00:00</updated>
+            <id>https://www.sharkpp.net/blog/2026/10/25/setup-new-nas.html</id>
+            <content type="html"><![CDATA[<p>現行NAS環境も稼働が９年を超えて動きも怪しくなっていたので新調することにしました。</p>
+
+<p>実は昨年の夏頃から部材は集めてたんですが、HDDだけちょっと高いなーって思ってて様子見てたらあれよあれよというまに２倍ぐらいになってしまいましたね...</p>
+
+<p>SynologyのNASケースも検討したけど、高いのとHDDが限定されるのでミニPCとケースで運用してみることにしました。</p>
+
+<p><img src="/images/20261025_omv8_dashboard.png" alt="omv-dashboard" /></p>
+
+<h2 id="%E8%87%AA%E5%AE%85nas%E3%81%AE%E6%AD%B4%E5%8F%B2">自宅NASの歴史</h2>
+
+<table>
+<thead>
+<tr>
+  <th>日付</th>
+  <th>機種</th>
+  <th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>2011-12-05</td>
+  <td>QNAP TS-109Ⅱ</td>
+  <td>1ベイで運用 ※運用開始はもっと前</td>
+</tr>
+<tr>
+  <td>2017-01-15</td>
+  <td>Synology DS416play</td>
+  <td>4ベイ</td>
+</tr>
+<tr>
+  <td>2026-10-10</td>
+  <td>ミニPC + OpenMediaVault 8 + UGREEN 5ベイHDDケース</td>
+  <td>5ベイ、HDDは４台換装</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="%E4%BB%8A%E5%9B%9E%E4%BD%BF%E3%81%A3%E3%81%9F%E6%A9%9F%E6%9D%90">今回使った機材</h2>
+
+<ul>
+<li>GMKtec NucBox G3 Plus (CPU: Intel N150 / MEM: 16GB / : SSD 512GB)</li>
+<li>UGREEN CM646 UGREEN HDD ケース(5ベイ / RAID機能付き)</li>
+<li>HDD WD Red × 4</li>
+<li>JetKVM IP KVM</li>
+<li>USB メモリ 128GB</li>
+<li>OpenMediaVault 8</li>
+</ul>
+
+<h2 id="nas%E3%81%AE%E6%A7%8B%E7%AF%89">NASの構築</h2>
+
+<h3 id="%E3%83%96%E3%83%BC%E3%83%88%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%82%92%E4%BD%9C%E6%88%90">ブートメディアを作成</h3>
+
+<ol>
+<li>USB メモリを <a href="https://www.ventoy.net/en/">ventoy</a> で初期化</li>
+<li>OpenMediaVault 8 の ISO を <a href="https://www.openmediavault.org/download.html">ここ</a> からダウンロードし、USB メモリに保存</li>
+<li>（Rescuezilla の ISO を <a href="https://rescuezilla.com/download">ここ</a> からダウンロードし、USB メモリに保存）</li>
+</ol>
+
+<h3 id="openmediavault-8-%E3%82%92%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97">OpenMediaVault 8 をセットアップ</h3>
+
+<p>ウィザードに沿って進めるだけで特に問題なく終了。
+１点、GMKtec NucBox G3 Plus はすでにWindowsがインストール済みなので、そこの領域を上書きする形でインストールします。</p>
+
+<p>PCのセットアップでは JetKVM を使ってキーボードとモニタを使わずにセットアップしてみた。
+OMVセットアップ中、KVMのウェブ画面上でモニタの接続が切れた旨、表示されることがあった。
+原因は入力がなかったので画面がスリープしていただけだったので、キー入力をしたら表示された。</p>
+
+<p>なぜかNICのインターフェースがONになっていなかったので、viで設定を変えてなんとかONにした。
+が、どうやら <code>omv-firstaid</code> コマンドで設定できたようだ。</p>
+
+<h4 id="omv-firstaid-%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">omv-firstaid コマンドについて</h4>
+
+<p><img src="/images/20261025_omv8_firstaid.png" alt="omv-firstaid" /></p>
+
+<p>ヘルプで出る利用できる機能の一覧を日本語訳</p>
+
+<ol>
+<li>Configure network interface (ネットワークインターフェースの設定)</li>
+<li>Configure time zone (タイムゾーンの設定)</li>
+<li>Configure workbench (ワークベンチの設定)</li>
+<li>Change Workbench administrator password (ワークベンチ管理者パスワードの変更)</li>
+<li>Reset failed login attempt counter (ログイン失敗回数カウンターのリセット)</li>
+<li>Restore configuration backup (設定バックアップの復元)</li>
+<li>Check configuration status file (設定ステータスファイルの確認)</li>
+<li>Check RRD database (RRDデータベースの確認)</li>
+<li>Refresh APT package lists and clean caches (APTパッケージリストの更新とキャッシュのクリーンアップ)</li>
+<li>Clear local upload package repository (ローカルアップロードパッケージリポジトリのクリア)</li>
+</ol>
+
+<h3 id="hdd-%E3%82%92%E3%82%B1%E3%83%BC%E3%82%B9%E3%81%AB%E8%A3%85%E7%9D%80%E3%81%97pc%E3%81%AB%E6%8E%A5%E7%B6%9A">HDD をケースに装着しPCに接続</h3>
+
+<ol>
+<li>HDDを順番にトレイにねじ止めし挿入する</li>
+<li>dip スイッチ で RAID 5 に設定し、所定操作で反映。</li>
+<li>PCにケーブルを繋ぎ、電源をON</li>
+<li>OMVのウェブ画面でHDDが認識されていることを確認。DDの情報でRAID 5 となっていることを確認</li>
+</ol>
+
+<p>OS側でソフトレイドにしないのは、パフォーマンス的なところと、PCフリーズでRAIDが壊れると困るなってところでケースのRAID機能を使うことにした。
+これが吉と出るか凶と出るか...</p>
+
+<p>HDD ケースのRAIDの切り替え方法は <a href="https://www.amazon.co.jp/dp/B0H6F6473K">Amazonの販売ページ</a> によると、</p>
+
+<blockquote>
+  <p>RAID モードの切り替え方法：
+  電源オフの状態でRAID紹介表を参考して、 dip スイッチを利用したい RAID モードを選定。
+  針の孔のリセットボタンを長押しながら、電源ボタンを 3 秒くらい押し、ハードデスクLEDインジケーターが白く点滅してRAID設定完了。リセットボタンを離します。
+  ディスク管理で新しいハードディスクをフォーマットします。[PC]> [ デバイスの管理 ]> に移動し、現在の RAID モードを確認します。</p>
+  
+  <p>PM 以外のモードは、モード切り替える前に dip スイッチをPM モードに戻して、RAID モードの切り替え設定する必要があります。</p>
+</blockquote>
+
+<p>となっているが... 取説と記載が違うんですよね...</p>
+
+<p>RAIDモードを設定して、起動するもすぐFANが止まり、初期不良か電力不足か？と色々試してたので、結局どちらが正しいか不明。
+結局、原因は付属の USB Type C ↔︎ Type C / Type A の変則的なケーブルが外れてたので、PC側が電源が切れたとHDD ケースが判断しスリープになってたからのよう。
+HDD ケースはアクセスがないとスリープモードになるらしいので、NASとして運用していて支障があるなら変更予定。</p>
+
+<h3 id="hdd-%E3%81%AE-s.m.a.r.t.">HDD の S.M.A.R.T.</h3>
+
+<p>今回、HDDケースのRAID機能を使っているので、普通に取得すると</p>
+
+<pre><code class="console"># smartctl -a -d sat /dev/sda
+
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-7.2.6+deb13-amd64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Device Model:     Ugreen Raid 5
+Serial Number:    6M29BNX0DYXH░░░░░░░░
+Firmware Version: 1003
+User Capacity:    24,004,572,217,344 bytes [24.0 TB]
+Sector Size:      512 bytes logical/physical
+Device is:        Not in smartctl database 7.3/6157
+ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
+Local Time is:    Sun Oct 11 21:49:51 2026 JST
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+                     ：
+</code></pre>
+
+<p>となり、HDDそれぞれの情報が取れない。</p>
+
+<p><code>lsusb</code> を実行すると、</p>
+
+<pre><code class="console">Bus 002 Device 003: ID 174c:1153 ASMedia Technology Inc. ASM1153E Drive Dock
+Bus 002 Device 004: ID 152d:0567 JMicron Technology Corp. / JMicron USA Technology Corp. JMS567
+</code></pre>
+
+<p>このように出てくる。それぞれ</p>
+
+<table>
+<thead>
+<tr>
+  <th>メーカー / チップ系列</th>
+  <th>lsusb 表記・IDの傾向</th>
+  <th>試すべき smartctl オプション</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>ASMedia (ASM1352R等)</td>
+  <td><code>174c:...</code> / ASMedia</td>
+  <td><code>sudo smartctl -a -d usbasm1352r,0 /dev/sdasudo smartctl -a -d usbasm1352r,1 /dev/sda</code></td>
+</tr>
+<tr>
+  <td>JMicron (JMB39x等)</td>
+  <td><code>152d:...</code> / JMicron</td>
+  <td><code>sudo smartctl -a -d jmb39x,0 /dev/sda</code><br /><code>sudo smartctl -a -d jmb39x,1 /dev/sda</code></td>
+</tr>
+<tr>
+  <td>ASMedia (NVMe/SATA複合)</td>
+  <td><code>174c:...</code> / ASMedia</td>
+  <td><code>sudo smartctl -a -d sntasmedia /dev/sda</code></td>
+</tr>
+<tr>
+  <td>JMicron (NVMe/SATA複合)</td>
+  <td><code>152d:...</code> / JMicron</td>
+  <td><code>sudo smartctl -a -d sntjmicron /dev/sda</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>このような感じで試してみると良さそう。</p>
+
+<p>うちのは、<code>jmb39x</code>で取得できた。</p>
+
+<pre><code class="console"># smartctl -a -d jmb39x,1 /dev/sda
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-7.2.6+deb13-amd64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Family:     Western Digital Red Plus
+Device Model:     WDC WD80EFPX-68C4ZN0
+Serial Number:    WD-░░░░░░░░
+LU WWN Device Id: 5 0014ee 2░░░░░░░░
+Firmware Version: 81.00A81
+User Capacity:    8,001,563,222,016 bytes [8.00 TB]
+Sector Sizes:     512 bytes logical, 4096 bytes physical
+Rotation Rate:    5640 rpm
+Form Factor:      3.5 inches
+Device is:        In smartctl database 7.3/6157
+ATA Version is:   ACS-3 T13/2161-D revision 5
+SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
+Local Time is:    Sun Oct 11 21:49:21 2026 JST
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+                     ：
+</code></pre>
+
+<p>問題は、これをそのまま標準のUIで列挙し監視することができなさそう。
+どうしたものかと考え中。</p>
+
+<h2 id="omv%E3%81%AE%E8%A8%AD%E5%AE%9A%E8%AB%B8%E3%80%85">OMVの設定諸々</h2>
+
+<table>
+<thead>
+<tr>
+  <th>NAV</th>
+  <th></th>
+  <th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>ダッシュボード</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>🏠 ▶︎ システム ▶︎ 日付と時刻</td>
+  <td>NTPサーバを使用する</td>
+  <td>☑️</td>
+</tr>
+<tr>
+  <td>🏠 ▶︎ システム ▶︎ 日付と時刻</td>
+  <td>時刻サーバ</td>
+  <td><code>pool.ntp.org</code></td>
+</tr>
+<tr>
+  <td>🏠 ▶︎ システム ▶︎ 通知 ▶︎ 設定</td>
+  <td>有効</td>
+  <td>有効にしてgmailに送信。認証は<a href="https://myaccount.google.com/apppasswords">アプリ パスワード</a>で設定</td>
+</tr>
+<tr>
+  <td>🏠 ▶︎ システム ▶︎ モニタリング</td>
+  <td>有効</td>
+  <td>☑️</td>
+</tr>
+<tr>
+  <td>🏠 ▶︎ システム ▶︎ プラグイン</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>🏠 ▶︎ ストレージ ▶︎ S.M.A.R.T. ▶︎ 設定</td>
+  <td>有効</td>
+  <td>☑️</td>
+</tr>
+<tr>
+  <td>🏠 ▶︎ ストレージ ▶︎ 共有フォルダ</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>🏠 ▶︎ サービス ▶︎ SMB/CIFS ▶︎ 設定</td>
+  <td>有効</td>
+  <td>☑️</td>
+</tr>
+<tr>
+  <td>🏠 ▶︎ サービス ▶︎ SMB/CIFS ▶︎ 設定 §ホームディレクトリ</td>
+  <td>有効</td>
+  <td>☑️</td>
+</tr>
+<tr>
+  <td>🏠 ▶︎ サービス ▶︎ SMB/CIFS ▶︎ 設定 §ホームディレクトリ</td>
+  <td>ごみ箱を有効化</td>
+  <td>☑️</td>
+</tr>
+<tr>
+  <td>🏠 ▶︎ ユーザー ▶︎ 設定(ユーザーマネジメント) §ユーザーのホームディレクトリ</td>
+  <td>有効</td>
+  <td>☑️</td>
+</tr>
+<tr>
+  <td>🏠 ▶︎ ユーザー ▶︎ 設定(ユーザーマネジメント) §ユーザーのホームディレクトリ</td>
+  <td>ロケーション</td>
+  <td><code>homes</code></td>
+</tr>
+<tr>
+  <td>🏠 ▶︎ ユーザー ▶︎ ユーザー</td>
+  <td></td>
+  <td>※uidが1000以上のものが列挙されるっぽい</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="%E3%83%80%E3%83%83%E3%82%B7%E3%83%A5%E3%83%9C%E3%83%BC%E3%83%89">ダッシュボード</h3>
+
+<p>あとで編集するには、アカウントからダッシュボードを選ぶ。</p>
+
+<p><img src="/images/20261025_omv8_customize_dashboard.png" alt="omv8 customize dashboard" /></p>
+
+<h3 id="%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0-%E2%96%B6%EF%B8%8E-%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3">システム ▶︎ プラグイン</h3>
+
+<table>
+<thead>
+<tr>
+  <th>プラグイン名</th>
+  <th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="https://wiki.omv-extras.org/doku.php?id=omv8:omv8">openmediavault-omvextrasorg</a></td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://wiki.omv-extras.org/doku.php?id=omv8:omv8_plugins:docker_compose">openmediavault-compose</a></td>
+  <td>※omvextrasorgに含まれる</td>
+</tr>
+<tr>
+  <td>openmediavault-cterm</td>
+  <td>※自動で入っていたかも？</td>
+</tr>
+<tr>
+  <td>openmediavault-photoprism</td>
+  <td></td>
+</tr>
+<tr>
+  <td>openmediavault-sharerootfs</td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://wiki.omv-extras.org/doku.php?id=omv8:omv8_plugins:tempmon">openmediavault-tempmon</a></td>
+  <td></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><a href="https://wiki.omv-extras.org/doku.php?id=omv8:omv8_plugins:filemanager">openmediavault-filebrowser</a> も入れてみたけど動かなかった＆どうも利用している <a href="https://github.com/filebrowser/filebrowser">filebrowser/filebrowser</a>が更新停止で非推奨になったようだ。</li>
+</ul>
+
+<h3 id="%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8-%E2%96%B6%EF%B8%8E-%E5%85%B1%E6%9C%89%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80">ストレージ ▶︎ 共有フォルダ</h3>
+
+<p><code>Apps/{アプリケーション名}</code> を用意して、各アプリの設定などを保存するようにしてある。</p>
+
+<p>あとは、 <code>public</code>、<code>videos</code>、<code>photos</code>、などをsamba共有用に用意。</p>
+
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+
+<p>一通り動かしてみた感じ、サクサク設定などできる感じで良さそう、という感想を持った。
+アプリケーションは Synology と比べそこまで多くはなさそうだけど、Dockerで動かすことで拡張できるので色々試していこうと思う。</p>
+
+<p>入れたアプリについては順次記事でまとめていきたい。</p>
+
+<h2 id="%E5%8F%82%E8%80%83">参考</h2>
+
+<ul>
+<li><a href="https://upptime.js.org/docs/get-started#add-repository-secrets">Getting started | Upptime</a></li>
+<li>[Unable to find workflow 'Graphs CI' · Issue #995 · upptime/upptime](https://  github.com/upptime/upptime/issues/995#issuecomment-2327757107)</li>
+<li><a href="https://wifi-manual.net/openmediavault-extras-plugins/">OpenMediaVaultの標準/拡張プラグイン全機能(検証作業中メモ)</a></li>
+</ul>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[HAPPY NEW YEAR 2026]]></title>
             <link href="https://www.sharkpp.net/blog/2026/01/01/happy-new-year-2026.html"/>
@@ -613,49 +984,6 @@ GatsbyJS + GitHub Action でビルドできるといい感じかなと。</p>
 <h2 id="%E3%81%82%E3%81%91%E3%81%8A%E3%82%81%E3%81%93%E3%81%A8%E3%82%88%E3%82%8D">あけおめことよろ</h2>
 
 <p>今年もまた一年、よろしくお願いいたします。</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[大晦日@2022]]></title>
-            <link href="https://www.sharkpp.net/blog/2022/12/31/new-years-eve-2022.html"/>
-            <updated>2022-12-31T07:10:00+00:00</updated>
-            <id>https://www.sharkpp.net/blog/2022/12/31/new-years-eve-2022.html</id>
-            <content type="html"><![CDATA[<h2 id="1-%E5%B9%B4%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A">1 年を振り返り</h2>
-
-<p>今年も本日が大晦日、今年最後の日になりました。</p>
-
-<p>ここ数年、自分の知ってる著名人がパタパタ亡くなっていて、ああ自分も歳をとったのだなぁと感じる今日この頃。</p>
-
-<p>去年からの個人的な出来事で休日もかき回されてなかなか時間が取れずほとんどブログ書けてない... いや、中途半端な状態でまとめきれてないのがん現状なのでなんとかしたいですね。</p>
-
-<p>今年も恒例(？)の仮想除夜の鐘アプリを設置しておきます。</p>
-
-<a href="/files/joya_no_kane.html">/files/joya_no_kane.html</a>
-
-<h2 id="%E7%B5%90%E6%9E%9C">結果</h2>
-
-<p>まずは、今年の正月 <a href="/blog/2022/01/01/happy-new-year-2022.html">HAPPY NEW YEAR 2022</a> に掲げた目標です。</p>
-
-<ul>
-<li>ホームページの更新</li>
-</ul>
-
-<p>今年も全くできてない...
-頑張ろう...</p>
-
-<p>成果は <a href="https://github.com/sharkpp/web-fetch-bot">web-fetch-bot</a> ぐらいかな。
-全くもって、これだけだと何やるツールかわからないけど、まあ自分用って感じ。</p>
-
-<p>あ、Apple MacBook Air 買ったので、快適なのです。
-前のも、10年ぐらい現役で使えてたので、なかなか優秀だなぁと。</p>
-
-<h2 id="%E5%8F%8D%E7%9C%81">反省</h2>
-
-<p>ブログはちょこちょこ作ってアップしていきたいところ。</p>
-
-<p>という感じで、今年の反省会終了です。</p>
-
-<p>それでは来年もよろしくお願いします。</p>
 ]]></content>
         </entry>
     </feed>
